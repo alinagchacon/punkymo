@@ -49,7 +49,7 @@ Siguiendo los pasos por defecto en el proceso de instalación llegaremos a una p
 
 Los dominios en <mark style="color:blue;">`hMailServer`</mark> deben tener conexión a un dominio de Internet. Nuestro dominio creado en el servidor de Windows, es <mark style="color:blue;">`haven.local`</mark>, por lo tanto, esto es lo que tenemos que agregar:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (217) (1).png" alt=""><figcaption><p>Configurar el dominio</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (217).png" alt=""><figcaption><p>Configurar el dominio</p></figcaption></figure>
 
 Una vez establecido el dominio, puedes crear un alias del mismo, una firma y aspectos más importantes como pueden ser: el tamaño máximo del contenido, de los mensajes, el máximo de cuentas posibles, etc.
 
@@ -149,7 +149,7 @@ De los detalles a considerar tenemos:
 
 * La cuenta de usuario no utiliza una conexión segura porque no tenemos habilitado un certificado de seguridad.
 
-<figure><img src="../../.gitbook/assets/image (202) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (202).png" alt=""><figcaption></figcaption></figure>
 
 *   Para instalar el cifrado SSL:
 

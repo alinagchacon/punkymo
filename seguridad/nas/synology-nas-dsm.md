@@ -24,7 +24,7 @@ En las opciones de Almacenamiento en el **SATA0** debemos insertar el VMDK desca
 
 Por último, en las opciones de red debemos ponerlo en **Red NAT** o en **Adaptador Puente**, ya que se configuran desde el navegador web. Finalmente nos debe quedar de esta manera.
 
-<figure><img src="../../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ## Preparación de instalación DSM
 
@@ -38,7 +38,7 @@ Contraseña: **P@ssw0rd**
 ssh tc@x.x.x.x
 ```
 
-<figure><img src="../../.gitbook/assets/image (202).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ### Primer paso - Actualizar rploader
 
@@ -64,7 +64,7 @@ Para ver la lista con los NAS que hay ejecutamos el siguiente comando:
 sudo ./rploader.sh serialgen
 ```
 
-<figure><img src="../../.gitbook/assets/image (211).png" alt=""><figcaption><p>Ver modelos de NAS</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Ver modelos de NAS</p></figcaption></figure>
 
 Para seleccionar un dispositivo debemos introducir el siguiente comando y aceptar con la **“y”**:
 
@@ -100,7 +100,7 @@ Seguidamente a través de un cliente de FTP accederemos a TinyCore para extraer 
 
 El archivo se encuentra en la siguiente ruta: **/home/tc/redpill-load/cache**
 
-<figure><img src="../../.gitbook/assets/image (223).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Una vez extraído a nuestro equipo local el archivo de instalación apagaremos la máquina virtual con el siguiente comando:
 
@@ -116,5 +116,4 @@ Una vez apagada la maquina virtual debemos acceder a la **configuración de red*
 
 **00:11:32:94:68:8A -->00113294688A**
 
-<figure><img src="../../.gitbook/assets/image (217).png" alt=""><figcaption></figcaption></figure>
-
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
