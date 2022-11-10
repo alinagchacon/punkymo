@@ -35,8 +35,10 @@ Usuario: **tc**
 Contraseña: **P@ssw0rd**
 
 ```
-ssh x.x.x.x@tc
+ssh tc@x.x.x.x
 ```
+
+
 
 ### Primer paso - Actualizar rploader
 
