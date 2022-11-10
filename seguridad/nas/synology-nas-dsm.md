@@ -10,9 +10,11 @@ En este caso usaremos el sistema operativo Tinycore. Este es una distribución d
 
 ## Descarga de recursos
 
-descargaremos Tinycore desde el repositorio de GitHub a través de este enlace: [https://github.com/pocopico/tinycore-redpill/releases](https://github.com/pocopico/tinycore-redpill/releases)
+Descargaremos Tinycore desde el repositorio de GitHub:
 
-Descargaremos el archivo que dice, **tinycore-redpill.v0.9.2.9.vmdk.gz** ya que este es el que necesitaremos para la máquina virtual ya que lo insertaremos como si fuera un disco duro más.
+[https://github.com/pocopico/tinycore-redpill/releases](https://github.com/pocopico/tinycore-redpill/releases)
+
+Descargaremos el archivo que dice, **tinycore-redpill.v0.9.2.9.vmdk.gz,** este será el que necesitaremos para la máquina virtual ya que lo insertaremos como un disco duro más.
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Github de descarga de Tinycore</p></figcaption></figure>
 
