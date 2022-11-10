@@ -24,7 +24,7 @@ En las opciones de Almacenamiento en el **SATA0** debemos insertar el VMDK desca
 
 Por último, en las opciones de red debemos ponerlo en **Red NAT** o en **Adaptador Puente**, ya que se configuran desde el navegador web. Finalmente nos debe quedar de esta manera.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
 
 ## Preparación de instalación DSM
 
@@ -38,7 +38,7 @@ Contraseña: **P@ssw0rd**
 ssh tc@x.x.x.x
 ```
 
-
+<figure><img src="../../.gitbook/assets/image (202).png" alt=""><figcaption></figcaption></figure>
 
 ### Primer paso - Actualizar rploader
 
@@ -64,13 +64,17 @@ Para ver la lista con los NAS que hay ejecutamos el siguiente comando:
 sudo ./rploader.sh serialgen
 ```
 
+<figure><img src="../../.gitbook/assets/image (211).png" alt=""><figcaption><p>Ver modelos de NAS</p></figcaption></figure>
+
 Para seleccionar un dispositivo debemos introducir el siguiente comando y aceptar con la **“y”**:
 
 ```
 sudo ./rploader.sh serialgen DS3615xs
 ```
 
-En este paso es **muy importante** apuntar la dirección MAC que nos aparece ya que esta es diferente en cada instalación. En este caso será la:  **00:11:32:EC:89:99.** Si finalmente no la apuntamos la podemos encontrar en el archivo **user\_config.json.**
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
+
+En este paso es **muy importante** apuntar la dirección MAC que nos aparece ya que esta es diferente en cada instalación. En este caso será la:  **00:11:32:94:68:8A.** Si finalmente no la apuntamos la podemos encontrar en el archivo **user\_config.json.**
 
 ### **Tercer paso - Ver versiones de DSM y instalación**
 
@@ -82,21 +86,23 @@ Para ver las versiones disponibles ejecutamos el siguiente comando:
 sudo ./rploader.sh
 ```
 
-Para este caso instalaremos la versión **ds3615xs-7.1.0-42261**. Para ello debemos indicar el parámetro **build** seguidamente de la version. Al ejecutar el comando debemos aceptar la instalación.
+Para este caso instalaremos la versión **ds3615xs-7.1.0-42661**. Para ello debemos indicar el parámetro **build** seguidamente de la version. Al ejecutar el comando debemos aceptar la instalación.
 
 ```
-sudo ./rploader.sh build ds3615xs-7.1.0-42261
+sudo ./rploader.sh build ds3615xs-7.1.0-42661
 ```
+
+<figure><img src="../../.gitbook/assets/Sin título.png" alt=""><figcaption><p>Selección de modelo ds3615xs-7.1.0-42661</p></figcaption></figure>
 
 A partir de este momento comenzara la instalación, dependiendo de nuestra conexión ira más rápido o no, todos los archivos están en internet por lo que no podremos instalarlo sin conexión.
 
-Seguidamente a través de un cliente de FTP accederemos a TinyCore para extraer el archivo de instalación que necesitaremos posteriormente. También podemos descargarlo desde la web oficial de Synology. El usuario y contraseña es el mismo que para acceder a SSH, el puerto es el 21.
+Seguidamente a través de un cliente de FTP accederemos a TinyCore para extraer el archivo de instalación que necesitaremos posteriormente. También podemos descargarlo desde la web oficial de Synology. El usuario y contraseña es el mismo que para acceder a SSH, el puerto es el 22, ya que la conexión se hace a través de sftp.
 
-El archivo se encuentra en el sigueinte ruta:&#x20;
+El archivo se encuentra en la siguiente ruta: **/home/tc/redpill-load/cache**
 
+<figure><img src="../../.gitbook/assets/image (223).png" alt=""><figcaption></figcaption></figure>
 
-
-Una vez extraido a nuestro equipo local apagaremos la maquina virtual con el siguiente comando:
+Una vez extraído a nuestro equipo local el archivo de instalación apagaremos la máquina virtual con el siguiente comando:
 
 ```
 exitcheck.sh poweroff
@@ -104,5 +110,11 @@ exitcheck.sh poweroff
 
 ### Cuarto paso - Modificar MAC en VirtualBox
 
+Una vez apagada la maquina virtual debemos acceder a la **configuración de red** de la maquina virtual y hacer clic en **Advanced**. Se abrirá un desplegable con diferentes opciones, entre ellas estará la **dirección MAC**. Debemos eliminar la MAC que aparece y copiar la que tenemos apuntada del **segundo paso**, pero sin ningún separador.
 
+**¡¡HAY QUE RECORDAR QUE EN CADA INSTALACIÓN LA MAC ES DIFERENTE!!**
+
+**00:11:32:94:68:8A -->00113294688A**
+
+<figure><img src="../../.gitbook/assets/image (217).png" alt=""><figcaption></figcaption></figure>
 
