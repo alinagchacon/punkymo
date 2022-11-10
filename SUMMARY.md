@@ -3,6 +3,7 @@
 ## Seguridad
 
 * [NAS](README.md)
+  * [Synology NAS (DSM)](seguridad/nas/synology-nas-dsm.md)
   * [Synology NAS](seguridad/nas/synology-nas.md)
   * [Instalando Truenas](seguridad/nas/instalando-truenas.md)
 
