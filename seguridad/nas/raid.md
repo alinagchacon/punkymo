@@ -1,4 +1,4 @@
-# Raid
+# RAID
 
 Vamos a crear un RAID 1 por software utilizando una máquina virtual en Virtual Box, para añadir discos con facilidad; todos los pasos son válidos para una máquina real, porque el SO no sabe que se está ejecutando en una máquina virtual.
 
@@ -47,7 +47,7 @@ El controlador md o <mark style="color:blue;">`dispositivo múltiple`</mark> es 
 
 cat /proc/mdstat
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 mdadm -D  /dev/md0
 

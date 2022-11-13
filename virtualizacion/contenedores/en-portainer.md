@@ -1,0 +1,12 @@
+---
+description: N-Tech Admin Group
+---
+
+# en Portainer
+
+Las facilidades de Portainer para trabajar con contenedores es indiscutible.
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+

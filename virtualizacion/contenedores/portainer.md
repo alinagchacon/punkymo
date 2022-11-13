@@ -61,5 +61,17 @@ Portainer admite este tipo de redes:&#x20;
   * En el modo ipvlan L3, los paquetes se enrutan entre puntos finales, lo que brinda una mejor escalabilidad.
 * **Overlay**: Estas redes superpuestas conectan varios demonios Docker y permiten que los servicios de enjambre se comuniquen entre sí. También se pueden usar estas redes superpuestas para facilitar la comunicación entre un servicio de enjambre y un contenedor independiente, o entre dos contenedores independientes en diferentes demonios Docker.
 
+#### Volumen&#x20;
+
+Un volumen es un área de almacenamiento de datos que se puede montar en un contenedor para proporcionar almacenamiento persistente. A diferencia de los montajes de enlace, los volúmenes son independientes del sistema operativo subyacente y están completamente administrados por Docker Engine.
+
+Si se creó un volumen con una bandera externa, fuera de Portainer, significa que Portainer tiene un conocimiento limitado sobre él en comparación con uno creado dentro de Portainer.&#x20;
+
+Una etiqueta de no utilizado significa que Portainer no puede ver ninguna aplicación que esté utilizando este volumen.&#x20;
+
+Esta etiqueta también puede aparecer en recursos externos debido a la información limitada disponible.&#x20;
+
+En Portainer puede ver una lista de los volúmenes en su entorno, agregar nuevos volúmenes y eliminar volúmenes existentes.
+
 
 
