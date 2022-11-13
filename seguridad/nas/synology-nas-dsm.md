@@ -26,7 +26,7 @@ En las opciones de Almacenamiento en el **SATA0** debemos insertar el VMDK desca
 
 Por último, en las opciones de red debemos ponerlo en **Red NAT** o en **Adaptador Puente**, ya que se configuran desde el navegador web. Finalmente nos debe quedar de esta manera.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Preparación de instalación DSM
 
@@ -40,7 +40,7 @@ Contraseña: **P@ssw0rd**
 ssh tc@x.x.x.x
 ```
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Primer paso - Actualizar rploader
 
@@ -66,7 +66,7 @@ Para ver la lista con los NAS que hay ejecutamos el siguiente comando:
 sudo ./rploader.sh serialgen
 ```
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Ver modelos de NAS</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption><p>Ver modelos de NAS</p></figcaption></figure>
 
 Para seleccionar un dispositivo debemos introducir el siguiente comando y aceptar con la **“y”**:
 
@@ -74,7 +74,7 @@ Para seleccionar un dispositivo debemos introducir el siguiente comando y acepta
 sudo ./rploader.sh serialgen DS3615xs
 ```
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
 
 En este paso es **muy importante** apuntar la dirección MAC que nos aparece ya que esta es diferente en cada instalación. En este caso será la:  **00:11:32:94:68:8A.** Si finalmente no la apuntamos la podemos encontrar en el archivo **user\_config.json.**
 
@@ -102,7 +102,7 @@ Seguidamente a través de un cliente de FTP accederemos a TinyCore para extraer 
 
 El archivo se encuentra en la siguiente ruta: **/home/tc/redpill-load/cache**
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (2).png" alt=""><figcaption></figcaption></figure>
 
 Una vez extraído a nuestro equipo local el archivo de instalación apagaremos la máquina virtual con el siguiente comando:
 
@@ -118,13 +118,13 @@ Una vez apagada la maquina virtual debemos acceder a la **configuración de red*
 
 **00:11:32:94:68:8A -->00113294688A**
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez ya la hemos modificado, aceptamos los cambios para que se guarden y arrancaremos la máquina virtual.
 
 En el menú de arranque debemos seleccionar la segunda opción, la que dice **RedPill DS3615xs v7.0.1-42661 (SATA, Verbose)**. Una vez que lo elijamos la primera vez se quedara marcada como opción predeterminada.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Quinto paso - Encontrar el NAS en la red
 
@@ -134,7 +134,7 @@ Ya encendida la maquina y esperado alrededor de unos 30 segundos debería estar 
 
 Nos debe aparecer una ventana como la de la siguiente imagen, en el caso de no aparecer, revisar que la MAC este correctamente escrita:
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Encontrar Synology NAS</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Encontrar Synology NAS</p></figcaption></figure>
 
 Después haremos clic en **“Conectar”** y a continuación aceptaremos los términos y condiciones que se indican. Al aceptarlos se nos redirigirá a la interfaz web del propio NAS para comenzar con la instalación**.**&#x20;
 
@@ -144,7 +144,7 @@ Seguidamente nos saldrá otra ventana donde haremos clic en **"Instalar"** y si 
 
 A continuación, nos indica que carguemos el archivo .pat. Este es el que hemos extraído del servidor a través de FTP. Debemos buscarlo en nuestro equipo y cargarlo.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 Después de eso debemos confirmar que todos los archivos serán eliminados y comenzará la instalación.
 
