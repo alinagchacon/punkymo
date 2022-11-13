@@ -14,9 +14,9 @@ Descargaremos Tinycore desde el repositorio de GitHub:
 
 [https://github.com/pocopico/tinycore-redpill/releases](https://github.com/pocopico/tinycore-redpill/releases)
 
-Descargaremos el archivo que dice, **tinycore-redpill.v0.9.2.9.vmdk.gz,** este será el que necesitaremos para la máquina virtual ya que lo insertaremos como un disco duro más.
+Descargaremos el archivo llamado, **tinycore-redpill.v0.9.2.9.vmdk.gz,** este será el que necesitaremos para la máquina virtual ya que lo insertaremos como un disco duro más.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Github de descarga de Tinycore</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Github de descarga de Tinycore</p></figcaption></figure>
 
 ## Configuración VirtualBox
 
@@ -66,7 +66,7 @@ Para ver la lista con los NAS que hay ejecutamos el siguiente comando:
 sudo ./rploader.sh serialgen
 ```
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Ver modelos de NAS</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Ver modelos de NAS</p></figcaption></figure>
 
 Para seleccionar un dispositivo debemos introducir el siguiente comando y aceptar con la **“y”**:
 
@@ -74,7 +74,7 @@ Para seleccionar un dispositivo debemos introducir el siguiente comando y acepta
 sudo ./rploader.sh serialgen DS3615xs
 ```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
 
 En este paso es **muy importante** apuntar la dirección MAC que nos aparece ya que esta es diferente en cada instalación. En este caso será la:  **00:11:32:94:68:8A.** Si finalmente no la apuntamos la podemos encontrar en el archivo **user\_config.json.**
 
@@ -119,3 +119,36 @@ Una vez apagada la maquina virtual debemos acceder a la **configuración de red*
 **00:11:32:94:68:8A -->00113294688A**
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+Una vez ya la hemos modificado, aceptamos los cambios para que se guarden y arrancaremos la máquina virtual.
+
+En el menú de arranque debemos seleccionar la segunda opción, la que dice **RedPill DS3615xs v7.0.1-42661 (SATA, Verbose)**. Una vez que lo elijamos la primera vez se quedara marcada como opción predeterminada.
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+## Quinto paso - Encontrar el NAS en la red
+
+Ya encendida la maquina y esperado alrededor de unos 30 segundos debería estar operativo el NAS. Para encontrarlo en nuestra red debemos hacerlo a través una web de Synology. Accediendo a este enlace se iniciará la búsqueda del NAS: [https://finds.synology.com/](https://finds.synology.com/)
+
+> En este manual, el NAS podrá tener varias direcciones IP diferentes ya que este se hace desde diferentes redes.
+
+Nos debe aparecer una ventana como la de la siguiente imagen, en el caso de no aparecer, revisar que la MAC este correctamente escrita:
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Encontrar Synology NAS</p></figcaption></figure>
+
+Después haremos clic en **“Conectar”** y a continuación aceptaremos los términos y condiciones que se indican. Al aceptarlos se nos redirigirá a la interfaz web del propio NAS para comenzar con la instalación**.**&#x20;
+
+Seguidamente nos saldrá otra ventana donde haremos clic en **"Instalar"** y si queremos información del dispositivo haremos clic en el botón de justo debajo.&#x20;
+
+### **Sexto paso - Archivo de instalación**
+
+A continuación, nos indica que carguemos el archivo .pat. Este es el que hemos extraído del servidor a través de FTP. Debemos buscarlo en nuestro equipo y cargarlo.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Después de eso debemos confirmar que todos los archivos serán eliminados y comenzará la instalación.
+
+Al acabar se reiniciará automáticamente, no debemos interrumpir este proceso. Nos saldará una ventana con un temporizador de 10 minutos. Este es el tiempo que tardará aproximadamente en terminar todo el proceso de instalación, aunque pasados un par de minutos podemos recargar la página para ver si ya ha terminado, ya que a veces no se carga automáticamente.
+
+> Nota: A veces puede ser que al reiniciarse el NAS, el servidor DHCP asigne una dirección IP diferente. Para saber que nueva dirección IP ha asignado podemos volver a la web de búsqueda del NAS ([https://finds.synology.com/](https://finds.synology.com/)) para saberla.
+
