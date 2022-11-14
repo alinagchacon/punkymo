@@ -3,7 +3,9 @@
 ## Seguridad
 
 * [NAS](README.md)
-  * [Synology NAS (DSM)](seguridad/nas/synology-nas-dsm.md)
+  * [Synology NAS (DSM)](seguridad/nas/synology-nas-dsm/README.md)
+    * [Creación de volúmenes y su uso](seguridad/nas/synology-nas-dsm/creacion-de-volumenes-y-su-uso.md)
+  * [Actualización NAS](seguridad/nas/actualizacion-nas.md)
   * [Instalando Truenas](seguridad/nas/instalando-truenas.md)
   * [RAID](seguridad/nas/raid.md)
 

@@ -16,7 +16,7 @@ Descargaremos Tinycore desde el repositorio de GitHub:
 
 Descargaremos el archivo llamado, **tinycore-redpill.v0.9.2.9.vmdk.gz,** este será el que necesitaremos para la máquina virtual ya que lo insertaremos como un disco duro más.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Github de descarga de Tinycore</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Github de descarga de Tinycore</p></figcaption></figure>
 
 ## Configuración VirtualBox
 
@@ -26,7 +26,7 @@ En las opciones de Almacenamiento en el **SATA0** debemos insertar el VMDK desca
 
 Por último, en las opciones de red debemos ponerlo en **Red NAT** o en **Adaptador Puente**, ya que se configuran desde el navegador web. Finalmente nos debe quedar de esta manera.
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Preparación de instalación DSM
 
@@ -40,7 +40,7 @@ Contraseña: **P@ssw0rd**
 ssh tc@x.x.x.x
 ```
 
-<figure><img src="../../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Primer paso - Actualizar rploader
 
@@ -66,7 +66,7 @@ Para ver la lista con los NAS que hay ejecutamos el siguiente comando:
 sudo ./rploader.sh serialgen
 ```
 
-<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption><p>Ver modelos de NAS</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (3).png" alt=""><figcaption><p>Ver modelos de NAS</p></figcaption></figure>
 
 Para seleccionar un dispositivo debemos introducir el siguiente comando y aceptar con la **“y”**:
 
@@ -74,7 +74,7 @@ Para seleccionar un dispositivo debemos introducir el siguiente comando y acepta
 sudo ./rploader.sh serialgen DS3615xs
 ```
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (2).png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
 
 En este paso es **muy importante** apuntar la dirección MAC que nos aparece ya que esta es diferente en cada instalación. En este caso será la:  **00:11:32:94:68:8A.** Si finalmente no la apuntamos la podemos encontrar en el archivo **user\_config.json.**
 
@@ -94,7 +94,7 @@ Para este caso instalaremos la versión **ds3615xs-7.1.0-42661**. Para ello debe
 sudo ./rploader.sh build ds3615xs-7.1.0-42661
 ```
 
-<figure><img src="../../.gitbook/assets/Sin título.png" alt=""><figcaption><p>Selección de modelo ds3615xs-7.1.0-42661</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Sin título.png" alt=""><figcaption><p>Selección de modelo ds3615xs-7.1.0-42661</p></figcaption></figure>
 
 A partir de este momento comenzara la instalación, dependiendo de nuestra conexión ira más rápido o no, todos los archivos están en internet por lo que no podremos instalarlo sin conexión.
 
@@ -102,7 +102,7 @@ Seguidamente a través de un cliente de FTP accederemos a TinyCore para extraer 
 
 El archivo se encuentra en la siguiente ruta: **/home/tc/redpill-load/cache**
 
-<figure><img src="../../.gitbook/assets/image (6) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (2).png" alt=""><figcaption></figcaption></figure>
 
 Una vez extraído a nuestro equipo local el archivo de instalación apagaremos la máquina virtual con el siguiente comando:
 
@@ -118,13 +118,13 @@ Una vez apagada la maquina virtual debemos acceder a la **configuración de red*
 
 **00:11:32:94:68:8A -->00113294688A**
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez ya la hemos modificado, aceptamos los cambios para que se guarden y arrancaremos la máquina virtual.
 
 En el menú de arranque debemos seleccionar la segunda opción, la que dice **RedPill DS3615xs v7.0.1-42661 (SATA, Verbose)**. Una vez que lo elijamos la primera vez se quedara marcada como opción predeterminada.
 
-<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Quinto paso - Encontrar el NAS en la red
 
@@ -134,7 +134,7 @@ Ya encendida la maquina y esperado alrededor de unos 30 segundos debería estar 
 
 Nos debe aparecer una ventana como la de la siguiente imagen, en el caso de no aparecer, revisar que la MAC este correctamente escrita:
 
-<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Encontrar Synology NAS</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Encontrar Synology NAS</p></figcaption></figure>
 
 Después haremos clic en **“Conectar”** y a continuación aceptaremos los términos y condiciones que se indican. Al aceptarlos se nos redirigirá a la interfaz web del propio NAS para comenzar con la instalación**.**&#x20;
 
@@ -144,11 +144,36 @@ Seguidamente nos saldrá otra ventana donde haremos clic en **"Instalar"** y si 
 
 A continuación, nos indica que carguemos el archivo .pat. Este es el que hemos extraído del servidor a través de FTP. Debemos buscarlo en nuestro equipo y cargarlo.
 
-<figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 Después de eso debemos confirmar que todos los archivos serán eliminados y comenzará la instalación.
 
 Al acabar se reiniciará automáticamente, no debemos interrumpir este proceso. Nos saldará una ventana con un temporizador de 10 minutos. Este es el tiempo que tardará aproximadamente en terminar todo el proceso de instalación, aunque pasados un par de minutos podemos recargar la página para ver si ya ha terminado, ya que a veces no se carga automáticamente.
 
-> Nota: A veces puede ser que al reiniciarse el NAS, el servidor DHCP asigne una dirección IP diferente. Para saber que nueva dirección IP ha asignado podemos volver a la web de búsqueda del NAS ([https://finds.synology.com/](https://finds.synology.com/)) para saberla.
+> Nota: A veces puede ser que al reiniciarse el NAS, el servidor DHCP asigne una dirección IP diferente. Para saber que nueva dirección IP ha asignado podemos volver a la web de búsqueda del NAS ([https://finds.synology.com/](https://finds.synology.com/)) para saberla. Puede ser que al acceder a la web de búsqueda no aparezca, en ese caso descargar la aplicación **Synology Assistant**, podeis hacer clic en este [enlace](https://finds.synology.com/helpers/assistant.php?platform=Windows\&product=).
 
+### Séptimo paso - Iniciar configuración inicial
+
+Al acabar de reiniciarse nos encontraremos con la página de inicio para la configuración, una página como la que aparece a continuación:
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+Al hacer clic en Iniciar nos saldrá otra ventana para rellenar el nombre del dispositivo, nombre de la cuenta de administrador, contraseña y una casilla para permitir que nuestro NAS se muestra al usar el Web Assistant (la web de encontrar el NAS). Una vez lo rellenemos todo haremos clic en **"Siguiente"**.
+
+<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+
+Ahora nos mostrara una ventana para elegir de qué manera se actualiza el DSM y los paquetes, es obligatorio poner la última opción, la actualización manual. Si el NAS se actualiza de forma automática no se volverá a encender hasta que no sigamos un procedimiento especifico, por lo tanto actualizaremos el NAS de forma manual.
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+En el siguiente paso nos indica si queremos crear una cuenta de Synology para tener acceso a más servicios. Como este NAS no está registrado en Synology no podremos acceder a estos servicios, por lo tanto, debemos omitir este paso.
+
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+Por último paso nos pide permiso para recopilar datos o no, es opcional marcar esta casilla ya que no influirá en el funcionamiento del NAS.
+
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+Una vez hecho todo este proceso ya nos encontraremos con la pantalla principal de nuestro NAS.
+
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
