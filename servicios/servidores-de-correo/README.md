@@ -62,7 +62,7 @@ Por otra parte, el programa que recibe el correo es llamado <mark style="color:b
 
 
 
-<figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption><p>Imagen tomada de la Wikipedia</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Imagen tomada de la Wikipedia</p></figcaption></figure>
 
 #### Desde un punto de vista más simple
 

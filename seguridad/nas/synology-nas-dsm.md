@@ -16,7 +16,7 @@ Descargaremos Tinycore desde el repositorio de GitHub:
 
 Descargaremos el archivo llamado, **tinycore-redpill.v0.9.2.9.vmdk.gz,** este será el que necesitaremos para la máquina virtual ya que lo insertaremos como un disco duro más.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Github de descarga de Tinycore</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption><p>Github de descarga de Tinycore</p></figcaption></figure>
 
 ## Configuración VirtualBox
 
@@ -26,7 +26,7 @@ En las opciones de Almacenamiento en el **SATA0** debemos insertar el VMDK desca
 
 Por último, en las opciones de red debemos ponerlo en **Red NAT** o en **Adaptador Puente**, ya que se configuran desde el navegador web. Finalmente nos debe quedar de esta manera.
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Preparación de instalación DSM
 
@@ -74,7 +74,7 @@ Para seleccionar un dispositivo debemos introducir el siguiente comando y acepta
 sudo ./rploader.sh serialgen DS3615xs
 ```
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (2).png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
 
 En este paso es **muy importante** apuntar la dirección MAC que nos aparece ya que esta es diferente en cada instalación. En este caso será la:  **00:11:32:94:68:8A.** Si finalmente no la apuntamos la podemos encontrar en el archivo **user\_config.json.**
 
@@ -118,7 +118,7 @@ Una vez apagada la maquina virtual debemos acceder a la **configuración de red*
 
 **00:11:32:94:68:8A -->00113294688A**
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez ya la hemos modificado, aceptamos los cambios para que se guarden y arrancaremos la máquina virtual.
 
@@ -156,24 +156,24 @@ Al acabar se reiniciará automáticamente, no debemos interrumpir este proceso. 
 
 Al acabar de reiniciarse nos encontraremos con la página de inicio para la configuración, una página como la que aparece a continuación:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Al hacer clic en Iniciar nos saldrá otra ventana para rellenar el nombre del dispositivo, nombre de la cuenta de administrador, contraseña y una casilla para permitir que nuestro NAS se muestra al usar el Web Assistant (la web de encontrar el NAS). Una vez lo rellenemos todo haremos clic en **"Siguiente"**.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 Ahora nos mostrara una ventana para elegir de qué manera se actualiza el DSM y los paquetes, es obligatorio poner la última opción, la actualización manual. Si el NAS se actualiza de forma automática no se volverá a encender hasta que no sigamos un procedimiento especifico, por lo tanto actualizaremos el NAS de forma manual.
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 En el siguiente paso nos indica si queremos crear una cuenta de Synology para tener acceso a más servicios. Como este NAS no está registrado en Synology no podremos acceder a estos servicios, por lo tanto, debemos omitir este paso.
 
-<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 Por último paso nos pide permiso para recopilar datos o no, es opcional marcar esta casilla ya que no influirá en el funcionamiento del NAS.
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Una vez hecho todo este proceso ya nos encontraremos con la pantalla principal de nuestro NAS.
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
