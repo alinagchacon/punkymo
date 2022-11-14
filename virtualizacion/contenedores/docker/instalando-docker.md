@@ -340,3 +340,9 @@ Por tanto, supongamos que tienes la cuenta en el sistema. Entonces, para introdu
 docker login -u docker-registry-username
 
 Te solicitará autenticarte usando la contraseña de Docker Hub.
+
+
+
+### Docker compose&#x20;
+
+<mark style="color:red;">investigar</mark>&#x20;
