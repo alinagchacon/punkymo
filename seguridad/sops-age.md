@@ -231,5 +231,6 @@ Lo mismo si queremos ver el usuario:
 * Aprendiendo de:\
   [https://www.youtube.com/watch?v=1BquzE3Yb4I](https://www.youtube.com/watch?v=1BquzE3Yb4I)&#x20;
 * [https://blog.gitguardian.com/a-comprehensive-guide-to-sops/](https://blog.gitguardian.com/a-comprehensive-guide-to-sops/)
+* [https://www.youtube.com/watch?v=PFLimPh5-wo ](https://www.youtube.com/watch?v=PFLimPh5-wo)
 
 &#x20;
