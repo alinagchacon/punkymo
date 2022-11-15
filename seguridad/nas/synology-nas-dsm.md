@@ -168,7 +168,7 @@ Ahora nos mostrara una ventana para elegir de qué manera se actualiza el DSM y 
 
 En el siguiente paso nos indica si queremos crear una cuenta de Synology para tener acceso a más servicios. Como este NAS no está registrado en Synology no podremos acceder a estos servicios, por lo tanto, debemos omitir este paso.
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por último paso nos pide permiso para recopilar datos o no, es opcional marcar esta casilla ya que no influirá en el funcionamiento del NAS.
 
@@ -176,4 +176,4 @@ Por último paso nos pide permiso para recopilar datos o no, es opcional marcar 
 
 Una vez hecho todo este proceso ya nos encontraremos con la pantalla principal de nuestro NAS.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>

@@ -18,7 +18,7 @@ Desde ahí descargamos la actualización y la instalaremos normalmente, debemos 
 
 Como podemos ver en la siguiente imagen la versión que se ha descargado es la **7.1.1-42962**, por lo que deberemos apuntarla para posteriormente recordarla.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Actualización desde el Panel de control</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Actualización desde el Panel de control</p></figcaption></figure>
 
 Ahora que ya sabemos la versión podemos darle a **Actualizar ahora**. Debemos aceptar que el NAS se reiniciará y comenzará la actualización. Una vez que ya la tengamos actualizada, el NAS se reiniciara. Antes de que se vuelva a encender, desde el GRUB debemos seleccionar la opción de **Tinycore Image Build.**
 
@@ -62,11 +62,11 @@ Al tratarse de una "nueva instalación" debemos volver a generar una nueva MAC. 
 sudo ./rploader.sh serialgen DS3615xs
 ```
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Nueva MAC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 Cabe recordar que esta nueva dirección MAC debemos apuntarla en algún lugar ya que posteriormente la necesitaremos modificar en VirtualBox.
 
-En este caso la nueva MAC es la siguiente: **00:11:32:C9:0A:E2**
+En este caso la nueva MAC es la siguiente: **00:11:32:E2:1F:E1**
 
 ### Quinto paso - Crear nueva instalación
 
@@ -76,7 +76,7 @@ Ahora debemos realizar la nueva instalación, introduciendo el nombre de la nuev
 sudo ./rploader.sh
 ```
 
-En este caso el nombre de la nueva versión es **ds3615xs-7.1.1-42962**, puede variar dependiendo de las nuevas versiones de DSM. Por lo tanto el comando a ejecutar es el siguiente:
+En este caso el nombre de la nueva versión es **ds3615xs-7.1.1-42962**, puede variar dependiendo de las nuevas versiones de DSM. Por lo tanto en este caso el comando a ejecutar es el siguiente:
 
 ```
 sudo ./rploader.sh build ds3615xs-7.1.1-42962
@@ -108,7 +108,7 @@ También debemos hacer backup del cargador de arranque, que se hace con el sigui
 sudo ./rploader.sh backuploader
 ```
 
-Por ultimo debemos apagar Tinycore para cambiar la MAC en VirtualBox, sin este paso no funcionara la actualización:
+Por último, debemos apagar Tinycore para cambiar la MAC en VirtualBox, sin este paso no funcionara la actualización:
 
 ```
 exitcheck.sh poweroff
@@ -116,12 +116,15 @@ exitcheck.sh poweroff
 
 ### Séptimo paso - Cambiar MAC en VirtualBox
 
-Para cambiar la MAC debemos acceder a la configuración de red de la maquina virtual y sustituir la anterior MAC por la nueva.
+Para cambiar la MAC debemos acceder a la configuración de red de la máquina virtual y sustituir la anterior MAC por la nueva.
 
-En este caso debemos cambiar esta MAC: **00113294688A** por esta nueva: **001132C90AE2**
+En este caso debemos cambiar esta MAC: **00113294688A** por esta nueva: **001132E21FE1**
 
 ### **Octavo paso - Arrancar el NAS**
 
 Una vez ya modificada la MAC podemos encender el NAS, debemos estar atentos al GRUB ya que debemos de seleccionar de nueva la opción de **(SATA boot)**.
 
-Si todo a funcionado correctamente deberíamos volver a acceder al NAS con el mismo usuario y contraseña. Para comprobar que realmente se han instalado las actualizaciones volvemos acceder al Panel de control, al apartado de **Actualizar y restaurar**. En el podemos ver que si esta instalada la ultima versión.
+Si todo a funcionado correctamente deberíamos volver a acceder al NAS con el mismo usuario y contraseña. Para comprobar que realmente se han instalado las actualizaciones volvemos acceder al Panel de control, al apartado de **Actualizar y restaurar**. En el podemos ver que si está instalada la última versión.
+
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>DSM actualizado a la última versión</p></figcaption></figure>
+

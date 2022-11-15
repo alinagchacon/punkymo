@@ -40,7 +40,7 @@ Al hacer clic en Siguiente, nos encontraremos una ventana donde debemos elegir l
 
 Al hacer clic en Siguiente, nos encontramos con una ventana donde nos da a alegir entre hacer una comprobación de la unidad o no. En este caso no haremos ninguna comprobación de la unidades ya que es un entorno de pruebas, en un caso real recomiendo hacerla para evitar futuros errores.
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Comprobación de la unidad</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Comprobación de la unidad</p></figcaption></figure>
 
 ### Quinto paso - Asiganación de capacidad al volumen
 

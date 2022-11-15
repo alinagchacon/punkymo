@@ -31,7 +31,7 @@ El software de particionado proporciona un modo <mark style="color:blue;">`guiad
 * El sistema de archivos: valor predeterminado es _ext4._
 * El punto de montaje: representa el punto del árbol de directorios donde se sitúa la nueva partición. Será el lugar donde se instale el sistema, por lo que dejamos también su valor predeterminado, que es el directorio raíz(/).
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (3).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
