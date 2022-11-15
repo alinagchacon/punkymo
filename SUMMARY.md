@@ -8,6 +8,7 @@
     * [Actualización NAS](seguridad/nas/synology-nas-dsm/actualizacion-nas.md)
   * [Instalando Truenas](seguridad/nas/instalando-truenas.md)
   * [RAID](seguridad/nas/raid.md)
+* [SOPS/AGE](seguridad/sops-age.md)
 
 ***
 

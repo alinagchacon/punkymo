@@ -1,5 +1,5 @@
 ---
-description: a Internet en Españ
+description: a Internet en España
 ---
 
 # Puntos de conexión
