@@ -88,17 +88,17 @@ Para ver las versiones disponibles ejecutamos el siguiente comando:
 sudo ./rploader.sh
 ```
 
-Para este caso instalaremos la versión **ds3615xs-7.1.0-42661**. Para ello debemos indicar el parámetro **build** seguidamente de la version. Al ejecutar el comando debemos aceptar la instalación.
+<figure><img src="../../.gitbook/assets/Sin título.png" alt=""><figcaption><p>Selección de modelo ds3615xs-7.1.0-42661</p></figcaption></figure>
+
+Para este caso instalaremos la versión **ds3615xs-7.1.0-42661**. Para ello debemos indicar el parámetro **build** seguidamente de la versión. Al ejecutar el comando debemos aceptar la instalación.
 
 ```
 sudo ./rploader.sh build ds3615xs-7.1.0-42661
 ```
 
-<figure><img src="../../.gitbook/assets/Sin título.png" alt=""><figcaption><p>Selección de modelo ds3615xs-7.1.0-42661</p></figcaption></figure>
-
 A partir de este momento comenzara la instalación, dependiendo de nuestra conexión ira más rápido o no, todos los archivos están en internet por lo que no podremos instalarlo sin conexión.
 
-Seguidamente a través de un cliente de FTP accederemos a TinyCore para extraer el archivo de instalación que necesitaremos posteriormente. También podemos descargarlo desde la web oficial de Synology. El usuario y contraseña es el mismo que para acceder a SSH, el puerto es el 22, ya que la conexión se hace a través de sftp.
+Seguidamente a través de un cliente de FTP accederemos a TinyCore para extraer el archivo de instalación que necesitaremos posteriormente. También podemos descargarlo desde la web oficial de Synology. El usuario y contraseña es el mismo que para acceder a SSH, el puerto es el 22, ya que la conexión se hace a través de SFTP.
 
 El archivo se encuentra en la siguiente ruta: **/home/tc/redpill-load/cache**
 

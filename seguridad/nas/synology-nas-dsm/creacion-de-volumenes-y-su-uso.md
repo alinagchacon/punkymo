@@ -18,7 +18,7 @@ Para comenzar primero debemos crear el grupo de almacenamiento con el RAID y des
 
 Para acceder a al administrador de almacenamiento, debemos situarnos en el icono, de la esquina superior izquierda, este botón nos muestra todas las aplicaciones de nuestro NAS, muchas de ellas ya vienen de forma predeterminada. Entre ellas accederemos al administrador de almacenamiento.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Inicio de adminsitrador de almacenamiento</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (3).png" alt=""><figcaption><p>Inicio de adminsitrador de almacenamiento</p></figcaption></figure>
 
 Para comenzar la creación de el grupo de almacenamiento y el voluemn hacemos clic en iniciar.
 
@@ -34,7 +34,7 @@ De forma opcional podemos agregarle una descripción para poder identificarlo, i
 
 Al hacer clic en Siguiente, nos encontraremos una ventana donde debemos elegir las unidades que formaran este grupo de almacenamiento, en este caso únicamente tenemos dos unidades, para seleccionarlas debemos desplazarlas hacia el panel derecho.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Selección de discos</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Selección de discos</p></figcaption></figure>
 
 ### Cuarto paso - Comprobación de la unidad
 
@@ -48,7 +48,7 @@ A **continuación** encontramos la ventana para asignar la capacidad deseada a n
 
 De forma opcional podemos agregarle una descripción para poder identificarlo, introduciré: **Mi primer volumen**
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Asignación de capacidad al volumen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Asignación de capacidad al volumen</p></figcaption></figure>
 
 ### Sexto paso - Seleccionar un sistema de archivos
 
@@ -66,7 +66,7 @@ Una vez apliquemos los cambias nos saltara una alerta que nos dice que todos los
 
 Una vez ya creado podemos ver como es el panel de nuestro grupo de almacenamiento y volumen. Como podemos ver el espacio del disco duro se queda bastante reducido.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Panel principal del administrador de almacenamiento</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (4).png" alt=""><figcaption><p>Panel principal del administrador de almacenamiento</p></figcaption></figure>
 
 ## Uso del administrador de almacenamiento
 
