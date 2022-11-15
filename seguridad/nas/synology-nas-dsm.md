@@ -156,23 +156,23 @@ Al acabar se reiniciará automáticamente, no debemos interrumpir este proceso. 
 
 Al acabar de reiniciarse nos encontraremos con la página de inicio para la configuración, una página como la que aparece a continuación:
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Al hacer clic en Iniciar nos saldrá otra ventana para rellenar el nombre del dispositivo, nombre de la cuenta de administrador, contraseña y una casilla para permitir que nuestro NAS se muestra al usar el Web Assistant (la web de encontrar el NAS). Una vez lo rellenemos todo haremos clic en **"Siguiente"**.
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (2).png" alt=""><figcaption></figcaption></figure>
 
 Ahora nos mostrara una ventana para elegir de qué manera se actualiza el DSM y los paquetes, es obligatorio poner la última opción, la actualización manual. Si el NAS se actualiza de forma automática no se volverá a encender hasta que no sigamos un procedimiento especifico, por lo tanto actualizaremos el NAS de forma manual.
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
 
 En el siguiente paso nos indica si queremos crear una cuenta de Synology para tener acceso a más servicios. Como este NAS no está registrado en Synology no podremos acceder a estos servicios, por lo tanto, debemos omitir este paso.
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Por último paso nos pide permiso para recopilar datos o no, es opcional marcar esta casilla ya que no influirá en el funcionamiento del NAS.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (3).png" alt=""><figcaption></figcaption></figure>
 
 Una vez hecho todo este proceso ya nos encontraremos con la pantalla principal de nuestro NAS.
 

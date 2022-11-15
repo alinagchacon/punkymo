@@ -22,7 +22,7 @@ Crear las particiones  es un paso indispensable en el proceso de instalación. Y
 
 Este proceso también incluye elegir el sistema de archivo que será utilizado. Todas estas decisiones influirán en el rendimiento, la seguridad de los datos y la administración del servidor.
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Por tanto, es necesario definir las particiones del disco y el sistema de archivos que en el caso de Linux sería ext4 y la swap, que es la memoria virtual.&#x20;
 
@@ -31,7 +31,7 @@ El software de particionado proporciona un modo <mark style="color:blue;">`guiad
 * El sistema de archivos: valor predeterminado es _ext4._
 * El punto de montaje: representa el punto del árbol de directorios donde se sitúa la nueva partición. Será el lugar donde se instale el sistema, por lo que dejamos también su valor predeterminado, que es el directorio raíz(/).
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -39,7 +39,7 @@ El software de particionado proporciona un modo <mark style="color:blue;">`guiad
 
 Una vez finalizado este proceso debemos obtener el raid montado en las particiones:
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Finalizamos el particionado y continuamos con el proceso de instalación. Una vez reiniciado el sistema, podemos verificar el montaje del raid en el sistema. Para ello podemos verificar el archivo /proc/mdstat que es un archivo especial que nos muestra el estado del controlador md del kernel de Linux.&#x20;
 
@@ -47,11 +47,11 @@ El controlador md o <mark style="color:blue;">`dispositivo múltiple`</mark> es 
 
 cat /proc/mdstat
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 mdadm -D  /dev/md0
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (3).png" alt=""><figcaption></figcaption></figure>
 
 
 
