@@ -33,7 +33,7 @@ Veamos el siguiente esquema que representa a la IPv4:
 
 y que es lo mismo que escribir:  <mark style="color:blue;">`131.108.122.204/16`</mark>
 
-<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption><p>La IPv4 131.108.122.204</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (81) (1).png" alt=""><figcaption><p>La IPv4 131.108.122.204</p></figcaption></figure>
 
 De los 32 bits de esta dirección IPv4, 16 bits se utilizan para representar la red y los otros 16 bits para representar al host, con lo cual se disponen de 2^16 = 65536 direcciones IPv4 para asignar a los hosts. Pero tampoco, todavía nos falta algo por tener en cuenta y es que tenemos que descontar la dirección IP que representa a la red (todos los bits a 0 para la parte del host) y la IP que representa al broadcast (todos los bits a 1 para la parte del host), por tanto, tenemos 65534 direcciones IP válidas para los dispositivos.
 

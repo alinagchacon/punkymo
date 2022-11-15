@@ -46,7 +46,7 @@ En Linux:
 
 &#x20;****&#x20;
 
-<figure><img src="../../.gitbook/assets/image (25) (1).png" alt=""><figcaption><p>resolv.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>resolv.conf</p></figcaption></figure>
 
 **Ejemplo**:
 
@@ -54,7 +54,7 @@ El nombre de dominio [www.ifp.es](http://www.ifp.es) tiene como IP la 213.192.25
 
 Una forma de verlo sería desde el <mark style="color:blue;">`cmd > ping`</mark> [<mark style="color:blue;">`www.ifp.es`</mark>](http://www.ifp.es)<mark style="color:blue;">``</mark>
 
-<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption><p>ping www.ifp.es</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (70) (1).png" alt=""><figcaption><p>ping www.ifp.es</p></figcaption></figure>
 
 O bien utilizando el comando <mark style="color:blue;">`nslookup`</mark> que veremos más adelante:
 

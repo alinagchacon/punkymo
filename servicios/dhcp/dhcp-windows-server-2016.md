@@ -31,7 +31,7 @@ Lo correcto hubiera sido nombrarlo como NS o NS1, de nameserver o DNS principal 
 * Se abre un asistente; haz clic en **Siguiente y sigue las opciones por defecto.**
 * **Se instala pero todavía no estará configurado.**
 
-<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (35) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Configuración
 
