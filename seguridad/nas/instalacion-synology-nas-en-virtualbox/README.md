@@ -1,8 +1,8 @@
 ---
-description: Instalación de DSM sobre VirtualBox
+description: JLM
 ---
 
-# Synology NAS (DSM) en VirtualBox
+# Instalación Synology NAS en VirtualBox
 
 DSM es el sistema operativo que usan los NAS de la marca Synology. Este sistema es muy intuitivo y fácil de usar, además es muy útil a la hora de conectarse con diferentes usuarios. En este caso DSM lo instalaremos sobre otro sistema operativo, TinyCore de Redpill. Es una distribución de RedHat.
 
@@ -102,7 +102,7 @@ Seguidamente a través de un cliente de FTP accederemos a TinyCore para extraer 
 
 El archivo se encuentra en la siguiente ruta: **/home/tc/redpill-load/cache**
 
-<figure><img src="../../../.gitbook/assets/image (6) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (2).png" alt=""><figcaption></figcaption></figure>
 
 Una vez extraído a nuestro equipo local el archivo de instalación apagaremos la máquina virtual con el siguiente comando:
 

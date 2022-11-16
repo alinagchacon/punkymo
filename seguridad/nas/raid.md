@@ -22,7 +22,7 @@ Crear las particiones  es un paso indispensable en el proceso de instalación. Y
 
 Este proceso también incluye elegir el sistema de archivo que será utilizado. Todas estas decisiones influirán en el rendimiento, la seguridad de los datos y la administración del servidor.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por tanto, es necesario definir las particiones del disco y el sistema de archivos que en el caso de Linux sería ext4 y la swap, que es la memoria virtual.&#x20;
 
@@ -33,7 +33,7 @@ El software de particionado proporciona un modo <mark style="color:blue;">`guiad
 
 <figure><img src="../../.gitbook/assets/image (10) (3).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -47,7 +47,7 @@ El controlador md o <mark style="color:blue;">`dispositivo múltiple`</mark> es 
 
 cat /proc/mdstat
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 mdadm -D  /dev/md0
 

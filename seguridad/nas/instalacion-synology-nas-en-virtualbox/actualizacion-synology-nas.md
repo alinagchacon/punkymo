@@ -1,8 +1,8 @@
 ---
-description: Como actualizar NAS a una versión posterior
+description: JLM
 ---
 
-# Actualización NAS
+# Actualización Synology NAS
 
 Para actualizar el NAS a través de Tinycore es diferente de si se tratara de un NAS original. Cuando instalamos el NAS a través de SSH lo hicimos para una versión especifica, por lo tanto al actualizarlo desde el NAS normal, al reiniciarse no encuentra la versión esperada.
 
@@ -22,7 +22,7 @@ Como podemos ver en la siguiente imagen la versión que se ha descargado es la *
 
 Ahora que ya sabemos la versión podemos darle a **Actualizar ahora**. Debemos aceptar que el NAS se reiniciará y comenzará la actualización. Una vez que ya la tengamos actualizada, el NAS se reiniciara. Antes de que se vuelva a encender, desde el GRUB debemos seleccionar la opción de **Tinycore Image Build.**
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Selección Tinycore en GRUB</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Selección Tinycore en GRUB</p></figcaption></figure>
 
 ### Segundo paso - Acceder a Tinycore
 

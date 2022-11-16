@@ -1,5 +1,5 @@
 ---
-description: Como crear volúmenes y grupos de almacenamiento
+description: JLM
 ---
 
 # Creación de volúmenes y su uso
@@ -28,13 +28,13 @@ Ahora debemos seleccionar el RAID que queremos hacer con nuestras unidades de al
 
 De forma opcional podemos agregarle una descripción para poder identificarlo, introduciré: **Mi primer grupo de almacenamiento**.
 
-<figure><img src="../../../.gitbook/assets/image (6) (2).png" alt=""><figcaption><p>Selección de RAID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Selección de RAID</p></figcaption></figure>
 
 ### Tercer paso - Selección de discos para el grupo de almacenamiento
 
 Al hacer clic en Siguiente, nos encontraremos una ventana donde debemos elegir las unidades que formaran este grupo de almacenamiento, en este caso únicamente tenemos dos unidades, para seleccionarlas debemos desplazarlas hacia el panel derecho.
 
-<figure><img src="../../../.gitbook/assets/image (3) (5).png" alt=""><figcaption><p>Selección de discos</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Selección de discos</p></figcaption></figure>
 
 ### Cuarto paso - Comprobación de la unidad
 
@@ -54,7 +54,7 @@ De forma opcional podemos agregarle una descripción para poder identificarlo, i
 
 En el siguiente paso nos encontraremos la selección del sistema de archivos, de forma recomendada usaremos **btrfs**, este cuenta con funciones avanzadas frente a **ext4**. Además las ventajas de migración de sistemas con versioens anteriores de NAS no lo usaremos.
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Selección sistema de archivos </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Selección sistema de archivos </p></figcaption></figure>
 
 ### Séptimo paso - Revisión de la configuración
 

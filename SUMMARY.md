@@ -3,10 +3,10 @@
 ## Seguridad
 
 * [NAS](README.md)
-  * [Synology NAS (DSM) en VirtualBox](seguridad/nas/synology-nas-dsm-en-virtualbox/README.md)
-    * [Creación de volúmenes y su uso](seguridad/nas/synology-nas-dsm-en-virtualbox/creacion-de-volumenes-y-su-uso.md)
-    * [Actualización NAS](seguridad/nas/synology-nas-dsm-en-virtualbox/actualizacion-nas.md)
-    * [Creación de usuarios y carpetas compartidas](seguridad/nas/synology-nas-dsm-en-virtualbox/creacion-de-usuarios-y-carpetas-compartidas.md)
+  * [Instalación Synology NAS en VirtualBox](seguridad/nas/instalacion-synology-nas-en-virtualbox/README.md)
+    * [Creación de volúmenes y su uso](seguridad/nas/instalacion-synology-nas-en-virtualbox/creacion-de-volumenes-y-su-uso.md)
+    * [Actualización Synology NAS](seguridad/nas/instalacion-synology-nas-en-virtualbox/actualizacion-synology-nas.md)
+    * [Creación de usuarios y carpetas compartidas](seguridad/nas/instalacion-synology-nas-en-virtualbox/creacion-de-usuarios-y-carpetas-compartidas.md)
   * [Instalando Truenas](seguridad/nas/instalando-truenas.md)
   * [RAID](seguridad/nas/raid.md)
 * [SOPS/AGE](seguridad/sops-age.md)

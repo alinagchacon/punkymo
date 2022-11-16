@@ -20,7 +20,7 @@ Para la creación de carpetas compartidas debes ser un usuario con permisos de a
 
 Lo primero que debemos hacer para crear una carpeta es acceder al panel de control, después haremos clic sobre **Carpetas compartidas.**  Desde ahi podemos observer las carpetas compartidas que tenemos, en este momento no tenemos ninguna, en el momento de crearlas apareceran ahi y podremos gestionarlas de una forma mas ordenada.
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Panel de gestión de carpetas compartidas</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Panel de gestión de carpetas compartidas</p></figcaption></figure>
 
 ### **Segundo paso - Creación de la carpeta**
 
@@ -54,19 +54,19 @@ Justo debajo de los campos, podemos marcar que envie un correo de bienvenida el 
 
 Tambíen podemos marcar la opción de que el usuario pueda cambiar la contraseña el mismo, es una opción recomendable si el usuario es de confianza, en este caso no la marcaremos, por lo tanto unicamente podran cambiarla los adminsitradores.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Información del usuario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Información del usuario</p></figcaption></figure>
 
 ### Tercer paso - Unión a grupos
 
 En la siguiente ventana encontraremos la opción de unir el usuario a un grupo. De forma predeterminada todos los usuarios pertenecen al grupo **users**. Este grupo no tiene ningún permiso especial, únicamente quiere decir que es un usuario normal sin permisos de administrador. En el caso de tener otros grupos, podremos unirlo en el momento de le creación del usuario. Se puden unir posteriormente si es necesario.
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Grupos de usuarios</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Grupos de usuarios</p></figcaption></figure>
 
 ### Cuarto paso - Asignación de carpetas compartidas
 
 En este paso nos ecnontraremos las carpetas compartidas que tengamos en nuestro NAS, a las que desde este paso podemos asignar los permisos de lectura/escritura. En este caso de momento no tenemos ninguna carpeta, por lo tanto no veremos nada. Posteriormente crearemos una carpeta y se la comaprtiremos al usuario.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Asignación de carpetas</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Asignación de carpetas</p></figcaption></figure>
 
 
 
