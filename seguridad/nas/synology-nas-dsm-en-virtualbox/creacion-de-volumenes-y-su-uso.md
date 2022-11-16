@@ -28,13 +28,13 @@ Ahora debemos seleccionar el RAID que queremos hacer con nuestras unidades de al
 
 De forma opcional podemos agregarle una descripción para poder identificarlo, introduciré: **Mi primer grupo de almacenamiento**.
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Selección de RAID</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (2).png" alt=""><figcaption><p>Selección de RAID</p></figcaption></figure>
 
 ### Tercer paso - Selección de discos para el grupo de almacenamiento
 
 Al hacer clic en Siguiente, nos encontraremos una ventana donde debemos elegir las unidades que formaran este grupo de almacenamiento, en este caso únicamente tenemos dos unidades, para seleccionarlas debemos desplazarlas hacia el panel derecho.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Selección de discos</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (5).png" alt=""><figcaption><p>Selección de discos</p></figcaption></figure>
 
 ### Cuarto paso - Comprobación de la unidad
 
