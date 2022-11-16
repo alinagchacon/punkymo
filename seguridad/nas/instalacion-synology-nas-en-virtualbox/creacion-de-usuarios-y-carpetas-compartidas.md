@@ -36,6 +36,8 @@ La segunda opción indica que si queremos ocultar las subcarpetas y archivos a l
 
 ****
 
+### **Tercer paso -**&#x20;
+
 ## Creación de usuarios
 
 ### Primer paso - Acceder al Panel de control
@@ -64,7 +66,7 @@ En la siguiente ventana encontraremos la opción de unir el usuario a un grupo. 
 
 ### Cuarto paso - Asignación de carpetas compartidas
 
-En este paso nos ecnontraremos las carpetas compartidas que tengamos en nuestro NAS, a las que desde este paso podemos asignar los permisos de lectura/escritura. En este caso de momento no tenemos ninguna carpeta, por lo tanto no veremos nada. Posteriormente crearemos una carpeta y se la comaprtiremos al usuario.
+En este paso nos ecnontraremos las carpetas compartidas que tengamos en nuestro NAS, a las que desde este paso podemos **asignar los permisos** de **lectura/escritura.** En este caso de momento no tenemos ninguna carpeta, por lo tanto no veremos nada. Posteriormente crearemos una carpeta y se la comaprtiremos al usuario.
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Asignación de carpetas</p></figcaption></figure>
 

@@ -9,6 +9,7 @@
     * [Creación de usuarios y carpetas compartidas](seguridad/nas/instalacion-synology-nas-en-virtualbox/creacion-de-usuarios-y-carpetas-compartidas.md)
   * [Instalando Truenas](seguridad/nas/instalando-truenas.md)
   * [RAID](seguridad/nas/raid.md)
+* [Instalación Sophos Firewall XG](seguridad/instalacion-sophos-firewall-xg.md)
 * [SOPS/AGE](seguridad/sops-age.md)
 
 ***
