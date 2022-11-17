@@ -22,7 +22,7 @@ Crear las particiones  es un paso indispensable en el proceso de instalación. Y
 
 Este proceso también incluye elegir el sistema de archivo que será utilizado. Todas estas decisiones influirán en el rendimiento, la seguridad de los datos y la administración del servidor.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Por tanto, es necesario definir las particiones del disco y el sistema de archivos que en el caso de Linux sería ext4 y la swap, que es la memoria virtual.&#x20;
 

@@ -20,7 +20,7 @@ Para la creación de carpetas compartidas debes ser un usuario con permisos de a
 
 Lo primero que debemos hacer para crear una carpeta es acceder al panel de control, después haremos clic sobre **Carpetas compartidas.**  Desde ahi podemos observer las carpetas compartidas que tenemos, en este momento no tenemos ninguna, en el momento de crearlas apareceran ahi y podremos gestionarlas de una forma mas ordenada.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Panel de gestión de carpetas compartidas</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Panel de gestión de carpetas compartidas</p></figcaption></figure>
 
 ### **Segundo paso - Creación de la carpeta**
 
@@ -34,7 +34,39 @@ La primera de ellas nos permite ocultar la carpeta en los **"Mis sitios de red"*
 
 La segunda opción indica que si queremos ocultar las subcarpetas y archivos a los usuarios sin permiso, esto quiere decir que si tenemos usuarios con distintos permisos en el interior de la carpeta se oculten o no a este.&#x20;
 
-****
+Por ultimo nos encontramos la opción de la **Papelera de reciclaje** esto quiere decir que lo que eliminemos da la carpeta con esta opcion habilitada se almacenara en la papelera en vez de elimanarse permanentemente. Esta opción la dejaremos habilitada. La opción de justo debajo quiere decir que si queremos restringir la papelera a solo administradores, desahbilitaremos esta opción para que todos los usuarios con permisos a esa carpeta puedan acceder.
+
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Información básica de carpetas</p></figcaption></figure>
+
+### **Tercer paso - Cifrado de carpeta**
+
+En este paso nos da la opción de cifrar la carpeta con una clave, por defecto esta desabilkitada porque reduce el rendimiento de la carpeta. Además para acceder a la carpeta ya usamos el usuario y contraseña.&#x20;
+
+<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Cifrado de carpetas</p></figcaption></figure>
+
+### Cuarto paso - Configuración avanzada
+
+Las opciones de esta paso únicamente están disponibles para los volúmenes con el sistema de archivos **btrfs**. Esta opción permite comprobar la integridad de los datos y poder habilitar una cuota de espacio a la carpeta compartida de forma predeterminada. Mas adelante podremos habilitar las cuotas por cada usuario que tenga acceso a la carpeta.
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+### Quinto paso - Confirmar la configuración
+
+En este paso confirmaremos que los datos que hemos introducido son correctos. En el caso contrario podremos vovler atrás para modificarlos.
+
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
+
+### Sexto paso - Permisos de usuario
+
+Una vez revisada la configuración, en este paso nos encontramos con la opción de asignar permisos de **lectura/escritura** a los usuarios de nuestro NAS. De momento unicamente tenemos el usuario de administrador, este siempre tiene acceso de lectura y escritura, aunque tambíen se los podemos denegar. Si denegamos el acceso al administrado únicamente podremos gestionar los usuarios que acceden a ella y no ver su contenido.
+
+<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Configurar permisos de usuario</p></figcaption></figure>
+
+### Séptimo paso - Finalizar creación de la carpeta
+
+Una vez apliquemos los cambios la carpeta se creara y nos aparece en el panel de las carpetas compartidas. Desde ahí podremos ver características de la carpeta, su espacio, si tiene papelera, etc.
+
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 ## Creación de usuarios
 
@@ -54,7 +86,7 @@ Justo debajo de los campos, podemos marcar que envie un correo de bienvenida el 
 
 Tambíen podemos marcar la opción de que el usuario pueda cambiar la contraseña el mismo, es una opción recomendable si el usuario es de confianza, en este caso no la marcaremos, por lo tanto unicamente podran cambiarla los adminsitradores.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Información del usuario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Información del usuario</p></figcaption></figure>
 
 ### Tercer paso - Unión a grupos
 
@@ -64,11 +96,32 @@ En la siguiente ventana encontraremos la opción de unir el usuario a un grupo. 
 
 ### Cuarto paso - Asignación de carpetas compartidas
 
-En este paso nos ecnontraremos las carpetas compartidas que tengamos en nuestro NAS, a las que desde este paso podemos asignar los permisos de lectura/escritura. En este caso de momento no tenemos ninguna carpeta, por lo tanto no veremos nada. Posteriormente crearemos una carpeta y se la comaprtiremos al usuario.
+En este paso nos encontraremos las carpetas compartidas que tengamos en nuestro NAS, a las que podremos **asignar los permisos** de **lectura/escritura o únicamente lectura.** Desde aquí podemos ver que tenemos únicamente una carpeta. Por defecto nos aparece sin acceso ya que la politica del grupo **users** no contempla cuales son los permisos por defecto. A este usuario le asignaremos los permisos de **lectura/escritura**.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Asignación de carpetas</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Permisos de usuarios a las carpetas comaprtidas</p></figcaption></figure>
 
+### Quinto paso - Cuotas de usuario
 
+En este paso podremos asignar una cuota de espacio al usuario. Esto quiere decir que si el usuario se pasa de la cantidad de espacio asignado no le dejará copiar mas archivos. En este caso no asiganremos ninguna cuota.
 
-<mark style="color:red;">To be continued...</mark>
+<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Cuotas de usuario</p></figcaption></figure>
 
+### Sexto paso - Asignar permisos de aplicaciones
+
+En este paso podremos elegir las aplicaicones a la que queremos que tenga acceso este usuario. En el caso de que no nos convenga que acceda a alguna de ellas unicamente debemos marcar la casilla de **Denegar**. En este caso este usuario tendrá acceso a todas las aplicaciones que se muestran por pantalla.
+
+<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Permisos de aplicaciones</p></figcaption></figure>
+
+### Séptimo paso - Limitar velocidad transferencia
+
+En este paso podremos limitar de las aplicaciones de acceso a las carpetas compartidas. Limitar la velocidad de transferencia nos puede ayudar a saturar la red si tenemos muchos usuarios. En este caso no especificaremos ningun limite ya que no necesitamos limitar la velocidad de este usuario.
+
+<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Establecer limite de velocidad de transferencia</p></figcaption></figure>
+
+### Octavo paso - Confirmar los datos
+
+Por ultimo comprobaremos que los datos de la creación del usuario esten correctos. En el caso contrario los podremos modificar volviendo para atrás.
+
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Confirmar configuración del usuario</p></figcaption></figure>
+
+Una vez creado el usuario este puede ser modificado, esto puede hacerse desde el panel de control, en el mismo apartado donde se crean los usuarios.

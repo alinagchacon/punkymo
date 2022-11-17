@@ -45,7 +45,7 @@ Una práctica adecuada sería hacer una copia de seguridad de los archivos de co
 
 <mark style="color:blue;">`cp /etc/bind/named.conf.local /etc/bind/named.conf.BKP`</mark>
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora podemos crear el contenido de cada zona en el fichero de configuración: <mark style="color:blue;">named.conf.local</mark>. Esto es:
 
@@ -63,7 +63,7 @@ Ahora vamos a crear los ficheros de zona que hemos indicado en la configuración
 
 Para la **zona directa** creamos el fichero: <mark style="color:blue;">`/etc/bind/db.midominio.local`</mark>
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez creado dicho fichero ya podemos editarlo y hacer las modificaciones  necesarias para nuestra configuración, como el nombre del dominio.&#x20;
 
@@ -103,7 +103,7 @@ La opción <mark style="color:blue;">`-4`</mark>  nos sirve para forzar el uso d
 
 Listo, ya tenemos configurado el servidor DNS. Solo nos queda <mark style="color:blue;">`reiniciar el servicio bind9`</mark> y comprobar que esté corriendo correctamente.
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si no las hecho antes, **edita la configuración de red** del servidor de Ubuntu  para indicar que él mismo es el servidor DNS que tendrá que consultar para la resolución de nombres. Y esto lo tenemos que hacer con **netplan**.
 
@@ -145,7 +145,7 @@ para hacerlo apuntar al fichero adecuado. Comprueba haciendo:
 
 Si vuelves a probar el nslookup veremos que funciona como se espera que haga:
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Links
 
