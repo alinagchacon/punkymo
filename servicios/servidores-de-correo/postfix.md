@@ -134,7 +134,7 @@ Procederemos a la instalación de<mark style="color:purple;">l</mark> cliente de
 
 _<mark style="color:blue;">`sudo apt-get install mailutils`</mark>_
 
-![](<../../.gitbook/assets/image (18) (1).png>)
+![](<../../.gitbook/assets/image (18).png>)
 
 **Nota**: Puedes utilizar otro cliente de correo por terminal como por ejemplo: [Mutt](../clientes-de-correo/mutt.md)
 
@@ -251,7 +251,7 @@ Está claro que tenemos ciertos puertos abiertos para la recepción y envío de 
 
 <mark style="color:blue;">`sudo nmap -ST -= 192.168.1.30`</mark>
 
-![](<../../.gitbook/assets/image (2) (1) (1).png>)
+![](<../../.gitbook/assets/image (2) (1) (1) (1).png>)
 
 ### Link
 

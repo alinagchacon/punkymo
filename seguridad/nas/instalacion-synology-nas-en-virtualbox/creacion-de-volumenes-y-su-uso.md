@@ -40,7 +40,7 @@ Al hacer clic en Siguiente, nos encontraremos una ventana donde debemos elegir l
 
 Al hacer clic en Siguiente, nos encontramos con una ventana donde nos da a alegir entre hacer una comprobación de la unidad o no. En este caso no haremos ninguna comprobación de la unidades ya que es un entorno de pruebas, en un caso real recomiendo hacerla para evitar futuros errores.
 
-<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Comprobación de la unidad</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (2).png" alt=""><figcaption><p>Comprobación de la unidad</p></figcaption></figure>
 
 ### Quinto paso - Asiganación de capacidad al volumen
 
@@ -54,11 +54,11 @@ De forma opcional podemos agregarle una descripción para poder identificarlo, i
 
 En el siguiente paso nos encontraremos la selección del sistema de archivos, de forma recomendada usaremos **btrfs**, este cuenta con funciones avanzadas frente a **ext4**. Además las ventajas de migración de sistemas con versioens anteriores de NAS no lo usaremos.
 
-<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Selección sistema de archivos </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Selección sistema de archivos </p></figcaption></figure>
 
 ### Séptimo paso - Revisión de la configuración
 
-Por ultimo paso debemos revisar que toda la configuración este correcta, si es que si podemos darle a **Aplicar**, en el caso de nos se correcta podemos volver hacia atrás y cambiar los datos que no estén correctos.
+Por ultimo paso debemos revisar que toda la configuración este correcta, si es que si podemos darle a **Aplicar**, en el caso de no ser correcta podemos volver hacia atrás y cambiar los datos que no estén correctos.
 
 Una vez apliquemos los cambias nos saltara una alerta que nos dice que todos los datos serán eliminados, si estamos seguros le decimos que **OK**.
 
@@ -74,10 +74,10 @@ Este aplicación además de ofrecernos información acerca del espacio disponibl
 
 En el panel lateral izquierdo, en Visión general podemos ver una visión mas general y poco detallada acerca del almacenamiento, aunque la ultima sección podemos ver las tareas programadas que tiene el disco. En este caso tiene una prueba S.M.A.R.T.
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Visión general</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Visión general</p></figcaption></figure>
 
 En el ultimo apartado (HDD/SSD) del panel derecho podemos ver la información técnica de los discos duros insertados en el NAS. Aquí nos puede mostrar información como, la temperatura de los discos, horas encendido, sectores defectuosos, etc.&#x20;
 
 Y si hacemos clic en Información de salud aun podemos ver mas información acerca del disco.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Infromación de los discos duros</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Información de los discos duros</p></figcaption></figure>
