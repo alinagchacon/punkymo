@@ -80,4 +80,4 @@ En el ultimo apartado (HDD/SSD) del panel derecho podemos ver la informaci처n t�
 
 Y si hacemos clic en Informaci처n de salud aun podemos ver mas informaci처n acerca del disco.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Informaci처n de los discos duros</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (2).png" alt=""><figcaption><p>Informaci처n de los discos duros</p></figcaption></figure>

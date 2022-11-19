@@ -22,8 +22,8 @@
       * [Hyper Backup](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/hyper-backup.md)
       * [Synology Office](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/synology-office.md)
   * [Instalando Truenas](seguridad/nas/instalando-truenas.md)
-  * [RAID](seguridad/nas/raid.md)
   * [Instalando OpenmediaVault](seguridad/nas/instalando-openmediavault.md)
+  * [RAID](seguridad/nas/raid.md)
 * [Instalación Sophos Firewall XG](seguridad/instalacion-sophos-firewall-xg.md)
 * [SOPS/AGE](seguridad/sops-age.md)
 

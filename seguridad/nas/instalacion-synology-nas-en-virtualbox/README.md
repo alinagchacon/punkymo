@@ -164,7 +164,7 @@ Al hacer clic en Iniciar nos saldrá otra ventana para rellenar el nombre del di
 
 Ahora nos mostrara una ventana para elegir de qué manera se actualiza el DSM y los paquetes, es obligatorio poner la última opción, la actualización manual. Si el NAS se actualiza de forma automática no se volverá a encender hasta que no sigamos un procedimiento especifico, por lo tanto actualizaremos el NAS de forma manual.
 
-<figure><img src="../../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el siguiente paso nos indica si queremos crear una cuenta de Synology para tener acceso a más servicios. Como este NAS no está registrado en Synology no podremos acceder a estos servicios, por lo tanto, debemos omitir este paso.
 
