@@ -93,7 +93,7 @@ seguido del nombre de la zona y del fichero en cuestión. Esto es:
 
 Ahora nos tocaría editar el fichero <mark style="color:blue;">`/etc/bind/named.conf.options`</mark> donde podemos crear una <mark style="color:blue;">`lista de acceso`</mark> para restringir el acceso a quienes pueden realizar las consultas a nuestro servidor DNS. También indicaremos un par de <mark style="color:blue;">`servidores forwarders`</mark> donde pueda delegar nuestro servidor DNS local cuando no pueda resolver alguna consulta.
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ya casi finalizamos pero antes de poner en marcha el servicio modifiquemos  el fichero <mark style="color:blue;">`/etc/default/named`</mark> donde especificaremos la opción<mark style="color:blue;">`-4`</mark> como argumento para el usuario **bind,** que  se crea automáticamente durante la instalación del servicio bind9.&#x20;
 

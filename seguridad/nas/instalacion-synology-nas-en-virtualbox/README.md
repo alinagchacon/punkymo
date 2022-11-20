@@ -172,8 +172,8 @@ En el siguiente paso nos indica si queremos crear una cuenta de Synology para te
 
 Por último paso nos pide permiso para recopilar datos o no, es opcional marcar esta casilla ya que no influirá en el funcionamiento del NAS.
 
-<figure><img src="../../../.gitbook/assets/image (8) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez hecho todo este proceso ya nos encontraremos con la pantalla principal de nuestro NAS.
 
-<figure><img src="../../../.gitbook/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (2) (1).png" alt=""><figcaption></figcaption></figure>

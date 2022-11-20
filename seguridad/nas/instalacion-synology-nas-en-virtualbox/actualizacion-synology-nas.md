@@ -18,7 +18,7 @@ Desde ahí descargamos la actualización y la instalaremos normalmente, debemos 
 
 Como podemos ver en la siguiente imagen la versión que se ha descargado es la **7.1.1-42962**, por lo que deberemos apuntarla para posteriormente recordarla.
 
-<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Actualización desde el Panel de control</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1) (2).png" alt=""><figcaption><p>Actualización desde el Panel de control</p></figcaption></figure>
 
 Ahora que ya sabemos la versión podemos darle a **Actualizar ahora**. Debemos aceptar que el NAS se reiniciará y comenzará la actualización. Una vez que ya la tengamos actualizada, el NAS se reiniciara. Antes de que se vuelva a encender, desde el GRUB debemos seleccionar la opción de **Tinycore Image Build.**
 

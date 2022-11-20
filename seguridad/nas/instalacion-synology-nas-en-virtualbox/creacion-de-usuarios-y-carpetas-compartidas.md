@@ -66,7 +66,7 @@ Una vez revisada la configuración, en este paso nos encontramos con la opción 
 
 Una vez apliquemos los cambios la carpeta se creara y nos aparece en el panel de las carpetas compartidas. Desde ahí podremos ver características de la carpeta, su espacio, si tiene papelera, etc.
 
-<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Visualizar carpeta desde el panel de control</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>Visualizar carpeta desde el panel de control</p></figcaption></figure>
 
 ### Octavo paso - Visualizar interior de la carpeta
 
@@ -86,7 +86,7 @@ Para crear y gestionar usuarios debes poseer el rol de administrador, el único 
 
 Primero de todo accedemos al panel de control, después nos dirigimos a **Usuario y grupo**. **** Desde ese panel podremos ver todos los usuarios creados, durante la instalación del NAS se crean dos usuarios extras, el **admin** y el **guest**. Por defecto aparecen deshabilitados. Es recomendable nunca activar el usuario de **admin** ya que nuestro NAS puede sufrir ataques de fuerza bruta.
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Usuario y grupo</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (2).png" alt=""><figcaption><p>Usuario y grupo</p></figcaption></figure>
 
 ### Segundo paso - Creación del usuario
 
@@ -120,7 +120,7 @@ En este paso podremos asignar una cuota de espacio al usuario. Esto quiere decir
 
 En este paso podremos elegir las aplicaicones a la que queremos que tenga acceso este usuario. En el caso de que no nos convenga que acceda a alguna de ellas unicamente debemos marcar la casilla de **Denegar**. En este caso este usuario tendrá acceso a todas las aplicaciones que se muestran por pantalla.
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Permisos de aplicaciones</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (3).png" alt=""><figcaption><p>Permisos de aplicaciones</p></figcaption></figure>
 
 ### Séptimo paso - Limitar velocidad transferencia
 

@@ -16,11 +16,11 @@ Tambien tenemos la opción de instalarlo a través de una ISO de forma manual en
 
 Para descargar SOPHOS Firewall debemos hacerlo desde esta URL: [https://www.sophos.com/en-us/support/downloads/firewall-installers](https://www.sophos.com/en-us/support/downloads/firewall-installers). Después tenemos que elegir la opción de **Virtual Installers: Firewall OS for VMware**.
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption><p>Descarga sophos firewall</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (3).png" alt=""><figcaption><p>Descarga sophos firewall</p></figcaption></figure>
 
 Antes de la descarga debemos de rellenar ciertos datos que pueden ser aleatorios, no es necesario poner nuestro correo real.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Términos y condiciones de descarga</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Términos y condiciones de descarga</p></figcaption></figure>
 
 Al enviar el formulario comenzará la descarga del Firewall, este se descargará en un zip que posteriormente descomprimiremos.
 
@@ -36,15 +36,15 @@ En este caso si debemos de poner nuestro correo real ya que es ahí donde recibi
 
 Cuando se descarga debemos descomprimirlo y hacer doble clic en **sf\_virtual\_virtualbox.ovf**. Esto hará que se importe la máquina virtual a VirtualBox y podremos elegir la ubicación donde queremos que se importe. En el caso de que no se importe nos vamos a la pantalla principal de virtualbox, le damos a **añadir** y buscamos el archivo dicho anteriormente y lo seleccionamos y empezara la importación.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Importación VM</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 Antes de iniciar la maquina debemos de hacer ciertas configuraciones a la red, debemos de poner en el Adaptador 1 en Red Interna **(itnetAdmin)**, el Adaptador 2 ponerlo en red interna, pero en otra diferente **(itnetUsers)**, el tercer adaptador en red interna pero también en otra diferente **(itnetDMZ)** y el cuarto adaptador en **NAT)** Nos debe de quedar de esta manera:
 
 Las redes internas se van creando a medida que se escriben.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Configuración redes en VirtualBox</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (3).png" alt=""><figcaption><p>Configuración redes en VirtualBox</p></figcaption></figure>
 
-Una vez hecho esto ya podremos arrancar la máquina virtual.
+Una vez hecho esto ya podremos arrancar la máquina virtual. No debemos tocar la selección de sistema del GRUB.
 
 ### Configuración desde la interfaz de la VM
 
@@ -52,15 +52,15 @@ Una vez arrancamos la máquina virtual se comenzarán a iniciar todos los proces
 
 Seguidamente nos pedirá la contraseña para acceder, de forma predeterminada es **admin**.
 
-<figure><img src="../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Después nos aparecerá un mensaje sobre los Términos de Licencia del firewall, si queremos seguir utilizando debemos aceptarlos presionando la tecla **A**.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez lo aceptamos nos aparecerá la pantalla principal del Firewall. Debe ser como la siguiente:
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 Desde la propia interfaz de Sophos no realizaremos ninguna configuración, esta se hace desde el navegador.
 
@@ -70,11 +70,11 @@ Para poder entrar al panel de administración y poder configurarlo debemos abrir
 
 Cuando accedemos nos saldrá una advertencia sobre la conexión, detecta que no tiene certificado SSL y por lo tanto nos avisa que la conexión no es segura. Para saltar este error debemos de hacer clic en **Avanzado** y en **Continuar (dirección\_ip)**.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Adveterncía de seguridad</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Si todo ha funcionado correctamente nos aparecerá la página de bienvenida, está la podemos ver en la siguiente imagen debe de aparecer una página como esta:
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Inicio de Sophos</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 En el caso de que no aparecer esta página, y apareciera directamente un Login debemos abrir otra pestaña y volver a escribir la URL.
 
@@ -82,5 +82,25 @@ Para continuar con la configuración seleccionamos la casilla de los Términos y
 
 ## Configuración inicial desde la web
 
-to be continued...
+Ya finalizados los pasos previos debemos de comenzar el proceso de configuración principal. Este nos permitirá establecer las primeras configuraciones de uso del firewall y activarlo.
+
+### Primer paso - Establecer contraseña de administrador
+
+Lo primero que debemos hacer es seleccionar una contraseña segura con las características que nos muestra por pantalla, ya que si no nos dejara continuar.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Establecer contraseña</p></figcaption></figure>
+
+La casilla de **Instalar el firmware más reciente** es recomendable que este seleccionada.
+
+### Segundo paso - Conexión a internet
+
+Ahora debemos establecer el adaptador de red por el cual ira la conexión internet. Al estar tener varios adaptadores en red interna es posible que el Firewall no detecta cual es el puerto que tiene salida a Internet. Por eso no sale un error como el que podemos ver a continuación:
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Error de conexión a internet</p></figcaption></figure>
+
+Para solucionar este problema hacemos clic en el botón de **Manual configuration** y debemos abrir el desplegable de **Choose a port to configure** y seleccionar el **Port D** ya que este es el adaptador que tiene salida a Internet en NAT. Una vez le demos a **Apply** tardará unos segundos en configurarse.
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Cambiar adaptador de internet</p></figcaption></figure>
+
+Después se debe quitar el error y aparecernos que tenemos internet como podemos ver en la siguiente imagen. Una vez hecho esto hacemos clic en **Continue**.
 
