@@ -110,18 +110,37 @@ Para comprobar que el servidor está funcionando, en nuestro navegador podemos e
 
 ### Configuración
 
-Una vez instalado nginx ya podremos utilizarlo pero podemos mejorar su rendimiento editando el archivo nginx.conf que se encuentra en /etc/nginx.
+Una vez instalado nginx ya podremos utilizarlo pero podemos mejorar su rendimiento editando el archivo nginx.conf que se encuentra en <mark style="color:blue;">`/etc/nginx`</mark>.
+
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 Directivas que podemos modificar:
 
-* **Worker\_processes**: el valor indicado en esta directiva determinará el número máximo de procesos simultáneos que podrá gestionar el servidor web. Para ello, es necesario conocer el número de procesos que puede gestionar nuestro equipo. \
-  Podemos hacer uso de la siguiente instrucción y el valor que nos devuelva, será el que indicaremos en esta directiva:
+* **Worker\_processes**: el valor indicado en esta directiva podrá determinar el número máximo de procesos simultáneos que a gestionar por el servidor web. Para ello, es necesario conocer el número de procesos que puede gestionar nuestro equipo. \
+  Podemos hacer uso de la siguiente instrucción y el valor que nos devuelva, sería el que indicaremos en esta directiva:
 
 ```
 grep processor /proc/cpuinfo | wc –l 
 ```
 
 * **Directiva worker\_connections**: el valor que determina el número máximo de conexiones que puede tener el sitio. Si nuestro sitio tiene un elevado número de visitas, es recomendable aumentar este valor. Por defecto viene configurado con el valor de 768, pero se puede modificar y poner un valor superior, por ejemplo 1024.
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+* **Directiva keepalive\_timeout**: Se trata de  una directiva que se utiliza para mantener la conexión abierta durante un cierto número de solicitudes al servidor o hasta que expire el período de tiempo de espera de la solicitud. Según los desarrolladores de Nginx, 10 000 conexiones inactivas usarían solo 2,5 MB de memoria, lo que demuestra que Nginx es excepcionalmente bueno para manejar conexiones inactivas debido a las conexiones **keepalive**. \
+  Adicionalmente, tiene gran influencia en la percepción del tiempo de carga por parte del usuario final y se puede utilizar esta opción para optimizar el tiempo de carga de un sitio web.\
+  \
+  Dado que la creación de nuevas conexiones TCP puede consumir gran cantidad de recursos, como memoria y uso de CPU el hecho de mantener viva su conexión en Nginx  permite reducir este consumo. Siendo una de las razones por la que se recomienda el uso de keepalive para las conexiones HTTPS. \
+  Habilitar el keepalive puede ayudarlo a mejorar la experiencia del usuario y el rendimiento del sitio web. Permite que el navegador cargue el contenido de la página con una sola conexión TCP. \
+  Otro beneficio es que mejora la velocidad de la página web debido a su capacidad para entregar varios archivos a través de la misma conexión, lo que reduce la latencia y acelera la carga de las páginas web.
+
+
+
+### Links
+
+* [https://linuxhint.com/what-is-keepalive-in-nginx/ ](https://linuxhint.com/what-is-keepalive-in-nginx/)
+*
+*
 
 
 

@@ -20,7 +20,7 @@ Para la creación de carpetas compartidas debes ser un usuario con permisos de a
 
 Lo primero que debemos hacer para crear una carpeta es acceder al panel de control, después haremos clic sobre **Carpetas compartidas.**  Desde ahi podemos observer las carpetas compartidas que tenemos, en este momento no tenemos ninguna, en el momento de crearlas apareceran ahi y podremos gestionarlas de una forma mas ordenada.
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Panel de gestión de carpetas compartidas</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (4).png" alt=""><figcaption><p>Panel de gestión de carpetas compartidas</p></figcaption></figure>
 
 ### **Segundo paso - Creación de la carpeta**
 
@@ -102,13 +102,13 @@ Tambíen podemos marcar la opción de que el usuario pueda cambiar la contraseñ
 
 En la siguiente ventana encontraremos la opción de unir el usuario a un grupo. De forma predeterminada todos los usuarios pertenecen al grupo **users**. Este grupo no tiene ningún permiso especial, únicamente quiere decir que es un usuario normal sin permisos de administrador. En el caso de tener otros grupos, podremos unirlo en el momento de le creación del usuario. Se puden unir posteriormente si es necesario.
 
-<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Grupos de usuarios</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (3).png" alt=""><figcaption><p>Grupos de usuarios</p></figcaption></figure>
 
 ### Cuarto paso - Asignación de carpetas compartidas
 
 En este paso nos encontraremos las carpetas compartidas que tengamos en nuestro NAS, a las que podremos **asignar los permisos** de **lectura/escritura o únicamente lectura.** Desde aquí podemos ver que tenemos únicamente una carpeta. Por defecto nos aparece sin acceso ya que la politica del grupo **users** no contempla cuales son los permisos por defecto. A este usuario le asignaremos los permisos de **lectura/escritura**.
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Permisos de usuarios a las carpetas comaprtidas</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (3).png" alt=""><figcaption><p>Permisos de usuarios a las carpetas comaprtidas</p></figcaption></figure>
 
 ### Quinto paso - Cuotas de usuario
 
