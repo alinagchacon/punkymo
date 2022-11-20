@@ -1,8 +1,10 @@
 # Table of contents
 
+* [Inicio](README.md)
+
 ## Seguridad
 
-* [NAS](README.md)
+* [NAS](<README (1).md>)
   * [Instalación Synology NAS en VirtualBox](seguridad/nas/instalacion-synology-nas-en-virtualbox/README.md)
     * [Creación de volúmenes y su uso](seguridad/nas/instalacion-synology-nas-en-virtualbox/creacion-de-volumenes-y-su-uso.md)
     * [Actualización Synology NAS](seguridad/nas/instalacion-synology-nas-en-virtualbox/actualizacion-synology-nas.md)
