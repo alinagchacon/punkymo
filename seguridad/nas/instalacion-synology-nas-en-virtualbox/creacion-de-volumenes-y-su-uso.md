@@ -74,7 +74,7 @@ Este aplicación además de ofrecernos información acerca del espacio disponibl
 
 En el panel lateral izquierdo, en Visión general podemos ver una visión mas general y poco detallada acerca del almacenamiento, aunque la ultima sección podemos ver las tareas programadas que tiene el disco. En este caso tiene una prueba S.M.A.R.T.
 
-<figure><img src="../../../.gitbook/assets/image (7) (1) (2) (2).png" alt=""><figcaption><p>Visión general</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1) (2).png" alt=""><figcaption><p>Visión general</p></figcaption></figure>
 
 En el ultimo apartado (HDD/SSD) del panel derecho podemos ver la información técnica de los discos duros insertados en el NAS. Aquí nos puede mostrar información como, la temperatura de los discos, horas encendido, sectores defectuosos, etc.&#x20;
 

@@ -20,7 +20,7 @@ Para descargar SOPHOS Firewall debemos hacerlo desde esta URL: [https://www.soph
 
 Antes de la descarga debemos de rellenar ciertos datos que pueden ser aleatorios, no es necesario poner nuestro correo real.
 
-<figure><img src="../.gitbook/assets/image (7) (1) (2).png" alt=""><figcaption><p>Términos y condiciones de descarga</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Términos y condiciones de descarga</p></figcaption></figure>
 
 Al enviar el formulario comenzará la descarga del Firewall, este se descargará en un zip que posteriormente descomprimiremos.
 
@@ -52,15 +52,15 @@ Una vez arrancamos la máquina virtual se comenzarán a iniciar todos los proces
 
 Seguidamente nos pedirá la contraseña para acceder, de forma predeterminada es **admin**.
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (5).png" alt=""><figcaption></figcaption></figure>
 
 Después nos aparecerá un mensaje sobre los Términos de Licencia del firewall, si queremos seguir utilizando debemos aceptarlos presionando la tecla **A**.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 Una vez lo aceptamos nos aparecerá la pantalla principal del Firewall. Debe ser como la siguiente:
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (3).png" alt=""><figcaption></figcaption></figure>
 
 Desde la propia interfaz de Sophos no realizaremos ninguna configuración, esta se hace desde el navegador.
 
@@ -88,7 +88,7 @@ Ya finalizados los pasos previos debemos de comenzar el proceso de configuració
 
 Lo primero que debemos hacer es seleccionar una contraseña segura con las características que nos muestra por pantalla, ya que si no nos dejara continuar.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Establecer contraseña</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (4).png" alt=""><figcaption><p>Establecer contraseña</p></figcaption></figure>
 
 La casilla de **Instalar el firmware más reciente** es recomendable que este seleccionada.
 
@@ -96,11 +96,11 @@ La casilla de **Instalar el firmware más reciente** es recomendable que este se
 
 Ahora debemos establecer el adaptador de red por el cual ira la conexión internet. Al estar tener varios adaptadores en red interna es posible que el Firewall no detecta cual es el puerto que tiene salida a Internet. Por eso no sale un error como el que podemos ver a continuación:
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Error de conexión a internet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>Error de conexión a internet</p></figcaption></figure>
 
 Para solucionar este problema hacemos clic en el botón de **Manual configuration** y debemos abrir el desplegable de **Choose a port to configure** y seleccionar el **Port D** ya que este es el adaptador que tiene salida a Internet en NAT. Una vez le demos a **Apply** tardará unos segundos en configurarse.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Cambiar adaptador de internet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Cambiar adaptador de internet</p></figcaption></figure>
 
 Después se debe quitar el error y aparecernos que tenemos internet como podemos ver en la siguiente imagen. Una vez hecho esto hacemos clic en **Continue**.
 

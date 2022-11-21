@@ -112,7 +112,13 @@ Para comprobar que el servidor está funcionando, en nuestro navegador podemos e
 
 Una vez instalado nginx ya podremos utilizarlo pero podemos mejorar su rendimiento editando el archivo nginx.conf que se encuentra en <mark style="color:blue;">`/etc/nginx`</mark>.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+Igualmente tienes la posibilidad de acceder al manual de nginx desde:
+
+```
+man nginx
+```
 
 Directivas que podemos modificar:
 
@@ -125,7 +131,7 @@ grep processor /proc/cpuinfo | wc –l
 
 * **Directiva worker\_connections**: el valor que determina el número máximo de conexiones que puede tener el sitio. Si nuestro sitio tiene un elevado número de visitas, es recomendable aumentar este valor. Por defecto viene configurado con el valor de 768, pero se puede modificar y poner un valor superior, por ejemplo 1024.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 * **Directiva keepalive\_timeout**: Se trata de  una directiva que se utiliza para mantener la conexión abierta durante un cierto número de solicitudes al servidor o hasta que expire el período de tiempo de espera de la solicitud. Según los desarrolladores de Nginx, 10 000 conexiones inactivas usarían solo 2,5 MB de memoria, lo que demuestra que Nginx es excepcionalmente bueno para manejar conexiones inactivas debido a las conexiones **keepalive**. \
   Adicionalmente, tiene gran influencia en la percepción del tiempo de carga por parte del usuario final y se puede utilizar esta opción para optimizar el tiempo de carga de un sitio web.\
@@ -134,13 +140,43 @@ grep processor /proc/cpuinfo | wc –l
   Habilitar el keepalive puede ayudarlo a mejorar la experiencia del usuario y el rendimiento del sitio web. Permite que el navegador cargue el contenido de la página con una sola conexión TCP. \
   Otro beneficio es que mejora la velocidad de la página web debido a su capacidad para entregar varios archivos a través de la misma conexión, lo que reduce la latencia y acelera la carga de las páginas web.
 
+```
+keepalive_timeout 10;
+```
 
+### Módulos&#x20;
+
+Nginx permite ampliar su funcionalidad por medio del uso de módulos. Algunos de los módulos más importantes que nos podemos encontrar son:&#x20;
+
+* **HTTP Referer**. Filtra peticiones recibidas en función de la cabecera Referer.&#x20;
+* **HTTP Limit Zone**. Limita el número de conexiones simultáneas desde un mismo cliente.&#x20;
+* **User ID**. Proporciona cookies identificativas.&#x20;
+* **FLV**. Permite reproducir vídeo en streaming.&#x20;
+* **Perl**. Módulo que permite ejecutar Perl directamente dentro de Nginx.
+* **WebDAV**. Ofrece soporte para [WebDAV](https://es.wikipedia.org/wiki/WebDAV).&#x20;
+* **Secure Link**. Este módulo ofrece la posibilidad de proteger páginas mediante clave secreta.&#x20;
+* **XSLT**. Funcionalidad que permite el post-procesamiento de páginas mediante [XSLT](https://www.w3schools.com/xml/xsl\_intro.asp)
 
 ### Links
 
 * [https://linuxhint.com/what-is-keepalive-in-nginx/ ](https://linuxhint.com/what-is-keepalive-in-nginx/)
-*
-*
+* [https://www.nginx.com/blog/avoiding-top-10-nginx-configuration-mistakes/](https://www.nginx.com/blog/avoiding-top-10-nginx-configuration-mistakes/)
+* [https://www.redeszone.net/tutoriales/internet/webdav-que-es-configuracion/ ](https://www.redeszone.net/tutoriales/internet/webdav-que-es-configuracion/)
+* [https://www.w3schools.com/xml/xsl\_intro.asp](https://www.w3schools.com/xml/xsl\_intro.asp)
+
+
+
+### Probando un sitio web
+
+Si quieres probar el funcionamiento de nginx puedes crear o subir un sitio web en la dirección&#x20;
+
+```
+/var/www/html/example.com 
+```
+
+[https://enclaveinformatico.com/nginx-instalando-y-configurando-un-servidor-web/](https://enclaveinformatico.com/nginx-instalando-y-configurando-un-servidor-web/)
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 
 
