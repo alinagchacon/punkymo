@@ -224,6 +224,30 @@ Y si accedemos a nuestra página web podemos verla. Eso sí, nos hace la adverte
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
+### En nginx docker&#x20;
+
+Para poder subir un contenido web en nuestra instalación de nginx de docker tenemos que copiar cada archivo al path correspondiente dentro del container o bien crear volumen.
+
+Vamos a suponer que tengo simplemente el archivo index.html que hemos creado en la sección anterior. Entonces,
+
+Si estamos en Alpine linux podemos utilizar el siguiente comando de docker para ver los contenedores activos que tenemos en nuestro servidor:
+
+```
+docker ps
+```
+
+De este modo podemos ver también la ID del contenedor de nginx:
+
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+
+Para copiar el archivo index.html en la ubicación del contenedor de nginx:
+
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
 ### Links
 
 * [https://nginx.org/en/docs/](https://nginx.org/en/docs/)
