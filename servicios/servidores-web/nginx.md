@@ -112,7 +112,7 @@ Para comprobar que el servidor está funcionando, en nuestro navegador podemos e
 
 Una vez instalado nginx ya podremos utilizarlo pero podemos mejorar su rendimiento editando el archivo nginx.conf que se encuentra en <mark style="color:blue;">`/etc/nginx`</mark>.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 Igualmente tienes la posibilidad de acceder al manual de nginx desde:
 
@@ -131,7 +131,7 @@ grep processor /proc/cpuinfo | wc –l
 
 * **Directiva worker\_connections**: el valor que determina el número máximo de conexiones que puede tener el sitio. Si nuestro sitio tiene un elevado número de visitas, es recomendable aumentar este valor. Por defecto viene configurado con el valor de 768, pero se puede modificar y poner un valor superior, por ejemplo 1024.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 * **Directiva keepalive\_timeout**: Se trata de  una directiva que se utiliza para mantener la conexión abierta durante un cierto número de solicitudes al servidor o hasta que expire el período de tiempo de espera de la solicitud. Según los desarrolladores de Nginx, 10 000 conexiones inactivas usarían solo 2,5 MB de memoria, lo que demuestra que Nginx es excepcionalmente bueno para manejar conexiones inactivas debido a las conexiones **keepalive**. \
   Adicionalmente, tiene gran influencia en la percepción del tiempo de carga por parte del usuario final y se puede utilizar esta opción para optimizar el tiempo de carga de un sitio web.\
@@ -157,26 +157,79 @@ Nginx permite ampliar su funcionalidad por medio del uso de módulos. Algunos de
 * **Secure Link**. Este módulo ofrece la posibilidad de proteger páginas mediante clave secreta.&#x20;
 * **XSLT**. Funcionalidad que permite el post-procesamiento de páginas mediante [XSLT](https://www.w3schools.com/xml/xsl\_intro.asp)
 
+### Configurando un sitio web
+
+Si quieres probar el funcionamiento de nginx puedes crear o subir un sitio web en la carpeta:&#x20;
+
+```
+/var/www/html/example.com
+```
+
+Creamos un archivo con el mismo nombre example.com en <mark style="color:blue;">`/etc/nginx/sites-available/example.com`</mark>
+
+Y dentro escribimos:
+
+```
+server {
+  listen 80;
+  listen [::]:80;
+  
+  root /var/www/html/example.com;
+  index index.html index.htm index.nginx-debian.html
+  server_name example.com www.example.com;
+  
+  location /{
+    try_files $uri $uri/=404;
+  }
+}
+```
+
+Ahora vamos a crear un enlace entre el directorio y el archivo para habilitarlo:
+
+<pre><code><strong>sudo ln -s /etc/nginx/sites-available/example.com   /etc/nginx/sites-enabled/</strong></code></pre>
+
+De modo que obtengas algo así:
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+Volviendo al sitio web, puedes comenzar por crear una carpeta que contenga todos los archivos e imágenes:
+
+```
+sudo mkdir -p /var/www/html/example.com
+```
+
+Podemos modificar el dueño y grupo de la carpeta creada haciendo:
+
+```
+sudo chown -R $USER:$USER /var/www/html/example.com
+```
+
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+
+Podemos asignar permisos con el comando:
+
+```
+sudo chmod -R 755 /var/www/html/example.com
+```
+
+Y crear la página de ejemplo:
+
+```
+sudo nano /var/www/html/example.com/index.html
+```
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Y si accedemos a nuestra página web podemos verla. Eso sí, nos hace la advertencia de que no es un sitio seguro y si no tenemos configurado el DNS tampoco podremos acceder a la misma de otro modo que no sea a través de la IP.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
 ### Links
 
+* [https://nginx.org/en/docs/](https://nginx.org/en/docs/)
 * [https://linuxhint.com/what-is-keepalive-in-nginx/ ](https://linuxhint.com/what-is-keepalive-in-nginx/)
 * [https://www.nginx.com/blog/avoiding-top-10-nginx-configuration-mistakes/](https://www.nginx.com/blog/avoiding-top-10-nginx-configuration-mistakes/)
 * [https://www.redeszone.net/tutoriales/internet/webdav-que-es-configuracion/ ](https://www.redeszone.net/tutoriales/internet/webdav-que-es-configuracion/)
 * [https://www.w3schools.com/xml/xsl\_intro.asp](https://www.w3schools.com/xml/xsl\_intro.asp)
-
-
-
-### Probando un sitio web
-
-Si quieres probar el funcionamiento de nginx puedes crear o subir un sitio web en la dirección&#x20;
-
-```
-/var/www/html/example.com 
-```
-
-[https://enclaveinformatico.com/nginx-instalando-y-configurando-un-servidor-web/](https://enclaveinformatico.com/nginx-instalando-y-configurando-un-servidor-web/)
-
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
-
-
+* [https://access.redhat.com/documentation/es-es/red\_hat\_enterprise\_linux/8/html/deploying\_different\_types\_of\_servers/configuring-nginx-as-a-web-server-that-provides-different-content-for-different-domains\_setting-up-and-configuring-nginx](https://access.redhat.com/documentation/es-es/red\_hat\_enterprise\_linux/8/html/deploying\_different\_types\_of\_servers/configuring-nginx-as-a-web-server-that-provides-different-content-for-different-domains\_setting-up-and-configuring-nginx)
 

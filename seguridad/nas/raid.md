@@ -39,7 +39,7 @@ El software de particionado proporciona un modo <mark style="color:blue;">`guiad
 
 Una vez finalizado este proceso debemos obtener el raid montado en las particiones:
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finalizamos el particionado y continuamos con el proceso de instalación. Una vez reiniciado el sistema, podemos verificar el montaje del raid en el sistema. Para ello podemos verificar el archivo /proc/mdstat que es un archivo especial que nos muestra el estado del controlador md del kernel de Linux.&#x20;
 

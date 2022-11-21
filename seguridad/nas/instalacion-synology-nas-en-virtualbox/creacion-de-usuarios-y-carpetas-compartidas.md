@@ -20,7 +20,7 @@ Para la creación de carpetas compartidas debes ser un usuario con permisos de a
 
 Lo primero que debemos hacer para crear una carpeta es acceder al panel de control, después haremos clic sobre **Carpetas compartidas.**  Desde ahi podemos observer las carpetas compartidas que tenemos, en este momento no tenemos ninguna, en el momento de crearlas apareceran ahi y podremos gestionarlas de una forma mas ordenada.
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Panel de gestión de carpetas compartidas</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption><p>Panel de gestión de carpetas compartidas</p></figcaption></figure>
 
 ### **Segundo paso - Creación de la carpeta**
 
@@ -54,19 +54,19 @@ Las opciones de esta paso únicamente están disponibles para los volúmenes con
 
 En este paso confirmaremos que los datos que hemos introducido son correctos. En el caso contrario podremos volver atrás para modificarlos.
 
-<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
 
 ### Sexto paso - Permisos de usuario
 
 Una vez revisada la configuración, en este paso nos encontramos con la opción de asignar permisos de **lectura/escritura** a los usuarios de nuestro NAS. De momento únicamente tenemos el usuario de administrador, este siempre tiene acceso de lectura y escritura, aunque también se los podemos denegar. Si denegamos el acceso al administrado únicamente podremos gestionar los usuarios que acceden a ella y no ver su contenido.
 
-<figure><img src="../../../.gitbook/assets/image (1) (4) (1).png" alt=""><figcaption><p>Configurar permisos de usuario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p>Configurar permisos de usuario</p></figcaption></figure>
 
 ### Séptimo paso - Finalizar creación de la carpeta
 
 Una vez apliquemos los cambios la carpeta se creara y nos aparece en el panel de las carpetas compartidas. Desde ahí podremos ver características de la carpeta, su espacio, si tiene papelera, etc.
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>Visualizar carpeta desde el panel de control</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>Visualizar carpeta desde el panel de control</p></figcaption></figure>
 
 ### Octavo paso - Visualizar interior de la carpeta
 
@@ -76,7 +76,7 @@ Si accedemos a su interior podemos ver que tenemos la **Papelera de reciclaje**,
 
 Esta aplicación la usaremos siempre que queramos acceder a las carpetas desde la interfaz web, también podemos descargar y cargar todo tipo de archivos como si se tratara de una nube.
 
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Aplicación File Station</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (2).png" alt=""><figcaption><p>Aplicación File Station</p></figcaption></figure>
 
 ## Creación de usuarios
 
@@ -86,7 +86,7 @@ Para crear y gestionar usuarios debes poseer el rol de administrador, el único 
 
 Primero de todo accedemos al panel de control, después nos dirigimos a **Usuario y grupo**. **** Desde ese panel podremos ver todos los usuarios creados, durante la instalación del NAS se crean dos usuarios extras, el **admin** y el **guest**. Por defecto aparecen deshabilitados. Es recomendable nunca activar el usuario de **admin** ya que nuestro NAS puede sufrir ataques de fuerza bruta.
 
-<figure><img src="../../../.gitbook/assets/image (11) (2).png" alt=""><figcaption><p>Usuario y grupo</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (2) (1).png" alt=""><figcaption><p>Usuario y grupo</p></figcaption></figure>
 
 ### Segundo paso - Creación del usuario
 
@@ -108,7 +108,7 @@ En la siguiente ventana encontraremos la opción de unir el usuario a un grupo. 
 
 En este paso nos encontraremos las carpetas compartidas que tengamos en nuestro NAS, a las que podremos **asignar los permisos** de **lectura/escritura o únicamente lectura.** Desde aquí podemos ver que tenemos únicamente una carpeta. Por defecto nos aparece sin acceso ya que la politica del grupo **users** no contempla cuales son los permisos por defecto. A este usuario le asignaremos los permisos de **lectura/escritura**.
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Permisos de usuarios a las carpetas comaprtidas</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (2).png" alt=""><figcaption><p>Permisos de usuarios a las carpetas comaprtidas</p></figcaption></figure>
 
 ### Quinto paso - Cuotas de usuario
 
@@ -132,6 +132,6 @@ En este paso podremos limitar de las aplicaciones de acceso a las carpetas compa
 
 Por ultimo comprobaremos que los datos de la creación del usuario esten correctos. En el caso contrario los podremos modificar volviendo para atrás.
 
-<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption><p>Confirmar configuración del usuario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1) (2).png" alt=""><figcaption><p>Confirmar configuración del usuario</p></figcaption></figure>
 
 Una vez creado el usuario este puede ser modificado, esto puede hacerse desde el panel de control, en el mismo apartado donde se crean los usuarios.

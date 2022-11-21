@@ -40,7 +40,7 @@ Al hacer clic en Siguiente, nos encontraremos una ventana donde debemos elegir l
 
 Al hacer clic en Siguiente, nos encontramos con una ventana donde nos da a alegir entre hacer una comprobación de la unidad o no. En este caso no haremos ninguna comprobación de la unidades ya que es un entorno de pruebas, en un caso real recomiendo hacerla para evitar futuros errores.
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (2).png" alt=""><figcaption><p>Comprobación de la unidad</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (2) (2).png" alt=""><figcaption><p>Comprobación de la unidad</p></figcaption></figure>
 
 ### Quinto paso - Asiganación de capacidad al volumen
 
@@ -62,7 +62,7 @@ Por ultimo paso debemos revisar que toda la configuración este correcta, si es 
 
 Una vez apliquemos los cambias nos saltara una alerta que nos dice que todos los datos serán eliminados, si estamos seguros le decimos que **OK**.
 
-<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Revisión de configuración</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>Revisión de configuración</p></figcaption></figure>
 
 Una vez ya creado podemos ver como es el panel de nuestro grupo de almacenamiento y volumen. Como podemos ver el espacio del disco duro se queda bastante reducido.
 
@@ -74,7 +74,7 @@ Este aplicación además de ofrecernos información acerca del espacio disponibl
 
 En el panel lateral izquierdo, en Visión general podemos ver una visión mas general y poco detallada acerca del almacenamiento, aunque la ultima sección podemos ver las tareas programadas que tiene el disco. En este caso tiene una prueba S.M.A.R.T.
 
-<figure><img src="../../../.gitbook/assets/image (7) (1) (2).png" alt=""><figcaption><p>Visión general</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1) (2) (1).png" alt=""><figcaption><p>Visión general</p></figcaption></figure>
 
 En el ultimo apartado (HDD/SSD) del panel derecho podemos ver la información técnica de los discos duros insertados en el NAS. Aquí nos puede mostrar información como, la temperatura de los discos, horas encendido, sectores defectuosos, etc.&#x20;
 

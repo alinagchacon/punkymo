@@ -118,7 +118,7 @@ Una vez apagada la maquina virtual debemos acceder a la **configuración de red*
 
 **00:11:32:94:68:8A -->00113294688A**
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez ya la hemos modificado, aceptamos los cambios para que se guarden y arrancaremos la máquina virtual.
 
@@ -156,7 +156,7 @@ Al acabar se reiniciará automáticamente, no debemos interrumpir este proceso. 
 
 Al acabar de reiniciarse nos encontraremos con la página de inicio para la configuración, una página como la que aparece a continuación:
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Al hacer clic en Iniciar nos saldrá otra ventana para rellenar el nombre del dispositivo, nombre de la cuenta de administrador, contraseña y una casilla para permitir que nuestro NAS se muestra al usar el Web Assistant (la web de encontrar el NAS). Una vez lo rellenemos todo haremos clic en **"Siguiente"**.
 
@@ -176,4 +176,4 @@ Por último paso nos pide permiso para recopilar datos o no, es opcional marcar 
 
 Una vez hecho todo este proceso ya nos encontraremos con la pantalla principal de nuestro NAS.
 
-<figure><img src="../../../.gitbook/assets/image (11) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
