@@ -4,7 +4,7 @@ description: Apuntes
 
 # Instalando Truenas
 
-Truenas es un sistema operativo (SO) que está basado en la licencia Berkeley Software Distribution (BSD) y proporciona servicios de almacenamiento en red. Es un SO gratuito, open-source que permite convertir un PC en un soporte de almacenamiento accesible desde red, por ejemplo para almacenamientos masivos de información, copias de seguridad de datos, música, etc.
+<mark style="color:blue;">`Truenas`</mark> es un sistema operativo (SO) que está basado en la licencia Berkeley Software Distribution (BSD) y proporciona servicios de almacenamiento en red. Es un SO gratuito, open-source que permite convertir un PC en un soporte de almacenamiento accesible desde red, por ejemplo para almacenamientos masivos de información, copias de seguridad de datos, música, etc.
 
 Truenas:&#x20;
 
@@ -17,7 +17,7 @@ Truenas:&#x20;
 
 ### Instalación en VirtualBox
 
-Vamos a crear una máquina virtual (VM) en Virtualbox. Para ello, el detalle a tener en cuenta es el SO a seleccionar para arrancar la VM.
+Vamos a crear una máquina virtual (VM) en <mark style="color:blue;">`Virtualbox`</mark>. Para ello, el detalle a tener en cuenta es el SO a seleccionar para arrancar la VM.
 
 Requerimientos técnicos:
 
@@ -93,13 +93,13 @@ Para probar el uso de SSH podemos conectarnos desde el CMD de Windows. Recuerda 
 
 Por tema de seguridad no es conveniente brindar acceso al root a través de SSH.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 #### Cuentas de usuarios
 
 Para crear un usuario o grupo de usuarios tenemos que ir a:&#x20;
 
-Accounts / Users / Add
+<mark style="color:blue;">`Accounts / Users / Add`</mark>
 
 Se nos abre un formulario que nos pide datos como el nombre de usuario, contraseña, correo, grupo al que pertenece, permisos, etc.
 
@@ -113,7 +113,7 @@ Para poder acceder a los contenidos de cada usuario a través de la red, se hace
 
  
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Los permisos </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Los permisos </p></figcaption></figure>
 
  
 
@@ -123,9 +123,9 @@ Para poder acceder a los contenidos de cada usuario a través de la red, se hace
 
 Tener en cuenta que al configurar las reglas ACL, Access Control List, los permisos pueden ser restrictivos, si no queremos que el usuario Pepe vea o acceda al contenido de Lola. Además, debemos considerar que el usuario u owner@ debe tener acceso a todos sus propios recursos, el grupo o group@ al que pertenezca el usuario puede tener o no restricciones en cuanto a permisos y podemos definir también si el resto de usuarios puede tener acceso aunque limitados a los recursos de otro usuario específico.
 
-Si queremos probar el acceso que tiene un usuario específico podemos ir al explorador de Windows - Red - \\\TRUENAS y debemos ver algo como:
+Si queremos probar el acceso que tiene un usuario específico podemos ir al explorador de <mark style="color:blue;">`Windows - Red - \\TRUENAS`</mark> y debemos ver algo como:
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Usuarios </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Usuarios </p></figcaption></figure>
 
 
 

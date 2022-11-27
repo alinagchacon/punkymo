@@ -208,7 +208,7 @@ Si queremos ver el usuario y contraseña entonces haríamos:
 
 y nos muestra algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (16) (1).png" alt=""><figcaption><p>Con esto </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption><p>Con esto </p></figcaption></figure>
 
 Con esto ya tenemos el usuario y contraseña para el sistema:
 

@@ -96,11 +96,11 @@ La casilla de **Instalar el firmware más reciente** es recomendable que este se
 
 Ahora debemos establecer el adaptador de red por el cual ira la conexión internet. Al estar tener varios adaptadores en red interna es posible que el Firewall no detecta cual es el puerto que tiene salida a Internet. Por eso no sale un error como el que podemos ver a continuación:
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Error de conexión a internet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Error de conexión a internet</p></figcaption></figure>
 
 Para solucionar este problema hacemos clic en el botón de **Manual configuration** y debemos abrir el desplegable de **Choose a port to configure** y seleccionar el **Port D** ya que este es el adaptador que tiene salida a Internet en NAT. Una vez le demos a **Apply** tardará unos segundos en configurarse.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Cambiar adaptador de internet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Cambiar adaptador de internet</p></figcaption></figure>
 
 Después se debe quitar el error y aparecernos que tenemos internet como podemos ver en la siguiente imagen. Una vez hecho esto hacemos clic en **Continue**.
 
