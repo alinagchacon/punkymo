@@ -102,7 +102,7 @@ Tambíen podemos marcar la opción de que el usuario pueda cambiar la contraseñ
 
 En la siguiente ventana encontraremos la opción de unir el usuario a un grupo. De forma predeterminada todos los usuarios pertenecen al grupo **users**. Este grupo no tiene ningún permiso especial, únicamente quiere decir que es un usuario normal sin permisos de administrador. En el caso de tener otros grupos, podremos unirlo en el momento de le creación del usuario. Se puden unir posteriormente si es necesario.
 
-<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Grupos de usuarios</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Grupos de usuarios</p></figcaption></figure>
 
 ### Cuarto paso - Asignación de carpetas compartidas
 

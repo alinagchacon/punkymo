@@ -40,16 +40,69 @@ A través del navegador accedemos a la VM para configurar todos los servicios.
 
 Una vez dentro accedemos al dashboard que trae estadísticas de uso de la CPU, del sistema, memoria, etc.
 
-El menú te permite configurar cuentas de usuarios, grupos, .....
+TRUENAS te permite instalar plugins, servicios como SSH, FTP, compartir recursos en redes Windows, crear usuarios y grupos, configurar reglas ACL de los recursos compartidos, configurar VPN entre un largo etcétera.
 
-<mark style="color:red;">To be continued ...</mark>
+Algunas de las secciones a considerar para una mínima configuración del sistema serían las que se detallan a continuación.
 
-&#x20;
+### &#x20;Cuentas de usuarios
+
+En la sección de <mark style="color:blue;">`Accounts`</mark> podemos crear usuarios y grupos de usuarios. Esto nos permitiría administrarlos cómodamente y aplicar diferentes permisos de acceso a cada uno. La buena gestión de los usuarios y permisos es una de las partes más importantes en la gestión de un servidor NAS, que proporciona los mínimos permisos posibles a los usuarios con el objetivo de evitar posibles problemas de seguridad.
+
+### Sistema
+
+En esta sección podemos configurar la interfaz gráfica de usuario con diferentes perfiles. También podemos cambiar el puerto de administración, los protocolos TLS a utilizar, así como el idioma de la interfaz gráfica de usuario, entre otros.&#x20;
+
+### Tareas
+
+Aquí es donde podemos programar el servidor para programar diferentes tareas, configurando los trabajos en el Cron,  scripts a ejecutar durante el inicio y apagado del sistema, copias de seguridad a través de la herramienta Rsync que permite sincronizar carpetas y archivos, testeos de SMART para comprobar el estado de los discos, etc.
+
+### Directory Services
+
+Este es un punto a considerar dado que podemos configurar el <mark style="color:blue;">`Active Directory AD`</mark> si tenemos una red Windows, así como el <mark style="color:blue;">`LDAP`</mark>, <mark style="color:blue;">`NIS`</mark> y <mark style="color:blue;">`Kerberos`</mark>. Tengamos en cuenta que todos estos protocolos están orientados a la autenticación de los usuarios en el NAS,  con lo que podemos realizar una autenticación basada en AD, LDAP o Kerberos para reutilizar la infraestructura de autenticación de la empresa, y no tener que crear todos los usuarios directamente en el sistema operativo del TRUENAS.
+
+Si hablamos de entornos empresariales tendríamos que considerar  la existencia de un servidor para la autenticación de los usuarios y grupos a los que pertenecen y, de esta forma, enlazar TRUENAS con el <mark style="color:blue;">`AD`</mark> de un Windows Server y obtener las credenciales de acceso de estos servidores, y no tener que exportar todos los usuarios y configuración de los mismos pudiendo autenticarlos en el propio <mark style="color:blue;">`AD`</mark>.
+
+### Sharing - Compartiendo
+
+Aquí es donde podremos configurar diferentes protocolos que nos permitan compartir ficheros y carpetas por la red. Para ello tenemos <mark style="color:blue;">`AFP`</mark>, <mark style="color:blue;">`iSCSI`</mark>, <mark style="color:blue;">`NFS`</mark>, <mark style="color:blue;">`WebDAV`</mark> y <mark style="color:blue;">`SAMBA`</mark>, que es ideal en entornos Windows.&#x20;
+
+### Servicios
+
+En esta sección es donde  podemos activar o desactivar  servicios, y configurar su inicio junto con el servidor NAS. Encontraremos aquí todos  los servicios como: compartir ficheros, OpenVPN tanto en modo cliente como en modo servidor, el SMART, Rsync y más.
 
 
 
+### Configurando
 
+#### Cuentas de usuarios
+
+Para crear un usuario o grupo de usuarios tenemos que ir a:&#x20;
+
+Accounts / Users / Add
+
+Se nos abre un formulario que nos pide datos como el nombre de usuario, contraseña, correo, grupo al que pertenece, permisos, etc.
+
+#### Compartir recursos&#x20;
+
+Para poder acceder a los contenidos de cada usuario a través de la red, se hace imprescindible habilitar el servicio <mark style="color:blue;">`SMB`</mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> en el servidor:
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/image (3).png">image (3).png</a></td></tr><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/image (1).png">image (1).png</a></td></tr><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/image (6).png">image (6).png</a></td></tr></tbody></table>
+
+<div>
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ### Links
 
 * [https://www.truenas.com/truenas-enterprise/](https://www.truenas.com/truenas-enterprise/)
+*
