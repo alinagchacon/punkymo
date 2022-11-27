@@ -440,6 +440,4 @@ Te solicitará autenticarte usando la contraseña de Docker Hub.
 
 
 
-### Docker compose&#x20;
-
-&#x20;<mark style="color:red;"></mark>&#x20;
+<mark style="color:red;"></mark>
