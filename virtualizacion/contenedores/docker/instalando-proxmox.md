@@ -72,7 +72,7 @@ Ahora se nos muestra el resto de configuraciones que ha creado por defecto VMwar
 
 <mark style="color:red;">Al crear la VM me dió error y tuve que desmarcar la opción de</mark> <mark style="color:red;"></mark><mark style="color:red;">**Virtualize CPU performance counters**</mark>.
 
-<figure><img src="../../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Aquí tendremos que cambiar la cantidad de RAM que se le proporcionará a la máquina: lo recomendable como mínimo es entre 4 y 6 GB. Una vez ya seleccionada la RAM vamos al apartado más importante: al del procesador como se muestra en la imagen anterior. Hay que tener en cuenta que el procesador del que disponemos para dar más o menos “cores” si tenemos un procesador con 4 núcleos y 8 hilos le podemos dar entre 3 y 4 cores. Pero si tenemos un procesador mejor con 8 núcleos y 16 hilos le podemos dar 8 cores.&#x20;
 

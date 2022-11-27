@@ -6,6 +6,15 @@ description: Apuntes
 
 Truenas es un sistema operativo (SO) que está basado en la licencia Berkeley Software Distribution (BSD) y proporciona servicios de almacenamiento en red. Es un SO gratuito, open-source que permite convertir un PC en un soporte de almacenamiento accesible desde red, por ejemplo para almacenamientos masivos de información, copias de seguridad de datos, música, etc.
 
+Truenas:&#x20;
+
+* Se trata de un sistema operativo orientado específicamente para funcionar como un servidor NAS profesional de alto rendimiento.&#x20;
+* Se puede instalar en cualquier plataforma x64 gracias a que el sistema operativo base es FreeBSD en su versión 12.&#x20;
+* Incorpora alta compatibilidad con gran cantidad de hardware
+* Facilita la utilización y la configuración de todos los servicios que debe tener un servidor NAS, como es: Samba, FTP,  almacenamiento con RAID, el acceso remoto vía OpenVPN, etc.
+
+
+
 ### Instalación en VirtualBox
 
 Vamos a crear una máquina virtual (VM) en Virtualbox. Para ello, el detalle a tener en cuenta es el SO a seleccionar para arrancar la VM.
@@ -72,7 +81,19 @@ En esta sección es donde  podemos activar o desactivar  servicios, y configurar
 
 
 
-### Configurando
+### Configurando algunos servicios
+
+#### SMB, RSYNC, SSH
+
+Podemos habilitar algún que otro servicio como: samba o smb, rsync que necesita de ssh para probar lo mínimo del servidor.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Algunos de los servicios habilitados</p></figcaption></figure>
+
+Para probar el uso de SSH podemos conectarnos desde el CMD de Windows. Recuerda que el NAS está en modo Adaptador Puente con lo cual tenemos acceso al mismo a través de la red.
+
+Por tema de seguridad no es conveniente brindar acceso al root a través de SSH.
+
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 #### Cuentas de usuarios
 
@@ -86,23 +107,35 @@ Se nos abre un formulario que nos pide datos como el nombre de usuario, contrase
 
 Para poder acceder a los contenidos de cada usuario a través de la red, se hace imprescindible habilitar el servicio <mark style="color:blue;">`SMB`</mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> en el servidor:
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/image (3).png">image (3).png</a></td></tr><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/image (1).png">image (1).png</a></td></tr><tr><td></td><td></td><td></td><td><a href="../../.gitbook/assets/image (6).png">image (6).png</a></td></tr></tbody></table>
-
 <div>
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Crear usuario</p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Los permisos </p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>ACL</p></figcaption></figure>
 
 </div>
+
+Tener en cuenta que al configurar las reglas ACL, Access Control List, los permisos pueden ser restrictivos, si no queremos que el usuario Pepe vea o acceda al contenido de Lola. Además, debemos considerar que el usuario u owner@ debe tener acceso a todos sus propios recursos, el grupo o group@ al que pertenezca el usuario puede tener o no restricciones en cuanto a permisos y podemos definir también si el resto de usuarios puede tener acceso aunque limitados a los recursos de otro usuario específico.
+
+Si queremos probar el acceso que tiene un usuario específico podemos ir al explorador de Windows - Red - \\\TRUENAS y debemos ver algo como:
+
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Usuarios </p></figcaption></figure>
+
+
+
+Hemos visto algunos aspectos de la configuración del <mark style="color:blue;">**`TrueNAS CORE`**</mark> de un modo muy básico. Falta mucho por configurar para brindar seguridad, fiabilidad y conectividad a los usuarios. Por lo que no puedo dar por acabada la configuración del servidor.
+
+<mark style="color:red;">To be continued ...</mark>
+
+
 
 ### Links
 
 * [https://www.truenas.com/truenas-enterprise/](https://www.truenas.com/truenas-enterprise/)
-*
+* [https://www.redeszone.net/tutoriales/servidores/truenas-core-guia-instalacion-configuracion-nas/ ](https://www.redeszone.net/tutoriales/servidores/truenas-core-guia-instalacion-configuracion-nas/)

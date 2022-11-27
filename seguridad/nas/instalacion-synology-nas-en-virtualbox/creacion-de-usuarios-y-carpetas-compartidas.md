@@ -54,7 +54,7 @@ Las opciones de esta paso únicamente están disponibles para los volúmenes con
 
 En este paso confirmaremos que los datos que hemos introducido son correctos. En el caso contrario podremos volver atrás para modificarlos.
 
-<figure><img src="../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
 
 ### Sexto paso - Permisos de usuario
 
@@ -102,7 +102,7 @@ Tambíen podemos marcar la opción de que el usuario pueda cambiar la contraseñ
 
 En la siguiente ventana encontraremos la opción de unir el usuario a un grupo. De forma predeterminada todos los usuarios pertenecen al grupo **users**. Este grupo no tiene ningún permiso especial, únicamente quiere decir que es un usuario normal sin permisos de administrador. En el caso de tener otros grupos, podremos unirlo en el momento de le creación del usuario. Se puden unir posteriormente si es necesario.
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Grupos de usuarios</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Grupos de usuarios</p></figcaption></figure>
 
 ### Cuarto paso - Asignación de carpetas compartidas
 
@@ -114,7 +114,7 @@ En este paso nos encontraremos las carpetas compartidas que tengamos en nuestro 
 
 En este paso podremos asignar una cuota de espacio al usuario. Esto quiere decir que si el usuario se pasa de la cantidad de espacio asignado no le dejará copiar mas archivos. En este caso no asiganremos ninguna cuota.
 
-<figure><img src="../../../.gitbook/assets/image (3) (2).png" alt=""><figcaption><p>Cuotas de usuario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (2) (2).png" alt=""><figcaption><p>Cuotas de usuario</p></figcaption></figure>
 
 ### Sexto paso - Asignar permisos de aplicaciones
 
@@ -126,7 +126,7 @@ En este paso podremos elegir las aplicaicones a la que queremos que tenga acceso
 
 En este paso podremos limitar de las aplicaciones de acceso a las carpetas compartidas. Limitar la velocidad de transferencia nos puede ayudar a saturar la red si tenemos muchos usuarios. En este caso no especificaremos ningun limite ya que no necesitamos limitar la velocidad de este usuario.
 
-<figure><img src="../../../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p>Establecer limite de velocidad de transferencia</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (2) (1).png" alt=""><figcaption><p>Establecer limite de velocidad de transferencia</p></figcaption></figure>
 
 ### Octavo paso - Confirmar los datos
 

@@ -102,7 +102,7 @@ Seguidamente a través de un cliente de FTP accederemos a TinyCore para extraer 
 
 El archivo se encuentra en la siguiente ruta: **/home/tc/redpill-load/cache**
 
-<figure><img src="../../../.gitbook/assets/image (6) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez extraído a nuestro equipo local el archivo de instalación apagaremos la máquina virtual con el siguiente comando:
 
