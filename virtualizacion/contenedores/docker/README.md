@@ -17,7 +17,7 @@ No es lo mismo Docker que un contenedor Linux. Docker se desarrolló a partir de
 
 #### ¿Qué diferencia habría entre LXC y Docker?
 
-LXC y Docker son dos sistemas de contenedores. LXC es un tipo de contenedor de sistema lo que significa que todos los contenedores creados con LXC necesitan un sistema operativo propio para funcionar, al contrario de Docker, que utiliza el sistema operativo del sistema anfitrión. Lo bueno de los contenedores de sistema o LXC es que podemos tener en un solo contenedor diferentes aplicaciones.
+<mark style="color:blue;">LXC</mark> y <mark style="color:blue;">`Docker`</mark> son dos sistemas de contenedores. LXC es un tipo de contenedor de sistema lo que significa que todos los contenedores creados con LXC necesitan un sistema operativo propio para funcionar, al contrario de Docker, que utiliza el sistema operativo del sistema anfitrión. Lo bueno de los contenedores de sistema o LXC es que podemos tener en un solo contenedor diferentes aplicaciones.
 
 <figure><img src="https://lh4.googleusercontent.com/pzwLC7_9fFiyRt1DtfsrSYyBdOJ8BSH8qtTLlBkKCK9nr_O5eYpxZO8EFP9km4CVhLgg0VB4HJSYGNITGaiKhLEUwD16iYltCnXE59ljX2NWiDagMTxRRn3tFYL8yHb9Ih9JnqjvzCYDrcQxgsfWBpLr5oa4EoMBpFqVHNmVnf90kky8RqCPtBIU" alt=""><figcaption></figcaption></figure>
 
