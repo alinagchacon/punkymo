@@ -40,7 +40,8 @@ Existen varios tipos de servidores NAS en el mercado bastante famosas:&#x20;
 * Si vamos a configurar un disco por primera vez utilizando Synology tendríamos que decidir el tipo de sistema (SHR o RAID) y en función de la configuración elegida estaremos obligados a continuar con la opción seleccionada.
 * Dispone de todas las funciones de ext4 y puede utilizar el sistema de archivos BTRFS.
 * Soporta la verificación de la integridad de los datos en segundo plano que facilita la aceleración del establecimiento y la reconstrucción del RAID.
-*
+
+
 
 Este tipo de sistemas de manera general, te permiten:
 
