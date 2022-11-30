@@ -10,7 +10,7 @@ Es el mecanismo preferido para conservar los datos generados y utilizados por lo
 * Los nuevos volúmenes pueden tener su contenido rellenado previamente por un contenedor.&#x20;
 * Suelen ser una mejor opción que los datos persistentes en la capa de escritura de un contenedor, porque un volumen no aumenta el tamaño de los contenedores que lo utilizan y el contenido del volumen existe fuera del ciclo de vida de un contenedor determinado.
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Tomado de <a href="https://docs.docker.com/storage/volumes/">https://docs.docker.com/storage/volumes/</a></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Tomado de <a href="https://docs.docker.com/storage/volumes/">https://docs.docker.com/storage/volumes/</a></p></figcaption></figure>
 
 
 

@@ -16,7 +16,7 @@ Tambien tenemos la opción de instalarlo a través de una ISO de forma manual en
 
 Para descargar SOPHOS Firewall debemos hacerlo desde esta URL: [https://www.sophos.com/en-us/support/downloads/firewall-installers](https://www.sophos.com/en-us/support/downloads/firewall-installers). Después tenemos que elegir la opción de **Virtual Installers: Firewall OS for VMware**.
 
-<figure><img src="../.gitbook/assets/image (9) (3) (1).png" alt=""><figcaption><p>Descarga sophos firewall</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (3).png" alt=""><figcaption><p>Descarga sophos firewall</p></figcaption></figure>
 
 Antes de la descarga debemos de rellenar ciertos datos que pueden ser aleatorios, no es necesario poner nuestro correo real.
 
@@ -52,7 +52,7 @@ Una vez arrancamos la máquina virtual se comenzarán a iniciar todos los proces
 
 Seguidamente nos pedirá la contraseña para acceder, de forma predeterminada es **admin**.
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 Después nos aparecerá un mensaje sobre los Términos de Licencia del firewall, si queremos seguir utilizando debemos aceptarlos presionando la tecla **A**.
 
@@ -96,7 +96,7 @@ La casilla de **Instalar el firmware más reciente** es recomendable que este se
 
 Ahora debemos establecer el adaptador de red por el cual ira la conexión internet. Al estar tener varios adaptadores en red interna es posible que el Firewall no detecta cual es el puerto que tiene salida a Internet. Por eso no sale un error como el que podemos ver a continuación:
 
-<figure><img src="../.gitbook/assets/image (2) (2) (1).png" alt=""><figcaption><p>Error de conexión a internet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Error de conexión a internet</p></figcaption></figure>
 
 Para solucionar este problema hacemos clic en el botón de **Manual configuration** y debemos abrir el desplegable de **Choose a port to configure** y seleccionar el **Port D** ya que este es el adaptador que tiene salida a Internet en NAT. Una vez le demos a **Apply** tardará unos segundos en configurarse.
 

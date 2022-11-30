@@ -106,7 +106,7 @@ sudo service nginx start
 Para comprobar que el servidor está funcionando, en nuestro navegador podemos escribir la dirección “localhost”. Si todo está correcto deberíamos ver una página de bienvenida similar a la siguiente.\
 
 
-<figure><img src="../../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Configuración
 

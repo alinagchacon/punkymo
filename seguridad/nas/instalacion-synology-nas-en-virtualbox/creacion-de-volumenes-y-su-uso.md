@@ -48,7 +48,7 @@ A **continuación** encontramos la ventana para asignar la capacidad deseada a n
 
 De forma opcional podemos agregarle una descripción para poder identificarlo, introduciré: **Mi primer volumen**
 
-<figure><img src="../../../.gitbook/assets/image (2) (2) (1) (2).png" alt=""><figcaption><p>Asignación de capacidad al volumen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2) (1).png" alt=""><figcaption><p>Asignación de capacidad al volumen</p></figcaption></figure>
 
 ### Sexto paso - Seleccionar un sistema de archivos
 
