@@ -87,7 +87,7 @@ En esta sección es donde  podemos activar o desactivar  servicios, y configurar
 
 Podemos habilitar algún que otro servicio como: samba o smb, rsync que necesita de ssh para probar lo mínimo del servidor.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Algunos de los servicios habilitados</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Algunos de los servicios habilitados</p></figcaption></figure>
 
 Para probar el uso de SSH podemos conectarnos desde el CMD de Windows. Recuerda que el NAS está en modo Adaptador Puente con lo cual tenemos acceso al mismo a través de la red.
 
@@ -109,11 +109,11 @@ Para poder acceder a los contenidos de cada usuario a través de la red, se hace
 
 <div>
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Crear usuario</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (7).png" alt=""><figcaption><p>Crear usuario</p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Los permisos </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (4).png" alt=""><figcaption><p>Los permisos </p></figcaption></figure>
 
  
 
