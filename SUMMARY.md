@@ -77,6 +77,7 @@
   * [Docker](virtualizacion/contenedores/docker/README.md)
     * [Instalando Docker](virtualizacion/contenedores/docker/instalando-docker.md)
     * [Docker compose](virtualizacion/contenedores/docker/docker-compose.md)
+    * [Docker volumen](virtualizacion/contenedores/docker/docker-volumen.md)
     * [Instalando Proxmox](virtualizacion/contenedores/docker/instalando-proxmox.md)
     * [YAML](virtualizacion/contenedores/docker/yaml.md)
   * [Portainer](virtualizacion/contenedores/portainer.md)
