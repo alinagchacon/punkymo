@@ -4,7 +4,9 @@ description: N-Tech Admin Group
 
 # SOPS/AGE
 
-Mozilla define SOPS como un editor de archivos cifrados que admite formatos del tipo YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de estos mediante los cifrados AWS KMS, GCP KMS, Azure Key Vault y PGP.
+Mozilla define SOPS como un editor de archivos cifrados que admite formatos del tipo YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de estos mediante los cifrados [AWS KMS](https://aws.amazon.com/es/kms/), GCP KMS, Azure Key Vault y PGP.
+
+Para almacenar secretos de forma segura en un repositorio de Git público o privado, puede usar la SOPS CLI de Mozilla para cifrar con OpenPGP, AWS KMS, GCP KMS y Azure Key Vault.
 
 Los <mark style="color:blue;">`secrets`</mark> en texto plano  que podemos ver en el control de código fuente (por ejemplo en Github) resulta ser  uno de los errores de seguridad más comunes que cometen los desarrolladores.&#x20;
 
@@ -18,9 +20,9 @@ Por ejemplo,&#x20;
 * Funciona en varias plataformas y es compatible con las PGP keys, lo que permite un control de acceso detallado a los secrets de archivo por archivo.&#x20;
 * Deja la key de identificación en texto plano para que los secrets puedan seguir siendo localizados y difundidos por git.&#x20;
 
-Vamos a aprender a utilizar Sops a partir de este tutorial: [https://www.youtube.com/watch?v=1BquzE3Yb4I](https://www.youtube.com/watch?v=1BquzE3Yb4I)
+Vamos a ver como se utiliza Sops a partir de este tutorial: [https://www.youtube.com/watch?v=1BquzE3Yb4I](https://www.youtube.com/watch?v=1BquzE3Yb4I)
 
-Comenzamos:
+Para trabajar con Mozilla SOPS, lo primero que necesitamos es instalar la herramienta en local. Así que comencemos:
 
 En [https://github.com/mozilla/sops](https://github.com/mozilla/sops) nos descargamos la versión estable. Aquí [https://github.com/mozilla/sops/releases:](https://github.com/mozilla/sops/releases)
 
@@ -45,6 +47,8 @@ sops -v
 <figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 ### Age
+
+Se trata de una herramienta de encriptación simple, moderna y segura (y una biblioteca Go) con pequeñas claves explícitas, sin opciones de configuración estilo UNIX.
 
 Ahora vamos a descargar e instalar age desde [https://github.com/FiloSottile/age](https://github.com/FiloSottile/age)
 
@@ -232,5 +236,7 @@ Lo mismo si queremos ver el usuario:
   [https://www.youtube.com/watch?v=1BquzE3Yb4I](https://www.youtube.com/watch?v=1BquzE3Yb4I)&#x20;
 * [https://blog.gitguardian.com/a-comprehensive-guide-to-sops/](https://blog.gitguardian.com/a-comprehensive-guide-to-sops/)
 * [https://www.youtube.com/watch?v=PFLimPh5-wo ](https://www.youtube.com/watch?v=PFLimPh5-wo)
+* [https://www.returngis.net/2022/01/proteger-secretos-con-mozilla-sops-y-azure-key-vault-y-descifrarlos-desde-flux-cd/#:\~:text=Existen%20varias%20herramientas%20para%20hacer,integrarse%20fácilmente%20con%20diferentes%20KMS.](https://www.returngis.net/2022/01/proteger-secretos-con-mozilla-sops-y-azure-key-vault-y-descifrarlos-desde-flux-cd/)
+* [https://fluxcd.io/flux/guides/mozilla-sops/](https://fluxcd.io/flux/guides/mozilla-sops/)
 
 &#x20;
