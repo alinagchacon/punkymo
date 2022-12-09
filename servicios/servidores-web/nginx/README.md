@@ -106,13 +106,13 @@ sudo service nginx start
 Para comprobar que el servidor está funcionando, en nuestro navegador podemos escribir la dirección “localhost”. Si todo está correcto deberíamos ver una página de bienvenida similar a la siguiente.\
 
 
-<figure><img src="../../.gitbook/assets/image (1) (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Configuración
 
 Una vez instalado nginx ya podremos utilizarlo pero podemos mejorar su rendimiento editando el archivo nginx.conf que se encuentra en <mark style="color:blue;">`/etc/nginx`</mark>.
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 Igualmente tienes la posibilidad de acceder al manual de nginx desde:
 
@@ -131,7 +131,7 @@ grep processor /proc/cpuinfo | wc –l
 
 * **Directiva worker\_connections**: el valor que determina el número máximo de conexiones que puede tener el sitio. Si nuestro sitio tiene un elevado número de visitas, es recomendable aumentar este valor. Por defecto viene configurado con el valor de 768, pero se puede modificar y poner un valor superior, por ejemplo 1024.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 * **Directiva keepalive\_timeout**: Se trata de  una directiva que se utiliza para mantener la conexión abierta durante un cierto número de solicitudes al servidor o hasta que expire el período de tiempo de espera de la solicitud. Según los desarrolladores de Nginx, 10 000 conexiones inactivas usarían solo 2,5 MB de memoria, lo que demuestra que Nginx es excepcionalmente bueno para manejar conexiones inactivas debido a las conexiones **keepalive**. \
   Adicionalmente, tiene gran influencia en la percepción del tiempo de carga por parte del usuario final y se puede utilizar esta opción para optimizar el tiempo de carga de un sitio web.\
@@ -186,11 +186,12 @@ server {
 
 Ahora vamos a crear un enlace entre el directorio y el archivo para habilitarlo:
 
-<pre><code><strong>sudo ln -s /etc/nginx/sites-available/example.com   /etc/nginx/sites-enabled/</strong></code></pre>
+<pre><code><strong>sudo ln -s /etc/nginx/sites-available/example.com   /etc/nginx/sites-enabled/
+</strong></code></pre>
 
 De modo que obtengas algo así:
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 Volviendo al sitio web, puedes comenzar por crear una carpeta que contenga todos los archivos e imágenes:
 
@@ -204,7 +205,7 @@ Podemos modificar el dueño y grupo de la carpeta creada haciendo:
 sudo chown -R $USER:$USER /var/www/html/example.com
 ```
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 Podemos asignar permisos con el comando:
 
@@ -218,11 +219,11 @@ Y crear la página de ejemplo:
 sudo nano /var/www/html/example.com/index.html
 ```
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 Y si accedemos a nuestra página web podemos verla. Eso sí, nos hace la advertencia de que no es un sitio seguro y si no tenemos configurado el DNS tampoco podremos acceder a la misma de otro modo que no sea a través de la IP.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ### En nginx docker&#x20;
 
@@ -238,11 +239,11 @@ docker ps
 
 De este modo podemos ver también la ID del contenedor de nginx:
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 Para copiar el archivo index.html en la ubicación del contenedor de nginx:
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 
 

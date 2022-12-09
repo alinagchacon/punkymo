@@ -36,7 +36,8 @@ Entonces:
 <strong>sudo dpkg –i ./sops_3.7.3_amd64.deb
 </strong>su –
 dpkg –i sops_3.7.3_amd64.deb
-rm sops_3.7.3_amd64.deb</code></pre>
+rm sops_3.7.3_amd64.deb
+</code></pre>
 
 Para verificar la versión instalada:
 
@@ -49,6 +50,15 @@ sops -v
 ### Age
 
 Se trata de una herramienta de encriptación simple, moderna y segura (y una biblioteca Go) con pequeñas claves explícitas, sin opciones de configuración estilo UNIX.
+
+Un archivo age se compone de dos partes:&#x20;
+
+* un encabezado de texto que contiene la clave del archivo y&#x20;
+* una carga útil binaria cifrada con él.&#x20;
+
+En general, los archivos age deben tratarse como binarios y no son maleables sin el conocimiento de la clave del archivo.
+
+Los archivos age pueden usar la extensión .age, tanto en su formato binario como en el armored (blindado).
 
 Ahora vamos a descargar e instalar age desde [https://github.com/FiloSottile/age](https://github.com/FiloSottile/age)
 
@@ -180,7 +190,8 @@ Donde podemos ver que el usuario y la contraseña están cifrados (AES256).
 
 Para descifrar el archivo utilizamos el mismo comando pero utilizando la opción <mark style="color:blue;">`decryp.`</mark>
 
-<pre><code><strong>sops --decrypt --age $(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)") --encrypted-regex '^(data|stringData)$' --in-place ./home/pepe/secret.yaml</strong></code></pre>
+<pre><code><strong>sops --decrypt --age $(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)") --encrypted-regex '^(data|stringData)$' --in-place ./home/pepe/secret.yaml
+</strong></code></pre>
 
 Y si volvemos a comprobar con <mark style="color:blue;">`cat secret.yaml`</mark> veremos que está exactamente igual.
 
@@ -208,7 +219,8 @@ Esto nos muestra el fichero yaml pero en el lugar de usuario y contraseña nos d
 
 Si queremos ver el usuario y contraseña entonces haríamos:
 
-<pre><code><strong>kubectl get secret mysql-secret-test -o jsonpath?'{.data}'</strong></code></pre>
+<pre><code><strong>kubectl get secret mysql-secret-test -o jsonpath?'{.data}'
+</strong></code></pre>
 
 y nos muestra algo como lo siguiente:
 
@@ -218,13 +230,15 @@ Con esto ya tenemos el usuario y contraseña para el sistema:
 
 <figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
-<pre><code><strong>kubectl get secret mysql-secret-test -o jsonpath?'{.data.MYSQL_PASSWORD}' | base64 --decode</strong></code></pre>
+<pre><code><strong>kubectl get secret mysql-secret-test -o jsonpath?'{.data.MYSQL_PASSWORD}' | base64 --decode
+</strong></code></pre>
 
 
 
 Lo mismo si queremos ver el usuario:
 
-<pre><code><strong>kubectl get secret mysql-secret-test -o jsonpath?'{.data.MYSQL_USER}' | base64 --decode</strong></code></pre>
+<pre><code><strong>kubectl get secret mysql-secret-test -o jsonpath?'{.data.MYSQL_USER}' | base64 --decode
+</strong></code></pre>
 
 
 

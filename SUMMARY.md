@@ -48,7 +48,8 @@
 ## Servicios
 
 * [Servidores Web](servicios/servidores-web/README.md)
-  * [Nginx](servicios/servidores-web/nginx.md)
+  * [Nginx](servicios/servidores-web/nginx/README.md)
+    * [Configurando NGINX](servicios/servidores-web/nginx/configurando-nginx.md)
 * [Clientes de correo](servicios/clientes-de-correo/README.md)
   * [Mailutils](servicios/clientes-de-correo/mailutils.md)
   * [Mutt](servicios/clientes-de-correo/mutt.md)
