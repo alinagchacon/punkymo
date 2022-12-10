@@ -126,7 +126,7 @@ Editamos el archivo:
 
 <mark style="color:blue;">`mail_location = maildir:~/Maildir`</mark>
 
-![](<../../.gitbook/assets/image (63).png>)
+![](<../../.gitbook/assets/image (63) (1).png>)
 
 ### Cliente de correo: Mailutils
 

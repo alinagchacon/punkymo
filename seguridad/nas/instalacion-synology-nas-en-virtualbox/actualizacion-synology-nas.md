@@ -126,5 +126,5 @@ Una vez ya modificada la MAC podemos encender el NAS, debemos estar atentos al G
 
 Si todo a funcionado correctamente deberíamos volver a acceder al NAS con el mismo usuario y contraseña. Para comprobar que realmente se han instalado las actualizaciones volvemos acceder al Panel de control, al apartado de **Actualizar y restaurar**. En el podemos ver que si está instalada la última versión.
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (2).png" alt=""><figcaption><p>DSM actualizado a la última versión</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (2) (3).png" alt=""><figcaption><p>DSM actualizado a la última versión</p></figcaption></figure>
 

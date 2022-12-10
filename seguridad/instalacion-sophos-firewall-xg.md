@@ -60,7 +60,7 @@ Después nos aparecerá un mensaje sobre los Términos de Licencia del firewall,
 
 Una vez lo aceptamos nos aparecerá la pantalla principal del Firewall. Debe ser como la siguiente:
 
-<figure><img src="../.gitbook/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Desde la propia interfaz de Sophos no realizaremos ninguna configuración, esta se hace desde el navegador.
 
@@ -70,7 +70,7 @@ Para poder entrar al panel de administración y poder configurarlo debemos abrir
 
 Cuando accedemos nos saldrá una advertencia sobre la conexión, detecta que no tiene certificado SSL y por lo tanto nos avisa que la conexión no es segura. Para saltar este error debemos de hacer clic en **Avanzado** y en **Continuar (dirección\_ip)**.
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si todo ha funcionado correctamente nos aparecerá la página de bienvenida, está la podemos ver en la siguiente imagen debe de aparecer una página como esta:
 

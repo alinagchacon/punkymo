@@ -87,13 +87,13 @@ En esta sección es donde  podemos activar o desactivar  servicios, y configurar
 
 Podemos habilitar algún que otro servicio como: samba o smb, rsync que necesita de ssh para probar lo mínimo del servidor.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Algunos de los servicios habilitados</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Algunos de los servicios habilitados</p></figcaption></figure>
 
 Para probar el uso de SSH podemos conectarnos desde el CMD de Windows. Recuerda que el NAS está en modo Adaptador Puente con lo cual tenemos acceso al mismo a través de la red.
 
 Por tema de seguridad no es conveniente brindar acceso al root a través de SSH.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Cuentas de usuarios
 
@@ -117,7 +117,7 @@ Para poder acceder a los contenidos de cada usuario a través de la red, se hace
 
  
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>ACL</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>ACL</p></figcaption></figure>
 
 </div>
 
@@ -125,7 +125,7 @@ Tener en cuenta que al configurar las reglas ACL, Access Control List, los permi
 
 Si queremos probar el acceso que tiene un usuario específico podemos ir al explorador de <mark style="color:blue;">`Windows - Red - \\TRUENAS`</mark> y debemos ver algo como:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Usuarios </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (4).png" alt=""><figcaption><p>Usuarios </p></figcaption></figure>
 
 
 

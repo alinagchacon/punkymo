@@ -49,7 +49,12 @@
 
 * [Servidores Web](servicios/servidores-web/README.md)
   * [Nginx](servicios/servidores-web/nginx/README.md)
-    * [Configurando NGINX](servicios/servidores-web/nginx/configurando-nginx.md)
+    * [NGINX, hosts virtuales](servicios/servidores-web/nginx/nginx-hosts-virtuales.md)
+* [Hosts virtuales basados en dominio](servicios/hosts-virtuales-basados-en-dominio.md)
+* [Servidores de correo](servicios/servidores-de-correo/README.md)
+  * [Seguridad en el correo](servicios/servidores-de-correo/seguridad-en-el-correo.md)
+  * [Postfix](servicios/servidores-de-correo/postfix.md)
+  * [hMailServer](servicios/servidores-de-correo/hmailserver.md)
 * [Clientes de correo](servicios/clientes-de-correo/README.md)
   * [Mailutils](servicios/clientes-de-correo/mailutils.md)
   * [Mutt](servicios/clientes-de-correo/mutt.md)
@@ -63,10 +68,6 @@
 * [DHCP](servicios/dhcp/README.md)
   * [DHCP-Windows Server 2016](servicios/dhcp/dhcp-windows-server-2016.md)
   * [DHCP-Ubuntu Server 22.04](servicios/dhcp/dhcp-ubuntu-server-22.04.md)
-* [Servidores de correo](servicios/servidores-de-correo/README.md)
-  * [Seguridad en el correo](servicios/servidores-de-correo/seguridad-en-el-correo.md)
-  * [Postfix](servicios/servidores-de-correo/postfix.md)
-  * [hMailServer](servicios/servidores-de-correo/hmailserver.md)
 
 ## Misceláneas
 
