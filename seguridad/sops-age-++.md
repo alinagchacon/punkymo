@@ -30,7 +30,7 @@ Para la instalación de sops no tendremos ninguna dificultad, seguiremos los sig
 <mark style="color:blue;">`https://github.com/mozilla/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb`</mark>
 
 ```
-wget [https://github.com/mozilla/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb] (https://github.com/mozilla/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb) sudo dpkg -i sops_3.7.3_amd64.deb verify version sops --version AGE Instalamos AGE mediante wget    
+wget https://github.com/mozilla/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb
 ```
 
 ```
