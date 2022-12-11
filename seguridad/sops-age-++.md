@@ -60,9 +60,8 @@ sudo wget https://github.com/FiloSottile/age/releases/download/v1.0.0-rc.1/age-v
 cd age
 ```
 
-```
-cp age* /usr/loca/bin/
-```
+<pre><code><strong>sudo cp age* /usr/local/bin/
+</strong></code></pre>
 
 ```
 age --version
