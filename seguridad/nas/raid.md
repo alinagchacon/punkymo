@@ -51,7 +51,7 @@ cat /proc/mdstat
 
 mdadm -D  /dev/md0
 
-<figure><img src="../../.gitbook/assets/image (6) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

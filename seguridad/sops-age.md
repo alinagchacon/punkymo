@@ -127,7 +127,7 @@ mkdir ~/.sops
 mv age/key.txt ~/.sops
 ```
 
-<figure><img src="../.gitbook/assets/image (61) (2).png" alt=""><figcaption><p>Tener en cuenta que estoy como root</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption><p>Tener en cuenta que estoy como root</p></figcaption></figure>
 
 Tengamos en cuenta que al mover nuestro fichero de claves pública y privada a nueva localización necesitamos agregar variables de entorno. Para ello, nos aseguramos que estemos un ejecutando zsh (Z shell) o bashrc  (bash) o bench RC. Como estoy testeando esto desde Debian, pues tengo el bash file:
 
@@ -182,7 +182,7 @@ Con esta línea de comando le estamos diciendo que use age con el formato de cif
 
 Si ahora volvemos a probar a mirar dentro del fichero secret.yaml veremos algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (35) (2).png" alt=""><figcaption><p>secret.yaml cifrado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption><p>secret.yaml cifrado</p></figcaption></figure>
 
 Donde podemos ver que el usuario y la contraseña están cifrados (AES256).
 
@@ -228,7 +228,7 @@ y nos muestra algo como lo siguiente:
 
 Con esto ya tenemos el usuario y contraseña para el sistema:
 
-<figure><img src="../.gitbook/assets/image (30) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 <pre><code><strong>kubectl get secret mysql-secret-test -o jsonpath?'{.data.MYSQL_PASSWORD}' | base64 --decode
 </strong></code></pre>

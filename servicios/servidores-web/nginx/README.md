@@ -112,7 +112,7 @@ Para comprobar que el servidor está funcionando, en nuestro navegador podemos e
 
 Una vez instalado nginx ya podremos utilizarlo pero podemos mejorar su rendimiento editando el archivo nginx.conf que se encuentra en <mark style="color:blue;">`/etc/nginx`</mark>.
 
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 Igualmente tienes la posibilidad de acceder al manual de nginx desde:
 
@@ -131,7 +131,7 @@ grep processor /proc/cpuinfo | wc –l
 
 * **Directiva worker\_connections**: el valor que determina el número máximo de conexiones que puede tener el sitio. Si nuestro sitio tiene un elevado número de visitas, es recomendable aumentar este valor. Por defecto viene configurado con el valor de 768, pero se puede modificar y poner un valor superior, por ejemplo 1024.
 
-<figure><img src="../../../.gitbook/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Directiva keepalive\_timeout**: Se trata de  una directiva que se utiliza para mantener la conexión abierta durante un cierto número de solicitudes al servidor o hasta que expire el período de tiempo de espera de la solicitud. Según los desarrolladores de Nginx, 10 000 conexiones inactivas usarían solo 2,5 MB de memoria, lo que demuestra que Nginx es excepcionalmente bueno para manejar conexiones inactivas debido a las conexiones **keepalive**. \
   Adicionalmente, tiene gran influencia en la percepción del tiempo de carga por parte del usuario final y se puede utilizar esta opción para optimizar el tiempo de carga de un sitio web.\
@@ -156,6 +156,57 @@ Nginx permite ampliar su funcionalidad por medio del uso de módulos. Algunos de
 * **WebDAV**. Ofrece soporte para [WebDAV](https://es.wikipedia.org/wiki/WebDAV).&#x20;
 * **Secure Link**. Este módulo ofrece la posibilidad de proteger páginas mediante clave secreta.&#x20;
 * **XSLT**. Funcionalidad que permite el post-procesamiento de páginas mediante [XSLT](https://www.w3schools.com/xml/xsl\_intro.asp)
+
+
+
+## Configuración de inicio, detención y recarga&#x20;
+
+Para iniciar Nginx, puedes ejecutar el archivo ejecutable. Una vez que se inicia Nginx, se puede controlar invocando el ejecutable con el parámetro -s. Para ello utiliza la siguiente sintaxis:
+
+```
+nginx -s signal
+```
+
+Donde <mark style="color:blue;">`signal`</mark> se refiere a:
+
+* **stop**: apagado rápido&#x20;
+* **quit**: apagado correcto
+* **reload**: recargar el archivo de configuración&#x20;
+* **reopen**: reabrir los archivos de registro
+
+Por ejemplo:&#x20;
+
+Para detener los procesos de nginx, se puede ejecutar el siguiente comando, desde el mismo usuario que inició el servicio de nginx:
+
+```
+nginx -s quit
+```
+
+Si hemos modificado uno de los archivos de  configuración, los cambios no surten efecto hasta que se reinicie el servicio, para ello:
+
+```
+nginx -s reload
+```
+
+También se puede enviar una señal a los procesos nginx con la ayuda de herramientas de Unix, como la utilidad <mark style="color:blue;">`kill`</mark>. En este caso, una señal se envía directamente a un proceso con una ID de proceso dada. El ID de proceso del proceso maestro de nginx se escribe, de manera predeterminada, en nginx.pid en el directorio <mark style="color:blue;">`/usr/local/nginx/logs`</mark> o <mark style="color:blue;">`/var/run`</mark>. Por ejemplo, si el ID del proceso maestro es 1429, puedes ejecutar:
+
+```
+kill -s quit 1429
+```
+
+Si queremos obtener la lista de todos los procesos de nginx que se están ejecutando, se puede usar la utilidad <mark style="color:blue;">`ps`</mark>, por ejemplo, de la siguiente manera:
+
+```
+ps -ax | grep-nginx
+```
+
+Por último, una opción útil en nginx sería:
+
+```
+nginx -t 
+```
+
+Te permite verificar si las directivas utilizadas en los archivos de configuración de nginx están correctas o no.
 
 ### Configurando un sitio web
 
@@ -223,7 +274,7 @@ sudo nano /var/www/html/example.com/index.html
 
 Y si accedemos a nuestra página web podemos verla. Eso sí, nos hace la advertencia de que no es un sitio seguro y si no tenemos configurado el DNS tampoco podremos acceder a la misma de otro modo que no sea a través de la IP.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### En nginx docker&#x20;
 
@@ -239,11 +290,11 @@ docker ps
 
 De este modo podemos ver también la ID del contenedor de nginx:
 
-<figure><img src="../../../.gitbook/assets/image (19) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 Para copiar el archivo index.html en la ubicación del contenedor de nginx:
 
-<figure><img src="../../../.gitbook/assets/image (18) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 
 

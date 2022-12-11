@@ -134,7 +134,7 @@ Ya encendida la maquina y esperado alrededor de unos 30 segundos debería estar 
 
 Nos debe aparecer una ventana como la de la siguiente imagen, en el caso de no aparecer, revisar que la MAC este correctamente escrita:
 
-<figure><img src="../../../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Encontrar Synology NAS</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (2) (1).png" alt=""><figcaption><p>Encontrar Synology NAS</p></figcaption></figure>
 
 Después haremos clic en **“Conectar”** y a continuación aceptaremos los términos y condiciones que se indican. Al aceptarlos se nos redirigirá a la interfaz web del propio NAS para comenzar con la instalación**.**&#x20;
 

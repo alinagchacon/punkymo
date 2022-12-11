@@ -71,7 +71,7 @@ Podemos ver en el servidor si el cliente tiene una dirección DHCP. Esto lo pode
 
 <mark style="color:blue;">`more /var/lib/dhcpd/dhcpd.leases`</mark>
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Archivo /var/lib/dhcpd/dhcpd.leases</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21) (1).png" alt=""><figcaption><p>Archivo /var/lib/dhcpd/dhcpd.leases</p></figcaption></figure>
 
 ### Algunos errores comunes con DHCP
 

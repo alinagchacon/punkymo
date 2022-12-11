@@ -40,7 +40,7 @@ y el archivo de configuración global es:&#x20;
 
 La estructura de configuración del archivo de configuración principal se muestra como sigue:
 
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Archivo de configuración /etc/nginx/nginx.conf</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Archivo de configuración /etc/nginx/nginx.conf</p></figcaption></figure>
 
 Tener en cuenta que, en Ubuntu existe una directiva de inclusión adicional:
 
@@ -52,7 +52,7 @@ porque el directorio <mark style="color:blue;">`/etc/nginx/sites-enabled/`</mark
 
 El directorio donde se localizan todos los archivos de configuración de Nginx es /etc/nginx/ y dentro debemos tener en consideración <mark style="color:blue;">`/etc/nginx/sites-available, /etc/nginx/sites-enable`</mark> y el propio <mark style="color:blue;">`/etc/nginx/nginx.conf`</mark> que vimos anteriormente.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Directorio /etc/nginx</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Directorio /etc/nginx</p></figcaption></figure>
 
 #### Archivo /sites-available/default
 
@@ -62,7 +62,7 @@ Este sería el bloque del servidor Nginx predeterminado de muestra ubicado en
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Fichero /etc/nginx/sites-available/default</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Fichero /etc/nginx/sites-available/default</p></figcaption></figure>
 
 Donde:
 
@@ -74,7 +74,7 @@ Donde:
 
 Solo de tener instalado el Nginx, si escribimos: localhost en el navegador veremos su página por defecto. Esto es:
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Página web por defecto de Nginx</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Página web por defecto de Nginx</p></figcaption></figure>
 
 ### &#x20;Sirviendo contenido estático
 
@@ -92,7 +92,7 @@ Dentro de <mark style="color:blue;">`/var/www/example1.com`</mark> creamos una c
 
 &#x20;<mark style="color:blue;">`/var/www/example1.com/img`</mark> de modo que tendremos una estructura como la siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Contenido del sitio example1.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Contenido del sitio example1.com</p></figcaption></figure>
 
 El archivo <mark style="color:blue;">`index.html`</mark> es muy simple:
 
@@ -186,7 +186,7 @@ Podremos visualizar las dos páginas web desde un equipo cliente (en mi caso Ubu
 
 [http://192.168.6.100:8081](http://192.168.6.100:8081) (papillon)
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Sitio web www.example1.com </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Sitio web www.example1.com </p></figcaption></figure>
 
 Si quiero verificar los puertos abiertos en el servidor podemos hacer:
 
@@ -194,7 +194,7 @@ sudo netstat –tlpn | grep nginx
 
 y nos muestra lo siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Los puertos habilitados para Nginx</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Los puertos habilitados para Nginx</p></figcaption></figure>
 
 ## Acceso personalizado
 
@@ -227,7 +227,7 @@ man htpasswd
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption><p>Archivo .htpasswd</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Archivo .htpasswd</p></figcaption></figure>
 
 Luego, asignamos los permisos y la propiedad adecuados al archivo de contraseña (reemplaza el usuario y grupo por <mark style="color:blue;">`www-data`</mark>).
 
@@ -283,7 +283,7 @@ Con esto, la próxima vez que intentes acceder a ese directorio <mark style="col
 
 Un inicio de sesión exitoso te permite acceder al contenido del directorio; de lo contrario, obtendrá un error de <mark style="color:blue;">`Se requiere autorización 401`</mark>.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Drectorio /var/www/html/protected</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Drectorio /var/www/html/protected</p></figcaption></figure>
 
 &#x20;En este ejemplo no hemos creado ningún contenido dentro del directorio <mark style="color:blue;">`protected`</mark> así que para testear correctamente el sitio deberíamos hacerlo.
 

@@ -16,11 +16,11 @@ Tambien tenemos la opción de instalarlo a través de una ISO de forma manual en
 
 Para descargar SOPHOS Firewall debemos hacerlo desde esta URL: [https://www.sophos.com/en-us/support/downloads/firewall-installers](https://www.sophos.com/en-us/support/downloads/firewall-installers). Después tenemos que elegir la opción de **Virtual Installers: Firewall OS for VMware**.
 
-<figure><img src="../.gitbook/assets/image (9) (3).png" alt=""><figcaption><p>Descarga sophos firewall</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (3) (1).png" alt=""><figcaption><p>Descarga sophos firewall</p></figcaption></figure>
 
 Antes de la descarga debemos de rellenar ciertos datos que pueden ser aleatorios, no es necesario poner nuestro correo real.
 
-<figure><img src="../.gitbook/assets/image (7) (1) (2).png" alt=""><figcaption><p>Términos y condiciones de descarga</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (2) (2).png" alt=""><figcaption><p>Términos y condiciones de descarga</p></figcaption></figure>
 
 Al enviar el formulario comenzará la descarga del Firewall, este se descargará en un zip que posteriormente descomprimiremos.
 
@@ -28,7 +28,7 @@ Después debemos de acceder a otra web para poder solicitar el número de serie 
 
 La web que debemos acceder es la siguiente: [https://www.sophos.com/es-es/products/free-tools/sophos-xg-firewall-home-edition/software](https://www.sophos.com/es-es/products/free-tools/sophos-xg-firewall-home-edition/software)
 
-<figure><img src="../.gitbook/assets/image (14) (1).png" alt=""><figcaption><p>Solicitud de número de serie</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14) (1) (3).png" alt=""><figcaption><p>Solicitud de número de serie</p></figcaption></figure>
 
 En este caso si debemos de poner nuestro correo real ya que es ahí donde recibiremos el número de serie, es opcional poner nuestro nombre y apellidos reales. Es muy importante no descargar el archivo ISO que nos aparece al enviar el formulario, usaremos el zip anterior descargado.
 
@@ -56,11 +56,11 @@ Seguidamente nos pedirá la contraseña para acceder, de forma predeterminada es
 
 Después nos aparecerá un mensaje sobre los Términos de Licencia del firewall, si queremos seguir utilizando debemos aceptarlos presionando la tecla **A**.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez lo aceptamos nos aparecerá la pantalla principal del Firewall. Debe ser como la siguiente:
 
-<figure><img src="../.gitbook/assets/image (11) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>
 
 Desde la propia interfaz de Sophos no realizaremos ninguna configuración, esta se hace desde el navegador.
 
@@ -70,11 +70,11 @@ Para poder entrar al panel de administración y poder configurarlo debemos abrir
 
 Cuando accedemos nos saldrá una advertencia sobre la conexión, detecta que no tiene certificado SSL y por lo tanto nos avisa que la conexión no es segura. Para saltar este error debemos de hacer clic en **Avanzado** y en **Continuar (dirección\_ip)**.
 
-<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si todo ha funcionado correctamente nos aparecerá la página de bienvenida, está la podemos ver en la siguiente imagen debe de aparecer una página como esta:
 
-<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el caso de que no aparecer esta página, y apareciera directamente un Login debemos abrir otra pestaña y volver a escribir la URL.
 
@@ -88,7 +88,7 @@ Ya finalizados los pasos previos debemos de comenzar el proceso de configuració
 
 Lo primero que debemos hacer es seleccionar una contraseña segura con las características que nos muestra por pantalla, ya que si no nos dejara continuar.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Establecer contraseña</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Establecer contraseña</p></figcaption></figure>
 
 La casilla de **Instalar el firmware más reciente** es recomendable que este seleccionada.
 
