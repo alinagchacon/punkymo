@@ -28,6 +28,7 @@
   * [RAID](seguridad/nas/raid.md)
 * [Instalación Sophos Firewall XG](seguridad/instalacion-sophos-firewall-xg.md)
 * [SOPS/AGE](seguridad/sops-age.md)
+* [SOPS/AGE ++](seguridad/sops-age-++.md)
 
 ***
 
