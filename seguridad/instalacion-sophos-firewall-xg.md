@@ -36,7 +36,7 @@ En este caso si debemos de poner nuestro correo real ya que es ahí donde recibi
 
 Cuando se descarga debemos descomprimirlo y hacer doble clic en **sf\_virtual\_virtualbox.ovf**. Esto hará que se importe la máquina virtual a VirtualBox y podremos elegir la ubicación donde queremos que se importe. En el caso de que no se importe nos vamos a la pantalla principal de virtualbox, le damos a **añadir** y buscamos el archivo dicho anteriormente y lo seleccionamos y empezara la importación.
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Antes de iniciar la maquina debemos de hacer ciertas configuraciones a la red, debemos de poner en el Adaptador 1 en Red Interna **(itnetAdmin)**, el Adaptador 2 ponerlo en red interna, pero en otra diferente **(itnetUsers)**, el tercer adaptador en red interna pero también en otra diferente **(itnetDMZ)** y el cuarto adaptador en **NAT)** Nos debe de quedar de esta manera:
 
@@ -56,7 +56,7 @@ Seguidamente nos pedirá la contraseña para acceder, de forma predeterminada es
 
 Después nos aparecerá un mensaje sobre los Términos de Licencia del firewall, si queremos seguir utilizando debemos aceptarlos presionando la tecla **A**.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Una vez lo aceptamos nos aparecerá la pantalla principal del Firewall. Debe ser como la siguiente:
 
@@ -100,7 +100,7 @@ Ahora debemos establecer el adaptador de red por el cual ira la conexión intern
 
 Para solucionar este problema hacemos clic en el botón de **Manual configuration** y debemos abrir el desplegable de **Choose a port to configure** y seleccionar el **Port D** ya que este es el adaptador que tiene salida a Internet en NAT. Una vez le demos a **Apply** tardará unos segundos en configurarse.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Cambiar adaptador de internet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (4).png" alt=""><figcaption><p>Cambiar adaptador de internet</p></figcaption></figure>
 
 Después se debe quitar el error y aparecernos que tenemos internet como podemos ver en la siguiente imagen. Una vez hecho esto hacemos clic en **Continue**.
 

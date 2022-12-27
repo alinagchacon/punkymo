@@ -45,7 +45,10 @@
 * [Clasificación de las redes](redes/clasificacion-de-las-redes.md)
 * [Topología de las red](redes/topologia-de-las-red.md)
 * [Métodos de acceso  a la red](redes/metodos-de-acceso-a-la-red.md)
-* [Firewall](redes/firewall.md)
+* [Firewalls](redes/firewalls/README.md)
+  * [Tipos de firewalls](redes/firewalls/tipos-de-firewalls.md)
+  * [ZPF](redes/firewalls/zpf.md)
+  * [ZPF - Funcionamiento](redes/firewalls/zpf-funcionamiento.md)
 
 ## Servicios
 

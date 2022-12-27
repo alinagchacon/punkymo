@@ -146,7 +146,7 @@ Para probar el servicio de correo vía terminal basta escribir algo como lo sigu
 
 Si vamos al home del único usuario instalado en el sistema, "kirby", veremos que existe un directorio llamado <mark style="color:blue;">`Maildir`</mark> que contiene la estructura básica de un buzón de correos. Vamos a la carpeta o directorio <mark style="color:blue;">`/home/kirby/Maildir/new`</mark> y vemos que hay dos correos sin enviar.
 
-![](<../../.gitbook/assets/image (31).png>)
+![](<../../.gitbook/assets/image (31) (1).png>)
 
 Observemos el contenido del primero:
 

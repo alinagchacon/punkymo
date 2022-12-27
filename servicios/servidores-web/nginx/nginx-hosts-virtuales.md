@@ -52,7 +52,7 @@ porque el directorio <mark style="color:blue;">`/etc/nginx/sites-enabled/`</mark
 
 El directorio donde se localizan todos los archivos de configuración de Nginx es /etc/nginx/ y dentro debemos tener en consideración <mark style="color:blue;">`/etc/nginx/sites-available, /etc/nginx/sites-enable`</mark> y el propio <mark style="color:blue;">`/etc/nginx/nginx.conf`</mark> que vimos anteriormente.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Directorio /etc/nginx</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Directorio /etc/nginx</p></figcaption></figure>
 
 #### Archivo /sites-available/default
 
@@ -92,7 +92,7 @@ Dentro de <mark style="color:blue;">`/var/www/example1.com`</mark> creamos una c
 
 &#x20;<mark style="color:blue;">`/var/www/example1.com/img`</mark> de modo que tendremos una estructura como la siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Contenido del sitio example1.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Contenido del sitio example1.com</p></figcaption></figure>
 
 El archivo <mark style="color:blue;">`index.html`</mark> es muy simple:
 
@@ -194,7 +194,7 @@ sudo netstat –tlpn | grep nginx
 
 y nos muestra lo siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Los puertos habilitados para Nginx</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (4).png" alt=""><figcaption><p>Los puertos habilitados para Nginx</p></figcaption></figure>
 
 ## Acceso personalizado
 
@@ -283,7 +283,7 @@ Con esto, la próxima vez que intentes acceder a ese directorio <mark style="col
 
 Un inicio de sesión exitoso te permite acceder al contenido del directorio; de lo contrario, obtendrá un error de <mark style="color:blue;">`Se requiere autorización 401`</mark>.
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Drectorio /var/www/html/protected</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Drectorio /var/www/html/protected</p></figcaption></figure>
 
 &#x20;En este ejemplo no hemos creado ningún contenido dentro del directorio <mark style="color:blue;">`protected`</mark> así que para testear correctamente el sitio deberíamos hacerlo.
 

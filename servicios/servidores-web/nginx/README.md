@@ -242,7 +242,7 @@ Ahora vamos a crear un enlace entre el directorio y el archivo para habilitarlo:
 
 De modo que obtengas algo así:
 
-<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (2).png" alt=""><figcaption></figcaption></figure>
 
 Volviendo al sitio web, puedes comenzar por crear una carpeta que contenga todos los archivos e imágenes:
 
