@@ -8,7 +8,7 @@ El diseño de un firewall tiene como objetivo el poder permitir o denegar el tr�
 
 #### Privado y público
 
-<figure><img src="../../.gitbook/assets/image (10) (4).png" alt=""><figcaption><p>Pública / Privada</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Pública / Privada</p></figcaption></figure>
 
 
 
@@ -35,7 +35,7 @@ En los <mark style="color:blue;">`Zone-based policy firewalls ZPF`</mark> o fire
 
 Las políticas de seguridad para las redes LAN1 y LAN2 son similares y pueden agruparse en una zona para las configuraciones de firewall. De modo predeterminado, se tiene que en la misma zona, el tráfico entre interfaces no está sujeto a ninguna política y puede pasar libremente.&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Dos redes LAN internas pertenecientes a la misma zona</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Dos redes LAN internas pertenecientes a la misma zona</p></figcaption></figure>
 
 Por el contrario, se bloquea todo el tráfico de zona a zona y con el fin de permitir el tráfico entre zonas, se debe configurar una política que permita o inspeccione dicho tráfico.
 
@@ -47,10 +47,10 @@ Las configuraciones de políticas que incluyen la zona autónoma se aplican al t
 
 Ya hemos visto lo que sería la defensa en capas de una red, donde la seguridad:
 
-* **principal de la red** - Es Proteger contra software malicioso y anomalías de tráfico, así como aplicar políticas de red y garantizar su supervivencia.
-* **perimetral** - Es proteger los límites entre zonas.
-* **de las comunicaciones** - Es proporcionar seguridad de la información
-* **de terminales** - Es proporcionar identidad y cumplimiento de políticas de seguridad de dispositivos
+* **principal de la red** - es proteger contra software malicioso y anomalías de tráfico, así como aplicar políticas de red y garantizar su supervivencia.
+* **perimetral** - es proteger los límites entre zonas.
+* **de las comunicaciones** - es proporcionar seguridad de la información
+* **de terminales** - es proporcionar identidad y cumplimiento de políticas de seguridad de dispositivos.
 
 La defensa en capas utiliza diferentes tipos de firewalls que se pueden combinar (en capas) para agregar mayor seguridad (o seguridad en profundidad) a una organización.&#x20;
 

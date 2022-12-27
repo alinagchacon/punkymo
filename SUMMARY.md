@@ -49,6 +49,7 @@
   * [Tipos de firewalls](redes/firewalls/tipos-de-firewalls.md)
   * [ZPF](redes/firewalls/zpf.md)
   * [ZPF - Funcionamiento](redes/firewalls/zpf-funcionamiento.md)
+  * [Configurando un ZPF](redes/firewalls/configurando-un-zpf.md)
 
 ## Servicios
 

@@ -42,7 +42,7 @@ Antes de iniciar la maquina debemos de hacer ciertas configuraciones a la red, d
 
 Las redes internas se van creando a medida que se escriben.
 
-<figure><img src="../.gitbook/assets/image (2) (3).png" alt=""><figcaption><p>Configuración redes en VirtualBox</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (3) (1).png" alt=""><figcaption><p>Configuración redes en VirtualBox</p></figcaption></figure>
 
 Una vez hecho esto ya podremos arrancar la máquina virtual. No debemos tocar la selección de sistema del GRUB.
 
