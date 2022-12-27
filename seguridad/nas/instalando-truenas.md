@@ -117,7 +117,7 @@ Para poder acceder a los contenidos de cada usuario a través de la red, se hace
 
  
 
-<figure><img src="../../.gitbook/assets/image (6) (3).png" alt=""><figcaption><p>ACL</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (3) (2).png" alt=""><figcaption><p>ACL</p></figcaption></figure>
 
 </div>
 

@@ -12,7 +12,7 @@ Hay dos modelos de configuración de firewall:
 * **Zone-based Policy Firewall** - **ZPF**: El modelo de configuración en el que las interfaces se asignan a zonas de seguridad, y la política de firewall se aplica al tráfico que se mueve entre las zonas.
 * Si se añade una interfaz adicional a la zona privada, los hosts conectados a la nueva interfaz en la zona privada pueden pasar tráfico a todos los hosts de la interfaz existente en la misma zona.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Una red simple de tres zonas</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (7).png" alt=""><figcaption><p>Una red simple de tres zonas</p></figcaption></figure>
 
 ### Topología Básica de Zonas de Seguridad
 
@@ -66,7 +66,7 @@ El diseño de ZPF implica varios pasos:
 
 Un modelo simple declarando una zona privada y otra pública
 
-<figure><img src="../../.gitbook/assets/image (2) (3).png" alt=""><figcaption><p>De LAN a Internet: Modelo simple declarando una zona privada y una zona pública</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (5).png" alt=""><figcaption><p>De LAN a Internet: Modelo simple declarando una zona privada y una zona pública</p></figcaption></figure>
 
 #### Red Interna + Servidor público - Red Pública&#x20;
 
@@ -78,7 +78,7 @@ Un modelo donde se declara además de una zona privada y otra pública, un servi
 
 Otro modelo donde se declaran servidores públicos además de una zona privada y otra pública, pero en esta ocasión utilizando dos firewalls.
 
-<figure><img src="../../.gitbook/assets/image (6) (4).png" alt=""><figcaption><p>Utilizando dos firewalls</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (3).png" alt=""><figcaption><p>Utilizando dos firewalls</p></figcaption></figure>
 
 
 

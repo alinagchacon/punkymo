@@ -8,7 +8,7 @@ Vamos a configurar un firewall ZPF en una topología como la siguiente:
 
 &#x20;   &#x20;
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Configurando un firewall de zona</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Configurando un firewall de zona</p></figcaption></figure>
 
 #### Configuraciones iniciales
 
@@ -63,4 +63,25 @@ Router(config-if)#zone-member security PUBLIC
 
 ```
 
-La política de servicio estará activa. Se inspeccionará el tráfico HTTP, HTTPS y DNS que proviene de la zona PRIVATE y está destinado a la zona PUBLIC. El tráfico que proviene de la zona PUBLIC y está destinado a la zona PRIVATE solo se permitirá si forma parte de las sesiones iniciadas originalmente por los hosts de la zona PRIVATE
+La política de servicio estará activa. Se inspeccionará el tráfico HTTP, HTTPS y DNS que proviene de la zona PRIVATE y está destinado a la zona PUBLIC. El tráfico que proviene de la zona PUBLIC y está destinado a la zona PRIVATE solo se permitirá si forma parte de las sesiones iniciadas originalmente por los hosts de la zona PRIVATE.
+
+### Verificar la configuración de un ZPF
+
+Verifica la configuración de ZPF viendo la configuración en ejecución. Observa que el mapa de clase aparece primero. Luego, el mapa de políticas hace uso del mapa de clases. Además, observa que en la clase resaltada class-default dejará caer todo el resto del tráfico que no sea miembro de la clase HTTP-TRAFFIC.
+
+Las configuraciones de zona siguen las configuraciones del mapa de políticas con el nombramiento de zonas, el emparejamiento de zonas y la asociación de una política de servicio al par de zonas. Por último, las interfaces son zonas asignadas.
+
+```
+Router#show run
+```
+
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption><p>show run</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>show run</p></figcaption></figure>
+
+Otros comandos útiles para verificar:
+
+```
+Router#show zone security 
+Router#show zone-pair security
+```

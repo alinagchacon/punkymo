@@ -96,7 +96,7 @@ Justo debajo de los campos, podemos marcar que envie un correo de bienvenida el 
 
 Tambíen podemos marcar la opción de que el usuario pueda cambiar la contraseña el mismo, es una opción recomendable si el usuario es de confianza, en este caso no la marcaremos, por lo tanto unicamente podran cambiarla los adminsitradores.
 
-<figure><img src="../../../.gitbook/assets/image (1) (2) (2).png" alt=""><figcaption><p>Información del usuario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Información del usuario</p></figcaption></figure>
 
 ### Tercer paso - Unión a grupos
 
