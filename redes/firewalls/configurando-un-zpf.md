@@ -19,7 +19,7 @@ Vamos a configurar un firewall ZPF en una topología como la siguiente:
 
 #### Configurando las zonas en el router&#x20;
 
-* **Paso 1**: Cree las zonas.
+* &#x20;****&#x20;
 
 ```
 Router(config)#zone security PRIVATE
