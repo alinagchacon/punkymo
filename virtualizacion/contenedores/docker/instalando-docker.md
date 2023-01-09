@@ -19,7 +19,7 @@ sudo apt updates
 #### **Instalar paquetes que permitan a APT descargar a través de HTTPS**
 
 ```
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 ```
 
 #### **Añadir la clave de GPG para el repositorio oficial de Docker. De no estar, Ubuntu no lo instala**
