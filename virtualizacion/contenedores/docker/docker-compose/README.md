@@ -12,7 +12,7 @@ Uno de los aspectos a tener en cuenta es establecer los servicios que componen l
 
 
 
-![](<../../../.gitbook/assets/image (177).png>)
+![](<../../../../.gitbook/assets/image (177).png>)
 
 
 

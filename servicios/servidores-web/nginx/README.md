@@ -256,7 +256,7 @@ Podemos modificar el dueño y grupo de la carpeta creada haciendo:
 sudo chown -R $USER:$USER /var/www/html/example.com
 ```
 
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (3).png" alt=""><figcaption></figcaption></figure>
 
 Podemos asignar permisos con el comando:
 
