@@ -1,5 +1,5 @@
 ---
-description: JLM
+description: Joel López Medina
 ---
 
 # Instalación Sophos Firewall XG
