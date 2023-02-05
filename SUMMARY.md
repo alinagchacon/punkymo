@@ -27,8 +27,8 @@
   * [Instalando OpenmediaVault](seguridad/nas/instalando-openmediavault.md)
   * [RAID](seguridad/nas/raid.md)
 * [Instalación Sophos Firewall XG](seguridad/instalacion-sophos-firewall-xg.md)
-* [SOPS/AGE ++](seguridad/sops-age-++.md)
-* [SOPS/AGE](seguridad/sops-age.md)
+* [SOPS/AGE](seguridad/sops-age/README.md)
+  * [SOPS/AGE ++](seguridad/sops-age/sops-age-++.md)
 
 ***
 
@@ -68,9 +68,9 @@
   * [FileZilla](servicios/servidores-de-ftp/filezilla.md)
   * [VSFTPD](servicios/servidores-de-ftp/vsftpd.md)
   * [FTP vía IIS](servicios/servidores-de-ftp/ftp-via-iis.md)
-* [DNS](servicios/dns/README.md)
-  * [DNS - Windows Server 2016](servicios/dns/dns-windows-server-2016.md)
-  * [DNS - Ubuntu Server 22.04](servicios/dns/dns-ubuntu-server-22.04.md)
+* [Servicio DNS](servicios/servicio-dns/README.md)
+  * [DNS - Windows Server 2016](servicios/servicio-dns/dns-windows-server-2016.md)
+  * [DNS - Ubuntu Server 22.04](servicios/servicio-dns/dns-ubuntu-server-22.04.md)
 * [DHCP](servicios/dhcp/README.md)
   * [DHCP-Windows Server 2016](servicios/dhcp/dhcp-windows-server-2016.md)
   * [DHCP-Ubuntu Server 22.04](servicios/dhcp/dhcp-ubuntu-server-22.04.md)

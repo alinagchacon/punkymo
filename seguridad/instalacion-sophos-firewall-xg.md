@@ -6,11 +6,14 @@ description: Joel López Medina
 
 ## ¿Que es SOPHOS Firewall?
 
-Es un firewall de la compañía Sophos. Son Firewalls pensados para empresas ya que cuenta con muchas opciones de seguridad. Además, tiene diferentes versiones de Firewall. Tiene una versión llamada Sophos Home pensada para hogares y pequeñas. Después nos encontramos con el Sophos Firewall XG que está pensada para empresas y con más opciones de seguridad y protección.
+Es un <mark style="color:blue;">`firewall`</mark> de la compañía Sophos pensados para empresas ya que cuenta con muchas opciones de seguridad. Además, existen diferentes versiones de Firewall entre las cuales tenemos:
 
-Ahora instalaremos el Sophos Firewall XG en su versión Home, esta nos permite usar funciones limitadas, pero podemos usarlo de forma ilimitada. Para poder probar sus funciones y conocer su funcionamiento usaremos una máquina virtual que nos ofrece Sophos.
+* Sophos Home pensada para hogares y pequeñas.&#x20;
+* Sophos Firewall XG que está pensada para empresas y con más opciones de seguridad y protección.
 
-Tambien tenemos la opción de instalarlo a través de una ISO de forma manual en un equipo físico, el unico requisito destacable es que tenga 4 Gb de RAM.
+En esta guía instalaremos el <mark style="color:blue;">`Sophos Firewall XG`</mark> en su versión <mark style="color:blue;">Home</mark>, ya que nos permite usar funciones limitadas, pero podemos usarlo de forma ilimitada. Para poder probar sus funciones y conocer su funcionamiento usaremos una máquina virtual que nos ofrece Sophos.
+
+También tenemos la opción de instalarlo a través de una ISO de forma manual en un equipo físico, el único requisito destacable es que tenga 4 Gb de RAM.
 
 ### Descarga VM Sophos Firewall
 
@@ -34,7 +37,7 @@ En este caso si debemos de poner nuestro correo real ya que es ahí donde recibi
 
 ### Configuración VirtualBox
 
-Cuando se descarga debemos descomprimirlo y hacer doble clic en **sf\_virtual\_virtualbox.ovf**. Esto hará que se importe la máquina virtual a VirtualBox y podremos elegir la ubicación donde queremos que se importe. En el caso de que no se importe nos vamos a la pantalla principal de virtualbox, le damos a **añadir** y buscamos el archivo dicho anteriormente y lo seleccionamos y empezara la importación.
+Cuando se descarga debemos descomprimirlo y hacer doble clic en **sf\_virtual\_virtualbox.ovf**. Esto hará que se importe la máquina virtual a VirtualBox y podremos elegir la ubicación donde queremos que se importe. En el caso de que no se importe nos vamos a la pantalla principal de Virtualbox, le damos a **añadir** y buscamos el archivo dicho anteriormente y lo seleccionamos y empezara la importación.
 
 <figure><img src="../.gitbook/assets/image (9) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
