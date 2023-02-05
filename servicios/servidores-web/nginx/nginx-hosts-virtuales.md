@@ -62,7 +62,7 @@ Este sería el bloque del servidor Nginx predeterminado de muestra ubicado en
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Fichero /etc/nginx/sites-available/default</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (4).png" alt=""><figcaption><p>Fichero /etc/nginx/sites-available/default</p></figcaption></figure>
 
 Donde:
 
@@ -92,7 +92,7 @@ Dentro de <mark style="color:blue;">`/var/www/example1.com`</mark> creamos una c
 
 &#x20;<mark style="color:blue;">`/var/www/example1.com/img`</mark> de modo que tendremos una estructura como la siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Contenido del sitio example1.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (3).png" alt=""><figcaption><p>Contenido del sitio example1.com</p></figcaption></figure>
 
 El archivo <mark style="color:blue;">`index.html`</mark> es muy simple:
 
@@ -186,7 +186,7 @@ Podremos visualizar las dos páginas web desde un equipo cliente (en mi caso Ubu
 
 [http://192.168.6.100:8081](http://192.168.6.100:8081) (papillon)
 
-<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Sitio web www.example1.com </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (25) (2).png" alt=""><figcaption><p>Sitio web www.example1.com </p></figcaption></figure>
 
 Si quiero verificar los puertos abiertos en el servidor podemos hacer:
 
@@ -283,7 +283,7 @@ Con esto, la próxima vez que intentes acceder a ese directorio <mark style="col
 
 Un inicio de sesión exitoso te permite acceder al contenido del directorio; de lo contrario, obtendrá un error de <mark style="color:blue;">`Se requiere autorización 401`</mark>.
 
-<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Drectorio /var/www/html/protected</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (2).png" alt=""><figcaption><p>Drectorio /var/www/html/protected</p></figcaption></figure>
 
 &#x20;En este ejemplo no hemos creado ningún contenido dentro del directorio <mark style="color:blue;">`protected`</mark> así que para testear correctamente el sitio deberíamos hacerlo.
 

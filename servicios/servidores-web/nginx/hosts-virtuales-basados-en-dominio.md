@@ -109,7 +109,7 @@ Para confirmar si el bloque del servidor está funcionando como se esperaba y es
 
 Debe obtener el contenido incluido en el archivo HTML en su bloque de servidor como se muestra.
 
-<figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>www.kirby.com </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (23) (2).png" alt=""><figcaption><p>www.kirby.com </p></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption><p>www.punky.com </p></figcaption></figure>
 

@@ -36,7 +36,7 @@ Los filtros de paquetes no tienen estado. Examinan cada paquete individualmente 
 
 Este tipo de firewall con estado son los más versátiles y más comúnmente usados. También conocidos como firewalls activos,  proporcionan un filtrado de paquetes utilizando la información de conexión que se mantiene en una tabla de estados. El filtrado con estado es una arquitectura de firewall que se clasifica en la capa de red. También analiza el tráfico en las capas 4 y 5 de OSI.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Firewall activo o stateful</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (5).png" alt=""><figcaption><p>Firewall activo o stateful</p></figcaption></figure>
 
 &#x20;
 
@@ -73,7 +73,7 @@ Este tipo de firewall del gateway de aplicaciones o firewall proxy filtra la inf
 
 La mayor parte del control y filtrado del firewall se realiza en el software. Cuando un cliente necesita tener acceso a un servidor remoto, se conecta a un servidor proxy. El servidor proxy se conecta al servidor remoto en nombre del cliente. Por lo tanto, el servidor solamente ve una conexión desde el servidor proxy.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Firewall del Gateway de aplicaciones</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Firewall del Gateway de aplicaciones</p></figcaption></figure>
 
 ### Firewall de próxima generación
 
@@ -84,7 +84,7 @@ Los firewalls de próxima generación o <mark style="color:blue;">`NGFW`</mark> 
 * Rutas de actualización para incluir futuros datos de información.
 * Técnicas para afrontar amenazas de seguridad en constante evolución.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Firewall de próxima generación</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Firewall de próxima generación</p></figcaption></figure>
 
 Existen otros métodos de implementación de firewall que incluyen aspectos como:
 

@@ -60,7 +60,7 @@ En este paso confirmaremos que los datos que hemos introducido son correctos. En
 
 Una vez revisada la configuración, en este paso nos encontramos con la opción de asignar permisos de **lectura/escritura** a los usuarios de nuestro NAS. De momento únicamente tenemos el usuario de administrador, este siempre tiene acceso de lectura y escritura, aunque también se los podemos denegar. Si denegamos el acceso al administrado únicamente podremos gestionar los usuarios que acceden a ella y no ver su contenido.
 
-<figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p>Configurar permisos de usuario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (4) (1).png" alt=""><figcaption><p>Configurar permisos de usuario</p></figcaption></figure>
 
 ### Séptimo paso - Finalizar creación de la carpeta
 

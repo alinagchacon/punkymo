@@ -125,7 +125,7 @@ Tener en cuenta que al configurar las reglas ACL, Access Control List, los permi
 
 Si queremos probar el acceso que tiene un usuario específico podemos ir al explorador de <mark style="color:blue;">`Windows - Red - \\TRUENAS`</mark> y debemos ver algo como:
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Usuarios </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (3).png" alt=""><figcaption><p>Usuarios </p></figcaption></figure>
 
 
 

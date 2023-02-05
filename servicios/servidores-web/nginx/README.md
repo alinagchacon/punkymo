@@ -290,7 +290,7 @@ docker ps
 
 De este modo podemos ver también la ID del contenedor de nginx:
 
-<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (19) (2).png" alt=""><figcaption></figcaption></figure>
 
 Para copiar el archivo index.html en la ubicación del contenedor de nginx:
 
