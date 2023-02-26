@@ -6,4 +6,4 @@ Son apuntes, ideas, consideraciones prácticas y temas en los que tengo que apre
 
 Por otra parte, si hay algún aspecto que no está correcto, por favor, házmelo saber.&#x20;
 
-Finalmente, quiero agradecer a tres alumnos que están colaborando en el material que aquí presento: <mark style="color:blue;">N-Tech Admin Group</mark>  y <mark style="color:blue;">JLM</mark>. No digo sus nombres hasta que ellos me lo autoricen sin embargo, <mark style="color:blue;">quiero reconocer aquí cuánto estoy aprendiendo de ellos y darles las gracias.</mark>
+Finalmente, quiero agradecer a tres alumnos que están colaborando en el material que aquí presento: <mark style="color:blue;">N-Tech Admin Group (Xavier Adell y Joel González)</mark>  y <mark style="color:blue;">Joel López Medina</mark>. <mark style="color:blue;">Reconocer aquí cuánto estoy aprendiendo de ellos y darles las gracias.</mark>
