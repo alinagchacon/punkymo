@@ -124,7 +124,7 @@ Una vez ya la hemos modificado, aceptamos los cambios para que se guarden y arra
 
 En el menú de arranque debemos seleccionar la segunda opción, la que dice **RedPill DS3615xs v7.0.1-42661 (SATA, Verbose)**. Una vez que lo elijamos la primera vez se quedara marcada como opción predeterminada.
 
-<figure><img src="../../../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Quinto paso - Encontrar el NAS en la red
 
@@ -144,7 +144,7 @@ Seguidamente nos saldrá otra ventana donde haremos clic en **"Instalar"** y si 
 
 A continuación, nos indica que carguemos el archivo .pat. Este es el que hemos extraído del servidor a través de FTP. Debemos buscarlo en nuestro equipo y cargarlo.
 
-<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (49) (2).png" alt=""><figcaption></figcaption></figure>
 
 Después de eso debemos confirmar que todos los archivos serán eliminados y comenzará la instalación.
 

@@ -54,7 +54,7 @@ Las opciones de esta paso únicamente están disponibles para los volúmenes con
 
 En este paso confirmaremos que los datos que hemos introducido son correctos. En el caso contrario podremos volver atrás para modificarlos.
 
-<figure><img src="../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
 
 ### Sexto paso - Permisos de usuario
 
@@ -86,7 +86,7 @@ Para crear y gestionar usuarios debes poseer el rol de administrador, el único 
 
 Primero de todo accedemos al panel de control, después nos dirigimos a **Usuario y grupo**. **** Desde ese panel podremos ver todos los usuarios creados, durante la instalación del NAS se crean dos usuarios extras, el **admin** y el **guest**. Por defecto aparecen deshabilitados. Es recomendable nunca activar el usuario de **admin** ya que nuestro NAS puede sufrir ataques de fuerza bruta.
 
-<figure><img src="../../../.gitbook/assets/image (11) (2) (1).png" alt=""><figcaption><p>Usuario y grupo</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (2) (1) (2).png" alt=""><figcaption><p>Usuario y grupo</p></figcaption></figure>
 
 ### Segundo paso - Creación del usuario
 
@@ -96,7 +96,7 @@ Justo debajo de los campos, podemos marcar que envie un correo de bienvenida el 
 
 Tambíen podemos marcar la opción de que el usuario pueda cambiar la contraseña el mismo, es una opción recomendable si el usuario es de confianza, en este caso no la marcaremos, por lo tanto unicamente podran cambiarla los adminsitradores.
 
-<figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Información del usuario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption><p>Información del usuario</p></figcaption></figure>
 
 ### Tercer paso - Unión a grupos
 

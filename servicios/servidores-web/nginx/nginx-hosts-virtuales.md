@@ -40,7 +40,7 @@ y el archivo de configuración global es:&#x20;
 
 La estructura de configuración del archivo de configuración principal se muestra como sigue:
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Archivo de configuración /etc/nginx/nginx.conf</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (2).png" alt=""><figcaption><p>Archivo de configuración /etc/nginx/nginx.conf</p></figcaption></figure>
 
 Tener en cuenta que, en Ubuntu existe una directiva de inclusión adicional:
 
@@ -227,7 +227,7 @@ man htpasswd
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Archivo .htpasswd</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (21) (2).png" alt=""><figcaption><p>Archivo .htpasswd</p></figcaption></figure>
 
 Luego, asignamos los permisos y la propiedad adecuados al archivo de contraseña (reemplaza el usuario y grupo por <mark style="color:blue;">`www-data`</mark>).
 

@@ -45,7 +45,7 @@ Una práctica adecuada sería hacer una copia de seguridad de los archivos de co
 
 <mark style="color:blue;">`cp /etc/bind/named.conf.local /etc/bind/named.conf.BKP`</mark>
 
-<figure><img src="../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora podemos crear el contenido de cada zona en el fichero de configuración: <mark style="color:blue;">named.conf.local</mark>. Esto es:
 
@@ -63,7 +63,7 @@ Ahora vamos a crear los ficheros de zona que hemos indicado en la configuración
 
 Para la **zona directa** creamos el fichero: <mark style="color:blue;">`/etc/bind/db.midominio.local`</mark>
 
-<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez creado dicho fichero ya podemos editarlo y hacer las modificaciones  necesarias para nuestra configuración, como el nombre del dominio.&#x20;
 
@@ -107,7 +107,7 @@ Listo, ya tenemos configurado el servidor DNS. Solo nos queda <mark style="color
 
 Si no las hecho antes, **edita la configuración de red** del servidor de Ubuntu  para indicar que él mismo es el servidor DNS que tendrá que consultar para la resolución de nombres. Y esto lo tenemos que hacer con **netplan**.
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (47) (1).png" alt=""><figcaption></figcaption></figure>
 
 Para que tome los cambios, hacemos:
 
@@ -123,7 +123,7 @@ Las aplicaciones hacen uso del resolver de systemd-resolved  escuchan en la inte
 
 &#x20;El archivo **/etc/resolv.conf** es un enlace simbólico a otro fichero de configuración. Por cada modo de implementación del systemd-resolved, existen **4 ficheros de configuración.**
 
-<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption><p>En este caso /etc/resolv.conf ya apunta al fichero adecuado</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (53) (1).png" alt=""><figcaption><p>En este caso /etc/resolv.conf ya apunta al fichero adecuado</p></figcaption></figure>
 
 ¿Cómo podemos desactivar el systemd-resolved y que las aplicaciones consulten nuestro resolver directamente?&#x20;
 

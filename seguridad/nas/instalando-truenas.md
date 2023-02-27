@@ -87,7 +87,7 @@ En esta sección es donde  podemos activar o desactivar  servicios, y configurar
 
 Podemos habilitar algún que otro servicio como: samba o smb, rsync que necesita de ssh para probar lo mínimo del servidor.
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Algunos de los servicios habilitados</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption><p>Algunos de los servicios habilitados</p></figcaption></figure>
 
 Para probar el uso de SSH podemos conectarnos desde el CMD de Windows. Recuerda que el NAS está en modo Adaptador Puente con lo cual tenemos acceso al mismo a través de la red.
 

@@ -182,7 +182,7 @@ Con esta línea de comando le estamos diciendo que use age con el formato de cif
 
 Si ahora volvemos a probar a mirar dentro del fichero secret.yaml veremos algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption><p>secret.yaml cifrado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (35) (2).png" alt=""><figcaption><p>secret.yaml cifrado</p></figcaption></figure>
 
 Donde podemos ver que el usuario y la contraseña están cifrados (AES256).
 

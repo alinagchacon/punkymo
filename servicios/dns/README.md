@@ -46,7 +46,7 @@ En Linux:
 
 &#x20;****&#x20;
 
-<figure><img src="../../.gitbook/assets/image (25) (1).png" alt=""><figcaption><p>resolv.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25) (1) (1).png" alt=""><figcaption><p>resolv.conf</p></figcaption></figure>
 
 **Ejemplo**:
 

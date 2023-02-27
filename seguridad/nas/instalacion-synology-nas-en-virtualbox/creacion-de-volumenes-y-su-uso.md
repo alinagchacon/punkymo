@@ -54,7 +54,7 @@ De forma opcional podemos agregarle una descripción para poder identificarlo, i
 
 En el siguiente paso nos encontraremos la selección del sistema de archivos, de forma recomendada usaremos **btrfs**, este cuenta con funciones avanzadas frente a **ext4**. Además las ventajas de migración de sistemas con versioens anteriores de NAS no lo usaremos.
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Selección sistema de archivos </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (2).png" alt=""><figcaption><p>Selección sistema de archivos </p></figcaption></figure>
 
 ### Séptimo paso - Revisión de la configuración
 

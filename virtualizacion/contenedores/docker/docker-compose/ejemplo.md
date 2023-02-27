@@ -263,7 +263,7 @@ select * from users1.users;
 
 Ahora es que estamos en condiciones de crear nuestro docker-compose. Para ello nos vamos a Portainer.
 
-<figure><img src="../../../../.gitbook/assets/image (25).png" alt=""><figcaption><p>En Portainer</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (25) (1).png" alt=""><figcaption><p>En Portainer</p></figcaption></figure>
 
 Nos vamos a la herramienta stacks de Portainer, donde podremos crear nuestra "composición" de servicios. Recordemos que un stack es una colección de servicios que están relacionados con una aplicación, como por ejemplo,  WordPress que incluye un contenedor de servidor web (como nginx o apache) y un contenedor de base de datos como MySQL.
 
@@ -273,7 +273,7 @@ Una vez en el apartado vamos a crear un nuevo stack:
 
 Se nos abrirá una nueva página donde podemos aplicar diferentes opciones para crear una colección entre las que tenemos subir nuestro docker-compose.yml, usar un repositorio de git. Aquí utilizaremos el editor web:
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Stack en Portainer</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Stack en Portainer</p></figcaption></figure>
 
 En el editor web volcamos el contenido de nuestro archivo <mark style="color:blue;">`docker-compose.yml`</mark> previamente creado. En caso de tener algún aparecerá una notificación en rojo que nos impedirá continuar &#x20;
 
