@@ -249,7 +249,7 @@ En este punto podemos escribir data y en la siguiente línea escribir el cuerpo 
 
 Está claro que tenemos ciertos puertos abiertos para la recepción y envío de los correos en el servidor:
 
-<mark style="color:blue;">`sudo nmap -ST -= 192.168.1.30`</mark>
+<mark style="color:blue;">`sudo nmap -ST -O 192.168.1.30`</mark>
 
 ![](<../../.gitbook/assets/image (2) (1) (1) (1).png>)
 
