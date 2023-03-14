@@ -1,33 +1,20 @@
 ---
-description: N-Tech Admin Group
+description: Instalación
 ---
 
-# PROXMOX
+# Proxmox en VMWare
 
-### Introducción&#x20;
-
-Proxmox es un entorno de virtualización empresarial de código abierto. Un sistema operativo basado en un Debian, con un kernel modificado de RHEL (Red Hat). El sistema operativo tiene una interfaz web por donde se administra todo su contenido, las herramientas y comandos necesarios.
-
-Proxmox tiene dos tipos de virtualización compatibles:&#x20;
-
-* Los contenedores basados LXC (Linux containers)&#x20;
-* La virtualización con KVM (Kernel virtual machine).
-
-Proxmox es una solución de código abierto para entornos de virtualización empresarial donde domina VMware ESXi y Hyper-V que son entornos con un alto coste económico.&#x20;
-
-### Instalación&#x20;
+## Instalación en VMWare
 
 Veamos cómo hacer la instalación, cosa que es complicado ya que estamos hablando de un sistema operativo que virtualiza.
 
-![Proxmox Server Solutions | LinkedIn](https://lh5.googleusercontent.com/af3UNwzL4vXqBKYG0oQdLjbwsAjTowttu0GVH-WgaSrHpwVq7BxhT0Rw02oo0uNuPkmjzNbvvyihprEYwoIMSylwWayUaxiaF4SnP2UosEEXr3WBXJTlx0vYrHdNVeYu7W\_pdhQlRPl-lGlPJ3Z-wdA3da-r7lwEpbGQRGumzuNQuQM0t80SFu2V)
-
-![NVIDIA y VMware Una nueva asociación, un nuevo centro de datos | NVIDIA](https://lh3.googleusercontent.com/YlcB6m8USTRSSLX252CH\_KtHFmgZSRzE1cJyUuZq4K7xqdOvPeNDKSrd5JsEszTRh1co7-OmDIVQpCLnuF1lEfDWG2-mcbKpyRk3AQmtzJEKDxhH4K7Lc4Cw5LzOcmyruDxGBIuru8hGyLoVhCgrC2T-bvnaJhf-7N62f-orUvTf6Ea29GTTHYfQ)
-
 Para la instalación, lo más recomendable es instalarla de forma física ya sea en un ordenador o en un portátil que tenga algún tiempo para darle una segunda vida. Pero antes de hacerlo se puede probar a instalar en una máquina virtual para poder ver como se instala y qué configuraciones hay que realizar.
 
-Para ello no sirve cualquier sistema de virtualización ya que debe aceptar la virtualización anidada. En principio VirtualBox si tiene esa opción pero al hacer las pruebas da muchos fallos de instalación y por eso la mejor opción para la instalación es VMWare. Esta aplicación es muy parecida a VirtualBox pero al ser de pago tiene mejores herramientas y se configura mejor.
+![Proxmox Server Solutions | LinkedIn](https://lh5.googleusercontent.com/af3UNwzL4vXqBKYG0oQdLjbwsAjTowttu0GVH-WgaSrHpwVq7BxhT0Rw02oo0uNuPkmjzNbvvyihprEYwoIMSylwWayUaxiaF4SnP2UosEEXr3WBXJTlx0vYrHdNVeYu7W\_pdhQlRPl-lGlPJ3Z-wdA3da-r7lwEpbGQRGumzuNQuQM0t80SFu2V)
 
-Pese a que VMWare es de pago hay una opción gratuita para uso no comercial que es la que usaremos. Esto es, VMWare Player.
+Para ello no sirve cualquier sistema de virtualización ya que debe aceptar la virtualización anidada. En VirtualBox también podemos instalar Proxmox pero se hace necesario corregir ciertos fallos para poder ejecutar las máquinas virtuales y es por eso que la mejor opción para la instalación es VMWare. Esta aplicación es muy parecida a VirtualBox pero al ser de pago tiene mejores herramientas y se configura mejor.
+
+Pese a que VMWare es de pago hay una opción gratuita para uso no comercial que es la que usaremos. Esto es, <mark style="color:blue;">`VMWare Player`</mark>.
 
 #### VMWare&#x20;
 
@@ -37,12 +24,12 @@ Para hacer la prueba, utilizaremos los tres archivos a continuación:
 
 Esto es:&#x20;
 
-* El programa VMware Player para crear la máquina virtual,&#x20;
-* La iso de proxmox&#x20;
+* El programa [VMware Player](https://www.vmware.com/es/products/workstation-player.html) para crear la máquina virtual,&#x20;
+* La iso de P[roxmox ](https://www.proxmox.com/en/downloads/category/iso-images-pve)
 * La iso de cualquier sistema operativo que queramos.&#x20;
 * Plantilla Contenedor (LXC) Ubuntu 20.04
 
-En nuestro caso usaremos Debian porque es un sistema que pesa muy poco y es muy fácil de instalar. Antes de instalar VMWare hay que tener en cuenta que si tenemos Hyper V o Subsistema de Windows está habilitado VMWare no podrá iniciar ya que no es compatible con el tipo de virtualización que usa tanto Hyper V como el subsistema de Windows. (El subsistema de Windows se usa para instalar el kernel de Linux junto a windows para poder tener la típica aplicación de terminal de ubuntu o otro sistema Linux.)&#x20;
+En nuestro caso usaremos [Debian ](https://www.debian.org/distrib/index.es.html)porque es un sistema que pesa muy poco y es muy fácil de instalar. Antes de instalar VMWare hay que tener en cuenta que si tenemos Hyper V o Subsistema de Windows está habilitado VMWare no podrá iniciar ya que no es compatible con el tipo de virtualización que usa tanto Hyper V como el subsistema de Windows. (El subsistema de Windows se usa para instalar el kernel de Linux junto a windows para poder tener la típica aplicación de terminal de ubuntu o otro sistema Linux.)&#x20;
 
 #### Paso 1:&#x20;
 
@@ -72,7 +59,7 @@ Ahora se nos muestra el resto de configuraciones que ha creado por defecto VMwar
 
 <mark style="color:red;">Al crear la VM me dió error y tuve que desmarcar la opción de</mark> <mark style="color:red;"></mark><mark style="color:red;">**Virtualize CPU performance counters**</mark>.
 
-<figure><img src="../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Aquí tendremos que cambiar la cantidad de RAM que se le proporcionará a la máquina: lo recomendable como mínimo es entre 4 y 6 GB. Una vez ya seleccionada la RAM vamos al apartado más importante: al del procesador como se muestra en la imagen anterior. Hay que tener en cuenta que el procesador del que disponemos para dar más o menos “cores” si tenemos un procesador con 4 núcleos y 8 hilos le podemos dar entre 3 y 4 cores. Pero si tenemos un procesador mejor con 8 núcleos y 16 hilos le podemos dar 8 cores.&#x20;
 
@@ -187,7 +174,7 @@ Ahora en el apartado “SO” tenemos que especificar de qué forma en la que qu
 
 Una vez seleccionado la iso vamos al apartado “Sistema” donde nos preguntara qué tarjeta gráfica usaremos y el controlador SCSI. En esta parte lo mejor es dejarlo por defecto.
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
 Ahora configurar el tamaño de disco, donde se almacenará la máquina y el bus del dispositivo. Para el tamaño del disco con 8 GB para debian es más que suficiente. Si fuera un sistema windows por lo menos sería necesario 32Gb de almacenamiento. En cuanto al bus del dispositivo y la caché se recomienda dejarlo como esta.
 
@@ -195,15 +182,15 @@ Ahora configurar el tamaño de disco, donde se almacenará la máquina y el bus 
 
 Nos dirigimos al apartado de la CPU donde tendremos que especificar la cantidad de núcleos. Para una VM con dos núcleos es suficiente aunque si disponemos de un procesador con muchos núcleos es recomendable que para sistemas windows tener 4 núcleos como mínimo.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
 Una vez definido la cantidad de núcleos que tendrá la máquina, hay que poner la cantidad de RAM (En el caso de un Linux en este caso Debian) 2GB de ram es suficiente aunque se puede poner más. Es recomendable que en sistemas windows el mínimo sea 4GB
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 En el apartado de red hay que configurar qué adaptador usará la máquina (red NAT, adaptador puente o red interna).
 
-<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
 
 Una vez con esto llegaremos al último apartado de la configuración de la MV en la cual sale un resumen de todos los ajustes anteriores para comprobar si son correctos antes de crear la máquina.
 

@@ -92,5 +92,7 @@
   * [Pi-hole](virtualizacion/contenedores/pi-hole.md)
   * [Alpine Linux](virtualizacion/contenedores/alpine-linux.md)
   * [en Portainer](virtualizacion/contenedores/en-portainer.md)
-  * [PROXMOX](virtualizacion/contenedores/proxmox.md)
+  * [Proxmox](virtualizacion/contenedores/proxmox/README.md)
+    * [Proxmox en VMWare](virtualizacion/contenedores/proxmox/proxmox-en-vmware.md)
+    * [Proxmox en VirtualBox](virtualizacion/contenedores/proxmox/proxmox-en-virtualbox.md)
 * [VPN](virtualizacion/vpn.md)

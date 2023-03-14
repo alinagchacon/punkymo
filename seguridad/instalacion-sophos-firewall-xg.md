@@ -102,7 +102,7 @@ Después se debe quitar el error y aparecernos que tenemos internet como podemos
 
 En este paso debemos ponerle un nombre al Firewall e introducir nuestra Zona horaria, en este caso será Europe/Madrid. El nombre que introduzcamos servirá para identificar el Firewall en la red, este puede ser cualquier nombre. Una vez acabamos le damos a **Siguiente**.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Nombre del firewall y zona horaria</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (8).png" alt=""><figcaption><p>Nombre del firewall y zona horaria</p></figcaption></figure>
 
 ### Cuarto paso - Registro de firewall
 
@@ -164,7 +164,7 @@ Para acceder al panel de inicio de sesión del firewall debemos acceder a la dir
 
 Ahora debemos iniciar sesión con el usuario admin y la contraseña que elegimos en el primer paso de la configuración.
 
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption><p>Inicio de sesión del firewall</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14) (2).png" alt=""><figcaption><p>Inicio de sesión del firewall</p></figcaption></figure>
 
 Al entrar nos aparece un mensaje para crear una clave de recuperación de las copias de seguridad, de momento no será necesario crearla. Por lo tanto, haremos clic en Omitir por Ahora. No podremos desactivar este mensaje, cada vez que iniciemos sesión lo veremos.
 
@@ -172,4 +172,4 @@ Al entrar nos aparece un mensaje para crear una clave de recuperación de las co
 
 Esta es la interfaz del firewall. Es una interfaz muy intuitiva y fácil de usar. Además, incluye muchas opciones de seguridad avanzada para nuestra red.
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p>Interfaz Sophos Firewall</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (3).png" alt=""><figcaption><p>Interfaz Sophos Firewall</p></figcaption></figure>
