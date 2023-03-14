@@ -147,9 +147,9 @@ Cuando entramos en “Plantillas” nos sale la lista de plantillas que están e
 
 <figure><img src="https://lh6.googleusercontent.com/TTvz9ZDl7W3lqeLtmBtrPpVxnziMkDDFxD4DH0Ye2yUwm3VEEt_oHVdyeewz7pxLltP913ySc4EiTVLZr9jJTHMnIyHU_mzvnhCLnwGjViZn-djcgNMjHlkfEHoDGd--5Y_Rn0rHWpwfvTMjnzfrckDeirWZc3l0aBou-tclMZG-q9nb2xAn7Dbm" alt=""><figcaption></figcaption></figure>
 
-Si al descargar cualquier plantilla nos diera error podemos descargar la plantilla manualmente en la página http://download.proxmox.com/images/system/&#x20;
+Si al descargar cualquier plantilla nos diera error podemos descargar la plantilla manualmente en la página [http://download.proxmox.com/images/system/](http://download.proxmox.com/images/system/)&#x20;
 
-<figure><img src="https://lh3.googleusercontent.com/h6gaZ5VypTE4L2h1FxdUiJJ8WVAYhactCn7g2udnipLn46xClX-I8qnu0piexCv68dKqUwf3BR1DP6IWqNK5sua3Zn-jTXIoY9mz5pov7Mqj7JdsEs5cgtQkhLgGJa43GnElBYOvj7OR6_WNgsunFBgFO-oo-xsuAugfNGdv2yWrcJAjQPsymfEM" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://lh3.googleusercontent.com/h6gaZ5VypTE4L2h1FxdUiJJ8WVAYhactCn7g2udnipLn46xClX-I8qnu0piexCv68dKqUwf3BR1DP6IWqNK5sua3Zn-jTXIoY9mz5pov7Mqj7JdsEs5cgtQkhLgGJa43GnElBYOvj7OR6_WNgsunFBgFO-oo-xsuAugfNGdv2yWrcJAjQPsymfEM" alt=""><figcaption><p>Plantillas </p></figcaption></figure>
 
 \
 Cuando la descargamos o si quisiéramos subir una plantilla que tengamos, la podemos subir de la misma forma que hemos subido la iso en el apartado “CT Templates” y poner “Cargar”, nos saldrá una ventana muy parecida a la de subir la iso pero para poder subir la plantilla de contenedor como se muestra en la imagen siguiente.
@@ -160,9 +160,9 @@ Cuando tenemos descargada la plantilla del repositorio o subimos alguna de nuest
 
 <figure><img src="https://lh3.googleusercontent.com/npcR3hu4W-_MrmPTRRJ0Z4WFRKaz-FZRlGMaeixoDN4atpw6yMxOfMupUnkzzUSBPMuApQmDFZOgKfofBq2zXA_rlratM8Fc-NzQEiXC7_r8g7DyprGQiYwd1QB4ixWwoQa2aKDfMHpOxQP4t_HIrvakzkX94SRvskKf9XOKGE6lCVNR0K8CVsPX" alt=""><figcaption></figcaption></figure>
 
-Con las iso y contenedores ya en el servidor podemos empezar con la instalación de de una máquina virtual. En la parte superior a la derecha tenemos un botón llamado “Crear VM” como se muestra en la siguiente imagen.
+Con las isos y contenedores ya en el servidor podemos empezar con la instalación de de una máquina virtual. En la parte superior a la derecha tenemos un botón llamado “Crear VM” como se muestra en la siguiente imagen.
 
-<figure><img src="https://lh4.googleusercontent.com/sJZ-sY1DmPchbjpFS8Aml48UgzUCiTYq0Fio9YleC-8_bPJsHTWX_YVK4ho6JK7GZBFDDkzp5KSKkNfdEDcvlmpksma8B0QuY-bDV6hDSZktMhiJfAAGFGDeClxQRijEUQK0UEojZbBPeyvkRuej-JuSuIo_uY2-OHZ3Am5mJ3Yg9P0c4wzrMiOu" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://lh4.googleusercontent.com/sJZ-sY1DmPchbjpFS8Aml48UgzUCiTYq0Fio9YleC-8_bPJsHTWX_YVK4ho6JK7GZBFDDkzp5KSKkNfdEDcvlmpksma8B0QuY-bDV6hDSZktMhiJfAAGFGDeClxQRijEUQK0UEojZbBPeyvkRuej-JuSuIo_uY2-OHZ3Am5mJ3Yg9P0c4wzrMiOu" alt=""><figcaption><p>Crear VM</p></figcaption></figure>
 
 Nos saltará una ventana para la configuración del hardware de la VM. El primer apartado son los ajustes generales como en qué servidor se creará la máquina (como en nuestro caso solo tenemos un servidor y no tenemos un cluster no dejará escoger el nodo donde instalar). El VM ID es el número que le asigna el servidor a la máquina al ser la primera que creamos la ID es 100. Y por último el nombre que le queremos poner a la máquina.
 
@@ -180,11 +180,11 @@ Ahora configurar el tamaño de disco, donde se almacenará la máquina y el bus 
 
 <figure><img src="https://lh5.googleusercontent.com/fgEzFv1o94_q_nz3gXzSsdUoB4-LZJW4fGrlVU6RBud1ZNv29JCwzEHwlPKRM9VmGzzvrU2zzJYk4jxJfgLjUaf7zzKkZLL5d76yN0RVS7NLUHSujdBnJzrcmsLETLIvljNDJ7ICF9bGTeHzhdL7O5UiDyoYjsOQu0UXWm1dN0N0fdlHJeBLnv6q" alt=""><figcaption></figcaption></figure>
 
-Nos dirigimos al apartado de la CPU donde tendremos que especificar la cantidad de núcleos. Para una VM con dos núcleos es suficiente aunque si disponemos de un procesador con muchos núcleos es recomendable que para sistemas windows tener 4 núcleos como mínimo.&#x20;
+Nos dirigimos al apartado de la CPU donde tendremos que especificar la cantidad de núcleos. Para una VM con dos núcleos es suficiente aunque si disponemos de un procesador con muchos núcleos es recomendable tener 4 núcleos como mínimo para sistemas Windows.&#x20;
 
 <figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
-Una vez definido la cantidad de núcleos que tendrá la máquina, hay que poner la cantidad de RAM (En el caso de un Linux en este caso Debian) 2GB de ram es suficiente aunque se puede poner más. Es recomendable que en sistemas windows el mínimo sea 4GB
+Una vez definido la cantidad de núcleos que tendrá la VM, hay que poner la cantidad de RAM (En el caso de un Linux en este caso Debian) 2GB de RAMes suficiente aunque se puede poner más. Es recomendable que en sistemas Windows el mínimo sea 4GB
 
 <figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
@@ -208,37 +208,51 @@ Ahora solo habría que instalar el sistema operativo de la máquina virtual y ya
 
 <figure><img src="https://lh3.googleusercontent.com/tTG_p9GI81xT8ID_PF22xEyC7LW5aF1wm8euLbSgpSSJhvaQxz6B23vfBIIZxQTfJnkqDDg8qTaMdKPRGHMH2sLqJk71F5fIBU1A8IfH5Lm0D2JMLHSd_GAQvIO0BpH4m6Awiu7AK-DKqXmRcbKcTq5KglvzKMh5_xiXBW13E0oJsHyQlY1unaCb" alt=""><figcaption></figcaption></figure>
 
-De la misma forma que hemos creado esta VM con debian, se puede crear con cualquier sistema operativo. También hay que tener en cuenta que si disponemos de un servidor con dos gráficas y queremos que un VM disponga de la totalidad de la gráfica ya sea por que queremos tener una máquina virtual para jugar o tener un servidor de streaming, siempre se puede configurar en el apartado de “Sistema”. De la misma forma si queremos utilizar el protocolo “SPICE” como mostraremos más adelante habría que cambiar la gráfica por defecto y poner una compatible con “SPICE”. Por último hay que tener en cuenta que el formato en el que se crea el disco virtual por defecto es “RAW” que no es el formato al que estamos acostumbrados cuando hablamos de VM (VHD), pero siempre se puede transformar en ”vdi” (formato de VirtualBox), “vmdk” (formato de VMWare) entre otros.
+De la misma forma que hemos creado esta VM con Debian, se puede crear con cualquier sistema operativo. También hay que tener en cuenta que si disponemos de un servidor con dos gráficas y queremos que un VM disponga de la totalidad de la gráfica ya sea porque queremos tener una máquina virtual para jugar o tener un servidor de streaming, siempre se puede configurar en el apartado de “Sistema”.&#x20;
 
-Ahora vamos a ver como crear un contenedor LXC, de la misma forma que la VM tiene un botón para crear, LXC también lo tiene. Está justo al lado de “Crea VM” y se llama “Crear CT” como se muestra en la siguiente imagen.
+Igualmente, si queremos utilizar el protocolo `SPICE` (Protocolo SImple para Entornos de Computación Independientes) como mostraremos más adelante habría que cambiar la gráfica por defecto y poner una compatible con `SPICE`. Por último hay que tener en cuenta que el formato en el que se crea el disco virtual por defecto es `RAW` que no es el formato al que estamos acostumbrados cuando hablamos de VM (VHD), pero siempre se puede transformar en `VDI`  que es el formato de VirtualBox, `VMDK` que es el formato de VMWare entre otros.
+
+**¿Qué es SPICE?** Es un protocolo de comunicación para entornos virtuales que nos permite ver la consola de las VM desde cualquier dispositivo de la red a través del cliente Spice.
+
+## Contenedores LXC
+
+Ahora vamos a ver como crear un contenedor LXC, de la misma forma que la VM tiene un botón para crear, LXC también lo tiene. Está justo al lado de `Crea VM` y se llama `Crear CT` como se muestra en la siguiente imagen.
 
 <figure><img src="https://lh4.googleusercontent.com/yjqFWhC3YeZ-YB_GnMW9eggZZ9BN753aEjJ8RATJrY_wieEZ-Uib4CBc1PBRLbguvhr_QosXJdKjmzw_gpBGR4RFNGmX7wrzlEDLHhD6xFMTy_xnYfX2EPf9X1lbV2vs2yUQuisvmQVgWfTPG9Zm5ufHCDQ92LmrwJRb6s7i2Vp-X0mgDrEXnf-w" alt=""><figcaption></figcaption></figure>
 
-Como se muestra en la imagen siguiente la interfaz para crear el contenedor, es muy parecida a cuando hemos creado la VM. Se nos pide especificar el nodo donde se creará la máquina (como solo tenemos un nodo se deja la opción predeterminada). Después nos pregunta por la ID que tendrá la “CT” como es la primera que creamos es la 101, seguido de esto nos pregunta el nombre que tendrá el contenedor. Y por último la contraseña de la máquina, y si queremos que tenga clave pública para el ssh.
+La interfaz para crear el contenedor es muy parecida a cuando hemos creado la VM. Se nos pide especificar el nodo donde se creará la máquina (como solo tenemos un nodo se deja la opción predeterminada). Después nos pregunta por la ID que tendrá la `CT` como es la primera que creamos es la 101, seguido de esto nos pregunta el nombre que tendrá el contenedor. Y por último la contraseña de la máquina, y si queremos que tenga clave pública para el ssh.
 
 <figure><img src="https://lh5.googleusercontent.com/tgwsWTOXHBuPqrKNsg_Z5e9GcWzwf2EYlYumDCGjuSHoeoBxes9IfupMazubW3K9is0jDwUbRdu1K2R7NZCdoJ3xVSvuey59xYTLWAqqsSOVPk67bedsQpY4c5f5D9DjBD48_oOczzA_oxc5fgXGIAssc63jB_l8c9d0yW0lVX9sUDjjqgGNTH2L" alt=""><figcaption></figcaption></figure>
 
-Ahora toca seleccionar el lugar donde está almacenada el contenedor (plantilla) y cual se usará (es como la iso de una VM).
+#### Ubicación
+
+Ahora toca seleccionar el lugar donde está almacenada el contenedor (plantilla) y cual se usará (es como la ISO de una VM).
 
 <figure><img src="https://lh4.googleusercontent.com/hEgaDOoQvP8FmsX2Yh0K5-AWTmxIMY8cgtNvQQA_riIrx14qJg86M63sc1muqHE_3Ltl_xpTXzduQZcf7EDLY6Q3P48SieBUtRUh34bjKhl-Lphc_20FQWdczZMNJVrzhSIdc8deJICxNgQLBHTl_nU4OX2igXkR8k5R-TmNfQR-s_PedCurKCmz" alt=""><figcaption></figcaption></figure>
 
-Una vez seleccionada la plantilla hay que configurar el tamaño del disco virtual. (Para Ubuntu lo mínimo es 8Gb).
+Una vez seleccionada la plantilla hay que configurar el tamaño del disco virtual. (Para Ubuntu lo mínimo es 8GB).
 
 <figure><img src="https://lh4.googleusercontent.com/Q86zW_7PMh1YRhtOsS2Fc7iMf7yq660csdpRlObYiMYwiGAKFv5LjDPaucnracRUIcop-fSKtN9cisq5QBgpztAOAMGALNa22_coL5KZylulypSURFiydpU1K17az7bCpxP7lPMVpkQP7gRcSz75Y_Sz0_Tkc4-Jc_ikQkzBCYuxSTQEjDEF8vBt" alt=""><figcaption></figcaption></figure>
 
-Ahora hay que seleccionar la cantidad de núcleos que tendrá el contenedor. Hay que tener en cuenta que al no tener un sistema operativo con interfaz gráfica y que el propio sistema tiene recursos reducidos para su eficiencia, la cantidad de núcleos irá dependiendo del servicio o servicios que queramos instalar en el contenedor. Si es solo un servicio básico con un core es más que suficiente.
+#### Núcleos
+
+Ahora hay que seleccionar la cantidad de núcleos que tendrá el contenedor. Hay que tener en cuenta que al no tener un sistema operativo con interfaz gráfica y que el propio sistema tiene recursos reducidos para su eficiencia, la cantidad de núcleos irá dependiendo del servicio o servicios que queramos instalar en el contenedor. Si es solo un servicio básico con 1 core es más que suficiente.
 
 <figure><img src="https://lh6.googleusercontent.com/ZoSfXzDqkLWOEE5KUE3FjGg0xHb1YsecX3qfPuW7gw8IVApZqFUOf3qHjjNdgEtXZvLpAIer0QTsHblI31srMKp2sGT1YX3YefzBIagyCgoV08S3zdOpHwSyzSP_9Q0Tylp-Wpsv0BLzG5LQNb18rWoUHbPwP3jmkgrXMZFIsyg9bny9ZThwruE-" alt=""><figcaption></figcaption></figure>
 
-Como en el apartado anterior, ahora hay que seleccionar la cantidad de ram. Que hay que saber como en la anterior qué tipo de servicio instalaremos, para saber si necesitamos 1Gb o 8Gb… Para hacer una prueba de instalar un servicio básico con 512Mb tenemos suficiente.
+#### RAM
+
+Como en el apartado anterior, ahora hay que seleccionar la cantidad de RAM. En este punto es importante tener claro el tipo de servicio que instalaremos para saber si necesitamos 1GB o 8GB o cuánto. Para hacer una prueba de instalar un servicio básico con 512MB tenemos suficiente.
 
 <figure><img src="https://lh6.googleusercontent.com/EskmduLKzq8DApUcuNJLZRtKVhXnisvVbBCCAgeUiw3QtbVDk2NNNeXgoFMMsIub_QBqeEZYYiz6niUdMFYrEthKj-ENH6pLrTyyo0txx-EJj7SDrlFL8v-XOK28vHai-cb9grggrU8b7WtuhpKZqn-aCxPzER92Yn_tJLid-_nTFdCMAf8BhcTB" alt=""><figcaption></figcaption></figure>
 
-Ahora vamos al apartado más complejo de la instalación del contenedor, hay que seleccionar el adaptador de red, si queremos MAC automática o ponerla manualmente, si está en una VLAN (por si queremos que esté en la DMZ ), si va a tener ip estática o por DHCP.
+#### Adaptadores de red
+
+Ahora vamos al apartado más complejo de la instalación del contenedor, hay que seleccionar el adaptador de red, si queremos MAC automática o ponerla manualmente, si está en una VLAN (por si queremos que esté en la DMZ), si va a tener IP estática o por DHCP.
 
 <figure><img src="https://lh3.googleusercontent.com/sWzTBLvjefND_efcOG6HId8IItR2PTwft78bkAH-8VgfjMTh-dautwb_3GqM6SujKybyz-w65YO2gFXeZIUePDJawIuppM5UEKU7o_FRvUV6ycq7ec9x7gxnqmFamnNTOFSJmqLSdY3QyCMyOgYBJHZWVYXkKAaYpxktNrBuoLNBed99quPk7Hn1" alt=""><figcaption></figcaption></figure>
 
-En este apartado está destinado para añadir un servidor DNS en el caso que queramos usar un servicio que necesite un DNS propio para el uso. En caso de que no lo necesitemos, si lo dejamos vacío usará el DNS que el sistema tenga configurado.
+Este apartado está diseñado para añadir un servidor DNS en el caso que queramos usar un servicio que necesite un DNS propio. En caso de que no lo necesitemos, si lo dejamos vacío usará el DNS que el sistema tenga configurado.
 
 <figure><img src="https://lh5.googleusercontent.com/0RCzeqCQtMl1ySfPJYP6QqbTcB7aKtwIjGnjsRaOwb5WEw79zhXzl1mP2DcAoPDnQ0V0dgZVUk0VuBtpguQ75aYwUJjQME0RzDIsqGyCWP0LqQR_UMLGxxxSXsPqkjcUKUYEFlyasSNC59PEol8rGSXxYiYxt90E77JVlTN8Z3wttEeoY13JiYc9" alt=""><figcaption></figcaption></figure>
 
@@ -254,7 +268,7 @@ Como anteriormente hemos creado la VM ahora la LXC también sale listado el cont
 
 <figure><img src="https://lh4.googleusercontent.com/jbODrZhPBD3h4nCs1FiAyj1FR0lZgjgNaSseWVZmz7UL_R5EYdcsgQRqj_Z49K4RGBqGmkXtGqqm0kIu_bRPr-CdYkGLbc6uRbEcWnCLQ8wcpfQDZqUCvJjPtroBCvWxEt5LLCmWfbTiPHhoV2JpQQ2KlH-pGiLlkf6SW8vyVCTjJbqqdE2d7b6h" alt=""><figcaption></figcaption></figure>
 
-Cuando ya lo tenemos iniciado seleccionamos la consola.
+Cuando ya lo tenemos iniciado seleccionamos la `consola`.
 
 <figure><img src="https://lh5.googleusercontent.com/g1JtrCEusMUtuD-LPCxw98vekl9jmy1BANRzM4xXnvpgHjp5h6-3InLb2Roq2eV5ZnINXS3Xp_i01dFcrEd8iGijZJRdlPM0EYu6QkDG-ys-W5-4W5ndX_5_zt8_ad1RtaJPnxcVPn0NUGhZQTAwnzB_FNk0xd3sB-uRQk7CPvb3O61gjhM87zck" alt=""><figcaption></figcaption></figure>
 
@@ -262,28 +276,29 @@ Nos saldrá una ventana emergente como cuando lo hacemos con la VM, y ya la pode
 
 <figure><img src="https://lh5.googleusercontent.com/n56pf-EKXvJDSCRN7UHUJMvvROE9KZlORFCFTScezv7HKH_PYdsy6_yCT7IkFPLY5WkXI7_5xKOqdhkgRivToZjZN36W8lPq7GkBZY-Mf2-_ktu5su2_jd8sdSpbgMWnewNzM1Ub6JDfDjKVz1EVwneo0G6QKV_KHUC_50FpZs6GvsOJnelamO_A" alt=""><figcaption></figcaption></figure>
 
-### Usuarios y Grupos&#x20;
+## Usuarios y Grupos&#x20;
 
 Como en Windows server se pueden configurar usuarios y grupos, los cuales según tengan aplicados los roles tendrán acceso a algunas de las opciones de forma parcial o completa. La lista de los roles de proxmox:
 
 <figure><img src="https://lh4.googleusercontent.com/_rSiczxwpcv6c89mReS59AChxzc_EVRpY5HPnJR9Q5BXD3aW6lH1Oh4uBooxwHBAeEtRuhDQTWGXu4xDrNvRWj7TGIQpJFkuyjHgGKL25gQ1w_I0h8UZV2ggWf9ZRUek1WazMMhU6KyNH41cAJaSIqJgmAK9YUwQJKbHpvAT4vvs6_Kc7_8DqE9j" alt=""><figcaption></figcaption></figure>
 
-Hay que ser consciente que aparte de los usuarios y grupos hay que crear “pools” o conjuntos donde le daremos acceso a los grupos a determinados contenidos ya sean máquinas virtuales, LXC y también acceso a los discos. Esto no significa que después tengas roles que no te permiten acceder a VM o a discos, y otros que puedan modificarlos, todo esto en el mismo grupo.
+Hay que ser consciente que aparte de los usuarios y grupos hay que crear <mark style="color:blue;">`pools`</mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> o conjuntos donde le daremos acceso a los grupos a determinados contenidos ya sean máquinas virtuales, LXC y también acceso a los discos. Esto no significa que después tengas roles que no te permiten acceder a VM o a discos, y otros que puedan modificarlos, todo esto en el mismo grupo.
 
-### Links
+## Links
 
 * Migrar máquinas virtuales de un sistema VirtualBox o VMWare a Proxmox
-  * https://www.calidade.systems/en/2019/08/04/moving-a-virtual-machine-from-virtualbox-to-proxmox/&#x20;
-  * https://forum.proxmox.com/threads/importing-virtualbox-vm-to-proxmox-ve-6-x.75610/&#x20;
-  * https://pve.proxmox.com/wiki/Migration\_of\_servers\_to\_Proxmox\_VE#Importing&#x20;
-  * https://www.youtube.com/watch?v=ATd2fzgLN5g&#x20;
+  * [https://www.calidade.systems/en/2019/08/04/moving-a-virtual-machine-from-virtualbox-to-proxmox/](https://www.calidade.systems/en/2019/08/04/moving-a-virtual-machine-from-virtualbox-to-proxmox/) &#x20;
+  * [https://forum.proxmox.com/threads/importing-virtualbox-vm-to-proxmox-ve-6-x.75610/ ](https://forum.proxmox.com/threads/importing-virtualbox-vm-to-proxmox-ve-6-x.75610/)
+  * [https://pve.proxmox.com/wiki/Migration\_of\_servers\_to\_Proxmox\_VE#Importing](https://pve.proxmox.com/wiki/Migration\_of\_servers\_to\_Proxmox\_VE#Importing)&#x20;
+  * [https://www.youtube.com/watch?v=ATd2fzgLN5g](https://www.youtube.com/watch?v=ATd2fzgLN5g)\
+    &#x20;
 * **Ceph** \
   Ceph File System es un sistema de archivos distribuido libre, está diseñado para el uso con gran cantidad de datos, está muy enfocado para el uso con Big Data.\
   Ceph tiene como objetivo ser POSIX-compatible y completamente distribuido sin ningún punto de fallo.&#x20;
-  * https://docs.ceph.com/en/latest/&#x20;
-  * https://documentation.suse.com/es-es/ses/5.5/html/ses-all/ceph-operating-services.html&#x20;
-  * https://es.wikipedia.org/wiki/Ceph\_File\_System&#x20;
-  * https://www.ionos.es/digitalguide/servidores/know-how/que-es-ceph/ VM para instalar en Proxmox para un buen uso:&#x20;
+  * [https://docs.ceph.com/en/latest/](https://docs.ceph.com/en/latest/)&#x20;
+  * [https://documentation.suse.com/es-es/ses/5.5/html/ses-all/ceph-operating-services.html](https://documentation.suse.com/es-es/ses/5.5/html/ses-all/ceph-operating-services.html)&#x20;
+  * [https://es.wikipedia.org/wiki/Ceph\_File\_System](https://es.wikipedia.org/wiki/Ceph\_File\_System)&#x20;
+  * [https://www.ionos.es/digitalguide/servidores/know-how/que-es-ceph/](https://www.ionos.es/digitalguide/servidores/know-how/que-es-ceph/) VM para instalar en Proxmox para un buen uso:&#x20;
 * **TrueNAS**:&#x20;
   * https://www.youtube.com/watch?v=iva4DmOmSTc\&t=184s https://www.youtube.com/watch?v=JzX6c58ydY4
 * Instalar Windows 10 con drivers compatibles con Proxmox:&#x20;
