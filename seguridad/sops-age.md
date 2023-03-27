@@ -45,7 +45,7 @@ Para verificar la versión instalada:
 sops -v
 ```
 
-<figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (27) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Age
 
@@ -228,7 +228,7 @@ y nos muestra algo como lo siguiente:
 
 Con esto ya tenemos el usuario y contraseña para el sistema:
 
-<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (30) (1).png" alt=""><figcaption></figcaption></figure>
 
 <pre><code><strong>kubectl get secret mysql-secret-test -o jsonpath?'{.data.MYSQL_PASSWORD}' | base64 --decode
 </strong></code></pre>

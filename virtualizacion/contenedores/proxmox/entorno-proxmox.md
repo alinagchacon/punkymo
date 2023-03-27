@@ -77,11 +77,11 @@ La NIC agregada a la máquina virtual puede seguir uno de dos modelos diferentes
 
 Los bridges son switches de red físicos implementados en software. Todos los guest virtuales pueden compartir un solo bridge, o puede crear varios para separar los dominios de la red. Cada host puede tener hasta 4094 puentes.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 El programa de instalación crea un único puente denominado vmbr0, que se conecta a la primera tarjeta Ethernet. La configuración correspondiente en `/etc/network/interfaces` podría verse así:
 
-<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption><p>configuración de red</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>configuración de red</p></figcaption></figure>
 
 ### Routed Configuration
 
@@ -134,7 +134,7 @@ apt-get install openvswitch-switch
 
 ****
 
-<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 
 

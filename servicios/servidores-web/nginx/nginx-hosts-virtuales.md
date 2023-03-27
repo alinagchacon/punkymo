@@ -52,7 +52,7 @@ porque el directorio <mark style="color:blue;">`/etc/nginx/sites-enabled/`</mark
 
 El directorio donde se localizan todos los archivos de configuración de Nginx es /etc/nginx/ y dentro debemos tener en consideración <mark style="color:blue;">`/etc/nginx/sites-available, /etc/nginx/sites-enable`</mark> y el propio <mark style="color:blue;">`/etc/nginx/nginx.conf`</mark> que vimos anteriormente.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Directorio /etc/nginx</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption><p>Directorio /etc/nginx</p></figcaption></figure>
 
 #### Archivo /sites-available/default
 
@@ -62,7 +62,7 @@ Este sería el bloque del servidor Nginx predeterminado de muestra ubicado en
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (8) (4).png" alt=""><figcaption><p>Fichero /etc/nginx/sites-available/default</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (4) (1).png" alt=""><figcaption><p>Fichero /etc/nginx/sites-available/default</p></figcaption></figure>
 
 Donde:
 

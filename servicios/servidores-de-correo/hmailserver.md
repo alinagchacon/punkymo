@@ -65,7 +65,7 @@ Podemos establecer una contraseña que estaría cifrada. <mark style="color:red;
 
 Otro aspecto importante en el caso de las cuentas de usuarios es la posibilidad de otorgarle permisos de usuario, de dominio o de server. En este caso, dejaremos que sea solamente como usuario:
 
-![Los usuarios pueden tener diferentes roles](<../../.gitbook/assets/image (32).png>)
+![Los usuarios pueden tener diferentes roles](<../../.gitbook/assets/image (32) (1).png>)
 
 ### Alias
 

@@ -28,7 +28,7 @@ Como vamos a crear los volúmenes de Docker para tener acceso directo a los cont
 
 &#x20;La actividad <mark style="color:blue;">`LoginRegister`</mark> tiene una estructura de archivos como se muestra en la imagen siguiente. Tener en cuenta que el directorio <mark style="color:blue;">`mysql`</mark> no es necesario.
 
-<figure><img src="../../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Estructura de archivos .php de la aplicación web</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (13) (3).png" alt=""><figcaption><p>Estructura de archivos .php de la aplicación web</p></figcaption></figure>
 
 ### Archivos de configuración
 
@@ -87,7 +87,7 @@ Por tanto, un archivo de docker-compose es un archivo con extensión y formato y
 
 El archivo tiene una estructura bastante fácil de entender. Comienza por especificar la versión de docker compose que se utilizará:
 
-<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Estructura de un archivo docker-compose.yml</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Estructura de un archivo docker-compose.yml</p></figcaption></figure>
 
 Después de la versión viene  la sección de servicios. Puede haber tantos servicios como queramos: servidor web, base de datos, documentación, etc. Cada servicio cuenta con sus propias variables de configuración y sus respectivos valores.
 
@@ -269,7 +269,7 @@ Nos vamos a la herramienta stacks de Portainer, donde podremos crear nuestra "co
 
 Una vez en el apartado vamos a crear un nuevo stack:
 
-<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Creamos un nuevo stack</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (6).png" alt=""><figcaption><p>Creamos un nuevo stack</p></figcaption></figure>
 
 Se nos abrirá una nueva página donde podemos aplicar diferentes opciones para crear una colección entre las que tenemos subir nuestro docker-compose.yml, usar un repositorio de git. Aquí utilizaremos el editor web:
 
@@ -279,11 +279,11 @@ En el editor web volcamos el contenido de nuestro archivo <mark style="color:blu
 
 
 
-<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>docker-compose.yml</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (6).png" alt=""><figcaption><p>docker-compose.yml</p></figcaption></figure>
 
 Una vez hecho esto, clicamos a <mark style="color:blue;">`deploy`</mark> para crear y desplegar todos los contenedores. Si todo está correcto, nos crea la colección y podremos acceder a la misma y veremos algo como lo siguiente:
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>Despliegue de contenedores</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Despliegue de contenedores</p></figcaption></figure>
 
 Podemos observar los diferentes contenedores involucrados en desplegar la aplicación web:
 

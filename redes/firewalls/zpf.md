@@ -72,7 +72,7 @@ Un modelo simple declarando una zona privada y otra pública
 
 Un modelo donde se declara además de una zona privada y otra pública, un servidor público
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Se declara un servidor público en la red</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (4).png" alt=""><figcaption><p>Se declara un servidor público en la red</p></figcaption></figure>
 
 #### Red Interna + Servidor público - Red Pública - con dos firewalls
 
@@ -84,4 +84,4 @@ Otro modelo donde se declaran servidores públicos además de una zona privada y
 
 #### Firewall complejo
 
-<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Un diseño más complejo de firewall</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (29) (2).png" alt=""><figcaption><p>Un diseño más complejo de firewall</p></figcaption></figure>

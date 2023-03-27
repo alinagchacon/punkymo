@@ -21,7 +21,7 @@ Normalmente, un firewall con dos interfaces se configura del siguiente modo:
 
 Se denomina así:  zona perimetral (DMZ, Demilitarized Zone) al diseño de firewall donde, por norma general, hay una interfaz interna conectada a la red privada, una interfaz externa conectada a la red pública y una interfaz de DMZ .
 
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Red Interna + DMZ + Internet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31) (2).png" alt=""><figcaption><p>Red Interna + DMZ + Internet</p></figcaption></figure>
 
 * El tráfico procedente de la red privada se inspecciona mientras viaja hacia la red pública o la DMZ. Este tráfico se permite casi sin restricciones. También se permite el tráfico inspeccionado que regresa a la red privada desde la DMZ o la red pública.
 * El tráfico procedente de la DMZ y que viaja hacia la red privada, se bloquea con frecuencia.

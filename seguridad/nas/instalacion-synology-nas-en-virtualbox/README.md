@@ -16,7 +16,7 @@ Descargaremos Tinycore desde el repositorio de GitHub:
 
 Descargaremos el archivo llamado, **tinycore-redpill.v0.9.2.9.vmdk.gz,** este será el que necesitaremos para la máquina virtual ya que lo insertaremos como un disco duro más.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption><p>Github de descarga de Tinycore</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (2) (1).png" alt=""><figcaption><p>Github de descarga de Tinycore</p></figcaption></figure>
 
 ## Configuración VirtualBox
 

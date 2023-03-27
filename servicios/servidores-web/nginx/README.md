@@ -256,7 +256,7 @@ Podemos modificar el dueño y grupo de la carpeta creada haciendo:
 sudo chown -R $USER:$USER /var/www/html/example.com
 ```
 
-<figure><img src="../../../.gitbook/assets/image (13) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Podemos asignar permisos con el comando:
 
@@ -270,7 +270,7 @@ Y crear la página de ejemplo:
 sudo nano /var/www/html/example.com/index.html
 ```
 
-<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15) (2).png" alt=""><figcaption></figcaption></figure>
 
 Y si accedemos a nuestra página web podemos verla. Eso sí, nos hace la advertencia de que no es un sitio seguro y si no tenemos configurado el DNS tampoco podremos acceder a la misma de otro modo que no sea a través de la IP.&#x20;
 

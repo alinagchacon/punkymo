@@ -84,7 +84,7 @@ Los firewalls de próxima generación o <mark style="color:blue;">`NGFW`</mark> 
 * Rutas de actualización para incluir futuros datos de información.
 * Técnicas para afrontar amenazas de seguridad en constante evolución.
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Firewall de próxima generación</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (4).png" alt=""><figcaption><p>Firewall de próxima generación</p></figcaption></figure>
 
 Existen otros métodos de implementación de firewall que incluyen aspectos como:
 
