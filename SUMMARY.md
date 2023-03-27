@@ -95,4 +95,5 @@
   * [Proxmox](virtualizacion/contenedores/proxmox/README.md)
     * [Proxmox en VMWare](virtualizacion/contenedores/proxmox/proxmox-en-vmware.md)
     * [Proxmox en VirtualBox](virtualizacion/contenedores/proxmox/proxmox-en-virtualbox.md)
+    * [Entorno Proxmox](virtualizacion/contenedores/proxmox/entorno-proxmox.md)
 * [VPN](virtualizacion/vpn.md)

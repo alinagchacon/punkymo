@@ -92,7 +92,7 @@ La casilla de **Instalar el firmware más reciente** es recomendable que este se
 
 Ahora debemos establecer el adaptador de red por el cual ira la conexión internet. Al estar tener varios adaptadores en red interna es posible que el Firewall no detecta cual es el puerto que tiene salida a Internet. Por eso no sale un error como el que podemos ver a continuación:
 
-<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption><p>Fallo de conexión a internet</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21) (3).png" alt=""><figcaption><p>Fallo de conexión a internet</p></figcaption></figure>
 
 Para solucionar este problema hacemos clic en el botón de **Manual configuration** y debemos abrir el desplegable de **Choose a port to configure** y seleccionar el **Port D** ya que este es el adaptador que tiene salida a Internet en NAT. Una vez le demos a **Apply** tardará unos segundos en configurarse.
 
@@ -112,7 +112,7 @@ En este paso introducimos el número de serie que nos ha llegado al correo intro
 
 En este paso es necesario tener una cuenta en Sophos, si ya disponemos de una debemos iniciar sesión, sino debemos de crear una cuenta a través del botón de Create Sophos ID. Es un proceso rápido en el cual debemos de introducir únicamente nuestro correo y una contraseña.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Iniciar sesión o creación de cuenta Sophos</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (5).png" alt=""><figcaption><p>Iniciar sesión o creación de cuenta Sophos</p></figcaption></figure>
 
 ### Sexto paso - Comprobación de cuenta
 
@@ -140,7 +140,7 @@ Aquí nos permite volver a **configurar las interfaces de red** existentes en el
 
 En este paso nos pide que seleccionemos ciertas opciones de protección para amenazas. De forma estándar seleccionaremos las 3 primeras opciones, ya que la última puede impedir el correcto funcionamiento de ciertas aplicaciones.
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption><p>Protecciones activas</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17) (3).png" alt=""><figcaption><p>Protecciones activas</p></figcaption></figure>
 
 ### Doceavo paso - Notificaciones del firewall
 
@@ -168,7 +168,7 @@ Ahora debemos iniciar sesión con el usuario admin y la contraseña que elegimos
 
 Al entrar nos aparece un mensaje para crear una clave de recuperación de las copias de seguridad, de momento no será necesario crearla. Por lo tanto, haremos clic en Omitir por Ahora. No podremos desactivar este mensaje, cada vez que iniciemos sesión lo veremos.
 
-<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption><p>Clave maestra</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (49) (3).png" alt=""><figcaption><p>Clave maestra</p></figcaption></figure>
 
 Esta es la interfaz del firewall. Es una interfaz muy intuitiva y fácil de usar. Además, incluye muchas opciones de seguridad avanzada para nuestra red.
 
