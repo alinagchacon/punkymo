@@ -44,7 +44,7 @@ En Linux:
 
 <mark style="color:blue;">`cat /etc/resolv.conf`</mark>
 
-&#x20;****&#x20;
+&#x20;
 
 <figure><img src="../../.gitbook/assets/image (25) (1) (1).png" alt=""><figcaption><p>resolv.conf</p></figcaption></figure>
 
@@ -52,7 +52,7 @@ En Linux:
 
 El nombre de dominio [www.ifp.es](http://www.ifp.es) tiene como IP la 213.192.253.78
 
-Una forma de verlo sería desde el <mark style="color:blue;">`cmd > ping`</mark> [<mark style="color:blue;">`www.ifp.es`</mark>](http://www.ifp.es)<mark style="color:blue;">``</mark>
+Una forma de verlo sería desde el <mark style="color:blue;">`cmd > ping`</mark> [<mark style="color:blue;">`www.ifp.es`</mark>](http://www.ifp.es)
 
 <figure><img src="../../.gitbook/assets/image (70) (1).png" alt=""><figcaption><p>ping www.ifp.es</p></figcaption></figure>
 
@@ -95,7 +95,7 @@ Por lo que la arquitectura del DNS incluye los siguientes elementos:
 
 #### ¿Cómo se construye el nombre de un sitio o dominio?
 
-Se denomina **nombre absoluto** o **FQDN** (Fully-qualified domain name) **** que está **** asociado a un nodo a la concatenación de etiquetas desde el nodo hasta la raíz, separadas por puntos y siguiendo un orden inverso al del sistema de archivos de Linux.
+Se denomina **nombre absoluto** o **FQDN** (Fully-qualified domain name) que está asociado a un nodo a la concatenación de etiquetas desde el nodo hasta la raíz, separadas por puntos y siguiendo un orden inverso al del sistema de archivos de Linux.
 
 <figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption><p>nombre absoluto o FQDN (Fully-qualified domain name). Imagen tomada de Introducció al sistema DNS Grau en Enginyeria Telemàtica Grau en Enginyeria de Sistemes de Telecomunicación” de Frederic Raspall</p></figcaption></figure>
 

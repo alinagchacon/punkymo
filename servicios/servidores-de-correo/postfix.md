@@ -13,10 +13,10 @@ description: >-
 
 El objetivo es mostrar el funcionamiento de un servidor de  correo electrónico. Para ello usaremos una MV con Ubuntu Desktop 22.04 LTS. Vamos a necesitar instalar los siguientes servicios:
 
-* ``[`Dovecot-imapd`](https://elpuig.xeill.net/Members/vcarceler/articulos/introduccion-a-dovecot) `` como servidor IMAP
-* ``[`Postfix`](https://elpuig.xeill.net/Members/vcarceler/articulos/introduccion-al-correo-electronico-con-postfix) como servidor de correo SMTP - (MTA)&#x20;
-* ``[`Mailutils`](https://mailutils.org/) `` como cliente para el terminal (MUA)
-* ``[`Thunderbird`](https://www.thunderbird.net/) **** como cliente, en un entorno gráfico
+* [`Dovecot-imapd`](https://elpuig.xeill.net/Members/vcarceler/articulos/introduccion-a-dovecot) como servidor IMAP
+* [`Postfix`](https://elpuig.xeill.net/Members/vcarceler/articulos/introduccion-al-correo-electronico-con-postfix) como servidor de correo SMTP - (MTA)&#x20;
+* [`Mailutils`](https://mailutils.org/) como cliente para el terminal (MUA)
+* [`Thunderbird`](https://www.thunderbird.net/) como cliente, en un entorno gráfico
 
 Como se trata de un ejercicio académico, intentaremos simplificar la instalación para lo cual se utilizará la configuración más sencilla posible.&#x20;
 
@@ -43,13 +43,13 @@ Lo primero será actualizar el sistema:
 
 Una vez actualizado el sistema, procedemos con la instalación. Yo prefiero instalar paquete a paquete.&#x20;
 
-### Postfix _<mark style="color:blue;">``</mark>_&#x20;
+### Postfix&#x20;
 
 <mark style="color:blue;">`sudo apt-get install postfix`</mark>
 
 ![](<../../.gitbook/assets/image (84).png>)
 
-Utilizaremos como nombre de dominio: **** _<mark style="color:blue;">`arrakis.local`</mark>_
+Utilizaremos como nombre de dominio: _<mark style="color:blue;">`arrakis.local`</mark>_
 
 ![](<../../.gitbook/assets/image (127).png>)
 
@@ -61,7 +61,7 @@ En <mark style="color:blue;">`/etc/postfix`</mark> están los archivos de config
 
 Existen dos formatos muy extendidos para almacenar el correo electrónico. Estos formatos son [_Mbox_](https://en.wikipedia.org/wiki/Mbox) y [Maildir](https://en.wikipedia.org/wiki/Maildir).
 
-_<mark style="color:blue;">Mbox</mark>_ permite guardar todos los mensajes en un solo archivo, y _<mark style="color:blue;">Maildir</mark> _ utiliza un directorio para guardar los mensajes en ficheros individuales.
+_<mark style="color:blue;">Mbox</mark>_ permite guardar todos los mensajes en un solo archivo, y _<mark style="color:blue;">Maildir</mark>_ utiliza un directorio para guardar los mensajes en ficheros individuales.
 
 En la configuración por defecto de Postfix y mailutils se utiliza el formato _<mark style="color:blue;">Mbox</mark>_, pero ambos soportan _<mark style="color:blue;">Maildir</mark>_, así que vamos a utilizar este formato. Para ello vamos a modificar el archivo _<mark style="color:blue;">main.cf</mark>_ de Postfix.&#x20;
 
@@ -142,7 +142,7 @@ _<mark style="color:blue;">`sudo apt-get install mailutils`</mark>_
 
 Para probar el servicio de correo vía terminal basta escribir algo como lo siguiente:
 
-<mark style="color:blue;">`echo "Aquí va el body del email" | mail -s "Aquí va el asunto" your_email_address`</mark>` ```&#x20;
+<mark style="color:blue;">`echo "Aquí va el body del email" | mail -s "Aquí va el asunto" your_email_address`</mark>&#x20;
 
 Si vamos al home del único usuario instalado en el sistema, "kirby", veremos que existe un directorio llamado <mark style="color:blue;">`Maildir`</mark> que contiene la estructura básica de un buzón de correos. Vamos a la carpeta o directorio <mark style="color:blue;">`/home/kirby/Maildir/new`</mark> y vemos que hay dos correos sin enviar.
 
@@ -190,7 +190,7 @@ Hace las verificaciones y encuentra que:
 
 Entre otros datos nos dice que se pueden cifrar los datos de extremo a extremo y agregar una firma. Se puede utilizar [`GPG`](https://gnupg.org/) para crear una par de claves [`pública - privada`](https://www.cloudflare.com/es-es/learning/ssl/how-does-public-key-encryption-work/) que permita cifrar los mensajes.
 
-![](<../../.gitbook/assets/image (7) (1) (1).png>)
+![](<../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 Desde el usuario pepe@arrakis.local enviamos un correo a pepa@arrakis.local (recuerda que ambos están en el sistema):&#x20;
 
@@ -257,4 +257,4 @@ Está claro que tenemos ciertos puertos abiertos para la recepción y envío de 
 
 1. [https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-20-04-es](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-20-04-es)&#x20;
 2. [https://mailutils.org/manual/mailutils.pdf](https://mailutils.org/manual/mailutils.pdf)&#x20;
-3. <mark style="color:purple;"></mark>[<mark style="color:purple;">https://www.dovecot.org/</mark>](https://www.dovecot.org/) <mark style="color:purple;"></mark>&#x20;
+3. [<mark style="color:purple;">https://www.dovecot.org/</mark>](https://www.dovecot.org/)&#x20;

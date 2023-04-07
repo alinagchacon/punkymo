@@ -8,7 +8,7 @@ Los usuarios sirven para que los clientes se conectan al NAS (servidor) y puedan
 
 También podemos gestionar un grupo grande de usuarios que queramos que tengan los mismos permisos de acceso.
 
-Las carpetas compartidas es desde donde gestionaremos los **** directorios básicos en los que puede almacenar y administrar archivos y carpetas del NAS.
+Las carpetas compartidas es desde donde gestionaremos los directorios básicos en los que puede almacenar y administrar archivos y carpetas del NAS.
 
 No debemos confundir con las carpetas que pueda crear el usuario en su interior. Estas carpetas comaprtidas nos referimos a la raíz, a la que podemos asignarle los usuarios que pueden acceder y sus permisos. También se pueden asignar permisos a las subcarpetas.
 
@@ -84,7 +84,7 @@ Esta aplicación la usaremos siempre que queramos acceder a las carpetas desde l
 
 Para crear y gestionar usuarios debes poseer el rol de administrador, el único usuario que tenemos es el que tiene ese rol.
 
-Primero de todo accedemos al panel de control, después nos dirigimos a **Usuario y grupo**. **** Desde ese panel podremos ver todos los usuarios creados, durante la instalación del NAS se crean dos usuarios extras, el **admin** y el **guest**. Por defecto aparecen deshabilitados. Es recomendable nunca activar el usuario de **admin** ya que nuestro NAS puede sufrir ataques de fuerza bruta.
+Primero de todo accedemos al panel de control, después nos dirigimos a **Usuario y grupo**. Desde ese panel podremos ver todos los usuarios creados, durante la instalación del NAS se crean dos usuarios extras, el **admin** y el **guest**. Por defecto aparecen deshabilitados. Es recomendable nunca activar el usuario de **admin** ya que nuestro NAS puede sufrir ataques de fuerza bruta.
 
 <figure><img src="../../../.gitbook/assets/image (11) (2) (1) (2).png" alt=""><figcaption><p>Usuario y grupo</p></figcaption></figure>
 

@@ -6,7 +6,7 @@ description: Apuntes
 
 ### Firewall para filtrado de paquetes (sin estado)
 
-Este tipo de firewall suele formar parte de un firewall de router, el cual autoriza o rechaza el tráfico a partir de información procedente de las capas 3 y 4 (modelo OSI). Son de los denominados firewalls <mark style="color:blue;">`sin estado`</mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> dado que utilizan una búsqueda simple en la tabla de políticas que filtra el tráfico teniendo en cuenta criterios específicos.
+Este tipo de firewall suele formar parte de un firewall de router, el cual autoriza o rechaza el tráfico a partir de información procedente de las capas 3 y 4 (modelo OSI). Son de los denominados firewalls <mark style="color:blue;">`sin estado`</mark> dado que utilizan una búsqueda simple en la tabla de políticas que filtra el tráfico teniendo en cuenta criterios específicos.
 
 #### Ejemplo&#x20;
 
@@ -30,7 +30,7 @@ Hay que considerar que los filtros de paquetes no representan una solución de f
 
 Los filtros de paquetes no tienen estado. Examinan cada paquete individualmente y no en el contexto del estado de una conexión.
 
-<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Filtrado de paquetes sin estado</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (2) (3).png" alt=""><figcaption><p>Filtrado de paquetes sin estado</p></figcaption></figure>
 
 ### &#x20;Firewall activo o stateful
 

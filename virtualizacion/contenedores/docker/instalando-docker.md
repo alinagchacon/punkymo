@@ -28,6 +28,13 @@ sudo apt install -y apt-transport-https ca-certificates curl software-properties
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
+Sin embargo, el comando anterior `apt-key` está <mark style="color:orange;">deprecated</mark> con lo cual nos da un warning. En su lugar deberíamos utilizar:
+
+```
+sudo mkdir -m 0755 -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
 **Agregar el repositorio de Docker a las fuentes de APT**
 
 ```
@@ -440,4 +447,3 @@ Te solicitará autenticarte usando la contraseña de Docker Hub.
 
 
 
-<mark style="color:red;"></mark>

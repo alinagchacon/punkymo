@@ -105,7 +105,7 @@ $ sudo systemctl restart nginx
 
 #### Testeando
 
-Para confirmar si el bloque del servidor está funcionando como se esperaba y está sirviendo contenido en el directorio /var/www/kirby.com y en <mark style="color:blue;">`/var/www/punky.com`</mark>, abre el navegador y busca el nombre de dominio: [<mark style="color:blue;">`http://www.kirby.com`</mark>](http://www.kirby.com)<mark style="color:blue;">``</mark>
+Para confirmar si el bloque del servidor está funcionando como se esperaba y está sirviendo contenido en el directorio /var/www/kirby.com y en <mark style="color:blue;">`/var/www/punky.com`</mark>, abre el navegador y busca el nombre de dominio: [<mark style="color:blue;">`http://www.kirby.com`</mark>](http://www.kirby.com)
 
 Debe obtener el contenido incluido en el archivo HTML en su bloque de servidor como se muestra.
 

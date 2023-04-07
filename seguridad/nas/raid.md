@@ -18,7 +18,7 @@ SCSI2 (0,0,0) (sdb) - 8,6 GB ATA VBOX HARDDISK
 
 Al llegar al punto de tener que particionar los discos seleccionamos lo más sencillo en este caso, que sería "<mark style="color:blue;">`todos los ficheros en una partición`</mark>" que sería lo recomendado para novatos.
 
-Crear las particiones  es un paso indispensable en el proceso de instalación. Ya sabemos que particionar un disco consiste en dividir el espacio disponible donde cada división se denomina <mark style="color:blue;">`partición`</mark>` ``` y esto se debe realizar según los datos que serán almacenados en él y el uso propuesto para el equipo.&#x20;
+Crear las particiones  es un paso indispensable en el proceso de instalación. Ya sabemos que particionar un disco consiste en dividir el espacio disponible donde cada división se denomina <mark style="color:blue;">`partición`</mark> y esto se debe realizar según los datos que serán almacenados en él y el uso propuesto para el equipo.&#x20;
 
 Este proceso también incluye elegir el sistema de archivo que será utilizado. Todas estas decisiones influirán en el rendimiento, la seguridad de los datos y la administración del servidor.
 

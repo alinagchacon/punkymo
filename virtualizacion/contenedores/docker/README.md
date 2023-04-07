@@ -29,7 +29,7 @@ Entre las características que tiene encontramos que:
 
 Veamos más a fondo sus ventajas y características:
 
-**Es portable**. Los contenedores se ejecutan por el [`demonio`](https://colaboratorio.net/glosario/demonio/) `` (Docker Engine) que es fácil de instalar en distribuciones <mark style="color:blue;">``</mark> [<mark style="color:blue;">`GNU`</mark>](https://colaboratorio.net/glosario/gnu/)<mark style="color:blue;">`/`</mark>[<mark style="color:blue;">`Linux`</mark>](https://colaboratorio.net/glosario/1989/).&#x20;
+**Es portable**. Los contenedores se ejecutan por el [`demonio`](https://colaboratorio.net/glosario/demonio/) (Docker Engine) que es fácil de instalar en distribuciones [<mark style="color:blue;">`GNU`</mark>](https://colaboratorio.net/glosario/gnu/)<mark style="color:blue;">`/`</mark>[<mark style="color:blue;">`Linux`</mark>](https://colaboratorio.net/glosario/1989/).&#x20;
 
 **Uso**: un contenedor ejecuta una imagen de Docker, que es una representación del sistema de ficheros y otros datos que el contenedor necesita para su ejecución. Una vez que se ha generado la imagen del contenedor,  la misma podrá ser ejecutada por cualquier Docker Engine.
 
@@ -41,7 +41,7 @@ Cuando se genera una vez una imagen, la misma puede ser ejecutada las veces que 
 
 Esta característica hace que la ejecución de contenedores sea mucho más ligera que otros modos de virtualización. Por ejemplo:&#x20;
 
-<mark style="color:blue;">`VirtualBox`</mark> **** es capaz de hacer funcionar en un PC varias <mark style="color:blue;">`VM`</mark>. En cambio, en el mismo PC podemos hacer funcionar cientos de contenedores sin causar problemas de rendimiento.
+<mark style="color:blue;">`VirtualBox`</mark>  es capaz de hacer funcionar en un PC varias <mark style="color:blue;">`VM`</mark>. En cambio, en el mismo PC podemos hacer funcionar cientos de contenedores sin causar problemas de rendimiento.
 
 **Seguridad.** Los contenedores son compatibles con los principales sistemas de seguridad a nivel de kernel. También ofrece <mark style="color:blue;">`grupos de control de acceso`</mark> al demonio que controla la virtualización, restringiendo posibles cambios que puedan hacerse en el sistema.
 

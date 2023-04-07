@@ -4,7 +4,7 @@ description: Mi libreta de apuntes
 
 # Comandos de Linux
 
-Este es un sitio muy interesante para aprender linux, cifrado entre otros: [<mark style="color:blue;">`https://overthewire.org/wargames/`</mark>](https://overthewire.org/wargames/)<mark style="color:blue;">``</mark>
+Este es un sitio muy interesante para aprender linux, cifrado entre otros: [<mark style="color:blue;">`https://overthewire.org/wargames/`</mark>](https://overthewire.org/wargames/)
 
 ### cat
 
@@ -32,7 +32,7 @@ _grep -i bandit file.txt_&#x20;
 
 _grep  patrón file.txt_
 
-__
+
 
 ### _s_ort&#x20;
 

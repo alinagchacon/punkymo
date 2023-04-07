@@ -126,7 +126,7 @@ El certificado de cliente que se genera se instala en <mark style="color:blue;">
 
 <mark style="color:blue;">`New-SelfSignedCertificate -Type Custom -DnsName FTPChildCert -KeySpec Signature -Subject "CN=FTPChildCert" -KeyExportPolicy Exportable -HashAlgorithm sha256 -KeyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")`</mark>
 
-<mark style="color:blue;">``</mark>
+
 
 #### Si cerraste la consola o vas a crear más certificados&#x20;
 
@@ -138,7 +138,7 @@ Si vas a crear otros certificados de clientes, o en caso de no usar la misma ses
 
 
 
-<mark style="color:purple;">Busca el nombre del firmante de la lista devuelta.</mark> Después, <mark style="color:purple;"></mark> busca la huella digital que se encuentra en un archivo de texto. El nombre CN es el nombre del certificado raíz auto firmado a partir del que va a generar un certificado secundario. En nuestro caso, "<mark style="color:blue;">`FTPCert`</mark>".
+<mark style="color:purple;">Busca el nombre del firmante de la lista devuelta.</mark> Después, busca la huella digital que se encuentra en un archivo de texto. El nombre CN es el nombre del certificado raíz auto firmado a partir del que va a generar un certificado secundario. En nuestro caso, "<mark style="color:blue;">`FTPCert`</mark>".
 
 <mark style="color:purple;">Declara una variable para el certificado raíz con la huella digital del paso anterior</mark>. Reemplaza la huella digital con la del certificado raíz a partir del que va a generar un certificado secundario.
 

@@ -1,8 +1,8 @@
 # YAML
 
-**YAML** _ <mark style="color:blue;">`Ain't Markup Language`</mark>_ (YAML no es un lenguaje de marcado) fue propuesto por [Clark Evans ](https://clarkevans.com)en el 2001 y diseñado junto a Ingy `döt` Net y Oren Ben-Kiki.
+**YAML**  _<mark style="color:blue;">`Ain't Markup Language`</mark>_ (YAML no es un lenguaje de marcado) fue propuesto por [Clark Evans ](https://clarkevans.com)en el 2001 y diseñado junto a Ingy `döt` Net y Oren Ben-Kiki.
 
-Se trata de un **** lenguaje de declaración de datos **** que facilita la legibilidad y la capacidad de escritura del usuario. Este formato de <mark style="color:blue;">`serialización`</mark> se encarga de almacenar archivos de configuración y se puede usar junto con todos los lenguajes de programación.&#x20;
+Se trata de un lenguaje de declaración de datos que facilita la legibilidad y la capacidad de escritura del usuario. Este formato de <mark style="color:blue;">`serialización`</mark> se encarga de almacenar archivos de configuración y se puede usar junto con todos los lenguajes de programación.&#x20;
 
 Está inspirado en lenguajes del tipo XML, C, Python y Perl, así como en el formato de los [correos electrónicos](https://es.wikipedia.org/wiki/Correo\_electr%C3%B3nico).
 
@@ -29,9 +29,9 @@ Entre las características o ventajas de un archivo YAML tenemos:
 
 Relativamente sencilla ya que fue diseñada teniendo en cuenta que fuera muy legible pero que a la vez fuese mapeable a los tipos de datos más comunes en la mayoría de los lenguajes de alto nivel.&#x20;
 
-La sintaxis básica de este tipo de ficheros indica que cada archivo YAML inicia con <mark style="color:blue;">****</mark><mark style="color:blue;">** **</mark>_<mark style="color:blue;">**`---`**</mark>_ <mark style="color:blue;"></mark><mark style="color:blue;"></mark> y su extensión es _<mark style="color:blue;">`.yaml`</mark>_.
+La sintaxis básica de este tipo de ficheros indica que cada archivo YAML inicia con _<mark style="color:blue;">**`---`**</mark>_ y su extensión es _<mark style="color:blue;">`.yaml`</mark>_.
 
-La estructura es _<mark style="color:blue;">**`clave: valor`**</mark><mark style="color:blue;">**  **</mark><mark style="color:blue;">****</mark>_  resultando fundamental dejar un espacio entre los indicadores.
+La estructura es _<mark style="color:blue;">**`clave: valor`**</mark>_  resultando fundamental dejar un espacio entre los indicadores.
 
 Se permiten datos como:  **caracteres, cadenas, valores flotantes, números enteros,** así como colecciones (por ejemplo matrices) y listas construidas partiendo de otros datos básicos.
 
@@ -42,9 +42,9 @@ Utiliza una notación basada en la sangría y/o un conjunto de caracteres <mark 
 * Los contenidos se describen utilizando el conjunto de caracteres imprimibles de Unicode, bien en UTF-8 o UTF-16.
 * En la estructura del documento se indenta utilizando espacios en blanco, aunque  no se permite el uso de caracteres de tabulación.
 
-****
 
-****
+
+
 
 ### Links
 

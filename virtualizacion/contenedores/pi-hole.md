@@ -1,6 +1,6 @@
 # Pi-hole
 
-Se trata de un Adblock a nivel de red, que en lugar de tener que estar instalado en cada navegador de cada dispositivo en una red, se diría que está al mismo nivel que el router con lo cual **** todo dispositivo conectado a  la red  se beneficia de evitar la publicidad intrusiva y conexión a sitios peligrosos.
+Se trata de un Adblock a nivel de red, que en lugar de tener que estar instalado en cada navegador de cada dispositivo en una red, se diría que está al mismo nivel que el router con lo cual todo dispositivo conectado a  la red  se beneficia de evitar la publicidad intrusiva y conexión a sitios peligrosos.
 
 Por tanto, se trata de una aplicación de bloqueo de publicidad y de rastreadores en Internet a nivel de red en Linux que actúa como un sumidero de DNS​ y opcionalmente como un servidor DHCP, utilizado en  redes privadas.[ ](https://es.wikipedia.org/wiki/Pi-hole#cite\_note-:4-1)También está diseñado para uso en como la Raspberry Pi, pero se puede utilizar en entornos que ejecuten distribuciones Linux.
 

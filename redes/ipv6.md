@@ -125,7 +125,7 @@ Un paquete que se envía a una dirección `UNICAST` es recibido por la interfaz 
 
 &#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ### ANYCAST
 
@@ -135,7 +135,7 @@ Un paquete que se envía a una dirección `UNICAST` es recibido por la interfaz 
 
 &#x20;
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### MULTICAST
 
@@ -201,7 +201,7 @@ Desde el CMD&#x20;
 ipconfig
 ```
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 En la implantación de IPv6 se ha tenido en cuenta lo que se llama la «Precedencia de protocolos» lo cual puede hacer que nuestro equipo pase a funcionar en modo IPv6 en cualquier momento, sin avisarnos y por tanto escapando a nuestro control.
 
@@ -211,7 +211,7 @@ Veamos:
 netsh interface ipv6 show prefixpolicies
 ```
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 El sistema operativo da precedencia a IPv6 sobre IPv4 si es posible utilizar este protocolo, lo cual ya supone una pérdida de tiempo, recursos, ancho de banda en intentar comprobar si puede establecer la comunicación mediante IPv6 antes de pasar a IPv4
 
@@ -225,7 +225,7 @@ Comprobemos nuestros vecinos con el siguiente comando:
 netsh interface ipv6 show neighbors
 ```
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Detalles DE IPv6
 

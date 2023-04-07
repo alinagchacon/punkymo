@@ -132,7 +132,7 @@ apt-get install openvswitch-switch
 
 **OVS InPort** – para que el host (el propio proxmox) utilice una vlan dentro del puente, debe crear este tipo de interfaces. Estos dividen una interfaz virtual en la vlan especificado a la que puede asignar una dirección IP o usar DHCP. Tienen que aparecer en la definición de puente real en ovs\_ports. De no ser así, no se muestran a pesar de haber especificado un ovs\_bridge.
 
-****
+
 
 <figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 

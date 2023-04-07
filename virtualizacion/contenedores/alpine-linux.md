@@ -40,7 +40,8 @@ apk del name_package
 
 Para pedir ayuda:
 
-<pre><code><strong>apk --help</strong></code></pre>
+<pre><code><strong>apk --help
+</strong></code></pre>
 
 Para ver todos los paquetes:
 
@@ -202,7 +203,7 @@ Ahora vamos con la instalación de Portainer. Para ello toma nota del sitio sigu
 Creamos el volumen que Portainer Server usará para almacenar su base de datos:
 
 ```bash
-docker volumen create portainer_data
+docker volume create portainer_data
 ```
 
 Ahora, descargamos e instalamos el contenedor de Portainer Server:

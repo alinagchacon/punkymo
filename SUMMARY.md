@@ -75,6 +75,7 @@
 * [Servicio DHCP](servicios/servicio-dhcp/README.md)
   * [DHCP-Windows Server 2016](servicios/servicio-dhcp/dhcp-windows-server-2016.md)
   * [DHCP-Ubuntu Server 22.04](servicios/servicio-dhcp/dhcp-ubuntu-server-22.04.md)
+* [Plex](servicios/plex.md)
 
 ## Misceláneas
 

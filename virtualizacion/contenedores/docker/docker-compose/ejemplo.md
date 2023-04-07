@@ -87,7 +87,7 @@ Por tanto, un archivo de docker-compose es un archivo con extensión y formato y
 
 El archivo tiene una estructura bastante fácil de entender. Comienza por especificar la versión de docker compose que se utilizará:
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Estructura de un archivo docker-compose.yml</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Estructura de un archivo docker-compose.yml</p></figcaption></figure>
 
 Después de la versión viene  la sección de servicios. Puede haber tantos servicios como queramos: servidor web, base de datos, documentación, etc. Cada servicio cuenta con sus propias variables de configuración y sus respectivos valores.
 
@@ -95,7 +95,7 @@ Después de la versión viene  la sección de servicios. Puede haber tantos serv
 
 **app**: Indica el nombre del servicio, que podría ser cualquiera. El nombre indica el tipo de servicio que estamos construyendo. Por ejemplo: MySQL, NGINX, etc.
 
-**Nombres de servicios:** El nombre que usamos para cada servicio dentro de nuestro archivo <mark style="color:blue;">`yml`</mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> nos sirve como referencia para su uso en otros servicios.
+**Nombres de servicios:** El nombre que usamos para cada servicio dentro de nuestro archivo <mark style="color:blue;">`yml`</mark> nos sirve como referencia para su uso en otros servicios.
 
 Por ejemplo, si llamamos a un servicio como <mark style="color:blue;">`db`</mark>, entonces es <mark style="color:blue;">`db`</mark> el nombre que debemos usar en otras aplicaciones para referirnos a un host o ubicación, incluso una base de datos. Veamos algunas de las variables de configuración (que se pueden consultar en documentación oficial de Docker).
 
@@ -273,7 +273,7 @@ Una vez en el apartado vamos a crear un nuevo stack:
 
 Se nos abrirá una nueva página donde podemos aplicar diferentes opciones para crear una colección entre las que tenemos subir nuestro docker-compose.yml, usar un repositorio de git. Aquí utilizaremos el editor web:
 
-<figure><img src="../../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Stack en Portainer</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (2) (2).png" alt=""><figcaption><p>Stack en Portainer</p></figcaption></figure>
 
 En el editor web volcamos el contenido de nuestro archivo <mark style="color:blue;">`docker-compose.yml`</mark> previamente creado. En caso de tener algún aparecerá una notificación en rojo que nos impedirá continuar &#x20;
 

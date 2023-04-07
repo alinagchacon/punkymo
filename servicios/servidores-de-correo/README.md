@@ -48,14 +48,14 @@ Al enviarse un correo electrónico, la información se transmite de servidor a s
 
 El <mark style="color:blue;">`MTA`</mark> del destinatario entrega el correo electrónico al servidor de recepción de correo o <mark style="color:blue;">`Agente de entrega de correo (MDA)`</mark> y éste  lo guardará hasta que el usuario lo reciba, a través de uno de los dos protocolos para recibir los correos de un <mark style="color:blue;">`MDA`</mark>: <mark style="color:blue;">`POP3`</mark> o <mark style="color:blue;">`IMAP`</mark>.
 
-Dicho de un modo simple: el <mark style="color:blue;">`MTA`</mark> es la oficina de correos y el <mark style="color:blue;">`MDA`</mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> el buzón, que almacena el correo a la espera que el destinatario revise el buzón.
+Dicho de un modo simple: el <mark style="color:blue;">`MTA`</mark> es la oficina de correos y el <mark style="color:blue;">`MDA`</mark> el buzón, que almacena el correo a la espera que el destinatario revise el buzón.
 
 Por otra parte, el programa que recibe el correo es llamado <mark style="color:blue;">`Mail User Agent (MUA)`</mark>, esto es: un cliente de correo como **Thunderbird** o **Outlook**.
 
 **Resumiendo**:
 
 1. **MDA** o [Mail Delivery Agent](https://en.wikipedia.org/wiki/Mail\_delivery\_agent) o Agente de entrega de correo (el buzón de correos).  Es quien mantiene los buzones de los usuarios, para que sus MUA o clientes de correo se conecten y descarguen el correo recibido. Ejemplos de MDA muy utilizados son [Dovecot](https://www.dovecot.org/), [maildrop ](https://en.wikipedia.org/wiki/Maildrop)y [Courier](http://www.courier-mta.org).
-2.  **MTA** o **** [Mail Transfer Agent](https://es.wikipedia.org/wiki/Servidor\_de\_correo) o Agente de Transporte de Correo (la oficina de correos). Es el servidor de correo que recoge los correos que envían sus usuarios y los entrega a los MTA de los destinatarios. Ejemplos de algunos MTA son: [Postfix](https://www.postfix.org), [Exim](https://es.wikipedia.org/wiki/Exim), [Sendmail](https://es.wikipedia.org/wiki/Sendmail) y [Qmail](https://es.wikipedia.org/wiki/Qmail).
+2.  **MTA** o [Mail Transfer Agent](https://es.wikipedia.org/wiki/Servidor\_de\_correo) o Agente de Transporte de Correo (la oficina de correos). Es el servidor de correo que recoge los correos que envían sus usuarios y los entrega a los MTA de los destinatarios. Ejemplos de algunos MTA son: [Postfix](https://www.postfix.org), [Exim](https://es.wikipedia.org/wiki/Exim), [Sendmail](https://es.wikipedia.org/wiki/Sendmail) y [Qmail](https://es.wikipedia.org/wiki/Qmail).
 
 
 3. **MUA** o [Mail User Agent](https://es.wikipedia.org/wiki/Cliente\_de\_correo\_electr%C3%B3nico). El cliente de correo. Es el programa cliente que utiliza el usuario final para enviar y recibir correos. Puede ser desde una sencilla herramienta por línea de comandos como [<mark style="color:blue;">`Mail`</mark> ](https://mailutils.org/manual/html\_section/mail.html)y brindada por [<mark style="color:blue;">`mailutils`</mark>](https://mailutils.org/manual/html\_section/mail.html), hasta una herramienta gráfica como[ Thunderbird](https://www.thunderbird.net/) o una herramienta web como [Roundcube](https://roundcube.net/).
@@ -92,7 +92,7 @@ De la lista de los servidores posibles para un dominio existe uno que está anun
 
 Una vez que el correo de Pepe ha sido entregado al servidor (de María) el correo permanece en el mismo hasta que el MUA (cliente de correo) se conecte para consultar el correo. Este correo puede estar en formato <mark style="color:blue;">`Mbox`</mark> o <mark style="color:blue;">`Maildir`</mark>.
 
-Entonces, nos queda claro que el funcionamiento de un MTA depende del servicio DNS, con lo cual es recomendable instalar Postfix después de tener  debidamente configurados los registros <mark style="color:blue;">`MX`</mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> en nuestro servidor <mark style="color:blue;">`DNS`</mark>.
+Entonces, nos queda claro que el funcionamiento de un MTA depende del servicio DNS, con lo cual es recomendable instalar Postfix después de tener  debidamente configurados los registros <mark style="color:blue;">`MX`</mark> en nuestro servidor <mark style="color:blue;">`DNS`</mark>.
 
 Veamos a continuación algunos tipos de servidores de IMAP y POP3.
 
