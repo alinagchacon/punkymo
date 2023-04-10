@@ -112,7 +112,7 @@ En este paso introducimos el número de serie que nos ha llegado al correo intro
 
 En este paso es necesario tener una cuenta en Sophos, si ya disponemos de una debemos iniciar sesión, sino debemos de crear una cuenta a través del botón de Create Sophos ID. Es un proceso rápido en el cual debemos de introducir únicamente nuestro correo y una contraseña.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Iniciar sesión o creación de cuenta Sophos</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (5).png" alt=""><figcaption><p>Iniciar sesión o creación de cuenta Sophos</p></figcaption></figure>
 
 ### Sexto paso - Comprobación de cuenta
 
@@ -146,7 +146,7 @@ En este paso nos pide que seleccionemos ciertas opciones de protección para ame
 
 Aquí debemos configurar una dirección de correo para que el Firewall pueda avisarnos de las copias de seguridad, problemas de seguridad, etc. Al estar en una red interna, si no deseamos que nos envíen correos podemos inventarnos los datos, es necesario rellenarlos para pasar al siguiente paso. Desactivaremos la casilla de "enviar la configuración cada semana".
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>Notificaciones del firewall</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (3).png" alt=""><figcaption><p>Notificaciones del firewall</p></figcaption></figure>
 
 ### Onceavo paso - Resumen de la configuración
 

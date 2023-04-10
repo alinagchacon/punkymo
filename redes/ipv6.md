@@ -125,7 +125,7 @@ Un paquete que se envía a una dirección `UNICAST` es recibido por la interfaz 
 
 &#x20;
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (7).png" alt=""><figcaption></figcaption></figure>
 
 ### ANYCAST
 
@@ -211,7 +211,7 @@ Veamos:
 netsh interface ipv6 show prefixpolicies
 ```
 
-<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2) (3).png" alt=""><figcaption></figcaption></figure>
 
 El sistema operativo da precedencia a IPv6 sobre IPv4 si es posible utilizar este protocolo, lo cual ya supone una pérdida de tiempo, recursos, ancho de banda en intentar comprobar si puede establecer la comunicación mediante IPv6 antes de pasar a IPv4
 
@@ -460,7 +460,7 @@ La duración de prefijo puede ir de 0 a 128.
 
 &#x20;&#x20;
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (6).png" alt=""><figcaption></figcaption></figure>
 
 &#x20;La duración de prefijo típica es /64
 

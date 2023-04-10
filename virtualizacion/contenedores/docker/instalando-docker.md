@@ -13,7 +13,7 @@ La virtualización de hardware tradicional se basa en iniciar diferentes sistema
 #### **Actualizar la lista de paquetes de Ubuntu**
 
 ```
-sudo apt updates
+sudo apt update
 ```
 
 #### **Instalar paquetes que permitan a APT descargar a través de HTTPS**
