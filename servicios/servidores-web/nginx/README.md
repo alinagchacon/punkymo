@@ -112,7 +112,7 @@ Para comprobar que el servidor está funcionando, en nuestro navegador podemos e
 
 Una vez instalado nginx ya podremos utilizarlo pero podemos mejorar su rendimiento editando el archivo nginx.conf que se encuentra en <mark style="color:blue;">`/etc/nginx`</mark>.
 
-<figure><img src="../../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Igualmente tienes la posibilidad de acceder al manual de nginx desde:
 

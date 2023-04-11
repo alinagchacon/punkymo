@@ -159,7 +159,7 @@ De forma predeterminada, Nginx usa <mark style="color:blue;">`ssl_protocols`</ma
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption><p>COnfiguración del archivo de configuración de kirby.com </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption><p>COnfiguración del archivo de configuración de kirby.com </p></figcaption></figure>
 
 Para probar que funciona correctamente el certificado creado con openssl, basta ir al navegador y llamar a nuestros sitios web: <mark style="color:blue;">`https://www.kirby.com`</mark> y <mark style="color:blue;">`https://www.punky.com.`</mark>  Como se muestra en las imágenes a continuación.
 

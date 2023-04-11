@@ -84,6 +84,8 @@
 
 ## Virtualización
 
+* [Portainer](virtualizacion/portainer/README.md)
+  * [en Portainer](virtualizacion/portainer/en-portainer.md)
 * [Contenedores](virtualizacion/contenedores/README.md)
   * [Docker](virtualizacion/contenedores/docker/README.md)
     * [Instalando Docker](virtualizacion/contenedores/docker/instalando-docker.md)
@@ -91,12 +93,11 @@
       * [Ejemplo](virtualizacion/contenedores/docker/docker-compose/ejemplo.md)
     * [YAML](virtualizacion/contenedores/docker/yaml.md)
     * [Docker volumen](virtualizacion/contenedores/docker/docker-volumen.md)
-  * [Portainer](virtualizacion/contenedores/portainer.md)
-  * [Pi-hole](virtualizacion/contenedores/pi-hole.md)
   * [Alpine Linux](virtualizacion/contenedores/alpine-linux.md)
-  * [en Portainer](virtualizacion/contenedores/en-portainer.md)
-  * [Proxmox](virtualizacion/contenedores/proxmox/README.md)
-    * [Proxmox en VMWare](virtualizacion/contenedores/proxmox/proxmox-en-vmware.md)
-    * [Proxmox en VirtualBox](virtualizacion/contenedores/proxmox/proxmox-en-virtualbox.md)
-    * [Entorno Proxmox](virtualizacion/contenedores/proxmox/entorno-proxmox.md)
+* [Proxmox](virtualizacion/proxmox/README.md)
+  * [Proxmox en VMWare](virtualizacion/proxmox/proxmox-en-vmware.md)
+  * [Proxmox en VirtualBox](virtualizacion/proxmox/proxmox-en-virtualbox.md)
+  * [Entorno Proxmox](virtualizacion/proxmox/entorno-proxmox.md)
+  * [Clúster](virtualizacion/proxmox/cluster.md)
+* [Pi-hole](virtualizacion/pi-hole.md)
 * [VPN](virtualizacion/vpn.md)

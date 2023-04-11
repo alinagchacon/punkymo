@@ -8,7 +8,7 @@ Vamos a configurar un firewall ZPF en una topología como la siguiente:
 
 &#x20;   &#x20;
 
-<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p>Configurando un firewall de zona</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (2) (3).png" alt=""><figcaption><p>Configurando un firewall de zona</p></figcaption></figure>
 
 #### Configuraciones iniciales
 

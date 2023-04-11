@@ -279,11 +279,11 @@ En el editor web volcamos el contenido de nuestro archivo <mark style="color:blu
 
 
 
-<figure><img src="../../../../.gitbook/assets/image (4) (6).png" alt=""><figcaption><p>docker-compose.yml</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (6) (1).png" alt=""><figcaption><p>docker-compose.yml</p></figcaption></figure>
 
 Una vez hecho esto, clicamos a <mark style="color:blue;">`deploy`</mark> para crear y desplegar todos los contenedores. Si todo está correcto, nos crea la colección y podremos acceder a la misma y veremos algo como lo siguiente:
 
-<figure><img src="../../../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Despliegue de contenedores</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (39) (2).png" alt=""><figcaption><p>Despliegue de contenedores</p></figcaption></figure>
 
 Podemos observar los diferentes contenedores involucrados en desplegar la aplicación web:
 

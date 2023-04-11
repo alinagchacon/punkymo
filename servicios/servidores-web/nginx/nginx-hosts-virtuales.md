@@ -74,7 +74,7 @@ Donde:
 
 Solo de tener instalado el Nginx, si escribimos: localhost en el navegador veremos su página por defecto. Esto es:
 
-<figure><img src="../../../.gitbook/assets/image (20) (2).png" alt=""><figcaption><p>Página web por defecto de Nginx</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20) (2) (1).png" alt=""><figcaption><p>Página web por defecto de Nginx</p></figcaption></figure>
 
 ### &#x20;Sirviendo contenido estático
 

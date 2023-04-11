@@ -16,11 +16,11 @@ También tenemos la opción de instalarlo a través de una ISO de forma manual e
 
 Para descargar SOPHOS Firewall debemos hacerlo desde esta URL: [https://www.sophos.com/en-us/support/downloads/firewall-installers](https://www.sophos.com/en-us/support/downloads/firewall-installers). Después tenemos que elegir la opción de **Virtual Installers: Firewall OS for VMware**.
 
-<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption><p>Descarga Sophos Firewall</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (26) (1).png" alt=""><figcaption><p>Descarga Sophos Firewall</p></figcaption></figure>
 
 Antes de la descarga debemos de rellenar ciertos datos que pueden ser aleatorios, no es necesario poner nuestro correo real.
 
-<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption><p>Terminos y condiciones de descarga</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (19) (1).png" alt=""><figcaption><p>Terminos y condiciones de descarga</p></figcaption></figure>
 
 Al enviar el formulario comenzará la descarga del Firewall, este se descargará en un zip que posteriormente descomprimiremos.
 
@@ -36,7 +36,7 @@ En este caso si debemos de poner nuestro correo real ya que es ahí donde recibi
 
 Cuando se descarga debemos descomprimirlo y hacer doble clic en **sf\_virtual\_virtualbox.ovf**. Esto hará que se importe la máquina virtual a VirtualBox y podremos elegir la ubicación donde queremos que se importe. En el caso de que no se importe nos vamos a la pantalla principal de VirtualBox, le damos a **añadir** y buscamos el archivo dicho anteriormente y lo seleccionamos y empezara la importación.
 
-<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption><p>Importación VM Sophos</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18) (1).png" alt=""><figcaption><p>Importación VM Sophos</p></figcaption></figure>
 
 Antes de iniciar la maquina debemos de hacer ciertas configuraciones a la red, debemos de poner en el Adaptador 1 en Red Interna **(itnetAdmin)**, el Adaptador 2 ponerlo en red interna, pero en otra diferente **(itnetUsers)**, el tercer adaptador en red interna pero también en otra diferente **(itnetDMZ)** y el cuarto adaptador en **NAT)** Nos debe de quedar de esta manera:
 
@@ -168,7 +168,7 @@ Ahora debemos iniciar sesión con el usuario admin y la contraseña que elegimos
 
 Al entrar nos aparece un mensaje para crear una clave de recuperación de las copias de seguridad, de momento no será necesario crearla. Por lo tanto, haremos clic en Omitir por Ahora. No podremos desactivar este mensaje, cada vez que iniciemos sesión lo veremos.
 
-<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption><p>Clave maestra</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (49) (3).png" alt=""><figcaption><p>Clave maestra</p></figcaption></figure>
 
 Esta es la interfaz del firewall. Es una interfaz muy intuitiva y fácil de usar. Además, incluye muchas opciones de seguridad avanzada para nuestra red.
 
