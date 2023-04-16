@@ -53,5 +53,39 @@ Y en el segundo servidor veríamos algo semejante:
 
 De este modo, ya pudiéramos trabajar en ambos servidores, migrar VM de servidor a servidor, tener mayor disponibilidad de recursos, configurar ambos servidores bajo el mismo firewall, configurar un backup para ambos servidores, etc.
 
-&#x20;
+### ¿Qué sucede si tenemos que eliminar un clúster por las razones que sean?
+
+Para eliminar un nodo de un clúster en Proxmox tenemos que:
+
+* Mover las VM a otro nodo activo del clúster. Podemos hacer dicha migración tanto en modo `live` como `offline` teniendo en cuenta el almacenamiento que usemos.
+* Accedemos a otro de los nodos utilizando la interface web y podremos ver la ID del nodo que queremos eliminar del clúster.
+* Apagamos el nodo a eliminar.
+* Desde la consola ejecutamos:&#x20;
+
+```
+pvecm delnode NodoAEliminar
+```
+
+* Ahora usamos el siguiente comando para comprobar que el nodo haya sido correctamente eliminado. Esto es,
+
+```
+pvecm nodes
+```
+
+* Finalmente, accedemos por consola a otro de los nodos del clúster, a la carpeta:&#x20;
+
+```
+/etc/pve/nodes
+```
+
+* Eliminamos la carpeta con el mismo nombre del nodo eliminado. De no hacerlo, seguiríamos viendo el nodo eliminado en la interface web.
+
+```
+systemctl stop pve-cluster corosync
+pmxcfs -l
+rm –r /etc/corosync/*
+rm /etc/pve/corosync.conf
+killall pmxcfs
+systemctl start pve-cluster
+```
 
