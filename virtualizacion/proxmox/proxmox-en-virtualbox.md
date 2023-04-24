@@ -17,5 +17,5 @@ TASK ERROR: KVM virtualisation configured, but not available. Either disable in 
 
 Para corregirlo accedemos a las opciones de la VM y deshabilitamos la aceleración por hardware de KVM. Arrancamos la VM y nos debe permitir la instalación del sistema.
 
-<figure><img src="../../../.gitbook/assets/image (1) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (6) (2).png" alt=""><figcaption></figcaption></figure>
 

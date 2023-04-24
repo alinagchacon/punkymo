@@ -134,7 +134,7 @@ Ahora nos saldrá una pantalla en la que se están confirmando los datos y verif
 
 Aquí nos permite volver a **configurar las interfaces de red** existentes en el firewall. Primero aparece la interfaz A. En este caso la configuración esta correcta y no tocaremos nada y haremos clic en **Siguiente**.
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption><p>Configuración del Port A</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16) (3).png" alt=""><figcaption><p>Configuración del Port A</p></figcaption></figure>
 
 ### Noveno paso - Selección de protecciones
 

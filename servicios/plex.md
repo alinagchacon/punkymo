@@ -85,7 +85,7 @@ Una vez que clicas en <mark style="color:blue;">`Entendido`</mark>, verás una v
 
 Una vez hecho esto, podemos organizar la biblioteca de medios:
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (6).png" alt=""><figcaption></figcaption></figure>
 
 Una vez terminada esa parte de la configuración, en mi caso, seleccioné Netflix que es lo que tengo...
 

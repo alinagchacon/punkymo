@@ -31,7 +31,7 @@ Una vez que tengamos esto vamos al primer servidor de Proxmox que llamé Kirby, 
 
 En este mismo servidor `Kirby`, clicamos en `Join information` para copiar la información que nos muestra:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Copiar la información que nos permitirá unir el segundo servidor al clúster ya creado</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (6).png" alt=""><figcaption><p>Copiar la información que nos permitirá unir el segundo servidor al clúster ya creado</p></figcaption></figure>
 
 Con esta información es que podremos agregar el segundo servidor de Proxmox llamado Punky, al clúster ya creado en el primer servidor.&#x20;
 
@@ -49,7 +49,7 @@ Ahora, si nos vamos al servidor Kirby que es el primer servidor de Proxmox donde
 
 Y en el segundo servidor veríamos algo semejante:
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Servidor Punky</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Servidor Punky</p></figcaption></figure>
 
 De este modo, ya pudiéramos trabajar en ambos servidores, migrar VM de servidor a servidor, tener mayor disponibilidad de recursos, configurar ambos servidores bajo el mismo firewall, configurar un backup para ambos servidores, etc.
 
