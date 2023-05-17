@@ -1,5 +1,5 @@
 ---
-description: JLM
+description: Joel López Molina
 ---
 
 # Instalación Synology NAS en VirtualBox
