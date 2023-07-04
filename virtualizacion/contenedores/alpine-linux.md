@@ -315,7 +315,7 @@ Si clicas en uno de los contenedores se desplegarán mas opciones específicas:
 
 Para acceder a nuestro contenedor de pihole basta con acceder a través del navegador, escribiendo la IP de nuestra MV. Esto es:
 
-<mark style="color:blue;">`https://192.168.1.79`</mark>
+<mark style="color:blue;">`http://192.168.1.79`</mark>
 
 ####
 
