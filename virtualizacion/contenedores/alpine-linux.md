@@ -257,6 +257,12 @@ Nos vamos al navegador y escribimos la IP de la VM y el puerto de acceso:
 
 <figure><img src="../../.gitbook/assets/image (200).png" alt=""><figcaption><p>Accediendo al servicio de Portainer en la VM de Alpine </p></figcaption></figure>
 
+Una vez dentro, ya podemos utilizar el Portainer.
+
+
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Accediendo a Portainer, recién instalado</p></figcaption></figure>
+
 ### Instalando Pi-hole
 
 Busca la imagen de Pi-Hole en local y al no encontrarla la descarga del sitio oficial de Pi-Hole de Docker.&#x20;
