@@ -202,9 +202,17 @@ Ahora vamos con la instalación de Portainer. Para ello toma nota del sitio sigu
 
 Creamos el volumen que Portainer Server usará para almacenar su base de datos:
 
-```bash
-docker volume create portainer_data
-```
+<pre class="language-bash"><code class="lang-bash"><strong>docker volume create portainer_data
+</strong></code></pre>
+
+Si quieres verificar el volume recién creado puedes escribir:
+
+<pre><code><strong>docker volume inspect portainer_data
+</strong></code></pre>
+
+Y verás algo como lo siguiente:
+
+<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption><p>Inspeccionando un volumen de docker</p></figcaption></figure>
 
 Ahora, descargamos e instalamos el contenedor de Portainer Server:
 

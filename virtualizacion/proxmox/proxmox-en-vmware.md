@@ -59,7 +59,7 @@ Ahora se nos muestra el resto de configuraciones que ha creado por defecto VMwar
 
 <mark style="color:red;">Al crear la VM me dió error y tuve que desmarcar la opción de</mark> <mark style="color:red;"></mark><mark style="color:red;">**Virtualize CPU performance counters**</mark>.
 
-<figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Aquí tendremos que cambiar la cantidad de RAM que se le proporcionará a la máquina: lo recomendable como mínimo es entre 4 y 6 GB. Una vez ya seleccionada la RAM vamos al apartado más importante: al del procesador como se muestra en la imagen anterior. Hay que tener en cuenta que el procesador del que disponemos para dar más o menos “cores” si tenemos un procesador con 4 núcleos y 8 hilos le podemos dar entre 3 y 4 cores. Pero si tenemos un procesador mejor con 8 núcleos y 16 hilos le podemos dar 8 cores.&#x20;
 
@@ -174,7 +174,7 @@ Ahora en el apartado “SO” tenemos que especificar de qué forma en la que qu
 
 Una vez seleccionado la iso vamos al apartado “Sistema” donde nos preguntara qué tarjeta gráfica usaremos y el controlador SCSI. En esta parte lo mejor es dejarlo por defecto.
 
-<figure><img src="../../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
 Ahora configurar el tamaño de disco, donde se almacenará la máquina y el bus del dispositivo. Para el tamaño del disco con 8 GB para debian es más que suficiente. Si fuera un sistema windows por lo menos sería necesario 32Gb de almacenamiento. En cuanto al bus del dispositivo y la caché se recomienda dejarlo como esta.
 
@@ -182,15 +182,15 @@ Ahora configurar el tamaño de disco, donde se almacenará la máquina y el bus 
 
 Nos dirigimos al apartado de la CPU donde tendremos que especificar la cantidad de núcleos. Para una VM con dos núcleos es suficiente aunque si disponemos de un procesador con muchos núcleos es recomendable tener 4 núcleos como mínimo para sistemas Windows.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
 Una vez definido la cantidad de núcleos que tendrá la VM, hay que poner la cantidad de RAM (En el caso de un Linux en este caso Debian) 2GB de RAMes suficiente aunque se puede poner más. Es recomendable que en sistemas Windows el mínimo sea 4GB
 
-<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (43) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el apartado de red hay que configurar qué adaptador usará la máquina (red NAT, adaptador puente o red interna).
 
-<figure><img src="../../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
 
 Una vez con esto llegaremos al último apartado de la configuración de la MV en la cual sale un resumen de todos los ajustes anteriores para comprobar si son correctos antes de crear la máquina.
 
@@ -282,7 +282,7 @@ Como en Windows server se pueden configurar usuarios y grupos, los cuales según
 
 <figure><img src="https://lh4.googleusercontent.com/_rSiczxwpcv6c89mReS59AChxzc_EVRpY5HPnJR9Q5BXD3aW6lH1Oh4uBooxwHBAeEtRuhDQTWGXu4xDrNvRWj7TGIQpJFkuyjHgGKL25gQ1w_I0h8UZV2ggWf9ZRUek1WazMMhU6KyNH41cAJaSIqJgmAK9YUwQJKbHpvAT4vvs6_Kc7_8DqE9j" alt=""><figcaption></figcaption></figure>
 
-Hay que ser consciente que aparte de los usuarios y grupos hay que crear <mark style="color:blue;">`pools`</mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> o conjuntos donde le daremos acceso a los grupos a determinados contenidos ya sean máquinas virtuales, LXC y también acceso a los discos. Esto no significa que después tengas roles que no te permiten acceder a VM o a discos, y otros que puedan modificarlos, todo esto en el mismo grupo.
+Hay que ser consciente que aparte de los usuarios y grupos hay que crear <mark style="color:blue;">`pools`</mark> o conjuntos donde le daremos acceso a los grupos a determinados contenidos ya sean máquinas virtuales, LXC y también acceso a los discos. Esto no significa que después tengas roles que no te permiten acceder a VM o a discos, y otros que puedan modificarlos, todo esto en el mismo grupo.
 
 ## Links
 

@@ -105,9 +105,9 @@ Se nos abre un formulario que nos pide datos como el nombre de usuario, contrase
 
 #### Compartir recursos&#x20;
 
-Para poder acceder a los contenidos de cada usuario a través de la red, se hace imprescindible habilitar el servicio <mark style="color:blue;">`SMB`</mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> en el servidor:
+Para poder acceder a los contenidos de cada usuario a través de la red, se hace imprescindible habilitar el servicio <mark style="color:blue;">`SMB`</mark> en el servidor:
 
-<div>
+<div align="center">
 
 <figure><img src="../../.gitbook/assets/image (1) (5).png" alt=""><figcaption><p>Crear usuario</p></figcaption></figure>
 

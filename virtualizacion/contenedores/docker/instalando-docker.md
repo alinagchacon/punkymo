@@ -108,7 +108,7 @@ sudo usermod -aG docker username
 
 docker \[option] \[command] \[arguments]
 
-***
+
 
 ### Comandos de Docker
 

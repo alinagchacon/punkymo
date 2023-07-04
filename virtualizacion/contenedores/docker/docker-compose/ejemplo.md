@@ -19,12 +19,7 @@ Adicionalmente, tengamos en cuenta que docker lo tengo instalado en una VM con `
 
 Como vamos a crear los volúmenes de Docker para tener acceso directo a los contenidos en local, tenemos que crear los directorios y los contenidos necesarios.  Los archivos importantes a tener en cuenta serían los ficheros de configuración de nginx y los .php de la aplicación web. Para ello, he creado un directorio con los contenidos necesarios:
 
-| Directorio    | Contenido                                                                                       |
-| ------------- | ----------------------------------------------------------------------------------------------- |
-| LoginRegister | La aplicación web con sus archivos .php, .css, etc.                                             |
-| DB            | La DB `users1` que utiliza la aplicación web. Realmente no es necesario, lo hago por comodidad. |
-| log           | Para almacenar los log de nginx (error, access) y de php.                                       |
-| Nginx/conf.d  | En este directorio guardamos el archivo de configuración: `default.conf`                        |
+<table data-header-hidden><thead><tr><th width="208.5">Directorio</th><th>Contenido</th></tr></thead><tbody><tr><td>Directorio</td><td>Contenido</td></tr><tr><td>LoginRegister</td><td>La aplicación web con sus archivos .php, .css, etc.</td></tr><tr><td>DB</td><td>La DB <code>users1</code> que utiliza la aplicación web. Realmente no es necesario, lo hago por comodidad.</td></tr><tr><td>log</td><td>Para almacenar los log de nginx (error, access) y de php.</td></tr><tr><td>Nginx/conf.d</td><td>En este directorio guardamos el archivo de configuración: <code>default.conf</code></td></tr></tbody></table>
 
 &#x20;La actividad <mark style="color:blue;">`LoginRegister`</mark> tiene una estructura de archivos como se muestra en la imagen siguiente. Tener en cuenta que el directorio <mark style="color:blue;">`mysql`</mark> no es necesario.
 
