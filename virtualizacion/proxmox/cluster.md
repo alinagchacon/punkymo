@@ -27,7 +27,7 @@ Por tanto, tenemos dos servidores con IP: 192.168.1.150 y 192.168.1.152
 
 Una vez que tengamos esto vamos al primer servidor de Proxmox que llamé Kirby, y en la sección de: `Datacenter > clúster > crear clúster`  creamos el clúster.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Creando el clúster</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Creando el clúster</p></figcaption></figure>
 
 En este mismo servidor `Kirby`, clicamos en `Join information` para copiar la información que nos muestra:
 
@@ -45,7 +45,7 @@ Pegamos la información que hemos copiado del primer nodo del clúster, agregamo
 
 Ahora, si nos vamos al servidor Kirby que es el primer servidor de Proxmox donde creamos el clúster veremos lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Servidor Kirby</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (3).png" alt=""><figcaption><p>Servidor Kirby</p></figcaption></figure>
 
 Y en el segundo servidor veríamos algo semejante:
 

@@ -25,7 +25,7 @@ Desde el navegador, nos conectamos a nuestra VM. En mi caso sería: [https://192
 
 Ya dentro de Portainer, vamos a Stacks para crear uno nuevo:&#x20;
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Siguiendo las recomendaciones de [linuxserver.io](https://docs.linuxserver.io/images/docker-jellyfin), crearé el contenedor a partir del `docker-compose` que nos proporciona:
 
@@ -59,7 +59,7 @@ Copiamos el archivo de docker-compose en el espacio habilitado para ello en Web 
 
 Una vez realizado este paso, podemos acceder al apartado de Container y lo vemos ahí:
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>El contenedor de Jellyfin </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>El contenedor de Jellyfin </p></figcaption></figure>
 
 Para acceder bastaría ir al navegador y escribir la IP de nuestra VM. En mi caso sería:  <mark style="color:blue;">https://192.168.1.123:8096</mark> y ya estaríamos en jellyfin, donde tendríamos que seleccionar el idioma y proporcionar el nombre y contraseña del administrador del servicio:&#x20;
 

@@ -261,7 +261,7 @@ Una vez dentro, ya podemos utilizar el Portainer.
 
 
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Accediendo a Portainer, recién instalado</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Accediendo a Portainer, recién instalado</p></figcaption></figure>
 
 ### Instalando Pi-hole
 

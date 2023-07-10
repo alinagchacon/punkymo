@@ -58,6 +58,7 @@
   * [Nginx](servicios/servidores-web/nginx/README.md)
     * [NGINX, hosts virtuales](servicios/servidores-web/nginx/nginx-hosts-virtuales.md)
     * [Hosts virtuales basados en dominio](servicios/servidores-web/nginx/hosts-virtuales-basados-en-dominio.md)
+    * [Nginx: php y mysql](servicios/servidores-web/nginx/nginx-php-y-mysql.md)
 * [Servidores de correo](servicios/servidores-de-correo/README.md)
   * [Seguridad en el correo](servicios/servidores-de-correo/seguridad-en-el-correo.md)
   * [Postfix](servicios/servidores-de-correo/postfix.md)

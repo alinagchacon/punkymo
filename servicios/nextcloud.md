@@ -32,11 +32,11 @@ nextcloud/all-in-one:latest
 
 El proceso de instalación sería algo así como:
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Para abrir la interfaz escribe [https://localhost:8080](https://localhost:8080)  o [https://the.servers.ip.address:8080](https://the.servers.ip.address:8080) en el navegador.&#x20;
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Nextcloud</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (7).png" alt=""><figcaption><p>Nextcloud</p></figcaption></figure>
 
 &#x20;Tienes que utilizar la contraseña que te proporciona, algo así como:
 
