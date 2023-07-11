@@ -86,13 +86,11 @@
 
 ## Virtualización
 
-* [Portainer](virtualizacion/portainer/README.md)
-  * [en Portainer](virtualizacion/portainer/en-portainer.md)
 * [Contenedores](virtualizacion/contenedores/README.md)
   * [Docker](virtualizacion/contenedores/docker/README.md)
     * [Instalando Docker](virtualizacion/contenedores/docker/instalando-docker.md)
     * [Docker compose](virtualizacion/contenedores/docker/docker-compose/README.md)
-      * [Docker: PHP y MySQL](virtualizacion/contenedores/docker/docker-compose/docker-php-y-mysql.md)
+      * [Docker: PHP y MySQL](virtualizacion/contenedores/docker/docker-compose/ejemplo.md)
     * [YAML](virtualizacion/contenedores/docker/yaml.md)
     * [Docker volumen](virtualizacion/contenedores/docker/docker-volumen.md)
   * [Alpine Linux](virtualizacion/contenedores/alpine-linux.md)
@@ -101,5 +99,7 @@
   * [Proxmox en VirtualBox](virtualizacion/proxmox/proxmox-en-virtualbox.md)
   * [Entorno Proxmox](virtualizacion/proxmox/entorno-proxmox.md)
   * [Clúster](virtualizacion/proxmox/cluster.md)
+* [Portainer](virtualizacion/portainer/README.md)
+  * [en Portainer](virtualizacion/portainer/en-portainer.md)
 * [Pi-hole](virtualizacion/pi-hole.md)
 * [VPN](virtualizacion/vpn.md)

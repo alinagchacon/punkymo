@@ -126,7 +126,7 @@ En este paso podremos elegir las aplicaicones a la que queremos que tenga acceso
 
 En este paso podremos limitar de las aplicaciones de acceso a las carpetas compartidas. Limitar la velocidad de transferencia nos puede ayudar a saturar la red si tenemos muchos usuarios. En este caso no especificaremos ningun limite ya que no necesitamos limitar la velocidad de este usuario.
 
-<figure><img src="../../../.gitbook/assets/image (5) (2) (1) (1).png" alt=""><figcaption><p>Establecer limite de velocidad de transferencia</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (2) (1).png" alt=""><figcaption><p>Establecer limite de velocidad de transferencia</p></figcaption></figure>
 
 ### Octavo paso - Confirmar los datos
 

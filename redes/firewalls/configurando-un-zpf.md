@@ -77,7 +77,7 @@ Router#show run
 
 <figure><img src="../../.gitbook/assets/image (18) (3).png" alt=""><figcaption><p>show run</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (3).png" alt=""><figcaption><p>show run</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>show run</p></figcaption></figure>
 
 Otros comandos útiles para verificar:
 

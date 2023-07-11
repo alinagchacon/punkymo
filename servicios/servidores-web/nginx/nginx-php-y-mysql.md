@@ -19,7 +19,7 @@ El ejemplo en cuestión es el mismo utilizado en la sección <mark style="color:
 
 En el directorio <mark style="color:blue;">`/var/www/`</mark> creamos una carpeta que va a contener nuestros archivos de la aplicación web. Yo le he llamado simplemente <mark style="color:blue;">`example.com`</mark>:
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>/var/www/example.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>/var/www/example.com</p></figcaption></figure>
 
 Como podréis observar el dueño de la carpeta se llama www-data y no root, es es porque tenemos que modificar los archivos del directorio:
 
@@ -29,11 +29,11 @@ chown -R www-data:www-data /var/www/example.com
 
 Volcamos el contenido dentro del directorio obteniendo lo siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Contenido en /var/www/example.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption><p>Contenido en /var/www/example.com</p></figcaption></figure>
 
 Tendrás que tener en cuenta que en el archivo <mark style="color:blue;">`conexion.php`</mark> debes modificar los parámetros de conexión a la base de datos, como mínimo el password:
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Archivo conexion.php</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Archivo conexion.php</p></figcaption></figure>
 
 ### Configurando Nginx&#x20;
 
@@ -74,9 +74,9 @@ sudo nginx -s reload
 
 Para poder acceder a nuestro sitio web con el nombre de dominio que le hemos asignado tenemos que modificar el archivo /etc/hosts:
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Archivo /etc/hosts</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Archivo /etc/hosts</p></figcaption></figure>
 
 Finalmente, nos vamos al navegador y accedemos a nuestro sitio:
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>example.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>example.com</p></figcaption></figure>
 

@@ -52,7 +52,7 @@ Una vez arrancamos la máquina virtual se comenzarán a iniciar todos los proces
 
 Seguidamente nos pedirá la contraseña para acceder, de forma predeterminada es **admin**.
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Interfaz de VM</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Interfaz de VM</p></figcaption></figure>
 
 Después nos aparecerá un mensaje sobre los Términos de Licencia del firewall, si queremos seguir utilizando debemos aceptarlos presionando la tecla **A**.
 
@@ -140,7 +140,7 @@ Aquí nos permite volver a **configurar las interfaces de red** existentes en el
 
 En este paso nos pide que seleccionemos ciertas opciones de protección para amenazas. De forma estándar seleccionaremos las 3 primeras opciones, ya que la última puede impedir el correcto funcionamiento de ciertas aplicaciones.
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption><p>Protecciones activas</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17) (3).png" alt=""><figcaption><p>Protecciones activas</p></figcaption></figure>
 
 ### Doceavo paso - Notificaciones del firewall
 

@@ -1,5 +1,5 @@
 ---
-description: Interne
+description: Internet
 ---
 
 # Introducción Redes

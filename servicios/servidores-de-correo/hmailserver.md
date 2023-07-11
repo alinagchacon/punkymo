@@ -43,7 +43,7 @@ Una vez instalado el .NET Framework ya podremos instalar el hMailServer sin más
 
 Siguiendo los pasos por defecto en el proceso de instalación llegaremos a una pantalla como la siguiente:
 
-![](<../../.gitbook/assets/image (42).png>)
+![](<../../.gitbook/assets/image (42) (1).png>)
 
 ### **Dominios y cuentas**
 

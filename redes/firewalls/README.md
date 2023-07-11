@@ -35,7 +35,7 @@ En los <mark style="color:blue;">`Zone-based policy firewalls ZPF`</mark> o fire
 
 Las políticas de seguridad para las redes LAN1 y LAN2 son similares y pueden agruparse en una zona para las configuraciones de firewall. De modo predeterminado, se tiene que en la misma zona, el tráfico entre interfaces no está sujeto a ninguna política y puede pasar libremente.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p>Dos redes LAN internas pertenecientes a la misma zona</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (4) (2).png" alt=""><figcaption><p>Dos redes LAN internas pertenecientes a la misma zona</p></figcaption></figure>
 
 Por el contrario, se bloquea todo el tráfico de zona a zona y con el fin de permitir el tráfico entre zonas, se debe configurar una política que permita o inspeccione dicho tráfico.
 

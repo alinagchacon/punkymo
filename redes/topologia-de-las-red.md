@@ -7,7 +7,7 @@ Nos referimos como topología de una red a la disposición (relación) de los di
 * Identifica las conexiones físicas y la manera de interconectar los dispositivos finales (PC, impresoras, etc.) y los dispositivos intermedios (routers, switch y puntos de acceso inalámbrico).&#x20;
 * Incluyen la ubicación física de los dispositivos: habitación u oficina, ubicación en el rack, etc.. Las topologías físicas suelen ser punto a punto o estrella.
 
-<figure><img src="../.gitbook/assets/image (116).png" alt=""><figcaption><p><strong>Tomado de</strong> <a href="https://ccnadesdecero.es"><strong>https://ccnadesdecero.es</strong></a><strong></strong></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (116).png" alt=""><figcaption><p><strong>Tomado de</strong> <a href="https://ccnadesdecero.es"><strong>https://ccnadesdecero.es</strong></a></p></figcaption></figure>
 
 **Topología lógica o mapa lógico**
 
@@ -15,7 +15,7 @@ Nos referimos como topología de una red a la disposición (relación) de los di
 * Identifica conexiones virtuales mediante interfaces de dispositivo y esquemas de direccionamiento IP de capa 3 (capa de red del modelo OSI).
 * La capa de enlace de datos (capa 2 del modelo OSI) accede a la topología lógica de una red al controlar el acceso de datos a los medios. Es la topología lógica que influye en el tipo de trama de red y control de acceso a medios utilizado.
 
-<figure><img src="../.gitbook/assets/image (8) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>Tomado de</strong> <a href="https://ccnadesdecero.es"><strong>https://ccnadesdecero.es</strong></a><strong></strong></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>Tomado de</strong> <a href="https://ccnadesdecero.es"><strong>https://ccnadesdecero.es</strong></a></p></figcaption></figure>
 
 ### Topología en redes WAN
 
@@ -65,7 +65,7 @@ Las llamadas topologías bus y anillo son de las primeras tecnologías LAN Ether
 * El anillo no necesita ser terminado, a diferencia de la topología del bus.&#x20;
 * La interfaz de datos distribuidos de fibra heredada (FDDI) y las redes Token Ring usaban topologías de anillo.
 
-<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption><p>Anillo</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (34) (1).png" alt=""><figcaption><p>Anillo</p></figcaption></figure>
 
 #### Estrella
 

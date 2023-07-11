@@ -58,7 +58,7 @@ Las direcciones IPv6:
 
 #### &#x20;
 
-<figure><img src="../.gitbook/assets/image (10) (1) (2).png" alt=""><figcaption><p>Sistema hexadecimal</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Sistema hexadecimal</p></figcaption></figure>
 
 ## Cambios relevantes en IPv6
 

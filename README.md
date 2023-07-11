@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: true
+---
+
 # Inicio
 
 En este espacio he querido unificar de cierto modo el contenido que estamos viendo en el ciclo de SMX y ASIX. Por supuesto, en los módulos que me atañen.&#x20;

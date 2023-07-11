@@ -182,7 +182,7 @@ Ahora configurar el tamaño de disco, donde se almacenará la máquina y el bus 
 
 Nos dirigimos al apartado de la CPU donde tendremos que especificar la cantidad de núcleos. Para una VM con dos núcleos es suficiente aunque si disponemos de un procesador con muchos núcleos es recomendable tener 4 núcleos como mínimo para sistemas Windows.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (40) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez definido la cantidad de núcleos que tendrá la VM, hay que poner la cantidad de RAM (En el caso de un Linux en este caso Debian) 2GB de RAMes suficiente aunque se puede poner más. Es recomendable que en sistemas Windows el mínimo sea 4GB
 

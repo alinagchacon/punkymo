@@ -4,27 +4,20 @@ description: Apuntes
 
 # Portainer
 
-Algunos apuntes de Portainer pero lo ideal es ir a su web de documentación:
+Se trata de una herramienta ligera y _open-source_ que permite la gestión de contenedores sobre Docker o Docker Swarm. También ofrece una interfaz gráfica para gestionar el _host_ Docker desde cualquier navegador. Adicionalmente, tiene soporte para Raspberry Pi y se puede desplegar como un simple contenedor. Es una herramienta enfocada a visualizar el estado de los contenedores. Algunos apuntes de Portainer pero lo ideal es ir a su web de documentación:
 
-{% embed url="https://docs.portainer.io/" %}
+{% embed url="https://docs.portainer.io/" fullWidth="false" %}
 Documentación de Portainer
 {% endembed %}
 
-&#x20;
-
-Tenemos una buena ayuda en la aplicación. No obstante, hagamos un tour por algunas de las opciones del menú.
+&#x20;Tenemos una buena ayuda en la aplicación. No obstante, hagamos un tour por algunas de las opciones del menú.
 
 <figure><img src="../../.gitbook/assets/image (216).png" alt=""><figcaption><p><a href="https://docs.portainer.io/user/docker/networks">https://docs.portainer.io</a></p></figcaption></figure>
 
-
-
-
-
-#### **Stack**
+**Stack**
 
 Es una colección de servicios, generalmente relacionados con una aplicación o uso. Por ejemplo, una definición de pila de WordPress puede incluir un contenedor de servidor web (como nginx) y un contenedor de base de datos (como MySQL).\
-
-
+\
 Portainer le permite implementar una pila completa desde una plantilla predeterminada o una plantilla personalizada.
 
 Debes ingresar un nombre para la pila o stack y establecer los valores de configuración necesarios que diferirán de una plantilla a otra. También puedes activar o desactivar **Habilitar control de acceso** según sea necesario.
@@ -72,6 +65,3 @@ Una etiqueta de no utilizado significa que Portainer no puede ver ninguna aplica
 Esta etiqueta también puede aparecer en recursos externos debido a la información limitada disponible.&#x20;
 
 En Portainer puede ver una lista de los volúmenes en su entorno, agregar nuevos volúmenes y eliminar volúmenes existentes.
-
-
-

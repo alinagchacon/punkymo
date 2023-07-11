@@ -33,7 +33,7 @@ Nos descargamos la versión TRUENAS CORE.
 
 Creamos la VM con los datos requeridos, esto es: 4GB de RAM, 3 discos duros para crear un RAID1 y en modo puente para tener acceso a la VM desde otro equipo de la red.
 
-<figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (119) (1).png" alt=""><figcaption></figcaption></figure>
 
 Durante el proceso de instalación seleccionamos un disco para realizar la instalación del SO, dejando los otros dos discos libres por el momento. Seleccionamos además el modo de arranque con BIOS porque funciona con prácticamente todas las placas base. Una vez hecho esto, nos pedirá reiniciar el sistema asegurándonos extraer la ISO del medio óptico.
 

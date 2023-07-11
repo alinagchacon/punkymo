@@ -48,7 +48,7 @@ Toda la simulación se encapsula en una serie de archivos que actúan como conte
 
 ### Contenedores
 
-Los contenedores solo requieren los componentes del SO necesarios para ejecutar la aplicación. Por lo general, Linux y Windows se utilizan como SO que se comunican directamente con <mark style="color:blue;">`Container Engine`</mark>. Cada contenedor comparte el k<mark style="color:blue;">`ernel`</mark> del sistema operativo host y, por lo general, también los archivos binarios y las bibliotecas. Para el uso eficiente de los recursos, los componentes compartidos son de solo lectura, lo que reduce el tamaño del contenedor y aumenta el tiempo de inicio. &#x20;
+Los contenedores solo requieren los componentes del SO necesarios para ejecutar la aplicación. Por lo general, Linux y Windows se utilizan como SO que se comunican directamente con <mark style="color:blue;">`Container Engine`</mark>. Cada contenedor comparte el <mark style="color:blue;">`kernel`</mark> del sistema operativo host y, por lo general, también los archivos binarios y las bibliotecas. Para el uso eficiente de los recursos, los componentes compartidos son de solo lectura, lo que reduce el tamaño del contenedor y aumenta el tiempo de inicio. &#x20;
 
 Algunas de las ventajas que puede traer el uso de los contenedores son:&#x20;
 

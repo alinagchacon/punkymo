@@ -66,7 +66,7 @@ Una vez apliquemos los cambias nos saltara una alerta que nos dice que todos los
 
 Una vez ya creado podemos ver como es el panel de nuestro grupo de almacenamiento y volumen. Como podemos ver el espacio del disco duro se queda bastante reducido.
 
-<figure><img src="../../../.gitbook/assets/image (3) (4) (1).png" alt=""><figcaption><p>Panel principal del administrador de almacenamiento</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (4).png" alt=""><figcaption><p>Panel principal del administrador de almacenamiento</p></figcaption></figure>
 
 ## Uso del administrador de almacenamiento
 
