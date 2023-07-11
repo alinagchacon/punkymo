@@ -108,7 +108,7 @@ sudo usermod -aG docker username
 
 docker \[option] \[command] \[arguments]
 
-
+***
 
 ### Comandos de Docker
 
@@ -355,7 +355,7 @@ crorvick/redhat      latest    bee79eeae3be   4 years ago     361MB
 
 #### Dockerfile
 
-Es la forma de automatizar el proceso de creación de una imagen de Docker en un "manifiesto", esto es un fichero llamado Dockerfile.
+Es la forma de automatizar el proceso de creación de una imagen de Docker en un "manifiesto", esto es un fichero llamado <mark style="color:blue;">`Dockerfile`</mark>.
 
 Este fichero usa instrucciones para:
 
@@ -365,7 +365,7 @@ Este fichero usa instrucciones para:
 * los puertos accesibles desde el exterior, y
 * el comando a ejecutar en el inicio del contenedor, entre otros.
 
-Algunas instrucciones propias del dockerfile:
+Algunas instrucciones propias del Dockerfile:
 
 * **MANTAINER**: configurar datos del autor, nombre y email &#x20;
 * **ENV**: configurar variables de entorno
@@ -384,7 +384,7 @@ Algunas instrucciones propias del dockerfile:
 
 **Ejemplo:**
 
-Veamos un ejemplo de dockerfile. El fichero se llama así tal cual (en este caso):
+Veamos un ejemplo de Dockerfile. El fichero se llama así tal cual (en este caso):
 
 ```
 FROM ubuntu:20.04
@@ -396,10 +396,10 @@ CMD ["bash"]
 
 Donde:
 
-FROM crea una capa a partir de la imagen de Docker ubuntu: 20.04. La imagen base de la cual partiremos.\
-COPY agrega archivos del directorio actual de su cliente Docker.\
-RUN crea su aplicación con make.\
-CMD especifica qué comando ejecutar dentro del contenedor.
+* FROM crea una capa a partir de la imagen de Docker Ubuntu: 20.04. La imagen base de la cual partiremos.
+* COPY agrega archivos del directorio actual de su cliente Docker.
+* RUN crea su aplicación con make.
+* CMD especifica qué comando ejecutar dentro del contenedor.
 
 Para poder crear esta imagen:
 

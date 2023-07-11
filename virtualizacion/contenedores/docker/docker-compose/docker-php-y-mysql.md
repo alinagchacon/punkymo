@@ -1,8 +1,8 @@
 ---
-description: de  docker-compose
+description: docker-compose
 ---
 
-# Ejemplo
+# Docker: PHP y MySQL
 
 Utilizaremos a modo de ejemplo la creación de varios contenedores relacionados entre sí, para levantar un sitio web programado con PHP, que se conecta a una DB en MySQL. De hecho, voy a utilizar una actividad llamada `LoginRegister` realizada en 1º año de Asix. Para ello necesitamos los servicios activos de:
 
@@ -36,9 +36,9 @@ Tenemos que preparar dos archivos de configuración:
 
 En este archivo tenemos las siguientes directivas:
 
-**Listen** -  define qué dirección IP y qué puertos escucha el servicio. En este caso, NGINX escucha en el puerto 80 en todas las direcciones IPv4 e IPv6. Si establecemos el parámetro default\_server le indicamos a nginx que utilice este bloque server por defecto para las peticiones que coincidan con las direcciones IP y los puertos.
+**Listen** -  define qué dirección IP y qué puertos escucha el servicio. En este caso, Nginx escucha en el puerto 80 en todas las direcciones IPv4 e IPv6. Si establecemos el parámetro <mark style="color:blue;">`default_server`</mark> le indicamos a Nginx que utilice este bloque server por defecto para las peticiones que coincidan con las direcciones IP y los puertos.
 
-**server\_name** - define los nombres de host de los que es responsable este bloque server. Establecer server\_name a \_ permite configurar NGINX para aceptar cualquier nombre de host para este bloque server.
+**server\_name** - define los nombres de host de los que es responsable este bloque server. Establecer <mark style="color:blue;">`server_name`</mark> a \_ permite configurar Nginx para aceptar cualquier nombre de host para este bloque server.
 
 **root** - establece la ruta del contenido web para este bloque server.
 
@@ -76,7 +76,7 @@ server {
 
 #### **Docker-compose.yml**&#x20;
 
-Del mismo modo que existen los Dockerfile, donde se puede configurar el estado de un contenedor de manera declarativa, en docker-compose existe el equivalente: los archivos `.yml`.
+Del mismo modo que existen los <mark style="color:blue;">`Dockerfile`</mark>, donde se puede configurar el estado de un contenedor de manera declarativa, en docker-compose existe el equivalente: los archivos `.yml`.
 
 Por tanto, un archivo de docker-compose es un archivo con extensión y formato yml. Para usarlo basta con crearlo y empezar a agregar el contenido.
 
@@ -88,7 +88,7 @@ Después de la versión viene  la sección de servicios. Puede haber tantos serv
 
 **version 3.8**: Es muy importante indicar la versión de las instrucciones que vamos a utilizar. Docker evoluciona, pero siempre hay compatibilidad con las versiones anteriores.
 
-**app**: Indica el nombre del servicio, que podría ser cualquiera. El nombre indica el tipo de servicio que estamos construyendo. Por ejemplo: MySQL, NGINX, etc.
+**app**: Indica el nombre del servicio, que podría ser cualquiera. El nombre indica el tipo de servicio que estamos construyendo. Por ejemplo: MySQL, Nginx, etc.
 
 **Nombres de servicios:** El nombre que usamos para cada servicio dentro de nuestro archivo <mark style="color:blue;">`yml`</mark> nos sirve como referencia para su uso en otros servicios.
 
@@ -98,11 +98,11 @@ Por ejemplo, si llamamos a un servicio como <mark style="color:blue;">`db`</mark
 
 **build:**  si necesitamos una imagen personalizada pudiera ser mejor usar un Dockerfile. La opción build nos permite indicar el directorio donde se encuentra. Indica dónde está el Dockerfile a utilizar para crear el contenedor. Si escribimos <mark style="color:blue;">`build .`</mark> se considera que el Dockerfile está en el directorio actual.&#x20;
 
-**command:** sobreescribe el comando predeterminado del contenedor. Esta opción es ideal para ejecutar un comando cuando inicia un servicio, por ejemplo, un servidor web.
+**command:** sobre escribe el comando predeterminado del contenedor. Esta opción es ideal para ejecutar un comando cuando inicia un servicio, por ejemplo, un servidor web.
 
-**ports:** nos dice los puertos externos e internos que se vincularán, siempre en el formato de <mark style="color:blue;">`host:contenedor`</mark>. También podemos especificar los protocolos `udp` o `tcp`.
+**ports:** nos dice los puertos externos e internos que se vincularán, siempre en el formato de <mark style="color:blue;">`host:contenedor`</mark>. También podemos especificar los protocolos <mark style="color:blue;">`udp`</mark> o <mark style="color:blue;">`tcp`</mark>.
 
-**expose:** también expone puertos.lLa diferencia con el comando `ports` es que los puertos solo estarán disponibles para los servicios vinculados, no para la máquina desde donde estamos ejecutando `docker-compose`.
+**expose:** también expone puertos. La diferencia con el comando <mark style="color:blue;">`ports`</mark> es que los puertos solo estarán disponibles para los servicios vinculados, no para la máquina desde donde estamos ejecutando <mark style="color:blue;">`docker-compose`</mark>.
 
 **depends\_on:** Si queremos que uno de nuestros servicios se ejecute después de otro. Por ejemplo, para que un servidor web funcione correctamente es necesario tener una base de datos que ya se encuentre en funcionamiento.
 
@@ -139,7 +139,7 @@ Tanto Windows, Linux como Mac utilizan ciertos valores para almacenar informaci�
 
 </details>
 
-**volumes:** Se puede enviar partes de nuestro S.O a un servicio usando uno o varios volúmenes. Para esto usamos la sintaxis <mark style="color:blue;">`host:contenedor`</mark>, donde `Host` puede ser una ubicación en tu sistema o también el nombre de un volumen que hayas creado con docker. Hace un mapeo entre el directorio del host y el directorio del contenedor. De este modo, cualquier cambio en el directorio local en el host, se hará de inmediato en el contenedor.
+**volumes:** Se puede enviar partes de nuestro S.O a un servicio usando uno o varios volúmenes. Para esto usamos la sintaxis <mark style="color:blue;">`host:contenedor`</mark>, donde <mark style="color:blue;">`Host`</mark> puede ser una ubicación en tu sistema o también el nombre de un volumen que hayas creado con docker. Hace un mapeo entre el directorio del host y el directorio del contenedor. De este modo, cualquier cambio en el directorio local en el host, se hará de inmediato en el contenedor.
 
 **restart :** Podemos aplicar políticas de reinicio a nuestros servicios. Puede tomar varios valores:
 
@@ -161,11 +161,10 @@ services:
     image: php:8-fpm
     container_name: miAppPHP    
     volumes:
-      ./LoginRegister:/var/www/html/
-      ./log/php.log:/var/log/fpm-php.www.log
+      - LoginRegister:/var/www/loginregister/
+      - LoginRegister/log/php.log:/var/log/fpm-php.www.log
     networks:
       - app-network
-
   # MySQL database service
   db:
     image: mysql:8.0
@@ -175,8 +174,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
-      ./mysql/:/var/lib/mysql
-      ./DB/:/DB/
+      - LoginRegister/mysql/:/var/lib/mysql
+      - LoginRegister/DB/:/DB/
     networks:
       - app-network
 
@@ -199,9 +198,9 @@ services:
     ports:
       - 88:80
     volumes:
-      ./LoginRegister:/var/www/html/
-      ./nginx/conf.d:/etc/nginx/conf.d/
-      ./log/nginx:/var/log/nginx/
+      - LoginRegister:/var/www/loginregister/
+      - LoginRegister/nginx/conf.d:/etc/nginx/conf.d/
+      - LoginRegister/log/nginx:/var/log/nginx/
     networks:
       - app-network
 
@@ -211,7 +210,7 @@ networks:
 
 ```
 
-Como podemos ver tenemos que utilizar la imagen de PHP, `FPM - FastCGI Process Manager` que es una implementación alternativa al PHP FastCGI con algunas características adicionales (la mayoría) útiles para sitios web con mucho tráfico.
+Como podemos ver tenemos que utilizar la imagen de PHP, <mark style="color:blue;">`FPM - FastCGI Process Manager`</mark> que es una implementación alternativa al PHP FastCGI con algunas características adicionales (la mayoría) útiles para sitios web con mucho tráfico.
 
 &#x20;Un par de características que posee:
 
@@ -239,7 +238,7 @@ Copiar la DB users.sql en la DB creada users1:\
 
 
 ```
-bash-4.4# mysql -p -u root --password=1234 users1 < users.sql 
+mysql -p -u root --password=1234 users1 < users.sql 
 ```
 
 &#x20; Algunos comandos básicos de MySQL:\
@@ -272,9 +271,7 @@ Se nos abrirá una nueva página donde podemos aplicar diferentes opciones para 
 
 En el editor web volcamos el contenido de nuestro archivo <mark style="color:blue;">`docker-compose.yml`</mark> previamente creado. En caso de tener algún aparecerá una notificación en rojo que nos impedirá continuar &#x20;
 
-
-
-<figure><img src="../../../../.gitbook/assets/image (4) (6) (1).png" alt=""><figcaption><p>docker-compose.yml</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>docker-compose.yml para crear el stack</p></figcaption></figure>
 
 Una vez hecho esto, clicamos a <mark style="color:blue;">`deploy`</mark> para crear y desplegar todos los contenedores. Si todo está correcto, nos crea la colección y podremos acceder a la misma y veremos algo como lo siguiente:
 
@@ -289,15 +286,11 @@ Podemos observar los diferentes contenedores involucrados en desplegar la aplica
 
 #### Accediendo a PhpMyAdmin
 
-<figure><img src="../../../../.gitbook/assets/image (224).png" alt=""><figcaption><p>phpmyadmin</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (224).png" alt=""><figcaption><p>Accediendo a la base de datos en Phpmyadmin</p></figcaption></figure>
 
 #### Accediendo a la web
 
-<figure><img src="../../../../.gitbook/assets/image (225).png" alt=""><figcaption><p>El sitio web</p></figcaption></figure>
-
-
-
-
+<figure><img src="../../../../.gitbook/assets/image (225).png" alt=""><figcaption><p>El sitio web de prueba</p></figcaption></figure>
 
 ## Links
 

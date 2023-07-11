@@ -2,13 +2,13 @@
 description: Una aplicación con PHP y MYSQL
 ---
 
-# Nginx: php y mysql
+# Nginx: PHP y MySQL
 
 ## Introducción
 
-En esta sección vamos a ver el mismo ejemplo de aplicación web utilizando php y mysql que está configurado con docker. En este caso, toda la configuración se está estableciendo directamente en el sistema.
+En esta sección vamos a ver el mismo ejemplo de aplicación web utilizando php y mysql que está configurado con docker, solo que, en este caso, vamos a ver cómo se haría la configuración nativa, en el sistema.
 
-El ejemplo en cuestión es el utilizado en la sección <mark style="color:blue;">`contenedores - docker - docker-compose - ejemplo`</mark>  para levantar un sitio web programado con <mark style="color:blue;">`PHP`</mark>, que se conecta a una `DB` en `MySQL,` utilizando la actividad llamada <mark style="color:blue;">`LoginRegister`</mark> realizada en 1º año de Asix. Para ello necesitamos los servicios activos de:
+El ejemplo en cuestión es el mismo utilizado en la sección <mark style="color:blue;">`contenedores - docker - docker-compose - ejemplo`</mark>  para levantar un sitio web programado con <mark style="color:blue;">`PHP`</mark>, que se conecta a una `DB` en <mark style="color:blue;">`MySQL`</mark><mark style="color:blue;">,</mark> utilizando la actividad llamada <mark style="color:blue;">`LoginRegister`</mark> realizada en 1º año de Asix. Para ello necesitamos los servicios activos de:
 
 * Apache o <mark style="color:blue;">`Nginx`</mark> para levantar el servicio web
 * <mark style="color:blue;">`MySql`</mark> para la base de datos
@@ -19,7 +19,7 @@ El ejemplo en cuestión es el utilizado en la sección <mark style="color:blue;"
 
 En el directorio <mark style="color:blue;">`/var/www/`</mark> creamos una carpeta que va a contener nuestros archivos de la aplicación web. Yo le he llamado simplemente <mark style="color:blue;">`example.com`</mark>:
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>/var/www/example.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>/var/www/example.com</p></figcaption></figure>
 
 Como podréis observar el dueño de la carpeta se llama www-data y no root, es es porque tenemos que modificar los archivos del directorio:
 
@@ -29,11 +29,11 @@ chown -R www-data:www-data /var/www/example.com
 
 Volcamos el contenido dentro del directorio obteniendo lo siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Contenido en /var/www/example.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Contenido en /var/www/example.com</p></figcaption></figure>
 
 Tendrás que tener en cuenta que en el archivo <mark style="color:blue;">`conexion.php`</mark> debes modificar los parámetros de conexión a la base de datos, como mínimo el password:
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Archivo conexion.php</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Archivo conexion.php</p></figcaption></figure>
 
 ### Configurando Nginx&#x20;
 
@@ -74,9 +74,9 @@ sudo nginx -s reload
 
 Para poder acceder a nuestro sitio web con el nombre de dominio que le hemos asignado tenemos que modificar el archivo /etc/hosts:
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Archivo /etc/hosts</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Archivo /etc/hosts</p></figcaption></figure>
 
 Finalmente, nos vamos al navegador y accedemos a nuestro sitio:
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>example.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>example.com</p></figcaption></figure>
 

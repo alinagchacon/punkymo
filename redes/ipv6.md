@@ -58,7 +58,7 @@ Las direcciones IPv6:
 
 #### &#x20;
 
-<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Sistema hexadecimal</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1) (2).png" alt=""><figcaption><p>Sistema hexadecimal</p></figcaption></figure>
 
 ## Cambios relevantes en IPv6
 
@@ -135,7 +135,7 @@ Un paquete que se envía a una dirección `UNICAST` es recibido por la interfaz 
 
 &#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### MULTICAST
 

@@ -93,7 +93,7 @@ Para probar el uso de SSH podemos conectarnos desde el CMD de Windows. Recuerda 
 
 Por tema de seguridad no es conveniente brindar acceso al root a través de SSH.
 
-<figure><img src="../../.gitbook/assets/image (5) (2) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Cuentas de usuarios
 

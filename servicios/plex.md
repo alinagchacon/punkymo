@@ -91,7 +91,7 @@ Una vez terminada esa parte de la configuración, en mi caso, seleccioné Netfli
 
 ## Links
 
-<figure><img src="../.gitbook/assets/image (8) (5).png" alt=""><figcaption><p>Plex - Netflix</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (2).png" alt=""><figcaption><p>Plex - Netflix</p></figcaption></figure>
 
 
 

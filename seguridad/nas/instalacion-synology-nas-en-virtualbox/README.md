@@ -74,7 +74,7 @@ Para seleccionar un dispositivo debemos introducir el siguiente comando y acepta
 sudo ./rploader.sh serialgen DS3615xs
 ```
 
-<figure><img src="../../../.gitbook/assets/image (8) (2).png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (2) (1).png" alt=""><figcaption><p>Generador de MAC</p></figcaption></figure>
 
 En este paso es **muy importante** apuntar la dirección MAC que nos aparece ya que esta es diferente en cada instalación. En este caso será la:  **00:11:32:94:68:8A.** Si finalmente no la apuntamos la podemos encontrar en el archivo **user\_config.json.**
 

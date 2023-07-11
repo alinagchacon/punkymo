@@ -92,7 +92,7 @@ Dentro de <mark style="color:blue;">`/var/www/example1.com`</mark> creamos una c
 
 &#x20;<mark style="color:blue;">`/var/www/example1.com/img`</mark> de modo que tendremos una estructura como la siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (9) (1) (3) (1).png" alt=""><figcaption><p>Contenido del sitio example1.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (3).png" alt=""><figcaption><p>Contenido del sitio example1.com</p></figcaption></figure>
 
 El archivo <mark style="color:blue;">`index.html`</mark> es muy simple:
 
