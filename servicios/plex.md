@@ -70,7 +70,7 @@ Una vez que esté instalado puedes acceder a través de:
 
 Esto te permite acceder a una pantalla  de inicio de sesión de Plex.  Ingresa tus credenciales o regístrate.&#x20;
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Plex en Ubuntu local</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p>Plex en Ubuntu local</p></figcaption></figure>
 
 Una vez que te registras deberías obtener esta pantalla como ésta:
 

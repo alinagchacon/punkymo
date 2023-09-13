@@ -39,7 +39,7 @@ Arduino IDE no se encuentra en los repositorios oficiales de Ubuntu por lo que *
 
 Nos vamos a descargar la última versión de Arduino IDE porque de este modo podemos cambiar en cualquier momento de placa y la versión lo soportará.
 
-<figure><img src="../.gitbook/assets/image (228).png" alt=""><figcaption><p>Sitio de descarga de Arduino IDE en <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (228).png" alt=""><figcaption><p>Sitio de descarga de Arduino IDE en <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p></figcaption></figure>
 
 ### Opción 1
 
@@ -90,7 +90,7 @@ sudo apt install arduino
 
 Y se nos instala la versión 1.8.19.
 
-<figure><img src="../.gitbook/assets/image (230).png" alt=""><figcaption><p>Arduino 1.8.19 instalado en Ubuntu 22.04</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (230).png" alt=""><figcaption><p>Arduino 1.8.19 instalado en Ubuntu 22.04</p></figcaption></figure>
 
 
 
@@ -98,7 +98,7 @@ Y se nos instala la versión 1.8.19.
 
 La extension board GPIO de la placa ESP32-S3 WROOM nos permite utilizar el ESP32-S3 de un modo más sencillo. Las interfaces de hardware de ESP32-S3 WROOM se distribuyen de la siguiente manera:
 
-<figure><img src="../.gitbook/assets/image (231).png" alt=""><figcaption><p>ESP32</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (231).png" alt=""><figcaption><p>ESP32</p></figcaption></figure>
 
 Donde:&#x20;
 
@@ -126,7 +126,7 @@ En dicho sitio nos dicen que los dispositivos CH340 USB no funcionan en la versi
 
 `ls /dev` no nos lista una entrada ttyUSB0.
 
-<figure><img src="../.gitbook/assets/image (232).png" alt=""><figcaption><p>Menú Tools de Arduino IDE</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (232).png" alt=""><figcaption><p>Menú Tools de Arduino IDE</p></figcaption></figure>
 
 
 
@@ -164,15 +164,15 @@ Lo primero es configurar la placa ESP32-S3 para poder trabajar con ella. Lo más
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-<figure><img src="../.gitbook/assets/image (233).png" alt=""><figcaption><p>Preferencias en el menú de Arduino IDE</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (233).png" alt=""><figcaption><p>Preferencias en el menú de Arduino IDE</p></figcaption></figure>
 
 Ahora clicamos `Boards Manager` y escribimos `esp32` y seleccionamos la versión `2.0.5`，y he instalamos.
 
-<figure><img src="../.gitbook/assets/image (234).png" alt=""><figcaption><p>nstalando el software de la ESP32</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (234).png" alt=""><figcaption><p>nstalando el software de la ESP32</p></figcaption></figure>
 
 Una vez instalado el chip de la ESP32 hacemos click en “Tools” en el menú seleccionamos “Board: "Arduino Uno" y ya podremos ver la información de la ESP32.
 
-<figure><img src="../.gitbook/assets/image (236).png" alt=""><figcaption><p>Ya tenemos instalado el software de la ESP32</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (236).png" alt=""><figcaption><p>Ya tenemos instalado el software de la ESP32</p></figcaption></figure>
 
 En el menú que se despliega selecciona `ESP32-S3 Dev Module` y ya se debe tener acceso a la información de la placa.
 

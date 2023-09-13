@@ -127,7 +127,7 @@ mkdir ~/.sops
 mv age/key.txt ~/.sops
 ```
 
-<figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption><p>Tener en cuenta que estoy como root</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (61) (2).png" alt=""><figcaption><p>Tener en cuenta que estoy como root</p></figcaption></figure>
 
 Tengamos en cuenta que al mover nuestro fichero de claves pública y privada a nueva localización necesitamos agregar variables de entorno. Para ello, nos aseguramos que estemos un ejecutando zsh (Z shell) o bashrc  (bash) o bench RC. Como estoy testeando esto desde Debian, pues tengo el bash file:
 

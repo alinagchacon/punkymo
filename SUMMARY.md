@@ -83,7 +83,8 @@
 ## Misceláneas
 
 * [Comandos de Linux](miscelaneas/comandos-de-linux.md)
-* [Arduino](miscelaneas/arduino.md)
+* [Arduino](miscelaneas/arduino/README.md)
+  * [Capítulo 0 Blink](miscelaneas/arduino/capitulo-0-blink.md)
 
 ## Virtualización
 

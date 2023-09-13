@@ -271,7 +271,7 @@ Se nos abrirá una nueva página donde podemos aplicar diferentes opciones para 
 
 En el editor web volcamos el contenido de nuestro archivo <mark style="color:blue;">`docker-compose.yml`</mark> previamente creado. En caso de tener algún aparecerá una notificación en rojo que nos impedirá continuar &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>docker-compose.yml para crear el stack</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (61).png" alt=""><figcaption><p>docker-compose.yml para crear el stack</p></figcaption></figure>
 
 Una vez hecho esto, clicamos a <mark style="color:blue;">`deploy`</mark> para crear y desplegar todos los contenedores. Si todo está correcto, nos crea la colección y podremos acceder a la misma y veremos algo como lo siguiente:
 
