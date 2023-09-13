@@ -2,7 +2,7 @@
 description: www.freenove.com
 ---
 
-# Capítulo 2
+# Capítulo 2 Botton & LED
 
 Por lo general, hay tres partes básicas en un dispositivo de control automático completo: ENTRADA, SALIDA y CONTROL.
 
