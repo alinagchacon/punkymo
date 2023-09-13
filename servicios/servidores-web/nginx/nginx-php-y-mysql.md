@@ -19,7 +19,7 @@ El ejemplo en cuestión es el mismo utilizado en la sección <mark style="color:
 
 En el directorio <mark style="color:blue;">`/var/www/`</mark> creamos una carpeta que va a contener nuestros archivos de la aplicación web. Yo le he llamado simplemente <mark style="color:blue;">`example.com`</mark>:
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>/var/www/example.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (6).png" alt=""><figcaption><p>/var/www/example.com</p></figcaption></figure>
 
 Como podréis observar el dueño de la carpeta se llama www-data y no root, es es porque tenemos que modificar los archivos del directorio:
 
@@ -33,7 +33,7 @@ Volcamos el contenido dentro del directorio obteniendo lo siguiente:
 
 Tendrás que tener en cuenta que en el archivo <mark style="color:blue;">`conexion.php`</mark> debes modificar los parámetros de conexión a la base de datos, como mínimo el password:
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Archivo conexion.php</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (4).png" alt=""><figcaption><p>Archivo conexion.php</p></figcaption></figure>
 
 ### Configurando Nginx&#x20;
 

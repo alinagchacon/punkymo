@@ -263,7 +263,7 @@ Nos vamos a la herramienta stacks de Portainer, donde podremos crear nuestra "co
 
 Una vez en el apartado vamos a crear un nuevo stack:
 
-<figure><img src="../../../../.gitbook/assets/image (7) (6).png" alt=""><figcaption><p>Creamos un nuevo stack</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (6) (1).png" alt=""><figcaption><p>Creamos un nuevo stack</p></figcaption></figure>
 
 Se nos abrirá una nueva página donde podemos aplicar diferentes opciones para crear una colección entre las que tenemos subir nuestro docker-compose.yml, usar un repositorio de git. Aquí utilizaremos el editor web:
 

@@ -85,6 +85,8 @@
 * [Comandos de Linux](miscelaneas/comandos-de-linux.md)
 * [Arduino](miscelaneas/arduino/README.md)
   * [Capítulo 0 Blink](miscelaneas/arduino/capitulo-0-blink.md)
+  * [Capítulo 1 Led](miscelaneas/arduino/capitulo-1-led.md)
+  * [Capítulo 2](miscelaneas/arduino/capitulo-2.md)
 
 ## Virtualización
 

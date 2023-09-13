@@ -145,7 +145,7 @@ para hacerlo apuntar al fichero adecuado. Comprueba haciendo:
 
 Si vuelves a probar el nslookup veremos que funciona como se espera que haga:
 
-<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Links
 
