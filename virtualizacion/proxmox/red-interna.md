@@ -81,6 +81,46 @@ De hecho, la guía ha sido de la misma wiki de Proxmox:
 
 <figure><img src="../../.gitbook/assets/image (242).png" alt=""><figcaption><p><a href="https://pve.proxmox.com/pve-docs/images/default-network-setup-routed.svg">https://pve.proxmox.com/pve-docs/images/default-network-setup-routed.svg</a></p></figcaption></figure>
 
+
+
+La configuración que monté fue la siguiente:
+
+En Proxmox:
+
+* RAM: 6GB / Procesadores: 8
+* Red: en modo puente (bridge)
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Configuración de la VM de Proxmox en VMware</p></figcaption></figure>
+
+Las direcciones IP de Proxmox serían:
+
+* **ens33**: 192.168.1.128 / gateway: 192.168.1.1 (en la misma red del host con IP: 192.168.1.100)
+* **vmbr0**: 192.168.44.128 (el linux bridge)
+
+Las IP se configuran de manera estática como muestra la siguiente imagen:
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Configuración de /etc/network/interfaces en Proxmox</p></figcaption></figure>
+
+Adicionalmente, añadimos las líneas correspondientes al IPTABLES para reescribir los paquetes de entrada y salida, de modo que parezca que se originan en el host. También tenemos que descomentar la línea `net.ipv4.ip_forward=1` en el fichero `/etc/sysctl.conf`:
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Archivo /etc/sysctl.conf</p></figcaption></figure>
+
+Por supuesto, tenemos que actualizar el servicio de networking para que asuma los cambios realizados. Para ello hacemos:
+
+```
+systemctl restart networking.service
+```
+
+
+
+No fue lo único. Como ya tenía instalada una VM con Debian tuve que modificar manualmente la dirección IP para que estuviera en la red interna de vmbr0. Esto es: 192.168.44.130/24 y el gateway  192.168.44.128 que se corresponde con la IP del host.&#x20;
+
+Adicionalmente, tuve que editar el  `/etc/apt/sources.list` para poder actualizar la lista de paquetes una vez que tenía conexión con el exterior a través del host.
+
+Recuerda que el archivo `sources.list` es un componente esencial en los sistemas basados en Debian, como Ubuntu. Permite gestionar los repositorios de software desde los cuales el S.O.  descarga e instala paquetes y actualizaciones.&#x20;
+
+Este archivo contiene la lista de URLs que apuntan a los repositorios de paquetes, donde cada línea corresponde con un repositorio que contiene información de la ubicación, versión entre otros detalles.&#x20;
+
 Os dejo los enlaces que me han ayudado.
 
 ### Links
