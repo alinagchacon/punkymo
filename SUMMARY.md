@@ -103,6 +103,7 @@
   * [Proxmox en VirtualBox](virtualizacion/proxmox/proxmox-en-virtualbox.md)
   * [Entorno Proxmox](virtualizacion/proxmox/entorno-proxmox.md)
   * [Clúster](virtualizacion/proxmox/cluster.md)
+  * [Red interna](virtualizacion/proxmox/red-interna.md)
 * [Portainer](virtualizacion/portainer/README.md)
   * [en Portainer](virtualizacion/portainer/en-portainer.md)
 * [Pi-hole](virtualizacion/pi-hole.md)
