@@ -1,6 +1,6 @@
 ---
-description: JLM
+description: Joel López Molina
 ---
 
-# Personalizar paginas de inicio
+# Personalizar páginas de inicio
 

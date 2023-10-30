@@ -15,7 +15,7 @@
       * [Configuración de red](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/configuracion-de-red.md)
       * [Copias de seguridad (restauración)](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/copias-de-seguridad-restauracion.md)
       * [Seguridad](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/seguridad.md)
-      * [Personalizar paginas de inicio](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/personalizar-paginas-de-inicio.md)
+      * [Personalizar páginas de inicio](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/personalizar-paginas-de-inicio.md)
       * [Servicio de notificaciones](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/servicio-de-notificaciones.md)
     * [Centro de paquetes Synology](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/README.md)
       * [Servidores multimedia](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/servidores-multimedia.md)

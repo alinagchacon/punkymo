@@ -1,5 +1,5 @@
 ---
-description: JLM
+description: Joel López Molina
 ---
 
 # Actualización Synology NAS
