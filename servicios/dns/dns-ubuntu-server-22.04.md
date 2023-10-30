@@ -201,4 +201,5 @@ Si vuelves a probar el nslookup veremos que funciona como se espera que haga:
 * [https://www.digitalocean.com/community/tutorials/how-to-configure-bind-as-a-private-network-dns-server-on-ubuntu-18-04-es](https://www.digitalocean.com/community/tutorials/how-to-configure-bind-as-a-private-network-dns-server-on-ubuntu-18-04-es)
 * [https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html#/etc/resolv.conf](https://www.freedesktop.org/software/systemd/man/systemd-resolved.service.html#/etc/resolv.conf)
 * [https://netplan.io/examples](https://netplan.io/examples)
+* [https://blog.sysdual.com/instalacion-y-configuracion-del-servicio-dns-en-ubuntu-server-20-04/](https://blog.sysdual.com/instalacion-y-configuracion-del-servicio-dns-en-ubuntu-server-20-04/)&#x20;
 
