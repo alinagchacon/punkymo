@@ -29,6 +29,7 @@
 * [SOPS/AGE](seguridad/sops-age.md)
   * [SOPS/AGE ++](seguridad/sops-age-++.md)
 * [Instalación Sophos Firewall XG](seguridad/instalacion-sophos-firewall-xg.md)
+* [Rsync](seguridad/rsync.md)
 
 ***
 
