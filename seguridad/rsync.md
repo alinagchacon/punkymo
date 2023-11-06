@@ -116,6 +116,49 @@ rsync -rav destino/ origen/
 
 Este mismo proceso se puede realizar con un `pendrive` o `hdd` externo que tengamos conectado a nuestro equipo. Solo tienes que tener claro el path hasta el directorio de interés.
 
+
+
+### Copiando de un directorio a un pendrive
+
+Algo que perfectamente pudiéramos querer hacer es copiar a un pendrive. Como estoy haciendo las pruebas en un Ubuntu Server, al insertar mi pendrive en el USB no se "monta" automáticamente con lo cual tuve que hacerlo manual. Para ello hacemos lo siguiente:
+
+Crear un directorio dentro /media: Para ello usamos el comando:\
+
+
+```
+mkdir /media/usb
+```
+
+Ahora identificamos el nombre de la unidad que queremos montar. Para ello usamos el comando:
+
+```
+ls -l /dev/sd*
+```
+
+Nos debe mostrar el listado de /dev/sda, /dev/sda1,  /dev/sda2 que tengamos. En mi caso, solo tengo un disco duro, sin particionar, por tanto,  /dev/sda1.
+
+Una vez que tengamos conectados el USB y volvemos a hacer ls -l:
+
+```
+ls -l /dev/sd*
+```
+
+Veremos que aparece en el listado /dev/sdb1 que es nuestro pendrive.
+
+Montamos la memoria USB con el comando:
+
+```
+mount -t exfat /dev/sdb1 /media/usb
+```
+
+Para realizar cualquier operación con nuestro pendrive, tenemos que ir a la localización `/media/usb`.
+
+Cuando hayamos terminado, debemos desmontar la memoria y para ello:
+
+```
+umount /media/usb
+```
+
 ### Copiando archivos entre equipos remotos
 
 Veamos la parte más interesante del comando que es precisamente la copia de archivos entre sistemas remotos. Supongamos ahora que la carpeta de destino está en un equipo remoto. Para hacer este tipo de pruebas necesitamos alguna de las siguientes opciones:
