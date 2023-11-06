@@ -22,7 +22,7 @@ sudo apt update
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 ```
 
-#### **Añadir la clave de GPG para el repositorio oficial de Docker. De no estar, Ubuntu no lo instala**
+#### **Añadir (importar) la clave de GPG para el repositorio oficial de Docker. De no estar, Ubuntu no lo instala**
 
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -34,6 +34,13 @@ Sin embargo, el comando anterior `apt-key` está <mark style="color:orange;">dep
 sudo mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
+
+Donde:&#x20;
+
+1. `curl` es una herramienta  que se utiliza para hacer solicitudes HTTP, como descargar archivos desde la web.
+2. `-fsSL`:  son opciones del comando curl que indican que los errores se deben tratar de modo silencioso.
+3. `https://download.docker.com/linux/ubuntu/gpg`: Es la URL desde donde se descarga la clave GPG de Docker para Ubuntu y que se utiliza para verificar la autenticidad de los paquetes de Docker a instalar en el sistema.
+4. `sudo apt-key add -` se ejecuta después de la descarga y para agregar la clave GPG al almacén de claves del sistema.&#x20;
 
 **Agregar el repositorio de Docker a las fuentes de APT**
 
