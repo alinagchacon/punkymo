@@ -95,6 +95,7 @@
 * [Contenedores](virtualizacion/contenedores/README.md)
   * [Docker](virtualizacion/contenedores/docker/README.md)
     * [Instalando Docker](virtualizacion/contenedores/docker/instalando-docker.md)
+    * [Portainer](virtualizacion/contenedores/docker/portainer.md)
     * [Docker compose](virtualizacion/contenedores/docker/docker-compose/README.md)
       * [Docker: PHP y MySQL](virtualizacion/contenedores/docker/docker-compose/ejemplo.md)
     * [YAML](virtualizacion/contenedores/docker/yaml.md)
