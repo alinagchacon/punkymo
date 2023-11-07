@@ -111,4 +111,5 @@
   * [Dentro de Portainer](virtualizacion/portainer/dentro-de-portainer.md)
 * [Pi-hole](virtualizacion/pi-hole.md)
   * [Instalando Pi-hole](virtualizacion/pi-hole/instalando-pi-hole.md)
+* [Instalando Wordpress](virtualizacion/instalando-wordpress.md)
 * [VPN](virtualizacion/vpn.md)
