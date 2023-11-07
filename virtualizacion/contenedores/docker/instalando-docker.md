@@ -141,6 +141,20 @@ Los contenedores de Docker se construyen con imágenes de Docker. Por defecto, s
 
 Cualquiera puede alojar sus imágenes en Docker Hub, de modo que la mayoría de las aplicaciones y las distribuciones de Linux que necesitará tendrán imágenes alojadas allí.
 
+### ¿Pero, qué es una imagen de Docker?
+
+Una imagen `Docker` es un archivo estático que contiene lo necesario para crear un contenedor. Incluye: el sistema operativo base, el código de la aplicación y las dependencias. Las imágenes se almacenan en registros de Docker, como Docker Hub, y se pueden compartir y reutilizar.
+
+Ya que estamos con la estructura de Docker, veamos también que es el motor de Docker.&#x20;
+
+Docker utiliza el componente `Docker Engine`, que administra y ejecuta los contenedores y consta de tres partes:&#x20;
+
+* servidor Docker: tiene una API que permite a los usuarios y aplicaciones interactuar con Docker
+* daemon Docker:administra los contenedores
+* interfaz de línea de comandos (CLI): se utiliza para dar instrucciones a Docker a través de la línea de comandos.
+
+Adicionalmente, Docker proporciona lo que se denomina herramientas de orquestación como es el caso de: `Docker Compose` y `Kubernetes.` Estas herramientas permiten administrar y escalar contenedores en clústeres de servidores. También  facilitan la administración de aplicaciones distribuidas y la orquestación de contenedores en entornos de producción.
+
 Para **buscar** la imagen de Ubuntu:
 
 ```
