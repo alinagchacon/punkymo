@@ -63,3 +63,9 @@ services:
 Para acceder a nuestro contenedor de pihole basta usar el navegador, escribiendo la IP de nuestra MV. Esto es: <mark style="color:blue;">`http://192.168.1.79`</mark>
 
 o h[ttp://192.168.1.79/admin/index.php](http://192.168.1.34/admin/index.php)
+
+
+
+### Links
+
+* [https://docs.pi-hole.net/main/basic-install/](https://docs.pi-hole.net/main/basic-install/)
