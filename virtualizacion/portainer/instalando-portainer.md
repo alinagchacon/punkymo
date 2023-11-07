@@ -2,13 +2,22 @@
 description: Instalando Portainer
 ---
 
-# Instalar Portainer
+# Instalando Portainer
 
-### Instalando  Portainer&#x20;
+### Instalar  Portainer&#x20;
 
-Vamos con la instalación de Portainer. Para ello toma nota del sitio siguiente:
+Portainer consta de dos elementos: `Portainer Server` y `Portainer Agent`. Estos elementos se ejecutan como contenedores Docker.&#x20;
 
-Creamos el volumen que Portainer Server usará para almacenar su base de datos:
+Vamos con la instalación del contenedor de Portainer Server. Para ello toma nota del sitio siguiente: [https://docs.portainer.io/start/install-ce/server/docker/linux](https://docs.portainer.io/start/install-ce/server/docker/linux).&#x20;
+
+Entre los requisitos que necesitamos tener en consideración están:
+
+* La última versión de Docker instalada y funcionando.&#x20;
+* Acceso de super usuario (sudo) en la VM que alojará la instancia de Portainer Server&#x20;
+
+De forma predeterminada, Portainer Server accede a la interfaz de usuario a través del puerto `9443` y expondrá un servidor de túnel TCP a través del puerto `8000`. Esto último es opcional.
+
+Lo primero que tenemos que hacer es crear el volumen que Portainer Server usará para almacenar su base de datos.
 
 <pre class="language-bash"><code class="lang-bash"><strong>docker volume create portainer_data
 </strong></code></pre>
@@ -58,14 +67,17 @@ Si necesitas reiniciar el servicio de Portainer haríamos:
 docker restart portainer
 ```
 
-Nos vamos al navegador y escribimos la IP de la VM y el puerto de acceso:
+### Logging In
 
-<mark style="color:blue;">`https://192.168.1.79:9443`</mark>\
+Ya se completó la instalación, con lo cual podemos iniciar sesión en la instancia de Portainer Server abriendo un navegador web y yendo a:
 
+```
+https://IP_de_VM:9443
+```
 
 <figure><img src="../../.gitbook/assets/image (200).png" alt=""><figcaption><p>Accediendo al servicio de Portainer en la VM de Alpine </p></figcaption></figure>
 
-Una vez dentro, ya podemos utilizar el Portainer.
+Una vez dentro, ya podemos comenzar a utilizar Portainer.
 
 
 
