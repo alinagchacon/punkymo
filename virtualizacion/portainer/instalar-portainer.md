@@ -1,43 +1,12 @@
 ---
-description: Instalando
+description: Instalando Portainer
 ---
 
-# Portainer
+# Instalar Portainer
 
-### Instalando Docker y Portainer&#x20;
+### Instalando  Portainer&#x20;
 
-#### Docker
-
-Comenzamos por instalar Docker y para ello basta con:
-
-```
-apk add docker
-apk add docker-compose
-```
-
-Para iniciar el servicio de Docker daemon al inicio:
-
-```
-rc-update add docker boot 
-service docker start
-```
-
-Para comprobar el estado del servicio:
-
-```
-service docker status
-```
-
-En el caso de que el servicio estuviera apagado, lo iniciamos y comprobamos nuevamente:
-
-```
-service docker start
-service docker status
-```
-
-#### Portainer
-
-Ahora vamos con la instalación de Portainer. Para ello toma nota del sitio siguiente:
+Vamos con la instalación de Portainer. Para ello toma nota del sitio siguiente:
 
 Creamos el volumen que Portainer Server usará para almacenar su base de datos:
 
@@ -51,7 +20,7 @@ Si quieres verificar el volume recién creado puedes escribir:
 
 Y verás algo como lo siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption><p>Inspeccionando un volumen de docker</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption><p>Inspeccionando un volumen de docker</p></figcaption></figure>
 
 Ahora, descargamos e instalamos el contenedor de Portainer Server:
 
@@ -60,7 +29,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
 --restart=always -v \
 /var/run/docker.sock:/var/run/docker.sock -v\
 portainer_data:/data \
-portainer/portainer-ce:2.9.3
+portainer/portainer-ce:latest
 ```
 
 Realmente, es toda una línea:&#x20;
@@ -71,7 +40,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /va
 
 Al ejecutar esta línea de comando nos dice que no puede encontrar la imagen de Portainer en el sistema, con lo cual la descarga la última imagen existente de portainer/portainer -ce.
 
-<figure><img src="../../../.gitbook/assets/image (211).png" alt=""><figcaption><p>Instalando Portainer en Docker</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (211).png" alt=""><figcaption><p>Instalando Portainer en Docker</p></figcaption></figure>
 
 De forma predeterminada, Portainer genera y utiliza un certificado SSL auto-firmado para asegurar el puerto 9443. Alternativamente, puede proporcionar su propio certificado SSL durante la instalación o mediante la interfaz de usuario de Portainer, una vez que se completa la instalación.
 
@@ -81,7 +50,7 @@ El servidor de Portainer ha sido instalado. Puedes comprobar si el contenedor de
 docker ps
 ```
 
-<figure><img src="../../../.gitbook/assets/image (218).png" alt=""><figcaption><p>Comprobando el servidor de Portainer</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (218).png" alt=""><figcaption><p>Comprobando el servidor de Portainer</p></figcaption></figure>
 
 Si necesitas reiniciar el servicio de Portainer haríamos:
 
@@ -94,13 +63,13 @@ Nos vamos al navegador y escribimos la IP de la VM y el puerto de acceso:
 <mark style="color:blue;">`https://192.168.1.79:9443`</mark>\
 
 
-<figure><img src="../../../.gitbook/assets/image (200).png" alt=""><figcaption><p>Accediendo al servicio de Portainer en la VM de Alpine </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (200).png" alt=""><figcaption><p>Accediendo al servicio de Portainer en la VM de Alpine </p></figcaption></figure>
 
 Una vez dentro, ya podemos utilizar el Portainer.
 
 
 
-<figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p>Accediendo a Portainer, recién instalado</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p>Accediendo a Portainer, recién instalado</p></figcaption></figure>
 
 ### Instalando Pi-hole
 
@@ -168,4 +137,4 @@ _**Portainer**_  es un conjunto de herramientas de administración de código ab
 
 Nos vamos a <mark style="color:blue;">`https://192.168.1.79:9443`</mark> y seleccionamos el modo de environment:
 
-<figure><img src="../../../.gitbook/assets/image (203).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (203).png" alt=""><figcaption></figcaption></figure>
