@@ -109,5 +109,6 @@
 * [Portainer](virtualizacion/portainer/README.md)
   * [Instalando Portainer](virtualizacion/portainer/instalando-portainer.md)
   * [Dentro de Portainer](virtualizacion/portainer/dentro-de-portainer.md)
-* [Pi-hole](virtualizacion/pi-hole.md)
+* [Pi-hole](virtualizacion/pi-hole/README.md)
+  * [Instalando Pi-hole](virtualizacion/pi-hole/instalando-pi-hole.md)
 * [VPN](virtualizacion/vpn.md)
