@@ -12,11 +12,16 @@ Pi-hole utiliza un dnsmasq modificado denominado FTLDNS, cURL, lighttpd, PHP y e
 
 En la [wikipedia ](https://es.wikipedia.org/wiki/Pi-hole)nos encontramos con lo siguiente:
 
-La aplicación sirve como un servidor DNS para una red privada (reemplazando cualquier servidor DNS preexistente proporcionado por otro dispositivo o el propio ISP), con la capacidad de bloquear anuncios y rastreadores de dominios para los dispositivos de los usuarios.&#x20;
-
-Obtiene listas de dominios publicitarios y de seguimiento a partir de fuentes predefinidas que pueden ser modificadas por el usuario con las que el Pi-hole compara las consultas DNS. Si se encuentra una coincidencia dentro de cualquiera de las listas, o de la lista negra del usuario, Pi-hole negará resolver el dominio solicitado y responderá al dispositivo solicitante con una página web en blanco.​
-
-Debido a que Pi-hole bloquea dominios a nivel de red, es capaz de bloquear anuncios, como banners publicitarios en una página web, pero también puede bloquear anuncios en lugares no convencionales, como en Android, iOS y smart TV.​
+* La aplicación sirve como un servidor DNS para una red privada (reemplazando cualquier servidor DNS preexistente proporcionado por otro dispositivo o el propio ISP), con la capacidad de bloquear anuncios y rastreadores de dominios para los dispositivos de los usuarios.&#x20;
+* Obtiene listas de dominios publicitarios y de seguimiento a partir de fuentes predefinidas que pueden ser modificadas por el usuario con las que el Pi-hole compara las consultas DNS. Si se encuentra una coincidencia dentro de cualquiera de las listas, o de la lista negra del usuario, Pi-hole negará resolver el dominio solicitado y responderá al dispositivo solicitante con una página web en blanco.​
+* Debido a que Pi-hole bloquea dominios a nivel de red, es capaz de bloquear anuncios, como banners publicitarios en una página web, pero también puede bloquear anuncios en lugares no convencionales, como en Android, iOS y smart TV.​
 
 Igualmente, los dominios pueden incluirse en una lista blanca de modo manual en caso de que la función de un sitio web se vea afectada por el bloqueo de dominios. Pi-hole también puede funcionar como una herramienta de monitorización de red que puede ayudar en la resolución de problemas de peticiones DNS y en la resolución de problemas de redes defectuosas.​
+
+En resumen, pi-hole es:
+
+* **Fácil de usar:** Una vez instalado, puedes usarlo de manera inmediata.
+* **Eficiente:** Puede bloquear la mayoría de los anuncios, contenido malicioso y otro contenido indeseable sin consumir muchos recursos.
+* **Gratuito:** De código abierto y gratuita.
+* **Personalizable:** Puedes configurarlo para bloquear contenido específico y agregar listas de servidores de confianza.
 
