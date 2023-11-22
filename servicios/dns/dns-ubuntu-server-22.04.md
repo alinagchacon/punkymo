@@ -181,10 +181,12 @@ verás que apunta a un archivo en:
 Entonces, modificamos el enlace simbólico haciendo lo siguiente:
 
 ```
-sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 ```
 
 para hacerlo apuntar al fichero adecuado. Comprueba haciendo:
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ```
 cat /etc/resolv.conf
