@@ -110,7 +110,7 @@
   * [Instalando Portainer](virtualizacion/portainer/instalando-portainer.md)
   * [Dentro de Portainer](virtualizacion/portainer/dentro-de-portainer.md)
 * [Pi-hole](virtualizacion/pi-hole.md)
-  * [Instalando Pi-hole en Docker](virtualizacion/pi-hole/instalando-pi-hole-en-docker.md)
+  * [Instalando Pi-hole en Docker](virtualizacion/pi-hole/instalando-pi-hole.md)
   * [Instalando Pi-hole en Debian](virtualizacion/pi-hole/instalando-pi-hole-en-debian.md)
 * [Instalando Wordpress](virtualizacion/instalando-wordpress.md)
 * [VPN](virtualizacion/vpn.md)

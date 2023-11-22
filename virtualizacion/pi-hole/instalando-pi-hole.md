@@ -2,7 +2,7 @@
 description: Pi-hole
 ---
 
-# Instalando Pi-hole
+# Instalando Pi-hole en Docker
 
 ### Instalando Pi-hole
 
