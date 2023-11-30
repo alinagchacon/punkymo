@@ -23,7 +23,7 @@ Sería recomendable tener un segundo servidor Ubuntu 22.04 que sirva como servid
 
 ### Observaciones
 
-Debes tener en cuenta que en esta guía el nombre del servidor de DNS principal que vamos a configurar debería ser <mark style="color:blue;">`ns1`</mark>, pero utilicé una instalación de Ubuntu Server llamada <mark style="color:red;">`haven`</mark> y no le cambié el nombre.
+Debes tener en cuenta que en esta guía el nombre del servidor de DNS principal que vamos a configurar debería ser <mark style="color:blue;">`ns1`</mark>, pero utilicé una instalación de Ubuntu Server a la que había llamado <mark style="color:red;">`haven`</mark> y no lo modifiqué.
 
 El dominio para el DNS es <mark style="color:blue;">`haven.local`</mark> con lo cual quedaría: <mark style="color:red;">`haven`</mark>.<mark style="color:blue;">`haven.local.`</mark>
 
