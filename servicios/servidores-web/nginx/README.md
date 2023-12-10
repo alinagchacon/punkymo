@@ -122,7 +122,7 @@ man nginx
 
 Directivas que podemos modificar:
 
-* **Worker\_processes**: el valor indicado en esta directiva podrá determinar el número máximo de procesos simultáneos que a gestionar por el servidor web. Para ello, es necesario conocer el número de procesos que puede gestionar nuestro equipo. \
+* **Worker\_processes**: el valor indicado en esta directiva podrá determinar el número máximo de procesos simultáneos que va a poder gestionar el servidor web. Para ello, es necesario conocer el número de procesos que puede gestionar nuestro equipo. \
   Podemos hacer uso de la siguiente instrucción y el valor que nos devuelva, sería el que indicaremos en esta directiva:
 
 ```
