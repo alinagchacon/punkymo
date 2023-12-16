@@ -246,16 +246,16 @@ Se puede restringir el acceso al servidor web, un solo sitio web (usando su bloq
 
 ### Protegiendo un directorio específico
 
-Veamos a ver cómo proteger con contraseña el directorio <mark style="color:blue;">`/var/www/html/protected`</mark>. Recuerda que sería el directorio que se crea con el archivo <mark style="color:blue;">`index.nginx-debian.html`</mark> por defecto con la instalación de Nginx. &#x20;
+Veamos a ver cómo proteger con contraseña el directorio <mark style="color:blue;">`/var/www/kirby.com/protected`</mark>. Dentro de la carpeta /protected he puesto el archivo <mark style="color:blue;">`index.html`</mark> para hacer la prueba. &#x20;
 
-Para ello agregamos el bloque <mark style="color:blue;">`location /protected`</mark> en el archivo de configuración <mark style="color:blue;">`default:`</mark>
+Para ello agregamos el bloque <mark style="color:blue;">`location /protected`</mark> en el archivo de configuración <mark style="color:blue;">`kirby.com.conf:`</mark>
 
 ```
 server {
-    listen         80 default_server;
-    server_name    localhost;
-    root           /var/www/html/;
-    index          index.html;
+    listen         80;
+    server_name    www.kirby.com kirby.com;
+    root           /var/www/kirby.com/;
+    index          index.php  index.html;
     location / {
                 try_files $uri $uri/ =404;
         }
@@ -264,6 +264,12 @@ server {
         auth_basic              "Restricted Access!";
         auth_basic_user_file    /etc/nginx/conf.d/.htpasswd;
     }
+    
+    location ~ /.php {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.2-fpm:sock;
+    }
+    
 }
 ```
 
