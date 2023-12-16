@@ -285,7 +285,7 @@ o bien:
 $ sudo nginx -s reload
 ```
 
-Con esto, la próxima vez que intentes acceder a ese directorio <mark style="color:blue;">`http:// localhost/protected`</mark> te pedirá que ingreses las credenciales de inicio de sesión (en mi caso user: <mark style="color:blue;">`kirby`</mark> y password: la elegida).
+Con esto, la próxima vez que intentes acceder a ese directorio <mark style="color:blue;">`http://www.kirby.com/protected`</mark> te pedirá que ingreses las credenciales de inicio de sesión (en mi caso user: <mark style="color:blue;">`kirby`</mark> y password: la elegida).
 
 Un inicio de sesión exitoso te permite acceder al contenido del directorio; de lo contrario, obtendrá un error de <mark style="color:blue;">`Se requiere autorización 401`</mark>.
 
