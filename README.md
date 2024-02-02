@@ -14,13 +14,7 @@ layout:
 
 # Inicio
 
-
-
-<figure><img src=".gitbook/assets/image (253).png" alt=""><figcaption></figcaption></figure>
-
 ## PUNKYMO
-
-
 
 En este espacio he querido unificar de cierto modo el contenido que estamos viendo en el ciclo de SMX y ASIX. Por supuesto, en los módulos que me atañen.
 
@@ -32,4 +26,8 @@ Finalmente, quiero agradecer a tres alumnos que están colaborando en el materia
 
 
 
-<figure><img src=".gitbook/assets/image (254).png" alt=""><figcaption></figcaption></figure>
+<div align="right">
+
+<figure><img src=".gitbook/assets/image (254).png" alt="" width="149"><figcaption></figcaption></figure>
+
+</div>
