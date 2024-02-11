@@ -29,7 +29,9 @@
 * [SOPS/AGE](seguridad/sops-age.md)
   * [SOPS/AGE ++](seguridad/sops-age-++.md)
 * [Instalación Sophos Firewall XG](seguridad/instalacion-sophos-firewall-xg.md)
-* [Instalando Pfsense](seguridad/instalando-pfsense.md)
+* [Pfsense](seguridad/pfsense/README.md)
+  * [Instalando Pfsense](seguridad/pfsense/instalando-pfsense.md)
+  * [OpenVPN en Pfsense](seguridad/pfsense/openvpn-en-pfsense.md)
 * [Rsync](seguridad/rsync/README.md)
   * [Ejemplo de rsync](seguridad/rsync/ejemplo-de-rsync.md)
 
