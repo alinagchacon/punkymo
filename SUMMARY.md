@@ -29,6 +29,7 @@
 * [SOPS/AGE](seguridad/sops-age.md)
   * [SOPS/AGE ++](seguridad/sops-age-++.md)
 * [Instalación Sophos Firewall XG](seguridad/instalacion-sophos-firewall-xg.md)
+* [Instalando Pfsense](seguridad/instalando-pfsense.md)
 * [Rsync](seguridad/rsync/README.md)
   * [Ejemplo de rsync](seguridad/rsync/ejemplo-de-rsync.md)
 
