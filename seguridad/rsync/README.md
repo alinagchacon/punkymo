@@ -98,7 +98,7 @@ _Nota: cuidado con poner o no "/" al final del nombre de las carpetas_.
 
 El tipo de copia que se ha realizado es una copia completa. No fuera demasiado eficiente si siempre fuera así. Por suerte, rsync hace copias incrementales. Para comprobarlo, modifiquemos un archivo de la carpeta de origen. Yo modifiqué el archivo `file1` y volví a ejecutar `rsync. C`omo se muestra en la imagen el único archivo que se ha copiado ha sido precisamente el que hemos modificado: `file1`.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>copia incremental con rsync</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>copia incremental con rsync</p></figcaption></figure>
 
 ### Recuperando el contenido
 

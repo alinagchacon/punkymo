@@ -20,6 +20,14 @@ Existen diferentes tipos de protocolos que pueden ser utilizados por los servido
 
 También conocemos de la existencia de servicios VPN gestionados por terceros que ofrecen acceso a servidores VPN en ubicaciones geográficas diversas, permitiendo a los usuarios eludir restricciones geográficas y proteger su privacidad en línea.&#x20;
 
+### OpenVPN
+
+Es una implementación de código abierto del protocolo VPN que nos permite establecer conexiones seguras a través de Internet.&#x20;
+
+Cuando se menciona la "OpenVPN integrada en pfSense", se refiere a la capacidad de pfSense para actuar como un servidor OpenVPN. Con esta integración, pfSense permite a los usuarios configurar y administrar conexiones VPN utilizando el protocolo OpenVPN directamente desde la interfaz de administración web de pfSense.
+
+Al utilizar OpenVPN en pfSense, los usuarios pueden aprovechar características como la autenticación de usuarios, la encriptación del tráfico y la creación de túneles seguros para el acceso remoto a la red o la interconexión segura de redes a través de Internet. La integración de OpenVPN en pfSense facilita la implementación de soluciones VPN para garantizar la privacidad y seguridad de las comunicaciones en la red.
+
 ### ¿Qué necesitamos para configurar un servicio de VPN en pfSense?
 
 A la hora de configurar una VPN necesitamos recorrer los siguientes pasos:
@@ -184,6 +192,10 @@ Ya podemos comprobar la conexión al firewall.  Claramente que nos falta mucho. 
 
 
 ### Links
+
+[https://www.cloudflare.com/es-es/learning/network-layer/what-is-ipsec/](https://www.cloudflare.com/es-es/learning/network-layer/what-is-ipsec/)
+
+[https://www.pfsense.org](https://www.pfsense.org)&#x20;
 
 [https://docs.netgate.com/pfsense/en/latest/recipes/rfc1918-egress.html](https://docs.netgate.com/pfsense/en/latest/recipes/rfc1918-egress.html)&#x20;
 
