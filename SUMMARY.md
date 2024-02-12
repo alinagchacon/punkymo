@@ -33,6 +33,7 @@
   * [pfSense](seguridad/firewall/pfsense/README.md)
     * [Instalando pfSense](seguridad/firewall/pfsense/instalando-pfsense.md)
     * [OpenVPN en pfSense](seguridad/firewall/pfsense/openvpn-en-pfsense.md)
+* [Backups](seguridad/backups.md)
 * [Rsync](seguridad/rsync/README.md)
   * [Ejemplo de rsync](seguridad/rsync/ejemplo-de-rsync.md)
 
