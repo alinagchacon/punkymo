@@ -30,7 +30,7 @@
   * [SOPS/AGE ++](seguridad/sops-age-++.md)
 * [Firewall](seguridad/firewall/README.md)
   * [Sophos Firewall XG](seguridad/firewall/sophos-firewall-xg.md)
-  * [Pfsense](seguridad/firewall/pfsense/README.md)
+  * [pfSense](seguridad/firewall/pfsense/README.md)
     * [Instalando pfSense](seguridad/firewall/pfsense/instalando-pfsense.md)
     * [OpenVPN en pfSense](seguridad/firewall/pfsense/openvpn-en-pfsense.md)
 * [Rsync](seguridad/rsync/README.md)

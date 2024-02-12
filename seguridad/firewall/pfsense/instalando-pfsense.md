@@ -4,16 +4,6 @@ description: Instalación básica
 
 # Instalando pfSense
 
-### ¿Qué es pfSense?
-
-Se trata de una distribución personalizada de FreeBSD adaptado para su uso como Firewall y Router. Es de código abierto y puede ser instalada en una gran variedad de dispositivos, tanto físicos como virtuales. Para su configuración cuenta con una interfaz web sencilla.&#x20;
-
-El proyecto es sostenido comercialmente por `Electric Sheep Fencing LLC` y siendo de código abierto, la comunidad de desarrolladores y usuarios brinda amplio soporte y asistencia, aunque `Electric Sheep Fencing` ofrece soporte y capacitación a cambio de un cierto costo​.&#x20;
-
-Cualquier persona es libre de modificar el sistema a sus necesidades o vender las derivaciones de pfSense bajo ciertas condiciones.
-
-
-
 ### ¿Dónde lo descargo?
 
 Para descargar la ISO debemos ir a la web oficial de pfSense en:
