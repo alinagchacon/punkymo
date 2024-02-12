@@ -33,13 +33,10 @@
   * [pfSense](seguridad/firewall/pfsense/README.md)
     * [Instalando pfSense](seguridad/firewall/pfsense/instalando-pfsense.md)
     * [OpenVPN en pfSense](seguridad/firewall/pfsense/openvpn-en-pfsense.md)
-* [Backups](seguridad/backups.md)
-* [Rsync](seguridad/rsync/README.md)
-  * [Ejemplo de rsync](seguridad/rsync/ejemplo-de-rsync.md)
-
-***
-
-* [¿Qué son las ACL?](que-son-las-acl.md)
+* [Backups](seguridad/backups/README.md)
+  * [Rsync](seguridad/backups/rsync/README.md)
+    * [Ejemplo de rsync](seguridad/backups/rsync/ejemplo-de-rsync.md)
+* [¿Qué son las ACL?](seguridad/que-son-las-acl.md)
 
 ## Redes
 

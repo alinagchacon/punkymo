@@ -8,7 +8,7 @@ El sistema debe de tener habilitado las ACL, para lo cual  debemos especificar s
 
 #### El sistema operativo
 
-<figure><img src=".gitbook/assets/image (58).png" alt=""><figcaption><p>El sistema donde lo estoy probando</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (58).png" alt=""><figcaption><p>El sistema donde lo estoy probando</p></figcaption></figure>
 
 Para comprobar si las ACL están habilitadas en las particiones montadas, podemos ejecutar el siguiente comando:
 
@@ -18,7 +18,7 @@ pero podemos acotar la información que nos muestra utilizando el comando grep e
 
 <mark style="color:blue;">`tune2fs -l /dev/sda2 | grep "Default mount options:"`</mark>
 
-<figure><img src=".gitbook/assets/image (159).png" alt=""><figcaption><p>tune2fs</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (159).png" alt=""><figcaption><p>tune2fs</p></figcaption></figure>
 
 #### Instalando las ACL en el sistema
 
@@ -60,17 +60,17 @@ Un modo mucho más rápido (al que debería acostumbrarme) es:
 
 <mark style="color:blue;">`echo "Este es mi fichero de prueba" > testingACL/fichero`</mark>
 
-<figure><img src=".gitbook/assets/image (50).png" alt=""><figcaption><p>crear fichero con el comando echo</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption><p>crear fichero con el comando echo</p></figcaption></figure>
 
 Por tanto, para listar el contenido de un fichero como tal hacemos:
 
 <mark style="color:blue;">`getfacl testingACL/readme`</mark>&#x20;
 
-<figure><img src=".gitbook/assets/image (184).png" alt=""><figcaption><p>getfacl</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (184).png" alt=""><figcaption><p>getfacl</p></figcaption></figure>
 
 Otro ejemplo, donde estoy listando los permisos de /home y /etc:
 
-<figure><img src=".gitbook/assets/image (78).png" alt=""><figcaption><p>getfacl</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (78).png" alt=""><figcaption><p>getfacl</p></figcaption></figure>
 
 #### Agregar permisos a un usuario
 
@@ -78,13 +78,13 @@ Podemos ver las opciones del comando setfacl haciendo:
 
 setfacl --help
 
-<figure><img src=".gitbook/assets/image (152).png" alt=""><figcaption><p>Opciones de setfacl</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (152).png" alt=""><figcaption><p>Opciones de setfacl</p></figcaption></figure>
 
 Supongamos que queremos permitir que el usuario <mark style="color:blue;">`pepe`</mark> (si no tienes otro usuario en el sistema tienes que crearlo con el comando <mark style="color:blue;">`adduser`</mark>) tenga acceso  de lectura y escritura al fichero <mark style="color:blue;">`readme`</mark>, entonces:
 
 <mark style="color:blue;">`sudo setfacl -m u:pepe:rw  /home/punky/testingACL/readme`</mark>
 
-<figure><img src=".gitbook/assets/image (191).png" alt=""><figcaption><p>setfacl</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (191).png" alt=""><figcaption><p>setfacl</p></figcaption></figure>
 
 ¿Qué sucede? ¿Puedes visualizar el contenido de readme?
 
