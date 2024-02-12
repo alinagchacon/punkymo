@@ -6,7 +6,7 @@ description: www.freenove.com
 
 Ahora es que realmente vamos a comenzar a construir y explorar algunos proyectos basados en el chip ESP32-S3 WROOM. En este caso vamos a utilizar nuestro chip para controlar el parpadeo de un LED común.
 
-<table><thead><tr><th width="288">Componente</th><th>Imagen</th></tr></thead><tbody><tr><td><p><br></p><p>SP32-S3 WROOM</p><p><br></p></td><td><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""></td></tr><tr><td><p>GPIO Extension Board</p><p><br></p></td><td><p><br></p><p><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""></p></td></tr><tr><td><p>Breadboard</p><p><br></p></td><td><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""></td></tr><tr><td><p>LED</p><p><br></p></td><td><br><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""></td></tr><tr><td><p>Resistencia</p><p><br></p></td><td><br><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""></td></tr><tr><td><p>Jumper</p><p><br></p></td><td><p></p><p><img src="../../.gitbook/assets/image (5) (1).png" alt=""><br></p></td></tr></tbody></table>
+<table><thead><tr><th width="288">Componente</th><th>Imagen</th></tr></thead><tbody><tr><td><p><br></p><p>SP32-S3 WROOM</p><p><br></p></td><td><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""></td></tr><tr><td><p>GPIO Extension Board</p><p><br></p></td><td><p><br></p><p><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""></p></td></tr><tr><td><p>Breadboard</p><p><br></p></td><td><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""></td></tr><tr><td><p>LED</p><p><br></p></td><td><br><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""></td></tr><tr><td><p>Resistencia</p><p><br></p></td><td><br><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""></td></tr><tr><td><p>Jumper</p><p><br></p></td><td><p></p><p><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><br></p></td></tr></tbody></table>
 
 #### LED
 
@@ -14,11 +14,11 @@ Es un tipo de diodo. Los diodos tienen dos polos y funcionan si la corriente flu
 
 Los diodos funcionan sólo si el voltaje de su electrodo (+) es mayor que el de su electrodo (-). Por otra parte, hay un rango estrecho de voltaje de funcionamiento para la mayoría de los diodos comunes de 1.9 y 3.4V, por lo que si utilizas mucho más de 3.3V, el LED se va a dañar y se quemará.
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="89"><figcaption><p>Diodo</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt="" width="89"><figcaption><p>Diodo</p></figcaption></figure>
 
 El símbolo correspondiente a un diodo es:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt="" width="87"><figcaption><p>Simbolo del diodo</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt="" width="87"><figcaption><p>Simbolo del diodo</p></figcaption></figure>
 
 La correspondencia de voltaje y amperaje para cada LED o diodo, sería:
 
@@ -40,7 +40,7 @@ La resistencia utiliza ohmios (Ω) como unidad de medida de su resistencia ®, d
 
 1kΩ = 1000Ω
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt="" width="45"><figcaption><p>Resistencia </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt="" width="45"><figcaption><p>Resistencia </p></figcaption></figure>
 
 
 
@@ -82,11 +82,11 @@ Vamos a construir nuestro circuito según se muestra en el diagrama. Solo despu�
 \
 
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Circuito</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Circuito</p></figcaption></figure>
 
 O de otra manera:
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Circuito</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>Circuito</p></figcaption></figure>
 
 Según el circuito, si el nivel de salida `GPIO2` del `ESP32-S3 WROOM` es alto, el `LED` se enciende y cuando el nivel de salida es bajo, el `LED` se apaga. Por lo tanto, podemos dejar que el `GPIO2` emita circularmente niveles altos y bajos para hacer que el `LED` parpadee.
 
@@ -99,7 +99,7 @@ Freenove_Ultimate_Starter_Kit_for_ESP32_S3\Sketches\Sketch_01.1_Blink
 Observa en el menú los items siguientes: Board, Port y Upload Speed\
 
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 Recuerda que el chip que tenemos que utilizar es el llamado: `ESP32 Wrover Module`
 

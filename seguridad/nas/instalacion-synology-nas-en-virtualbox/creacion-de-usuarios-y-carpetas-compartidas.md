@@ -54,7 +54,7 @@ Las opciones de esta paso únicamente están disponibles para los volúmenes con
 
 En este paso confirmaremos que los datos que hemos introducido son correctos. En el caso contrario podremos volver atrás para modificarlos.
 
-<figure><img src="../../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
 
 ### Sexto paso - Permisos de usuario
 
@@ -66,7 +66,7 @@ Una vez revisada la configuración, en este paso nos encontramos con la opción 
 
 Una vez apliquemos los cambios la carpeta se creara y nos aparece en el panel de las carpetas compartidas. Desde ahí podremos ver características de la carpeta, su espacio, si tiene papelera, etc.
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (2).png" alt=""><figcaption><p>Visualizar carpeta desde el panel de control</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (2) (1).png" alt=""><figcaption><p>Visualizar carpeta desde el panel de control</p></figcaption></figure>
 
 ### Octavo paso - Visualizar interior de la carpeta
 

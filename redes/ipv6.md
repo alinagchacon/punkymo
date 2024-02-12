@@ -112,7 +112,7 @@ Un paquete que se envía a una dirección `UNICAST` es recibido por la interfaz 
 
 &#x20;
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption><p>Tomado de www.sapalomera.cat</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15) (2).png" alt=""><figcaption><p>Tomado de www.sapalomera.cat</p></figcaption></figure>
 
 ### Prefijo de enrutado global (n bits).
 
@@ -135,7 +135,7 @@ Un paquete que se envía a una dirección `UNICAST` es recibido por la interfaz 
 
 &#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### MULTICAST
 
@@ -191,7 +191,7 @@ Este mecanismo de solución de direcciones se conoce como Neighbor Discovery Pro
 
 ### &#x20;Resumido
 
-<figure><img src="../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Algunos detalles&#x20;
 
@@ -201,7 +201,7 @@ Desde el CMD&#x20;
 ipconfig
 ```
 
-<figure><img src="../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 En la implantación de IPv6 se ha tenido en cuenta lo que se llama la «Precedencia de protocolos» lo cual puede hacer que nuestro equipo pase a funcionar en modo IPv6 en cualquier momento, sin avisarnos y por tanto escapando a nuestro control.
 
@@ -225,7 +225,7 @@ Comprobemos nuestros vecinos con el siguiente comando:
 netsh interface ipv6 show neighbors
 ```
 
-<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Detalles DE IPv6
 
@@ -265,7 +265,7 @@ Existen dos reglas básicas para comprimir las direcciones IPv6 y hacerlas más 
 
 
 
-<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Omitiendo los segmentos que son ceros (0)
 

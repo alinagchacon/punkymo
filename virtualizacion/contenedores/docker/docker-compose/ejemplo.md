@@ -82,7 +82,7 @@ Por tanto, un archivo de docker-compose es un archivo con extensión y formato y
 
 El archivo tiene una estructura bastante fácil de entender. Comienza por especificar la versión de docker compose que se utilizará:
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption><p>Estructura de un archivo docker-compose.yml</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption><p>Estructura de un archivo docker-compose.yml</p></figcaption></figure>
 
 Después de la versión viene  la sección de servicios. Puede haber tantos servicios como queramos: servidor web, base de datos, documentación, etc. Cada servicio cuenta con sus propias variables de configuración y sus respectivos valores.
 

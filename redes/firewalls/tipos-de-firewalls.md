@@ -73,7 +73,7 @@ Este tipo de firewall del gateway de aplicaciones o firewall proxy filtra la inf
 
 La mayor parte del control y filtrado del firewall se realiza en el software. Cuando un cliente necesita tener acceso a un servidor remoto, se conecta a un servidor proxy. El servidor proxy se conecta al servidor remoto en nombre del cliente. Por lo tanto, el servidor solamente ve una conexión desde el servidor proxy.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Firewall del Gateway de aplicaciones</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Firewall del Gateway de aplicaciones</p></figcaption></figure>
 
 ### Firewall de próxima generación
 

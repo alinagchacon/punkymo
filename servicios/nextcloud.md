@@ -32,7 +32,7 @@ nextcloud/all-in-one:latest
 
 El proceso de instalación sería algo así como:
 
-<figure><img src="../.gitbook/assets/image (9) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Para abrir la interfaz escribe [https://localhost:8080](https://localhost:8080)  o [https://the.servers.ip.address:8080](https://the.servers.ip.address:8080) en el navegador.&#x20;
 
@@ -42,7 +42,7 @@ Para abrir la interfaz escribe [https://localhost:8080](https://localhost:8080) 
 
 apache bonfire chitchat linked pessimist saloon settling gumdrop
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

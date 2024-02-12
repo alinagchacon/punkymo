@@ -78,5 +78,5 @@ Para poder acceder a nuestro sitio web con el nombre de dominio que le hemos asi
 
 Finalmente, nos vamos al navegador y accedemos a nuestro sitio:
 
-<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>example.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17) (1).png" alt=""><figcaption><p>example.com</p></figcaption></figure>
 
