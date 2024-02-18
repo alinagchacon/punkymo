@@ -40,9 +40,9 @@
 
 ## Redes
 
-* [Introducción Redes](redes/introduccion-redes.md)
-* [Algo de historia](redes/algo-de-historia.md)
-* [Puntos de conexión](redes/puntos-de-conexion.md)
+* [Algo de historia](redes/algo-de-historia/README.md)
+  * [Introducción Redes](redes/algo-de-historia/introduccion-redes.md)
+  * [Puntos de conexión](redes/algo-de-historia/puntos-de-conexion.md)
 * [IPv4](redes/ipv4/README.md)
   * [Subredes IPv4](redes/ipv4/subredes-ipv4.md)
   * [Superredes IPv4](redes/ipv4/superredes-ipv4.md)

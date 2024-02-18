@@ -6,7 +6,7 @@ description: a Internet en España
 
 Si miras el mapa de las comunicaciones a nivel mundial: [https://www.submarinecablemap.com](https://www.submarinecablemap.com)  verás lo sorprendente que es.
 
-<figure><img src="../.gitbook/assets/image (39) (1).png" alt=""><figcaption><p>cableado submarino</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (39) (1).png" alt=""><figcaption><p>cableado submarino</p></figcaption></figure>
 
 Ampliando el mapa, vemos los puntos de conexión de la península ibérica.  A España le llegan unos 9 puntos de conexión y dentro del territorio se reparten según las diferentes infraestructuras de los operadores de telecomunicaciones.
 

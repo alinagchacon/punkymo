@@ -14,7 +14,7 @@ Redes por cables, redes inalámbricas, nubes.
 
 Sin embargo, mirando el cableado submarino cabría pensar que más que ser “etérea” Internet se mueve por el fondo del mar.
 
-<table><thead><tr><th>En los años 70</th><th>En la actualidad</th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/image (91).png" alt=""></td><td><img src="../.gitbook/assets/image (30) (1) (1).png" alt=""></td><td></td></tr></tbody></table>
+<table><thead><tr><th>En los años 70</th><th>En la actualidad</th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image (91).png" alt=""></td><td><img src="../../.gitbook/assets/image (30) (1) (1).png" alt=""></td><td></td></tr></tbody></table>
 
 #### La columna vertebral de Internet
 
