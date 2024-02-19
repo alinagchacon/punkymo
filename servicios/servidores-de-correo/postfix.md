@@ -8,7 +8,7 @@ description: >-
 
 <mark style="color:red;">Propuesta:</mark>&#x20;
 
-1. <mark style="color:red;">Hacer la instalación en la propia MV de Ubuntu Server 22.04 donde tengo configurado el dominio</mark> <mark style="color:red;"></mark>_<mark style="color:red;"><mark style="color:blue;">`haven.local`<mark style="color:blue;"></mark>_ <mark style="color:red;"></mark><mark style="color:red;">y los servicios de DNS y DCHP.</mark>
+1. <mark style="color:red;">Hacer la instalación en la propia MV de Ubuntu Server 22.04 donde tengo configurado el dominio</mark> <mark style="color:red;"></mark>_<mark style="color:red;">`haven.local`</mark>_ <mark style="color:red;"></mark><mark style="color:red;">y los servicios de DNS y DCHP.</mark>
 2. <mark style="color:red;">Instalar el servidor de correo en una MV con Ubuntu Server 22.04, bajo el dominio de haven.local.</mark>
 
 El objetivo es mostrar el funcionamiento de un servidor de  correo electrónico. Para ello usaremos una MV con Ubuntu Desktop 22.04 LTS. Vamos a necesitar instalar los siguientes servicios:
@@ -39,13 +39,17 @@ Tenemos que preparar el sistema antes de hacer las instalaciones de: &#x20;
 
 Lo primero será actualizar el sistema:
 
-<mark style="color:blue;">`apt update`</mark>
+```
+sudo apt update
+```
 
 Una vez actualizado el sistema, procedemos con la instalación. Yo prefiero instalar paquete a paquete.&#x20;
 
 ### Postfix&#x20;
 
-<mark style="color:blue;">`sudo apt-get install postfix`</mark>
+```
+sudo apt install postfix
+```
 
 ![](<../../.gitbook/assets/image (84).png>)
 
@@ -57,7 +61,7 @@ Utilizaremos como nombre de dominio: _<mark style="color:blue;">`arrakis.local`<
 
 En <mark style="color:blue;">`/etc/postfix`</mark> están los archivos de configuración del servicio:&#x20;
 
-![](<../../.gitbook/assets/image (156).png>)
+![Postfix una vez instalado en el sistema](<../../.gitbook/assets/image (156).png>)
 
 Existen dos formatos muy extendidos para almacenar el correo electrónico. Estos formatos son [_Mbox_](https://en.wikipedia.org/wiki/Mbox) y [Maildir](https://en.wikipedia.org/wiki/Maildir).
 
@@ -67,11 +71,13 @@ En la configuración por defecto de Postfix y mailutils se utiliza el formato _<
 
 Una práctica conveniente es hacer una copia de seguridad  de los archivos de configuración que vayamos a modificar. Para ello, hacemos:
 
-<mark style="color:blue;">`sudo cp /etc/postfix/main.cf /etc/postfix/main.cf.BKP`</mark>
+```
+sudo cp /etc/postfix/main.cf /etc/postfix/main.cf.BKP
+```
 
 Editamos el archivo _<mark style="color:blue;">main.cf</mark>_ y vamos a agregar las siguientes líneas al final del mismo.&#x20;
 
-![](<../../.gitbook/assets/image (72).png>)
+![Editando el archivo main.cf de postfix](<../../.gitbook/assets/image (72).png>)
 
 
 
@@ -89,7 +95,9 @@ Antes de hacer la instalación expliquemos un mínimo en qué consiste.
 
 Para instalar, hacemos como siempre:&#x20;
 
-_<mark style="color:blue;">`sudo apt-get install dovecot-imapd`</mark>_&#x20;
+```
+sudo apt install dovecot-imapd
+```
 
 Una vez instalado hagamos las comprobaciones pertinentes. Podemos observar que Dovecot:
 
@@ -98,15 +106,17 @@ Una vez instalado hagamos las comprobaciones pertinentes. Podemos observar que D
 
 La configuración está dividida en varios ficheros dentro del directorio <mark style="color:blue;">`/etc/dovecot`</mark>&#x20;
 
-![](<../../.gitbook/assets/image (77).png>)
+![Archivos de configuración de Dovecot ](<../../.gitbook/assets/image (77).png>)
 
 El archivo principal se encuentra en:  <mark style="color:blue;">`/etc/dovecot/dovecot.conf`</mark> e incluye a los otros ficheros.&#x20;
 
 Para ver los cambios que se han hecho en alguno de los ficheros, ejecuta el siguiente comando y te mostrará un fichero de configuración con los cambios:&#x20;
 
-<mark style="color:blue;">`dovecot -n`</mark> &#x20;
+```
+dovecot -n
+```
 
-![](<../../.gitbook/assets/image (180).png>)
+![Configuración de dovecot](<../../.gitbook/assets/image (180).png>)
 
 
 
@@ -114,17 +124,25 @@ Dovecot puede trabajar tanto con mbox como con mailbox y como es de suponer, la 
 
 Hacemos la copia de seguridad del archivo de configuración:
 
-<mark style="color:blue;">`sudo cp /etc/dovecot/conf.d/10-mail.conf /etc/dovecot/conf.d/10-mail.conf.BKP`</mark>
+```
+sudo cp /etc/dovecot/conf.d/10-mail.conf /etc/dovecot/conf.d/10-mail.conf.BKP
+```
 
 Observa en este punto del archivo de configuración <mark style="color:blue;">`10-mail.conf`</mark> que nos dice explícitamente que podemos hacer el cambio que os digo. Así que vamos allá.
 
-![](<../../.gitbook/assets/image (153).png>)
+![Modificando el archivo de configuración 10-mail.conf](<../../.gitbook/assets/image (153).png>)
 
 Editamos el archivo:
 
-<mark style="color:blue;">`sudo nano /etc/dovecot/conf.d/10-mail.conf`</mark> y buscamos esta directiva <mark style="color:blue;">`mail_location`</mark> y la sustituimos por lo que nos dice. Esto es:&#x20;
+```
+sudo nano /etc/dovecot/conf.d/10-mail.conf
+```
 
-<mark style="color:blue;">`mail_location = maildir:~/Maildir`</mark>
+y buscamos esta directiva <mark style="color:blue;">`mail_location`</mark> y la sustituimos por lo que nos dice. Esto es:&#x20;
+
+```
+mail_location = maildir:~/Maildir
+```
 
 ![](<../../.gitbook/assets/image (63).png>)
 
@@ -132,7 +150,9 @@ Editamos el archivo:
 
 Procederemos a la instalación de<mark style="color:purple;">l</mark> cliente de correo _<mark style="color:blue;">`mailutils`</mark>_. Para ello ejecutamos:
 
-_<mark style="color:blue;">`sudo apt-get install mailutils`</mark>_
+```
+sudo apt-get install mailutils
+```
 
 ![](<../../.gitbook/assets/image (18) (1) (1).png>)
 
