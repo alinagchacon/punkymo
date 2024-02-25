@@ -6,11 +6,6 @@ description: >-
 
 # Postfix
 
-<mark style="color:red;">Propuesta:</mark>&#x20;
-
-1. <mark style="color:red;">Hacer la instalación en la propia MV de Ubuntu Server 22.04 donde tengo configurado el dominio</mark> <mark style="color:red;"></mark>_<mark style="color:red;">`haven.local`</mark>_ <mark style="color:red;"></mark><mark style="color:red;">y los servicios de DNS y DCHP.</mark>
-2. <mark style="color:red;">Instalar el servidor de correo en una MV con Ubuntu Server 22.04, bajo el dominio de haven.local.</mark>
-
 El objetivo es mostrar el funcionamiento de un servidor de  correo electrónico. Para ello usaremos una MV con Ubuntu Desktop 22.04 LTS. Vamos a necesitar instalar los siguientes servicios:
 
 * [`Dovecot-imapd`](https://elpuig.xeill.net/Members/vcarceler/articulos/introduccion-a-dovecot) como servidor IMAP
@@ -20,11 +15,13 @@ El objetivo es mostrar el funcionamiento de un servidor de  correo electrónico.
 
 Como se trata de un ejercicio académico, intentaremos simplificar la instalación para lo cual se utilizará la configuración más sencilla posible.&#x20;
 
+Os propongo hacer la instalación en una VM de Ubuntu Server 22.04 donde tengamos configurado el dominio _`haven.local`_ y los servicios de DNS y DCHP.
+
 ### El entorno de la MV
 
-La idea es utilizar dos MV para realizar las pruebas.
+La idea es utilizar dos MV para realizar las pruebas: el cliente y el servidor.
 
-1. **Adaptador1**: En modo puente  con la interfaz de red del equipo anfitrión.
+1. **Adaptador**: En modo `red Nat`  de modo que ambas VM se puedan comunicar.
 2. Vamos a fijar el dominio del correo: <mark style="color:blue;">`arrakis.local`</mark> en el archivo <mark style="color:blue;">`/etc/hosts`</mark>. Para ello hacemos lo siguiente:
 
 ![](<../../.gitbook/assets/image (122).png>)
@@ -93,7 +90,7 @@ Antes de hacer la instalación expliquemos un mínimo en qué consiste.
 
 #### Instalación de Dovecot
 
-Para instalar, hacemos como siempre:&#x20;
+Para probar vamos a instalar el protocolo `imap` para lo cual hacemos como siempre:&#x20;
 
 ```
 sudo apt install dovecot-imapd
