@@ -155,11 +155,13 @@ sudo apt-get install mailutils
 
 **Nota**: Puedes utilizar otro cliente de correo por terminal como por ejemplo: [Mutt](../clientes-de-correo/mutt.md)
 
-#### Testeando&#x20;
+### Testeando&#x20;
 
 Para probar el servicio de correo vía terminal basta escribir algo como lo siguiente:
 
-<mark style="color:blue;">`echo "Aquí va el body del email" | mail -s "Aquí va el asunto" your_email_address`</mark>&#x20;
+```
+echo "Este es el body del email" | mail -s "Este el asunto" pepe@haven.local
+```
 
 Si vamos al home del único usuario instalado en el sistema, "kirby", veremos que existe un directorio llamado <mark style="color:blue;">`Maildir`</mark> que contiene la estructura básica de un buzón de correos. Vamos a la carpeta o directorio <mark style="color:blue;">`/home/kirby/Maildir/new`</mark> y vemos que hay dos correos sin enviar.
 
@@ -175,13 +177,17 @@ y nos percatamos que no ha sido posible la entrega del correo enviado. Es eviden
 
 ### Cliente de correo: Thunderbird
 
+Vamos a probar el envío del correo utilizando un cliente como Thunderbird, pero me preguntarás dónde. Lo correcto sería desde la VM que estés utilizando como cliente.
+
 La guía para instalar Thunderbird la puedes encontrar en este [enlace](broken-reference). Sin embargo, es muy sencillo desde el propio terminal:
 
-<mark style="color:blue;">`sudo apt-get install thunderbird`</mark>
+```
+sudo apt install thunderbird
+```
 
 Lo más probable es que no necesites hacer la instalación porque viene por defecto en Ubuntu Desktop.
 
-#### Testeando&#x20;
+### Testeando&#x20;
 
 Probemos el servidor IMAP  con Thunderbird como MUA. Lo primero que tendremos que hacer es configurar la cuenta de correo de uno de los <mark style="color:blue;">usuarios locales</mark>.&#x20;
 
@@ -258,11 +264,26 @@ Si nos responde con un <mark style="color:blue;">`250 2.1.0 OK`</mark> entonces 
 
 Y como está correcto, nos responde con un <mark style="color:blue;">`250 2.1.5 OK`</mark>
 
-En este punto podemos escribir data y en la siguiente línea escribir el cuerpo del mensaje. Para finalizar, clicamos <mark style="color:blue;">`enter`</mark> y ponemos un punto. Observa que nos responde el servidor con un <mark style="color:blue;">`250 2.0.0 OK`</mark> con el mensaje enviado.  El comando <mark style="color:blue;">`quit`</mark> para salir de la conexión.
+Ahora podemos escribir:&#x20;
 
-¿Y ahora qué? Pues vayamos a nuestro servidor de correos y miremos en la carpeta <mark style="color:blue;">`/home/kirby/Mailbox/new/1658955914.....kirby`</mark> (el último recibido a las 23:05) y es nuestro correo que ha llegado al servidor.
+```
+DATA
+Subject: Mi mensaje
+Hola, este es el cuerpo del email
+.
+```
 
-![](<../../.gitbook/assets/image (164).png>)
+y en la siguiente línea escribir el cuerpo del mensaje. Para finalizar, clicamos <mark style="color:blue;">`enter`</mark> y ponemos un `punto`. Observa que nos responde el servidor con un <mark style="color:blue;">`250 2.0.0 OK`</mark> con el mensaje enviado.  El comando <mark style="color:blue;">`quit`</mark> sirve para finalizar la conexión.
+
+El siguiente pantallazo muestra el proceso realizado, solo te pido que tengas en cuenta que lo hice en otro momento y utilizando otra VM con otro nombre de dominio:
+
+<figure><img src="../../.gitbook/assets/image (281).png" alt=""><figcaption><p>Email enviado utilizando telnet </p></figcaption></figure>
+
+¿Y ahora qué? Pues vayamos a nuestro servidor de correos y miremos en la carpeta <mark style="color:blue;">`/home/kirby/Mailbox/new/1658955914.....kirby`</mark> y veremos que es nuestro correo que ha llegado al servidor.
+
+![Buzón de correo del usuario kirby](<../../.gitbook/assets/image (164).png>)
+
+<figure><img src="../../.gitbook/assets/image (283).png" alt=""><figcaption><p>Buzón de correo del usuario pepe (la prueba realizada sobre un dominio haven.local con fecha 25 de febrero de 2024)</p></figcaption></figure>
 
 Está claro que tenemos ciertos puertos abiertos para la recepción y envío de los correos en el servidor:
 
