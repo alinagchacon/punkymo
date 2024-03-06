@@ -153,7 +153,7 @@ sudo apt-get install mailutils
 
 ![](<../../.gitbook/assets/image (18) (1) (1).png>)
 
-**Nota**: Puedes utilizar otro cliente de correo por terminal como por ejemplo: [Mutt](../clientes-de-correo/mutt.md)
+**Nota**: Puedes utilizar otro cliente de correo por terminal como por ejemplo: [Mutt](clientes-de-correo/mutt.md)
 
 ### Testeando&#x20;
 
