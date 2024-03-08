@@ -130,3 +130,8 @@ Ahora accedemos a Pidgin y añadimos uno de los usuarios que hemos creado en eja
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Pidgin</p></figcaption></figure>
 
+<mark style="color:orange;">To be continued ...</mark>
+
+## Links
+
+* [https://www.process-one.net/blog/ejabberd-xmpp-server-useful-configuration-steps/](https://www.process-one.net/blog/ejabberd-xmpp-server-useful-configuration-steps/)&#x20;
