@@ -1,5 +1,5 @@
 ---
-description: Joel López Medina
+description: Joel López Molina
 ---
 
 # Sophos Firewall XG

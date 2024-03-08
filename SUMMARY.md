@@ -82,6 +82,7 @@
 * [Servidores DHCP](servicios/servidores-dhcp/README.md)
   * [DHCP-Windows Server 2016](servicios/servidores-dhcp/dhcp-windows-server-2016.md)
   * [DHCP-Ubuntu Server 22.04](servicios/servidores-dhcp/dhcp-ubuntu-server-22.04.md)
+* [Ejabberd](servicios/ejabberd.md)
 * [Plex](servicios/plex.md)
 * [Jellyfin](servicios/jellyfin.md)
 * [NextCloud](servicios/nextcloud.md)
