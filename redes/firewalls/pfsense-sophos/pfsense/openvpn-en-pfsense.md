@@ -102,13 +102,13 @@ Ahora vamos a configurar el `servidor` `OpenVPN` a donde se van a conectar los c
 * Seleccionamos la opción de `Verbosity level: 3 (recommended)`.&#x20;
 * Guardamos y listo!
 
-<figure><img src="../../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>OpenVPN certificate</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>OpenVPN certificate</p></figcaption></figure>
 
 ### Comprobar el servicio
 
 Nos dirigimos a `Status - Service` y podemos comprobar los servicios activos y recién habilitados.
 
-<figure><img src="../../../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Status - Service</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Status - Service</p></figcaption></figure>
 
 ### Configurar las reglas en el firewall para permitir acceso&#x20;
 
@@ -165,7 +165,7 @@ Una vez creado nuestro usuario de prueba (con su certificado para la VPN) ver c�
 
 Y si nos vamos al final del todo, veremos a nuestro usuario **Punky**.
 
-<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Certificados a exportar del usuario</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Certificados a exportar del usuario</p></figcaption></figure>
 
 ### Comprobar estado del servicio y de los clientes conectados
 
@@ -173,19 +173,19 @@ Si queremos hacer una prueba  podemos descargar el certificado para Android o el
 
 En el caso de utilizar un dispositivo móvil, tendríamos que instalar la `OpenVPN for Android`&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (5).png" alt="" width="48"><figcaption><p>OpenVPN for Android</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1).png" alt="" width="48"><figcaption><p>OpenVPN for Android</p></figcaption></figure>
 
 Una vez tengamos lista la app, podemos exportar a nuestro dispositivo móvil el certificado del cliente VPN que hayamos creado. En mi caso, sería el usuario `punky`
 
-<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Certificado de usuario Importado en la aplicación OpenVPN</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Certificado de usuario Importado en la aplicación OpenVPN</p></figcaption></figure>
 
 Nos conectamos a la VPN y se nos muestra el log:
 
-<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Usuario conectado a la VPN de pfSense </p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Usuario conectado a la VPN de pfSense </p></figcaption></figure>
 
 Y si nos vamos, por ejemplo al navegador y escribimos la IP
 
-<figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Accediendo a pfSense en el navegador</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Accediendo a pfSense en el navegador</p></figcaption></figure>
 
 Ya podemos comprobar la conexión al firewall.  Claramente que nos falta mucho. Se trata de una conexión básica. Lo siguiente a probar es configurar el acceso de un usuario a un equipo de la red detrás del firewall.&#x20;
 

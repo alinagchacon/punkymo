@@ -27,7 +27,7 @@ Por tanto, tenemos dos servidores con IP: 192.168.1.150 y 192.168.1.152
 
 Una vez que tengamos esto vamos al primer servidor de Proxmox que llamé Kirby, y en la sección de: `Datacenter > clúster > crear clúster`  creamos el clúster.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Creando el clúster</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Creando el clúster</p></figcaption></figure>
 
 En este mismo servidor `Kirby`, clicamos en `Join information` para copiar la información que nos muestra:
 
@@ -41,7 +41,7 @@ Para ello, nos vamos a lo que sería nuestro segundo nodo y en `Datacenter > Cl�
 
 Pegamos la información que hemos copiado del primer nodo del clúster, agregamos el password de acceso de root del Proxmox que funciona como primer nodo y le damos al `Join` para establecer el clúster.
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption><p>Tener en cuenta que estas IP no se corresponden exactamente</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption><p>Tener en cuenta que estas IP no se corresponden exactamente</p></figcaption></figure>
 
 Ahora, si nos vamos al servidor Kirby que es el primer servidor de Proxmox donde creamos el clúster veremos lo siguiente:
 
