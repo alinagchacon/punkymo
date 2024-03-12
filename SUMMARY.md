@@ -50,12 +50,12 @@
   * [ZPF](redes/firewalls/zpf.md)
   * [ZPF - Funcionamiento](redes/firewalls/zpf-funcionamiento.md)
   * [Configurando un ZPF](redes/firewalls/configurando-un-zpf.md)
-  * [pfSense - Sophos](redes/firewalls/pfsense-sophos/README.md)
-    * [Sophos Firewall XG](redes/firewalls/pfsense-sophos/sophos-firewall-xg.md)
-    * [Sophos home](redes/firewalls/pfsense-sophos/sophos-home.md)
-    * [pfSense](redes/firewalls/pfsense-sophos/pfsense/README.md)
-      * [Instalando pfSense](redes/firewalls/pfsense-sophos/pfsense/instalando-pfsense.md)
-      * [OpenVPN en pfSense](redes/firewalls/pfsense-sophos/pfsense/openvpn-en-pfsense.md)
+  * [Dos firewall](redes/firewalls/dos-firewall/README.md)
+    * [pfSense](redes/firewalls/dos-firewall/pfsense/README.md)
+      * [Instalando pfSense](redes/firewalls/dos-firewall/pfsense/instalando-pfsense.md)
+      * [OpenVPN en pfSense](redes/firewalls/dos-firewall/pfsense/openvpn-en-pfsense.md)
+    * [Sophos Firewall XG](redes/firewalls/dos-firewall/sophos-firewall-xg/README.md)
+      * [Sophos home](redes/firewalls/dos-firewall/sophos-firewall-xg/sophos-home.md)
 
 ## Servicios
 

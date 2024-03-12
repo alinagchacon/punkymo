@@ -64,7 +64,7 @@ Una vez realizado los cambios y guardando nos aparece nuestro certificado:
 
 <figure><img src="../../../../.gitbook/assets/image (275).png" alt=""><figcaption><p>Certificado de openvpn</p></figcaption></figure>
 
-### Crear los certificados del servidor OpenVPN
+### Crear el certificado del servidor OpenVPN
 
 En el apartado siguiente, `System – Certificates` clicamos en agregar un certificado:
 

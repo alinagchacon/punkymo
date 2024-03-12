@@ -4,6 +4,8 @@ description: Mensajería instantánea
 
 # Ejabberd
 
+Se trata de un servidor de mensajería instantánea de código abierto. Válido para plataformas Unix BSD, GNU/Linux, Microsoft Windows entre otras. Para la comunicación instantánea se utiliza XMPP.
+
 ## Instalación y configuración
 
 En mi caso estoy utilizando dos VM conectadas en red NAT. El equipo donde estoy configurando ejabberd es un servidor de Ubuntu 22.04 donde también tengo funcionando el servicio de DNS con el dominio `haven.haven.local`.
