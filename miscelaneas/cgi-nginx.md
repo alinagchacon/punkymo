@@ -4,11 +4,9 @@ description: y PHP
 
 # CGI - NGINX
 
-Unos chiquillos de ASIX2 están trabajando con Arduino en su proyecto y necesitan habilitar el uso de CGI shell script en un equipo que ejecuta Ubuntu Server, así que vamos a ayudarles.
+Unos chiquillos de ASIX2 están trabajando con Arduino en su proyecto y necesitan habilitar el uso de CGI shell script en un equipo que ejecuta Ubuntu Server, así que vamos a ayudarles. Tenemos que  habilitar la característica CGI y permitir que se ejecute un CGI en el servidor Nginx.
 
-Vamos a mostrar cómo habilitar la característica CGI y permitir que se ejecute un CGI en el servidor Nginx.
-
-Dado que nos interesa que esté configurado PHP y MySQL vamos a dar un repaso a toda la instalación y configuración de PHP con PHP-FPM para un servidor HTTP de Nginx 1.18.
+Dado que nos interesa que esté configurado PHP y MySQL vamos a dar un repaso a toda la instalación y configuración de PHP con PHP-FPM para un servidor HTTP de Nginx 1.18. La parte de MySQL la dejamos para la siguiente ocasión.
 
 Para realizar este tutorial estoy utilizando:&#x20;
 
