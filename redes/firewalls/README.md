@@ -10,7 +10,7 @@ LLevan siendo, desde hace más de 25 años, la primera línea de defensa en tema
 
 Los firewall pueden ser de hardware, de software o ambos tipos.
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Firewall</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Firewall</p></figcaption></figure>
 
 ### Tipos de firewall
 

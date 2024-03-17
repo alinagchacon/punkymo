@@ -54,6 +54,7 @@
     * [pfSense](redes/firewalls/dos-firewall/pfsense/README.md)
       * [Instalando pfSense](redes/firewalls/dos-firewall/pfsense/instalando-pfsense.md)
       * [OpenVPN en pfSense](redes/firewalls/dos-firewall/pfsense/openvpn-en-pfsense.md)
+      * [DMZ](redes/firewalls/dos-firewall/pfsense/dmz.md)
     * [Sophos Firewall XG](redes/firewalls/dos-firewall/sophos-firewall-xg/README.md)
       * [Sophos home](redes/firewalls/dos-firewall/sophos-firewall-xg/sophos-home.md)
 
