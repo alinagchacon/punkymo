@@ -1,10 +1,8 @@
-# DMZ ...
+# Alias
 
-Ahora es que nos vamos a disponer a configurar el tráfico por la DMZ. Lo primero será crear un par de alias que nos sirve para minimizar el número de cambios que tienen que hacerse si un equipo, red o de puerto es modificado.&#x20;
+&#x20;Los alias nos sirven para minimizar el número de cambios que tienen que hacerse si un equipo, red o de puerto es modificado.&#x20;
 
-Para probar el tráfico de datos a través de la DMZ vamos a considerar solo el protocolo ICMP (ping) y los puertos 80 / 443 para la web. Para ello vamos a configurar un par de aliases:
-
-Nos vamos a Firewall > Alias > Port y creamos el primero de los aliases, esto es:
+En este caso, crearíamos un par  de alias para probar el tráfico de datos a través de una DMZ considerando solo el protocolo ICMP (ping) y el puerto 80 para la web. Nos vamos a `Firewall > Alias > Port` y creamos el primero de los aliases, esto es:
 
 <figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Alias para los puertos 80 / 443 </p></figcaption></figure>
 
@@ -14,7 +12,7 @@ Hacemos lo mismo para el puerto 53 del DNS y nos debe quedar algo como lo siguie
 
 ### Reglas para la DMZ
 
-Para acceder a Internet necesitamos de los protocolos http (80) y https (443) con el protocolo TCP y UDP para la resoluciones del **DNS**. Para ello nos vamos a firewall > rules y vamos a configurar lo siguiente:
+Para acceder a Internet necesitamos de los protocolos http (80) y https (443) con el protocolo TCP y UDP para la resoluciones del **DNS**. Para ello nos vamos a `firewall > rules` y vamos a configurar lo siguiente:
 
 * Action: pass
 * Interfaz: DMZ
@@ -47,5 +45,5 @@ Tengo que testearlo mejor para evitar que entre en conflicto con las reglas de l
 * desde la WAN no tengamos acceso a la red LAN
 * desde la LAN podamos tener acceso tanto a la DMZ como a la WAN
 
-¿Me ayudas a pensar? Te lo agradeceré.
+¿Me ayudas a pensar?&#x20;
 

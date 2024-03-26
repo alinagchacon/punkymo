@@ -2,7 +2,7 @@
 description: Apuntes
 ---
 
-# ZPF - Funcionamiento
+# Funcionamiento
 
 ## Funcionamiento de ZPF
 
