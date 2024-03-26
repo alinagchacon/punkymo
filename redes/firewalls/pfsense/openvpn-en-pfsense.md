@@ -45,7 +45,7 @@ A la hora de configurar una VPN necesitamos recorrer los siguientes pasos:
 
 Lo primero es descargar el paquete `openvpn-client-export` y para ello vamos a _`System - Package Manager - Available Packages`_ y buscamos el paquete _`openvpn-client-export`_ y pulsamos en `Install`_._
 
-<figure><img src="../../../../.gitbook/assets/image (274).png" alt=""><figcaption><p>Instalación finalizada del paquete pfsense-client-export</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (274).png" alt=""><figcaption><p>Instalación finalizada del paquete pfsense-client-export</p></figcaption></figure>
 
 ## Crear los certificados digitales en el propio pfSense&#x20;
 
@@ -54,7 +54,7 @@ Lo primero es descargar el paquete `openvpn-client-export` y para ello vamos a _
 Una `CA` es, una entidad confiable responsable de emitir y revocar certificados digitales utilizados para transacciones y firmas electrónicas.\
 Abrimos la interfaz del pfSense y navegamos hasta `System - Certificate Manager` y hacemos clic en `Agregar`.
 
-<figure><img src="../../../../.gitbook/assets/image (272).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (272).png" alt=""><figcaption></figcaption></figure>
 
 Creamos el certificado manteniendo casi todas las opciones por defecto y asignando un nombre.
 
@@ -62,7 +62,7 @@ Creamos el certificado manteniendo casi todas las opciones por defecto y asignan
 
 Una vez realizado los cambios y guardando nos aparece nuestro certificado:
 
-<figure><img src="../../../../.gitbook/assets/image (275).png" alt=""><figcaption><p>Certificado de openvpn</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (275).png" alt=""><figcaption><p>Certificado de openvpn</p></figcaption></figure>
 
 ### Crear el certificado del servidor OpenVPN
 
@@ -77,7 +77,7 @@ En el apartado siguiente, `System – Certificates` clicamos en agregar un certi
 
 Aquí nos tiene que aparecer nuestra CA previamente creada
 
-<figure><img src="../../../../.gitbook/assets/image (276).png" alt=""><figcaption><p>Open VPN server certificate</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (276).png" alt=""><figcaption><p>Open VPN server certificate</p></figcaption></figure>
 
 ### Configurar el servidor OpenVPN
 
@@ -87,14 +87,14 @@ Ahora vamos a configurar el `servidor` `OpenVPN` a donde se van a conectar los c
 
 <table><thead><tr><th width="284">Opción</th><th>Descripción</th></tr></thead><tbody><tr><td>Description</td><td>OPENVPN_Server</td></tr><tr><td>Server mode</td><td>Remote Access (SSL/TLS + User Auth) </td></tr><tr><td>Protocol</td><td>UDP on IPv4 only </td></tr><tr><td>Interface</td><td>WAN</td></tr><tr><td>Puerto</td><td>5194 (cambiamos el puerto por defecto)</td></tr><tr><td>Peer Certificate Authority</td><td> OpenVPN_CA (seleccionamos el nuestro)</td></tr><tr><td>Server certificate</td><td>OPENVPN_Certificate (Server: Yes, CA: OPENVPN_CA) </td></tr></tbody></table>
 
-<figure><img src="../../../../.gitbook/assets/image (277).png" alt=""><figcaption><p>NUestro certificado de openVPN</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (277).png" alt=""><figcaption><p>NUestro certificado de openVPN</p></figcaption></figure>
 
 * Por último, debemos seleccionar la red que vamos a utilizar para comunicar el cliente con el pfSense. En mi caso voy a seleccionar la red: `10.4.44.0/24`, así como las redes o IP internas a las que tendrá acceso el cliente cuando se conecte por la VPN.&#x20;
 * Hacemos clic en `Redirect IPv4 Gateway: Force all client-generated IPv4 traffic through the tunnel`. para seleccionar esta opción
 * Podemos seleccionar la opción `Inter-client communication` para permitir comunicación entre clientes de la VPN.
 * Podemos seleccionar la opción `Duplicate connection` para permitir varias conexiones de un mismo cliente.
 
-<figure><img src="../../../../.gitbook/assets/image (278).png" alt=""><figcaption><p>Algunas de las opciones a seleccionar </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (278).png" alt=""><figcaption><p>Algunas de las opciones a seleccionar </p></figcaption></figure>
 
 * Podemos proporcionar el dominio a los clientes y los DNS a los que poder acceder.
   * DNS Server 1: 1.1.1.1
@@ -102,13 +102,13 @@ Ahora vamos a configurar el `servidor` `OpenVPN` a donde se van a conectar los c
 * Seleccionamos la opción de `Verbosity level: 3 (recommended)`.&#x20;
 * Guardamos y listo!
 
-<figure><img src="../../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption><p>OpenVPN certificate</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption><p>OpenVPN certificate</p></figcaption></figure>
 
 ### Comprobar el servicio
 
 Nos dirigimos a `Status - Service` y podemos comprobar los servicios activos y recién habilitados.
 
-<figure><img src="../../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption><p>Status - Service</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption><p>Status - Service</p></figcaption></figure>
 
 ### Configurar las reglas en el firewall para permitir acceso&#x20;
 
@@ -118,7 +118,7 @@ Ahora nos toca crear una regla en la WAN que nos permita el acceso a través del
 
 Para ello, clicamos en `Firewall - Rules - WAN`  y vamos a crear la regla, clicando donde dice `Add rule to the top of the list.`
 
-<figure><img src="../../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Crear la regla en firewall - rules - WAN</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Crear la regla en firewall - rules - WAN</p></figcaption></figure>
 
 Seleccionamos las opciones siguientes, para una configuración básica:
 
@@ -137,17 +137,17 @@ Seleccionamos las opciones siguientes, para una configuración básica:
 
 Una vez realizados los cambios, guardamos y se nos muestra como sigue:
 
-<figure><img src="../../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Regla en WAN para permitir el tráfico VPN </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Regla en WAN para permitir el tráfico VPN </p></figcaption></figure>
 
 #### Regla para permitir todo el tráfico VPN
 
 Ahora nos vamos a la pestaña de `OpenVPN` para crear otra regla que permita todo el tráfico. Seleccionamos todos los protocolos (ANY) y desde cualquier origen (ANY) a cualquier destino (ANY).
 
-<figure><img src="../../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 Seleccionamos también la opción de almacenar los logs del tráfico. Guardamos y se nos crea la regla.
 
-<figure><img src="../../../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Regla para permitir todo el tráfico en la OpenVPN</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Regla para permitir todo el tráfico en la OpenVPN</p></figcaption></figure>
 
 ### Exportar el archivo de configuración OpenVPN para los clientes&#x20;
 
@@ -155,17 +155,17 @@ Seleccionamos también la opción de almacenar los logs del tráfico. Guardamos 
 
 Primero tenemos que crear un usuario nuevo, por tanto nos vamos a `System - User Manager`&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Cerar un usuario </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Cerar un usuario </p></figcaption></figure>
 
 Creamos un nuevo usuario y clicamos en `Click to create a user certificate` para crear el certificado para ese usuario.
 
-<figure><img src="../../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Usuario Punky creado</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Usuario Punky creado</p></figcaption></figure>
 
 Una vez creado nuestro usuario de prueba (con su certificado para la VPN) ver cómo  exportar los clientes VPN. Para ello seleccionamos en el menú  a `VPN - OpenVPN - Client Export.`
 
 Y si nos vamos al final del todo, veremos a nuestro usuario **Punky**.
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Certificados a exportar del usuario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>Certificados a exportar del usuario</p></figcaption></figure>
 
 ### Comprobar estado del servicio y de los clientes conectados
 
@@ -173,19 +173,19 @@ Si queremos hacer una prueba  podemos descargar el certificado para Android o el
 
 En el caso de utilizar un dispositivo móvil, tendríamos que instalar la `OpenVPN for Android`&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1) (1).png" alt="" width="48"><figcaption><p>OpenVPN for Android</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1).png" alt="" width="48"><figcaption><p>OpenVPN for Android</p></figcaption></figure>
 
 Una vez tengamos lista la app, podemos exportar a nuestro dispositivo móvil el certificado del cliente VPN que hayamos creado. En mi caso, sería el usuario `punky`
 
-<figure><img src="../../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>Certificado de usuario Importado en la aplicación OpenVPN</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>Certificado de usuario Importado en la aplicación OpenVPN</p></figcaption></figure>
 
 Nos conectamos a la VPN y se nos muestra el log:
 
-<figure><img src="../../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>Usuario conectado a la VPN de pfSense </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>Usuario conectado a la VPN de pfSense </p></figcaption></figure>
 
 Y si nos vamos, por ejemplo al navegador y escribimos la IP
 
-<figure><img src="../../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>Accediendo a pfSense en el navegador</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption><p>Accediendo a pfSense en el navegador</p></figcaption></figure>
 
 Ya podemos comprobar la conexión al firewall.  Claramente que nos falta mucho. Se trata de una conexión básica. Lo siguiente a probar es configurar el acceso de un usuario a un equipo de la red detrás del firewall.&#x20;
 

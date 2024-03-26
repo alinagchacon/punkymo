@@ -8,7 +8,7 @@ Vamos a configurar un firewall ZPF en una topología como la siguiente:
 
 &#x20;   &#x20;
 
-<figure><img src="../../.gitbook/assets/image (2) (2) (3).png" alt=""><figcaption><p>Configurando un firewall de zona</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2) (3).png" alt=""><figcaption><p>Configurando un firewall de zona</p></figcaption></figure>
 
 #### Configuraciones iniciales
 
@@ -75,9 +75,9 @@ Las configuraciones de zona siguen las configuraciones del mapa de políticas co
 Router#show run
 ```
 
-<figure><img src="../../.gitbook/assets/image (18) (3).png" alt=""><figcaption><p>show run</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18) (3).png" alt=""><figcaption><p>show run</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (3).png" alt=""><figcaption><p>show run</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (3).png" alt=""><figcaption><p>show run</p></figcaption></figure>
 
 Otros comandos útiles para verificar:
 
