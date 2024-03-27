@@ -57,6 +57,7 @@
     * [OpenVPN en pfSense](redes/firewalls/dos-firewall/pfsense/openvpn-en-pfsense.md)
     * [DMZ](redes/firewalls/dos-firewall/pfsense/dmz.md)
     * [Alias](redes/firewalls/pfsense/alias.md)
+* [Proxy](redes/proxy.md)
 
 ## Servicios
 
