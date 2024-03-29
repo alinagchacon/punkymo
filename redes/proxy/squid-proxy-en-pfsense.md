@@ -2,7 +2,7 @@
 description: Configuración de un proxy en pfSense
 ---
 
-# Proxy en pfSense
+# Squid proxy en pfSense
 
 En la instalación del servidor de proxy en pfSense tvamos a utilizar: Squid así como SquidGuard y Lightsquid, para aumentar la seguridad en la navegación de los usuarios.
 
@@ -60,7 +60,7 @@ Y en el menu Status - Services podremos ver los servicios que tenemos instalados
 
 
 
-## Comenzar a configurar Squid
+## Configurando Squid Proxy Server
 
 Para comenzar la configuración de Squid nos vamos a  `Services - Squid Proxy Server - Local Cache`. Al inicio del todo nos encontramos con los ajustes generales, esto es: `Squid Cache General Settings`.
 
@@ -194,11 +194,7 @@ En este apartado lo dejo todo por defecto, aunque tendremos en cuenta de marcar 
 
 ### Transparent Proxy Settings section
 
-No vamos a activar el proxy transparente.&#x20;
-
-Este tipo de proxy permite que todo equipo conectado a las interfaces que seleccionemos pase por el proxy sin necesidad de configurar nada en los equipos que están conectados.&#x20;
-
-Tiene tres opciones interesantes que son:
+Este tipo de proxy permite que todo equipo conectado a las interfaces que seleccionemos pase por el proxy sin necesidad de configurar nada en los equipos que están conectados. En este apartado tenemos tres opciones interesantes que son:
 
 **Bypass Proxy for Private Address Destination**. No reenviar tráfico a direcciones privadas. Las direcciones privadas pasan directamente a través del firewall, no a través del servidor proxy.
 
@@ -206,7 +202,7 @@ Tiene tres opciones interesantes que son:
 
 **Bypass Proxy for These Destination IPs.** Omitir proxy para estas IP de destino No dirigir al proxy el tráfico que va a estas IP de destino, redes CIDR, nombres de host o alias, sino déjelo pasar directamente a través del firewall. Se aplica sólo al modo transparente.&#x20;
 
-
+No obstante, no vamos a activar el proxy transparente en esta ocasión.
 
 ### SSL Man In the Middle Filtering
 
@@ -236,3 +232,59 @@ Lo último a considerar sería la habilitación de los logs de Squid. Como verá
 
 Guardamos y salimos.
 
+## Antivirus Clamav
+
+[ClamAV](https://www.clamav.net/) es un programa de código abierto diseñado para detectar virus y malware  en sistemas Linux y FreeBSD. Es  un antivirus muy popular que permite escanear archivos en busca de virus, gusanos, troyanos, software espía entre otros. Es eficaz, ligero, fácil de usar y válido para utilizar tanto en entornos domésticos como empresariales.&#x20;
+
+Clamav también se integra con servidores de correo electrónico para escanear y filtrar mensajes en busca de archivos adjuntos maliciosos.&#x20;
+
+Entre las opciones que nos encontramos  con una opción donde podemos habilitar o no ClamAV,a sí como qué datos del cliente mandamos  a ClamAV, entre otras opciones.
+
+En nuestro caso, siendo una prueba, solo lo voy a activar y dejar las opciones por defecto. Guardamos y salimos.
+
+_Nota: Para mi es interesante el Clamav de la época en que monté un servidor de correos para el grupo de investigación donde trabajaba. No obstante, para esta prueba pudiéramos pasar sin él._
+
+## ACL
+
+Este apartado de `Access Control List (ACL)` hace referencia  a las reglas que determinan qué clientes tienen permiso para acceder a qué recursos a través del proxy Squid.
+
+Dichas reglas `ACL` se  basan en características como las direcciones IP, nombres de dominio, direcciones MAC, etc. así que al configurar las ACL es posible especificar qué hosts o redes tienen permitido o denegado el acceso a través del proxy para ciertos recursos de Internet. Esto nos permite controlar y filtrar el tráfico de Internet que pasa a través de la red, lo que proporciona una capa extra de seguridad y control.
+
+Algunas de estas opciones son:
+
+* **Allowed subnets**.  las  subredes que podrán utilizar el proxy.&#x20;
+* **Unrestricted IP.** Añadimos las redes o ips que no serán filtradas.
+* **Banned Hosts Addresses.** Las subredes o ips que no tendrán permitido usar el proxy.
+* **Whitelist.** La lista blanca de dominios de destino que serán siempre accesibles para los usuarios.
+* **Blacklist.** La lista negra de dominios de destimo a los que no se podrá acceder nunca.
+
+
+
+## Otros apartados
+
+1. Tenemos el  apartado `Traffic Mgmt` que nos permite establecer el tamaño máximo de descarga y subida, el ancho de banda de las descargas cuando el uso del ancho de banda llegue a cierto valor especificado, etc.
+2. La sección `Squid Transfer Extensions Settings` en caso de querer solo unas extensiones específicas.
+3. Este otro apartado Squid Transfer Abort Settings&#x20;
+4.  En el apartado `Authentication` es un sistema de autenticación que nos permite crear  reglas en función del tipo de usuario. Tenemos cuatro métodos:&#x20;
+
+    1. Usuarios locales
+    2. LDAP
+    3. Radius&#x20;
+    4. Portal Cautivo
+
+
+
+    Tenemos otras opciones, donde pondremos lo que verán los usuarios en la ventana que se les mostraría, así como el número de procesos para autenticar, etc.
+5. Depende del escenario nuestro puede ser interesante la opción donde podemos elegir el tipo, cada cuanto y la dirección de los servidores para sincronizar.
+
+
+
+Continúa ....\
+\
+
+
+
+
+&#x20;
+
+\

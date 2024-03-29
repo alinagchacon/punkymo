@@ -58,7 +58,8 @@
     * [DMZ](redes/firewalls/dos-firewall/pfsense/dmz.md)
     * [Alias](redes/firewalls/pfsense/alias.md)
 * [Proxy](redes/proxy/README.md)
-  * [Proxy en pfSense](redes/proxy/proxy-en-pfsense.md)
+  * [Squid proxy en pfSense](redes/proxy/squid-proxy-en-pfsense.md)
+  * [SquidGuard](redes/proxy/squidguard.md)
   * [Proxy inverso - Nginx](redes/proxy/proxy-inverso-nginx.md)
 
 ## Servicios
