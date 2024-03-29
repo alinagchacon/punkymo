@@ -61,7 +61,7 @@
   * [Squid en pfSense](redes/proxy/squid-en-pfsense/README.md)
     * [Squid Proxy Server](redes/proxy/squid-en-pfsense/squid-proxy-server.md)
     * [SquidGuard Proxy](redes/proxy/squid-en-pfsense/squidguard-proxy.md)
-  * [Proxy inverso - Nginx](redes/proxy/proxy-inverso-nginx.md)
+  * [Proxy con Nginx](redes/proxy/proxy-con-nginx.md)
 
 ## Servicios
 
