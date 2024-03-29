@@ -1,6 +1,0 @@
----
-description: Continuación ...
----
-
-# SquidGuard
-

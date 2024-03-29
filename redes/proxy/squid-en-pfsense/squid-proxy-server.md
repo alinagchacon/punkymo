@@ -1,66 +1,8 @@
 ---
-description: Configuración de un proxy en pfSense
+description: pfSense
 ---
 
-# Squid proxy en pfSense
-
-En la instalación del servidor de proxy en pfSense tvamos a utilizar: Squid así como SquidGuard y Lightsquid, para aumentar la seguridad en la navegación de los usuarios.
-
-### Squid
-
-Es el servidor proxy open source más popular debido a:
-
-* su gran rendimiento como proxy cache
-* a los protocolos que soporta HTTP, HTTPS, GOPHER, FTP, IMAP, etc.,
-* a la capacidad de limitar conexiones o ancho de banda,
-* la posibilidad de usarse como un proxy transparente
-* la posibilidad de utilizarlo como proxy inverso.
-
-### **SquidGuard**
-
-Es un sistema de filtrado que utiliza listas negras. Es una herramienta de filtrado de contenido de código abierto que fue diseñada para trabajar con Squid. Su función principal es filtrar y bloquear el acceso a sitios web basándose en reglas definidas.
-
-Algunas de las características principales de esta herramienta son:
-
-1. **Filtrado de contenido**: permite bloquear el acceso a sitios web basados en diferentes criterios, como direcciones URL, palabras clave en el contenido, tipos de archivo, direcciones IP, etc.
-2. **Soporte para listas de control de acceso (ACL)**: Facilita a los administradores de red la posibilidad de definir políticas de acceso y determinar  qué usuarios o grupos pueden acceder a qué contenido.
-3. **Integración con Squid**:  Facilita la implementación y configuración en entornos que ya utilizan Squid para funciones de proxy y caché web.
-4. **Flexibilidad en la configuración**:  ofrece diversidad de opciones de configuración para adaptarse a los requisitos específicos de filtrado de contenido de cada entorno, permititiendo a los administradores personalizar el tipo de filtrado según sus necesidades.
-
-### **Lightsquid**
-
-Es una aplicación via web que  genera informes muy detallados a partir de los logs de Squid. Proporciona  informes y análisis de registros de acceso para Squid Proxy Server. LightSquid analiza los registros de acceso generados por Squid y los presenta en forma de informes web fáciles de entender.
-
-#### Características de LightSquid
-
-1. **Informes de uso de internet:** Genera informes detallados sobre el uso de Internet, incluye estadísticas sobre el tráfico web, sitios web más visitados, horarios de mayor actividad, etc.
-2. **Personalización de informes:** Permite la personalización de los informes según las necesidades como seleccionar el rango de fechas, filtrar por usuarios o grupos, entre otros.
-3. **Gráficos y estadísticas:** Presenta los datos de manera visual, utilizando gráficos y estadísticas para facilitar la comprensión y el análisis de los patrones de uso de Internet.
-
-## Los primeros pasos
-
-Lo primero que tenemos que hacer es instalar los paquetes correspondientes. Esto es:
-
-* Lightsquid
-* Squid
-* squidGuard\
-
-
-Para hacerlo, nos dirigimos a `System - Package Manager` y seleccionamos los paquetes en cuestión para instalar. Una vez finalizada la instalación de los tres paquetes tendríamos algo como lo siguiente en el apartado de `Installed Packages`:
-
-<figure><img src="../../.gitbook/assets/image (314).png" alt=""><figcaption><p>Paquetes instalados en pfSense</p></figcaption></figure>
-
-Una vez hecho esto, en el menú `Services` vamos a ver tres nuevas opciones: `Squid Proxy Server`, `Squid Reverse Proxy` y `SquidGuard Proxy Filter`.&#x20;
-
-<figure><img src="../../.gitbook/assets/image (315).png" alt=""><figcaption><p>En el menu principal Services aparece Squid </p></figcaption></figure>
-
-Y en el menu Status - Services podremos ver los servicios que tenemos instalados y si están o no en ejecución.
-
-<figure><img src="../../.gitbook/assets/image (316).png" alt=""><figcaption><p>En el menu Status - Services - squid</p></figcaption></figure>
-
-
-
-## Configurando Squid Proxy Server
+# Squid Proxy Server
 
 Para comenzar la configuración de Squid nos vamos a  `Services - Squid Proxy Server - Local Cache`. Al inicio del todo nos encontramos con los ajustes generales, esto es: `Squid Cache General Settings`.
 
@@ -106,7 +48,7 @@ Esta es la siguiente sección en la configuración de la `Local cache`. En la mi
 
 **Hard Disk Cache System**. El tipo de sistema de cache.&#x20;
 
-_Nota: En caso de duda podemos clicar el botón_ ![](<../../.gitbook/assets/image (318).png>) _y nos brinda más información. También nos redirige a un link del Squid:_ [_http://www.squid-cache.org/Doc/config/cache\_dir/_](http://www.squid-cache.org/Doc/config/cache\_dir/) _para mayor información._
+_Nota: En caso de duda podemos clicar el botón_ ![](<../../../.gitbook/assets/image (318).png>) _y nos brinda más información. También nos redirige a un link del Squid:_ [_http://www.squid-cache.org/Doc/config/cache\_dir/_](http://www.squid-cache.org/Doc/config/cache\_dir/) _para mayor información._
 
 Las opciones son:
 
@@ -115,7 +57,7 @@ Las opciones son:
 * **Disco**. Utiliza un proceso separado para evitar bloquear el proceso principal de Squid en la E/S del disco.
 * **Nulo**. No utiliza ningún almacenamiento. Ideal para empotrar.
 
-**Clear Disk Cache NOW**. El botón que nos encontramos para limpiar la cache manualmente ![](<../../.gitbook/assets/image (319).png>)nos permitiría limpiar la caché actual sin más.
+**Clear Disk Cache NOW**. El botón que nos encontramos para limpiar la cache manualmente ![](<../../../.gitbook/assets/image (319).png>)nos permitiría limpiar la caché actual sin más.
 
 **Level 1 Directories.** Es uno de los aspectos críticos para la velocidad de la cache. En este punto se puede especificar el número de directorios de nivel 1 para la caché del disco duro. Tener en cuenta que cada directorio de nivel 1 contiene 256 subdirectorios. Esto hace que un valor de 256 directorios de nivel 1 utilizará un total de 65536 directorios para la caché del disco duro. Esto ralentizará significativamente el proceso de inicio del servicio proxy, pero puede acelerar el almacenamiento en caché bajo ciertas condiciones.
 
@@ -164,7 +106,7 @@ Con la cache lista nos dirigimos a la configuración general de Squid en la pest
 
 En este apartado lo dejo todo por defecto, aunque tendremos en cuenta de marcar en `Check to enable Squid Proxy` para habilitar el servicio.
 
-<figure><img src="../../.gitbook/assets/image (320).png" alt=""><figcaption><p>Pestaña General in Squid Proxy</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (320).png" alt=""><figcaption><p>Pestaña General in Squid Proxy</p></figcaption></figure>
 
 <details>
 
@@ -213,7 +155,7 @@ Este apartado es muy importante ya que a día de hoy la mayoría de tráfico es 
 
 En cualquier caso necesitamos tener creado una CA o sea, una autoridad de certificado como mismo hicimos para configurar el servidor de OpenVPN. Debe quedar algo así como se muestra en la imagen:
 
-<figure><img src="../../.gitbook/assets/image (322).png" alt=""><figcaption><p>CA para el Squid</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (322).png" alt=""><figcaption><p>CA para el Squid</p></figcaption></figure>
 
 En definitiva, lo que nos interesa en esta sección es:&#x20;
 
@@ -226,7 +168,7 @@ Al habilitar "Splice all", Squid puede intentar realizar una transferencia direc
 
 Sin embargo, esta opción puede tener implicaciones en la seguridad y la compatibilidad con algunas aplicaciones o protocolos, ya que puede interferir con ciertas funciones de inspección y manipulación de datos que Squid realiza normalmente.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (321).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (321).png" alt=""><figcaption></figcaption></figure>
 
 Lo último a considerar sería la habilitación de los logs de Squid. Como verás no es lo último de esta sección pero lo podemos dejar con todas las opciones por defecto.
 
@@ -277,14 +219,6 @@ Algunas de estas opciones son:
     Tenemos otras opciones, donde pondremos lo que verán los usuarios en la ventana que se les mostraría, así como el número de procesos para autenticar, etc.
 5. Depende del escenario nuestro puede ser interesante la opción donde podemos elegir el tipo, cada cuanto y la dirección de los servidores para sincronizar.
 
-
-
 Continúa ....\
-\
 
 
-
-
-&#x20;
-
-\
