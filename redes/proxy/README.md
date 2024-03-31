@@ -46,7 +46,7 @@ Sin embargo, limitan la capacidad de una organización para satisfacer las neces
 
 
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Tomado de Cloudflare</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Tomado de Cloudflare</p></figcaption></figure>
 
 \
 \
@@ -86,7 +86,7 @@ Veamos un ejemplo tomado de Cloudflare:
 
 
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Tomado de cloudflare</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Tomado de cloudflare</p></figcaption></figure>
 
 \
 Lo habitual es que todas las solicitudes de D vayan directamente a F, y F enviaría las respuestas directamente a D. Sin embargo, con un proxy inverso, todas las solicitudes de D irán directamente a E, y E las enviaría a F, por lo que también recibiría las respuestas de F. y se las pasaría a D.
