@@ -25,13 +25,15 @@ En general, los archivos age deben tratarse como binarios y no son maleables sin
 
 ## SOPS
 
-Para la instalación de sops no tendremos ninguna dificultad, seguiremos los siguientes pasos: el primer paso es usar los siguientes comandos: wget&#x20;
+Para la instalación de sops no tendremos ninguna dificultad, seguiremos los siguientes pasos.&#x20;
 
-<mark style="color:blue;">`https://github.com/mozilla/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb`</mark>
+Lo primero sería descargar el paquete correspondiente:&#x20;
 
 ```
 wget https://github.com/mozilla/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb
 ```
+
+Y una vez descargado, lo instalamos:
 
 ```
 sudo dpkg -i sops_3.7.3_amd64.deb
@@ -46,35 +48,49 @@ sops -v
 
 ## AGE
 
-Instalamos AGE mediante wget:&#x20;
+Nos descargamos AGE mediante wget:&#x20;
 
 ```
 sudo wget https://github.com/FiloSottile/age/releases/download/v1.0.0-rc.1/age-v1.0.0-rc.1-linux-amd64.tar.gz
 ```
 
+Una vez lo tengamos descargado, podemos descomprimir el archivo con el comando tar. Esto nos crea una carpeta, así que nos movemos dentro de la misma:
+
 ```
  tar -xvf age-v1.0.0-rc.1-linux-amd64.tar.gz
+ cd age
+ sudo cp age* /usr/local/bin/
 ```
 
-```
-cd age
-```
-
-<pre><code><strong>sudo cp age* /usr/local/bin/
-</strong></code></pre>
+Una vez instalada y descomprimida movemos los archivos age y age-key a usr/local/bin:&#x20;
 
 ```
-age --version
+mv /age/age /usr/local/bin/ 
+mv /age/age-keygen /usr/local/bin/
 ```
 
+<figure><img src="../.gitbook/assets/image (3).png" alt="" width="319"><figcaption><p>Archivos age y age-keygen</p></figcaption></figure>
 
+Al igual que con SOP, podemos ver la versión del paquete instalado:
+
+```
+ age --version
+```
 
 ### Trabajando con SOP
+
+Lo primero que vamos a hacer es crear un directorio llamado SOPS y crear una nueva key que vamos a exportar.&#x20;
 
 <pre><code><strong>mkdir sops
 </strong></code></pre>
 
 Creamos una nueva key:
+
+```
+age-keygen > keyname.txt
+```
+
+Y le cambiamos los permisos:
 
 <pre><code><strong>chmod 600 keyname.txt
 </strong></code></pre>
@@ -85,7 +101,7 @@ Exportamos las variables usando la key
 export SOPS_AGE_RECIPIENTS=(public key)
 ```
 
-Ejemplo de exportar vars usando la key
+Ejemplo de exportar `vars` usando la key
 
 <pre><code><strong>export SOPS_AGE_RECIPIENTS=age1gqv7p4gdy4ffwux4epaxeu905
 </strong></code></pre>
@@ -119,4 +135,7 @@ Le echamos  un vistazo al archivo
 cat ejemplo.yaml
 ```
 
-<mark style="color:red;">to be continued ...</mark>
+Guardamos el archivo y ahora ya podremos visualizar el archivo con el comando cat:
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Visualizando el archivo creado</p></figcaption></figure>
+

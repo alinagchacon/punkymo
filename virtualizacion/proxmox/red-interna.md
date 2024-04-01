@@ -90,7 +90,7 @@ En Proxmox:
 * RAM: 6GB / Procesadores: 8
 * Red: en modo puente (bridge)
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de la VM de Proxmox en VMware</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de la VM de Proxmox en VMware</p></figcaption></figure>
 
 Las direcciones IP de Proxmox serían:
 
@@ -99,11 +99,11 @@ Las direcciones IP de Proxmox serían:
 
 Las IP se configuran de manera estática como muestra la siguiente imagen:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de /etc/network/interfaces en Proxmox</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de /etc/network/interfaces en Proxmox</p></figcaption></figure>
 
 Adicionalmente, añadimos las líneas correspondientes al IPTABLES para reescribir los paquetes de entrada y salida, de modo que parezca que se originan en el host. También tenemos que descomentar la línea `net.ipv4.ip_forward=1` en el fichero `/etc/sysctl.conf`:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo /etc/sysctl.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo /etc/sysctl.conf</p></figcaption></figure>
 
 Por supuesto, tenemos que actualizar el servicio de networking para que asuma los cambios realizados. Para ello hacemos:
 
