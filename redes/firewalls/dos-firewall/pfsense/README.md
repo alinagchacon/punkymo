@@ -19,5 +19,3 @@ pfSense proporciona funciones avanzadas de seguridad y networking y es conocido 
 7. **Interfaz gráfica:** Brinda una interfaz web sencilla e intuitiva que facilita la configuración y gestión del sistema.
 
 Siendo de código abierto, pfSense es una opción muy popular para quienes buscan una solución de firewall y enrutador de red flexible y personalizable. Se utiliza en gran variedad de entornos que van desde la pequeña empresa hasta entornos de red más grandes.
-
-###
