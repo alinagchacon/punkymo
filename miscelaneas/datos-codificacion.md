@@ -12,8 +12,6 @@ La representación uniforme de datos en un equipo se refiere a un formato están
 
 Un bit es la unidad mas pequeña de datos que puede almacenarse en un dispositivo: 0 o 1. Un bit no sirve para representar los datos. Se necesita almacenar número más grandes, textos, gráficos, etc. Se hace necesario el uso los patrones de bits, secuencia o cadenas de bits.
 
-
-
 ## Bytes
 
 Un patrón, secuencia o cadenas de bits con una longitud de 8 bits es un byte Cualquier idioma se puede definir como una secuencia de sḿbolos usados. Se puede representar cada símbolo con un patrón de bits ¿Cuántos bits podemos necesitar en una secuencia para representr un símbolo en un idioma dado?
@@ -29,8 +27,6 @@ Un patrón, secuencia o cadenas de bits con una longitud de 8 bits es un byte Cu
 Se han diseñado distintos tipos de secuencias de patrones para poder representar los caracteres de un texto. Al proceso de de representar los caracteres o símbolos se le conoce como codificación.
 
 {% embed url="http://www3.uacj.mx/CGTI/CDTE/JPM/Documents/IIT/sistemas_numericos/representacion/index.html" %}
-
-
 
 ## ASCII
 
@@ -56,14 +52,11 @@ Algunas representaciones de caracteres:&#x20;
 
 Muchos de los caracteres de control se usaban para controlar protocolos de transmisión de datos, como ocurre en comunicación:&#x20;
 
-* ACKnowledge: acuse de recibo -  mensaje que el destino envía al origen para confirmar la recepción de un mensaje.&#x20;
+* <mark style="color:red;">**ACK**</mark>**nowledge**: acuse de recibo -  mensaje que el destino envía al origen para confirmar la recepción de un mensaje.&#x20;
 * Se definen también diferentes ACK con información más compleja como peticiones de reenvío de determinadas tramas o información sobre incidencias entre otros.&#x20;
 * Los mensajes ACK se utilizan en la mayoría de las capas del OSI pero son esenciales en la capa 2 y 3.
-* NACK (negative acknowledgement o acuse de recibo negativo – se envía para informar que en la recepción de una trama de datos ha habido un error.&#x20;
-* Es el contrario de  ACK.&#x20;
-* SYN – sincronía en espera dado que no hay bits de start, stop o paridad presentes en los sistemas de comunicación en serie síncronos, hubo que establecer una serie de caracteres para el reconocimiento de los caracteres a sincronizar en el envío de información.
-
-
+* <mark style="color:red;">**NACK**</mark> (negative acknowledgement o acuse de recibo negativo – se envía para informar que en la recepción de una trama de datos ha habido un error.  Es el contrario de  ACK.&#x20;
+* <mark style="color:red;">**SYN**</mark> – sincronía en espera dado que no hay bits de start, stop o paridad presentes en los sistemas de comunicación en serie síncronos, hubo que establecer una serie de caracteres para el reconocimiento de los caracteres a sincronizar en el envío de información.
 
 ## Unicode
 
@@ -97,27 +90,125 @@ Se representan de dos maneras:&#x20;
 * Gráfico de mapas de bits
 * Gráfico de vectores
 
-| Mapas de bits                                                                                                                                                                                                                                                                                      | Gráfico de vectores                                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Una imagen se divide en una matriz de pixeles. </p><p>A cada pixel se le asigna un patrón de bits. El tamaño y el valor del patrón depende de la imagen, para una imagen formada solo por puntos blancos y negros, un patrón de un bit es suficiente para representar un pixel.</p>             | No guarda los patrones de bits. La imagen se descompone en una combinación de curvas y líneas. Cada curva o línea se representa por medio de una formula matemática. En este caso cada vez que se dibuja la imagen, la formula se vuelve a evaluar |
-| <img src="../.gitbook/assets/image (2).png" alt="" data-size="original">                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                    |
-| Para representar imágenes a color, cada pixel de color se descompone en tres colores primarios: rojo, verde, azul (RGB). Cada pixel tiene tres patrones de bits: uno para representar la intensidad del color rojo, uno para la intensidad del color verde y uno para la intensidad del color azul |                                                                                                                                                                                                                                                    |
+### Mapa de bits
+
+Una imagen se divide en una matriz de pixeles.&#x20;
+
+A cada pixel se le asigna un patrón de bits. El tamaño y el valor del patrón depende de la imagen, para una imagen formada solo por puntos blancos y negros, un patrón de un bit es suficiente para representar un pixel.
+
+<figure><img src="../.gitbook/assets/image (339).png" alt="" width="375"><figcaption></figcaption></figure>
+
+Para representar imágenes a color, cada pixel de color se descompone en tres colores primarios: <mark style="color:red;">rojo</mark>, <mark style="color:green;">verde</mark>, <mark style="color:blue;">azul</mark> (RGB).&#x20;
+
+Cada pixel tiene tres patrones de bits:&#x20;
+
+* uno para representar la intensidad del color rojo,&#x20;
+* otro para la intensidad del color verde
+* el tercero para la intensidad del color azul
+
+### Gráfico de vectores
+
+No guarda los patrones de bits. La imagen se descompone en una combinación de curvas y líneas. Cada curva o línea se representa por medio de una formula matemática. En este caso cada vez que se dibuja la imagen, la formula se vuelve a evaluar.
 
 ## BASE 64
 
-Es un sistema de numeración posicional de base 64. Es la mayor potencia que podemos representar usando solo los caracteres ASCII. Se usa en codificaciones de E-mail y PGP entre otras aplicaciones. El alfabeto consta de 64 caracteres \[A-Z]\[a-z]\[0-9] y los símbolos / y +
+Es un sistema de numeración posicional de base 64. Es la mayor potencia que podemos representar usando solo los caracteres ASCII. Se usa en codificaciones de E-mail y PGP entre otras aplicaciones.  Por tanto, es un método de codificación que convierte datos binarios en una representación de texto ASCII utilizando un conjunto de 64 caracteres.
 
-Esto es: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+El alfabeto consta de 64 caracteres \[A-Z]\[a-z]\[0-9] y los símbolos / y +
 
+Esto es: <mark style="color:red;">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</mark>
 
+&#x20;Su funcionamiento es como sigue:
 
-Los equipos solo “entienden” el sistema binario (0 y 1), con lo que para enviar datos como texto o imágenes primero se debe pasar a binario, enviar y nuevamente decodificar.&#x20;
+1. Los datos binarios se dividen en bloques de 3 bytes, o sea 24 bits. Si al final quedan menos de 3 bytes para codificar, se agregan bytes nulos para formar un bloque completo.
+2. Cada bloque de 3 bytes se convierte en un número entero de 24 bits, que es equivalente a 3 bytes en binario.
+3. El número entero de 24 bits se divide en 4 números enteros de 6 bits.
+4. Cada número entero de 6 bits se mapea a un carácter del conjunto de caracteres Base64. Estos caracteres están definidos como: `A-Z`, `a-z`, `0-9`, `+`, `/`.
+5. Si el número de bytes de entrada no es divisible por 3, se añaden uno o dos caracteres de relleno (=) al final de la cadena Base64 para asegurar que la longitud total sea un múltiplo de 4.
 
-Sin embargo, la conversión no funciona de manera directa porque por la red solo se transmiten caracteres “imprimibles”.&#x20;
+### **Ejemplo (1)**
 
-¿Qué son los caracteres imprimibles? Volvamos a ASCII.
+Vamos a ver como se transforma la palabra `Hi!` codificada en Base64:
 
-Los primeros 32 caracteres son de “control” y van del 0 a 31 Los siguientes 95 caracteres del 32 al 128 caracteres son imprimibles, con lo cual por la red solo se pueden transmitir estos 95 caracteres.
+1. Convertir cada caracter a su correspondiente valor ASCII:
+   * H -> 72
+   * i -> 105
+   * ! -> 33
+2. Convertir esos valores en su correspondiente binario:
+   * H -> 01001000
+   * i -> 01101001
+   * ! -> 00100001
+3. Combinar estos bits en un solo bloque de 24 bits:\
+   &#x20;`01001000 01101001 00100001`
+4. Dividir este bloque en 4 bloques de 6 bits: \
+   `010010` `000110` `100100` `100001`
+5. Convertir cada bloque de 6 bits a sus valores decimales:
+   * `010010` -> 18
+   * `000110` -> 6
+   * `100100` -> 36
+   * `100001` -> 33
+6. Mapear los valores decimales en caracteres Base64:
+   * 18 -> S
+   * 6 -> G
+   * 36 -> k
+   * 33 -> !
 
-Como hay sistemas que solo pueden usar los caracteres ASCII, Base64 resulta ser un método utilizado para convertir datos de caracteres no ASCII a ASCII. Los caracteres ASCII usan un patrón de 7 bits. Sin embargo, la mayoría de los equipos almacenan en bytes (1 byte = 8 bits) Por lo que ASCII deja de ser adecuado y viene Base64 a solucionar el problema.
+Por lo tanto, la palabra `Hi!` en Base64 representa como `SGk=`.
+
+Para realizar la decodificación de Base64 simplemente realizamos el proceso inverso:&#x20;
+
+* tomamos la cadena en Base64,&#x20;
+* convertimos  cada carácter a su valor numérico de 6 bits,&#x20;
+* combinamos estos valores para formar bloques de 24 bits, y&#x20;
+* convertimos estos bloques de bits de vuelta a los datos binarios originales.
+
+### **Ejemplo (2)**
+
+Pensemos en este otro ejemplo. La palabra `Man`.
+
+<figure><img src="../.gitbook/assets/image (340).png" alt=""><figcaption></figcaption></figure>
+
+### **Ejemplo (3)**&#x20;
+
+Tomemos la palabra `Bola`&#x20;
+
+* Buscamos el binario de cada letra en ASCII&#x20;
+
+<figure><img src="../.gitbook/assets/image (341).png" alt=""><figcaption></figcaption></figure>
+
+* Dividimos en grupos de 6 y rellenamos con ceros a la derecha (4 en este caso)&#x20;
+
+<figure><img src="../.gitbook/assets/image (342).png" alt=""><figcaption></figcaption></figure>
+
+* Ahora tenemos que convertir de 6 bits a 8 bits, para lo cual agregamos 2 ceros (00) a la izquierda:&#x20;
+
+<figure><img src="../.gitbook/assets/image (343).png" alt=""><figcaption></figcaption></figure>
+
+* Volvemos a la tabla ASCII - buscamos los binarios correspondientes y tomamos nota de su número decimal:&#x20;
+
+<figure><img src="../.gitbook/assets/image (344).png" alt=""><figcaption></figcaption></figure>
+
+* Por último, buscamos la referencia decimal en la tabla Base64:
+
+<figure><img src="../.gitbook/assets/image (345).png" alt=""><figcaption></figcaption></figure>
+
+## HEX
+
+Es un sistema de numeración posicional basado en 16 dígitos del 0 al 9 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) las letras de la A a la F (A, B, C, D, E, F).&#x20;
+
+* Se utiliza para registrar valores numéricos en los registros de memoria.&#x20;
+* Ocupa menor cantidad de dígitos a la hora de almacenar datos y valores numéricos muy grandes.&#x20;
+* Cada dígito hexadecimal se representa con 4 dígitos binarios.&#x20;
+* Facilita la conversión y almacenamiento de números en los dispositivos electrónicos, memorias y equipos.
+* Es una notación más compacta y utiliza menos dígitos que el sistema binario.
+
+<figure><img src="../.gitbook/assets/image (346).png" alt=""><figcaption><p>Representación en HEX</p></figcaption></figure>
+
+##
+
+## Links
+
+* https://programmerclick.com/article/9056135008/ &#x20;
+* https://marquesfernandes.com/es/tecnologia-es/que-y-base64-para-que-serve-y-como-funciona/ https://gchq.github.io/CyberChef/#recipe=To\_Base64('A-Za-z0-9%2B/%3D')\&input=Qm9sYQ  &#x20;
+* https://gchq.github.io/CyberChef/#recipe=To\_Base64('A-Za-z0-9%2B/%3D')\&input=TWFu&#x20;
 
