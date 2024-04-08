@@ -192,6 +192,16 @@ Tomemos la palabra `Bola`&#x20;
 
 <figure><img src="../.gitbook/assets/image (345).png" alt=""><figcaption></figcaption></figure>
 
+A continuación te dejo algunos casos comunes en los que utilizar Base64:
+
+1. **Autenticación y cifrado**: Se puede utilizar para ciertas aplicaciones de autenticación o para la representación de datos cifrados en un formato legible.
+2. **Intercambio de datos en la web**: Útil para incrustar imágenes en documentos HTML o CSS.
+3. **Transmisión de datos binarios en texto**: En el correo electrónico, en HTTP, donde solo se permiten caracteres de texto legibles. Al codificar datos binarios en Base64, estos datos pueden enviarse como texto ASCII.
+4. **Incorporación de datos binarios en formatos de texto**: Algunos formatos de archivo o protocolos, como XML o JSON, no admiten directamente la inclusión de datos binarios. Al codificar los datos binarios en Base64, pueden ser incluidos como una cadena de texto en estos formatos.
+5. **Protección de datos binarios en sistemas que podrían alterarlos**: Algunos sistemas de transmisión o almacenamiento podrían alterar datos binarios si no se representan correctamente. Base64 proporciona una representación segura y confiable de datos binarios.
+
+Base64 convierte datos binarios en un formato de texto legible y seguro, pero conlleva un aumento del tamaño de los datos (aproximadamente un 33% de aumento), debido a la forma en que los bits se agrupan en bloques de 6 bits para representar los 64 caracteres.
+
 ## HEX
 
 Es un sistema de numeración posicional basado en 16 dígitos del 0 al 9 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) las letras de la A a la F (A, B, C, D, E, F).&#x20;
