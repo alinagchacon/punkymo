@@ -24,6 +24,8 @@ Por otra parte, si hay algún aspecto que no está correcto, por favor, házmelo
 
 Finalmente, quiero agradecer a tres alumnos que están colaborando en el material que aquí presento: <mark style="color:blue;">N-Tech Admin Group (Xavier Adell y Joel González)</mark>  y <mark style="color:blue;">Joel López Molina</mark>. <mark style="color:blue;">Reconocer aquí cuánto estoy aprendiendo de ellos y darles las gracias.</mark>
 
+Os recomiendo  visitar los tutoriales escritos por Xavier Adell aquí: [https://docs.ntechadmin.com](https://docs.ntechadmin.com) &#x20;
+
 <div align="right">
 
 <figure><img src=".gitbook/assets/image (255).png" alt="" width="132"><figcaption></figcaption></figure>
