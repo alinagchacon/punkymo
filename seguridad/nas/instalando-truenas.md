@@ -129,11 +129,45 @@ Si queremos probar el acceso que tiene un usuario específico podemos ir al expl
 
 
 
-Hemos visto algunos aspectos de la configuración del <mark style="color:blue;">**`TrueNAS CORE`**</mark> de un modo muy básico. Falta mucho por configurar para brindar seguridad, fiabilidad y conectividad a los usuarios. Por lo que no puedo dar por acabada la configuración del servidor.
-
-<mark style="color:red;">To be continued ...</mark>
+Hemos visto algunos aspectos de la configuración del <mark style="color:blue;">`TrueNAS CORE`</mark> de un modo muy básico. Falta mucho por configurar para brindar seguridad, fiabilidad y conectividad a los usuarios. Por lo que no puedo dar por acabada la configuración del servidor.
 
 
+
+## Rsync
+
+A la hora de configurar el servicio de rsync tenemos varias opciones:
+
+1. Dos truenas, donde uno almacenará la información del otro
+2. Un truenas y una VM, siendo ésta última quien realiza el envío
+3. Un truenas, que trae de la VM la información a almacenar
+
+Lo primero que he hecho ha sido el punto 2, o sea, desde un equipo enviar con rsync la información al truenas. Veamos.
+
+### Truenas y MV
+
+Lo primero que hice ha sido crear un dataset dentro de KirbyPool, esto es: en `Storage - Pool - KirbyPool` creamos el dataset que he llamado: `BACKUP`
+
+<figure><img src="../../.gitbook/assets/image (347).png" alt=""><figcaption><p>Crear un dataset BACKUP para almacenar las copias de los usuarios</p></figcaption></figure>
+
+En segundo lugar  activamos el servicio de Rsync en el apartado de Services y editamos las opciones. Dejaremos el puerto por defecto 873, aunque no es recomendable.
+
+<figure><img src="../../.gitbook/assets/image (348).png" alt=""><figcaption><p>Servicio Rsync activado</p></figcaption></figure>
+
+En el mismo modo de edición del servicio rsync nos vamos a la pestaña `Rsync Module` y lo configuramos: buscamos el directorio BACKUP en `/mnt/KirbyPool/BACKUP:`
+
+El acceso debe ser: Read and Write&#x20;
+
+Usuario: utilicé el usuario Xenxa
+
+Habilité Enabled
+
+<figure><img src="../../.gitbook/assets/image (349).png" alt=""><figcaption><p>Modulo rsync </p></figcaption></figure>
+
+Desde otro dispositivo hice:
+
+```
+rsync -av -zz -e  "/bin/ssh" --progress abackup xenxa@192.168.40.115:~/BACKUP/
+```
 
 ### Links
 
