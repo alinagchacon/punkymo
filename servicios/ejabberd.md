@@ -52,15 +52,15 @@ Añadimos el dominio del servidor al `host,` en mi caso `haven.haven.local`.
 
 Buscamos el apartado `trusted_network` y lo ponemos en `all`, esto es:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Permitimos todo como "trusted_network"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Permitimos todo como "trusted_network"</p></figcaption></figure>
 
 Ahora le vamos a dar permisos de administrador al usuario `admin` que hemos creado previamente:
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Permisos de administración al usuario admin</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Permisos de administración al usuario admin</p></figcaption></figure>
 
 El **acceso web** viene _habilitado por defecto_ por las siguientes lineas:
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption><p>Puerto 5280 del acceso web de ejabberd</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Puerto 5280 del acceso web de ejabberd</p></figcaption></figure>
 
 ### Creación de cuentas de usuario&#x20;
 
@@ -104,11 +104,11 @@ https://192.168.6.100/admin
 
 Nos saldrá una ventana donde nos pide el `usuario` y `contraseña` para acceder. Para ello usaremos el usuario `admin` y ya tendremos acceso a la web de administración.
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption><p>Web de administración de ejabberd</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Web de administración de ejabberd</p></figcaption></figure>
 
 Si clicamos en `Dominios Virtuales` vemos el dominio que hemos creado:
 
-<figure><img src="../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>Dominio haven.haven.local </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption><p>Dominio haven.haven.local </p></figcaption></figure>
 
 Si clicamos en el dominio `haven.haven.local` accedemos a otras opciones de configuración, como muestra la siguiente imagen.
 

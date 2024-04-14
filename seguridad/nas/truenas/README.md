@@ -1,8 +1,8 @@
 ---
-description: Apuntes
+description: Configuración y Rsync
 ---
 
-# Instalando Truenas
+# Truenas
 
 <mark style="color:blue;">`Truenas`</mark> es un sistema operativo (SO) que está basado en la licencia Berkeley Software Distribution (BSD) y proporciona servicios de almacenamiento en red. Es un SO gratuito, open-source que permite convertir un PC en un soporte de almacenamiento accesible desde red, por ejemplo para almacenamientos masivos de información, copias de seguridad de datos, música, etc.
 
@@ -29,23 +29,23 @@ Requerimientos técnicos:
 
 Nos descargamos la versión TRUENAS CORE.
 
-<figure><img src="../../.gitbook/assets/image (141).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (141).png" alt=""><figcaption></figcaption></figure>
 
 Creamos la VM con los datos requeridos, esto es: 4GB de RAM, 3 discos duros para crear un RAID1 y en modo puente para tener acceso a la VM desde otro equipo de la red.
 
-<figure><img src="../../.gitbook/assets/image (119) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (119) (1).png" alt=""><figcaption></figcaption></figure>
 
 Durante el proceso de instalación seleccionamos un disco para realizar la instalación del SO, dejando los otros dos discos libres por el momento. Seleccionamos además el modo de arranque con BIOS porque funciona con prácticamente todas las placas base. Una vez hecho esto, nos pedirá reiniciar el sistema asegurándonos extraer la ISO del medio óptico.
 
 Reiniciamos la VM y debemos visualizar un menú como el siguiente:
 
-<figure><img src="../../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
 
 
 
 A través del navegador accedemos a la VM para configurar todos los servicios.
 
-<figure><img src="../../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
 
 Una vez dentro accedemos al dashboard que trae estadísticas de uso de la CPU, del sistema, memoria, etc.
 
@@ -87,13 +87,13 @@ En esta sección es donde  podemos activar o desactivar  servicios, y configurar
 
 Podemos habilitar algún que otro servicio como: samba o smb, rsync que necesita de ssh para probar lo mínimo del servidor.
 
-<figure><img src="../../.gitbook/assets/image (17) (1) (2).png" alt=""><figcaption><p>Algunos de los servicios habilitados</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17) (1) (2).png" alt=""><figcaption><p>Algunos de los servicios habilitados</p></figcaption></figure>
 
 Para probar el uso de SSH podemos conectarnos desde el CMD de Windows. Recuerda que el NAS está en modo Adaptador Puente con lo cual tenemos acceso al mismo a través de la red.
 
 Por tema de seguridad no es conveniente brindar acceso al root a través de SSH.
 
-<figure><img src="../../.gitbook/assets/image (5) (2) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (2) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Cuentas de usuarios
 
@@ -109,15 +109,15 @@ Para poder acceder a los contenidos de cada usuario a través de la red, se hace
 
 <div align="center">
 
-<figure><img src="../../.gitbook/assets/image (1) (5).png" alt=""><figcaption><p>Crear usuario</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (5).png" alt=""><figcaption><p>Crear usuario</p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/image (9) (3).png" alt=""><figcaption><p>Los permisos </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (3).png" alt=""><figcaption><p>Los permisos </p></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/image (6) (3) (2).png" alt=""><figcaption><p>ACL</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (3) (2).png" alt=""><figcaption><p>ACL</p></figcaption></figure>
 
 </div>
 
@@ -125,51 +125,13 @@ Tener en cuenta que al configurar las reglas ACL, Access Control List, los permi
 
 Si queremos probar el acceso que tiene un usuario específico podemos ir al explorador de <mark style="color:blue;">`Windows - Red - \\TRUENAS`</mark> y debemos ver algo como:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (3).png" alt=""><figcaption><p>Usuarios </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (3).png" alt=""><figcaption><p>Usuarios </p></figcaption></figure>
 
 
 
 Hemos visto algunos aspectos de la configuración del <mark style="color:blue;">`TrueNAS CORE`</mark> de un modo muy básico. Falta mucho por configurar para brindar seguridad, fiabilidad y conectividad a los usuarios. Por lo que no puedo dar por acabada la configuración del servidor.
 
-
-
-## Rsync
-
-A la hora de configurar el servicio de rsync tenemos varias opciones:
-
-1. Dos truenas, donde uno almacenará la información del otro
-2. Un truenas y una VM, siendo ésta última quien realiza el envío
-3. Un truenas, que trae de la VM la información a almacenar
-
-Lo primero que he hecho ha sido el punto 2, o sea, desde un equipo enviar con rsync la información al truenas. Veamos.
-
-### Truenas y MV
-
-Lo primero que hice ha sido crear un dataset dentro de KirbyPool, esto es: en `Storage - Pool - KirbyPool` creamos el dataset que he llamado: `BACKUP`
-
-<figure><img src="../../.gitbook/assets/image (347).png" alt=""><figcaption><p>Crear un dataset BACKUP para almacenar las copias de los usuarios</p></figcaption></figure>
-
-En segundo lugar  activamos el servicio de Rsync en el apartado de Services y editamos las opciones. Dejaremos el puerto por defecto 873, aunque no es recomendable.
-
-<figure><img src="../../.gitbook/assets/image (348).png" alt=""><figcaption><p>Servicio Rsync activado</p></figcaption></figure>
-
-En el mismo modo de edición del servicio rsync nos vamos a la pestaña `Rsync Module` y lo configuramos: buscamos el directorio BACKUP en `/mnt/KirbyPool/BACKUP:`
-
-El acceso debe ser: Read and Write&#x20;
-
-Usuario: utilicé el usuario Xenxa
-
-Habilité Enabled
-
-<figure><img src="../../.gitbook/assets/image (349).png" alt=""><figcaption><p>Modulo rsync </p></figcaption></figure>
-
-Desde otro dispositivo hice:
-
-```
-rsync -av -zz -e  "/bin/ssh" --progress abackup xenxa@192.168.40.115:~/BACKUP/
-```
-
-### Links
+## Links
 
 * [https://www.truenas.com/truenas-enterprise/](https://www.truenas.com/truenas-enterprise/)
 * [https://www.redeszone.net/tutoriales/servidores/truenas-core-guia-instalacion-configuracion-nas/ ](https://www.redeszone.net/tutoriales/servidores/truenas-core-guia-instalacion-configuracion-nas/)

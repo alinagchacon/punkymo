@@ -6,22 +6,22 @@ description: www.freenove.com
 
 Utilizaremos la placa `ESP32-S3 WROOM` para controlar el parpadeo de un LED común. Como véis solo vamos a conectar la placa al PC y ver como parpadea el led azul.
 
-| Componente                | Imagen                                                                                                                    |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| <p><br>ESP32-S3 WROOM</p> | <p><br><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""></p> |
-| <p><br>USB cable</p>      | ![](<../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)                                |
+| Componente                | Imagen                                                                                                                        |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| <p><br>ESP32-S3 WROOM</p> | <p><br><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""></p> |
+| <p><br>USB cable</p>      | ![](<../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)                                |
 
 El ESP32-S3 WROOM necesita una corriente de 5v, aunque en este tutorial lo vamos a conectar directamente al PC vía el cable USB. Open Arduino IDE 2.0.0 y&#x20;
 
 Click Tools->Upload Mode y selecciona USB-OTG CDC(TinyUSB)\
 
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 El puerto del PC puede ser diferente para cada usuario, así que tendrás que ver cuál es en tu caso. \
 
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Clica el botón Upload y subirá y compilará el script correspondiente al ESP32-S3-WROOM.
 
@@ -66,7 +66,7 @@ pip install pyserial
 \
 Así que toca revisar desde el inicio la instalación de la ESP32-S3, pero no encuentro nada diferente a lo que dice el material de referencia así que en lugar de seleccionar el chip `ESP32S3`- selecciono este otro `ESP32 Wrover Kit (all versions)`:
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y voilà esta vez todo funcionó bien: compila bien y veo que parpadea el led azul y esto es todo por ahora!
 
