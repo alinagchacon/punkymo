@@ -52,7 +52,7 @@ Añadimos el dominio del servidor al `host,` en mi caso `haven.haven.local`.
 
 Buscamos el apartado `trusted_network` y lo ponemos en `all`, esto es:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Permitimos todo como "trusted_network"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Permitimos todo como "trusted_network"</p></figcaption></figure>
 
 Ahora le vamos a dar permisos de administrador al usuario `admin` que hemos creado previamente:
 
