@@ -51,13 +51,13 @@ sops -v
 Nos descargamos AGE mediante wget:&#x20;
 
 ```
-sudo wget https://github.com/FiloSottile/age/releases/download/v1.0.0-rc.1/age-v1.0.0-rc.1-linux-amd64.tar.gz
+sudo wget https://github.com/FiloSottile/age/releases/age-v1.1.1-linux-amd64.tar.gz
 ```
 
 Una vez lo tengamos descargado, podemos descomprimir el archivo con el comando tar. Esto nos crea una carpeta, así que nos movemos dentro de la misma:
 
 ```
- tar -xvf age-v1.0.0-rc.1-linux-amd64.tar.gz
+ tar -xvf age-v1.1.1-linux-amd64.tar.gz
  cd age
  sudo cp age* /usr/local/bin/
 ```
