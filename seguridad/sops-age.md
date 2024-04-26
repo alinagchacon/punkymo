@@ -4,7 +4,7 @@ description: N-Tech Admin Group
 
 # SOPS/AGE
 
-Mozilla SOPS (**S**ecrets **OP**eration**S**) se como un editor de archivos cifrados que admite formatos del tipo YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de éstos mediante los cifrados [AWS KMS](https://aws.amazon.com/es/kms/), GCP KMS, Azure Key Vault y PGP.
+Mozilla SOPS (**S**ecrets **OP**eration**S**) es como un editor de archivos cifrados que admite formatos del tipo YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de éstos mediante los cifrados [AWS KMS](https://aws.amazon.com/es/kms/), GCP KMS, Azure Key Vault y PGP.
 
 Para almacenar secretos de forma segura en un repositorio de Git público o privado, puede usar la SOPS CLI de Mozilla para cifrar con OpenPGP, AWS KMS, GCP KMS y Azure Key Vault.
 
