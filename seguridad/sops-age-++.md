@@ -30,13 +30,13 @@ Para la instalación de sops no tendremos ninguna dificultad, seguiremos los sig
 Lo primero sería descargar el paquete correspondiente:&#x20;
 
 ```
-wget https://github.com/mozilla/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb
+wget https://github.com/mozilla/sops/releases/download/v3.8.1/sops_3.8.1_amd64.deb
 ```
 
 Y una vez descargado, lo instalamos:
 
 ```
-sudo dpkg -i sops_3.7.3_amd64.deb
+sudo dpkg -i sops_3.8.1_amd64.deb
 ```
 
 Una vez instalada podemos ver la versión de SOPS:
