@@ -165,7 +165,7 @@ Una vez creado nuestro usuario de prueba (con su certificado para la VPN) ver c√
 
 Y si nos vamos al final del todo, veremos a nuestro usuario **Punky**.
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Certificados a exportar del usuario</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Certificados a exportar del usuario</p></figcaption></figure>
 
 ### Comprobar estado del servicio y de los clientes conectados
 

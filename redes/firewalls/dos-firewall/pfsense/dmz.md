@@ -45,7 +45,7 @@ En el diagrama de la red se muestran las dos VM conectadas a la DMZ, así como l
 
 Para habilitar la interfaz de red para la DMZ necesitas primero tener apagada la VM del pfSense, agregar el tercer adaptador de red en modo `red interna` y encender el firewall. Adicionalmente, debemos renombrar la interfaz como DMZ dado que el sistema la nombra como `Option 1` por defecto.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Las tres interfaces de red</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Las tres interfaces de red</p></figcaption></figure>
 
 Las direcciones IP de las interfaces de red LAN y DMZ son IP estáticas y en las mismas tenemos que configurar el servicio DHCP para que le brinde direcciones IP a las VM que vamos a conectar por cada interfaz de red, esto es:
 
@@ -56,7 +56,7 @@ Las direcciones IP de las interfaces de red LAN y DMZ son IP estáticas y en las
 
 La siguiente imagen muestra las asignaciones de las IP a las VM conectadas por cada interfaz de red: LAN y DMZ.
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Las IP asignadas a las VM conectadas a las redes LAN y DMZ</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Las IP asignadas a las VM conectadas a las redes LAN y DMZ</p></figcaption></figure>
 
 
 
@@ -68,7 +68,7 @@ De modo automático, pfSense genera `reglas de salida` a través de la `WAN` par
 
 Dado que tenemos declaradas las redes `LAN` y `DMZ` encontraremos dos reglas por defecto.
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>Reglas de salida en el firewall</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption><p>Reglas de salida en el firewall</p></figcaption></figure>
 
 Si queremos crear `reglas de entrada` en el pfSense tenemos que ir a: `Firewall - NAT - Port Forward`. Por tanto, esto es lo que vamos a hacer para cada servicio: el de HTTP y el de SSH.
 
@@ -93,7 +93,7 @@ Las opciones a tener en cuenta en la nueva regla NAT a crear son:
 
 Una vez guardados los cambios, se nos visualizará como sigue:
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>La regla NAT permitiendo el acceso al puerto 80 de HTTP en el server de la DMZ</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption><p>La regla NAT permitiendo el acceso al puerto 80 de HTTP en el server de la DMZ</p></figcaption></figure>
 
 Esta misma regla también la podemos encontrar en `Firewall - Rules - WAN`.
 

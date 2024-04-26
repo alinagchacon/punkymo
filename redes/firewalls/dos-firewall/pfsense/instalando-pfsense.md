@@ -13,7 +13,7 @@ Para descargar la ISO debemos ir a la web oficial de pfSense en:
 
 Y seleccionar las opciones correspondientes:
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="366"><figcaption><p>Download pfSense</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="366"><figcaption><p>Download pfSense</p></figcaption></figure>
 
 ### Instalación&#x20;
 
@@ -30,7 +30,7 @@ Para instalar pfSense en la MV voy a utilizar la siguiente configuración:
 
 Instalamos todo por defecto. Apagamos. Quitamos la ISO y reiniciamos. Una vez que nos sale la pantalla inicial, comenzamos a configurar.
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>En este pantallazo ya configuré los adaptadores de red</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>En este pantallazo ya configuré los adaptadores de red</p></figcaption></figure>
 
 En el menú de pfSense podemos ver cada una de las opciones que nos brinda y que podemos configurar, aunque lo adecuado es acceder  a la web para configurar los servicios.
 
@@ -48,7 +48,7 @@ Según la documentación publicada en [https://docs.netgate.com/pfsense/en/lates
 
 Como regla general, es una buena práctica evitar que el tráfico de red destinado a las subredes `RFC 1918` salga del firewall a través de la interfaz `WAN`. Esto evita el tráfico innecesario en el enlace `WAN` y también proporciona unos **mínimos de seguridad** al mantener la información sobre la red LAN detrás del firewall.
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de la red</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de la red</p></figcaption></figure>
 
 ### Configuración básica
 
@@ -110,7 +110,7 @@ Para probar el funcionamiento del servicio de DHCP podemos levantar una VM que e
 
 Encendemos una VM conectada al adaptador solo anfitrión (en mi caso es un debian) y como se puede observar, tiene la IP 192.168.56.200 brindada por el pfSense.
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>VM cliente conectada al firewall pfSense</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>VM cliente conectada al firewall pfSense</p></figcaption></figure>
 
 ### Instalar otros paquetes&#x20;
 
