@@ -65,8 +65,8 @@ Una vez lo tengamos descargado, podemos descomprimir el archivo con el comando t
 Una vez instalada y descomprimida movemos los archivos age y age-key a usr/local/bin:&#x20;
 
 ```
-mv /age/age /usr/local/bin/ 
-mv /age/age-keygen /usr/local/bin/
+mv age/age /usr/local/bin/ 
+mv age/age-keygen /usr/local/bin/
 ```
 
 <figure><img src="../.gitbook/assets/image (3) (1).png" alt="" width="319"><figcaption><p>Archivos age y age-keygen</p></figcaption></figure>
@@ -101,7 +101,7 @@ Exportamos las variables usando la key
 export SOPS_AGE_RECIPIENTS=(public key)
 ```
 
-Ejemplo de exportar `vars` usando la key
+Ejemplo de exportar `variables` usando la key
 
 <pre><code><strong>export SOPS_AGE_RECIPIENTS=age1gqv7p4gdy4ffwux4epaxeu905
 </strong></code></pre>

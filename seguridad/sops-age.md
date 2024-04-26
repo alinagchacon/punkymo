@@ -188,7 +188,7 @@ Donde podemos ver que el usuario y la contraseña están cifrados (AES256).
 
 ### Descifrando el archivo
 
-Para descifrar el archivo utilizamos el mismo comando pero utilizando la opción <mark style="color:blue;">`decryp.`</mark>
+Para descifrar el archivo utilizamos el mismo comando pero utilizando la opción <mark style="color:blue;">`decrypt.`</mark>
 
 <pre><code><strong>sops --decrypt --age $(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)") --encrypted-regex '^(data|stringData)$' --in-place ./home/pepe/secret.yaml
 </strong></code></pre>
@@ -252,5 +252,6 @@ Lo mismo si queremos ver el usuario:
 * [https://www.youtube.com/watch?v=PFLimPh5-wo ](https://www.youtube.com/watch?v=PFLimPh5-wo)
 * [https://www.returngis.net/2022/01/proteger-secretos-con-mozilla-sops-y-azure-key-vault-y-descifrarlos-desde-flux-cd/#:\~:text=Existen%20varias%20herramientas%20para%20hacer,integrarse%20fácilmente%20con%20diferentes%20KMS.](https://www.returngis.net/2022/01/proteger-secretos-con-mozilla-sops-y-azure-key-vault-y-descifrarlos-desde-flux-cd/)
 * [https://fluxcd.io/flux/guides/mozilla-sops/](https://fluxcd.io/flux/guides/mozilla-sops/)
+* [https://sleeplessbeastie.eu/2024/03/20/how-to-utilize-sops-with-age-encryption/](https://sleeplessbeastie.eu/2024/03/20/how-to-utilize-sops-with-age-encryption/)&#x20;
 
 &#x20;
