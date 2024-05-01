@@ -8,7 +8,7 @@ description: VLAN
 
 Vamos a realizar la siguiente configuración de VLAN en Cisco Packet Tracer donde se quiere representar 3 VLAN que tengan comunicación entre sí y con un servidor externo  a la red. Además, vamos a configurar el router R0 como servidor de DHCP y DNS para las tres VLAN.
 
-<figure><img src="../.gitbook/assets/image (351).png" alt=""><figcaption><p>COnfigurando VLAN</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Configurando VLAN</p></figcaption></figure>
 
 ### (1) Pensar y organizar lo que se tiene que hacer
 
@@ -216,7 +216,7 @@ Como se puede observar en el pantallazo anterior, hay conexión. Probamos con lo
 
 ## Configurando el servicio DHCP y DNS en el router
 
-<mark style="color:red;">falta</mark>
+<mark style="color:red;">**FALTA**</mark>
 
 
 
@@ -224,7 +224,7 @@ Como se puede observar en el pantallazo anterior, hay conexión. Probamos con lo
 
 Nos hemos "olvidado" de la conexión entre el router R0 y el R1 a través del cable serial. Para ello, utilizaremos una IP 10.10.10.0/24
 
-<figure><img src="../.gitbook/assets/image (357).png" alt=""><figcaption><p>Configurando la conexión entre los routers</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Red 10.10.10.0/24</p></figcaption></figure>
 
 En el Router R0 configuramos la IP 10.10.10.1/24 para la interfaz de red Se0/1/0
 
@@ -253,12 +253,6 @@ Por supuesto que todavía esto no es suficiente para establecer comuniación ent
 
 
 
-**Paso 2**. Verificar enrutamiento.
-
-**Paso 3**. Verificar la conectividad
-
-
-
-<mark style="color:red;">FALTA para terminar, pero si quieres ir avanzando puedes hacer lo siguiente: conecta directamente el router R0 al switch que da servicio al servidor de google.</mark>\
+<mark style="color:red;">**FALTA**</mark> \
 
 
