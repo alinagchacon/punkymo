@@ -2,13 +2,13 @@
 description: VLAN
 ---
 
-# Configurar VLANS
+# VLANS
 
 ## Configuraciones de VLAN
 
 Vamos a realizar la siguiente configuración de VLAN en Cisco Packet Tracer donde se quiere representar 3 VLAN que tengan comunicación entre sí y con un servidor externo  a la red. Además, vamos a configurar el router R0 como servidor de DHCP y DNS para las tres VLAN.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Configurando VLAN</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Configurando VLAN</p></figcaption></figure>
 
 ### (1) Pensar y organizar lo que se tiene que hacer
 
@@ -51,7 +51,7 @@ A continuación se muestra cómo quedaría una vez configurado, en este caso, el
 
 
 
-<figure><img src="../.gitbook/assets/image (352).png" alt=""><figcaption><p>Configuración del PC de la VLAN 10</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (352).png" alt=""><figcaption><p>Configuración del PC de la VLAN 10</p></figcaption></figure>
 
 
 
@@ -59,11 +59,11 @@ A continuación se muestra cómo quedaría una vez configurado, en este caso, el
 
 Aunque todavía no tenemos conectividad entre los dispositivos, podemos configurar el servidor externo. Como hemos decidido que la IP del servidor será la IP 8.8.8.8 podemos decidir que la IP de gateway en el router sea la IP 8.0.0.1. Con esta información procedemos:
 
-<figure><img src="../.gitbook/assets/image (353).png" alt=""><figcaption><p>Configurando el servidor www.google.com con la IP 8.8.8.8</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (353).png" alt=""><figcaption><p>Configurando el servidor www.google.com con la IP 8.8.8.8</p></figcaption></figure>
 
 El router R1 está conectado a dicho servidor por la interfaz de red Gi0/0/0 al que le daremos la IP 8.0.0.1 como se muestra en la imagen.
 
-<figure><img src="../.gitbook/assets/image (354).png" alt=""><figcaption><p>Configuración de la interfaz de red: Gi0/0/0 del router R1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (354).png" alt=""><figcaption><p>Configuración de la interfaz de red: Gi0/0/0 del router R1</p></figcaption></figure>
 
 Con todo esto ya estamos en posición de configurar las VLAN en el switch de capa 3.
 
@@ -206,11 +206,11 @@ Para ello, podemos entrar al PC de la VLAN 10 / Command Prompt y hacemos un ping
 ping 192.168.1.1
 ```
 
-<figure><img src="../.gitbook/assets/image (355).png" alt=""><figcaption><p>Comprobando la conexión entre los dispotivos de la VLAN 10 y el router </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (355).png" alt=""><figcaption><p>Comprobando la conexión entre los dispotivos de la VLAN 10 y el router </p></figcaption></figure>
 
 Como se puede observar en el pantallazo anterior, hay conexión. Probamos con los siguientes dispositvos.
 
-<figure><img src="../.gitbook/assets/image (356).png" alt=""><figcaption><p>Comprobando la conectivad con el router y las otras dos VLAN</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (356).png" alt=""><figcaption><p>Comprobando la conectivad con el router y las otras dos VLAN</p></figcaption></figure>
 
 
 
@@ -224,7 +224,7 @@ Como se puede observar en el pantallazo anterior, hay conexión. Probamos con lo
 
 Nos hemos "olvidado" de la conexión entre el router R0 y el R1 a través del cable serial. Para ello, utilizaremos una IP 10.10.10.0/24
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Red 10.10.10.0/24</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Red 10.10.10.0/24</p></figcaption></figure>
 
 En el Router R0 configuramos la IP 10.10.10.1/24 para la interfaz de red Se0/1/0
 
