@@ -2,7 +2,7 @@
 
 * [Inicio](README.md)
 
-## Seguridad
+## 🔑 Seguridad
 
 * [NAS](<README (1).md>)
   * [Instalación Synology NAS en VirtualBox](seguridad/nas/instalacion-synology-nas-en-virtualbox/README.md)
@@ -33,7 +33,7 @@
 * [¿Qué son las ACL?](seguridad/que-son-las-acl.md)
 * [SOPS/AGE](seguridad/sops-age.md)
 
-## Redes
+## 🐞 Redes
 
 * [Algo de historia](redes/algo-de-historia/README.md)
   * [Introducción Redes](redes/algo-de-historia/introduccion-redes.md)
@@ -65,7 +65,7 @@
     * [SquidGuard Proxy](redes/proxy/squid-en-pfsense/squidguard-proxy.md)
   * [Proxy reverse Nginx](redes/proxy/proxy-reverse-nginx.md)
 
-## Servicios
+## 🐝 Servicios
 
 * [Servidores Web](servicios/servidores-web/README.md)
   * [Nginx](servicios/servidores-web/nginx/README.md)
@@ -95,7 +95,7 @@
 * [Jellyfin](servicios/jellyfin.md)
 * [NextCloud](servicios/nextcloud.md)
 
-## Misceláneas
+## 🦉 Misceláneas
 
 * [Datos - codificación](miscelaneas/datos-codificacion.md)
 * [Servidor de video](miscelaneas/servidor-de-video.md)
@@ -106,7 +106,7 @@
   * [Capítulo 1 Led](miscelaneas/arduino/capitulo-1-led.md)
   * [Capítulo 2 Botton & LED](miscelaneas/arduino/capitulo-2-botton-and-led.md)
 
-## Virtualización
+## 🐳 Virtualización
 
 * [Contenedores](virtualizacion/contenedores/README.md)
   * [Docker](virtualizacion/contenedores/docker/README.md)
@@ -130,7 +130,7 @@
   * [Instalando Pi-hole en Docker](virtualizacion/pi-hole/instalando-pi-hole.md)
   * [Instalando Pi-hole en Debian](virtualizacion/pi-hole/instalando-pi-hole-en-debian.md)
 
-## Intereses - Curiosidades
+## ⁉️ Intereses - Curiosidades
 
 * [Ideas](intereses-curiosidades/ideas.md)
 * [Curioso](intereses-curiosidades/curioso.md)
