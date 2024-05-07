@@ -129,3 +129,8 @@
 * [Pi-hole](virtualizacion/pi-hole.md)
   * [Instalando Pi-hole en Docker](virtualizacion/pi-hole/instalando-pi-hole.md)
   * [Instalando Pi-hole en Debian](virtualizacion/pi-hole/instalando-pi-hole-en-debian.md)
+
+## Intereses - Curiosidades
+
+* [Ideas](intereses-curiosidades/ideas.md)
+* [Curioso](intereses-curiosidades/curioso.md)
