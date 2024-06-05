@@ -94,7 +94,11 @@ Si tras lanzar el comando no nos devuelve nada, significa que no se han encontra
 
 Ahora vamos a crear los ficheros de zona que hemos indicado en la configuración. Para ello tomemos como plantillas los ficheros de zonas que se crean al instalar el paquete <mark style="color:blue;">bind9</mark> y los editaremos.&#x20;
 
-Para la **zona directa** creamos el fichero: <mark style="color:blue;">`/etc/bind/db.midominio.local`</mark>
+Para la **zona directa** creamos el fichero:
+
+```
+/etc/bind/zones/db.haven.local
+```
 
 <figure><img src="../../.gitbook/assets/image (17) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

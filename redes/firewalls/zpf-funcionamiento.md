@@ -23,15 +23,15 @@ Las reglas dependen de si las interfaces de entrada y salida son miembros de la 
 
 La siguiente  tabla resume estas reglas.
 
-| ¿Interfaz de origen miembro de la zona? | ¿Interaz de destino miembro de la zona? | ¿Existe un par de zonas? | ¿Existe una política? | Resultado   |
-| --------------------------------------- | --------------------------------------- | ------------------------ | --------------------- | ----------- |
-| NO                                      | NO                                      | NO Disponible            | No disponible         | Pasa        |
-| SI                                      | NO                                      | NO DISPONIBLE            | NO DISPONIBLE         | DESCARTA    |
-| NO                                      | SI                                      | NO DISPONIBLE            | NO DISPONIBLE         | DESCARTA    |
-| SÍ (privado)                            | SÍ (privado)                            | NO DISPONIBLE            | NO DISPONIBLE         | PASA        |
-| SÍ (privado)                            | SÍ (público)                            | NO                       | NO DISPONIBLE         | DESCARTA    |
-| SÍ (privado)                            | SÍ (público)                            | SÍ                       | NO                    | PASA        |
-| SÍ (privado)                            | SÍ (público)                            | SÍ                       | SÍ                    | INSPECCIONA |
+| ¿Interfaz de origen miembro de la zona? | ¿Interfaz de destino miembro de la zona? | ¿Existe un par de zonas? | ¿Existe una política? | Resultado   |
+| --------------------------------------- | ---------------------------------------- | ------------------------ | --------------------- | ----------- |
+| NO                                      | NO                                       | NO Disponible            | No disponible         | Pasa        |
+| SI                                      | NO                                       | NO DISPONIBLE            | NO DISPONIBLE         | DESCARTA    |
+| NO                                      | SI                                       | NO DISPONIBLE            | NO DISPONIBLE         | DESCARTA    |
+| SÍ (privado)                            | SÍ (privado)                             | NO DISPONIBLE            | NO DISPONIBLE         | PASA        |
+| SÍ (privado)                            | SÍ (público)                             | NO                       | NO DISPONIBLE         | DESCARTA    |
+| SÍ (privado)                            | SÍ (público)                             | SÍ                       | NO                    | PASA        |
+| SÍ (privado)                            | SÍ (público)                             | SÍ                       | SÍ                    | INSPECCIONA |
 
 
 

@@ -12,7 +12,7 @@ Documentación de Portainer
 
 &#x20;Tenemos una buena ayuda en la aplicación. No obstante, hagamos un tour por algunas de las opciones del menú.
 
-<figure><img src="../../.gitbook/assets/image (216).png" alt=""><figcaption><p><a href="https://docs.portainer.io/user/docker/networks">https://docs.portainer.io</a></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (216).png" alt=""><figcaption><p><a href="https://docs.portainer.io/user/docker/networks">https://docs.portainer.io</a></p></figcaption></figure>
 
 **Stack**
 
@@ -28,7 +28,7 @@ Portainer le permite implementar un contenedor independiente de la lista de plan
 
 En el menú, puedes seleccionar **Plantillas de aplicaciones** y activar **Mostrar plantillas** de contenedor y luego seleccionar la aplicación que deseas implementar.
 
-<figure><img src="../../.gitbook/assets/image (220).png" alt=""><figcaption><p>Container</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (220).png" alt=""><figcaption><p>Container</p></figcaption></figure>
 
 #### Images
 
@@ -36,11 +36,11 @@ Las images  se usan para construir contenedores. Cada imagen define las piezas n
 
 Si quieres instalar una imagen basta con buscarla y clicar en Pull image para descargarla. Vamos, para no tener que hacerlo por línea de comandos de docker.
 
-<figure><img src="../../.gitbook/assets/image (212).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (212).png" alt=""><figcaption></figcaption></figure>
 
 En este caso, se nos muestra como sigue:
 
-<figure><img src="../../.gitbook/assets/image (204).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (204).png" alt=""><figcaption></figcaption></figure>
 
 #### Network
 
