@@ -6,6 +6,26 @@ description: Mi libreta de apuntes
 
 Este es un sitio muy interesante para aprender linux, cifrado entre otros: [<mark style="color:blue;">`https://overthewire.org/wargames/`</mark>](https://overthewire.org/wargames/)
 
+
+
+### gráfica y drivers - lspci - lsmod&#x20;
+
+```
+lsmod | grep "kms\|drm"
+
+sudo lscpi -k | grep -EA3 'VGA|3D|Display'
+
+sudo lshw -c video
+```
+
+### lsb\_release -a
+
+
+
+### uname -a&#x20;
+
+
+
 ### cat
 
 Mostrar contenido de archivos de texto plano
@@ -31,6 +51,8 @@ _find / -type f -size 33c -user john -group admin_
 _grep -i bandit file.txt_&#x20;
 
 _grep  patrón file.txt_
+
+
 
 
 
