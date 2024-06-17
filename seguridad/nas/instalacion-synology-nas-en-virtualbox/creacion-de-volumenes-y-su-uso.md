@@ -62,7 +62,7 @@ Por ultimo paso debemos revisar que toda la configuración este correcta, si es 
 
 Una vez apliquemos los cambias nos saltara una alerta que nos dice que todos los datos serán eliminados, si estamos seguros le decimos que **OK**.
 
-<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Revisión de configuración</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Revisión de configuración</p></figcaption></figure>
 
 Una vez ya creado podemos ver como es el panel de nuestro grupo de almacenamiento y volumen. Como podemos ver el espacio del disco duro se queda bastante reducido.
 

@@ -100,11 +100,11 @@ Creamos el par de claves público y privado:
 age-keygen -o key.txt
 ```
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Generando el par de claves público y privado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Generando el par de claves público y privado</p></figcaption></figure>
 
 Si hacemos un cat del archivo creado con el par de claves se nos muestra algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Archivo key.txt con el par de claves generadas</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Archivo key.txt con el par de claves generadas</p></figcaption></figure>
 
 La llave privada que se muestra en el fichero key.txt no debemos guardarla en ningún repositorio Git ni en ninguna carpeta al acceso de cualquiera. Para dar un poco de seguridad a nuestra clave es que vamos a crear la carpeta:  `~/.sops` y mover la clave generada.
 
@@ -138,7 +138,7 @@ sops --encrypt --age $(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)")  -
 
 Si ahora hacemos un cat ejemplo.txt veremos que el archivo es ilegible:
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Archivo ejemplo.txt cifrado con sops y age</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Archivo ejemplo.txt cifrado con sops y age</p></figcaption></figure>
 
 Para descifrar el archivo tendríamos que utilizar el mismo comando pero con la opción --decrypt. Veamos:
 
@@ -148,7 +148,7 @@ sops --decrypt --age $(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)")  -
 
 Y podemos comprobar que, efectivamente, se ha descifrado el archivo:
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Archivo ejemplo.txt descifrado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Archivo ejemplo.txt descifrado</p></figcaption></figure>
 
 ### Ejemplo 2 - Archivos YAML
 
@@ -173,7 +173,7 @@ cat midocker.yml
 
 Guardamos el archivo y ahora podremos visualizar el el contenido del fichero tal cual.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Fichero .yml sin cifrar</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Fichero .yml sin cifrar</p></figcaption></figure>
 
 Para testear el uso de sops, vamos a cifrar dicho fichero. Para ello hacemos lo siguiente:
 
@@ -185,7 +185,7 @@ Con esta línea de comando le estamos diciendo que cifre el archivo `midocker.ym
 
 Si ahora volvemos a probar a mirar dentro del fichero `midocker.yml` veremos algo como lo siguiente:&#x20;
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Archivo midocker.yml cifrado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>Archivo midocker.yml cifrado</p></figcaption></figure>
 
 Igual que en el primer ejemplo, para descifrar el archivo volvemos a usar el mismo comando con la opción --decrypt y podremos volver a visualizar todo el contenido del archivo.
 
@@ -258,7 +258,7 @@ sops --encrypt --age $(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)") --
 
 Si visualizamos el contenido se vería algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Archivo yml parcialmente cifrado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Archivo yml parcialmente cifrado</p></figcaption></figure>
 
 Ahora volvemos a descifrar el archivo con el mismo comando pero esta vez con la opcion --decrypt:
 
