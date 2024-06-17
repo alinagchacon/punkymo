@@ -49,7 +49,7 @@
     * [VLSM](redes/direccionamiento-ip/ipv4/vlsm.md)
   * [IPv6](redes/direccionamiento-ip/ipv6.md)
 * [CISCO](redes/cisco/README.md)
-  * [VLANS](redes/cisco/vlans.md)
+  * [VLAN](redes/cisco/vlan.md)
   * [NAT](redes/cisco/nat.md)
 * [Firewalls](redes/firewalls/README.md)
   * [Tipos de firewalls](redes/firewalls/tipos-de-firewalls.md)
