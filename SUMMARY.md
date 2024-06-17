@@ -39,6 +39,7 @@
   * [Introducción Redes](redes/aspectos-generales/introduccion-redes.md)
   * [Puntos de conexión](redes/aspectos-generales/puntos-de-conexion.md)
   * [Organizaciones](redes/aspectos-generales/organizaciones.md)
+* [NAT](redes/nat.md)
 * [IPv4](redes/ipv4/README.md)
   * [Subredes IPv4](redes/ipv4/subredes-ipv4.md)
   * [Superredes IPv4](redes/ipv4/superredes-ipv4.md)
