@@ -17,7 +17,7 @@ Si se da el caso en que dos dispositivos transmiten simultáneamente, se produci
 
 La tarjeta de red o NIC compara los datos transmitidos con los datos recibidos y observa que  se dañarán y deberán reenviarse.
 
-<figure><img src="../.gitbook/assets/image (121).png" alt=""><figcaption><p>Tomado de IONOS</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption><p>Tomado de IONOS</p></figcaption></figure>
 
 **Ejemplo de uso**:
 

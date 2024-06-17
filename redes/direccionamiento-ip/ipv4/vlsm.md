@@ -53,7 +53,7 @@ Los enlaces WAN solo necesitan dos direcciones.
 
 Por tanto, la máscara de subred de longitud variable (VLSM) o subdivisión de subredes, permite un uso más eficiente de las direcciones.
 
-<figure><img src="../../.gitbook/assets/image (364).png" alt=""><figcaption><p>Tomado de ...</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (364).png" alt=""><figcaption><p>Tomado de ...</p></figcaption></figure>
 
 Por tanto:
 

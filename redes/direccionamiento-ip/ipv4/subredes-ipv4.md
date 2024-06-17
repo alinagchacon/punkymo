@@ -50,7 +50,7 @@ Dicho de otra manera, creamos subredes "pidiendo" bits a la parte del host para 
 * Cada interfaz del router debe tener una dirección de host IPv4 que pertenezca a la red o a la subred a la cual se conecta la interfaz del router.
 * Los dispositivos en una red y una subred utilizan la interfaz del router conectada a su LAN como gateway predeterminado.
 
-<figure><img src="../../.gitbook/assets/image (359).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (359).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
 
 La planificación de las subredes requiere la toma de decisiones sobre el tamaño, la cantidad de hosts por subredes, así como la forma de asignar las IP a los hosts.
 
@@ -74,7 +74,7 @@ Originalmente es una IP de clase C, pero al pedirle prestado 1 bit, en lugar de 
 
 A continuación os dejo con un ejemplo de subredes en Cisco.
 
-<figure><img src="../../.gitbook/assets/image (360).png" alt=""><figcaption><p>Subredes en Cisco</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (360).png" alt=""><figcaption><p>Subredes en Cisco</p></figcaption></figure>
 
 #### ¿Y cuántos host hay por subred?
 
@@ -86,7 +86,7 @@ Si en el ejemplo se ha tomado 1 bit = 2 ^1 = 2 subredes, lo que implica que nos 
 
 Si tomamos 2 bits prestados a la parte de host, entonces tendremos 2^2 = 4 subredes como se muestra en la imagen a continuación:
 
-<figure><img src="../../.gitbook/assets/image (361).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (361).png" alt=""><figcaption></figcaption></figure>
 
 2^6 = 64 hosts por subred
 
@@ -98,9 +98,9 @@ Si tomamos 2 bits prestados a la parte de host, entonces tendremos 2^2 = 4 subre
 
 Si se toman 3 bits serían 2^3 = 8 subredes
 
-<figure><img src="../../.gitbook/assets/image (362).png" alt=""><figcaption><p>Tomado de </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (362).png" alt=""><figcaption><p>Tomado de </p></figcaption></figure>
 
 Y tendríamos 2^5 = 32 hosts por subred, como se puede ver en la imagen de Cisco siguiente:
 
-<figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption><p>8 subredes </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (363).png" alt=""><figcaption><p>8 subredes </p></figcaption></figure>
 
