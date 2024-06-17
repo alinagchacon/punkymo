@@ -1,8 +1,12 @@
 ---
-description: de Internet en España
+description: Algunos detalles
 ---
 
-# Algo de historia
+# Aspectos generales
+
+### Algo de historia de Internet
+
+Son algunos apuntes sobre la evolución de Internet en España específicamente.&#x20;
 
 ### 1984 - 1985&#x20;
 
