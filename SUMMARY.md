@@ -42,6 +42,7 @@
 * [IPv4](redes/ipv4/README.md)
   * [Subredes IPv4](redes/ipv4/subredes-ipv4.md)
   * [Superredes IPv4](redes/ipv4/superredes-ipv4.md)
+  * [VLSM](redes/ipv4/vlsm.md)
 * [IPv6](redes/ipv6.md)
 * [Clasificación de las redes](redes/clasificacion-de-las-redes.md)
 * [Topología de las red](redes/topologia-de-las-red.md)

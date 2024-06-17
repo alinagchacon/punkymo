@@ -1,10 +1,21 @@
 # Subredes IPv4
 
+Las ventajas de la creación de subredes están en básicamente en hacer más eficiente la administración y el enrutamiento.
+
+* **Evita difusiones innecesarias**:\
+  Los PC conectados a una red, normalmente envían información a cualquier computadora que está en su red, lo que se conoce como una difusión. Las difusiones son causadas por virus y malware, así como muchos programas legítimos. En redes más pequeñas (por ejemplo, de menos de 50 personas), esto puede no ser un problema, sin embargo, en organizaciones con cientos o miles de usuarios, esto puede hacer rápidamente más lenta la red.
+* **Aumenta la seguridad**:\
+  La mayoría de los dispositivos de seguridad de red funcionan mediante la evaluación de tráfico entre redes. Al poner los recursos sensibles en la misma subred que cualquier otro usuario, se hace más difícil implementar medidas de seguridad. La separación de las funciones vitales en subredes permite implementar medidas de seguridad como firewalls.
+* **Simplifica la administración**: \
+  una organización tiene diferentes departamentos que requieren acceso a diferentes tipos de recursos. Si los departamentos de contabilidad y limpieza se encuentran en la misma subred, por ejemplo, entonces las restricciones de acceso tienen que ser controladas en base de nodo-a-nodo. Pero cuando los dos departamentos se colocan en subredes separadas, entonces las opciones de seguridad se pueden aplicar sobre la base de esas subredes.
+* **Controla el crecimiento**: \
+  Al planificar una red, puedes controlar el número de máscaras de subred disponibles y cuántos nodos estarán disponibles para cada subred.
+
 ### Segmentando las redes
 
 Las direcciones IP que podemos utilizar para redes locales (internas) son direcciones IP privadas. Sabemos que existen segmentos privados en cada una de las clases  A,  B y C que podemos utilizar para asignar a los dispositivos.&#x20;
 
-¿Cuántos segmentos de red privados podemos utilizar?&#x20;
+**¿Cuántos segmentos de red privados podemos utilizar?**&#x20;
 
 * Solamente hay una red privada de clase A: la 10.0.0.0/8.&#x20;
 * De clase B tenemos 16 redes privadas: desde la IP 172.16.0.0/16 hasta la 172.31.0.0/16.&#x20;
@@ -31,4 +42,65 @@ Dicho de otra manera, creamos subredes "pidiendo" bits a la parte del host para 
 * Con 3 bits, 8 redes.&#x20;
 * Con 4 bits, 16 redes
 
-<mark style="color:red;">FALTA</mark>
+
+
+### Comunicación entre subredes
+
+* Se necesita un router para que los dispositivos en diferentes redes y subredes puedan comunicarse.
+* Cada interfaz del router debe tener una dirección de host IPv4 que pertenezca a la red o a la subred a la cual se conecta la interfaz del router.
+* Los dispositivos en una red y una subred utilizan la interfaz del router conectada a su LAN como gateway predeterminado.
+
+<figure><img src="../../.gitbook/assets/image (359).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
+
+La planificación de las subredes requiere la toma de decisiones sobre el tamaño, la cantidad de hosts por subredes, así como la forma de asignar las IP a los hosts.
+
+Para crear subredes tenemos que tomar bits prestados de la porción que identifica al host. Si tenemos la dirección de red siguiente:
+
+| Red de clase C    | 192.168.1.0 / 24 | 192.168.1.0000 0000   |
+| ----------------- | ---------------- | --------------------- |
+| Máscara de subred | 255.255.255.0    | 255.255.255.0000 0000 |
+
+Vamos a suponer que pedimos prestado un bit a la porción del host. Esto implica que con 1 bit = 2^1 = 2 subredes.
+
+Originalmente es una IP de clase C, pero al pedirle prestado 1 bit, en lugar de tener 2^8 = 255 tendremos 2^7 = 128\
+\
+
+
+| <p>Subred 0</p><p></p>                          | <p>192.168.1.0 / 25</p><p>192.168.1.1 / 25</p><p>………………..</p><p>192.168.1.127 /25</p>                              | <p>255.255.255.128</p><p>(Adaptada)</p> |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------- |
+| <p></p><p></p><p>Subred 1</p><p></p><p><br></p> | <p>192.168.1.128 / 25</p><p>192.168.1.129 / 25</p><p>192.168.1.130 / 25</p><p>…………………</p><p>192.168.1.255 / 25</p> | <p>255.255.255.128<br>(Adaptada)</p>    |
+
+#### Ejemplo de 2 subredes en Cisco
+
+A continuación os dejo con un ejemplo de subredes en Cisco.
+
+<figure><img src="../../.gitbook/assets/image (360).png" alt=""><figcaption><p>Subredes en Cisco</p></figcaption></figure>
+
+#### ¿Y cuántos host hay por subred?
+
+Si en el ejemplo se ha tomado 1 bit = 2 ^1 = 2 subredes, lo que implica que nos quedan 7 bits para representar los hosts, esto es:
+
+2^7 = 128 hosts por subred
+
+### &#x20;Ejemplo de 4 subredes en Cisco
+
+Si tomamos 2 bits prestados a la parte de host, entonces tendremos 2^2 = 4 subredes como se muestra en la imagen a continuación:
+
+<figure><img src="../../.gitbook/assets/image (361).png" alt=""><figcaption></figcaption></figure>
+
+2^6 = 64 hosts por subred
+
+192.168.1.0
+
+255.255.255.192
+
+### &#x20; Ejemplo de 8 subredes
+
+Si se toman 3 bits serían 2^3 = 8 subredes
+
+<figure><img src="../../.gitbook/assets/image (362).png" alt=""><figcaption><p>Tomado de </p></figcaption></figure>
+
+Y tendríamos 2^5 = 32 hosts por subred, como se puede ver en la imagen de Cisco siguiente:
+
+<figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption><p>8 subredes </p></figcaption></figure>
+
