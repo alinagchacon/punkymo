@@ -49,7 +49,7 @@
     * [VLSM](redes/direccionamiento-ip/ipv4/vlsm.md)
   * [IPv6](redes/direccionamiento-ip/ipv6.md)
 * [CISCO](redes/cisco/README.md)
-  * [¿Qué son las vlan?](redes/cisco/que-son-las-vlan/README.md)
+  * [¿Qué son las VLAN?](redes/cisco/que-son-las-vlan/README.md)
     * [Ejemplo 1 de VLAN](redes/cisco/que-son-las-vlan/ejemplo-1-de-vlan.md)
     * [Ejemplo 2 de VLAN](redes/cisco/que-son-las-vlan/ejemplo-2-de-vlan.md)
   * [NAT](redes/cisco/nat.md)
