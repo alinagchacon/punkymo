@@ -32,11 +32,12 @@ En esta red encontraremos la configuración de la WAN, es decir la salida a inte
 
 #### Esquema de las Redes <a href="#toc159426305" id="toc159426305"></a>
 
-En la _Ilustración_ podemos ver un esquema de como estará formada la simulación de la red con el Firewall, en este esquema no está aplicada ninguna regla o política.
+En la _imagen_ podemos ver un esquema de como estará formada la simulación de la red con el Firewall, en este esquema no está aplicada ninguna regla o política.
 
 \
-\
 
+
+<figure><img src="../../../.gitbook/assets/image (365).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
 
 ### Configuración de la Red <a href="#toc159426306" id="toc159426306"></a>
 
