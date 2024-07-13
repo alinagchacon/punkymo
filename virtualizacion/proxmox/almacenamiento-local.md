@@ -92,6 +92,14 @@ De este modo hemos maximizado el almacenamiento en Proxmox.
 
 <figure><img src="../../.gitbook/assets/image (375).png" alt="" width="563"><figcaption><p>En pve - summary</p></figcaption></figure>
 
+### Desplegando VM
+
+
+
+MV1 - Ubuntu Server 22.04
+
+<figure><img src="../../.gitbook/assets/image (376).png" alt=""><figcaption></figcaption></figure>
+
 ### Links
 
 * Interesante este curso: [https://www.youtube.com/watch?v=IB\_M61PQp1k\&t=1s](https://www.youtube.com/watch?v=IB\_M61PQp1k\&t=1s)&#x20;
