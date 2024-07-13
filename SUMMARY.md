@@ -101,6 +101,7 @@
 * [Plex](servicios/plex.md)
 * [Jellyfin](servicios/jellyfin.md)
 * [NextCloud](servicios/nextcloud.md)
+* [Plesk](servicios/plesk.md)
 
 ## 🦉 Misceláneas
 
