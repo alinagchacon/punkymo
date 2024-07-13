@@ -9,24 +9,21 @@ En Proxmox, el **qemu-guest-agent** se utiliza para tres cosas:
 * Si el agente invitado está habilitado y en ejecución, llama a guest-fsfreeze-freeze y guest-fsfreeze-thaw para mejorar la "consistencia".
 * En la fase en la que el invitado (VM) se reanuda después de una pausa (por ejemplo, después de una instantánea), sincroniza inmediatamente su hora con el hipervisor usando qemu-guest-agent (como primer paso).
 
-Incluso, puede ser útil para algo más simple que todo esto: que muestre la IP en el dashboard:
+Incluso, puede ser útil para algo más simple que todo esto: que muestre información en el dashboard, como la IP de la VM:
 
 <figure><img src="../../.gitbook/assets/image.png" alt="" width="563"><figcaption><p>Información de una VM en el dashboard de Proxmox</p></figcaption></figure>
 
-### Habilitar el qemu agent
+### Instalar qemu agent
 
-Basta con instalarlo de la siguiente manera:
-
-```
-sudo apt install qemu-guest-agent
-```
-
-Una vez hecho, lo iniciamos&#x20;
+Para ello basta con instalar de la manera habitual e iniciar el servicio y habilitarlo. Esto es:
 
 ```
 sudo apt install qemu-guest-agent
-sudo apt install qemu-guest-agent
+sudo systemctl start qemu-guest-agent
+sudo systemctl enable qemu-guest-agent
 ```
+
+También se debe habilitar el qemu agent en cada VM y en las opciones de la VM en Proxmox.
 
 ### Links
 
