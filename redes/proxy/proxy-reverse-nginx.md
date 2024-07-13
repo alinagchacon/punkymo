@@ -16,7 +16,7 @@ Las tres VM que voy a utilizar para testear son:
 
 El siguiente diagrama de red muestra lo que estoy diciendo:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
 
 Las tres VM  están en adaptador Red NAT. El Ubuntu Server (verde) hace de servidor de DNS y DHCP así como dos sitios web: www.kirby.com y www.punky.com.  Para el sitio web kirby.com he habilitado el módulo de PHP. El sitio web punky.com es solo una página web estática.&#x20;
 

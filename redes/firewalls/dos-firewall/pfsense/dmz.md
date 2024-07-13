@@ -45,7 +45,7 @@ En el diagrama de la red se muestran las dos VM conectadas a la DMZ, así como l
 
 Para habilitar la interfaz de red para la DMZ necesitas primero tener apagada la VM del pfSense, agregar el tercer adaptador de red en modo `red interna` y encender el firewall. Adicionalmente, debemos renombrar la interfaz como DMZ dado que el sistema la nombra como `Option 1` por defecto.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Las tres interfaces de red</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Las tres interfaces de red</p></figcaption></figure>
 
 Las direcciones IP de las interfaces de red LAN y DMZ son IP estáticas y en las mismas tenemos que configurar el servicio DHCP para que le brinde direcciones IP a las VM que vamos a conectar por cada interfaz de red, esto es:
 

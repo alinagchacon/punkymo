@@ -132,6 +132,8 @@
   * [En VirtualBox](virtualizacion/proxmox/en-virtualbox.md)
   * [Entorno Proxmox](virtualizacion/proxmox/entorno-proxmox.md)
   * [Almacenamiento local](virtualizacion/proxmox/almacenamiento-local.md)
+  * [Clonar](virtualizacion/proxmox/clonar.md)
+  * [Qemu agent](virtualizacion/proxmox/qemu-agent.md)
   * [Clúster](virtualizacion/proxmox/cluster.md)
   * [Red interna](virtualizacion/proxmox/red-interna.md)
 * [Pi-hole](virtualizacion/pi-hole.md)

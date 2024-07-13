@@ -13,7 +13,7 @@ Para descargar la ISO debemos ir a la web oficial de pfSense en:
 
 Y seleccionar las opciones correspondientes:
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="366"><figcaption><p>Download pfSense</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="366"><figcaption><p>Download pfSense</p></figcaption></figure>
 
 ### Instalación&#x20;
 

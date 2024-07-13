@@ -39,7 +39,7 @@ Primeramente vamos a considerar que este Truenas es el host, así que lo primero
 
 `Storage > Pool > KirbyPool` y creamos el dataset que he llamado: `BACKUP`
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Crear un dataset BACKUP para almacenar las copias de los usuarios</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Crear un dataset BACKUP para almacenar las copias de los usuarios</p></figcaption></figure>
 
 
 
@@ -58,7 +58,7 @@ Nos vamos a la segunda pestaña que nos encontramos: `Rsync Module` donde vamos 
 
 Nos queda de la siguiente manera:
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configurando el módulo Rsync en: Services > Rsync > Rsync Module > Add</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configurando el módulo Rsync en: Services > Rsync > Rsync Module > Add</p></figcaption></figure>
 
 **(3) Crear una tarea Rsync**
 

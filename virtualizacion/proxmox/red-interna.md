@@ -99,7 +99,7 @@ Las direcciones IP de Proxmox serían:
 
 Las IP se configuran de manera estática como muestra la siguiente imagen:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de /etc/network/interfaces en Proxmox</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de /etc/network/interfaces en Proxmox</p></figcaption></figure>
 
 Adicionalmente, añadimos las líneas correspondientes al IPTABLES para reescribir los paquetes de entrada y salida, de modo que parezca que se originan en el host. También tenemos que descomentar la línea `net.ipv4.ip_forward=1` en el fichero `/etc/sysctl.conf`:
 

@@ -51,13 +51,13 @@ Para empezar a configurar las interfaces de red debemos acceder a la sección CO
 
 Ahora configuraremos las interfaces de red del Port B y Port C. Las interfaces del Port A y Port D ya están configuradas ya que las hemos configurado durante la instalación del Firewall.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Interfaces de red</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Interfaces de red</p></figcaption></figure>
 
 **Configurar Red del Port B**
 
 Para configurar la red de este puerto debemos de hacer clic sobre el nombre de Port B. Lo primero de todo es asignarle una zona, para ver las zonas que hay hacemos clic sobre el desplegable y elegimos la zona de LAN.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Seleccionando las zonas de las interfaces de red</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Seleccionando las zonas de las interfaces de red</p></figcaption></figure>
 
 Una vez elegida la zona de LAN se habilitará la casilla de Configuración IPv4, esto hará que podamos configurar la red. En este caso la red que crearemos para esta interfaz de red será de Clase C, por lo tanto, el sufijo será /24 y la IP de la interfaz de red será la 192.168.200.10. La puerta de enlace no se puede configurar ya que está es tratada como una red Interna. La configuración nos debe quedar como en la _Ilustración_.
 

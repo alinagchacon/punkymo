@@ -100,11 +100,11 @@ He vuelto a desplegar una VM con las condiciones antes descritas y como se muest
 
 <figure><img src="../../.gitbook/assets/image (376).png" alt=""><figcaption><p>Características de hardware de la VM de Ubuntu Server 22.04</p></figcaption></figure>
 
-La solución ha sido rebajar los cores de la CPU y dejarlo solo en uno.
-
-&#x20;
+La solución ha sido rebajar los cores de la CPU y dejarlo solo en uno.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (377).png" alt=""><figcaption><p>Características de la VM de Ubuntu Server 22.04</p></figcaption></figure>
+
+Un detalle a considerar es que se tarda demasiado tiempo en detectar la IP por DHCP durante el proceso de instalación, así que lo establecí de manera manual.
 
 ### Links
 

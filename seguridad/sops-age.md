@@ -104,7 +104,7 @@ age-keygen -o key.txt
 
 Si hacemos un cat del archivo creado con el par de claves se nos muestra algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo key.txt con el par de claves generadas</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo key.txt con el par de claves generadas</p></figcaption></figure>
 
 La llave privada que se muestra en el fichero key.txt no debemos guardarla en ningún repositorio Git ni en ninguna carpeta al acceso de cualquiera. Para dar un poco de seguridad a nuestra clave es que vamos a crear la carpeta:  `~/.sops` y mover la clave generada.
 
