@@ -8,16 +8,18 @@ Todo el "problema" que estoy teniendo desde hace un tiempo con el despliegue de 
 
 En este apartado estoy partiendo de la base que tengo Proxmox instalado como VM en VirtualBox con las siguientes condiciones.
 
-* RAM: 8GB
-* CPU: 4
-* HDD: 60GB
-* Red: NAT&#x20;
+| Componentes | PROXMOX         | MV Ubuntu Server 22.04 |
+| ----------- | --------------- | ---------------------- |
+| RAM         | 8GB             | 2GB                    |
+| CPU         | 4               | 1                      |
+| HDD         | 60GB            | 12GB                   |
+| RED         | NAT - 10.0.2.15 | VMBR0 - 10.0.2.16      |
 
 Para poder acceder al sistema desde el navegador no queda otra que hacer un reenvío de puertos:
 
 <figure><img src="../../.gitbook/assets/image (366).png" alt=""><figcaption><p>Reenvío de puertos en red NAT</p></figcaption></figure>
 
-En este Proxmox instalado ya tengo configurado un contenedor **LXC de Debian** y una **VM de Ubuntu** con 15GB de RAM. Sin embargo, al querer instalar otra VM de Ubuntu con las mismas condiciones, se me "crashea" Proxmox y se cierra de manera inesperada. ¿Por qué? Pienso que es por la siguiente razón:
+En este Proxmox instalado ya tengo configurado un contenedor **LXC de Debian** y la **VM de Ubuntu Server**. Sin embargo, al querer instalar otra VM de Ubuntu con las mismas condiciones, se me "crashea" Proxmox y se cierra de manera inesperada. ¿Por qué? Pienso que es por la siguiente razón:
 
 Si nos vamos a: Datacenter - Storage vemos algo así:
 
@@ -34,7 +36,7 @@ Analizando los espacios utilizados tanto para local como local-lvm veo lo siguie
 * local: utilizado 4.91GB de 26.69GB
 * local-lvm: utilizado 5.17GB de 20.30GB
 
-Si ya tengo una VM de Ubuntu con un espacio de 15GB, no tengo espacio para otra VM.
+No sé si es un problema de espacio para otra VM o es un problema de la CPU, por ejemplo, así que comienzo por el tema del espacio.
 
 ### ¿Qué voy a hacer?&#x20;
 
@@ -94,11 +96,15 @@ De este modo hemos maximizado el almacenamiento en Proxmox.
 
 ### Desplegando VM
 
+He vuelto a desplegar una VM con las condiciones antes descritas y como se muestra en la imagen a continuación. Como se puede observar, le asigné 2 cores y aún así me salió el mismo error crítico.
 
+<figure><img src="../../.gitbook/assets/image (376).png" alt=""><figcaption><p>Características de hardware de la VM de Ubuntu Server 22.04</p></figcaption></figure>
 
-MV1 - Ubuntu Server 22.04
+La solución ha sido rebajar los cores de la CPU y dejarlo solo en uno.
 
-<figure><img src="../../.gitbook/assets/image (376).png" alt=""><figcaption></figcaption></figure>
+&#x20;
+
+<figure><img src="../../.gitbook/assets/image (377).png" alt=""><figcaption><p>Características de la VM de Ubuntu Server 22.04</p></figcaption></figure>
 
 ### Links
 
