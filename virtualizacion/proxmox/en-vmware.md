@@ -2,7 +2,7 @@
 description: Instalación
 ---
 
-# Proxmox en VMWare
+# En VMWare
 
 ## Instalación en VMWare
 
@@ -10,11 +10,9 @@ Veamos cómo hacer la instalación, cosa que es complicado ya que estamos hablan
 
 Para la instalación, lo más recomendable es instalarla de forma física ya sea en un ordenador o en un portátil que tenga algún tiempo para darle una segunda vida. Pero antes de hacerlo se puede probar a instalar en una máquina virtual para poder ver como se instala y qué configuraciones hay que realizar.
 
-![Proxmox Server Solutions | LinkedIn](https://lh5.googleusercontent.com/af3UNwzL4vXqBKYG0oQdLjbwsAjTowttu0GVH-WgaSrHpwVq7BxhT0Rw02oo0uNuPkmjzNbvvyihprEYwoIMSylwWayUaxiaF4SnP2UosEEXr3WBXJTlx0vYrHdNVeYu7W\_pdhQlRPl-lGlPJ3Z-wdA3da-r7lwEpbGQRGumzuNQuQM0t80SFu2V)
-
 Para ello no sirve cualquier sistema de virtualización ya que debe aceptar la virtualización anidada. En VirtualBox también podemos instalar Proxmox pero se hace necesario corregir ciertos fallos para poder ejecutar las máquinas virtuales y es por eso que la mejor opción para la instalación es VMWare. Esta aplicación es muy parecida a VirtualBox pero al ser de pago tiene mejores herramientas y se configura mejor.
 
-Pese a que VMWare es de pago hay una opción gratuita para uso no comercial que es la que usaremos. Esto es, <mark style="color:blue;">`VMWare Player`</mark>.
+En el momento que escribí estos apuntes  VMWare era de pago pero con la opción gratuita para uso no comercial que es la que usaremos. Esto es, <mark style="color:blue;">`VMWare Player`</mark>. Actualmente, VMWare se ha liberado con lo cual es una buena oportunidad para conocer y testear este hipervisor.&#x20;
 
 #### VMWare&#x20;
 
