@@ -135,6 +135,7 @@
   * [Almacenamiento local](virtualizacion/proxmox/almacenamiento-local.md)
   * [Clonar](virtualizacion/proxmox/clonar.md)
   * [Qemu agent](virtualizacion/proxmox/qemu-agent.md)
+  * [Linux container - LXC](virtualizacion/proxmox/linux-container-lxc.md)
   * [Clúster](virtualizacion/proxmox/cluster.md)
   * [Red interna](virtualizacion/proxmox/red-interna.md)
 * [Pi-hole](virtualizacion/pi-hole.md)
