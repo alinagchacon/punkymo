@@ -8,7 +8,7 @@ En este caso, crearíamos un par  de alias para probar el tráfico de datos a tr
 
 Hacemos lo mismo para el puerto 53 del DNS y nos debe quedar algo como lo siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Reglas para la DMZ
 

@@ -8,17 +8,17 @@ Pudiéramos instalar Wordpress utilizando una de las plantillas que nos proporci
 
 Lo primero que hace es pedirnos el nombre de la aplicación, contraseña de root, etc. Una vez hecho, “desplegamos la pila”.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Application templates en Portainer</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Application templates en Portainer</p></figcaption></figure>
 
 
 
 Una vez finalizado el proceso inicial de instalación, podemos acceder a la sección de Stacks y veremos nuestro docker-compose con la aplicación de WordPress.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>WordPress en el listado de stacks de Portainer</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>WordPress en el listado de stacks de Portainer</p></figcaption></figure>
 
 A clicar encima de miwp, podrás desplegar en detalle que está compuesto por dos contenedores: uno para la base de datos y el otro para el wordpress como tal.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez lo tengamos, podemos acceder al sitio web de WordPress a través de la misma IP de nuestra VM pero utilizando el puerto que nos muestra en Portainer:
 

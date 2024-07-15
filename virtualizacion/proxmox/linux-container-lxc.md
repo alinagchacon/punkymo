@@ -19,3 +19,50 @@ Tenemos dos tipos de contenedores: de sistemas y de aplicaciones.&#x20;
 3. Comparten el kernel del S.O del host, haciéndolos más ligeros que las VM tradicionales, reduciendo el uso de recursos y permitiendo un mayor número de contenedores en un solo host.
 4. Se pueden iniciar y detener con mucha facilidad, facilitando el despliegue y la escalabilidad de aplicaciones.&#x20;
 
+Dentro de un LXC podemos instalar Docker.
+
+
+
+### LXC en Proxmox
+
+Falta explicar
+
+#### Descargar una imagen de un contenedor
+
+Falta explicar
+
+#### Instalando un LXC&#x20;
+
+Falta explicar
+
+Un detalle a tener en consideración en la configuración del LXC es que debo asignar la IP de manera estática o no me funciona con el DHCP como debería.
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>Configuración de un LXC con Ubuntu 22.04 en Proxmox</p></figcaption></figure>
+
+Una vez que tengamos instalado el contenedor, algo que es sumamente rápido, lo podremos ver en el nodo "pve". De hechom en esta imagen se pueden ver  dos contenedores: en lila el 102 (plesk) y el 104 (ubuntu2204) en verde que es el que acabamos de instalar.
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Despliegue de VM y contenedores LXC en Proxmox</p></figcaption></figure>
+
+Para ejecutar el contenedor puedes hacer click con el botón secundario del mouse y seleccionar `Start`.
+
+En este tipo de contenedores podemos también:
+
+* Configurar SSH, permitiendo en este caso el acceso a root (es el usuario que tenemos).
+* Crear un nuevo "punto de montaje"&#x20;
+* En general, hacer lo mismo que podemos hacer con una VM.
+
+### Instalar Docker dentro del contenedor LXC
+
+Tan fácil como hacer:
+
+```
+apt install docker.io
+docker run -d -p 8080:80 --name nginx nginx
+docker ps
+```
+
+En este caso le estamos diciendo que ejecute un contenedor de docker  con la imagen de Nginx y el puerto 8080 externo pero el 80 en el contenedor.
+
+Nota: El problema que sigo teniendo es que solo he podido desplegar VM y contenedores en Proxmox teniendo Proxmox conectado en red: NAT y haciendo un reenvío de puertos. Supuestamente las VM deberían tomar la IP por DHCP pero no lo hacen. Por tanto, le estoy asignando las IP de  modo estático. Los contenedores LXC si.&#x20;
+
+<mark style="color:red;">Probaré lo mismo pero teniendo Proxmox conectado a un adaptador puente y aunque tenga que asignar las IP de modo estático a las VM y contenedores.</mark>
