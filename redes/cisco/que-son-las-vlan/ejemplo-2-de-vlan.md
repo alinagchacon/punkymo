@@ -224,7 +224,7 @@ Como se puede observar en el pantallazo anterior, hay conexión. Probamos con lo
 
 Nos hemos "olvidado" de la conexión entre el router R0 y el R1 a través del cable serial. Para ello, utilizaremos una IP 10.10.10.0/24
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Red 10.10.10.0/24</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Red 10.10.10.0/24</p></figcaption></figure>
 
 En el Router R0 configuramos la IP 10.10.10.1/24 para la interfaz de red Se0/1/0
 

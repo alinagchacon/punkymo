@@ -37,11 +37,11 @@ Falta explicar
 
 Un detalle a tener en consideración en la configuración del LXC es que debo asignar la IP de manera estática o no me funciona con el DHCP como debería.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>Configuración de un LXC con Ubuntu 22.04 en Proxmox</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption><p>Configuración de un LXC con Ubuntu 22.04 en Proxmox</p></figcaption></figure>
 
 Una vez que tengamos instalado el contenedor, algo que es sumamente rápido, lo podremos ver en el nodo "pve". De hechom en esta imagen se pueden ver  dos contenedores: en lila el 102 (plesk) y el 104 (ubuntu2204) en verde que es el que acabamos de instalar.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Despliegue de VM y contenedores LXC en Proxmox</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Despliegue de VM y contenedores LXC en Proxmox</p></figcaption></figure>
 
 Para ejecutar el contenedor puedes hacer click con el botón secundario del mouse y seleccionar `Start`.
 

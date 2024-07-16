@@ -2,7 +2,7 @@
 description: Instalación
 ---
 
-# En VMWare
+# Instalar en VMWare
 
 ## Instalación en VMWare
 
