@@ -63,6 +63,6 @@ docker ps
 
 En este caso le estamos diciendo que ejecute un contenedor de docker  con la imagen de Nginx y el puerto 8080 externo pero el 80 en el contenedor.
 
-Nota: El problema que sigo teniendo es que solo he podido desplegar VM y contenedores en Proxmox teniendo Proxmox conectado en red: NAT y haciendo un reenvío de puertos. Supuestamente las VM deberían tomar la IP por DHCP pero no lo hacen. Por tanto, le estoy asignando las IP de  modo estático. Los contenedores LXC si.&#x20;
+Nota: El problema que sigo teniendo es que solo he podido desplegar VM y contenedores en Proxmox teniendo Proxmox conectado en red "NAT" y haciendo un reenvío de puertos. Supuestamente las VM deberían tomar la IP por DHCP pero no lo hacen. Por tanto, le estoy asignando las IP de  modo estático. Los contenedores LXC si.&#x20;
 
-<mark style="color:red;">Probaré lo mismo pero teniendo Proxmox conectado a un adaptador puente y aunque tenga que asignar las IP de modo estático a las VM y contenedores.</mark>
+Desconozco por qué no funciona teniendo Proxmox conectado a un adaptador puente. Proxmox si tiene salida a Internet pero las VM y los contenedores  no.
