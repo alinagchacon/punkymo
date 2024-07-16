@@ -1,5 +1,5 @@
 ---
-description: En VM
+description: Proxmox en VM
 ---
 
 # Almacenamiento local
