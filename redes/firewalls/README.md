@@ -155,4 +155,5 @@ No todo son ventajas puesto que los firewalls también tienen algunas limitacion
 
 * [https://www.cloudflare.com/es-es/learning/security/what-is-a-firewall/](https://www.cloudflare.com/es-es/learning/security/what-is-a-firewall/)
 * [https://www.cisco.com/c/es\_es/products/security/firewalls/what-is-a-firewall.html](https://www.cisco.com/c/es\_es/products/security/firewalls/what-is-a-firewall.html)
+* [https://www.checkpoint.com/es/cyber-hub/network-security/what-is-firewall/](https://www.checkpoint.com/es/cyber-hub/network-security/what-is-firewall/)
 
