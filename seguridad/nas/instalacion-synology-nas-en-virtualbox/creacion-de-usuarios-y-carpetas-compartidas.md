@@ -54,7 +54,7 @@ Las opciones de esta paso únicamente están disponibles para los volúmenes con
 
 En este paso confirmaremos que los datos que hemos introducido son correctos. En el caso contrario podremos volver atrás para modificarlos.
 
-<figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1) (1).png" alt=""><figcaption><p>Confirmar configuración</p></figcaption></figure>
 
 ### Sexto paso - Permisos de usuario
 

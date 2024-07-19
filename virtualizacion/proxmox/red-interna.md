@@ -2,132 +2,160 @@
 description: Proxmox
 ---
 
-# Red interna
+# Red Interna
 
-_En duda y analizando .... recuerda que yo también estoy aprendiendo._
+He estado testeando Proxmox en diferentes condiciones pero siempre las mínimas. Me refiero a tener:&#x20;
 
-He estado testeando Proxmox en diferentes condiciones pero siempre las mínimas. Me refiero a tener una única interfaz de red. Aún en esta situación cualquier VM que creara dentro de Proxmox debería tener conexión con el linux bridge `vmbr0` pero no lo conseguía.
+* espacio en disco no más de 100GB.&#x20;
+* una única interfaz de red
+* VirtualBox como hipervisor
 
-De hecho, cualquier sistema operativo que instalaba se bloquea en el punto de buscar el mirror para acabar de descargar los paquetes. Ese bloqueo se debía a que no existía conexión con Internet.
+Se trata de utilizar una única interfaz de red para tener acceso a Internet y una red interna para varias VM en Proxmox. Para ello, seguí la guía de Proxmox en: [https://pve.proxmox.com/wiki/Network\_Configuration](https://pve.proxmox.com/wiki/Network\_Configuration)&#x20;
 
-Por otra parte, seguía teniendo un fallo con la `virtualización por hardware` en Proxmox.  Esto no tiene nada que ver con tener o no activada la virtualización a nivel de la BIOS.&#x20;
+<figure><img src="../../.gitbook/assets/image (241).png" alt=""><figcaption><p>Red interna en Proxmox</p></figcaption></figure>
 
-Más bien se basa en tecnologías de virtualización asistida por hardware como KVM para permitir la creación y ejecución eficiente de VM en servidores físicos, proporcionando mejor rendimiento y seguridad en entornos de virtualización.&#x20;
+En esta guía que os recomiendo, una de las opciones es el enmascaramiento `NAT` con iptables. Este enmascaramiento nos permite el acceso a la red utilizando la dirección IP del host para el tráfico saliente, teniendo una dirección IP privada, como es el caso.
 
-Se aprovechan al máximo las características de virtualización de hardware de los procesadores modernos para crear y ejecutar máquinas virtuales de un modo más eficiente y con mayor rendimiento.  Algunas de las ventajas de esto son:
-
-**Rendimiento**: Las VM aprovechan el poder de procesamiento de la CPU y accedeny consiguen un mejor rendimiento.
-
-**Seguridad**: Mejora la seguridad  y reduce las posibilidades de ataques entre máquinas virtuales.
-
-**Aislamiento**: Proporciona alto grado de aislamiento entre las VM, lo que significa que una VM no puede acceder ni afectar directamente a otras en el mismo host.
-
-
-
-Para asegurarnos de habilitar la virtualización por hardware puede que nos ayude la siguiente guía: [https://www.geeknetic.es/Guia/1873/VirtualBox-Como-activar-la-virtualizacion-por-hardware.html](https://www.geeknetic.es/Guia/1873/VirtualBox-Como-activar-la-virtualizacion-por-hardware.html)&#x20;
-
-A grandes rasgos se trata de verificar si lo tenemos habilitado o no. Para ello nos vamos al Administrador de tareas, a la pestaña de la CPU y buscamos el estado de la virtualización del equipo.
-
-Si la virtualización está habilitada con Hyper-V tendremos que deshabilitar el Hyper-V si queremos virtualizar sistemas de 64bits o no podríamos crear VM de 64bits con VirtualVBox.
-
-Para deshabilitar Hyper-V nos vamos a Activar a desactivar características de Windows, buscamos Hyper-V y lo desmarcamos la opción habilitada.&#x20;
-
-Si lo tenemos habilitado entonces, podemos entrar a la configuración de la VM creada y buscar el apartado de Sistema - Aceleración y podemos ver el tipo de virtualización habilitada en el desplegable de paravirtualización.
-
-Algunas de las siguientes opciones se encuentran entre las características a seleccionar:
-
-**Ninguno**: VirtualBox no aprovecha ningún tipo de tecnología de virtualización.
-
-**Predeterminado**: habilitado automáticamente al crear la VM. Utiliza el método más adecuado en función del S.O. que hayamos seleccionado. La recomendable por defecto.
-
-**KVM**: interfaz de hipervisor para Linux a partir de la versión 2.6.25 del Linux Kernel. Cualquier S.O. que haga uso de esa versión o cualquier versión posterior del Linux Kernel, deberá utilizar este modo de paravirtualización. Iigualmente, se selecciona automáticamente con la configuración por defecto.
-
-\
-
-
-<figure><img src="../../.gitbook/assets/image (237).png" alt=""><figcaption><p>Pestaña de virtualización en una VM d eVirtualBox</p></figcaption></figure>
-
-En VMware tenemos:
-
-<figure><img src="../../.gitbook/assets/image (238).png" alt=""><figcaption><p>Virtualización en VMware</p></figcaption></figure>
-
-Digamos que es fundamental tener bien configurado nuestro VirtualBox o el VMware player si queremos que nuestro hipervisor de Proxmox funcione correctamente. De hecho, antes de corregir el fallo al instalar Proxmox me salía el siguiente mensaje:
-
-<figure><img src="../../.gitbook/assets/image (239).png" alt=""><figcaption><p>Mensaje de error en el proceso de instalación de Proxmox</p></figcaption></figure>
-
-Incluso, aunque terminaba instalando Proxmox y pudiendo crear una VM dentro, al intentar el proceso de instalación me muestra:
-
-<figure><img src="../../.gitbook/assets/image (240).png" alt=""><figcaption><p>Error al levantar una VM en Proxmox</p></figcaption></figure>
-
-Y es evidente que la solución no pasa por deshabilitar la virtualización por hardware.
-
-### Red Interna
-
-Ahora si me dispongo a analizar la configuración de una red interna dentro de Proxmox. Se trata de utilizar una única interfaz de red para tener acceso a Internet y una red interna para varias VM en Proxmox.
-
-Para ello, seguí la guía de Proxmox en: [https://pve.proxmox.com/wiki/Network\_Configuration](https://pve.proxmox.com/wiki/Network\_Configuration)&#x20;
-
-
-
-<figure><img src="../../.gitbook/assets/image (241).png" alt=""><figcaption></figcaption></figure>
-
-En esta guía que os recomiendo, una de las opciones es el enmascaramiento (NAT) con iptables. Este enmascaramiento nos permite el acceso a la red utilizando la dirección IP del host para el tráfico saliente, teniendo una dirección IP privada, como es el caso.
-
-Utilizamos iptables para reescribir cada paquete saliente de modo que parezca que se origina en el host. Naturalmente, las respuestas se reescriben para enrutarse al remitente original.
+Utilizamos `IPTABLES` para reescribir cada paquete saliente de modo que parezca que se origina en el host. Naturalmente, las respuestas se reescriben para enrutarse al remitente original.
 
 De hecho, la guía ha sido de la misma wiki de Proxmox:
 
-&#x20;
-
 <figure><img src="../../.gitbook/assets/image (242).png" alt=""><figcaption><p><a href="https://pve.proxmox.com/pve-docs/images/default-network-setup-routed.svg">https://pve.proxmox.com/pve-docs/images/default-network-setup-routed.svg</a></p></figcaption></figure>
 
+¡Vamos a comenzar!
+
+### Configurando una red interna en Proxmox
+
+Lo primero es tener bien claro cuál es la configuración inicial con la que estoy trabajando. Me resulta muy importante tener claro el esquema de la configuración.
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
+
+El test lo vamos a hacer con dos VM de Ubuntu donde una hará de router de la otra.&#x20;
+
+| Proxmox                     | VM Ubuntu Router        | VM Ubuntu Cliente       |
+| --------------------------- | ----------------------- | ----------------------- |
+| IP (estática): 10.0.2.15/24 | IP (dhcp): 10.0.2.16/24 | IP (dhcp): 10.0.2.17/24 |
+| IP gateway: 10.0.2.2        | IP gateway: 10.0.0.2    | IP gateway: 10.0.0.2    |
+| Red: NAT                    | Red: vmbr0              | Red: vmbr0              |
 
 
-La configuración que monté fue la siguiente:
 
-En Proxmox:
+La VM de Proxmox tiene una IP estática configurada durante el proceso de instalación. Dicha VM está conectada en red: NAT y como he dicho anteriormente, es el único modo en que he podido instalar VM o contenedores de Linux LXC y que todos tengan una IP y salida a Internet.
 
-* RAM: 6GB / Procesadores: 8
-* Red: en modo puente (bridge)
+### Paso 1: Nueva interfaz de red en Proxmox
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de la VM de Proxmox en VMware</p></figcaption></figure>
+Por defecto, tenemos el linux bridge virtual **vmbr0** que es el que se conecta a nuestra interfaz de red  física y que toma del router físico una IP por DHCP.  Como queremos crear una red interna, tenemos que añadir una nuevo linux bridge al que conectaremos el equipo cliente.  Para ello vamos al nodo pve - network - add (Linux Bridge).
 
-Las direcciones IP de Proxmox serían:
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Añadir un nuevo linux bridge: vmbr1</p></figcaption></figure>
 
-* **ens33**: 192.168.1.128 / gateway: 192.168.1.1 (en la misma red del host con IP: 192.168.1.100)
-* **vmbr0**: 192.168.44.128 (el linux bridge)
+Lo único que tendremos que configurar es la IP de la red, no es necesario asignar una IP de gateway. De hecho, el gateway solo debe estar una vez aunque tengamos configuradas varias interfaces de red.
 
-Las IP se configuran de manera estática como muestra la siguiente imagen:
+<figure><img src="../../.gitbook/assets/image (4).png" alt="" width="563"><figcaption><p>La IP del Proxmox en el nuevo linux bridge es: 10.10.10.253/24</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de /etc/network/interfaces en Proxmox</p></figcaption></figure>
+Nos debe quedar algo como lo siguiente:
 
-Adicionalmente, añadimos las líneas correspondientes al IPTABLES para reescribir los paquetes de entrada y salida, de modo que parezca que se originan en el host. También tenemos que descomentar la línea `net.ipv4.ip_forward=1` en el fichero `/etc/sysctl.conf`:
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Los dos linux bridge: vmbr0 y vmbr1</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo /etc/sysctl.conf</p></figcaption></figure>
 
-Por supuesto, tenemos que actualizar el servicio de networking para que asuma los cambios realizados. Para ello hacemos:
+
+### Paso 2: vmbr0 y vmbr1
+
+La VM router estará conectada a los dos dos linux bridges: vmbr0 y vmbr1 . Recordemos que será esta VM la que le da Internet al equipo cliente.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>VM router conectada a los dos linnux bridge</p></figcaption></figure>
+
+En el caso de la VM cliente debemos conectarla (bastaría con editar el  linux bridge vmbr0)  para que esté conectada al vmbr1 que es el switch de nuestra red interna.
+
+### Paso 3: Configurar las VM que harán de Router y de Cliente
+
+Pasemos a las máquinas. Realmente las dos VM: Router y Cliente han sido clonadas de una VM de Ubuntu que tengo como plantilla.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="401"><figcaption><p>Las dos VM Router y Cliente como clones "dependientes" de la plantilla "ubuse1"</p></figcaption></figure>
+
+
+
+Dado que las VM router y cliente son clones de la VM de Ubuntu Server  (ubuse1) que tengo como plantilla, podríamos cambiarle el nombre de cada una. Para ello, iniciamos ambas VM y editamos el siguiente archivo en cada una:
 
 ```
-systemctl restart networking.service
+nano /etc/hostname
+```
+
+Escribimos el nombre que le corresponda: router o cliente y reiniciamos para que se implementen los cambios correspondientes. Una vez restablecidas las VM debemos ver algo como lo siguiente, en la **VM router**, donde todavía no hemos configurado la IP de la interfaz de red que se conecta al vmbr1.
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt="" width="563"><figcaption><p>Configuración de red de la VM router. La interfaz ens18 es la que se conecta al vmbr0</p></figcaption></figure>
+
+A la **VM cliente** si debemos configurarle la IP en modo estático porque no tenemos ningún servidor de DHCP que le brinde la IP. Tendría que hacerlo la VM router pero tampoco se lo hemos configurado. Por tanto, tenemos que asignarle una IP estática en la red interna: 10.10.10.2/24 en la interfaz de red que se habilita: **ens18** y el **gateway** que le asignamos será la IP del router: **10.10.10.1.**
+
+<figure><img src="../../.gitbook/assets/image (7).png" alt="" width="563"><figcaption><p>Configuración de red de la VM cliente en la red interna con la interfaz ens18</p></figcaption></figure>
+
+### Paso 4: Configurando la red interna
+
+Todo el trabajo de redirigir el tráfico de datos lo tiene que hacer la VM que hace de router así que volvamos a ella.&#x20;
+
+**VM router** - Lo primero es configurar la IP estática para la nueva interfaz de red que le hemos habilitado: en este caso es la **ens19** y le asignamos la IP 10.10.10.1/24.
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt="" width="485"><figcaption><p>Configuración de la red para la VM router en la interfaz de red ens19 conectada al vmbr1</p></figcaption></figure>
+
+Todavía con esto no podemos hacer que el cliente tenga conexión a Internet.
+
+
+
+### Paso 5: IPTables :smile:
+
+Lo primero será habilitar el IP forwarding y para ello nos vamos a editar el archivo /etc/systcl.conf y quitar el # en la línea: **net.ipv4.ip\_forward=1**
+
+```
+nano /etc/systcl.conf 
+```
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>/etc/systcl.conf</p></figcaption></figure>
+
+**iptables** - Esta si es la herramienta que nos hará el trabajo final. Para ello, tendremos que instalarla primero:
+
+```
+sudo apt install iptables
+```
+
+Cuando termine podemos comprobar que no tenemos ninguna regla habilitada, por supuesto:
+
+```
+iptables -L
+iptables -t nat -L
 ```
 
 
 
-No fue lo único. Como ya tenía instalada una VM con Debian tuve que modificar manualmente la dirección IP para que estuviera en la red interna de vmbr0. Esto es: 192.168.44.130/24 y el gateway  192.168.44.128 que se corresponde con la IP del host.&#x20;
+Ahora configuramos una regla de iptables como se muestra a continuación.&#x20;
 
-Adicionalmente, tuve que editar el  `/etc/apt/sources.list` para poder actualizar la lista de paquetes una vez que tenía conexión con el exterior a través del host.
+```
+iptables -t nat -A POSTROUTING -o ens18 -j MASQUERADE
+```
 
-Recuerda que el archivo `sources.list` es un componente esencial en los sistemas basados en Debian, como Ubuntu. Permite gestionar los repositorios de software desde los cuales el S.O.  descarga e instala paquetes y actualizaciones.&#x20;
+Esta regla nos quiere decir que:
 
-Este archivo contiene la lista de URLs que apuntan a los repositorios de paquetes, donde cada línea corresponde con un repositorio que contiene información de la ubicación, versión entre otros detalles.&#x20;
+<mark style="color:red;">falta</mark>
 
-Os dejo los enlaces que me han ayudado.
+
+
+### Paso 6: Testeando la conexión
+
+Este es el momento en que debemos testear la conexión de la VM cliente a Internet a través de la VM router. Si hacemos un ping a google:
+
+```
+ping google.com
+ping amazon.es
+```
+
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Ping desde la Vm cliente a google.com en Internet</p></figcaption></figure>
+
+Como se puede ver ya tenemos salida desde el equipo cliente hacia Internet a través de la VM router.
 
 ### Links
 
-1. [https://www.speaknetworks.com/enable-intel-vt-amd-v-support-hardware-accelerated-kvm-virtualization-extensions/](https://www.speaknetworks.com/enable-intel-vt-amd-v-support-hardware-accelerated-kvm-virtualization-extensions/)
-2. [https://www.debian.org/doc/manuals/debian-reference/ch05.es.html](https://www.debian.org/doc/manuals/debian-reference/ch05.es.html)
-3. [https://millaredos.com/proxmox-configurar-internet-una-sola-interfaz-de-red/](https://millaredos.com/proxmox-configurar-internet-una-sola-interfaz-de-red/)
-
-&#x20;
+* [https://www.youtube.com/watch?v=sGdhakDeQyo](https://www.youtube.com/watch?v=sGdhakDeQyo) (excelente video)
+* OpenWebinars: Proxmox VE: Redes
+* [https://coda.io/@julia-asensio-pedrero/proxmox/introduccion-a-las-redes-en-proxmox-22](https://coda.io/@julia-asensio-pedrero/proxmox/introduccion-a-las-redes-en-proxmox-22)
+* [https://www.speaknetworks.com/enable-intel-vt-amd-v-support-hardware-accelerated-kvm-virtualization-extensions/](https://www.speaknetworks.com/enable-intel-vt-amd-v-support-hardware-accelerated-kvm-virtualization-extensions/)
+* [https://www.debian.org/doc/manuals/debian-reference/ch05.es.html](https://www.debian.org/doc/manuals/debian-reference/ch05.es.html)
+* [https://millaredos.com/proxmox-configurar-internet-una-sola-interfaz-de-red/](https://millaredos.com/proxmox-configurar-internet-una-sola-interfaz-de-red/)
 

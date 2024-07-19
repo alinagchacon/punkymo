@@ -15,7 +15,7 @@ Nos referimos como topología de una red a la disposición (relación) de los di
 * Identifica conexiones virtuales mediante interfaces de dispositivo y esquemas de direccionamiento IP de capa 3 (capa de red del modelo OSI).
 * La capa de enlace de datos (capa 2 del modelo OSI) accede a la topología lógica de una red al controlar el acceso de datos a los medios. Es la topología lógica que influye en el tipo de trama de red y control de acceso a medios utilizado.
 
-<figure><img src="../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>Tomado de</strong> <a href="https://ccnadesdecero.es"><strong>https://ccnadesdecero.es</strong></a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>Tomado de</strong> <a href="https://ccnadesdecero.es"><strong>https://ccnadesdecero.es</strong></a></p></figcaption></figure>
 
 ### Topología en redes WAN
 

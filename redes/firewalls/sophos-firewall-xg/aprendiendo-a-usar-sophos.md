@@ -51,23 +51,23 @@ Para empezar a configurar las interfaces de red debemos acceder a la sección CO
 
 Ahora configuraremos las interfaces de red del Port B y Port C. Las interfaces del Port A y Port D ya están configuradas ya que las hemos configurado durante la instalación del Firewall.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Interfaces de red</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Interfaces de red</p></figcaption></figure>
 
 **Configurar Red del Port B**
 
 Para configurar la red de este puerto debemos de hacer clic sobre el nombre de Port B. Lo primero de todo es asignarle una zona, para ver las zonas que hay hacemos clic sobre el desplegable y elegimos la zona de LAN.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Seleccionando las zonas de las interfaces de red</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Seleccionando las zonas de las interfaces de red</p></figcaption></figure>
 
 Una vez elegida la zona de LAN se habilitará la casilla de Configuración IPv4, esto hará que podamos configurar la red. En este caso la red que crearemos para esta interfaz de red será de Clase C, por lo tanto, el sufijo será /24 y la IP de la interfaz de red será la 192.168.200.10. La puerta de enlace no se puede configurar ya que está es tratada como una red Interna. La configuración nos debe quedar como en la _Ilustración_.
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Configurando la zona LAN </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Configurando la zona LAN </p></figcaption></figure>
 
 Ilustración - Configurar Rango de Red Port B
 
 Una vez hecho hacemos clic en guardar y nos saldrá una advertencia de que es posible que después de actualizar la interfaz se produzcan interrupciones a los equipos que estén conectados por esta interfaz. La advertencia se puede ver en la _Ilustración x_, para continuar debemos hacer clic en Actualizar Interfaz.
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Actualizando las interfaces</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Actualizando las interfaces</p></figcaption></figure>
 
 
 
@@ -77,7 +77,7 @@ Para configurar la red del Port C es muy parecida a la del anterior puerto. Para
 
 La dirección IP que le seleccionáramos en este caso será la 172.27.1.10, el CIDR será de Clase C, es decir /24. Una vez hecho nos debe quedar como aparece en la _Ilustración x_.
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Configurar la red del puerto C</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Configurar la red del puerto C</p></figcaption></figure>
 
 #### Zonas <a href="#toc159426310" id="toc159426310"></a>
 
@@ -89,7 +89,7 @@ Como hemos podido ver en la configuración de las interfaces, podemos tener una 
 
 Para configurar las zonas podemos hacerlo debemos acceder a la sección CONFIGURAR y después al apartado de RED y en la pestaña Zonas. En la _Ilustración x_ podemos ver una lista de todas las zonas que están disponibles en el Firewall.
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Zonas del Firewall</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Zonas del Firewall</p></figcaption></figure>
 
 En el caso de que queramos editar alguna zona para permitir o denegar algún protocolo o configuración debemos hacer clic al icono del lápiz. En este caso únicamente veremos las opciones que están disponibles ya que en este caso las opciones predeterminadas ya son correctas.
 
@@ -109,7 +109,7 @@ Primero de todo para tener una mayor facilidad a la hora de aplicar reglas y con
 
 Para crear una zona debemos acceder al apartado de las zonas y hacer clic en Añadir, después debemos asignar el nombre a la zona y de forma opcional una descripción. También debemos asegurarnos de que el tipo de zona a crear es una LAN y no una DMZ. En este caso habilitaremos todos los servicios. Debe quedar de una forma parecida a la _Ilustración x_.
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Creación de una nueva zona</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Creación de una nueva zona</p></figcaption></figure>
 
 Después de crear la zona debemos de asignarle a la interfaz de red de administración la nueva zona creada. Para ello nos dirigimos al apartado interfaces y accedemos a la interfaz de red que usaremos para la administración que es el Port A. Ahí debemos abrir el desplegable y seleccionar la nueva zona que hemos creado. En la _ilustración x_ podemos ver cómo debe quedar.
 
@@ -117,7 +117,7 @@ Después de crear la zona debemos de asignarle a la interfaz de red de administr
 \
 
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Configuración de nueva Port A</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Configuración de nueva Port A</p></figcaption></figure>
 
 
 
@@ -131,7 +131,7 @@ Ya aislada en otra zona la red de administración, ahora debemos de denegar el a
 
 Para ello debemos acceder a la configuración de la zona a la que pertenecen, en el caso del Port B será la zona LAN y en el Port C será la DMZ.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Desactivación servicio administración</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Desactivación servicio administración</p></figcaption></figure>
 
 ## Configuración DHCP, DNS y certificado SSL <a href="#toc159426314" id="toc159426314"></a>
 

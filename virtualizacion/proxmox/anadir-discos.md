@@ -6,7 +6,7 @@ description: En Proxmox
 
 Con la Vm de Proxmox apagada he añadido dos discos de 20GB y vuelta a reiniciar.  Una vez dentro del sistema nos vamos al nodo pve > discos y vemos la estructura siguiente:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Discos añadidos a la VM de Proxmox</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Discos añadidos a la VM de Proxmox</p></figcaption></figure>
 
 
 
@@ -16,7 +16,7 @@ Con la Vm de Proxmox apagada he añadido dos discos de 20GB y vuelta a reiniciar
 
 Se puede seleccionar un mirror aunque en mi caso seleccionaré "single disk"
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
