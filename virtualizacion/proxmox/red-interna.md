@@ -123,8 +123,6 @@ iptables -L
 iptables -t nat -L
 ```
 
-
-
 Ahora configuramos una regla de iptables como se muestra a continuación.&#x20;
 
 ```
@@ -133,9 +131,11 @@ iptables -t nat -A POSTROUTING -o ens18 -j MASQUERADE
 
 Esta regla nos quiere decir que:
 
-<mark style="color:red;">falta</mark>
+<mark style="color:red;">falta</mark>&#x20;
 
+Podemos comprobar que efectivamente está habilitada:
 
+<figure><img src="../../.gitbook/assets/image (380).png" alt="" width="522"><figcaption><p>Regla habilitada en iptables</p></figcaption></figure>
 
 ### Paso 6: Testeando la conexión
 
