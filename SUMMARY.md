@@ -1,6 +1,11 @@
 # Table of contents
 
-* [Inicio](README.md)
+* [➡️ Punkymo](README.md)
+
+## ⁉️ Intereses - Curiosidades
+
+* [Curioso](intereses-curiosidades/curioso.md)
+* [Ideas](intereses-curiosidades/ideas.md)
 
 ## 🔑 Seguridad
 
@@ -143,8 +148,3 @@
 * [Pi-hole](virtualizacion/pi-hole.md)
   * [Instalando Pi-hole en Docker](virtualizacion/pi-hole/instalando-pi-hole.md)
   * [Instalando Pi-hole en Debian](virtualizacion/pi-hole/instalando-pi-hole-en-debian.md)
-
-## ⁉️ Intereses - Curiosidades
-
-* [Ideas](intereses-curiosidades/ideas.md)
-* [Curioso](intereses-curiosidades/curioso.md)
