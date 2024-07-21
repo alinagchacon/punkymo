@@ -31,10 +31,3 @@ Os recomiendo  visitar los tutoriales escritos por Xavier Adell aquí: [https://
 <figure><img src=".gitbook/assets/image (255).png" alt="" width="132"><figcaption></figcaption></figure>
 
 </div>
-
-
-
-
-
-{% embed url="https://youtu.be/B1J6Ou4q8vE?feature=shared" %}
-
