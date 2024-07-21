@@ -2,43 +2,7 @@
 
 * [➡️ Punkymo](README.md)
 
-## ⁉️ Intereses - Curiosidades
-
-* [Curioso](intereses-curiosidades/curioso.md)
-* [Ideas](intereses-curiosidades/ideas.md)
-
-## 🔑 Seguridad
-
-* [NAS](<README (1).md>)
-  * [Instalación Synology NAS en VirtualBox](seguridad/nas/instalacion-synology-nas-en-virtualbox/README.md)
-    * [Creación de volúmenes y su uso](seguridad/nas/instalacion-synology-nas-en-virtualbox/creacion-de-volumenes-y-su-uso.md)
-    * [Actualización Synology NAS](seguridad/nas/instalacion-synology-nas-en-virtualbox/actualizacion-synology-nas.md)
-    * [Creación de usuarios y carpetas compartidas](seguridad/nas/instalacion-synology-nas-en-virtualbox/creacion-de-usuarios-y-carpetas-compartidas.md)
-    * [Funciones del panel de control](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/README.md)
-      * [Acceso por SSH](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/acceso-por-ssh.md)
-      * [Configuración de los servicios de archivos](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/configuracion-de-los-servicios-de-archivos.md)
-      * [Configuración de red](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/configuracion-de-red.md)
-      * [Copias de seguridad (restauración)](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/copias-de-seguridad-restauracion.md)
-      * [Seguridad](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/seguridad.md)
-      * [Personalizar páginas de inicio](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/personalizar-paginas-de-inicio.md)
-      * [Servicio de notificaciones](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/servicio-de-notificaciones.md)
-    * [Centro de paquetes Synology](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/README.md)
-      * [Servidores multimedia](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/servidores-multimedia.md)
-      * [Paquetes de utilidades](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/paquetes-de-utilidades.md)
-      * [Cloud Sync](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/cloud-sync.md)
-      * [Hyper Backup](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/hyper-backup.md)
-      * [Synology Office](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/synology-office.md)
-  * [Truenas](seguridad/nas/truenas/README.md)
-    * [Rsync en Truenas](seguridad/nas/truenas/rsync-en-truenas.md)
-  * [OpenmediaVault](seguridad/nas/openmediavault.md)
-  * [RAID](seguridad/nas/raid.md)
-* [Backups](seguridad/backups/README.md)
-  * [Rsync](seguridad/backups/rsync/README.md)
-    * [Ejemplo de rsync](seguridad/backups/rsync/ejemplo-de-rsync.md)
-* [¿Qué son las ACL?](seguridad/que-son-las-acl.md)
-* [SOPS/AGE](seguridad/sops-age.md)
-
-## 🐞 Redes
+## 🕷️ Redes
 
 * [Introducción Redes](redes/introduccion-redes/README.md)
   * [Organizaciones](redes/introduccion-redes/organizaciones.md)
@@ -108,16 +72,36 @@
 * [NextCloud](servicios/nextcloud.md)
 * [Plesk](servicios/plesk.md)
 
-## 🦉 Misceláneas
+## 🔑 Seguridad
 
-* [Datos - codificación](miscelaneas/datos-codificacion.md)
-* [Servidor de video](miscelaneas/servidor-de-video.md)
-* [Comandos de Linux](miscelaneas/comandos-de-linux.md)
-* [CGI - NGINX](miscelaneas/cgi-nginx.md)
-* [Arduino](miscelaneas/arduino/README.md)
-  * [Capítulo 0 Blink](miscelaneas/arduino/capitulo-0-blink.md)
-  * [Capítulo 1 Led](miscelaneas/arduino/capitulo-1-led.md)
-  * [Capítulo 2 Botton & LED](miscelaneas/arduino/capitulo-2-botton-and-led.md)
+* [NAS](<README (1).md>)
+  * [Instalación Synology NAS en VirtualBox](seguridad/nas/instalacion-synology-nas-en-virtualbox/README.md)
+    * [Creación de volúmenes y su uso](seguridad/nas/instalacion-synology-nas-en-virtualbox/creacion-de-volumenes-y-su-uso.md)
+    * [Actualización Synology NAS](seguridad/nas/instalacion-synology-nas-en-virtualbox/actualizacion-synology-nas.md)
+    * [Creación de usuarios y carpetas compartidas](seguridad/nas/instalacion-synology-nas-en-virtualbox/creacion-de-usuarios-y-carpetas-compartidas.md)
+    * [Funciones del panel de control](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/README.md)
+      * [Acceso por SSH](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/acceso-por-ssh.md)
+      * [Configuración de los servicios de archivos](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/configuracion-de-los-servicios-de-archivos.md)
+      * [Configuración de red](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/configuracion-de-red.md)
+      * [Copias de seguridad (restauración)](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/copias-de-seguridad-restauracion.md)
+      * [Seguridad](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/seguridad.md)
+      * [Personalizar páginas de inicio](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/personalizar-paginas-de-inicio.md)
+      * [Servicio de notificaciones](seguridad/nas/instalacion-synology-nas-en-virtualbox/funciones-del-panel-de-control/servicio-de-notificaciones.md)
+    * [Centro de paquetes Synology](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/README.md)
+      * [Servidores multimedia](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/servidores-multimedia.md)
+      * [Paquetes de utilidades](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/paquetes-de-utilidades.md)
+      * [Cloud Sync](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/cloud-sync.md)
+      * [Hyper Backup](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/hyper-backup.md)
+      * [Synology Office](seguridad/nas/instalacion-synology-nas-en-virtualbox/centro-de-paquetes-synology/synology-office.md)
+  * [Truenas](seguridad/nas/truenas/README.md)
+    * [Rsync en Truenas](seguridad/nas/truenas/rsync-en-truenas.md)
+  * [OpenmediaVault](seguridad/nas/openmediavault.md)
+  * [RAID](seguridad/nas/raid.md)
+* [Backups](seguridad/backups/README.md)
+  * [Rsync](seguridad/backups/rsync/README.md)
+    * [Ejemplo de rsync](seguridad/backups/rsync/ejemplo-de-rsync.md)
+* [¿Qué son las ACL?](seguridad/que-son-las-acl.md)
+* [SOPS/AGE](seguridad/sops-age.md)
 
 ## 🐳 Virtualización
 
@@ -148,3 +132,19 @@
 * [Pi-hole](virtualizacion/pi-hole.md)
   * [Instalando Pi-hole en Docker](virtualizacion/pi-hole/instalando-pi-hole.md)
   * [Instalando Pi-hole en Debian](virtualizacion/pi-hole/instalando-pi-hole-en-debian.md)
+
+## 🦉 Misceláneas
+
+* [Datos - codificación](miscelaneas/datos-codificacion.md)
+* [Servidor de video](miscelaneas/servidor-de-video.md)
+* [Comandos de Linux](miscelaneas/comandos-de-linux.md)
+* [CGI - NGINX](miscelaneas/cgi-nginx.md)
+* [Arduino](miscelaneas/arduino/README.md)
+  * [Capítulo 0 Blink](miscelaneas/arduino/capitulo-0-blink.md)
+  * [Capítulo 1 Led](miscelaneas/arduino/capitulo-1-led.md)
+  * [Capítulo 2 Botton & LED](miscelaneas/arduino/capitulo-2-botton-and-led.md)
+
+## ⁉️ Interesante
+
+* [Curioso](interesante/curioso.md)
+* [Ideas](interesante/ideas.md)
