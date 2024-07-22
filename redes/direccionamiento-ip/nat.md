@@ -33,13 +33,29 @@ NAT mantiene una tabla de traducción que asocia las direcciones IP privadas con
 
 Los diferentes tipos de NAT que se pueden aplicar son:
 
-**Source Network Address Translation - SNAT:** Conocido como NAT de salida, SNAT cambia la dirección IP de origen de los paquetes que salen de la red local hacia Internet.
 
-**Destination Network Address Translation - DNAT:**  También conocido como NAT de entrada, cambia la dirección IP de destino de los paquetes que llegan desde Internet hacia la red local.
 
-**Masquerade**: Se trata de una forma especial de SNAT que se utiliza cuando la dirección IP pública puede cambiar (por ejemplo, conexiones de tipo dial-up o DHCP).
+#### NAT estática <a href="#nat-estatica" id="nat-estatica"></a>
 
-**Port Address Translation - PAT**: Conocido como NAT sobrecargado, PAT permite que múltiples dispositivos compartan una sola dirección IP pública al asignar diferentes números de puerto para cada sesión.
+Traducen una dirección privada en una misma dirección pública Por ejemplo, un dispositivo tiene una dirección IP privada del tipo 192.168.1.13 y sale a internet con la IP pública 200.167.220.220. En este caso se realiza una traducción de uno a uno. Puede ser muy útil en aquellos dispositivos que deben tener siempre la misma dirección para que sea accesible desde internet, por ejemplo, un servidor web.
+
+#### NAT dinámica <a href="#nat-dinamica" id="nat-dinamica"></a>
+
+El router tiene un grupo de direcciones IP públicas y a cada dirección privada le pertenece al menos una dirección IP pública del grupo. Parecido al Nat estático, pero ofrece la posibilidad de asignar varias direcciones IP.
+
+Tiene como ventaja que se pueden ocultar las direcciones internas de la LAN asociándolas con la IP pública, sin embargo solo se pueden traducir tantas IP privadas como IP públicas se tengan contratadas.
+
+#### NAT con sobrecarga <a href="#nat-con-sobrecarga" id="nat-con-sobrecarga"></a>
+
+Es la opción que tenemos en nuestros hogares puesto que nos conectamos a través de un router, proporcionado por el ISP que hayamos contratado. Los dispositivos se conectan a internet a través de una única IP pública.
+
+Cuando un dispositivo de la red interna quiere establecer una conexión, el router guarda su IP privada, asocia su puerto de origen con una IP pública y un puerto al azar (por encima de 1024). Así, cuando llega información a ese puerto, el router comprueba la tabla y lo reenvía a la IP privada y al puerto que corresponda.
+
+#### PAT <a href="#pat" id="pat"></a>
+
+Este método permite que diferentes IP privadas se conecten a internet usando una única IP pública. En este caso la traducción se realiza usando puertos.
+
+Esta forma permite ocultar las direcciones IP privadas que tenemos en nuestra LAN, lo que brinda mayor seguridad.  PAT es un modo de NAT dinámico.
 
 #### Ejemplo:
 
@@ -47,3 +63,6 @@ Supongamos que tienes una red local (en casa) con varios dispositivos: PC, telé
 
 Cuando un dispositivo de la LAN envía un paquete a Internet, el router cambia la dirección IP de origen del paquete a la dirección IP pública del router. En el momento en que la respuesta regresa, el router utiliza la tabla de traducción para redirigir el paquete de vuelta al dispositivo correcto en la red local.
 
+
+
+\
