@@ -13,11 +13,15 @@ El servicio de DHCP lo vamos a instalar en una máquina virtual con Ubuntu Serve
 
 Actualizamos los repositorios de nuestro sistema:
 
-<mark style="color:blue;">`sudo apt update`</mark>
+```
+sudo apt update
+```
 
 Una vez hecho esto, procedemos  a instalar el paquete isc-dhcp-server:
 
-<mark style="color:blue;">`sudo apt install isc-dhcp-server`</mark>
+```
+sudo apt install isc-dhcp-server
+```
 
 ### Configurar DHCP
 
@@ -25,13 +29,17 @@ La configuración de los servicios de una red, se deben planificar con antelaci�
 
 Accedemos a la ubicación donde se encuentran los archivos de configuración del servicio, para editar el fichero de configuración de nuestro servidor DHCP. Antes de editar el archivo procedemos a realizar una copia de seguridad:
 
-<mark style="color:blue;">`sudo cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.BKP`</mark>&#x20;
+```
+sudo cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.BKP
+```
 
 <figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption><p>Copia del archivo de configuración</p></figcaption></figure>
 
 Para editar el archivo utilizo <mark style="color:blue;">`nano`</mark>
 
-<mark style="color:blue;">`sudo nano /etc/dhcp/dhcpd.conf`</mark>&#x20;
+```
+sudo nano /etc/dhcp/dhcpd.conf
+```
 
 <figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption><p>Fragmento a agregar con los parámetros de nuestra red.</p></figcaption></figure>
 
@@ -43,17 +51,24 @@ En la imagen previa podemos ver los parámetros de la configuración como por ej
 
 En este caso no tengo creada una reserva de direcciones IP para equipos como impresoras u otros servidores. En ese caso tocaría agregar lo siguiente:
 
-<mark style="color:blue;">`host printer {`</mark>\
-&#x20;            <mark style="color:blue;">`hardware ethernet 00:0C:27:C9`</mark>\
-&#x20;            <mark style="color:blue;">`fixed-address 192.168.1.155;`</mark>\ <mark style="color:blue;">`}`</mark>&#x20;
+```
+host printer {
+    hardware ethernet 00:0C:27:C9
+    fixed-address 192.168.1.155;
+}
+```
 
 Lo siguiente que podemos hacer es comprobar que desde un equipo cliente con Windows  funciona correctamente. Para ello debemos hacer un release / renew desde la ventana del <mark style="color:blue;">`CMD`</mark>:
 
-<mark style="color:blue;">`ipconfig /release`</mark>&#x20;
+```
+ipconfig /release
+```
 
 y luego&#x20;
 
-<mark style="color:blue;">`ipconfig /renew`</mark>&#x20;
+```
+ipconfif /renew
+```
 
 Para liberar y solicitar una nueva configuración de los parámetros de conexión a la red. Esto lo podemos ver en Wireshark, donde se observa claramente el proceso de negociación que se establece entre el cliente y el servidor de DHCP.&#x20;
 
@@ -69,7 +84,9 @@ Si todo ha ido bien deberíamos tener un resultado como el que sigue:
 
 Podemos ver en el servidor si el cliente tiene una dirección DHCP. Esto lo podemos ver en en el archivo de "<mark style="color:blue;">arrendamientos</mark>":
 
-<mark style="color:blue;">`more /var/lib/dhcpd/dhcpd.leases`</mark>
+```
+more /var/lib/dhcpd/dhcpd.leases
+```
 
 <figure><img src="../../.gitbook/assets/image (21) (1).png" alt=""><figcaption><p>Archivo /var/lib/dhcpd/dhcpd.leases</p></figcaption></figure>
 
