@@ -38,13 +38,9 @@ En Cisco packet tracer vimos como implementar NAT en un router para que un equip
 
 La misma idea es la que vamos a configurar aquí pero esta vez utilizando Linux e IPTables pero refresquemos algunos conceptos:
 
-**NAT -** es una técnica utilizada en redes que modifica las direcciones IP en los encabezados de los paquetes mientras cuando pasan a través de un router o un firewall. Su propósito principal es permitir que varios dispositivos en una red local privada compartan una sola dirección IP pública para conectarse a Internet.
-
-Por tanto, lo que hace NAT es coger una dirección IP privada y traducirla a una dirección IP pública o viceversa.  La mayor parte de los routers en nuestros hogares y empresas hacen uso de NAT, para traducir la IP privada de cada dispositivo a la pública que le fue asignada por su ISP o RIR.
+**NAT -** es un protocolo de red utilizado para modificar las direcciones IP privadas en públicas en los encabezados de los paquetes cuando  pasan a través de un router o un firewall. Su propósito principal es permitir que varios dispositivos en una red local privada compartan una sola dirección IP pública para conectarse a Internet. Por tanto, lo que hace NAT es coger una dirección IP privada y traducirla a una dirección IP pública o viceversa.  Si quieres leer algo más sobre NAT ve a la sección de [NAT](../../redes/direccionamiento-ip/nat.md).
 
 **IPTables -** es una herramienta de Linux que permite el filtrado de los paquetes de red, determinando qué paquetes de datos permitimos que lleguen hasta el servidor y cuáles no. Es una herramienta  necesaria que facilita la administración de firewalls en sistemas Linux. Como otros firewall,  funciona a través de reglas. Si quieres saber algo más del funcionamiento de iptables ve a la sección de [IPTables](../../miscelaneas/iptables.md).
-
-
 
 ¡Vamos a comenzar!
 
@@ -161,9 +157,21 @@ iptables -t nat -A POSTROUTING -o ens18 -j MASQUERADE
 
 Esta regla nos quiere decir que:
 
-* &#x20;
+&#x20;**-t nat:** especifica la tabla a modificar. En este caso, la tabla `NAT` que es la tabla que gestiona la traducción de direcciones de red y se utiliza sobre todo para modificar las direcciones IP en los paquetes que atraviesan el firewall.
 
-Podemos comprobar que efectivamente está habilitada:
+**-A POSTROUTING**: Agrega `-A` una regla al final de la cadena especificada.
+
+* `POSTROUTING` es la cadena dentro de la tabla `nat` que procesa los paquetes justo antes de que salgan de una interfaz de red. Las reglas en esta cadena se utilizan para modificar los paquetes después de que hayan sido enrutados.
+
+**-o eth0**: Especifica la interfaz de salida, en este caso `eth`.
+
+**-j MASQUERADE**: Significa "saltar" (jump). Lo que hace es especificar el objetivo que debe ser alcanzado si el paquete coincide con la regla.
+
+* `MASQUERADE` lo que hace es ocultar la dirección IP del origen de los paquetes que salen por una interfaz de red. Esto es útil para compartir una conexión a Internet entre varios dispositivos en una red privada. Utiliza la dirección IP de la interfaz de salida como la dirección IP de origen del paquete.
+
+En sentido general, la regla de IPTABLEs se utiliza para configurar una regla de enmascaramiento en la tabla `nat`, en la cadena `POSTROUTING.` De este modo todos los paquetes que salgan a través de la interfaz `eth0`, reemplaza la IP de origen del paquete con la IP de la interfaz de salida.
+
+Podemos comprobar que efectivamente está habilitada la regla:
 
 <figure><img src="../../.gitbook/assets/image (380).png" alt="" width="522"><figcaption><p>Regla habilitada en iptables</p></figcaption></figure>
 

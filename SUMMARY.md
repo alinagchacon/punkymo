@@ -22,7 +22,6 @@
   * [¿Qué son las VLAN?](redes/cisco/que-son-las-vlan/README.md)
     * [Ejemplo 1 de VLAN](redes/cisco/que-son-las-vlan/ejemplo-1-de-vlan.md)
     * [Ejemplo 2 de VLAN](redes/cisco/que-son-las-vlan/ejemplo-2-de-vlan.md)
-  * [NAT](redes/cisco/nat.md)
 * [Firewalls](redes/firewalls/README.md)
   * [Tipos de firewalls](redes/firewalls/tipos-de-firewalls.md)
   * [ZPF](redes/firewalls/zpf.md)
