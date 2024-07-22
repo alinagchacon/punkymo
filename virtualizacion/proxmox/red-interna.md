@@ -4,15 +4,13 @@ description: Proxmox
 
 # Red Interna
 
-He estado testeando Proxmox en diferentes condiciones pero siempre con las mínimas. Me refiero a tener:&#x20;
+He estado testeando Proxmox en diferentes condiciones pero siempre con las mínimas y me refiero a:&#x20;
 
 * espacio en disco no más de 100GB.&#x20;
 * una única interfaz de red.
 * en VM con VirtualBox como hipervisor.
 
 Se trata de utilizar una única interfaz de red para tener acceso a Internet y una red interna para varias VM en Proxmox. Para ello, estuve  siguiendo la guía de Proxmox en:&#x20;
-
-
 
 {% embed url="https://pve.proxmox.com/wiki/Network_Configuration" %}
 Wiki de Proxmox
@@ -94,7 +92,7 @@ En el caso de la VM cliente debemos conectarla a vmbr1, aunque bastaría con edi
 
 Pasemos a las máquinas. Realmente las dos VM: router y cliente han sido clonadas de una VM de Ubuntu que tengo como plantilla.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="401"><figcaption><p>Las dos VM Router y Cliente como clones "dependientes" de la plantilla "ubuse1"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="401"><figcaption><p>Las dos VM Router y Cliente como clones "dependientes" de la plantilla "ubuse1"</p></figcaption></figure>
 
 
 
@@ -171,7 +169,7 @@ Esta regla nos quiere decir que:
 
 En sentido general, la regla de IPTABLEs se utiliza para configurar una regla de enmascaramiento en la tabla `nat`, en la cadena `POSTROUTING.` De este modo todos los paquetes que salgan a través de la interfaz `eth0`, reemplaza la IP de origen del paquete con la IP de la interfaz de salida.
 
-Podemos comprobar que efectivamente está habilitada la regla:
+Podemos comprobar que efectivamente está habilitada la regla en la tabla NAT:
 
 <figure><img src="../../.gitbook/assets/image (380).png" alt="" width="522"><figcaption><p>Regla habilitada en iptables</p></figcaption></figure>
 
@@ -187,6 +185,38 @@ ping amazon.es
 <figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Ping desde la Vm cliente a google.com en Internet</p></figcaption></figure>
 
 Como se puede ver ya tenemos salida desde el equipo cliente hacia Internet a través de la VM router.
+
+¿Hemos acabado? Pues no.&#x20;
+
+### Paso 7
+
+Las reglas de iptables que vayamos creando se almacenan en memoria, y cada vez que reiniciemos el servidor, se perderían y tendríamos  que volver a crearlas. Para evitar que esto ocurra, tenemos dos opciones:
+
+1. Hacemos una copia manual de las reglas establecidas con el comando:
+
+```
+sudo iptables-save
+```
+
+2. Instalamos un nuevo paquete:
+
+```
+sudo apt install iptables-persistent -y
+```
+
+Durante el proceso de instalación nos preguntará si queremos guardar las reglas de IPv4 existentes en el archivo /etc/iptables/rules.v4 y las de IPv6 en el archivo /etc/iptables/rules.v6:
+
+<figure><img src="../../.gitbook/assets/image.png" alt="" width="476"><figcaption><p>Reglas iptables almacenadas</p></figcaption></figure>
+
+Podemos ver como se almacenan las reglas haciendo un cat o more de los archivos en cuestión:
+
+<pre><code><strong>cat /etc/iptables/rules.v4
+</strong>car /etc/iptables/rules.v6
+</code></pre>
+
+Con esta opción le estamos indicando al sistema que almacene las reglas en el archivo `/etc/iptables/rules.v4`. La próxima vez que se inicie el sistema, el script de inicio de iptables volverá a cargar las reglas almacenadas en ese archivo.
+
+Y con esto si tenemos almacenadas las reglas de iptables en la MV que hace de router y a partir de aquí ya podemos crear nuestra propia infraestructura.
 
 ### Links
 

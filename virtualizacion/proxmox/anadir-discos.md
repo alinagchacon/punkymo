@@ -16,7 +16,7 @@ Con la Vm de Proxmox apagada he añadido dos discos de 20GB y vuelta a reiniciar
 
 Se puede seleccionar un mirror aunque en mi caso seleccionaré "single disk"
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
