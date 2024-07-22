@@ -4,33 +4,63 @@ description: Proxmox
 
 # Red Interna
 
-He estado testeando Proxmox en diferentes condiciones pero siempre las mínimas. Me refiero a tener:&#x20;
+He estado testeando Proxmox en diferentes condiciones pero siempre con las mínimas. Me refiero a tener:&#x20;
 
 * espacio en disco no más de 100GB.&#x20;
-* una única interfaz de red
-* VirtualBox como hipervisor
+* una única interfaz de red.
+* en VM con VirtualBox como hipervisor.
 
-Se trata de utilizar una única interfaz de red para tener acceso a Internet y una red interna para varias VM en Proxmox. Para ello, seguí la guía de Proxmox en: [https://pve.proxmox.com/wiki/Network\_Configuration](https://pve.proxmox.com/wiki/Network\_Configuration)&#x20;
+Se trata de utilizar una única interfaz de red para tener acceso a Internet y una red interna para varias VM en Proxmox. Para ello, estuve  siguiendo la guía de Proxmox en:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (241).png" alt=""><figcaption><p>Red interna en Proxmox</p></figcaption></figure>
 
-En esta guía que os recomiendo, una de las opciones es el enmascaramiento `NAT` con iptables. Este enmascaramiento nos permite el acceso a la red utilizando la dirección IP del host para el tráfico saliente, teniendo una dirección IP privada, como es el caso.
 
-Utilizamos `IPTABLES` para reescribir cada paquete saliente de modo que parezca que se origina en el host. Naturalmente, las respuestas se reescriben para enrutarse al remitente original.
+{% embed url="https://pve.proxmox.com/wiki/Network_Configuration" %}
+Wiki de Proxmox
+{% endembed %}
 
-De hecho, la guía ha sido de la misma wiki de Proxmox:
+En esta guía que os recomiendo, una de las opciones es el enmascaramiento `NAT` con `IPTABLES`. Este enmascaramiento nos permite el acceso a la red utilizando la dirección IP del host para el tráfico saliente, teniendo una dirección IP privada, como es el caso.
+
+Por tanto, la idea es utilizar `IPTABLES` para reescribir cada paquete saliente de modo que parezca que se origina en el host. Naturalmente, las respuestas se reescriben para enrutarse al remitente original.
+
+Según la wiki de Proxmox el diagrama de red a simular es el siguiente:
 
 <figure><img src="../../.gitbook/assets/image (242).png" alt=""><figcaption><p><a href="https://pve.proxmox.com/pve-docs/images/default-network-setup-routed.svg">https://pve.proxmox.com/pve-docs/images/default-network-setup-routed.svg</a></p></figcaption></figure>
+
+
+
+### NAT e IPTABLES
+
+Antes de continuar hagamos una breve parada. En lo poco que he dicho anteriormente ya salieron dos términos que pudieran llamar la atención y le dan título a esta sección: NAT e IPTABLES.
+
+En Cisco packet tracer vimos como implementar NAT en un router para que un equipo que está en una red interna tenga salida a Internet haciendo una "traducción" de la IP interna a la IP externa o pública.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (381).png" alt=""><figcaption></figcaption></figure>
+
+La misma idea es la que vamos a configurar aquí pero esta vez utilizando Linux e IPTables pero refresquemos algunos conceptos:
+
+**NAT -** es una técnica utilizada en redes que modifica las direcciones IP en los encabezados de los paquetes mientras cuando pasan a través de un router o un firewall. Su propósito principal es permitir que varios dispositivos en una red local privada compartan una sola dirección IP pública para conectarse a Internet.
+
+Por tanto, lo que hace NAT es coger una dirección IP privada y traducirla a una dirección IP pública o viceversa.  La mayor parte de los routers en nuestros hogares y empresas hacen uso de NAT, para traducir la IP privada de cada dispositivo a la pública que le fue asignada por su ISP o RIR.
+
+**IPTables -** es una herramienta de Linux que permite el filtrado de los paquetes de red, determinando qué paquetes de datos permitimos que lleguen hasta el servidor y cuáles no. Es una herramienta  necesaria que facilita la administración de firewalls en sistemas Linux. Como otros firewall,  funciona a través de reglas. Si quieres saber algo más del funcionamiento de iptables ve a la sección de [IPTables](../../miscelaneas/iptables.md).
+
+
 
 ¡Vamos a comenzar!
 
 ### Configurando una red interna en Proxmox
 
-Lo primero es tener bien claro cuál es la configuración inicial con la que estoy trabajando. Me resulta muy importante tener claro el esquema de la configuración.
+Lo primero es tener bien claro qué es lo que queremos hacer:&#x20;
+
+* El cliente estará conectada al linux bridge vmbr1 que es una red interna
+* El router estará conectada a los dos linux bridges: vmbr0 (que tiene salida a Internet a través de la interfaz física) y el vmbr1 que está conectado a la red interna.
+* Aplicaremos una regla NAT en IPTABLES para redirigir el tráfico del cliente hacia Internet a través del router.
+
+La configuración inicial con la que estoy trabajando se muestra en el esquema siguiente.
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
 
-El test lo vamos a hacer con dos VM de Ubuntu donde una hará de router de la otra.&#x20;
+Recuerda que tanto Proxmox como las dos VM de Ubuntu son VM en VirtualBox. La tabla siguiente especifica las características iniciales de la infraestructura a montar:
 
 | Proxmox                     | VM Ubuntu Router        | VM Ubuntu Cliente       |
 | --------------------------- | ----------------------- | ----------------------- |
@@ -38,21 +68,19 @@ El test lo vamos a hacer con dos VM de Ubuntu donde una hará de router de la ot
 | IP gateway: 10.0.2.2        | IP gateway: 10.0.0.2    | IP gateway: 10.0.0.2    |
 | Red: NAT                    | Red: vmbr0              | Red: vmbr0              |
 
-
-
-La VM de Proxmox tiene una IP estática configurada durante el proceso de instalación. Dicha VM está conectada en red: NAT y como he dicho anteriormente, es el único modo en que he podido instalar VM o contenedores de Linux LXC y que todos tengan una IP y salida a Internet.
+La VM de Proxmox tiene una IP estática configurada durante el proceso de instalación. Dicha VM está conectada en red `NAT` y como he dicho anteriormente, es el único modo en que he podido instalar VM o contenedores de Linux (LXC) y que todos tengan una IP y salida a Internet.
 
 ### Paso 1: Nueva interfaz de red en Proxmox
 
-Por defecto, tenemos el linux bridge virtual **vmbr0** que es el que se conecta a nuestra interfaz de red  física y que toma del router físico una IP por DHCP.  Como queremos crear una red interna, tenemos que añadir una nuevo linux bridge al que conectaremos el equipo cliente.  Para ello vamos al nodo pve - network - add (Linux Bridge).
+Por defecto, tenemos el `linux bridge` virtual `vmbr0` que es el que se conecta a nuestra interfaz de red  física y que toma del router físico una IP por DHCP.  Como queremos crear una red interna, tenemos que añadir una nuevo `linux bridge`  `vmbr1` al que conectaremos el equipo cliente.  Para ello vamos al nodo `pve - network - add (Linux Bridge)`.
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Añadir un nuevo linux bridge: vmbr1</p></figcaption></figure>
 
-Lo único que tendremos que configurar es la IP de la red, no es necesario asignar una IP de gateway. De hecho, el gateway solo debe estar una vez aunque tengamos configuradas varias interfaces de red.
+Lo único que tendremos que configurar es la IP de la red y, en mi caso, he utilizado la 10.10.10.253/24. No es necesario asignar una IP de gateway. De hecho, el gateway solo debe estar especificado una vez aunque tengamos configuradas varias interfaces de red.
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt="" width="563"><figcaption><p>La IP del Proxmox en el nuevo linux bridge es: 10.10.10.253/24</p></figcaption></figure>
 
-Nos debe quedar algo como lo siguiente:
+Una vez añadido el linux bridge vmbr1, nos debe quedar algo como lo siguiente:
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Los dos linux bridge: vmbr0 y vmbr1</p></figcaption></figure>
 
@@ -60,15 +88,15 @@ Nos debe quedar algo como lo siguiente:
 
 ### Paso 2: vmbr0 y vmbr1
 
-La VM router estará conectada a los dos dos linux bridges: vmbr0 y vmbr1 . Recordemos que será esta VM la que le da Internet al equipo cliente.&#x20;
+La VM router estará conectada a los dos dos linux bridges: vmbr0 y vmbr1 . Recordemos que será esta VM la que le dará Internet al equipo cliente.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>VM router conectada a los dos linnux bridge</p></figcaption></figure>
 
-En el caso de la VM cliente debemos conectarla (bastaría con editar el  linux bridge vmbr0)  para que esté conectada al vmbr1 que es el switch de nuestra red interna.
+En el caso de la VM cliente debemos conectarla a vmbr1, aunque bastaría con editar el  linux bridge vmbr0 y modificarlo para que aparezca conectado al vmbr1 que es el switch de nuestra red interna.
 
 ### Paso 3: Configurar las VM que harán de Router y de Cliente
 
-Pasemos a las máquinas. Realmente las dos VM: Router y Cliente han sido clonadas de una VM de Ubuntu que tengo como plantilla.&#x20;
+Pasemos a las máquinas. Realmente las dos VM: router y cliente han sido clonadas de una VM de Ubuntu que tengo como plantilla.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt="" width="401"><figcaption><p>Las dos VM Router y Cliente como clones "dependientes" de la plantilla "ubuse1"</p></figcaption></figure>
 
@@ -80,11 +108,13 @@ Dado que las VM router y cliente son clones de la VM de Ubuntu Server  (ubuse1) 
 nano /etc/hostname
 ```
 
-Escribimos el nombre que le corresponda: router o cliente y reiniciamos para que se implementen los cambios correspondientes. Una vez restablecidas las VM debemos ver algo como lo siguiente, en la **VM router**, donde todavía no hemos configurado la IP de la interfaz de red que se conecta al vmbr1.
+Escribimos el nombre que le corresponda: router o cliente y reiniciamos para que se implementen los cambios correspondientes.&#x20;
+
+Una vez restablecidas las VM debemos ver algo como lo siguiente, en la `VM router`, donde todavía NO hemos configurado la `IP` de la interfaz de red que se conecta al `vmbr1`.
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt="" width="563"><figcaption><p>Configuración de red de la VM router. La interfaz ens18 es la que se conecta al vmbr0</p></figcaption></figure>
 
-A la **VM cliente** si debemos configurarle la IP en modo estático porque no tenemos ningún servidor de DHCP que le brinde la IP. Tendría que hacerlo la VM router pero tampoco se lo hemos configurado. Por tanto, tenemos que asignarle una IP estática en la red interna: 10.10.10.2/24 en la interfaz de red que se habilita: **ens18** y el **gateway** que le asignamos será la IP del router: **10.10.10.1.**
+A la `VM cliente` si que debemos configurarle la IP en modo estático porque no tenemos ningún servidor de DHCP que le brinde la IP. Tendría que hacerlo la VM router pero tampoco se lo hemos configurado. Por tanto, tenemos que asignarle una IP estática en la red interna y para ello utilizaremos la: 10.10.10.2/24 en la interfaz de red que se habilita: **ens18** y el **gateway** que le asignamos será la IP del router: **10.10.10.1.**
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt="" width="563"><figcaption><p>Configuración de red de la VM cliente en la red interna con la interfaz ens18</p></figcaption></figure>
 
@@ -102,7 +132,7 @@ Todavía con esto no podemos hacer que el cliente tenga conexión a Internet.
 
 ### Paso 5: IPTables :smile:
 
-Lo primero será habilitar el IP forwarding y para ello nos vamos a editar el archivo /etc/systcl.conf y quitar el # en la línea: **net.ipv4.ip\_forward=1**
+Lo primero será habilitar el IP forwarding y para ello nos vamos a editar el archivo `/etc/systcl.conf` y quitar el # en la línea: **`net.ipv4.ip_forward=1`**
 
 ```
 nano /etc/systcl.conf 
@@ -110,7 +140,7 @@ nano /etc/systcl.conf
 
 <figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>/etc/systcl.conf</p></figcaption></figure>
 
-**iptables** - Esta si es la herramienta que nos hará el trabajo final. Para ello, tendremos que instalarla primero:
+La herramienta que nos hará el trabajo final será precisamente el `IPTABLES`. Para ello, tendremos que instalarla primero:
 
 ```
 sudo apt install iptables
@@ -131,7 +161,7 @@ iptables -t nat -A POSTROUTING -o ens18 -j MASQUERADE
 
 Esta regla nos quiere decir que:
 
-<mark style="color:red;">falta</mark>&#x20;
+* &#x20;
 
 Podemos comprobar que efectivamente está habilitada:
 

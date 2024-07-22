@@ -136,6 +136,7 @@
 ## 🦉 Misceláneas
 
 * [Datos - codificación](miscelaneas/datos-codificacion.md)
+* [IPTables](miscelaneas/iptables.md)
 * [Servidor de video](miscelaneas/servidor-de-video.md)
 * [Comandos de Linux](miscelaneas/comandos-de-linux.md)
 * [CGI - NGINX](miscelaneas/cgi-nginx.md)
