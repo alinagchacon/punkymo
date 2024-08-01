@@ -52,7 +52,7 @@ Una vez arrancamos la máquina virtual se comenzarán a iniciar todos los proces
 
 Seguidamente nos pedirá la contraseña para acceder, de forma predeterminada es **admin**.
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Interfaz de VM</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Interfaz de VM</p></figcaption></figure>
 
 Después nos aparecerá un mensaje sobre los Términos de Licencia del firewall, si queremos seguir utilizando debemos aceptarlos presionando la tecla **A**.
 

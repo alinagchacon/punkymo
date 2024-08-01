@@ -15,7 +15,7 @@ La idea que vamos a desarrollar para comprender la configuración de una VLAN es
 5. La VLAN nativa será la 300 (blau), sin embargo, por seguridad no debería ser ni la 1 (que es la vlan por defecto) ni una vlan en uso como es en este caso. Lo haremos así para "simplificar".\
 
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Configurando VLANs</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption><p>Configurando VLANs</p></figcaption></figure>
 
 ### Configuración de la topología
 
@@ -59,7 +59,7 @@ Lo siguiente sería establecer la cantidad de puertos de acceso para cada VLAN e
 Lo primero será configurar las IP de cada PC teniendo en cuenta la VLAN donde estarán.\
 
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>Configurando los PC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>Configurando los PC</p></figcaption></figure>
 
 Este proceso hay que repetirlo en los PC por VLAN.
 
