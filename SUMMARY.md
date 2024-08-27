@@ -140,6 +140,7 @@
 * [IPTables](miscelaneas/iptables.md)
 * [Servidor de video](miscelaneas/servidor-de-video.md)
 * [Comandos de Linux](miscelaneas/comandos-de-linux.md)
+* [Anaconda & Spyder](miscelaneas/anaconda-and-spyder.md)
 * [CGI - NGINX](miscelaneas/cgi-nginx.md)
 * [Arduino](miscelaneas/arduino/README.md)
   * [Capítulo 0 Blink](miscelaneas/arduino/capitulo-0-blink.md)
