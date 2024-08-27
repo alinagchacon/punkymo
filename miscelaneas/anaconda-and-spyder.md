@@ -92,11 +92,15 @@ NumPy es una biblioteca popular de Python, de código abierto, que se usa para r
 
 ### Instalar anaconda-navigator
 
+Anaconda Navigator es una interfaz gráfica de usuario GUI  sencilla y con gran potencial. Puede gestionar de manera avanzada paquetes.&#x20;
+
 Basta hacer lo siguiente:
 
 ```
 conda install anaconda-navigator
 ```
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Anaconda Navigator</p></figcaption></figure>
 
 ### Spyder
 
@@ -104,7 +108,15 @@ Se puede instalar simplemente haciendo:
 
 ```
 conda install spyder 
+or
+apt install spyder
 ```
+
+Pero también desde el navigator podemos instalar los paquetes necesarios como Spyder.
+
+### Error con anaconda-navigator
+
+La instalación de la versión más actual de **Anaconda3-2024.06-1-Linux-x86\_64** me dio problemas con el navigator. Realmente funcionaba todo bien salvo ese detalle pero lo desinstalé. Para asegurar de cierto modo que todo funcionara, me descargué la versión **Anaconda3-2020.07-Linux-x86\_64** y esta si funcionó correctamente.
 
 ### Links
 

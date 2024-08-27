@@ -16,7 +16,7 @@ Las tres VM que voy a utilizar para testear son:
 
 El siguiente diagrama de red muestra lo que estoy diciendo:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
 
 Las tres VM  están en adaptador Red NAT. El Ubuntu Server (verde) hace de servidor de DNS y DHCP así como dos sitios web: www.kirby.com y www.punky.com.  Para el sitio web kirby.com he habilitado el módulo de PHP. El sitio web punky.com es solo una página web estática.&#x20;
 
@@ -43,7 +43,7 @@ En nuestro caso, significa que todas las solicitudes recibidas por Nginx bajo la
 
 Por lo tanto, el `proxy_pass` es una herramienta  importante a la hora de configurar Nginx cuando se quiere implementar un `servidor de proxy inverso`, que  es utilizada para equilibrar la carga de tráfico web, enmascarar la dirección IP del servidor backend, etc.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de Nginx para el sitio www.kirby.com</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de Nginx para el sitio www.kirby.com</p></figcaption></figure>
 
 Una vez se haya modificado nuestro archivo de configuración correspondiente a www.kirby.com reiniciamos el servicio de Nginx:
 

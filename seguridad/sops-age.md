@@ -100,11 +100,11 @@ Creamos el par de claves público y privado:
 age-keygen -o key.txt
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Generando el par de claves público y privado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Generando el par de claves público y privado</p></figcaption></figure>
 
 Si hacemos un cat del archivo creado con el par de claves se nos muestra algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo key.txt con el par de claves generadas</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo key.txt con el par de claves generadas</p></figcaption></figure>
 
 La llave privada que se muestra en el fichero key.txt no debemos guardarla en ningún repositorio Git ni en ninguna carpeta al acceso de cualquiera. Para dar un poco de seguridad a nuestra clave es que vamos a crear la carpeta:  `~/.sops` y mover la clave generada.
 
@@ -138,7 +138,7 @@ sops --encrypt --age $(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)")  -
 
 Si ahora hacemos un cat ejemplo.txt veremos que el archivo es ilegible:
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo ejemplo.txt cifrado con sops y age</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo ejemplo.txt cifrado con sops y age</p></figcaption></figure>
 
 Para descifrar el archivo tendríamos que utilizar el mismo comando pero con la opción --decrypt. Veamos:
 

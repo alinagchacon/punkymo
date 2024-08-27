@@ -11,7 +11,7 @@ En Proxmox, el **qemu-guest-agent** se utiliza para tres cosas:
 
 Incluso, puede ser útil para algo más simple que todo esto: que muestre información en el dashboard, como la IP de la VM:
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt="" width="563"><figcaption><p>Información de una VM en el dashboard de Proxmox</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt="" width="563"><figcaption><p>Información de una VM en el dashboard de Proxmox</p></figcaption></figure>
 
 ### Instalar qemu agent
 

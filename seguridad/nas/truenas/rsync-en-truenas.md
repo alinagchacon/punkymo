@@ -39,7 +39,7 @@ Primeramente vamos a considerar que este Truenas es el host, así que lo primero
 
 `Storage > Pool > KirbyPool` y creamos el dataset que he llamado: `BACKUP`
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Crear un dataset BACKUP para almacenar las copias de los usuarios</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Crear un dataset BACKUP para almacenar las copias de los usuarios</p></figcaption></figure>
 
 
 
@@ -58,7 +58,7 @@ Nos vamos a la segunda pestaña que nos encontramos: `Rsync Module` donde vamos 
 
 Nos queda de la siguiente manera:
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configurando el módulo Rsync en: Services > Rsync > Rsync Module > Add</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configurando el módulo Rsync en: Services > Rsync > Rsync Module > Add</p></figcaption></figure>
 
 **(3) Crear una tarea Rsync**
 
@@ -78,7 +78,7 @@ En la ventana de opciones que se nos muestra tenemos que definir:&#x20;
 Podemos ejecutar la tarea rsync yendo a: Tareas > Tareas Rsync y haciendo clic en Ejecutar ahora.\
 
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Ejecutar la tarea de sincronización con Rsync</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Ejecutar la tarea de sincronización con Rsync</p></figcaption></figure>
 
 Pero antes de ejecutar la tarea nos vamos al otro sistema: Truenas 2
 
@@ -102,7 +102,7 @@ En `Tasks > Rsync Tasks`, y clicamos en `Add` para crear una nueva tarea.&#x20;
 
 Una vez tengamos configurada la tarea Rsync en el Truenas 2 con IP 192.168.1.113 podremos ejecutarla y vemos que, efectivamente, se sincroniza con el Truenas 1 que tiene dirección IP 192.168.1.145.
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tarea rsync que se ejecuta correctamente</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tarea rsync que se ejecuta correctamente</p></figcaption></figure>
 
 ## Configurar un Truenas y un servidor Linux en VM
 
