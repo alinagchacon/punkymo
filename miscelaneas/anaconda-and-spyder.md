@@ -1,3 +1,7 @@
+---
+description: Python
+---
+
 # Anaconda & Spyder
 
 Anaconda es una distribución de Python y R para cálculos científicos del tipo: ciencia de datos, aplicaciones de Machine Learning, procesamiento de datos a gran escala, análisis predictivo, etc. Entre sus ventajas podemos encontrar el hecho de simplificar la gestión e implementación de paquetes. Lo podemos instalar en Windows, Linux y macOS.&#x20;
@@ -113,6 +117,8 @@ apt install spyder
 ```
 
 Pero también desde el navigator podemos instalar los paquetes necesarios como Spyder.
+
+<figure><img src="../.gitbook/assets/image (385).png" alt="" width="188"><figcaption></figcaption></figure>
 
 ### Error con anaconda-navigator
 
