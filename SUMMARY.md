@@ -133,6 +133,7 @@
 * [Pi-hole](virtualizacion/pi-hole.md)
   * [Instalando Pi-hole en Docker](virtualizacion/pi-hole/instalando-pi-hole.md)
   * [Instalando Pi-hole en Debian](virtualizacion/pi-hole/instalando-pi-hole-en-debian.md)
+* [RDP](virtualizacion/rdp.md)
 
 ## 🦉 Misceláneas
 
