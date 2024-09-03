@@ -289,7 +289,7 @@ Está claro que tenemos ciertos puertos abiertos para la recepción y envío de 
 
 <mark style="color:blue;">`sudo nmap -ST -O 192.168.1.30`</mark>
 
-![](<../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ### Link
 

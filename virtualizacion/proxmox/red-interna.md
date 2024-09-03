@@ -52,7 +52,7 @@ Lo primero es tener bien claro qué es lo que queremos hacer:&#x20;
 
 La configuración inicial con la que estoy trabajando se muestra en el esquema siguiente.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
 
 Recuerda que tanto Proxmox como las dos VM de Ubuntu son VM en VirtualBox. La tabla siguiente especifica las características iniciales de la infraestructura a montar:
 
@@ -68,15 +68,15 @@ La VM de Proxmox tiene una IP estática configurada durante el proceso de instal
 
 Por defecto, tenemos el `linux bridge` virtual `vmbr0` que es el que se conecta a nuestra interfaz de red  física y que toma del router físico una IP por DHCP.  Como queremos crear una red interna, tenemos que añadir una nuevo `linux bridge`  `vmbr1` al que conectaremos el equipo cliente.  Para ello vamos al nodo `pve - network - add (Linux Bridge)`.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Añadir un nuevo linux bridge: vmbr1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>Añadir un nuevo linux bridge: vmbr1</p></figcaption></figure>
 
 Lo único que tendremos que configurar es la IP de la red y, en mi caso, he utilizado la 10.10.10.253/24. No es necesario asignar una IP de gateway. De hecho, el gateway solo debe estar especificado una vez aunque tengamos configuradas varias interfaces de red.
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="563"><figcaption><p>La IP del Proxmox en el nuevo linux bridge es: 10.10.10.253/24</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt="" width="563"><figcaption><p>La IP del Proxmox en el nuevo linux bridge es: 10.10.10.253/24</p></figcaption></figure>
 
 Una vez añadido el linux bridge vmbr1, nos debe quedar algo como lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Los dos linux bridge: vmbr0 y vmbr1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>Los dos linux bridge: vmbr0 y vmbr1</p></figcaption></figure>
 
 
 
@@ -92,7 +92,7 @@ En el caso de la VM cliente debemos conectarla a vmbr1, aunque bastaría con edi
 
 Pasemos a las máquinas. Realmente las dos VM: router y cliente han sido clonadas de una VM de Ubuntu que tengo como plantilla.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="401"><figcaption><p>Las dos VM Router y Cliente como clones "dependientes" de la plantilla "ubuse1"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="401"><figcaption><p>Las dos VM Router y Cliente como clones "dependientes" de la plantilla "ubuse1"</p></figcaption></figure>
 
 
 
@@ -106,7 +106,7 @@ Escribimos el nombre que le corresponda: router o cliente y reiniciamos para que
 
 Una vez restablecidas las VM debemos ver algo como lo siguiente, en la `VM router`, donde todavía NO hemos configurado la `IP` de la interfaz de red que se conecta al `vmbr1`.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt="" width="563"><figcaption><p>Configuración de red de la VM router. La interfaz ens18 es la que se conecta al vmbr0</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="563"><figcaption><p>Configuración de red de la VM router. La interfaz ens18 es la que se conecta al vmbr0</p></figcaption></figure>
 
 A la `VM cliente` si que debemos configurarle la IP en modo estático porque no tenemos ningún servidor de DHCP que le brinde la IP. Tendría que hacerlo la VM router pero tampoco se lo hemos configurado. Por tanto, tenemos que asignarle una IP estática en la red interna y para ello utilizaremos la: 10.10.10.2/24 en la interfaz de red que se habilita: **ens18** y el **gateway** que le asignamos será la IP del router: **10.10.10.1.**
 
@@ -206,7 +206,7 @@ sudo apt install iptables-persistent -y
 
 Durante el proceso de instalación nos preguntará si queremos guardar las reglas de IPv4 existentes en el archivo /etc/iptables/rules.v4 y las de IPv6 en el archivo /etc/iptables/rules.v6:
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="476"><figcaption><p>Reglas iptables almacenadas</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt="" width="476"><figcaption><p>Reglas iptables almacenadas</p></figcaption></figure>
 
 Podemos ver como se almacenan las reglas haciendo un cat o more de los archivos en cuestión:
 

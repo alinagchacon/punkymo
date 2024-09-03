@@ -60,7 +60,7 @@ mkdir carpeta_destino
 
 Por ejemplo, en la imagen siguiente tengo el contenido de la carpeta de origen donde ya tenía un archivo file1.txt:&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Carpeta de origen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Carpeta de origen</p></figcaption></figure>
 
 ### Opciones de rsync
 
@@ -98,7 +98,7 @@ _Nota: cuidado con poner o no "/" al final del nombre de las carpetas_.
 
 El tipo de copia que se ha realizado es una copia completa. No fuera demasiado eficiente si siempre fuera así. Por suerte, rsync hace copias incrementales. Para comprobarlo, modifiquemos un archivo de la carpeta de origen. Yo modifiqué el archivo `file1` y volví a ejecutar `rsync. C`omo se muestra en la imagen el único archivo que se ha copiado ha sido precisamente el que hemos modificado: `file1`.
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>copia incremental con rsync</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>copia incremental con rsync</p></figcaption></figure>
 
 ### Recuperando el contenido
 
@@ -245,7 +245,7 @@ Donde los cinco asteriscos representan la programación de tiempo. Cada asterisc
 
 La siguiente imagen nos lo muestra mejor:
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>crontab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>crontab</p></figcaption></figure>
 
 Si queremos  ejecutar nuestro script llamado `rsync.sh` todos los días a las 22:00h, la línea en el archivo `cron` sería:
 

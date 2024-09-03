@@ -165,7 +165,7 @@ Una vez creado nuestro usuario de prueba (con su certificado para la VPN) ver c�
 
 Y si nos vamos al final del todo, veremos a nuestro usuario **Punky**.
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Certificados a exportar del usuario</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Certificados a exportar del usuario</p></figcaption></figure>
 
 ### Comprobar estado del servicio y de los clientes conectados
 
@@ -173,11 +173,11 @@ Si queremos hacer una prueba  podemos descargar el certificado para Android o el
 
 En el caso de utilizar un dispositivo móvil, tendríamos que instalar la `OpenVPN for Android`&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="48"><figcaption><p>OpenVPN for Android</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="48"><figcaption><p>OpenVPN for Android</p></figcaption></figure>
 
 Una vez tengamos lista la app, podemos exportar a nuestro dispositivo móvil el certificado del cliente VPN que hayamos creado. En mi caso, sería el usuario `punky`
 
-<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Certificado de usuario Importado en la aplicación OpenVPN</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Certificado de usuario Importado en la aplicación OpenVPN</p></figcaption></figure>
 
 Nos conectamos a la VPN y se nos muestra el log:
 
