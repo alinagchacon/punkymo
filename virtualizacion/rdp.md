@@ -83,7 +83,7 @@ Y listo, ya tenemos acceso al contenedor donde tenemos instalado el escritorio r
 
 <figure><img src="../.gitbook/assets/image (5).png" alt="" width="342"><figcaption><p>El escritorio remoto </p></figcaption></figure>
 
-
+<mark style="color:red;">To be continued ...</mark>
 
 ### Links
 
