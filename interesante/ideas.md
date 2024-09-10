@@ -52,9 +52,9 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
   [https://tailscale.com/blog/how-tailscale-works](https://tailscale.com/blog/how-tailscale-works)&#x20;
 * Jupyter\
   [https://jupyter.org](https://jupyter.org)&#x20;
-* Distrobox\
+* Distrobox: te permite crear contenedores basados en diferentes distribuciones manteniendo  acceso al directorio de usuarios.\
   [https://distrobox.it](https://distrobox.it)
-* Bluefin\
+* Bluefin: Linux de escritorio sobre Fedora "inmutable" y con un escritorio estilo Ubuntu que ha sido diseñado expresamente para programadores.\
   [https://projectbluefin.io](https://projectbluefin.io)
 
 
