@@ -9,7 +9,29 @@ Dentro del propio sistema operativo los podemos encontrar almacenados en /var/li
 * /var/lib/vz/images/ - guarda los discos de las VM.
 * /var/lib/vz/dump/iso - almacenan las ISO.
 
-## Las máquina virtual
+Algunos datos:
+
+* **vmbr0**: linux bridge que se conecta al adaptador de red que tengamos. La configuración se hace en /etc/network/interfaces.
+* **Network**: Estando ubicados en el nodo, nos muestra la configuración de la red. Solo puede haber una única configuración del gateway.
+* **Datacenter**: agrupación lógica de nodos físicos o virtuales (servidores) que pueden ser gestionados de modo centralizado.
+* **summary**: muestra un resumen en función de si estamos ubicados en el datacenter o en el nodo. Ofrece una vista general del estado y recursos del nodo o servidor seleccionado en el Datacenter. Incluye información como el uso de CPU, memoria, almacenamiento disponible y otros recursos críticos
+* **Notes**: Espacio donde puedes agregar notas y documentación relevante sobre el nodo o servidor seleccionado. Es útil para mantener registros o indicar configuraciones específicas.
+* **Shell**: Acceso directo a una terminal shell dentro de Proxmox VE. Desde aquí puedes ejecutar comandos y realizar tareas administrativas avanzadas directamente en el servidor.
+* **System**: Aquí puedes gestionar y configurar aspectos fundamentales del sistema, como las actualizaciones del sistema operativo y los paquetes de Proxmox VE.
+* **Firewall**: Permite configurar y gestionar las reglas de firewall para controlar el tráfico de red entrante y saliente hacia y desde el servidor Proxmox VE.
+* **Data**: Esta sección proporciona información específica sobre el almacenamiento, incluyendo detalles sobre el almacenamiento local, SAN, NAS y, si está configurado, almacenamiento distribuido como Ceph.
+* **Replication (Replicación)**: Muestra el estado y configuración de la replicación de datos entre nodos dentro de tu infraestructura Proxmox VE.
+* **Task**: Proporciona un registro detallado de las tareas realizadas en el servidor, como la creación de máquinas virtuales, copias de seguridad, restauraciones, etc.
+* **nodo pve**: el único nodo creado en la instalación. Cuando se crea un clúster podemos ver los nodos involucrados.
+* **DNS**: el servidor de dns que asume por defecto. En mi caso, la IP del router 192.168.1.1
+* **Hosts**: muestra el mismo archivo de dns /etc/hosts
+* **LVM** (Administrador de volúmenes lógicos): Es una capa de software ligera sobre discos duros y particiones. Se puede utilizar para dividir el espacio disponible en disco en volúmenes lógicos más pequeños. LVM se usa ampliamente en Linux y facilita la administración de discos duros. LVM normalmente asigna bloques cuando creas un volumen.
+* **LVM-Thin**: Asignan bloques cuando se escriben. Este comportamiento se denomina aprovisionamiento ligero porque los volúmenes pueden ser mucho mayores que el espacio físicamente disponible. \
+  \
+  Se trata de almacenamiento con aprovisionamiento ligero, lo que significa que puede asignar una determinada cantidad a un disco de VM (por ejemplo, 100 G), pero solo utilizará la cantidad real que utiliza la VM y crece con la cantidad de almacenamiento que esté utilizando hasta el límite asignado.
+* **ZFS** (Zettabyte File System): es un sistema de archivos y administración de almacenamiento de código abierto. Es un gestor de volúmenes lógicos diseñado por Sun Microsystems.
+
+## Las máquinas virtuales
 
 ### Crear una VM
 

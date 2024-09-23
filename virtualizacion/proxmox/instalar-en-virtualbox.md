@@ -2,7 +2,7 @@
 description: Instalación
 ---
 
-# Proxmox en VirtualBox
+# Instalar en VirtualBox
 
 ## Instalación
 
@@ -33,11 +33,11 @@ El comando que permite habilitar la opción de <mark style="color:blue;">`VT-x/A
 VBoxManage modifyvm PROXMOX --nested-hw-virt on
 ```
 
-En la línea anterior PROXMOX es el nombre de la VM a la que quiero habilitar la virtualización anidada. Como se puede ver en la imagen ya está habilitado.
+En la línea anterior PROXMOX es el nombre de la VM a la que quiero habilitar la virtualización anidada y como se puede ver en la imagen se habilita de inmediato.
 
 <figure><img src="../../.gitbook/assets/image (243).png" alt=""><figcaption><p>Habilitar VT-x/AMD-V anidado</p></figcaption></figure>
 
-Como siempre, dejo algunos links que me han sido útiles.
+Otro detalle que nos puede dar problemas y lo podemos encontrar (en los equipos de clase por las características de la instalación) es el Hyper-V.  Debemos deshabilitarlo en caso de tener activo. Como siempre, dejo algunos links que me han sido útiles.
 
 ### Links
 
@@ -45,3 +45,4 @@ Como siempre, dejo algunos links que me han sido útiles.
 * [https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/vboxmanage-modifyvm.html](https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/vboxmanage-modifyvm.html)
 * [https://www.virtualbox.org/manual/ch08.html](https://www.virtualbox.org/manual/ch08.html)
 * [https://redessy.com/como-habilitar-la-virtualizacion-anidada-en-virtualbox-en-linux/?expand\_article=1](https://redessy.com/como-habilitar-la-virtualizacion-anidada-en-virtualbox-en-linux/?expand\_article=1)
+* [https://learn.microsoft.com/es-es/troubleshoot/windows-client/application-management/virtualization-apps-not-work-with-hyper-v](https://learn.microsoft.com/es-es/troubleshoot/windows-client/application-management/virtualization-apps-not-work-with-hyper-v)&#x20;
