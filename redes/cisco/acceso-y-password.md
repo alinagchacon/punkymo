@@ -49,3 +49,16 @@ service password-encryption
 ```
 
 Ahora si aparecen cifradas todas las contraseñas.
+
+
+
+## Activar contraseña en el modo EXEC privilegiado
+
+Si queremos securizar el acceso al modo EXEC de usuario cn privilegios, podemos hacer.
+
+```
+config t
+enable password cisco 
+enable secret class
+```
+
