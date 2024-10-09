@@ -127,13 +127,13 @@ Todavía con esto no podemos hacer que el cliente tenga conexión a Internet.
 
 ### Paso 5: IPTables :smile:
 
-Lo primero será habilitar el IP forwarding y para ello nos vamos a editar el archivo `/etc/systcl.conf` y quitar el # en la línea: **`net.ipv4.ip_forward=1`**
+Lo primero será habilitar el IP forwarding y para ello nos vamos a editar el archivo `/etc/sysctl.conf` y quitar el # en la línea: **`net.ipv4.ip_forward=1`**
 
 ```
-nano /etc/systcl.conf 
+nano /etc/sysctl.conf 
 ```
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>/etc/systcl.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>/etc/sysctl.conf</p></figcaption></figure>
 
 La herramienta que nos hará el trabajo final será precisamente el `IPTABLES`. Para ello, tendremos que instalarla primero:
 
