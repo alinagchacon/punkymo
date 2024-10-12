@@ -35,21 +35,23 @@ sudo cp /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.BKP
 
 <figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption><p>Copia del archivo de configuración</p></figcaption></figure>
 
-Para editar el archivo utilizo <mark style="color:blue;">`nano`</mark>
+Tengamos en cuenta algunos aspectos:
+
+* **Rango DHCP**: Se trata de un grupo de direcciones IP para una función determinada dentro de la organización. No confundir con el **ámbito** que es el grupo administrativo de usuarios o equipos de una subred.
+* **Reserva de direcciones IP**: Para reservar una o diversas direcciones IP para fines administrativos.
+* **Concesión**: Permite establecer el tiempo en el cual un equipo puede usar de forma activa una dirección IP en el dominio o grupo de trabajo.
+
+Editamos el archivo dhcpd.conf, podemos eliminar todo el contenido y reescribir la configuración que te dejo más abajo o bien, habilitar la configuración de la subred interna agregando las opciones necesarias.&#x20;
 
 ```
 sudo nano /etc/dhcp/dhcpd.conf
 ```
 
+En la configuración tenemos que aplicar el rango de direcciones IP que queremos que otorgue el servidor DHCP, el dominio que en mi caso es "haven.local" y otros aspectos de la configuración como la IP de broadcast y la IP del router.
+
 <figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption><p>Fragmento a agregar con los parámetros de nuestra red.</p></figcaption></figure>
 
-En la imagen previa podemos ver los parámetros de la configuración como por ejemplo:
-
-* el valor de la concesión (Lease-Time),&#x20;
-* el rango y ámbito,
-* el dominio&#x20;
-
-En este caso no tengo creada una reserva de direcciones IP para equipos como impresoras u otros servidores. En ese caso tocaría agregar lo siguiente:
+En la configuración que hemos aplicado no hemos creada una reserva de direcciones IP para equipos como impresoras u otros servidores. En caso de querer crear una reserva tocaría agregar lo siguiente:
 
 ```
 host printer {
@@ -58,7 +60,51 @@ host printer {
 }
 ```
 
-Lo siguiente que podemos hacer es comprobar que desde un equipo cliente con Windows  funciona correctamente. Para ello debemos hacer un release / renew desde la ventana del <mark style="color:blue;">`CMD`</mark>:
+En la imagen podemos ver otros parámetros de la configuración como por ejemplo:
+
+* el valor de la concesión (Lease-Time)
+* varias opciones relacionadas con el **ddns**:
+  * El **DDNS** o **DNS dinámico** es un servicio que permite actualizar de manera automática los registros de DNS cuando cambia una dirección IP.  En el servidor DNS se registra la asignación del nombre (del dispositivo) a la dirección IP que se le otorga. No obstante, dado que las direcciones IP cambian con frecuencia, es útil hacer servir el servicio **ddns** que actualiza los registros del servidor DNS cada vez que cambian las direcciones IP. Por tanto, con el **ddns**, la administración de nombres de dominio se vuelve más fácil y eficiente.
+  * **ddns-update-style interim**: controla la forma en que se manejan las actualizaciones dinámicas de DNS (DDNS) entre el servidor DHCP y el servidor DNS. Por lo que Esta opción define la fmanera que usará el servidor DHCP para actualizar los registros DNS de modo automático.
+  * El estilo **`interim`** automatiza el proceso de actualización de DNS, haciéndolo una opción flexible y útil en entornos donde el servidor DHCP gestiona direcciones IP dinámicas y debe mantener el DNS actualizado sin intervención manual.&#x20;
+  * El servidor DHCP y el servidor DNS deben estar bien configurados si queremos que las actualizaciones dinámicas de DNS funcionen correctamente.
+  * La opción **`ddns-domainname`** define el **nombre de dominio** que se utilizará cuando el servidor DHCP realice actualizaciones dinámicas de DNS. El nombre de dominio se agrega a los nombres de host de los clientes para formar un nombre de dominio completo (FQDN, Fully Qualified Domain Name) que será registrado en el servidor DNS.
+  * Cuando el servidor DHCP asigna una dirección IP a un cliente y está configurado para realizar actualizaciones dinámicas de DNS, el **nombre de host** del cliente se combina con el valor de **`ddns-domainname`** para crear un FQDN que será registrado en el servidor DNS. Este registro puede ser tanto un registro A (nombre a dirección IP) como un registro PTR (dirección IP a nombre de host, para la resolución inversa).
+  * Por ejemplo, si el cliente tiene el nombre de host `cliente` y el valor de `ddns-domainname` es `haven.local`, el servidor DHCP registrará el FQDN `cliente.haven.local` en el servidor DNS.
+
+Aquí dejo unos extras de información:
+
+<details>
+
+<summary>¿Cuál es el funcionamiento de interim?</summary>
+
+En el estilo **`interim`**, el servidor DHCP actualiza los registros DNS **directamente y de manera automática** cuando un cliente obtiene o libera una dirección IP. Esto es:
+
+1. **Actualización del registro A (IPv4)**: El servidor DHCP actualizará el registro **A** en el servidor DNS, que mapea un nombre de dominio a una dirección IPv4.
+2. **Actualización del registro PTR**: También se actualizará el registro **PTR**, que realiza la resolución inversa (asocia una dirección IP con un nombre de dominio).
+3. **Renovación y eliminación**: Cuando un cliente libera una dirección IP o la abandona (por ejemplo, si la conexión DHCP expira o se desconecta), el servidor DHCP eliminará o actualizará los registros DNS correspondientes.
+
+</details>
+
+<details>
+
+<summary>¿Cómo funciona el DDNS? <em>(Tomado de:</em> <a href="https://aws.amazon.com/es/what-is/dynamic-dns/"><em>AWS</em></a><em>)</em></summary>
+
+Las organizaciones suelen suscribirse a un servicio de DNS dinámico (DDNS) proporcionado por un proveedor de DDNS. El proveedor también mantiene los servidores DNS que gestionan los registros de DNS del nombre de dominio asociado. En sentido general es como sigue:
+
+1. Se registra un nombre de dominio con el proveedor de servicios de DNS dinámico y se configuran los ajustes de DNS.
+2. Se proporciona al proveedor la dirección IP inicial del nombre de dominio.
+3. Se instala un cliente de DNS dinámico en la instancia del dispositivo o servidor con la dirección IP cambiante
+
+El cliente DDNS supervisa de forma continua la dirección IP y detecta cualquier cambio. Envía una notificación de actualización del registro de DNS al proveedor de DNS dinámico, que le informa de la nueva dirección IP. El proveedor de DNS dinámico modifica los registros para que apunten a la nueva dirección IP.
+
+El cliente de DNS dinámico continúa supervisando la dirección IP para detectar cambios adicionales. Cada vez que se produce un nuevo cambio, el proceso se repite.
+
+</details>
+
+### Testeando desde un equipo cliente
+
+Lo siguiente que podemos hacer es comprobar que desde un equipo cliente con Windows o Linux  funciona correctamente. Para ello debemos hacer un release / renew desde la ventana del <mark style="color:blue;">`CMD`</mark>:
 
 ```
 ipconfig /release
