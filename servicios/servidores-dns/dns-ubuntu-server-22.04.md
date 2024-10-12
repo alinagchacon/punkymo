@@ -72,7 +72,7 @@ Cada bloque de zona incluirá de que tipo será la zona y el fichero en el que e
 Una práctica adecuada sería hacer una copia de seguridad de los archivos de configuración, como es el caso del archivo <mark style="color:blue;">`named.conf.local`</mark> para lo cual podemos hacer:
 
 ```
-cp /etc/bind/named.conf.local /etc/bind/named.conf.BKP
+cp /etc/bind/named.conf.local /etc/bind/named.conf.local.BKP
 ```
 
 <figure><img src="../../.gitbook/assets/image (14) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
