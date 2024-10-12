@@ -17,9 +17,8 @@ Sería recomendable tener un segundo servidor Ubuntu 22.04 que sirva como servid
 ### Requisitos previos
 
 * Una MV con Ubuntu Server 22.04&#x20;
-* Dos adaptadores de red:
-  * NAT o Adaptador Puente
-  * Red Interna: 192.168.6.0/24
+* Un  adaptador de red:
+  * Red NAT
 
 ### Observaciones
 
@@ -148,12 +147,13 @@ Listo, ya tenemos configurado el servidor DNS. Solo nos queda <mark style="color
 
 Si no las hecho antes, **edita la configuración de red** del servidor de Ubuntu  para indicar que él mismo es el servidor DNS que tendrá que consultar para la resolución de nombres. Y esto lo tenemos que hacer con **netplan**.
 
-<figure><img src="../../.gitbook/assets/image (47) (1).png" alt=""><figcaption><p>Configuración de la red con netplan</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt="" width="532"><figcaption><p>Configuración de la red con nNetplan</p></figcaption></figure>
 
 Para que tome los cambios, hacemos:
 
 ```
 sudo netplan apply
+sudo netplan try
 ```
 
 Ya podemos  realizar pruebas con **nslookup** para comprobar si el servidor DNS está resolviendo correctamente los nombres y las direcciones IP:
