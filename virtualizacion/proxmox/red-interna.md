@@ -97,7 +97,7 @@ Pasemos a las máquinas. Realmente las dos VM: router y cliente han sido clonada
 
 
 
-Dado que las VM router y cliente son clones de la VM de Ubuntu Server  (ubuse1) que tengo como plantilla, podríamos cambiarle el nombre de cada una. Para ello, iniciamos ambas VM y editamos el siguiente archivo en cada una:
+Dado que las VM router y cliente son clones de la VM de Ubuntu Server  (ubuse1) que tengo como plantilla, podríamos cambiarle el nombre de cada una. Para ello, iniciamos ambas VM y editamos el siguiente archivo en cada una:&#x20;
 
 ```
 nano /etc/hostname
@@ -236,7 +236,8 @@ sudo systemctl status nginx.service
 
 Vamos a activar una regla NAT en IPTABLES que permita el acceso por el puerto 80. Recordemos que en mi caso tengo lo siguiente:
 
-* La IP pública de gateway es `10.0.2.15`.
+* La IP pública del gateway es `10.0.2.2`.
+* El Proxmox tiene la IP `10.0.2.15`.
 * Tenemos como servidor web el cliente, en la red interna con la IP `10.10.10.16`.
 * Queremos redirigir el tráfico que llega al puerto 80 - HTTP de la IP pública a la IP interna del servidor web en el mismo puerto 80.
 
@@ -290,7 +291,9 @@ sudo netfilter-persistent save
 
 <mark style="color:red;">Probemos!!</mark>
 
+Funciona, sin embargo he tenido que activar el reenvío de puertos en el adaptador NAT que conecta al Proxmox:
 
+<figure><img src="../../.gitbook/assets/image (386).png" alt=""><figcaption><p>Reenvío de puertos en el adaptador "NAT"</p></figcaption></figure>
 
 ### Links
 
@@ -300,4 +303,5 @@ sudo netfilter-persistent save
 * [https://www.speaknetworks.com/enable-intel-vt-amd-v-support-hardware-accelerated-kvm-virtualization-extensions/](https://www.speaknetworks.com/enable-intel-vt-amd-v-support-hardware-accelerated-kvm-virtualization-extensions/)
 * [https://www.debian.org/doc/manuals/debian-reference/ch05.es.html](https://www.debian.org/doc/manuals/debian-reference/ch05.es.html)
 * [https://millaredos.com/proxmox-configurar-internet-una-sola-interfaz-de-red/](https://millaredos.com/proxmox-configurar-internet-una-sola-interfaz-de-red/)
+* [https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb\_article\_view\&sysparm\_article=KB0043439](https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb\_article\_view\&sysparm\_article=KB0043439)
 
