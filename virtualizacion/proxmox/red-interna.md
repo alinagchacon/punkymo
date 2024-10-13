@@ -219,6 +219,79 @@ Con esta opción le estamos indicando al sistema que almacene las reglas en el a
 
 Y con esto si tenemos almacenadas las reglas de iptables en la MV que hace de router y a partir de aquí ya podemos crear nuestra propia infraestructura.
 
+
+
+### <mark style="color:red;">¿Y si instalamos Nginx en el equipo cliente, cómo podemos acceder desde afuera?</mark>
+
+Para probar lo primero que he hecho ha sido instalar Nginx en el equipo cliente, y comprobar que está el servicio activo, esto es:
+
+**En el cliente**:
+
+```
+sudo apt install nginx
+sudo systemctl status nginx.service
+```
+
+**En el router**:
+
+Vamos a activar una regla NAT en IPTABLES que permita el acceso por el puerto 80. Recordemos que en mi caso tengo lo siguiente:
+
+* La IP pública de gateway es `10.0.2.15`.
+* Tenemos como servidor web el cliente, en la red interna con la IP `10.10.10.16`.
+* Queremos redirigir el tráfico que llega al puerto 80 - HTTP de la IP pública a la IP interna del servidor web en el mismo puerto 80.
+
+Como ya creamos una regla NAT para permitir la salida a Internet del tráfico del equipo cliente, tenemos habilitado el reenvío de paquetes IP.
+
+Recordemos que se trata de  editar el archivo `/etc/sysctl.conf` y descomentar la línea:
+
+```bash
+net.ipv4.ip_forward = 1
+```
+
+Y luego aplicar los cambios:
+
+```bash
+sudo sysctl -p
+```
+
+#### Creando la regla NAT de entrada (DNAT)
+
+El siguiente comando de `iptables` permite redirigir el tráfico que llega al puerto 80 en la IP pública hacia el servidor en la red interna:
+
+```bash
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j DNAT --to-destination 10.10.10.16:80
+```
+
+#### donde:
+
+* `-t nat`: Indica que estamos modificando la tabla NAT.
+* `-A PREROUTING`: Añade una regla en la cadena `PREROUTING`, que se encarga de redirigir el tráfico entrante antes de que llegue a cualquier proceso local.
+* `-i eth0`: Indica que esta regla se aplica a la interfaz de red externa (`ens18`).
+* `-p tcp`: Especifica que la regla aplica solo a paquetes TCP.
+* `--dport 80`: Indica que la regla se aplica al tráfico entrante en el puerto 80.
+* `-j DNAT`: Usamos la acción `DNAT` (Destination Network Address Translation) para redirigir el tráfico a otra IP.
+* `--to-destination 10.10.10.16:80`: Redirige el tráfico al servidor interno `10.10.10.16`en el puerto 80.
+
+#### 3. Configurarando la regla de reenvío (FORWARD)
+
+Debes permitir el reenvío de paquetes desde la red externa a la interna. Añade la siguiente regla a la cadena `FORWARD`:
+
+```bash
+sudo iptables -A FORWARD -p tcp -d 10.10.10.16 --dport 80 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+```
+
+#### Guardamos las reglas
+
+Para asegurarte de que las reglas de `iptables` persisten tras un reinicio, debes guardarlas. Dependiendo de la distribución de Linux, puedes usar:
+
+```bash
+sudo netfilter-persistent save
+```
+
+<mark style="color:red;">Probemos!!</mark>
+
+
+
 ### Links
 
 * [https://www.youtube.com/watch?v=sGdhakDeQyo](https://www.youtube.com/watch?v=sGdhakDeQyo) (excelente video)

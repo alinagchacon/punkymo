@@ -48,3 +48,10 @@ Mediante  instrucciones se le indica al firewall el tipo de paquetes a los que s
 Cuando en el sistema se recibe o se envía un paquete, se recorren todas las  reglas en orden hasta encontrar aquella regla que cumpla las condiciones. Una vez localizada la regla, ésta se activa y ejecuta la acción que tenga establecida sobre el paquete en cuestión.
 
 **Nota**: Las reglas definidas con iptables no son persistentes por defecto y se pierden después de un reinicio. Para hacerlas persistentes, es necesario guardar las reglas en un archivo de configuración y restaurarlas al inicio del sistema.
+
+
+
+## Links
+
+* [https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb\_article\_view\&sysparm\_article=KB0043439](https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb\_article\_view\&sysparm\_article=KB0043439)
+
