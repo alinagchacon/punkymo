@@ -145,6 +145,7 @@
 * [Comandos de Linux](miscelaneas/comandos-de-linux.md)
 * [Anaconda & Spyder](miscelaneas/anaconda-and-spyder.md)
 * [CGI - NGINX](miscelaneas/cgi-nginx.md)
+* [Raid](miscelaneas/raid.md)
 * [Arduino](miscelaneas/arduino/README.md)
   * [Capítulo 0 Blink](miscelaneas/arduino/capitulo-0-blink.md)
   * [Capítulo 1 Led](miscelaneas/arduino/capitulo-1-led.md)
