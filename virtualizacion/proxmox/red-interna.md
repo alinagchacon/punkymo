@@ -162,7 +162,7 @@ Esta regla nos quiere decir que:
 
 * `POSTROUTING` es la cadena dentro de la tabla `nat` que procesa los paquetes justo antes de que salgan de una interfaz de red. Las reglas en esta cadena se utilizan para modificar los paquetes después de que hayan sido enrutados.
 
-**-o ens18**: Especifica la interfaz de salida, en este caso `ens18`.
+**-o ens18**: Especifica la interfaz de salida.
 
 **-j MASQUERADE**: Significa "saltar" (jump). Lo que hace es especificar el objetivo que debe ser alcanzado si el paquete coincide con la regla.
 
@@ -267,7 +267,7 @@ sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j DNAT --to-destin
 
 * `-t nat`: Indica que estamos modificando la tabla NAT.
 * `-A PREROUTING`: Añade una regla en la cadena `PREROUTING`, que se encarga de redirigir el tráfico entrante antes de que llegue a cualquier proceso local.
-* `-i eth0`: Indica que esta regla se aplica a la interfaz de red externa (`ens18`).
+* `-i ens18`: Indica que esta regla se aplica a la interfaz de red externa.
 * `-p tcp`: Especifica que la regla aplica solo a paquetes TCP.
 * `--dport 80`: Indica que la regla se aplica al tráfico entrante en el puerto 80.
 * `-j DNAT`: Usamos la acción `DNAT` (Destination Network Address Translation) para redirigir el tráfico a otra IP.
