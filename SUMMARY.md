@@ -98,7 +98,8 @@
   * [Truenas](seguridad/nas/truenas/README.md)
     * [Rsync en Truenas](seguridad/nas/truenas/rsync-en-truenas.md)
   * [OpenmediaVault](seguridad/nas/openmediavault.md)
-  * [RAID](seguridad/nas/raid.md)
+  * [RAID](seguridad/nas/raid/README.md)
+    * [mdadm](seguridad/nas/raid/mdadm.md)
 * [Backups](seguridad/backups/README.md)
   * [Rsync](seguridad/backups/rsync/README.md)
     * [Ejemplo de rsync](seguridad/backups/rsync/ejemplo-de-rsync.md)
@@ -134,8 +135,8 @@
 * [Pi-hole](virtualizacion/pi-hole.md)
   * [Instalando Pi-hole en Docker](virtualizacion/pi-hole/instalando-pi-hole.md)
   * [Instalando Pi-hole en Debian](virtualizacion/pi-hole/instalando-pi-hole-en-debian.md)
-* [RDP](virtualizacion/rdp.md)
-* [RDP](virtualizacion/rdp-1.md)
+  * [RDP](virtualizacion/pi-hole/rdp/README.md)
+    * [RDP - Docker](virtualizacion/pi-hole/rdp/rdp-docker.md)
 
 ## 🦉 Misceláneas
 
@@ -145,7 +146,6 @@
 * [Comandos de Linux](miscelaneas/comandos-de-linux.md)
 * [Anaconda & Spyder](miscelaneas/anaconda-and-spyder.md)
 * [CGI - NGINX](miscelaneas/cgi-nginx.md)
-* [Raid](miscelaneas/raid.md)
 * [Arduino](miscelaneas/arduino/README.md)
   * [Capítulo 0 Blink](miscelaneas/arduino/capitulo-0-blink.md)
   * [Capítulo 1 Led](miscelaneas/arduino/capitulo-1-led.md)

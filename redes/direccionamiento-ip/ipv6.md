@@ -56,11 +56,30 @@ Las direcciones IPv6:
 
 ## Sistema hexadecimal
 
-#### &#x20;
+La siguiente tabla muestra las conversiones entre HEX, BIN y DEC.
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (3).png" alt=""><figcaption><p>Sistema hexadecimal</p></figcaption></figure>
+| HEX | DEC | BIN  |
+| --- | --- | ---- |
+| 0   | 0   | 0000 |
+| 1   | 1   | 0001 |
+| 2   | 2   | 0010 |
+| 3   | 3   | 0011 |
+| 4   | 4   | 0100 |
+| 5   | 5   | 0101 |
+| 6   | 6   | 0110 |
+| 7   | 7   | 0111 |
+| 8   | 8   | 1000 |
+| 9   | 9   | 1001 |
+| A   | 10  | 1010 |
+| B   | 11  | 1011 |
+| C   | 12  | 1100 |
+| D   | 13  | 1101 |
+| E   | 14  | 1110 |
+| F   | 15  | 1111 |
 
 ## Cambios relevantes en IPv6
+
+
 
 Existen tres tipos de direcciones IPv6:
 
@@ -74,7 +93,11 @@ Existen tres tipos de direcciones IPv6:
 
 ### UNICAST
 
-Identifican de forma exclusiva una interfaz en un dispositivo con IPv6 habilitado.
+Las direcciones IPv6 unicast identifican de manera exclusiva una interfaz en un dispositivo que tiene habilitado  IPv6.&#x20;
+
+* Cuando un paquete se envía a una dirección unicast, éste es recibido por la interfaz que tiene asignada esa dirección.&#x20;
+* Al igual que IPv4, las direcciones IPv6 de origen deben ser direcciones `unicast`, sin embargo, las direcciones IPv6 de destino pueden ser direcciones `unicast` o `multicast`.
+* Identifican de forma exclusiva una interfaz en un dispositivo con IPv6 habilitado.
 
 Un paquete que se envía a una dirección `UNICAST` es recibido por la interfaz que tiene asignada esa dirección
 
@@ -95,8 +118,8 @@ Un paquete que se envía a una dirección `UNICAST` es recibido por la interfaz 
 #### Link-local
 
 * Utilizada para comunicarse con los otros dispositivos en el mismo enlace local.
-* Limitada a un único enlace: no se puede enrutar más allá del enlace
-* Una dirección IPv6 link-local permite que un dispositivo se comunique con otros dispositivos con IPv6 habilitado en el mismo enlace y solo en ese enlace (subred).
+* Limitada a un único enlace o subred: no se puede enrutar más allá del segmento de red al que pertenece.
+* Una dirección IPv6 link-local permite que un dispositivo se comunique con otros dispositivos con IPv6 habilitado en la misma subr y solo en ese enlace (subred).
 * Los paquetes con una dirección link-local de origen o de destino no se pueden enrutar más allá del enlace en el cual se originó el paquete.
 * La dirección unicast global no es un requisito, pero toda interfaz de red con IPv6 habilitado si debe tener una dirección link-local.
 * Si no se configura una dirección link-local de forma manual, se crea automáticamente su propia dirección sin comunicarse con un servidor de DHCP.

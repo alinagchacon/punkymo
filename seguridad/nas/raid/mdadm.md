@@ -1,8 +1,8 @@
 ---
-description: mdadm
+description: raid
 ---
 
-# Raid
+# mdadm
 
 MDADM
 
@@ -29,7 +29,7 @@ sudo lsblk
 
 Este comando muestra información de todos los dispositivos de bloques disponibles en el sistema, como discos duros, particiones y unidades de almacenamiento. Por tanto, nos debe mostrar algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (387).png" alt="" width="322"><figcaption><p>Comprobando información de dispositivos</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (387).png" alt="" width="322"><figcaption><p>Comprobando información de dispositivos</p></figcaption></figure>
 
 
 
@@ -60,7 +60,7 @@ sudo mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/
 
 Con este comando, el nuevo array se denomina `/dev/md0` y utiliza `/dev/sdb` y `/dev/sdc` para crear el RAID1. El dispositivo `/dev/sdd` se utiliza automáticamente como reserva para recuperarse del fallo de cualquier dispositivo activo.
 
-<figure><img src="../.gitbook/assets/image (388).png" alt="" width="375"><figcaption><p>Creación del raid1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (388).png" alt="" width="375"><figcaption><p>Creación del raid1</p></figcaption></figure>
 
 #### Comprobando
 
@@ -72,7 +72,7 @@ mdadm --detail /dev/md0
 
 Y nos mostrará algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (389).png" alt="" width="375"><figcaption><p>Verificando el raid1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (389).png" alt="" width="375"><figcaption><p>Verificando el raid1</p></figcaption></figure>
 
 ### Creando un sistema de archivos
 
@@ -93,7 +93,7 @@ Si queremos conocer el uso del disco del sistema de archivos podemos utilizar el
 
 y nos mostrará el espacio en disco que está ocupando nuestro raid1.
 
-<figure><img src="../.gitbook/assets/image (390).png" alt="" width="375"><figcaption><p>df -h</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (390).png" alt="" width="375"><figcaption><p>df -h</p></figcaption></figure>
 
 Ahora agregamos una entrada a _/etc/fstab_ y hacemos que el punto de montaje sea persistente tras los reinicios.
 
