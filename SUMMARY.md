@@ -98,13 +98,13 @@
   * [Truenas](seguridad/nas/truenas/README.md)
     * [Rsync en Truenas](seguridad/nas/truenas/rsync-en-truenas.md)
   * [OpenmediaVault](seguridad/nas/openmediavault.md)
-  * [RAID](seguridad/nas/raid/README.md)
-    * [mdadm](seguridad/nas/raid/mdadm.md)
 * [Backups](seguridad/backups/README.md)
   * [Rsync](seguridad/backups/rsync/README.md)
     * [Ejemplo de rsync](seguridad/backups/rsync/ejemplo-de-rsync.md)
 * [¿Qué son las ACL?](seguridad/que-son-las-acl.md)
 * [SOPS/AGE](seguridad/sops-age.md)
+* [RAID](seguridad/raid/README.md)
+  * [mdadm](seguridad/raid/mdadm.md)
 
 ## 🐳 Virtualización
 
