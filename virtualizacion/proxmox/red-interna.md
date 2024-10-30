@@ -12,9 +12,7 @@ He estado testeando Proxmox en diferentes condiciones pero siempre con las míni
 
 Se trata de utilizar una única interfaz de red para tener acceso a Internet y una red interna para varias VM en Proxmox. Para ello, estuve  siguiendo la guía de Proxmox en:&#x20;
 
-{% embed url="https://pve.proxmox.com/wiki/Network_Configuration" %}
-Wiki de Proxmox
-{% endembed %}
+[https://pve.proxmox.com/wiki/Network\_Configuration](https://pve.proxmox.com/wiki/Network\_Configuration)
 
 En esta guía que os recomiendo, una de las opciones es el enmascaramiento `NAT` con `IPTABLES`. Este enmascaramiento nos permite el acceso a la red utilizando la dirección IP del host para el tráfico saliente, teniendo una dirección IP privada, como es el caso.
 
