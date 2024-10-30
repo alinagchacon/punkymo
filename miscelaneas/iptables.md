@@ -29,15 +29,29 @@ Las acciones que se pueden aplicar a los paquetes son:
 * **DNAT**: Destination NAT, modifica la dirección IP de destino del paquete.
 * **LOG**: Registra los paquetes que coinciden con la regla.
 
+### Algunas de las opciones de iptables habituales
+
+* **-A** —append: Añade una regla a una cadena (al final).
+* **-C** —check : Busca una regla que coincida con los requerimientos de la cadena.
+* **-D** —delete: Borra las reglas especificadas de una cadena.
+* **-F** —flush: Elimina todas las reglas.
+* **-I** —insert: Añade una regla a una cadena en una posición dada.
+* **-L** —list : Muestra todas las reglas de una cadena.
+* **-N** -new-chain: Crea una nueva cadena.
+* **-v** —verbose: Muestra más información cuando se usa una opción de lista.
+* **-X** —delete-chain: Elimina la cadena proporcionada.
+
 **Ejemplos**:
 
-Supongamos que queremos agregar una regla que permita todo el tráfico SSH entrante:
+(1) Supongamos que queremos agregar una regla que <mark style="color:purple;">**permita todo el tráfico SSH entrante**</mark>:
 
 ```bash
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 ```
 
-Supongamos que queremos bloquear todo el tráfico HTTP saliente:
+
+
+(2) Supongamos que queremos <mark style="color:purple;">**bloquear todo el tráfico HTTP saliente**</mark>:
 
 ```bash
 iptables -A OUTPUT -p tcp --dport 80 -j DROP
@@ -51,7 +65,64 @@ Cuando en el sistema se recibe o se envía un paquete, se recorren todas las  re
 
 
 
+(3) Supongamos que queremos <mark style="color:purple;">**autorizar el tráfico de localhost**</mark> de modo que todo lo que venga de su sistema  pase a través del firewall (iptables). O sea, configurar el firewall de modo que acepte el tráfico para la interfaz localhost (lo) (-i). Algo necesario si se quiere para que las aplicaciones puedan comunicarse con la interfaz localhost.
+
+```
+sudo iptables -A INPUT -i lo -j ACCEPT
+```
+
+
+
+(4) Para <mark style="color:purple;">**autorizar el tráfico web HTTP**</mark>, introduzca el siguiente comando:
+
+```bash
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+```
+
+
+
+(5)  Para <mark style="color:purple;">**autorizar el tráfico de internet HTTPS**</mark>, introduzca el siguiente comando:
+
+```bash
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+```
+
+
+
+(6) Un método para eliminar el **número de línea de una regla**.
+
+```bash
+sudo iptables -P INPUT DROP 
+```
+
+Enumeramos todas las reglas:
+
+```bash
+sudo iptables -L --line-numbers
+```
+
+<figure><img src="../.gitbook/assets/image (393).png" alt=""><figcaption><p>enumerando las reglas de iptables</p></figcaption></figure>
+
+```
+sudo iptables -t nat -L --line-numbers
+```
+
+<figure><img src="../.gitbook/assets/image (392).png" alt=""><figcaption><p>Enumerando las reglas de iptables</p></figcaption></figure>
+
+Buscamos la línea de la regla de iptables que necesitamos eliminar y ejecutamos el siguiente comando:
+
+```bash
+sudo iptables -D INPUT <Number>
+```
+
+<mark style="color:red;">En el siguiente pdf te dejo una ayuda escrita por Leo, Bea y Monti.</mark>  <mark style="color:red;">Gracias chic@s!</mark>
+
+{% file src="../.gitbook/assets/REENVIOS DE PUERTOS_TAS_M.MOUTOUTO_L.DUARTE_BSUAREZ.pdf" %}
+Una ayuda para todos de Leo, Bea y Monti
+{% endfile %}
+
 ## Links
 
 * [https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb\_article\_view\&sysparm\_article=KB0043439](https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb\_article\_view\&sysparm\_article=KB0043439)
+*
 

@@ -279,6 +279,8 @@ Debes permitir el reenvío de paquetes desde la red externa a la interna. Añade
 sudo iptables -A FORWARD -p tcp -d 10.10.10.16 --dport 80 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
 ```
 
+<figure><img src="../../.gitbook/assets/image (391).png" alt=""><figcaption><p>Tengo reglas repetidas, no debería ser así</p></figcaption></figure>
+
 #### Guardamos las reglas
 
 Para asegurarte de que las reglas de `iptables` persisten tras un reinicio, debes guardarlas. Dependiendo de la distribución de Linux, puedes usar:
