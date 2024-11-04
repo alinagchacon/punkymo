@@ -117,7 +117,7 @@ Todo el trabajo de redirigir el tráfico de datos lo tiene que hacer la VM que h
 
 **VM router** - Lo primero es configurar la IP estática para la nueva interfaz de red que le hemos habilitado: en este caso es la **ens19** y le asignamos la IP 10.10.10.1/24.
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt="" width="485"><figcaption><p>Configuración de la red para la VM router en la interfaz de red ens19 conectada al vmbr1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt="" width="485"><figcaption><p>Configuración de la red para la VM router en la interfaz de red ens19 conectada al vmbr1</p></figcaption></figure>
 
 Todavía con esto no podemos hacer que el cliente tenga conexión a Internet.
 
@@ -131,7 +131,7 @@ Lo primero será habilitar el IP forwarding y para ello nos vamos a editar el ar
 nano /etc/sysctl.conf 
 ```
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>/etc/sysctl.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>/etc/sysctl.conf</p></figcaption></figure>
 
 La herramienta que nos hará el trabajo final será precisamente el `IPTABLES`. Para ello, tendremos que instalarla primero:
 
@@ -181,7 +181,7 @@ ping google.com
 ping amazon.es
 ```
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Ping desde la Vm cliente a google.com en Internet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>Ping desde la Vm cliente a google.com en Internet</p></figcaption></figure>
 
 Como se puede ver ya tenemos salida desde el equipo cliente hacia Internet a través de la VM router.
 

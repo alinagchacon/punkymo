@@ -214,7 +214,7 @@ Este mecanismo de solución de direcciones se conoce como Neighbor Discovery Pro
 
 ### &#x20;Resumido
 
-<figure><img src="../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Algunos detalles&#x20;
 
@@ -288,7 +288,7 @@ Existen dos reglas básicas para comprimir las direcciones IPv6 y hacerlas más 
 
 
 
-<figure><img src="../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Omitiendo los segmentos que son ceros (0)
 

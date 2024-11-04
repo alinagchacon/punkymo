@@ -147,7 +147,7 @@ Listo, ya tenemos configurado el servidor DNS. Solo nos queda <mark style="color
 
 Si no las hecho antes, **edita la configuración de red** del servidor de Ubuntu  para indicar que él mismo es el servidor DNS que tendrá que consultar para la resolución de nombres. Y esto lo tenemos que hacer con **netplan**.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt="" width="532"><figcaption><p>Configuración de la red con nNetplan</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt="" width="532"><figcaption><p>Configuración de la red con nNetplan</p></figcaption></figure>
 
 Para que tome los cambios, hacemos:
 
@@ -198,7 +198,7 @@ cat /etc/resolv.conf
 
 Si vuelves a probar el nslookup veremos que funciona como se espera que haga:
 
-<figure><img src="../../.gitbook/assets/image (13) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Links
 

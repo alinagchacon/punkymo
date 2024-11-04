@@ -131,7 +131,7 @@ Ya aislada en otra zona la red de administración, ahora debemos de denegar el a
 
 Para ello debemos acceder a la configuración de la zona a la que pertenecen, en el caso del Port B será la zona LAN y en el Port C será la DMZ.
 
-<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Desactivación servicio administración</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption><p>Desactivación servicio administración</p></figcaption></figure>
 
 ## Configuración DHCP, DNS y certificado SSL <a href="#toc159426314" id="toc159426314"></a>
 

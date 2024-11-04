@@ -35,7 +35,7 @@ En el caso de la WAN sería permitiendo el tráfico con destino a la DMZ por el 
 
 En el caso de la  DMZ sería permitiendo el tráfico con origen en la DMZ y hacia cualquier red por el puerto 53.
 
-<figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption><p>Regla para la interfaz DMZ para permitir el tráfico de DNS a través del puerto 53</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1) (1).png" alt=""><figcaption><p>Regla para la interfaz DMZ para permitir el tráfico de DNS a través del puerto 53</p></figcaption></figure>
 
 
 

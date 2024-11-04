@@ -245,7 +245,7 @@ Si escribimos `show interfaces trunk` en el mismo switch, veremos:
 
 Para acabar de comprobar la conexión entre las 4 vlans podemos hacer ping de una a otra. Por ejemplo, la imagen siguiente muestra un ping que se ha hecho desde el PC de la VLAN 300 (blau) al servidor externo que tiene la IP 8.8.8.8.
 
-<figure><img src="../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption><p>Haciendo ping al servidor externo a la red que tiene IP 8.8.8.8</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption><p>Haciendo ping al servidor externo a la red que tiene IP 8.8.8.8</p></figcaption></figure>
 
 El servidor se configura de manera simple:
 
@@ -295,7 +295,7 @@ Router(config)#end
 
 Si hacemos `show running-config` vemos algo como lo siguiente. Solo tenemos que tener en cuenta que el pantallazo a continuación lo hice con otro ejemplo y por eso el servidor DNS es el 11.11.11.11 y no el 8.8.8.8.
 
-<figure><img src="../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption><p>Pool de DHCP en el Router</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption><p>Pool de DHCP en el Router</p></figcaption></figure>
 
 Para ir poco a poco con la configuración, lo ideal es ir creando cada pool en el Router y probando que el PC de cada VLAN toma los parámetros de red otorgados por el Router hasta tenerlo todo completado.
 

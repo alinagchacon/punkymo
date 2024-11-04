@@ -60,7 +60,7 @@ Después nos aparecerá un mensaje sobre los Términos de Licencia del firewall,
 
 Una vez lo aceptamos nos aparecerá la pantalla principal del Firewall. Debe ser como la siguiente:
 
-<figure><img src="../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png" alt=""><figcaption><p>Pantalla principal de Sophos</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Pantalla principal de Sophos</p></figcaption></figure>
 
 Desde la propia interfaz de Sophos no realizaremos ninguna configuración, esta se hace desde el navegador.
 

@@ -8,7 +8,7 @@ description: VLAN con Switch de capa 3
 
 Vamos a realizar la siguiente configuración de VLAN en Cisco Packet Tracer donde se quiere representar 3 VLAN que tengan comunicación entre sí y con un servidor externo  a la red. Además, vamos a configurar el router R0 como servidor de DHCP y DNS para las tres VLAN.
 
-<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>Configurando VLAN</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption><p>Configurando VLAN</p></figcaption></figure>
 
 ### (1) Pensar y organizar lo que se tiene que hacer
 

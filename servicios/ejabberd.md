@@ -48,7 +48,7 @@ nano /opt/ejabberd/conf/ejabberd.yml
 
 Añadimos el dominio del servidor al `host,` en mi caso `haven.haven.local`.
 
-<figure><img src="../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption><p>Cambiar el host al dominio del servidor</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1) (1) (1) (1).png" alt=""><figcaption><p>Cambiar el host al dominio del servidor</p></figcaption></figure>
 
 Buscamos el apartado `trusted_network` y lo ponemos en `all`, esto es:
 
@@ -126,7 +126,7 @@ sudo apt install pidgin
 
 Editamos el archivo /etc/hosts de la VM cliente y escribimos la IP del servidor apuntando al dominio en cuestión:
 
-<figure><img src="../.gitbook/assets/image (9) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo /etc/hosts en el equipo cliente</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo /etc/hosts en el equipo cliente</p></figcaption></figure>
 
 Ahora accedemos a Pidgin y añadimos uno de los usuarios que hemos creado en ejabberd.
 

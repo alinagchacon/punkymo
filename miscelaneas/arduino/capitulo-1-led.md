@@ -40,7 +40,7 @@ La resistencia utiliza ohmios (Ω) como unidad de medida de su resistencia ®, d
 
 1kΩ = 1000Ω
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png" alt="" width="45"><figcaption><p>Resistencia </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="45"><figcaption><p>Resistencia </p></figcaption></figure>
 
 
 
@@ -82,11 +82,11 @@ Vamos a construir nuestro circuito según se muestra en el diagrama. Solo despu�
 \
 
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Circuito</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Circuito</p></figcaption></figure>
 
 O de otra manera:
 
-<figure><img src="../../.gitbook/assets/image (11) (1) (1) (1).png" alt=""><figcaption><p>Circuito</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1) (1) (1) (1).png" alt=""><figcaption><p>Circuito</p></figcaption></figure>
 
 Según el circuito, si el nivel de salida `GPIO2` del `ESP32-S3 WROOM` es alto, el `LED` se enciende y cuando el nivel de salida es bajo, el `LED` se apaga. Por lo tanto, podemos dejar que el `GPIO2` emita circularmente niveles altos y bajos para hacer que el `LED` parpadee.
 
@@ -99,7 +99,7 @@ Freenove_Ultimate_Starter_Kit_for_ESP32_S3\Sketches\Sketch_01.1_Blink
 Observa en el menú los items siguientes: Board, Port y Upload Speed\
 
 
-<figure><img src="../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Recuerda que el chip que tenemos que utilizar es el llamado: `ESP32 Wrover Module`
 

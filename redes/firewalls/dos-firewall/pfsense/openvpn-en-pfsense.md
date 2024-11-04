@@ -102,13 +102,13 @@ Ahora vamos a configurar el `servidor` `OpenVPN` a donde se van a conectar los c
 * Seleccionamos la opción de `Verbosity level: 3 (recommended)`.&#x20;
 * Guardamos y listo!
 
-<figure><img src="../../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>OpenVPN certificate</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>OpenVPN certificate</p></figcaption></figure>
 
 ### Comprobar el servicio
 
 Nos dirigimos a `Status - Service` y podemos comprobar los servicios activos y recién habilitados.
 
-<figure><img src="../../../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Status - Service</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Status - Service</p></figcaption></figure>
 
 ### Configurar las reglas en el firewall para permitir acceso&#x20;
 
@@ -118,7 +118,7 @@ Ahora nos toca crear una regla en la WAN que nos permita el acceso a través del
 
 Para ello, clicamos en `Firewall - Rules - WAN`  y vamos a crear la regla, clicando donde dice `Add rule to the top of the list.`
 
-<figure><img src="../../../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption><p>Crear la regla en firewall - rules - WAN</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (11) (1) (1) (1).png" alt=""><figcaption><p>Crear la regla en firewall - rules - WAN</p></figcaption></figure>
 
 Seleccionamos las opciones siguientes, para una configuración básica:
 
@@ -137,7 +137,7 @@ Seleccionamos las opciones siguientes, para una configuración básica:
 
 Una vez realizados los cambios, guardamos y se nos muestra como sigue:
 
-<figure><img src="../../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Regla en WAN para permitir el tráfico VPN </p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption><p>Regla en WAN para permitir el tráfico VPN </p></figcaption></figure>
 
 #### Regla para permitir todo el tráfico VPN
 

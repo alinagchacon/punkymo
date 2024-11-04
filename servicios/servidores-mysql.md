@@ -1,4 +1,8 @@
-# MySQL
+---
+description: Instalación de MySQL
+---
+
+# Servidores MySQL
 
 MySQL es el sistema de gestión de bases de datos relacional de código abierto y el más extendido que se tiene actualmente. Fue inicialmente desarrollado por MySQL AB, más tarde adquirida por Sun MicroSystems y finalmente comprada por Oracle Corporation, que ya tenía un motor propio InnoDB para MySQL.\
 
@@ -65,29 +69,29 @@ Ejecutando este  comando seremos guiados a través del proceso que brindará seg
 
        1. El nivel más alto de validación de la contraseña se consigue seleccionando la opción `2`, que se corresponde con una contraseña de al menos 8 caracteres: incluyendo una combinación de mayúsculas, minúsculas, números y caracteres especiales
 
-       <figure><img src="../.gitbook/assets/image.png" alt="" width="563"><figcaption><p>Iniciando el proceso de configuración con seguridad</p></figcaption></figure>
+       <figure><img src="../.gitbook/assets/image (5).png" alt="" width="563"><figcaption><p>Iniciando el proceso de configuración con seguridad</p></figcaption></figure>
 
 El siguiente paso nos pide que seleccionemos el nivel de seguridad en la contraseña:
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>Podemos seleccionar diferentes niveles de seguridad en la contraseña</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt="" width="563"><figcaption><p>Podemos seleccionar diferentes niveles de seguridad en la contraseña</p></figcaption></figure>
 
 Por defecto, la instalación de MySQL proporciona un usuario "anónimo" que no debemos permitir en entornos de producción (como puede ser el proyecto de síntesis):
 
-<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>Eliminar el usuario anónimo</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt="" width="563"><figcaption><p>Eliminar el usuario anónimo</p></figcaption></figure>
 
 El siguiente paso nos pregunta por el tipo de acceso que le daremos al usuario root, dado que éste solo debe poder conectarse desde "localhost" para evitar que nadie pueda "pillar" la contraseña de root por la red:
 
-<figure><img src="../.gitbook/assets/image (3).png" alt="" width="563"><figcaption><p>Impedir que el usuario root pueda conectarse remotamente</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt="" width="563"><figcaption><p>Impedir que el usuario root pueda conectarse remotamente</p></figcaption></figure>
 
 
 
 Podemos eliminar la DB test que también debe eliminarse si estamos configurando un entorno de producción:
 
-<figure><img src="../.gitbook/assets/image (4).png" alt="" width="563"><figcaption><p>Eliminando o no la DB test</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt="" width="563"><figcaption><p>Eliminando o no la DB test</p></figcaption></figure>
 
 Y el último paso
 
-<figure><img src="../.gitbook/assets/image (5).png" alt="" width="563"><figcaption><p>Recargando los privilegios</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt="" width="563"><figcaption><p>Recargando los privilegios</p></figcaption></figure>
 
 Tanto si hemos realizado estos pasos como si no, lo cierto es que todavía no le hemos otorgado una contraseña a nuestro usuario "root".
 
@@ -137,7 +141,7 @@ mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
 
 Con este último comando nos debe mostrar algo como lo siguiente, donde podemos ver que los usuarios que trae por defecto tienen establecida su contraseña con el complemento: caching\_sha2\_password y el root con mysql\_native\_password:
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Comprobando los métodos de autenticación empleados por cada  usuario </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>Comprobando los métodos de autenticación empleados por cada  usuario </p></figcaption></figure>
 
 ## Crear un usuario nuevo
 
@@ -165,5 +169,31 @@ sudo mysqladmin -p -u root version
 
 Y nos mostrará el siguiente pantallazo:
 
-<figure><img src="../.gitbook/assets/image (7).png" alt="" width="563"><figcaption><p>Pantallazo de información con la herramienta mysqladmin</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt="" width="563"><figcaption><p>Pantallazo de información con la herramienta mysqladmin</p></figcaption></figure>
+
+
+
+## Importar una DB
+
+Dado que estoy trabajando en el equipo Cliente que es un servidor Ubuntu 20.04 y teniendo el servicio SSH habilitado he utilizado el comando SCP para enviar el fichero desde mi equipo anfitrión. Por supuesto, he tenido que crear un reenvío de puertos porque tengo Proxmox en una VM conectada a la red: NAT.&#x20;
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Reenví ode puerto en Proxmox</p></figcaption></figure>
+
+Para enviar el archivo de la DB:
+
+```
+scp -C -P 8080 users.sql kirby@192.168.1.13:/home/kirby/ 
+```
+
+Ahora tenemos que crear una DB con el mismo nombre de la DB que queremos importar. Para ello:
+
+```
+mysql> create database users;
+```
+
+Y ya podremos importar el archivo .sql en la DB
+
+```
+mysql -u usuario -p nombre_basededatos < data.sql
+```
 
