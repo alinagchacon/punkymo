@@ -25,9 +25,145 @@ MySQL es muy utilizado en entornos de desarrollo como es el caso de la llamada p
 
 
 
-## Instalación
+## Características del entorno de instalación
 
 Para instalar MySQL voy a utilizar una VM con Ubuntu Server 20.04.6 (Focal). De hecho, la VM que tengo  como cliente dentro de la VM de Proxmox.
 
 <figure><img src="../.gitbook/assets/image (394).png" alt="" width="563"><figcaption><p>La instalación de MySQL se hará sobre la VM Cliente con IP 10.10.10.2/24</p></figcaption></figure>
+
+
+
+{% hint style="info" %}
+Puedes obtener más información de las características del entorno de trabajo accediendo al apartado de Proxmox > [red Interna](../virtualizacion/proxmox/red-interna.md).
+{% endhint %}
+
+## Instalación
+
+Actualizamos el sistema:
+
+```
+sudo apt update
+supo apt upgrade
+```
+
+instalamos el servicio de MySQL:
+
+```
+sudo apt install mysql-server
+```
+
+Ejecutamos ahora la secuencia de comandos de seguridad:
+
+```
+sudo mysql_secure_installation
+```
+
+Ejecutando este  comando seremos guiados a través del proceso que brindará seguridad en la instalación de MySQL.&#x20;
+
+1. Nos pregunta si queremos configurar el complemento de validación de la contraseña, que puede usar para probar la seguridad de la contraseña de MySQL.
+   1.  Si decidimos que si, entonces  nos solicitará elegir un nivel de validación de contraseña.&#x20;
+
+       1. El nivel más alto de validación de la contraseña se consigue seleccionando la opción `2`, que se corresponde con una contraseña de al menos 8 caracteres: incluyendo una combinación de mayúsculas, minúsculas, números y caracteres especiales
+
+       <figure><img src="../.gitbook/assets/image.png" alt="" width="563"><figcaption><p>Iniciando el proceso de configuración con seguridad</p></figcaption></figure>
+
+El siguiente paso nos pide que seleccionemos el nivel de seguridad en la contraseña:
+
+<figure><img src="../.gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>Podemos seleccionar diferentes niveles de seguridad en la contraseña</p></figcaption></figure>
+
+Por defecto, la instalación de MySQL proporciona un usuario "anónimo" que no debemos permitir en entornos de producción (como puede ser el proyecto de síntesis):
+
+<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>Eliminar el usuario anónimo</p></figcaption></figure>
+
+El siguiente paso nos pregunta por el tipo de acceso que le daremos al usuario root, dado que éste solo debe poder conectarse desde "localhost" para evitar que nadie pueda "pillar" la contraseña de root por la red:
+
+<figure><img src="../.gitbook/assets/image (3).png" alt="" width="563"><figcaption><p>Impedir que el usuario root pueda conectarse remotamente</p></figcaption></figure>
+
+
+
+Podemos eliminar la DB test que también debe eliminarse si estamos configurando un entorno de producción:
+
+<figure><img src="../.gitbook/assets/image (4).png" alt="" width="563"><figcaption><p>Eliminando o no la DB test</p></figcaption></figure>
+
+Y el último paso
+
+<figure><img src="../.gitbook/assets/image (5).png" alt="" width="563"><figcaption><p>Recargando los privilegios</p></figcaption></figure>
+
+Tanto si hemos realizado estos pasos como si no, lo cierto es que todavía no le hemos otorgado una contraseña a nuestro usuario "root".
+
+### Establecer la contraseña para el usuario "root"
+
+Para establecer una contraseña para el usuario root debemos acceder primero a MySQL:
+
+```
+sudo mysql
+```
+
+Podemos usar `ALTER USER` para configurar la contraseña del usuario 'root':
+
+Con  `ALTER USER` podemos establecer la contraseña para el **root** de MySQL y que pueda autenticarse con el complemento `caching_sha2_password`.&#x20;
+
+Este complemento es el preferido de MySQL ([Documentación oficial de MySQL](https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password)) para  la autenticación dado que proporciona un cifrado más seguro a la contraseña. Sin embargo, aplicaciones de PHP, como es el caso de phpMyAdmin, no funcionan de forma fiable con `caching_sha2_password`.&#x20;
+
+Por tanto, como la idea es usar MySQL con PHP, tendremos que establecer  la contraseña del usuario **root** con `mysql_native_password` ([Documentación oficial de MySQL](https://dev.mysql.com/doc/refman/8.4/en/native-pluggable-authentication.html)).
+
+```
+ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+
+### Actualizar los privilegios
+
+Una vez que hemos creado o modificado la contraseña, nos tenemos que asegurar de actualizar los privilegios para que los cambios surtan efecto:
+
+```sql
+mysql> FLUSH PRIVILEGES;
+```
+
+### Salir de MySQL
+
+Para salir de MySQL usamos el siguiente comando:
+
+```bash
+mysql> exit;
+```
+
+Podemos volver a acceder a MySQL haciendo:
+
+```
+mysql -u root -p
+mysql> show databases;
+mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
+```
+
+Con este último comando nos debe mostrar algo como lo siguiente, donde podemos ver que los usuarios que trae por defecto tienen establecida su contraseña con el complemento: caching\_sha2\_password y el root con mysql\_native\_password:
+
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Comprobando los métodos de autenticación empleados por cada  usuario </p></figcaption></figure>
+
+## Crear un usuario nuevo
+
+Ahora vamos a crear un usuario 'kirby' con una contraseña segura:
+
+```
+mysql> CREATE USER 'kirby'@'localhost' IDENTIFIED BY 'my_password';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'kirby'@'localhost' WITH GRANT OPTION;
+mysql> EXIT;
+```
+
+### Comprobaciones
+
+Comprobemos que todo esté correcto. Para ello podemos hacer:&#x20;
+
+```
+systemctl status mysql.service
+```
+
+Otro tipo de comprobación adicional sería establecer conexión con la base de datos usando la herramienta `mysqladmin`, que es un cliente que le permite ejecutar comandos administrativos.&#x20;
+
+```
+sudo mysqladmin -p -u root version
+```
+
+Y nos mostrará el siguiente pantallazo:
+
+<figure><img src="../.gitbook/assets/image (7).png" alt="" width="563"><figcaption><p>Pantallazo de información con la herramienta mysqladmin</p></figcaption></figure>
 

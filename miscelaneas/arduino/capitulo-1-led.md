@@ -14,11 +14,11 @@ Es un tipo de diodo. Los diodos tienen dos polos y funcionan si la corriente flu
 
 Los diodos funcionan sólo si el voltaje de su electrodo (+) es mayor que el de su electrodo (-). Por otra parte, hay un rango estrecho de voltaje de funcionamiento para la mayoría de los diodos comunes de 1.9 y 3.4V, por lo que si utilizas mucho más de 3.3V, el LED se va a dañar y se quemará.
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="89"><figcaption><p>Diodo</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="89"><figcaption><p>Diodo</p></figcaption></figure>
 
 El símbolo correspondiente a un diodo es:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="87"><figcaption><p>Simbolo del diodo</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="87"><figcaption><p>Simbolo del diodo</p></figcaption></figure>
 
 La correspondencia de voltaje y amperaje para cada LED o diodo, sería:
 

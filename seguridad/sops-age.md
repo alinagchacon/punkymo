@@ -185,7 +185,7 @@ Con esta línea de comando le estamos diciendo que cifre el archivo `midocker.ym
 
 Si ahora volvemos a probar a mirar dentro del fichero `midocker.yml` veremos algo como lo siguiente:&#x20;
 
-<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo midocker.yml cifrado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo midocker.yml cifrado</p></figcaption></figure>
 
 Igual que en el primer ejemplo, para descifrar el archivo volvemos a usar el mismo comando con la opción --decrypt y podremos volver a visualizar todo el contenido del archivo.
 
@@ -258,7 +258,7 @@ sops --encrypt --age $(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)") --
 
 Si visualizamos el contenido se vería algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>Archivo yml parcialmente cifrado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo yml parcialmente cifrado</p></figcaption></figure>
 
 Ahora volvemos a descifrar el archivo con el mismo comando pero esta vez con la opcion --decrypt:
 

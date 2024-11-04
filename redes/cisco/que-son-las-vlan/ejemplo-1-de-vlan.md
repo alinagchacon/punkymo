@@ -233,15 +233,15 @@ SW-2#show running-config
 
 Por ejemplo, si vamos al router y hacemos `show running-config` veremos:
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>COnfiguración en el router</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption><p>COnfiguración en el router</p></figcaption></figure>
 
 Si ponemos el comando `show vlan brief` en el swich SW-1 veremos algo como lo siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>Configuración de VLAN en un switch</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>Configuración de VLAN en un switch</p></figcaption></figure>
 
 Si escribimos `show interfaces trunk` en el mismo switch, veremos:
 
-<figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>Configuración del enlace troncal en un switch</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption><p>Configuración del enlace troncal en un switch</p></figcaption></figure>
 
 Para acabar de comprobar la conexión entre las 4 vlans podemos hacer ping de una a otra. Por ejemplo, la imagen siguiente muestra un ping que se ha hecho desde el PC de la VLAN 300 (blau) al servidor externo que tiene la IP 8.8.8.8.
 

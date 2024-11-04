@@ -69,19 +69,19 @@ Nota: El nombre de usuario y contraseña son: **abc/abc.**
 
 Podemos comprobar que se nos ha creado el contenedor rdesktop y que está en ejecución.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Contenedor lscr.io/linuxserver/rdesktop:latest</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (9).png" alt=""><figcaption><p>Contenedor lscr.io/linuxserver/rdesktop:latest</p></figcaption></figure>
 
 Ahora necesitamos probar a conectarnos. Para ello necesitamos una aplicación cliente de escritorio remoto. En mi caso utilizaré Remmina porque me quiero conectar desde un PC con Debian. Remmina es una aplicación de código abierto diseñada para brindar acceso remoto a otros equipos y es compatible con protocolos como RDP, VNC, SSH.
 
 Al acceder a la aplicación Remmina, se levanta una pantalla como la siguiente donde ponemos la IP:port por defecto de acceso:&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt="" width="341"><figcaption><p>Remmina</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (7).png" alt="" width="341"><figcaption><p>Remmina</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt="" width="319"><figcaption><p>User: abc | Password: abc</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (6).png" alt="" width="319"><figcaption><p>User: abc | Password: abc</p></figcaption></figure>
 
 Y listo, ya tenemos acceso al contenedor donde tenemos instalado el escritorio remoto.
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt="" width="342"><figcaption><p>El escritorio remoto </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (4).png" alt="" width="342"><figcaption><p>El escritorio remoto </p></figcaption></figure>
 
 <mark style="color:red;">To be continued ...</mark>
 

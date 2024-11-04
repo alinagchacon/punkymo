@@ -23,7 +23,7 @@ Para acceder a Internet necesitamos de los protocolos http (80) y https (443) co
 
 Si probamos vemos que es capaz de hacer un ping tanto a una IP de Internet como es el caso de la 1.1.1.1 y a la VM que tenemos conectada a nuestra LAN con la IP 192.168.56.200. Sin embargo, si quisiera conectarme por SSH a la VM de la LAN no podré hacerlo.
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Haciendo pruebas de conexión</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Haciendo pruebas de conexión</p></figcaption></figure>
 
 ### Notas
 
@@ -31,7 +31,7 @@ Adicionalmente creé dos reglas: una regla para la WAN y otra para la DMZ permit
 
 En el caso de la WAN sería permitiendo el tráfico con destino a la DMZ por el puerto 53 de DNS.
 
-<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Regla en la interfaz WAN para permitir el tráfico de DNS a través del puerto 53</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Regla en la interfaz WAN para permitir el tráfico de DNS a través del puerto 53</p></figcaption></figure>
 
 En el caso de la  DMZ sería permitiendo el tráfico con origen en la DMZ y hacia cualquier red por el puerto 53.
 

@@ -24,7 +24,7 @@ Las tres VM  están en adaptador Red NAT. El Ubuntu Server (verde) hace de servi
 
 En la VM con Debian (azul) que tiene IP 192.168.2.110 tenemos un sitio web también configurado con Nginx. De hecho, es una VM utilizada como DMZ mientras hacía pruebas con el firewall pfSense.
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1).png" alt="" width="359"><figcaption><p>La web de prueba en el servidor Debian</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="359"><figcaption><p>La web de prueba en el servidor Debian</p></figcaption></figure>
 
 La tercera VM, el servidor de Debian (lila) la utilizaré solo para acceder a los sitios web de los otros dos servidores.
 

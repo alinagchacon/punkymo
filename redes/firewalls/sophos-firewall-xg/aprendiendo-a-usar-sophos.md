@@ -109,7 +109,7 @@ Primero de todo para tener una mayor facilidad a la hora de aplicar reglas y con
 
 Para crear una zona debemos acceder al apartado de las zonas y hacer clic en Añadir, después debemos asignar el nombre a la zona y de forma opcional una descripción. También debemos asegurarnos de que el tipo de zona a crear es una LAN y no una DMZ. En este caso habilitaremos todos los servicios. Debe quedar de una forma parecida a la _Ilustración x_.
 
-<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Creación de una nueva zona</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>Creación de una nueva zona</p></figcaption></figure>
 
 Después de crear la zona debemos de asignarle a la interfaz de red de administración la nueva zona creada. Para ello nos dirigimos al apartado interfaces y accedemos a la interfaz de red que usaremos para la administración que es el Port A. Ahí debemos abrir el desplegable y seleccionar la nueva zona que hemos creado. En la _ilustración x_ podemos ver cómo debe quedar.
 
@@ -117,7 +117,7 @@ Después de crear la zona debemos de asignarle a la interfaz de red de administr
 \
 
 
-<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Configuración de nueva Port A</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>Configuración de nueva Port A</p></figcaption></figure>
 
 
 

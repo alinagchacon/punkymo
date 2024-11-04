@@ -66,7 +66,7 @@ pip install pyserial
 \
 Así que toca revisar desde el inicio la instalación de la ESP32-S3, pero no encuentro nada diferente a lo que dice el material de referencia así que en lugar de seleccionar el chip `ESP32S3`- selecciono este otro `ESP32 Wrover Kit (all versions)`:
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Y voilà esta vez todo funcionó bien: compila bien y veo que parpadea el led azul y esto es todo por ahora!
 

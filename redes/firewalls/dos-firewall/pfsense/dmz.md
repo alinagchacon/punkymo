@@ -35,11 +35,11 @@ En mi caso, queda algo como lo siguiente:
 
 En mi pfSense se puede ver de la siguiente manera:
 
-<figure><img src="../../../../.gitbook/assets/image (8) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración del pfSense</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración del pfSense</p></figcaption></figure>
 
 En el diagrama de la red se muestran las dos VM conectadas a la DMZ, así como los servidores y el servicio que van a brindar: HTTP y SSH.
 
-<figure><img src="../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
 
 ### La interfaz de red de la DMZ
 
@@ -122,7 +122,7 @@ Volvemos a Firewall - `NAT - Port Forward` y clicamos en el botón de añadir un
 
 Una vez guardados los cambios, se nos visualizará junto a la primera regla NAT que hemos creado para el protocolo HTTP:
 
-<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Reglas NAT para HTTP y SSH </p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Reglas NAT para HTTP y SSH </p></figcaption></figure>
 
 ### Comprobando el servicio de SSH
 

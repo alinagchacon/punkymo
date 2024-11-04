@@ -108,11 +108,11 @@ Nos saldrá una ventana donde nos pide el `usuario` y `contraseña` para acceder
 
 Si clicamos en `Dominios Virtuales` vemos el dominio que hemos creado:
 
-<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Dominio haven.haven.local </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Dominio haven.haven.local </p></figcaption></figure>
 
 Si clicamos en el dominio `haven.haven.local` accedemos a otras opciones de configuración, como muestra la siguiente imagen.
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Dashboard de configuración de ejabberd</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Dashboard de configuración de ejabberd</p></figcaption></figure>
 
 Podemos ver y crear usuarios para el sistema. Modificar las contraseñas, eliminar los mensajes, crear y acceder  a las salas de chat, ver las estadísticas, etc.
 
@@ -130,7 +130,7 @@ Editamos el archivo /etc/hosts de la VM cliente y escribimos la IP del servidor 
 
 Ahora accedemos a Pidgin y añadimos uno de los usuarios que hemos creado en ejabberd.
 
-<figure><img src="../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Pidgin</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Pidgin</p></figcaption></figure>
 
 <mark style="color:orange;">To be continued ...</mark>
 

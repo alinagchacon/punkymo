@@ -83,7 +83,7 @@ Una vez añadido el linux bridge vmbr1, nos debe quedar algo como lo siguiente:
 
 La VM router estará conectada a los dos dos linux bridges: vmbr0 y vmbr1 . Recordemos que será esta VM la que le dará Internet al equipo cliente.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>VM router conectada a los dos linnux bridge</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>VM router conectada a los dos linnux bridge</p></figcaption></figure>
 
 En el caso de la VM cliente debemos conectarla a vmbr1, aunque bastaría con editar el  linux bridge vmbr0 y modificarlo para que aparezca conectado al vmbr1 que es el switch de nuestra red interna.
 
@@ -105,11 +105,11 @@ Escribimos el nombre que le corresponda: router o cliente y reiniciamos para que
 
 Una vez restablecidas las VM debemos ver algo como lo siguiente, en la `VM router`, donde todavía NO hemos configurado la `IP` de la interfaz de red que se conecta al `vmbr1`.
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="563"><figcaption><p>Configuración de red de la VM router. La interfaz ens18 es la que se conecta al vmbr0</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt="" width="563"><figcaption><p>Configuración de red de la VM router. La interfaz ens18 es la que se conecta al vmbr0</p></figcaption></figure>
 
 A la `VM cliente` si que debemos configurarle la IP en modo estático porque no tenemos ningún servidor de DHCP que le brinde la IP. Tendría que hacerlo la VM router pero tampoco se lo hemos configurado. Por tanto, tenemos que asignarle una IP estática en la red interna y para ello utilizaremos la: 10.10.10.2/24 en la interfaz de red que se habilita: **ens18** y el **gateway** que le asignamos será la IP del router: **10.10.10.1.**
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt="" width="563"><figcaption><p>Configuración de red de la VM cliente en la red interna con la interfaz ens18</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt="" width="563"><figcaption><p>Configuración de red de la VM cliente en la red interna con la interfaz ens18</p></figcaption></figure>
 
 ### Paso 4: Configurando la red interna
 

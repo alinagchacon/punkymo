@@ -133,7 +133,7 @@ sudo named-checkzone haven.local /etc/bind/zones/db.haven.local
 
 Ahora nos tocaría editar el fichero <mark style="color:blue;">`/etc/bind/named.conf.options`</mark> donde podemos crear una <mark style="color:blue;">`lista de acceso`</mark> para restringir el acceso a quienes pueden realizar las consultas a nuestro servidor DNS. También indicaremos un par de <mark style="color:blue;">`servidores forwarders`</mark> donde pueda delegar nuestro servidor DNS local cuando no pueda resolver alguna consulta.
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Fichero /etc/bind/named.conf.options</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Fichero /etc/bind/named.conf.options</p></figcaption></figure>
 
 Ya casi finalizamos, pero antes de poner en marcha el servicio modifiquemos  el fichero <mark style="color:blue;">`/etc/default/named`</mark> donde especificaremos la opción<mark style="color:blue;">`-4`</mark> como argumento para el usuario **bind,** que  se crea automáticamente durante la instalación del servicio bind9.&#x20;
 
@@ -147,7 +147,7 @@ Listo, ya tenemos configurado el servidor DNS. Solo nos queda <mark style="color
 
 Si no las hecho antes, **edita la configuración de red** del servidor de Ubuntu  para indicar que él mismo es el servidor DNS que tendrá que consultar para la resolución de nombres. Y esto lo tenemos que hacer con **netplan**.
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="532"><figcaption><p>Configuración de la red con nNetplan</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt="" width="532"><figcaption><p>Configuración de la red con nNetplan</p></figcaption></figure>
 
 Para que tome los cambios, hacemos:
 

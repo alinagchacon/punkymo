@@ -177,15 +177,15 @@ En el caso de utilizar un dispositivo móvil, tendríamos que instalar la `OpenV
 
 Una vez tengamos lista la app, podemos exportar a nuestro dispositivo móvil el certificado del cliente VPN que hayamos creado. En mi caso, sería el usuario `punky`
 
-<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Certificado de usuario Importado en la aplicación OpenVPN</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Certificado de usuario Importado en la aplicación OpenVPN</p></figcaption></figure>
 
 Nos conectamos a la VPN y se nos muestra el log:
 
-<figure><img src="../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Usuario conectado a la VPN de pfSense </p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Usuario conectado a la VPN de pfSense </p></figcaption></figure>
 
 Y si nos vamos, por ejemplo al navegador y escribimos la IP
 
-<figure><img src="../../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Accediendo a pfSense en el navegador</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Accediendo a pfSense en el navegador</p></figcaption></figure>
 
 Ya podemos comprobar la conexión al firewall.  Claramente que nos falta mucho. Se trata de una conexión básica. Lo siguiente a probar es configurar el acceso de un usuario a un equipo de la red detrás del firewall.&#x20;
 

@@ -60,7 +60,7 @@ mkdir carpeta_destino
 
 Por ejemplo, en la imagen siguiente tengo el contenido de la carpeta de origen donde ya tenía un archivo file1.txt:&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Carpeta de origen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Carpeta de origen</p></figcaption></figure>
 
 ### Opciones de rsync
 
