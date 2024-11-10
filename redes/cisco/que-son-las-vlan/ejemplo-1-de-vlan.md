@@ -59,7 +59,7 @@ Lo siguiente sería establecer la cantidad de puertos de acceso para cada VLAN e
 Lo primero será configurar las IP de cada PC teniendo en cuenta la VLAN donde estarán.\
 
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption><p>Configurando los PC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configurando los PC</p></figcaption></figure>
 
 Este proceso hay que repetirlo en los PC por VLAN.
 

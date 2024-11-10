@@ -144,6 +144,7 @@
 
 * [Datos - codificación](miscelaneas/datos-codificacion.md)
 * [IPTables](miscelaneas/iptables.md)
+* [Túnel con Cloudflare](miscelaneas/tunel-con-cloudflare.md)
 * [Servidor de video](miscelaneas/servidor-de-video.md)
 * [Comandos de Linux](miscelaneas/comandos-de-linux.md)
 * [Anaconda & Spyder](miscelaneas/anaconda-and-spyder.md)
