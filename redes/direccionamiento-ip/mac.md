@@ -20,3 +20,8 @@ Podemos diferenciar tres tipos de direcciones MAC:&#x20;
     * las asociadas con IPv4, que comienzan por 0100.5EXX.XXXX, y obtienen los últimos 24 bits de la dirección de broadcast de la IPv4;&#x20;
     * las asociadas con IPv6, que comienzan por 3333.XXXX.XXXX, y cuyos últimos 32 bits se obtendrán de los últimos 32 bits de la dirección multicast de IPv6.
 
+
+
+### Links
+
+* [https://standards-oui.ieee.org/oui/oui.txt](https://standards-oui.ieee.org/oui/oui.txt)
