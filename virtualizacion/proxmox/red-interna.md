@@ -55,11 +55,12 @@ La configuración inicial con la que estoy trabajando se muestra en el esquema s
 
 Recuerda que Proxmox es una VM en VirtualBox y las dos VM de Ubuntu se encuentran dentro de Proxmox. La tabla siguiente especifica las características iniciales de la infraestructura a montar:
 
-| Proxmox                     | VM Ubuntu Router        | VM Ubuntu Cliente       |
-| --------------------------- | ----------------------- | ----------------------- |
-| IP (estática): 10.0.2.15/24 | IP (dhcp): 10.0.2.16/24 | IP (dhcp): 10.0.2.17/24 |
-| IP gateway: 10.0.2.2        | IP gateway: 10.0.2.2    | IP gateway: 10.0.2.2    |
-| Red: NAT                    | Red: vmbr0              | Red: vmbr0              |
+| Proxmox                     | VM Ubuntu Router           | VM Ubuntu Cliente         |
+| --------------------------- | -------------------------- | ------------------------- |
+| IP (estática): 10.0.2.15/24 | IP (dhcp): 10.0.2.16/24    | IP (dhcp): 10.10.10.16/24 |
+| IP gateway: 10.0.2.2        | IP gateway: 10.0.2.2       | IP gateway: 10.10.10.1    |
+| Red: NAT                    | Red: vmbr0                 | Red: vmbr1                |
+|                             | IP (static): 10.10.10.1/24 |                           |
 
 La VM de Proxmox tiene una IP estática configurada durante el proceso de instalación. Dicha VM está conectada en red `NAT` y como he dicho anteriormente, es el único modo en que he podido instalar VM o contenedores de Linux (LXC) y que todos tengan una IP y salida a Internet.
 
