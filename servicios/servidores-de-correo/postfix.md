@@ -82,7 +82,7 @@ Editamos el archivo _<mark style="color:blue;">main.cf</mark>_ y vamos a agregar
 
 Antes de hacer la instalación expliquemos un mínimo en qué consiste.
 
-[Dovecot](https://www.dovecot.org/) es un [MDA](https://en.wikipedia.org/wiki/Mail\_delivery\_agent) que tiene como función almacenar los correos y servirlos mediante los protocolos [POP3](https://en.wikipedia.org/wiki/Post\_Office\_Protocol) o [IMAP4](https://en.wikipedia.org/wiki/Internet\_Message\_Access\_Protocol) al programa cliente [MUA](https://es.wikipedia.org/wiki/Cliente\_de\_correo\_electr%C3%B3nico).
+[Dovecot](https://www.dovecot.org/) es un [MDA](https://en.wikipedia.org/wiki/Mail_delivery_agent) que tiene como función almacenar los correos y servirlos mediante los protocolos [POP3](https://en.wikipedia.org/wiki/Post_Office_Protocol) o [IMAP4](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol) al programa cliente [MUA](https://es.wikipedia.org/wiki/Cliente_de_correo_electr%C3%B3nico).
 
 1. **POP3.** Protocolo sencillo pensado para descargar el correo desde el servidor y después borrarlo, aunque es posible mantenerlo en el servidor.  No está pensado para funcionar en escenarios en los que varios dispositivos comprueben el correo del mismo buzón.
 2. **IMAP4.** Protocolo más complejo, puesto que se tiene en cuenta la posibilidad que varios clientes puedan acceder al mismo buzón de manera simultánea. Esto hace que el protocolo deba permitir realizar operaciones para mantener ordenado el buzón de correo desde el cliente, descargando tan solo, aquellos ficheros a los que el usuario tiene acceso.
@@ -289,7 +289,7 @@ Está claro que tenemos ciertos puertos abiertos para la recepción y envío de 
 
 <mark style="color:blue;">`sudo nmap -ST -O 192.168.1.30`</mark>
 
-![](<../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ### Link
 

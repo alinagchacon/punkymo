@@ -1,8 +1,8 @@
 # Docker compose
 
-Se trata de una utilidad de Docker que nos ayuda a la hora de crear múltiples contenedores Docker al mismo tiempo. Esto es, una herramienta que facilita la <mark style="color:blue;">`orquestación`</mark> local de contenedores**,** con el objetivo de definir y ejecutar aplicaciones Docker de varios contenedores de forma fácil y rápida.
+Se trata de una utilidad de Docker que nos ayuda a la hora de crear múltiples contenedores Docker al mismo tiempo. Esto es, una herramienta que facilita la <mark style="color:blue;">`orquestación`</mark> local de contenedore&#x73;**,** con el objetivo de definir y ejecutar aplicaciones Docker de varios contenedores de forma fácil y rápida.
 
-Esta definición y orquestación se lleva a cabo de forma local en el interior de los contenedores**,** que se encuentran unidos a través de una [`red de Docker`](https://keepcoding.io/blog/que-son-las-redes-en-docker/).
+Esta definición y orquestación se lleva a cabo de forma local en el interior de los contenedore&#x73;**,** que se encuentran unidos a través de una [`red de Docker`](https://keepcoding.io/blog/que-son-las-redes-en-docker/).
 
 A diferencia de <mark style="color:blue;">`Docker Cli`</mark> éste no hay que crearlo directamente en la terminal, sino que se crea un archivo <mark style="color:blue;">`YAML`</mark> que es más fácil de ser modificado y configurado que en la propia terminal.&#x20;
 
@@ -24,7 +24,7 @@ _**Multiplicidad de entornos en un solo host.**_ La posibilidad de utilizar un <
 
 _**Conservar los datos de volumen.**_ Permite la preservación de la información de volumen en los casos donde los contenedores se crean en el sistema; es decir, puede conservar la totalidad de los volúmenes de sus servicios.
 
-_**Recrear contendores que hayan sido modificados.**_ Almacena en caché toda la información relacionada con los ajustes y configuraciones usados para crear un contenedor. En los casos donde un servicio que no ha cambiado se reinicia, Compose se encarga de reutilizar los _contenedores_ que ya existen**.** Esto posibilita que el sistema pueda llevar a cabo cambios dentro de su entorno de forma muy rápida.
+_**Recrear contendores que hayan sido modificados.**_ Almacena en caché toda la información relacionada con los ajustes y configuraciones usados para crear un contenedor. En los casos donde un servicio que no ha cambiado se reinicia, Compose se encarga de reutilizar los _contenedores_ que ya existe&#x6E;**.** Esto posibilita que el sistema pueda llevar a cabo cambios dentro de su entorno de forma muy rápida.
 
 ## Comandos básicos de docker-compose
 

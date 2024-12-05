@@ -2,7 +2,7 @@
 description: Instalación de un servidor DNS
 ---
 
-# Servicio DNS
+# Servidores DNS
 
 Como podéis suponer, no hay nada escrito aquí que sea 100% mío. Es una recopilación de información sobre el servicio de DNS. Tengo que referenciar cada una de las imágenes que he utilizado que no es de confección propia, me falta mucho para finalizar y dejarlo como un contenido que pueda servir de verdad para mis clases. Al menos, en la forma que yo lo veo.
 
@@ -32,7 +32,7 @@ Veamos algunos ejemplos de la presencia del DNS en nuestros dispositivos.
 
 **Ejemplo:** &#x20;
 
-En windows**:**
+En window&#x73;**:**
 
 <mark style="color:blue;">`cmd > ipconfig /all`</mark>
 

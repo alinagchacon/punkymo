@@ -136,7 +136,7 @@ Nos debe aparecer una ventana como la de la siguiente imagen, en el caso de no a
 
 <figure><img src="../../../.gitbook/assets/image (4) (2) (1).png" alt=""><figcaption><p>Encontrar Synology NAS</p></figcaption></figure>
 
-Después haremos clic en **“Conectar”** y a continuación aceptaremos los términos y condiciones que se indican. Al aceptarlos se nos redirigirá a la interfaz web del propio NAS para comenzar con la instalación**.**&#x20;
+Después haremos clic en **“Conectar”** y a continuación aceptaremos los términos y condiciones que se indican. Al aceptarlos se nos redirigirá a la interfaz web del propio NAS para comenzar con la instalació&#x6E;**.**&#x20;
 
 Seguidamente nos saldrá otra ventana donde haremos clic en **"Instalar"** y si queremos información del dispositivo haremos clic en el botón de justo debajo.&#x20;
 

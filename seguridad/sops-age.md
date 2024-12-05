@@ -6,11 +6,11 @@ description: Gracias a Xavier Adell, Joel González, Oriol Tovar y Fernando Cond
 
 Un inconveniente que podemos encontrarnos cuando tenemos nuestras aplicaciones en Git es el tema de las contraseñas que pueden quedar al acceso de todos. ¿Cómo hacer  que nuestros "secretos" estén lo más seguros posible?&#x20;
 
-Aquí traigo una herramienta muy interesante que nos permite mantener a salvo nuestros "secretos", se trata de [Mozilla SOPS](https://github.com/mozilla/sops). Esta herramienta nos permite cifrar y descifrar archivos con soporte para YAML, JSON, .ENV e incluso binarios, y además se integra fácilmente con diferentes [KMS](https://simple.wikipedia.org/wiki/Key\_Management\_Service).&#x20;
+Aquí traigo una herramienta muy interesante que nos permite mantener a salvo nuestros "secretos", se trata de [Mozilla SOPS](https://github.com/mozilla/sops). Esta herramienta nos permite cifrar y descifrar archivos con soporte para YAML, JSON, .ENV e incluso binarios, y además se integra fácilmente con diferentes [KMS](https://simple.wikipedia.org/wiki/Key_Management_Service).&#x20;
 
 ## ¿Qué es SOPS y qué es AGE?&#x20;
 
-Mozilla SOPS (**S**ecrets **OP**eration**S - SOPS**) es un editor de archivos cifrado que admite formatos del tipo YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de estos mediante los cifrados AWS KMS, GCP KMS, Azure Key Vault y [PGP](https://es.wikipedia.org/wiki/Pretty\_Good\_Privacy).&#x20;
+Mozilla SOPS (**S**ecrets **OP**eration**S - SOPS**) es un editor de archivos cifrado que admite formatos del tipo YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de estos mediante los cifrados AWS KMS, GCP KMS, Azure Key Vault y [PGP](https://es.wikipedia.org/wiki/Pretty_Good_Privacy).&#x20;
 
 Para almacenar secretos de forma segura en un repositorio de Git público o privado, puede usar SOPS  para cifrar con [OpenPGP](https://www.openpgp.org), AWS KMS, GCP KMS y Azure Key Vault.
 
@@ -100,11 +100,11 @@ Creamos el par de claves público y privado:
 age-keygen -o key.txt
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Generando el par de claves público y privado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Generando el par de claves público y privado</p></figcaption></figure>
 
 Si hacemos un cat del archivo creado con el par de claves se nos muestra algo como lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo key.txt con el par de claves generadas</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo key.txt con el par de claves generadas</p></figcaption></figure>
 
 La llave privada que se muestra en el fichero key.txt no debemos guardarla en ningún repositorio Git ni en ninguna carpeta al acceso de cualquiera. Para dar un poco de seguridad a nuestra clave es que vamos a crear la carpeta:  `~/.sops` y mover la clave generada.
 
@@ -138,7 +138,7 @@ sops --encrypt --age $(cat $SOPS_AGE_KEY_FILE |grep -oP "public key: \K(.*)")  -
 
 Si ahora hacemos un cat ejemplo.txt veremos que el archivo es ilegible:
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo ejemplo.txt cifrado con sops y age</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo ejemplo.txt cifrado con sops y age</p></figcaption></figure>
 
 Para descifrar el archivo tendríamos que utilizar el mismo comando pero con la opción --decrypt. Veamos:
 
@@ -281,7 +281,7 @@ Sería cuestión de no subir los contenidos descifrados al Git para lo cual debe
 * [https://www.returngis.net/2022/01/proteger-secretos-con-mozilla-sops-y-azure-key-vault-y-descifrarlos-desde-flux-cd/#:\~:text=Existen%20varias%20herramientas%20para%20hacer,integrarse%20fácilmente%20con%20diferentes%20KMS.](https://www.returngis.net/2022/01/proteger-secretos-con-mozilla-sops-y-azure-key-vault-y-descifrarlos-desde-flux-cd/)
 * [https://fluxcd.io/flux/guides/mozilla-sops/](https://fluxcd.io/flux/guides/mozilla-sops/)
 * [https://sleeplessbeastie.eu/2024/03/20/how-to-utilize-sops-with-age-encryption/](https://sleeplessbeastie.eu/2024/03/20/how-to-utilize-sops-with-age-encryption/)&#x20;
-* [https://www.youtube.com/watch?v=R0csVV\_y53w](https://www.youtube.com/watch?v=R0csVV\_y53w)
+* [https://www.youtube.com/watch?v=R0csVV\_y53w](https://www.youtube.com/watch?v=R0csVV_y53w)
 
 &#x20;
 

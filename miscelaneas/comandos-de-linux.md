@@ -123,7 +123,7 @@ sudo systemctl status snapd.socket
 sudo systemctl status snapd.seeded.service 
 ```
 
-### _s_ort&#x20;
+### _&#x73;_&#x6F;rt&#x20;
 
 ### uniq&#x20;
 
