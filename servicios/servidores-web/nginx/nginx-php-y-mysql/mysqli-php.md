@@ -6,6 +6,12 @@ Verificar que tenemos mysqli instalado:
 php -m | grep mysqli
 ```
 
+En caso de no tenerlo, instalar:
+
+```
+sudo apt install php-mysqli
+```
+
 Verificar que tengamos habilitado el módulo de mysqli en php.ini tanto para php como php-fpm. Para asegurarnos de cual archivo `php.ini` se esté cargando (teniendo en cuenta que también tenemos el módulo de php-fpm) podemos hacer:
 
 ```
