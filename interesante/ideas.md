@@ -4,7 +4,7 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
 
 # Ideas
 
-* Motor de chat: Add Chat Engine to your Application: [https://chatengine.io/docs/react/v1/getting\_started](https://chatengine.io/docs/react/v1/getting\_started)
+* Motor de chat: Add Chat Engine to your Application: [https://chatengine.io/docs/react/v1/getting\_started](https://chatengine.io/docs/react/v1/getting_started)
 * Vercel - Plataforma en la nube, Plataforma como servicio (PaaS)\
   [https://vercel.com/](https://vercel.com/)\
   [https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app](https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app)&#x20;
@@ -36,9 +36,11 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
 * Kasm \
   [https://kasmweb.com](https://kasmweb.com)
 * Terraform\
-  [https://developer.hashicorp.com/terraform/install?ajs\_aid=7cbfd6a7-2e60-4e05-86ea-7f2d0e31fd15\&product\_intent=terraform](https://developer.hashicorp.com/terraform/install?ajs\_aid=7cbfd6a7-2e60-4e05-86ea-7f2d0e31fd15\&product\_intent=terraform)
+  [https://developer.hashicorp.com/terraform/install?ajs\_aid=7cbfd6a7-2e60-4e05-86ea-7f2d0e31fd15\&product\_intent=terraform](https://developer.hashicorp.com/terraform/install?ajs_aid=7cbfd6a7-2e60-4e05-86ea-7f2d0e31fd15\&product_intent=terraform)
 * Traeffik\
   [https://doc.traefik.io/traefik/](https://doc.traefik.io/traefik/)
+* gofish&#x20;
+* wls&#x20;
 
 
 
@@ -47,7 +49,7 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
 * Ansible\
   [https://www.ansible.com](https://www.ansible.com)\
   [https://semui.co](https://semui.co)\
-  [https://vcloud-lab.com/entries/devops/getting-started-ansible-awx-tower-for-it-automation-run-first-playbook#google\_vignette](https://vcloud-lab.com/entries/devops/getting-started-ansible-awx-tower-for-it-automation-run-first-playbook#google\_vignette)
+  [https://vcloud-lab.com/entries/devops/getting-started-ansible-awx-tower-for-it-automation-run-first-playbook#google\_vignette](https://vcloud-lab.com/entries/devops/getting-started-ansible-awx-tower-for-it-automation-run-first-playbook#google_vignette)
 * Tailscale\
   [https://tailscale.com/blog/how-tailscale-works](https://tailscale.com/blog/how-tailscale-works)&#x20;
 * Jupyter\
