@@ -32,8 +32,6 @@ Este ejemplo, ejecuta un contenedor usando la imagen más reciente de pihole. La
 Nota: Pudiera ser que no funcionara a la primera. Entonces quizá sea mejor utilizar un docker-compose.yml con el siguiente contenido:
 
 ```
-version: "3"
-
 # More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
 services:
   pihole:
@@ -47,7 +45,7 @@ services:
       - "80:80/tcp"
     environment:
       TZ: 'Europe/Berlin'
-      WEBPASSWORD: elquesea
+      WEBPASSWORD: 'elquesea'
     # Volumes store your data between container upgrades
     volumes:
       - './etc-pihole:/etc/pihole'
@@ -60,9 +58,9 @@ services:
 
 ### Accediendo a Pi-Hole
 
-Para acceder a nuestro contenedor de pihole basta usar el navegador, escribiendo la IP de nuestra MV. Esto es: <mark style="color:blue;">`http://192.168.1.79`</mark>
+Para acceder a nuestro contenedor de pihole basta usar el navegador, escribiendo la IP de nuestra MV. Esto es: <mark style="color:blue;">`http://192.168.1.79/admin`</mark>
 
-o h[ttp://192.168.1.79/admin/index.php](http://192.168.1.34/admin/index.php)
+o h[ttp://192.168.1.79/admin](http://192.168.1.34/admin/index.php)
 
 
 
