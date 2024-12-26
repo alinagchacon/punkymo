@@ -124,6 +124,12 @@
   * [Portainer](virtualizacion/contenedores/portainer/README.md)
     * [Instalando Portainer](virtualizacion/contenedores/portainer/instalando-portainer.md)
     * [Dentro de Portainer](virtualizacion/contenedores/portainer/dentro-de-portainer.md)
+  * [Pi-hole](virtualizacion/contenedores/pi-hole/README.md)
+    * [Instalando Pi-hole en Docker](virtualizacion/contenedores/pi-hole/instalando-pi-hole-en-docker.md)
+    * [Instalando Pi-hole en Debian](virtualizacion/contenedores/pi-hole/instalando-pi-hole-en-debian.md)
+    * [RDP](virtualizacion/contenedores/pi-hole/rdp/README.md)
+      * [RDP - Docker](virtualizacion/contenedores/pi-hole/rdp/rdp-docker.md)
+  * [🚧 Page](virtualizacion/contenedores/page.md)
 * [Proxmox](virtualizacion/proxmox/README.md)
   * [Instalar en VMWare](virtualizacion/proxmox/instalar-en-vmware.md)
   * [Instalar en VirtualBox](virtualizacion/proxmox/instalar-en-virtualbox.md)
@@ -136,11 +142,6 @@
   * [Clúster](virtualizacion/proxmox/cluster.md)
   * [Red Interna](virtualizacion/proxmox/red-interna.md)
   * [Otras consideraciones](virtualizacion/proxmox/otras-consideraciones.md)
-* [Pi-hole](virtualizacion/pi-hole.md)
-  * [Instalando Pi-hole en Docker](virtualizacion/pi-hole/instalando-pi-hole.md)
-  * [Instalando Pi-hole en Debian](virtualizacion/pi-hole/instalando-pi-hole-en-debian.md)
-  * [RDP](virtualizacion/pi-hole/rdp/README.md)
-    * [RDP - Docker](virtualizacion/pi-hole/rdp/rdp-docker.md)
 
 ## 🦉 Misceláneas
 

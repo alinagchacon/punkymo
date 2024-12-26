@@ -18,11 +18,11 @@ $ sudo apt upgrade
 
 Ahora verificamos la instalación de red. Para ello debemos configurar la IP estática. Nos debe quedar algo como lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (244).png" alt=""><figcaption><p>Configuración del archivo /etc/network/interfaces</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (244).png" alt=""><figcaption><p>Configuración del archivo /etc/network/interfaces</p></figcaption></figure>
 
 Como puedes ver, he asignado la IP 192.168.2.50/24 al servidor de Debian donde vamos a instalar el Pi-hole. Esta dirección IP se corresponde con la red NAT "NatNet".
 
-<figure><img src="../../.gitbook/assets/image (245).png" alt=""><figcaption><p>Configuración de la red Nat "NatNet"</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (245).png" alt=""><figcaption><p>Configuración de la red Nat "NatNet"</p></figcaption></figure>
 
 Recuerda que debemos actualizar la configuración:
 
@@ -32,7 +32,7 @@ $ systemctl restart networking.service
 
 También vamos a editar el fichero `/etc/resolv.conf` y agregamos un par de servidores externos:
 
-<figure><img src="../../.gitbook/assets/image (246).png" alt=""><figcaption><p>Fichero /etc/resolv.conf</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (246).png" alt=""><figcaption><p>Fichero /etc/resolv.conf</p></figcaption></figure>
 
 Recuerda que cualquier modificación que hagas necesitas la actualización del servicio. Como en mi caso lo tengo todo debidamente actualizado me dispongo a verificar que tenga instalado la herramienta `curl`.
 
@@ -66,7 +66,7 @@ Lo primero que nos dice es que el servidor será configurado como un `bloqueador
 
 El siguiente paso sería seleccionar el servidor DNS. Si en este punto seleccionamos Google por defecto, después podremos modificarlo y establecer nuestro propio servidor.
 
-<figure><img src="../../.gitbook/assets/image (247).png" alt=""><figcaption><p>Establecer el servidor DNS</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (247).png" alt=""><figcaption><p>Establecer el servidor DNS</p></figcaption></figure>
 
 A continuación tenemos que seguir con la selección del asistente. Por ejemplo, si queremos usar una lista de bloqueo de anuncios, podemos hacerlo teniendo en cuenta que Pi-hole nos brinda por defecto `StevenBlack.`
 
@@ -76,7 +76,7 @@ Por si no lo sabías `lighttpd` es un servidor web de código abierto, ligero qu
 
 Una vez terminada la instalación nos muestra una ventana como la siguiente donde nos facilita una contraseña de acceso.
 
-<figure><img src="../../.gitbook/assets/image (248).png" alt=""><figcaption><p>Fin de la instalación de Pihole</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (248).png" alt=""><figcaption><p>Fin de la instalación de Pihole</p></figcaption></figure>
 
 Para acceder a la web de configuración de Pi-hole tenemos que llamar a la IP del servidor y en algún caso, toca poner al final /admin. Esto es:
 
@@ -84,7 +84,7 @@ Para acceder a la web de configuración de Pi-hole tenemos que llamar a la IP de
 http://192.168.2.50/admin
 ```
 
-<figure><img src="../../.gitbook/assets/image (249).png" alt=""><figcaption><p>Dashboard de administración de Pi-hole</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (249).png" alt=""><figcaption><p>Dashboard de administración de Pi-hole</p></figcaption></figure>
 
 ## Configurando Pi-hole
 
@@ -94,11 +94,11 @@ Podemos establecer el dominio para nuestro servidor y el servidor principal `hav
 
 Podemos configurar el servicio de DHCP:
 
-<figure><img src="../../.gitbook/assets/image (250).png" alt=""><figcaption><p>Configuración del servicio de DHCP en Pi-hole</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (250).png" alt=""><figcaption><p>Configuración del servicio de DHCP en Pi-hole</p></figcaption></figure>
 
 Puedes verificar y/o adicionar Adlists:
 
-<figure><img src="../../.gitbook/assets/image (251).png" alt=""><figcaption><p>Añadir una AdList</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (251).png" alt=""><figcaption><p>Añadir una AdList</p></figcaption></figure>
 
 Una vez tengamos nuestros servicios configurados debemos testear que todo funcione correctamente. Para ello, debemos disponer de una VM que sirva de cliente y que, lógicamente, esté conectada a la misma red NAT: NatNet donde tenemos el servidor. En mi caso también es una VM con una distribución de Debian 11.
 
@@ -106,7 +106,7 @@ Recuerda que el equipo cliente tiene que estar configurado para tomar los parám
 
 Podemos verificar que el cliente está conectado a nuestro servidor:
 
-<figure><img src="../../.gitbook/assets/image (252).png" alt=""><figcaption><p>Currently active DHCP leases en el servidor de Pi-hole</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (252).png" alt=""><figcaption><p>Currently active DHCP leases en el servidor de Pi-hole</p></figcaption></figure>
 
 Nota: Este tutorial lo tengo que completar. Aquí he mostrado los puntos más básicos.
 
