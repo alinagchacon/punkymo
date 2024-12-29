@@ -52,6 +52,7 @@
     * [PHP-FPM](servicios/servidores-web/nginx/php-fpm.md)
     * [Nginx: PHP y MySQL](servicios/servidores-web/nginx/nginx-php-y-mysql/README.md)
       * [MySQLi - PHP](servicios/servidores-web/nginx/nginx-php-y-mysql/mysqli-php.md)
+    * [En Alpine linux](servicios/servidores-web/nginx/en-alpine-linux.md)
 * [Servidores de correo](servicios/servidores-de-correo/README.md)
   * [Seguridad en el correo](servicios/servidores-de-correo/seguridad-en-el-correo.md)
   * [Postfix](servicios/servidores-de-correo/postfix.md)

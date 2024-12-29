@@ -1,6 +1,6 @@
 # Nginx
 
-Es un software libre y de código abierto bajo licencia BSD con una versión comercial distribuida bajo el nombre de Nginx. Su creador es [Igor Sysoev.](https://en.wikipedia.org/wiki/Igor\_Sysoev)&#x20;
+Es un software libre y de código abierto bajo licencia BSD con una versión comercial distribuida bajo el nombre de Nginx. Su creador es [Igor Sysoev.](https://en.wikipedia.org/wiki/Igor_Sysoev)&#x20;
 
 Se trata de un servidor web ligero que sirve de proxy para protocolos de correo electrónico: IMAP - POP3 y es multiplataforma, con lo cual corre en sistemas tipo Unix: GNU/Linux, BSD, Solaris, Mac OS, Windows.
 
@@ -155,7 +155,7 @@ Nginx permite ampliar su funcionalidad por medio del uso de módulos. Algunos de
 * **Perl**. Módulo que permite ejecutar Perl directamente dentro de Nginx.
 * **WebDAV**. Ofrece soporte para [WebDAV](https://es.wikipedia.org/wiki/WebDAV).&#x20;
 * **Secure Link**. Este módulo ofrece la posibilidad de proteger páginas mediante clave secreta.&#x20;
-* **XSLT**. Funcionalidad que permite el post-procesamiento de páginas mediante [XSLT](https://www.w3schools.com/xml/xsl\_intro.asp)
+* **XSLT**. Funcionalidad que permite el post-procesamiento de páginas mediante [XSLT](https://www.w3schools.com/xml/xsl_intro.asp)
 
 
 
@@ -274,7 +274,7 @@ sudo nano /var/www/html/example.com/index.html
 
 Y si accedemos a nuestra página web podemos verla. Eso sí, nos hace la advertencia de que no es un sitio seguro y si no tenemos configurado el DNS tampoco podremos acceder a la misma de otro modo que no sea a través de la IP.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### En nginx docker&#x20;
 
@@ -306,6 +306,6 @@ Para copiar el archivo index.html en la ubicación del contenedor de nginx:
 * [https://linuxhint.com/what-is-keepalive-in-nginx/ ](https://linuxhint.com/what-is-keepalive-in-nginx/)
 * [https://www.nginx.com/blog/avoiding-top-10-nginx-configuration-mistakes/](https://www.nginx.com/blog/avoiding-top-10-nginx-configuration-mistakes/)
 * [https://www.redeszone.net/tutoriales/internet/webdav-que-es-configuracion/ ](https://www.redeszone.net/tutoriales/internet/webdav-que-es-configuracion/)
-* [https://www.w3schools.com/xml/xsl\_intro.asp](https://www.w3schools.com/xml/xsl\_intro.asp)
-* [https://access.redhat.com/documentation/es-es/red\_hat\_enterprise\_linux/8/html/deploying\_different\_types\_of\_servers/configuring-nginx-as-a-web-server-that-provides-different-content-for-different-domains\_setting-up-and-configuring-nginx](https://access.redhat.com/documentation/es-es/red\_hat\_enterprise\_linux/8/html/deploying\_different\_types\_of\_servers/configuring-nginx-as-a-web-server-that-provides-different-content-for-different-domains\_setting-up-and-configuring-nginx)
+* [https://www.w3schools.com/xml/xsl\_intro.asp](https://www.w3schools.com/xml/xsl_intro.asp)
+* [https://access.redhat.com/documentation/es-es/red\_hat\_enterprise\_linux/8/html/deploying\_different\_types\_of\_servers/configuring-nginx-as-a-web-server-that-provides-different-content-for-different-domains\_setting-up-and-configuring-nginx](https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/8/html/deploying_different_types_of_servers/configuring-nginx-as-a-web-server-that-provides-different-content-for-different-domains_setting-up-and-configuring-nginx)
 

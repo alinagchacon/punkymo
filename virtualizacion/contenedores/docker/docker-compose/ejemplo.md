@@ -82,7 +82,7 @@ Por tanto, un archivo de docker-compose es un archivo con extensión y formato y
 
 El archivo tiene una estructura bastante fácil de entender. Comienza por especificar la versión de docker compose que se utilizará:
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Estructura de un archivo docker-compose.yml</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Estructura de un archivo docker-compose.yml</p></figcaption></figure>
 
 Después de la versión viene  la sección de servicios. Puede haber tantos servicios como queramos: servidor web, base de datos, documentación, etc. Cada servicio cuenta con sus propias variables de configuración y sus respectivos valores.
 
@@ -298,7 +298,7 @@ Podemos observar los diferentes contenedores involucrados en desplegar la aplica
 * [https://www.docker.com/blog/how-to-use-the-apache-httpd-docker-official-image/](https://www.docker.com/blog/how-to-use-the-apache-httpd-docker-official-image/)
 * [https://academy.leewayweb.com/como-usar-docker-en-proyectos-php/](https://academy.leewayweb.com/como-usar-docker-en-proyectos-php/)
 * [https://www.kodetop.com/crea-tu-ambiente-de-desarrollo-php-mysql-con-docker/](https://www.kodetop.com/crea-tu-ambiente-de-desarrollo-php-mysql-con-docker/)
-* [https://hub.docker.com/\_/php/tags](https://hub.docker.com/\_/php/tags)
-* [https://access.redhat.com/documentation/es-es/red\_hat\_enterprise\_linux/8/html/deploying\_different\_types\_of\_servers/setting-apache-http-server\_deploying-different-types-of-servers](https://access.redhat.com/documentation/es-es/red\_hat\_enterprise\_linux/8/html/deploying\_different\_types\_of\_servers/setting-apache-http-server\_deploying-different-types-of-servers) \*\*\*
+* [https://hub.docker.com/\_/php/tags](https://hub.docker.com/_/php/tags)
+* [https://access.redhat.com/documentation/es-es/red\_hat\_enterprise\_linux/8/html/deploying\_different\_types\_of\_servers/setting-apache-http-server\_deploying-different-types-of-servers](https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/8/html/deploying_different_types_of_servers/setting-apache-http-server_deploying-different-types-of-servers) \*\*\*
 * [https://www.php.net/manual/es/install.fpm.php](https://www.php.net/manual/es/install.fpm.php)
 * [https://docs.portainer.io/user/docker/stacks](https://docs.portainer.io/user/docker/stacks)
