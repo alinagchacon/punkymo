@@ -19,6 +19,10 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
   [https://www.nutanix.com/es](https://www.nutanix.com/es)
 * Eve-ng\
   [https://www.eve-ng.net](https://www.eve-ng.net)
+* Nagios\
+  [https://www.nagios.org](https://www.nagios.org)
+* Zabbix\
+  [https://www.zabbix.com](https://www.zabbix.com)
 
 
 
