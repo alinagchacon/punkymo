@@ -1,6 +1,8 @@
 # Importar sitio web en Docker
 
+Directorio de trabajo
 
+<figure><img src="../../../../.gitbook/assets/image.png" alt="" width="342"><figcaption></figcaption></figure>
 
 default.conf
 
