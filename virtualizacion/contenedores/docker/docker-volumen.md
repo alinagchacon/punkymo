@@ -50,7 +50,7 @@ El comando _docker volume create_ crea un volumen identificado con un nombre. El
 El siguiente comando se utiliza para **crear y nombrar** un volumen:
 
 ```
-sudo docker volume create - - name [volume name]
+sudo docker volume create --name [volume name]
 ```
 
 Si queremos **crear un container que utilice un volumen ya creado**, podemos añadir el siguiente parámetro al comando _docker run_:
@@ -119,3 +119,4 @@ sudo docker volume rm data-volume
 * [https://colaboratorio.net/davidochobits/sysadmin/2017/docker-una-guia-no-convencional/](https://colaboratorio.net/davidochobits/sysadmin/2017/docker-una-guia-no-convencional/)
 * [https://keepcoding.io/blog/que-es-docker-compose/](https://keepcoding.io/blog/que-es-docker-compose/)
 * [https://www.ionos.es/digitalguide/servidores/know-how/docker-container-volumes/](https://www.ionos.es/digitalguide/servidores/know-how/docker-container-volumes/)
+
