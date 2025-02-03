@@ -35,7 +35,7 @@
   * [pfSense](redes/firewalls/dos-firewall/pfsense/README.md)
     * [Instalando pfSense](redes/firewalls/dos-firewall/pfsense/instalando-pfsense.md)
     * [OpenVPN en pfSense](redes/firewalls/dos-firewall/pfsense/openvpn-en-pfsense.md)
-    * [Port Forward](redes/firewalls/pfsense/port-forward.md)
+    * [Port Forward](redes/firewalls/dos-firewall/pfsense/dmz.md)
     * [Alias](redes/firewalls/pfsense/alias.md)
 * [Proxy](redes/proxy/README.md)
   * [Squid en pfSense](redes/proxy/squid-en-pfsense/README.md)
