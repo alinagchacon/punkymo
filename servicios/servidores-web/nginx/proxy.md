@@ -36,3 +36,22 @@ Un proxy inverso tiene una serie de ventajas entre las que tenemos:&#x20;
 
 
 
+### Configuración de un reverse proxy con Nginx
+
+Las condiciones sobre las que estoy trabajando:
+
+* Utilizaré para ello dos VM conectadas en red NAT.&#x20;
+* En ambas VM tengo configurado Nginx.
+* Un Ubuntu Server con dos sitios web: punky.com:8080 (php) y kirby.com:8081
+* En Ubuntu Desktop con la instalación de Nginx.
+
+En el archivo de configuración de Nginx:
+
+```
+// Some code
+```
+
+
+
+
+
