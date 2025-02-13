@@ -6,9 +6,9 @@ description: >-
 
 # Postfix
 
-El objetivo es mostrar el funcionamiento de un servidor de  correo electrónico. Para ello usaremos una MV con Ubuntu Desktop 22.04 LTS. Vamos a necesitar instalar los siguientes servicios:
+El objetivo es mostrar el funcionamiento de un servidor de  correo electrónico. Para ello usaremos una MV con Ubuntu Server 22.04. Vamos a necesitar instalar los siguientes servicios:
 
-* `Dovecot-imapd` como servidor IMAP
+* `Dovecot`como servidor IMAP y POP3
 * `Postfix` como servidor de correo SMTP - (MTA)&#x20;
 * `Mailutils` como cliente para el terminal (MUA)
 * `Thunderbird` como cliente, en un entorno gráfico
@@ -93,7 +93,7 @@ Antes de hacer la instalación expliquemos un mínimo en qué consiste.
 Para probar vamos a instalar el protocolo `imap` para lo cual hacemos como siempre:&#x20;
 
 ```
-sudo apt install dovecot-imapd
+sudo apt install dovecot-core dovecot-imapd dovecot-pop3d
 ```
 
 Una vez instalado hagamos las comprobaciones pertinentes. Podemos observar que Dovecot:
