@@ -8,10 +8,10 @@ description: >-
 
 El objetivo es mostrar el funcionamiento de un servidor de  correo electrónico. Para ello usaremos una MV con Ubuntu Server 22.04. Vamos a necesitar instalar los siguientes servicios:
 
-* `Dovecot`como servidor IMAP y POP3
-* `Postfix` como servidor de correo SMTP - (MTA)&#x20;
-* `Mailutils` como cliente para el terminal (MUA)
-* `Thunderbird` como cliente, en un entorno gráfico
+* <mark style="color:purple;">`Dovecot`</mark>como servidor IMAP y POP3
+* <mark style="color:purple;">`Postfix`</mark> como servidor de correo SMTP - (MTA)&#x20;
+* <mark style="color:purple;">`Mailutils`</mark> como cliente para el terminal (MUA)
+* <mark style="color:purple;">`Thunderbird`</mark> como cliente, en un entorno gráfico
 
 Como se trata de un ejercicio académico, intentaremos simplificar la instalación para lo cual se utilizará la configuración más sencilla posible.&#x20;
 
