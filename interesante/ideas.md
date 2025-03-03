@@ -46,6 +46,7 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
 * gofish&#x20;
 * wls&#x20;
 * Lo-Os
+* https://www.qubes-os.org/intro/
 
 
 
@@ -63,6 +64,7 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
   [https://distrobox.it](https://distrobox.it)
 * Bluefin: Linux de escritorio sobre Fedora "inmutable" y con un escritorio estilo Ubuntu que ha sido diseñado expresamente para programadores.\
   [https://projectbluefin.io](https://projectbluefin.io)
+  
 
 
 
