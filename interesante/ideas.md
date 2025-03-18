@@ -7,14 +7,11 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
 * Motor de chat: Add Chat Engine to your Application: [https://chatengine.io/docs/react/v1/getting\_started](https://chatengine.io/docs/react/v1/getting_started)
 * Vercel - Plataforma en la nube, Plataforma como servicio (PaaS)\
   [https://vercel.com/](https://vercel.com/)\
-  [https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app](https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app)&#x20;
-* Firebase -  plataforma para el desarrollo de aplicaciones web y aplicaciones móviles\
+  [https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app](https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app)
+* Firebase - plataforma para el desarrollo de aplicaciones web y aplicaciones móviles\
   [https://firebase.google.com/?hl=es](https://firebase.google.com/?hl=es)
-
-
-
 * Ludus\
-  [https://ludus.cloud](https://ludus.cloud)&#x20;
+  [https://ludus.cloud](https://ludus.cloud)
 * Nutanix\
   [https://www.nutanix.com/es](https://www.nutanix.com/es)
 * Eve-ng\
@@ -23,33 +20,24 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
   [https://www.nagios.org](https://www.nagios.org)
 * Zabbix\
   [https://www.zabbix.com](https://www.zabbix.com)
-
-
-
 * Grafana\
   [https://grafana.com](https://grafana.com)
-* Apache Guacamale \
-  [https://guacamole.apache.org/](https://guacamole.apache.org/)&#x20;
+* Apache Guacamale\
+  [https://guacamole.apache.org/](https://guacamole.apache.org/)
 * Un buen sitio para aprender:\
-  [https://www.linuxserver.io](https://www.linuxserver.io)&#x20;
-
-
-
+  [https://www.linuxserver.io](https://www.linuxserver.io)
 * Cloudflare\
   [https://www.cloudflare.com](https://www.cloudflare.com)
-* Kasm \
+* Kasm\
   [https://kasmweb.com](https://kasmweb.com)
 * Terraform\
   [https://developer.hashicorp.com/terraform/install?ajs\_aid=7cbfd6a7-2e60-4e05-86ea-7f2d0e31fd15\&product\_intent=terraform](https://developer.hashicorp.com/terraform/install?ajs_aid=7cbfd6a7-2e60-4e05-86ea-7f2d0e31fd15\&product_intent=terraform)
 * Traeffik\
   [https://doc.traefik.io/traefik/](https://doc.traefik.io/traefik/)
-* gofish&#x20;
-* wls&#x20;
+* gofish
+* wls
 * Lo-Os
 * https://www.qubes-os.org/intro/
-
-
-
 * Packer\
   [https://www.packer.io](https://www.packer.io)
 * Ansible\
@@ -57,25 +45,20 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
   [https://semui.co](https://semui.co)\
   [https://vcloud-lab.com/entries/devops/getting-started-ansible-awx-tower-for-it-automation-run-first-playbook#google\_vignette](https://vcloud-lab.com/entries/devops/getting-started-ansible-awx-tower-for-it-automation-run-first-playbook#google_vignette)
 * Tailscale\
-  [https://tailscale.com/blog/how-tailscale-works](https://tailscale.com/blog/how-tailscale-works)&#x20;
+  [https://tailscale.com/blog/how-tailscale-works](https://tailscale.com/blog/how-tailscale-works)
 * Jupyter\
-  [https://jupyter.org](https://jupyter.org)&#x20;
-* Distrobox: te permite crear contenedores basados en diferentes distribuciones manteniendo  acceso al directorio de usuarios.\
+  [https://jupyter.org](https://jupyter.org)
+* Distrobox: te permite crear contenedores basados en diferentes distribuciones manteniendo acceso al directorio de usuarios.\
   [https://distrobox.it](https://distrobox.it)
 * Bluefin: Linux de escritorio sobre Fedora "inmutable" y con un escritorio estilo Ubuntu que ha sido diseñado expresamente para programadores.\
   [https://projectbluefin.io](https://projectbluefin.io)
-  
-
-
-
 * [https://isardvdi.com/](https://isardvdi.com/)
 * [https://semaphoreui.com/](https://semaphoreui.com/)
+* https://youtu.be/liWmx5fxjkg?si=HK7GOAZ3K6UKYgz5&#x20;
 
+Otros
 
-https://youtu.be/liWmx5fxjkg?si=HK7GOAZ3K6UKYgz5
-
-
-
-
-
+* [https://claude.ai/login?returnTo=%2F%3F](https://claude.ai/login?returnTo=%2F%3F)
+* [https://prosody.im](https://prosody.im)
+* [https://www.vaultproject.io](https://www.vaultproject.io)&#x20;
 
