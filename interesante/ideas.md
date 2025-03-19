@@ -65,3 +65,9 @@ Otros
 
 
 
+* [https://keepcoding.io/blog/que-son-las-reglas-yara/](https://keepcoding.io/blog/que-son-las-reglas-yara/)
+
+
+
+
+
