@@ -61,4 +61,7 @@ Otros
 * [https://claude.ai/login?returnTo=%2F%3F](https://claude.ai/login?returnTo=%2F%3F)
 * [https://prosody.im](https://prosody.im)
 * [https://www.vaultproject.io](https://www.vaultproject.io)&#x20;
+* [https://www.epitech-it.es/lenguaje-de-programacion-go-el-lenguaje-de-google/](https://www.epitech-it.es/lenguaje-de-programacion-go-el-lenguaje-de-google/)
+
+
 
