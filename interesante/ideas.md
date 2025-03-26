@@ -66,6 +66,7 @@ Otros
 
 
 * [https://keepcoding.io/blog/que-son-las-reglas-yara/](https://keepcoding.io/blog/que-son-las-reglas-yara/)
+* [https://www.nvidia.com/es-la/geforce/guides/broadcasting-guide/](https://www.nvidia.com/es-la/geforce/guides/broadcasting-guide/) \*\*\*
 
 
 
