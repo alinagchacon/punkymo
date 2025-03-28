@@ -26,20 +26,21 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
   [https://guacamole.apache.org/](https://guacamole.apache.org/)
 * Un buen sitio para aprender:\
   [https://www.linuxserver.io](https://www.linuxserver.io)
-* Cloudflare\
-  [https://www.cloudflare.com](https://www.cloudflare.com)
-* Kasm\
-  [https://kasmweb.com](https://kasmweb.com)
-* Terraform\
-  [https://developer.hashicorp.com/terraform/install?ajs\_aid=7cbfd6a7-2e60-4e05-86ea-7f2d0e31fd15\&product\_intent=terraform](https://developer.hashicorp.com/terraform/install?ajs_aid=7cbfd6a7-2e60-4e05-86ea-7f2d0e31fd15\&product_intent=terraform)
-* Traeffik\
-  [https://doc.traefik.io/traefik/](https://doc.traefik.io/traefik/)
+* Cloudflare
+  * [https://www.cloudflare.com](https://www.cloudflare.com)
+* Kasm
+  * [https://kasmweb.com](https://kasmweb.com)
+* Terraform
+  * [https://developer.hashicorp.com/terraform/install?ajs\_aid=7cbfd6a7-2e60-4e05-86ea-7f2d0e31fd15\&product\_intent=terraform](https://developer.hashicorp.com/terraform/install?ajs_aid=7cbfd6a7-2e60-4e05-86ea-7f2d0e31fd15\&product_intent=terraform)
+* Traeffik
+  * [https://doc.traefik.io/traefik](https://doc.traefik.io/traefik/)
+  * [https://technotim.live/posts/traefik-3-docker-certificates/](https://technotim.live/posts/traefik-3-docker-certificates/)
 * gofish
 * wls
 * Lo-Os
 * https://www.qubes-os.org/intro/
-* Packer\
-  [https://www.packer.io](https://www.packer.io)
+* Packer
+  * [https://www.packer.io](https://www.packer.io)
 * Ansible\
   [https://www.ansible.com](https://www.ansible.com)\
   [https://semui.co](https://semui.co)\
@@ -62,9 +63,6 @@ Otros
 * [https://prosody.im](https://prosody.im)
 * [https://www.vaultproject.io](https://www.vaultproject.io)&#x20;
 * [https://www.epitech-it.es/lenguaje-de-programacion-go-el-lenguaje-de-google/](https://www.epitech-it.es/lenguaje-de-programacion-go-el-lenguaje-de-google/)
-
-
-
 * [https://keepcoding.io/blog/que-son-las-reglas-yara/](https://keepcoding.io/blog/que-son-las-reglas-yara/)
 * [https://www.nvidia.com/es-la/geforce/guides/broadcasting-guide/](https://www.nvidia.com/es-la/geforce/guides/broadcasting-guide/) \*\*\*
 
