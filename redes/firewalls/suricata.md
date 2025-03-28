@@ -60,8 +60,87 @@ sudo systemctl status suricata
 
 ### Configuración básica
 
+La instalación que vamos a probar aquí es la básica que aparece en el sitio web oficial: [https://docs.suricata.io/en/suricata-7.0.2/quickstart.html](https://docs.suricata.io/en/suricata-7.0.2/quickstart.html). Por tanto,  nos vamos a focalizar en la configuración de la variable `HOME_NET` y de la `interfaz de red`.&#x20;
+
+Esta  variable `HOME_NET` debe incluir la dirección IP de la interfaz de red que queremos monitorizar, así como las redes locales en uso.&#x20;
+
+Vamos a acceder al directorio de configuración de suricata: /etc/suricata/ y hagamos una copia del archivo de configuración de Suricata, esto es:
+
+```
+sudo cp /etc/suricata/suricata.yml /etc/suricata/suricata.yml.BKP
+```
+
+A continuación, vamos a determinar la interfaz y la IP de red donde Suricata va a estar inspeccionando los paquetes de red:
+
+```
+ip addr
+```
+
+<figure><img src="../../.gitbook/assets/image (395).png" alt="" width="563"><figcaption><p>Dirección IP de la VM donde tengo instalado Suricata</p></figcaption></figure>
+
+Como se puede ver en el pantallazo anterior, el nombre de la interfaz es `enp0s3`, por lo que debemos ir a la sección  `af-packet`  del archivo `/etc/suricata/suricata.yml` y modificar el nombre de la interfaz de red para que coincidan.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (397).png" alt="" width="430"><figcaption><p>Detalle de la configuración de /etc/suricata/suricata.yml</p></figcaption></figure>
+
+Esta configuración utiliza la configuración recomendada para ejecutar el modo IDS en configuraciones básicas. Existen otras opciones de configuración, específicas para configuraciones de alto rendimiento.
+
+### Reglas, firmas, alertas
+
+Suricata utiliza reglas que permiten activar alertas. Por tanto, debemos instalar y actualizar dichas reglas. Para ello, podemos usar la herramienta siguiente para obtenerlas, actualizarlas y gestionarlas.
+
+```
+sudo suricata-update 
+```
+
+Nota: Recordad que solo estamos configurando el modo predeterminado, que obtiene el conjunto de reglas de ET Open.
+
+Una vez hecho esto, tendremos instaladas las reglas en el directorio `/var/lib/suricata/rules` y el  archivo `suricata.rules`. Por tanto, podemos reiniciar el servicio:
+
+```
+sudo systemctl restart suricata
+```
+
+y tendremos suricata en ejecución
+
+<figure><img src="../../.gitbook/assets/image (398).png" alt=""><figcaption><p>Suricata en ejecución</p></figcaption></figure>
+
+Y si queremos comprobar que Suricata está en ejecución podemos ver los logs:
+
+```
+sudo tail -f /var/log/suricata/suricata.log
+```
+
+Y veremos algo como lo siguiente:
+
+<figure><img src="../../.gitbook/assets/image (399).png" alt=""><figcaption><p>tail -f /var/log/suricata/suricata.log</p></figcaption></figure>
+
+### Creando alertas
+
+Si queremos probar que Suricata está usando la funcionalidad IDS , debemos usar una firma. Dicha firma tiene ID 2100498 y es la que corresponde al conjunto de reglas ET Open escrita específicamente para  casos de prueba.
+
+**2100498**:
+
+```
+alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7; metadata:created_at 2010_09_23, updated_at 2010_09_23;)
+```
+
+Esto emitirá una alerta sobre cualquier tráfico IP que contenga el contenido en su carga útil. Esta regla se puede activar fácilmente pero antes de hacerlo, iniciamos `tail` para ver las actualizaciones de `fast.log`.
+
+#### Testeando
+
+Si queremos testear el funcionamiento de  Suricata podemos hacer un curl a una web de testing y después visualizamos el contenido de los logs:
+
+```
+curl http://testmynids.org/uid/index.html
+sudo tail -f /var/log/suricata/fast.log
+```
+
+### &#x20;Firmas
+
 
 
 ### Links
 
 * [https://docs.suricata.io/en/suricata-7.0.2/quickstart.html](https://docs.suricata.io/en/suricata-7.0.2/quickstart.html)
+* [https://suricata.io](https://suricata.io)
+* [https://www.digitalocean.com/community/tutorials/understanding-suricata-signatures](https://www.digitalocean.com/community/tutorials/understanding-suricata-signatures)
