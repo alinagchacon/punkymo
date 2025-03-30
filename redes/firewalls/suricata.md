@@ -135,6 +135,20 @@ curl http://testmynids.org/uid/index.html
 sudo tail -f /var/log/suricata/fast.log
 ```
 
+### Más sobre las alertas
+
+Me puedo descargar:
+
+wget [https://rules.emergingthreats.net/open/suricata/](https://rules.emergingthreats.net/open/suricata/)emerging.rules.tar.gz
+
+descomprimir y mover los archivos a: /var/lib/suricata/rules/
+
+Crear un documento con las rules nuestras, por ejemplo:
+
+alert tcp $HOME\_NET any -> $EXTERNAL\_NET any (msg: "un usuario accedió a Internet"; sid:1000004;)\
+alert icmp any any -> $HOME\_NET any (msg: "ICMP conexión hecha"; sid:1000005;)\
+alert icmp any any -> $HOME\_NET 22 (msg: "Conexión establecida"; sid:1000006;)
+
 ### &#x20;Firmas
 
 
