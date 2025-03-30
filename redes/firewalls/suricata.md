@@ -139,15 +139,30 @@ sudo tail -f /var/log/suricata/fast.log
 
 Me puedo descargar:
 
-wget [https://rules.emergingthreats.net/open/suricata/](https://rules.emergingthreats.net/open/suricata/)emerging.rules.tar.gz
+```
+wget https://rules.emergingthreats.net/open/suricata/emerging.rules.tar.gz
+```
 
 descomprimir y mover los archivos a: /var/lib/suricata/rules/
 
 Crear un documento con las rules nuestras, por ejemplo:
 
-alert tcp $HOME\_NET any -> $EXTERNAL\_NET any (msg: "un usuario accedió a Internet"; sid:1000004;)\
-alert icmp any any -> $HOME\_NET any (msg: "ICMP conexión hecha"; sid:1000005;)\
-alert icmp any any -> $HOME\_NET 22 (msg: "Conexión establecida"; sid:1000006;)
+```
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "un usuario accedió a Internet"; sid:1000004;)
+alert icmp any any -> $HOME_NET any (msg: "ICMP conexión hecha"; sid:1000005;)
+alert icmp any any -> $HOME_NET 22 (msg: "Conexión establecida"; sid:1000006;)
+```
+
+Lo añadimos en default-rule-path en el /etc/suricata/suricata.yaml
+
+```
+default-rule-path: /var/lib/suricata/rules
+
+rule-files:
+   - suricata.rules
+   - emerging-exploit.rules
+   - my-rules
+```
 
 ### &#x20;Firmas
 
@@ -158,3 +173,4 @@ alert icmp any any -> $HOME\_NET 22 (msg: "Conexión establecida"; sid:1000006;)
 * [https://docs.suricata.io/en/suricata-7.0.2/quickstart.html](https://docs.suricata.io/en/suricata-7.0.2/quickstart.html)
 * [https://suricata.io](https://suricata.io)
 * [https://www.digitalocean.com/community/tutorials/understanding-suricata-signatures](https://www.digitalocean.com/community/tutorials/understanding-suricata-signatures)
+* [https://www.youtube.com/watch?v=oF4e90EPDug](https://www.youtube.com/watch?v=oF4e90EPDug)
