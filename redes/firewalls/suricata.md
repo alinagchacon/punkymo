@@ -164,6 +164,12 @@ rule-files:
    - my-rules
 ```
 
+### Comprobando
+
+suricata -c /etc/suricata/suricata.yaml -i enp0s3
+
+tail -f /var/log/suricata/fast.log
+
 ### &#x20;Firmas
 
 
