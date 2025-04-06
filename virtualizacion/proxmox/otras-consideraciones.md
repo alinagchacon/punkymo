@@ -2,7 +2,7 @@
 description: Proxmox
 ---
 
-# Otras consideraciones
+# 🚧 Otras consideraciones
 
 Proxmox se basa en tecnologías de virtualización asistida por hardware como KVM para permitir la creación y ejecución eficiente de VM en servidores físicos, proporcionando mejor rendimiento y seguridad en entornos de virtualización.&#x20;
 
