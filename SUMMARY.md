@@ -126,7 +126,7 @@
   * [Linux container - LXC](virtualizacion/proxmox/linux-container-lxc.md)
   * [Clúster](virtualizacion/proxmox/cluster.md)
   * [Red Interna](virtualizacion/proxmox/red-interna.md)
-  * [Backup](virtualizacion/proxmox/backup.md)
+  * [🚧 Proxmox Backup](virtualizacion/proxmox/proxmox-backup.md)
   * [🚧 Otras consideraciones](virtualizacion/proxmox/otras-consideraciones.md)
 * [Alpine Linux](virtualizacion/alpine-linux.md)
 * [Contenedores](virtualizacion/contenedores/README.md)
