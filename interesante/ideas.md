@@ -55,16 +55,23 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
   [https://projectbluefin.io](https://projectbluefin.io)
 * [https://isardvdi.com/](https://isardvdi.com/)
 * [https://semaphoreui.com/](https://semaphoreui.com/)
-* https://youtu.be/liWmx5fxjkg?si=HK7GOAZ3K6UKYgz5&#x20;
+* https://youtu.be/liWmx5fxjkg?si=HK7GOAZ3K6UKYgz5
+* [https://containerlab.dev](https://containerlab.dev)&#x20;
+* [https://vyos.io](https://vyos.io)&#x20;
+* [https://glpi-project.org](https://glpi-project.org)
 
 Otros
 
 * [https://claude.ai/login?returnTo=%2F%3F](https://claude.ai/login?returnTo=%2F%3F)
 * [https://prosody.im](https://prosody.im)
-* [https://www.vaultproject.io](https://www.vaultproject.io)&#x20;
 * [https://www.epitech-it.es/lenguaje-de-programacion-go-el-lenguaje-de-google/](https://www.epitech-it.es/lenguaje-de-programacion-go-el-lenguaje-de-google/)
 * [https://keepcoding.io/blog/que-son-las-reglas-yara/](https://keepcoding.io/blog/que-son-las-reglas-yara/)
 * [https://www.nvidia.com/es-la/geforce/guides/broadcasting-guide/](https://www.nvidia.com/es-la/geforce/guides/broadcasting-guide/) \*\*\*
+* [https://www.vaultproject.io](https://www.vaultproject.io) (Manage secrets and protect sensitive data with Vault)
+* [https://joselito.mataroa.blog](https://joselito.mataroa.blog) (un blog curioso)
+*
+
+
 
 
 
