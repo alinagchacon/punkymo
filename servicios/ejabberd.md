@@ -2,7 +2,7 @@
 description: Mensajería instantánea
 ---
 
-# Ejabberd
+# 🚧 Ejabberd
 
 Se trata de un servidor de mensajería instantánea de código abierto. Válido para plataformas Unix BSD, GNU/Linux, Microsoft Windows entre otras. Para la comunicación instantánea se utiliza XMPP.
 
@@ -137,3 +137,4 @@ Ahora accedemos a Pidgin y añadimos uno de los usuarios que hemos creado en eja
 ## Links
 
 * [https://www.process-one.net/blog/ejabberd-xmpp-server-useful-configuration-steps/](https://www.process-one.net/blog/ejabberd-xmpp-server-useful-configuration-steps/)&#x20;
+* [https://homebrewserver.club/configuring-a-modern-xmpp-server-es.html](https://homebrewserver.club/configuring-a-modern-xmpp-server-es.html) (Prosody)
