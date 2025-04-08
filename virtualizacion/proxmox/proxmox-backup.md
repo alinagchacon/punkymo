@@ -62,6 +62,17 @@ nc -zv IP 445
 
 
 
+## Samba
+
+Algunos apuntes al respecto:
+
+```
+smbtree
+testparm -s
+systemctl status nmbd.service
+smbclient -U user //IP/name_server
+```
+
 
 
 
@@ -72,3 +83,4 @@ nc -zv IP 445
 * [https://nosololinux.es/configurar-backups-de-proxmox-en-un-nas-asustor-via-smb-cifs/](https://nosololinux.es/configurar-backups-de-proxmox-en-un-nas-asustor-via-smb-cifs/)
 * [https://www.youtube.com/watch?v=TqUuoZ3IKZY](https://www.youtube.com/watch?v=TqUuoZ3IKZY)&#x20;
 * [https://www.youtube.com/watch?v=\_-8N\_MQmN80](https://www.youtube.com/watch?v=_-8N_MQmN80)
+* [https://www.redhat.com/en/blog/beginners-guide-firewalld](https://www.redhat.com/en/blog/beginners-guide-firewalld)
