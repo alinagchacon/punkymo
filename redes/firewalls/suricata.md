@@ -1,5 +1,5 @@
 ---
-description: under construction
+description: Under construction
 ---
 
 # 🚧 Suricata
@@ -166,11 +166,25 @@ rule-files:
 
 ### Comprobando
 
+<mark style="color:red;">Me falta ...</mark>
+
+```
 suricata -c /etc/suricata/suricata.yaml -i enp0s3
+```
 
+```
 tail -f /var/log/suricata/fast.log
+```
 
-### &#x20;Firmas
+\
+Firmas
+------
+
+<mark style="color:red;">Me falta ...</mark>
+
+## Prometheus y Grafana
+
+<mark style="color:red;">Me falta ...</mark>
 
 
 
