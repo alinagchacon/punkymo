@@ -37,12 +37,12 @@
     * [OpenVPN en pfSense](redes/firewalls/dos-firewall/pfsense/openvpn-en-pfsense.md)
     * [Port Forward](redes/firewalls/dos-firewall/pfsense/dmz.md)
     * [Alias](redes/firewalls/pfsense/alias.md)
-  * [🚧 Suricata](redes/firewalls/suricata.md)
 * [Proxy](redes/proxy/README.md)
   * [Squid en pfSense](redes/proxy/squid-en-pfsense/README.md)
     * [Squid Proxy Server](redes/proxy/squid-en-pfsense/squid-proxy-server.md)
     * [SquidGuard Proxy](redes/proxy/squid-en-pfsense/squidguard-proxy.md)
   * [Proxy reverse Nginx](redes/proxy/proxy-reverse-nginx.md)
+* [🚧 Suricata](redes/suricata.md)
 
 ## 🐝 Servicios
 
