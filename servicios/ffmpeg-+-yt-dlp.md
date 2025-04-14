@@ -115,7 +115,7 @@ A continuación os dejo algunas aportaciones realizadas por los estudiantes del 
 
 <details>
 
-<summary>Asmae El Haouari y Marcos Blasco</summary>
+<summary>Subtítulos y playlist entre otros - Asmae El Haouari y Marcos Blasco</summary>
 
 Selección de calidad específica:
 
@@ -239,7 +239,7 @@ Nota: También podemos usar formatos como BMP, TIFF, etc.
 
 <details>
 
-<summary>Marc Gea, Miquel Burguera, David Valverde</summary>
+<summary>Los básicos imprescindibles - Marc Gea, Miquel Burguera, David Valverde</summary>
 
 Conversión básica de formatos
 
@@ -317,9 +317,30 @@ Además tenemos:
 
 </details>
 
+<details>
 
+<summary>Seguridad y metadatos - Gerard Soteras, Xavier Conde, Timofey Kalugin </summary>
 
+Sentencia enfocada a la ciberseguridad, con el atributo `–xff` podemos\
+hacer creer que estamos descargando el video desde otro país.
 
+Con `–embed-metadata` podemos descargarnos todos los metadatos del video:
+
+```
+sudo yt-dlp --xff US --embed-metadata
+```
+
+Un comando bastante interesante que permite crear una versión del video únicamente con el\
+contenido visual, sin sonido. Esto puede ser útil durante el montaje si se desea usar el\
+video como fondo, mientras el contenido principal es una narración, como en los videos\
+de historias de vida, un formato que fue bastante popular en YouTube hace algunos años.
+
+```
+ffmpeg -i video.mp4 -an mute_video.mp4
+
+```
+
+</details>
 
 
 
