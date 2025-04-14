@@ -237,7 +237,85 @@ Nota: También podemos usar formatos como BMP, TIFF, etc.
 
 </details>
 
+<details>
 
+<summary>Marc Gea, Miquel Burguera, David Valverde</summary>
+
+Conversión básica de formatos
+
+```
+ffmpeg -i entrada.mp4 salida.avi
+```
+
+Extraer audio de un video
+
+```
+ffmpeg -i video.mp4 -vn -c:a copy audio.mp3
+```
+
+Extraer video sin audio
+
+```
+ffmpeg -i video.mp4 -an video_sin_audio.mp4
+```
+
+Recortar un fragmento de video
+
+```
+ffmpeg -i video.mp4 -ss 00:00:10 -to 00:00:20 -c copy recorte.mp4
+```
+
+Cambiar resolución (ej: a 720p)
+
+```
+ffmpeg -i video.mp4 -vf "scale=1280:720" video_720p.mp4
+```
+
+Cambiar bitrate (calidad)
+
+```
+ffmpeg -i video.mp4 -b:v 1M -b:a 128k video_compressed.mp4
+```
+
+Unir múltiples videos (usando lista.txt)
+
+```
+ffmpeg -f concat -i lista.txt -c copy salida.mp4
+```
+
+Mezclar audio y video
+
+```
+ffmpeg -i video_sin_audio.mp4 -i musica.mp3 -c:v copy -c:a aac final.mp4
+```
+
+Además tenemos:
+
+* Grabar pantalla en Linux (X11)\
+  ffmpeg -f x11grab -i :0.0 -f alsa -i default grabacion.mp4
+
+- Capturar webcam (v4l2)\
+  ffmpeg -f v4l2 -i /dev/video0 webcam.mp4
+
+* Convertir video a GIF\
+  ffmpeg -i video.mp4 -vf "fps=10,scale=640:-1" animacion.gif
+
+- Aplicar filtros (ej: rotar, espejo, desenfoque)\
+  ffmpeg -i video.mp4 -vf "hflip,vflip,boxblur=5" video\_editado.mp4
+
+* Añadir logo o imagen superpuesta\
+  ffmpeg -i video.mp4 -i logo.png -filter\_complex "overlay=10:10"\
+  video\_con\_logo.mp4
+
+- Streaming a RTMP (Twitch/YouTube)\
+  ffmpeg -i entrada.mp4 -c:v libx264 -preset fast -f flv\
+  rtmp://live.twitch.tv/app/STREAM\_KEY
+
+* Comando completo (recortar, escalar y comprimir)\
+  ffmpeg -i entrada.mov -ss 00:01:30 -to 00:02:30 -vf "scale=1280:720" -c:v libx264\
+  -crf 23 -c:a aac -b:a 128k salida.mp4
+
+</details>
 
 
 
