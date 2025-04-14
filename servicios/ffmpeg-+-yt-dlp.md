@@ -342,7 +342,112 @@ ffmpeg -i video.mp4 -an mute_video.mp4
 
 </details>
 
+<details>
 
+<summary>Adrià Trillo, Beatriz Suárez</summary>
+
+Vamos a descargar un vídeo sobre el que vamos a trabajar toda la primera parte. Para ello, hemos listado los formatos disponibles para el vídeo de la canción de River Flows in you:
+
+<mark style="color:purple;">sudo yt-dlp -F https://www.youtube.com/watch?v=7maJOI3QMu0\&ab\_channel=YirumaVEVO</mark>
+
+Ahora, vamos a descargar el vídeo en el formato que queramos. En nuestro caso, como es una canción, voy a descargar sólo el audio en webm. ya que es una opción con 155k bitrate, opus codec, que, entre todas las opciones disponibles parece ser la mejor opción en términos de calidad de audio, ya que tiene el bitrate más alto y un codec eficiente como opus, que es conocido por su buena calidad a tasas de bits moderadas.
+
+<figure><img src="../.gitbook/assets/image (403).png" alt=""><figcaption></figcaption></figure>
+
+Ahora, vamos a descargar el vídeo en el formato que queramos. En nuestro caso, como es una canción, voy a descargar sólo el audio en webm. ya que es una opción con 155k bitrate, opus codec, que, entre todas las opciones disponibles parece ser la mejor opción en términos de calidad de audio, ya que tiene el bitrate más alto y un codec eficiente como opus, que es conocido por su buena calidad a tasas de bits moderadas.
+
+<mark style="color:purple;">yt-dlp -f 251</mark>\ <mark style="color:purple;">https://www.youtube.com/watch?v=7maJOI3QMu0\&pp=ygURcml2ZXIgZmxvdyB</mark>\ <mark style="color:purple;">pbiB5b3U%3D</mark>
+
+<figure><img src="../.gitbook/assets/image (404).png" alt=""><figcaption><p>Descargando el video</p></figcaption></figure>
+
+Para poder trabajar con el resto de los comandos, vamos a descargar el vídeo completo, tomaremos la opción 231.\
+Esta opción tiene una resolución de 640x480, que es bastante buena para ver detalles, y la tasa de bits es relativamente alta, lo que implica buena calidad. El tamaño es más grande, pero si la calidad es lo que más te importa, esta opción es la mejor.\
+
+
+<figure><img src="../.gitbook/assets/image (405).png" alt=""><figcaption></figcaption></figure>
+
+Por otra parte, yt-dlp nos ofrece la opción de descargarnos el mismo vídeo, pero con una mejor resolución, esto se puede hacer mediante el comando:
+
+<mark style="color:purple;">yt-dlp -f bv\*+ba</mark>\ <mark style="color:purple;">https://www.youtube.com/watch?v=7maJOI3QMu0\&pp=ygURcml2ZXIgZmxvdyB</mark>\ <mark style="color:purple;">pbiB5b3U%3D</mark>
+
+<figure><img src="../.gitbook/assets/image (406).png" alt=""><figcaption></figcaption></figure>
+
+También, tenemos la opción de convertir formatos de vídeo en otro que queramos. Como ejemplo. convertiremos el vídeo que nos hemos descargado antes que está en el formato .mp4 al .mkv .
+
+<figure><img src="../.gitbook/assets/image (407).png" alt=""><figcaption></figcaption></figure>
+
+### Descargar subtítulos
+
+Para descargar los subtítulos, primero tenemos que mirar si estos están disponibles. Para ello, los listamos de la siguiente forma:
+
+<mark style="color:purple;">yt-dlp --list-subs https://www.youtube.com/watch?v=\_KztNIg4cvE</mark>
+
+<figure><img src="../.gitbook/assets/image (408).png" alt=""><figcaption></figcaption></figure>
+
+Una vez sabemos todos los subtítulos que nos podemos descargar, descargamos el vídeo junto a los subtítulos:\
+
+
+<mark style="color:purple;">yt-dlp --write-sub --sub-lang es-EkcP5AbUQBc --convert-subs srt -f</mark>\ <mark style="color:purple;">bestvideo+bestaudio https://www.youtube.com/watch?v=\_KztNIg4cvE</mark>
+
+<figure><img src="../.gitbook/assets/image (409).png" alt=""><figcaption></figcaption></figure>
+
+donde:
+
+•--write-subs: Indica que se descarguen los subtítulos.\
+•--sub-lang es: Especifica que se descarguen subtítulos en español.\
+•--convert-subs srt: Convierte los subtítulos a formato .srt.\
+•-f bestvideo+bestaudio: Descarga la mejor calidad de video y audio.\
+Si listamos los archivos, veremos que tenemos el vídeo en -webm y otro archivo con la extensión .srt . En este archivo se guardan los subtítulos.
+
+<figure><img src="../.gitbook/assets/image (410).png" alt=""><figcaption></figcaption></figure>
+
+Ahora, al reproducirlo tendremos que agregar los subtitulos descargados al vídeo y ya lo tendremos.
+
+<figure><img src="../.gitbook/assets/image (411).png" alt=""><figcaption></figcaption></figure>
+
+
+
+### Añadir marca de agua con FFMPEG
+
+Para añadir una marca de agua con ffmpeg, tenemos que seguir la siguiente sintaxis:
+
+\
+<mark style="color:purple;">ffmpeg -i video.mp4 -i marca\_de\_agua.png -filter\_complex "overlay=W-w-10:H-h-</mark>\ <mark style="color:purple;">10" -codec:a copy video\_con\_marca.mp4</mark>\
+
+
+Necesitamos una imagen en .png para poner de fondo y tendremos que indicarle la posición.\
+\
+<mark style="color:purple;">-filter\_complex "overlay=W-w-10:H-h-10"</mark> → Aplica un filtro para superponer la imagen\
+sobre el video:
+
+<mark style="color:purple;">overlay=W-w-10:H-h-10</mark> → Ubica la marca de agua en la esquina inferior derecha con\
+un margen de 10 píxeles.\
+\
+<mark style="color:purple;">oW-w-10</mark> → La posición X: coloca la imagen 10 píxeles antes del borde derecho.
+
+\
+<mark style="color:purple;">oH-h-10</mark> → La posición Y: coloca la imagen 10 píxeles antes del borde inferior.
+
+\
+<mark style="color:purple;">-codec:a copy</mark> → Copia el audio sin re-codificarlo (mantiene la calidad original).
+
+\
+**Comandos para posicionar bien la marca de agua**:\
+•Superior izquierda: overlay=10:10\
+•Superior derecha: overlay=W-w-10:10\
+•Inferior izquierda: overlay=10:H-h-10\
+•Inferior derecha: overlay=W-w-10:H-h-10
+
+Y si queremos redimensionar marca de agua:
+
+\
+<mark style="color:purple;">ffmpeg -i video.mp4 -i marca\_de\_agua.png -filter\_complex "\[1]\[0]scale=iw\*0.1:-</mark>\ <mark style="color:purple;">1\[wm];\[0]\[wm]overlay=W-w-10:H-h-10" -codec:a copy</mark>\ <mark style="color:purple;">video\_con\_marca\_redimensionada.mp4</mark>
+
+<figure><img src="../.gitbook/assets/image (412).png" alt=""><figcaption><p>La marca de agua de Amapola</p></figcaption></figure>
+
+
+
+</details>
 
 ## Links
 
