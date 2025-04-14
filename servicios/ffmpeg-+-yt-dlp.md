@@ -87,18 +87,160 @@ yt-dlp -f bv*+ba https://www.youtube.com/watch?v=bH3NFlkui4Y
 * <mark style="color:purple;">yt-dlp -F ‘BV\*\[height=1080]+BA’ URL</mark> # Para descargar archivo con una calidad específica.
 
 \
+Se queremos convertir  un video .mp4 en .mkv pero con las opciones siguentes:
+
+```
+ffmpeg -i video_original.mp4 -vcodec libx264 video_264.mkv
+ffmpeg -i video_original.mp4 -vcodec libx265 video_265.mkv
+```
+
+donde:\
+h264 - codec de video que usa la librería libx264\
+h265 - codec de video que usa la librería libx265
+
+
+
+Para recortar un fragmento de tiempo de un video más largo. Digamos, obtener el fragmento de video desde los 35seg hasta los 65seg (30seg de duración). Existe un parámetro con el que podemos realizar estas operaciones:
+
+```
+$ ffmpeg -i coldplay.mp4 -ss 35 -t 30 coldplay_frag.mp4
+$ ffmpeg -i coldplay.mp4 -ss 00:35 -to 01:05 coldplay_frag.mp4
+```
+
+
+
+## Aportaciones de estudiantes
+
+A continuación os dejo algunas aportaciones realizadas por los estudiantes del grupo de ASIX2º del curso 2024/2025.
+
+<details>
+
+<summary>Asmae El Haouari y Marcos Blasco</summary>
+
+Selección de calidad específica:
+
+```
+-f bestvideo+bestaudio)
+```
+
+​ Descarga de subtítulos:
+
+```
+--write-subs
+```
+
+Descarga de playlists completas:
+
+```
+--yes-playlist
+```
+
+Si FFmpeg nos baja demasiado la calidad o hace que el archivo pese mucho, podemos controlar esto\
+con el bitrate:
+
+```
+ffmpeg -i coldplay.avi -b:v 2500k -b:a 192k coldplay.mp4
+```
+
+donde:
+
+* -b:v 2500k → Fija el bitrate de video en 2500 kbps (mejor calidad, pero más peso)
+* ​-b:a 192k → Fija el bitrate de audio en 192 kbps (buena calidad sin ocupar\
+  demasiado).\
+
+
+Nota: Si el bitrate es muy bajo, el video se verá pixelado. Si es muy alto, ocupará demasiado espacio.
+
+Si queremos **extraer una imagen por segundo**, usamos:
+
+```
+ffmpeg -i video.mp4 -vf "fps=1" fotograma_%04d.png
+```
+
+Opciones clave:
+
+Para extraer **una imagen por segundo** utilizamos:\
+&#x20;<mark style="color:purple;">fps=1</mark>&#x20;
+
+Si queremos **2 imágenes por segundo**, usamos\
+<mark style="color:purple;">fps=2</mark>
+
+Para **numerar** las imágenes en formato 0001, 0002, etc.\
+&#x20;<mark style="color:purple;">%04d</mark>&#x20;
+
+Si necesitamos **un fotograma en un tiempo específico**, lo hacemos así:
+
+```
+ffmpeg -i video.mp4 -ss 00:01:30 -vframes 1 fotograma.png
+```
+
+Explicación rápida:\
+●​ -ss 00:01:30 → Saca el fotograma en el minuto 1:30.​\
+●​ -vframes 1 → Solo extrae una imagen.​
+
+Si queremos **una imagen cada 60 segundos**, usamos:
+
+```
+ffmpeg -i video.mp4 -vf "fps=1/60" fotograma_%04d.png
+```
+
+Nota: Esto es útil para obtener capturas periódicas sin saturar de imágenes.
+
+
+
+Para **extraer imágenes entre el minuto 2 y el 5, sacando 1 imagen por segundo**, hacemos:
+
+```
+ffmpeg -i video.mp4 -ss 00:02:00 -to 00:05:00 -vf "fps=1" fotograma_%04d.png
+```
+
 \
+Nota: Útil si solo nos interesa una parte del video.
+
+
+
+Si en **lugar de PNG queremos JPG**, solo cambiamos la extensión:
+
+```
+ffmpeg -i video.mp4 -vf "fps=1" fotograma_%04d.jpg
+```
+
+Nota: También podemos usar formatos como BMP, TIFF, etc.
+
+
+
+## Links
+
+* RTMP
+  * Adobe RTMP Specification: https://www.adobe.com/devnet/rtmp.html
+  * Wowza RTMP vs HLS: https://www.wowza.com/blog/hls-vs-rtmp
+
+- HLS\
+  ○​ Apple HLS Docs: https://developer.apple.com/streaming/\
+  ○​ Cloudflare HLS Guide: https://www.cloudflare.com/learning/video/what-is-http-live-streaming/3.​
+
+* RTSP\
+  ○​ RTSP RFC: https://tools.ietf.org/html/rfc2326
+
+- &#x20;SRT\
+  ○​ SRT Alliance: https://www.srtalliance.org/\
+  FFmpeg
+  * &#x20;FFmpeg Wiki: https://trac.ffmpeg.org/wiki
+
+* yt-dlp
+  * &#x20;GitHub Repository: https://github.com/yt-dlp/yt-dlp
+  * Installation Guide: https://github.com/yt-dlp/yt-dlp/wiki/Installation
+
+- Codecs Comparativos
+  * &#x20;Xiph.org (VP9/Opus): https://xiph.org/
+  * AOMedia (AV1): https://aomedia.org/
+
+</details>
 
 
 
 
 
-
-\
-\
-\
-\
-\
 
 
 
@@ -106,5 +248,11 @@ yt-dlp -f bv*+ba https://www.youtube.com/watch?v=bH3NFlkui4Y
 ## Links
 
 * [https://ffmpeg.org](https://ffmpeg.org)
+* https://www.rapidseedbox.com/es/blog/yt-dlp-complete-guide
+* [https://multimedia.easeus.com/es/video-download/como-utilizar-yt-dlp.html](https://multimedia.easeus.com/es/video-download/como-utilizar-yt-dlp.html)
+* https://github.com/yt-dlp/yt-dlp-wiki/blob/master/Installation.md
+* [https://terminaldelinux.com/terminal/multimedia/ffmpeg/](https://terminaldelinux.com/terminal/multimedia/ffmpeg/) \*\*\*
+
+
 
 \
