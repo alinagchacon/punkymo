@@ -344,7 +344,7 @@ ffmpeg -i video.mp4 -an mute_video.mp4
 
 <details>
 
-<summary>Adrià Trillo, Beatriz Suárez</summary>
+<summary>Marca de agua y subtítulos - Adrià Trillo, Beatriz Suárez</summary>
 
 Vamos a descargar un vídeo sobre el que vamos a trabajar toda la primera parte. Para ello, hemos listado los formatos disponibles para el vídeo de la canción de River Flows in you:
 
