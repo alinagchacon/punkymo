@@ -24,12 +24,25 @@ layout:
 
 [<mark style="color:red;">Quiero reconocer aquí cuánto estoy aprendiendo de ellos y darles las gracias.</mark>](https://tools.ntechadmin.com)
 
-[**Os recomiendo  visitar los tutoriales escritos por Xavier Adell que también se irán actualizando.**](https://tools.ntechadmin.com)
+[**Os  dejo aquí varios enlaces útiles: de alumnos, de profesores**](https://tools.ntechadmin.com)**:**
 
 {% embed url="https://docs.ntechadmin.com" %}
+de Xavier Adell
+{% endembed %}
 
 {% embed url="https://tools.ntechadmin.com" %}
 
 {% embed url="https://apuntes-alex.gitbook.io/apuntes-smx-alex-viladot" %}
+de Alex Viladot
+{% endembed %}
+
+{% embed url="https://malcrvz.gitbook.io/the-vx-files" %}
+de Alejandro Liébana
+{% endembed %}
+
+
+
+_**Compartir conocimiento nos trae riqueza**_
 
 <figure><img src=".gitbook/assets/punymo.webp" alt="" width="188"><figcaption></figcaption></figure>
+
