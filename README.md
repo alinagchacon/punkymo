@@ -40,6 +40,10 @@ de Alex Viladot
 de Alejandro Liébana
 {% endembed %}
 
+{% embed url="https://gsoteras.gitbook.io/gsoteras" %}
+de Gerard Soteras
+{% endembed %}
+
 
 
 _**Compartir conocimiento nos trae riqueza**_
