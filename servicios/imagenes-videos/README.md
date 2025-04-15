@@ -1,8 +1,8 @@
 ---
-description: apuntes ... breves
+description: Apuntes ... breves
 ---
 
-# Algo de imágenes y vídeos
+# 🚧 Imágenes - Vídeos
 
 Este mundo de las imágenes y los vídeos es fascinante. Hace un par de años tuve un colega muy joven, Isaac, que había estudiado Telecos con especialidad en audiovisuales. Algunas cosas me explicó y me quedé con ganas de aprender más. Después tuve dos alumnos a los que le gustaba el tema de la música y por ellos aprendí sobre FFmpeg. Este curso tenemos otro alumno al que le gusta la música y espero que algo más me enseñe.
 

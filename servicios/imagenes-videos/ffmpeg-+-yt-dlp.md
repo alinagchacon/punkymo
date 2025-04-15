@@ -1,4 +1,4 @@
-# 🚧 FFMPEG + YT-DLP
+# FFMPEG + YT-DLP
 
 ## ¿Qué es FFMPEG?
 
