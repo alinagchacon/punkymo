@@ -16,7 +16,7 @@ Veamos el diagrama siguiente donde tenemos los dispositivos involucrados en una 
 * Proxy: el servidor proxy intermediario, al que llamamos (B)
 * Servidores web: a los que llamamos (C)
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Proxy de reenvío</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Proxy de reenvío</p></figcaption></figure>
 
 Depende de la ubicación del servidor proxy: delante del cliente o delante del servidor web estaríamos ante un servidor proxy de reenvío o un reverse proxy.
 
@@ -24,7 +24,7 @@ Un proxy inverso se sitúa delante de los servidores que pueden ser uno o varios
 
 
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Proxy inverso</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Proxy inverso</p></figcaption></figure>
 
 Podemos decir que un proxy de reenvío al situarse delante del cliente, se asegura que ningún servidor se comunique directamente con él.  Por el contrario, un proxy inverso se sitúa delante del servidor y se asegura que ningún cliente se comunique directamente con ese servidor.
 

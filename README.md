@@ -46,7 +46,5 @@ de Gerard Soteras
 
 
 
-_**Compartir conocimiento nos trae riqueza**_
-
-<figure><img src=".gitbook/assets/punymo.webp" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/punymo.webp" alt="" width="188"><figcaption><p><mark style="color:purple;">Compartir conocimiento, nos hace ricos</mark></p></figcaption></figure>
 
