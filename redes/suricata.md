@@ -4,13 +4,24 @@ description: Under construction
 
 # 🚧 Suricata
 
+
+
 Suricata es un sistema de detección y prevención de intrusiones en la red, IDPS. Es un sistema de código abierto, desarrollado por una comunidad de seguridad informática.&#x20;
 
-Se considera de un alto rendimiento y una alta capacidad para examinar el tráfico de la red en tiempo real, es también capaz de identificar patrones maliciones y responder a amenazas en modo activo. Es un sistema versatilidad y potente que lo hacen muy popular en la protección de redes.
+Es un motor de alto rendimiento con una alta capacidad para examinar el tráfico de la red en tiempo real, es también capaz de identificar patrones maliciones y responder a amenazas en modo activo. Es un sistema versatilidad y potente que lo hacen muy popular en la protección de redes.
+
+Un IDS previene y detecta, esto es, se mantiene a la escucha  del tráfico de red, aplicando reglas y haciendo reconocimiento de patrones de atque para evitar ataques a la red.
+
+Sirve de complemento de un firewall donde podemos tener abiertos puertos como por ejemplo: el 80 o 443 del servicio web y nos permitiría detectar intrusiones en el sistema.
+
+Hay dos tipos de IDS:
+
+* Pasivo: permite registrar las intrusiones y manda alertas.
+* Activo: como el pasivo pero es capaz de bloquear las direcciones IP o cerrar puertos.
 
 ### Modos activo y pasivo
 
-Suricata tiene dos modos de funcionamiento: pasivo y activo. Veamos.
+Suricata tiene de los dos modos de funcionamiento: pasivo y activo. Veamos.
 
 **Modo activo**
 
@@ -76,11 +87,11 @@ A continuación, vamos a determinar la interfaz y la IP de red donde Suricata va
 ip addr
 ```
 
-<figure><img src="../../.gitbook/assets/image (395).png" alt="" width="563"><figcaption><p>Dirección IP de la VM donde tengo instalado Suricata</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (395).png" alt="" width="563"><figcaption><p>Dirección IP de la VM donde tengo instalado Suricata</p></figcaption></figure>
 
 Como se puede ver en el pantallazo anterior, el nombre de la interfaz es `enp0s3`, por lo que debemos ir a la sección  `af-packet`  del archivo `/etc/suricata/suricata.yml` y modificar el nombre de la interfaz de red para que coincidan.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (397).png" alt="" width="430"><figcaption><p>Detalle de la configuración de /etc/suricata/suricata.yml</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (397).png" alt="" width="430"><figcaption><p>Detalle de la configuración de /etc/suricata/suricata.yml</p></figcaption></figure>
 
 Esta configuración utiliza la configuración recomendada para ejecutar el modo IDS en configuraciones básicas. Existen otras opciones de configuración, específicas para configuraciones de alto rendimiento.
 
@@ -102,7 +113,7 @@ sudo systemctl restart suricata
 
 y tendremos suricata en ejecución
 
-<figure><img src="../../.gitbook/assets/image (398).png" alt=""><figcaption><p>Suricata en ejecución</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (398).png" alt=""><figcaption><p>Suricata en ejecución</p></figcaption></figure>
 
 Y si queremos comprobar que Suricata está en ejecución podemos ver los logs:
 
@@ -112,7 +123,7 @@ sudo tail -f /var/log/suricata/suricata.log
 
 Y veremos algo como lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (399).png" alt=""><figcaption><p>tail -f /var/log/suricata/suricata.log</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (399).png" alt=""><figcaption><p>tail -f /var/log/suricata/suricata.log</p></figcaption></figure>
 
 ### Creando alertas
 
@@ -182,15 +193,159 @@ Firmas
 
 <mark style="color:red;">Me falta ...</mark>
 
-## Prometheus y Grafana
+## Prometheus
 
-<mark style="color:red;">Me falta ...</mark>
+Prometheus es un conjunto de herramientas de código abierto que permite la monitorización de sistemas. Fue desarrollado originalmente en SoundCloud y desde su creación en 2012, numerosas empresas y organizaciones lo han adoptado. El proyecto cuenta con una comunidad de desarrolladores y usuarios muy activa y fue escrito en el lenguaje de programación `Go`.&#x20;
+
+Para su funcionamiento Prometheus recopila y almacena métricas como datos de series temporales, esto es:  se almacenan en la base de datos junto al instante de tiempo en el que el valor se ha registrado.
+
+Estas métricas que almacena Prometheus  dependen de la aplicación o del sistema que se vaya a monitorizar. Lo que vamos a monitorizar o medir varía según la aplicación o las necesidades. Si hablamos de un servidor web, serían los tiempos de solicitud; si se trata de una base de datos, puede ser el número de conexiones o consultas activas. También pudiéramos medir el uso de CPU, de la  memoria, etc.&#x20;
+
+Las métricas resultan fundamentales para comprender por qué una aplicación funciona de un modo. Por ejemplo, pudiéramos querer saber por qué una aplicación web va lenta. Para ello necesitaríamos conocer si la aplicación se ralentiza cuando el número de solicitudes es alto. Tendríamos que disponer de una métrica de conteo de solicitudes.
+
+En definitiva, toda la información recogida a través de las métricas nos facilitaría  el diagnóstico de los errores en los servicios, en los sistemas o aplicaciones que se  están monitorizando.
+
+El ecosistema de Prometheus consta de múltiples componentes, muchos de los cuales son opcionales pero dispone de 3 fundamentales que son:
+
+* **Servidor -** que almacena los datos de las métricas. Es el servidor principal  que extrae y almacena datos de series temporales.
+* **Librería cliente -** que sirve para calcular y exponer las métricas al cliente, para instrumentar el código de la aplicación.
+* **Gestor de alertas -** genera las alertas basadas en reglas.
 
 
+
+### Instalación
+
+En mi caso no lo he instalado explícitamente, se instaló solo con Suricata. Podemos verificar que lo tenemos en escucha por el puerto 9090.
+
+<figure><img src="../.gitbook/assets/image (413).png" alt=""><figcaption><p>prometheus se encuentra en escucha por el puerto 9090</p></figcaption></figure>
+
+Por tanto, si tengo la VM en modo adaptador puente, puedo acceder al servicio a través de:
+
+<figure><img src="../.gitbook/assets/image (414).png" alt="" width="563"><figcaption><p>Panel de Prometheus</p></figcaption></figure>
+
+**Directorio de trabajo**
+
+Tengo prometheus en la siguiente ubicación. Ahí es donde se encuentra el archivo de configuración: prometheus.yml.
+
+<pre><code><strong>/var/snap/prometheus/86
+</strong></code></pre>
+
+**Instalación y configuración del `node_exporter`**
+
+> Este `node_exporter` es el agente que va a recopilar y envíar las métricas de nuestro servidor Ubuntu Server. Recopilará parámetros como CPU, RAM, sistema de archivos y estadísticas de la red.
+
+Lo primero será crear el usuario de servicio "node\_exporter”:
+
+```
+useradd -m -s /bin/false node_exporter
+```
+
+Ahora nos descargamos el archivo del node\_exporter. Para ello, nos vamos a la página oficial de Prometheus [https://prometheus.io/download/](https://prometheus.io/download/).
+
+```
+wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
+```
+
+Una vez tenemos el archivo descargado en nuestro linux, lo vamos a descomprimir y copiar al directorio `/usr/local/bin`:
+
+```
+tar -zxpvf node_exporter-1.5.0.linux-amd64.tar.gz
+cd node_exporter-1.5.0.linux-amd64
+cp node_exporter /usr/local/bin/
+chown -R node_exporter:node_exporter /usr/local/bin/node_exporter
+```
+
+Con el siguiente paso vamos a crear el servicio `node_exporter`:
+
+```
+sudo nano /etc/systemd/system/node_exporter.service
+Description=Prometheus Node Exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=node_exporter
+Group=node_exporter
+Type=simple
+ExecStart=/usr/local/bin/node_exporter
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Guardamos, cerramos y reiniciamos los servicios para que tome la nueva configuración del systemd y luego volver a iniciar el servicio de node\_exporter:
+
+```
+systemctl daemon-reload
+systemctl start node_exporter
+systemctl enable node_exporter
+```
+
+Podemos volver a comprobar que tenemos el servicio activo por el puerto 9100:
+
+<figure><img src="../.gitbook/assets/image (415).png" alt=""><figcaption><p>Comprobamos que tenemos el servicio node_exporter escuchando por el puerto 9100</p></figcaption></figure>
+
+Para finalizar con esta parte de la configuración añadiremos el nuevo job `node_exporter` al archivo de configuración `prometheus.yml`:
+
+```mathml
+sudo nano /var/snap/prometheus/86/prometheus.yml
+
+# Global config
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+  scrape_timeout: 15s
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+    - targets: ['localhost:9090']
+  - job_name: 'node_exporter'
+    static_configs:
+    - targets: ['localhost:9100'] 
+```
+
+Ahora deberíamos reiniciar el servicio “prometheus.service” y  poder visualizar las métricas por la interfaz web:
+
+```
+systemctl restart prometheus.service
+```
+
+### Grafana
+
+Para instalar grafana, hacemos:
+
+```
+sudo apt-get install -y adduser libfontconfig1 musl
+wget https://dl.grafana.com/enterprise/release/grafana-enterprise_11.6.0_amd64.deb
+sudo dpkg -i grafana-enterprise_11.6.0_amd64.deb
+```
+
+Podemos verificar que tenemos el servicio activo escuchando por el puerto 3000:
+
+<figure><img src="../.gitbook/assets/image (416).png" alt=""><figcaption><p>Grafana por el puerto 3000</p></figcaption></figure>
+
+Finalmente podremos acceder a la web de Grafana. Primero nos aparece un usuario y contraseña para el cual usamos las credenciales por defecto: user: admin, password: admin.
+
+<figure><img src="../.gitbook/assets/image (417).png" alt=""><figcaption><p>Dashboard de grafana </p></figcaption></figure>
+
+<mark style="color:red;">To be continued ...</mark>
 
 ### Links
+
+Suricata
 
 * [https://docs.suricata.io/en/suricata-7.0.2/quickstart.html](https://docs.suricata.io/en/suricata-7.0.2/quickstart.html)
 * [https://suricata.io](https://suricata.io)
 * [https://www.digitalocean.com/community/tutorials/understanding-suricata-signatures](https://www.digitalocean.com/community/tutorials/understanding-suricata-signatures)
+* [https://www.maquinasvirtuales.eu/implementar-soc-instalacion-suricata-bajo-proxmox/](https://www.maquinasvirtuales.eu/implementar-soc-instalacion-suricata-bajo-proxmox/)
 * [https://www.youtube.com/watch?v=oF4e90EPDug](https://www.youtube.com/watch?v=oF4e90EPDug)
+
+Prometheus
+
+* [https://aprenderbigdata.com/prometheus/](https://aprenderbigdata.com/prometheus/)
+* [https://prometheus.io/docs/introduction/overview/](https://prometheus.io/docs/introduction/overview/)
+
+Grafana
+
+* [https://grafana.com/grafana/download](https://grafana.com/grafana/download)
+
