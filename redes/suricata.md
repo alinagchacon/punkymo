@@ -348,4 +348,5 @@ Prometheus
 Grafana
 
 * [https://grafana.com/grafana/download](https://grafana.com/grafana/download)
+* [https://medium.com/@ismaelaguilera\_/instalación-y-configuración-de-prometheus-grafana-centos8-331c0e43ccc1](https://medium.com/@ismaelaguilera_/instalaci%C3%B3n-y-configuraci%C3%B3n-de-prometheus-grafana-centos8-331c0e43ccc1)
 
