@@ -1,14 +1,12 @@
 # Jellyfin
 
-Es un proyecto que se fundó en el 2018, de software libre, bajo licencia _GPL_ de _GNU como una bifurcación de <mark style="color:blue;">`Emby`</mark>_. En realidad, desciende de la versión 3.5.2 de <mark style="color:blue;">Emby</mark> que se trasladó a  .NET Core para habilitar el soporte multiplataforma.&#x20;
+Es un proyecto que se fundó en el 2018, de software libre, bajo licencia _GPL_ de _GNU como una bifurcación de <mark style="color:blue;">`Emby`</mark>_. En realidad, desciende de la versión 3.5.2 de <mark style="color:blue;">Emby</mark> que se trasladó a  .NET Core para habilitar el soporte multiplataforma.  Es un servidor multimedia gratuito y de código abierto.
 
 Está soportado por **Debian, Ubuntu**, **Fedora, CentOS**, **Windows** en versiones portátiles y de instalación, y en **Docker**.
 
+​Jellyfin es un sistema de medios que facilita el control, administración y transmisión de medios, como una alternativa a Emby y Plex que son sistemas propietarios. Esto es, un conjunto de aplicaciones multimedia diseñadas para organizar, gestionar y compartir archivos multimedia digitales en dispositivos conectados en red, con lo que proporciona medios desde un servidor dedicado a dispositivos de usuarios finales a través de múltiples aplicaciones.&#x20;
 
-
-​Jellyfin es un sistema de medios que facilita el control, administración y transmisión de medios, como una alternativa a Emby y Plex que son sistemas propietarios. Proporciona medios desde un servidor dedicado a dispositivos de usuarios finales a través de múltiples aplicaciones.&#x20;
-
-
+Como es un modelo cliente - servidor, la aplicación servidor se instala en una máquina con [Microsoft Windows](https://es.wikipedia.org/wiki/Microsoft_Windows), [macOS](https://es.wikipedia.org/wiki/MacOS), [Linux](https://es.wikipedia.org/wiki/GNU/Linux) o en un contenedor [Docker](https://es.wikipedia.org/wiki/Docker_\(software\)), y otra aplicación que se ejecuta en un dispositivo cliente, como un teléfono inteligente, una tableta, una televisión inteligente, un reproductor multimedia en streaming, una videoconsola o un navegador web. ​
 
 ## Instalando Jellyfin
 
@@ -83,4 +81,4 @@ Lo ideal, al menos para el usuario novel,  es usar el repositorio oficial de plu
 
 * [https://www.jellyfin.eu/instalacion-de-jellyfin/](https://www.jellyfin.eu/instalacion-de-jellyfin/)&#x20;
 * [https://docs.linuxserver.io/images/docker-jellyfin](https://docs.linuxserver.io/images/docker-jellyfin)
-*
+* [https://jellyfin.org/docs/general/installation/linux#debian--ubuntu-and-derivatives](https://jellyfin.org/docs/general/installation/linux#debian--ubuntu-and-derivatives)
