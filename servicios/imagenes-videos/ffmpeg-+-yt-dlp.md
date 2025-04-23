@@ -450,6 +450,12 @@ Y si queremos redimensionar marca de agua:
 
 </details>
 
+## Otras aportaciones&#x20;
+
+Un documento sobre el protocolo RTMP, Docker y OBS:
+
+{% file src="../../.gitbook/assets/M08UF4A2-RTMP_Leonardo+Duarte,+Joel+Diaz,+Marc+Mountoto,+Beatriz+Suarez,+Adrià+Trillo,+Nicolas+Guerra.pdf" %}
+
 ## Links
 
 * [https://ffmpeg.org](https://ffmpeg.org)

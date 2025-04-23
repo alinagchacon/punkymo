@@ -78,11 +78,14 @@
   * [Ejabberd](servicios/mensajeria-instantanea/ejabberd.md)
 * [🚧 Imágenes - Vídeos](servicios/imagenes-videos/README.md)
   * [FFMPEG + YT-DLP](servicios/imagenes-videos/ffmpeg-+-yt-dlp.md)
-* [Plex](servicios/plex.md)
-* [Jellyfin](servicios/jellyfin.md)
-* [NextCloud](servicios/nextcloud.md)
-* [Plesk](servicios/plesk.md)
+  * [Plex](servicios/imagenes-videos/plex.md)
+  * [Jellyfin](servicios/imagenes-videos/jellyfin.md)
+  * [Plesk](servicios/imagenes-videos/plesk.md)
 * [Webmin + Virtualmin](servicios/webmin-+-virtualmin.md)
+
+***
+
+* [NextCloud](nextcloud.md)
 
 ## 🔑 Seguridad
 

@@ -11,19 +11,19 @@ En el 2013, se lanzó [Plex Home Theater ](https://www.plex.tv/es/blog/plex-home
 * Es el motor del servidor de media.
 * Es compatible con un amplio rango de formatos multimedia
 * Permite listas de reproducción, visualizaciones de audio y plugin de terceros.&#x20;
-* Puede reproducir la mayor parte de los ficheros de audio y video, al igual que visualizar imágenes de diferentes fuentes como disco duro, CD/DVD-ROM, USB flash, Internet y redes LAN ([SMB/SAMBA/CIFS](https://es.wikipedia.org/wiki/Server\_Message\_Block) shares (Windows File-Sharing) o realizar streaming sobre [UPnP (Universal Plug and Play)](https://es.wikipedia.org/wiki/Universal\_Plug\_and\_Play) y [DLNA](https://es.wikipedia.org/wiki/Digital\_Living\_Network\_Alliance) y media servers.&#x20;
+* Puede reproducir la mayor parte de los ficheros de audio y video, al igual que visualizar imágenes de diferentes fuentes como disco duro, CD/DVD-ROM, USB flash, Internet y redes LAN ([SMB/SAMBA/CIFS](https://es.wikipedia.org/wiki/Server_Message_Block) shares (Windows File-Sharing) o realizar streaming sobre [UPnP (Universal Plug and Play)](https://es.wikipedia.org/wiki/Universal_Plug_and_Play) y [DLNA](https://es.wikipedia.org/wiki/Digital_Living_Network_Alliance) y media servers.&#x20;
 * Tiene listas de reproducción de música y video, así como una función de [karaoke](https://es.wikipedia.org/wiki/Karaoke) y gran variedad de audio visualizers y [screensavers](https://es.wikipedia.org/wiki/Screensaver).
 * Incluye características como la capacidad de agregar subtítulos, integración con servicios de transmisión de contenido en línea y la sincronización de contenido para su acceso sin conexión.
 * Alberga los contenidos y los plugins que son enviados por streaming al media player:  Plex Home Theater y las apps móviles de Plex tanto si se encuentran en el mismo equipo, en la misma red local como en Internet.
-* **Plex Online** da acceso a un listado de plugin que permite disfrutar contenido en línea como [Netflix ](https://www.netflix.com/es/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fbrowse)y [Hulu](https://www.hulu.com/welcome?orig\_referrer=https%3A%2F%2Fwww.google.com%2F).
+* **Plex Online** da acceso a un listado de plugin que permite disfrutar contenido en línea como [Netflix ](https://www.netflix.com/es/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fbrowse)y [Hulu](https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fwww.google.com%2F).
 * Puede ser configurado para clasificar contenido en cualquier ruta del equipo en que se ejecuta, además de poder obtener el contenido de **iTunes**, **iPhoto**, y **Aperture** de forma automática.&#x20;
 * Antes de que el servidor envíe el contenido vía [streaming](https://es.wikipedia.org/wiki/Streaming), éste puede ser [transcodificado](https://es.wikipedia.org/wiki/Transcodificar) (conversión directa del tipo de señal de digital a digital entre [codecs](https://es.wikipedia.org/wiki/C%C3%B3dec)) por el servidor para reducir banda ancha, o por brindar compatibilidad con el dispositivo al que se envía el contenido.  En resumen, garantiza que el contenido se reproduzca correctamente en cualquier dispositivo, con independencia del formato o la resolución original.
 * Utiliza los metadatos de librerías de código abierto  de manera automática para encontrar información de los elementos de la librería.
 * Puede decodificar video de alta definición Full HD, FHD o [1080p](https://es.wikipedia.org/wiki/1080p), a
-* Con el hardware apropiado, es capaz de soportar decodificación por hardware de video a H.264 o MPEG-4 (norma que define un [códec de vídeo](https://es.wikipedia.org/wiki/C%C3%B3dec\_de\_v%C3%ADdeo) de alta compresión​)
+* Con el hardware apropiado, es capaz de soportar decodificación por hardware de video a H.264 o MPEG-4 (norma que define un [códec de vídeo](https://es.wikipedia.org/wiki/C%C3%B3dec_de_v%C3%ADdeo) de alta compresión​)
 * Está diseñado para tomar ventaja de una conexión de internet si  está disponible, y usa por defecto:&#x20;
   * [TheMovieDB](https://www.themoviedb.org) para obtener los [thumbnails](https://es.wikipedia.org/wiki/Thumbnail) y las sinopsis de películas.
-  * [TheTVDB ](https://thetvdb.com)para las previsualizaciones de [shows de tv](https://es.wikipedia.org/wiki/Programa\_\(difusi%C3%B3n\))&#x20;
+  * [TheTVDB ](https://thetvdb.com)para las previsualizaciones de [shows de tv](https://es.wikipedia.org/wiki/Programa_\(difusi%C3%B3n\))&#x20;
   * [Metadata](https://es.wikipedia.org/wiki/Metadata), [CDDB](https://es.wikipedia.org/wiki/CDDB) (vía [FreeDB](https://es.wikipedia.org/wiki/FreeDB)) para información de CD de audio.
   * [AMG](https://es.wikipedia.org/wiki/Allmusic) para imágenes de las portadas de álbumes.&#x20;
 
@@ -70,28 +70,28 @@ Una vez que esté instalado puedes acceder a través de:
 
 Esto te permite acceder a una pantalla  de inicio de sesión de Plex.  Ingresa tus credenciales o regístrate.&#x20;
 
-<figure><img src="../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p>Plex en Ubuntu local</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p>Plex en Ubuntu local</p></figcaption></figure>
 
 Una vez que te registras deberías obtener esta pantalla como ésta:
 
-<figure><img src="../.gitbook/assets/image (2) (6).png" alt=""><figcaption><p>Plex en Ubuntu Server - docker</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption><p>Plex en Ubuntu Server - docker</p></figcaption></figure>
 
 Una vez que clicas en <mark style="color:blue;">`Entendido`</mark>, verás una ventana emergente que te ofrece comprar `Plex Pass` con características exclusivas. Omite este paso dado que no es necesario para comenzar a usar `Plex Media Server`.  A continuación:&#x20;
 
 * Asignamos un nombre para el servidor de medios.&#x20;
 * Nos aseguramos de seleccionar `Permitirme acceder a mis medios fuera de mi casa`. dado que es  es necesario para poder acceder al contenido desde fuera del hogar.
 
-<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Una vez hecho esto, podemos organizar la biblioteca de medios:
 
-<figure><img src="../.gitbook/assets/image (9) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (6).png" alt=""><figcaption></figcaption></figure>
 
 Una vez terminada esa parte de la configuración, en mi caso, seleccioné Netflix que es lo que tengo...
 
 ## Links
 
-<figure><img src="../.gitbook/assets/image (8) (1) (1) (2).png" alt=""><figcaption><p>Plex - Netflix</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (2).png" alt=""><figcaption><p>Plex - Netflix</p></figcaption></figure>
 
 
 
