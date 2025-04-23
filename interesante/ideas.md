@@ -69,7 +69,16 @@ Otros
 * [https://www.nvidia.com/es-la/geforce/guides/broadcasting-guide/](https://www.nvidia.com/es-la/geforce/guides/broadcasting-guide/) \*\*\*
 * [https://www.vaultproject.io](https://www.vaultproject.io) (Manage secrets and protect sensitive data with Vault)
 * [https://joselito.mataroa.blog](https://joselito.mataroa.blog) (un blog curioso)
-*
+
+
+
+
+
+HERRAMIENTAS&#x20;
+
+* [https://mha.azurewebsites.net](https://mha.azurewebsites.net)
+* [https://mxtoolbox.com/](https://mxtoolbox.com/SuperTool.aspx?action=smtp%3ans1.contaboserver.net\&run=toolpage)
+* [https://talosintelligence.com](https://talosintelligence.com)
 
 
 
