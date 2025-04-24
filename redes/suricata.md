@@ -215,7 +215,13 @@ El ecosistema de Prometheus consta de múltiples componentes, muchos de los cual
 
 ### Instalación
 
-En mi caso no lo he instalado explícitamente, se instaló solo con Suricata. Podemos verificar que lo tenemos en escucha por el puerto 9090.
+Para instalar, me bastó:
+
+```
+sudo apt install prometheus
+```
+
+Aunque inicialmente no lo había instalado, sino que  se instaló solo con Suricata. Podemos verificar que lo tenemos en escucha por el puerto 9090.
 
 <figure><img src="../.gitbook/assets/image (413).png" alt=""><figcaption><p>prometheus se encuentra en escucha por el puerto 9090</p></figcaption></figure>
 
