@@ -56,10 +56,11 @@ sudo apt update && sudo apt upgrade -y
 La herramienta jq permite mostrar la información de la salida JSN de EVE de Suricata.
 
 ```
-udo apt-get install software-properties-common
+sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:oisf/suricata-stable
 sudo apt update
-sudo apt install suricata jq
+sudo apt upgrade
+sudo apt install suricata -y
 ```
 
 Una vez realizada la instalación, podemos comprobar la versión y el estado del servicio:
@@ -67,6 +68,12 @@ Una vez realizada la instalación, podemos comprobar la versión y el estado del
 ```
 sudo suricata --build-info
 sudo systemctl status suricata
+```
+
+Para levantar Suricata `on-boot`:
+
+```
+sudo systemctl enable suricata
 ```
 
 ### Configuración básica
@@ -125,17 +132,17 @@ Y veremos algo como lo siguiente:
 
 <figure><img src="../.gitbook/assets/image (399).png" alt=""><figcaption><p>tail -f /var/log/suricata/suricata.log</p></figcaption></figure>
 
-### Creando alertas
+### Creando alertas&#x20;
 
-Si queremos probar que Suricata está usando la funcionalidad IDS , debemos usar una firma. Dicha firma tiene ID 2100498 y es la que corresponde al conjunto de reglas ET Open escrita específicamente para  casos de prueba.
+<mark style="color:orange;">Si queremos probar que Suricata está usando la funcionalidad IDS , debemos usar una firma. Dicha firma tiene ID 2100498 y es la que corresponde al conjunto de reglas ET Open escrita específicamente para  casos de prueba.</mark>
 
-**2100498**:
+<mark style="color:orange;">**2100498**</mark><mark style="color:orange;">:</mark>
 
 ```
 alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7; metadata:created_at 2010_09_23, updated_at 2010_09_23;)
 ```
 
-Esto emitirá una alerta sobre cualquier tráfico IP que contenga el contenido en su carga útil. Esta regla se puede activar fácilmente pero antes de hacerlo, iniciamos `tail` para ver las actualizaciones de `fast.log`.
+<mark style="color:orange;">Esto emitirá una alerta sobre cualquier tráfico IP que contenga el contenido en su carga útil. Esta regla se puede activar fácilmente pero antes de hacerlo, iniciamos</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`tail`</mark> <mark style="color:orange;"></mark><mark style="color:orange;">para ver las actualizaciones de</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`fast.log`</mark><mark style="color:orange;">.</mark>
 
 #### Testeando
 
@@ -150,13 +157,12 @@ sudo tail -f /var/log/suricata/fast.log
 
 Me puedo descargar:
 
-```
-wget https://rules.emergingthreats.net/open/suricata/emerging.rules.tar.gz
-```
+<pre><code><strong>wget https://rules.emergingthreats.net/open/suricata/emerging.rules.tar.gz
+</strong></code></pre>
 
 descomprimir y mover los archivos a: /var/lib/suricata/rules/
 
-Crear un documento con las rules nuestras, por ejemplo:
+Crear un documento con las reglas nuestras, por ejemplo:
 
 ```
 alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "un usuario accedió a Internet"; sid:1000004;)
@@ -221,7 +227,7 @@ Para instalar, me bastó:
 sudo apt install prometheus
 ```
 
-Aunque inicialmente no lo había instalado, sino que  se instaló solo con Suricata. Podemos verificar que lo tenemos en escucha por el puerto 9090.
+Podemos verificar que lo tenemos en escucha por el puerto 9090.
 
 <figure><img src="../.gitbook/assets/image (413).png" alt=""><figcaption><p>prometheus se encuentra en escucha por el puerto 9090</p></figcaption></figure>
 
@@ -233,7 +239,7 @@ Por tanto, si tengo la VM en modo adaptador puente, puedo acceder al servicio a 
 
 Tengo prometheus en la siguiente ubicación. Ahí es donde se encuentra el archivo de configuración: prometheus.yml.
 
-<pre><code><strong>/var/snap/prometheus/86
+<pre><code><strong>/etc/prometheus/prometheus.yml
 </strong></code></pre>
 
 **Instalación y configuración del `node_exporter`**
@@ -257,8 +263,8 @@ Una vez tenemos el archivo descargado en nuestro linux, lo vamos a descomprimir 
 ```
 tar -zxpvf node_exporter-1.5.0.linux-amd64.tar.gz
 cd node_exporter-1.5.0.linux-amd64
-cp node_exporter /usr/local/bin/
-chown -R node_exporter:node_exporter /usr/local/bin/node_exporter
+sudo cp node_exporter /usr/local/bin/
+sudo chown -R node_exporter:node_exporter /usr/local/bin/node_exporter
 ```
 
 Con el siguiente paso vamos a crear el servicio `node_exporter`:
@@ -294,7 +300,7 @@ Podemos volver a comprobar que tenemos el servicio activo por el puerto 9100:
 Para finalizar con esta parte de la configuración añadiremos el nuevo job `node_exporter` al archivo de configuración `prometheus.yml`:
 
 ```mathml
-sudo nano /var/snap/prometheus/86/prometheus.yml
+sudo nano /etc/prometheus/prometheus.yml
 
 # Global config
 global:
@@ -343,6 +349,7 @@ Suricata
 * [https://docs.suricata.io/en/suricata-7.0.2/quickstart.html](https://docs.suricata.io/en/suricata-7.0.2/quickstart.html)
 * [https://suricata.io](https://suricata.io)
 * [https://www.digitalocean.com/community/tutorials/understanding-suricata-signatures](https://www.digitalocean.com/community/tutorials/understanding-suricata-signatures)
+* [https://rules.emergingthreats.net/open/suricata/](https://rules.emergingthreats.net/open/suricata/)
 * [https://www.maquinasvirtuales.eu/implementar-soc-instalacion-suricata-bajo-proxmox/](https://www.maquinasvirtuales.eu/implementar-soc-instalacion-suricata-bajo-proxmox/)
 * [https://www.youtube.com/watch?v=oF4e90EPDug](https://www.youtube.com/watch?v=oF4e90EPDug)
 
