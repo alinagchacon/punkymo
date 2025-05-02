@@ -8,11 +8,11 @@ Hay varios aspectos que permiten justificar el uso de NAT pero diría que lo pri
 
 Otros aspectos que justifican el uso de NAT/PAT son:
 
-* Permite que <mark style="color:purple;">múltiples dispositivos dentro de una red privada compartan una única dirección IP</mark> pública.
-* Funciona como una <mark style="color:purple;">barrera entre las redes internas y las externas</mark> (Internet), brindando seguridad.
-* Los <mark style="color:purple;">dispositivos internos no son accesibles desde Internet</mark>, a menos que se configure explícitamente (por ejemplo, con port forwarding  - ver [pfSense Port Forward](../firewalls/dos-firewall/pfsense/dmz.md)) lo que reduce considerablemente la exposición a ataques provenientes de redes externas.
-* Permite usar <mark style="color:purple;">rangos de IP privadas</mark> definidos por [RFC 1918](https://www.rfc-es.org/rfc/rfc1918-es.txt) (192.168.X.Y, 10.X.Y.Z, 172.16–31.X.Y), <mark style="color:purple;">que no necesitan coordinación globa</mark>l.
-* Resulta <mark style="color:purple;">más fácil configurar, ampliar, modificar redes internas</mark> sin tener que depender del proveedor de servicios de Internet (ISP).
+* Permite que **múltiples dispositivos dentro de una red privada compartan una única dirección IP** pública.
+* Funciona como una **barrera entre las redes internas y las externas** (Internet), brindando seguridad.
+* Los **dispositivos internos no son accesibles desde Internet**, a menos que se configure explícitamente (por ejemplo, con port forwarding  - ver [pfSense Port Forward](../firewalls/dos-firewall/pfsense/dmz.md)) lo que reduce considerablemente la exposición a ataques provenientes de redes externas.
+* Permite usar **rangos de IP privadas** definidos por [RFC 1918](https://www.rfc-es.org/rfc/rfc1918-es.txt) (192.168.X.Y, 10.X.Y.Z, 172.16–31.X.Y), que no necesitan **coordinación global**.&#x20;
+* Resulta **más fácil configurar, ampliar, modificar redes internas** sin tener que depender del proveedor de servicios de Internet (ISP).
 
 
 
@@ -22,15 +22,17 @@ Veamos algunos conceptos importantes para comprender las diferentes técnicas de
 
 1. **Regla ACL** es una instrucción que permite denegar o permitir el tráfico de la red en el router o switch, según se establezca en una interfaz de red y según determinados criterios como son el tipo de protocolo, el puerto, el origen del tráfico, etc.
 2. Una **ACL** es un conjunto de reglas que se aplican en routers o switches para controlar el tráfico de la red.
-3. **Inside global** – la IP pública (traducida) del dispositivo de la red interna LAN
-4. **Inside local** – la IP real del dispositivo de la red interna LAN
+3. **Inside global** – la IP pública (traducida) del dispositivo de la red interna LAN.
+4. **Inside local** – la IP real del dispositivo de la red interna LAN.
 5. **Outside local** – la IP interna del dispositivo externo (desde el punto de vista de la red interna).
 6. **Outside global** – dirección real del dispositivo de la red externa, la IP pública real.
-7. **NAT estática** -
-8. **NAT dinámica** -
-9. **PAT – una única IP** -
-10. **PAT – un conjunto de IP** -&#x20;
-11. **Máscara de wildcare** -
+7. **NAT estática** - asignación de uno a uno entre una dirección IP interna y una IP externa.
+8. **NAT dinámica** - varios dispositivos de la red privada LAN tienen acceso a la pública WAN utilizando para ello un conjunto compartido de direcciones IP públicas.
+9. **PAT – una única IP** - se conoce también como «_NAT con sobrecarga_» y permite que se puede utilizar una única dirección IPv4 pública para muchas direcciones IP (privadas).
+10. **PAT – un conjunto de IP** - Se asigna más de una dirección IPv4 pública a la red interna.
+11. **Máscara de wildcare** - es el **complemento** de una **máscara de subred** tradicional.  En lugar de usar bits de red con `1` y bits de host con `0` (como en el caso de las  máscaras de subred) se usa:
+    1. El 0 significa que se debe comprobar el bit equivalente.
+    2. El 1 significa que el bit equivalente no importa.
 
 Veamos el modo de configurar cada uno de los tipos NAT/PAT que hay.
 
@@ -47,18 +49,18 @@ En cada servidor hemos configurado una web:
 
 La siguiente tabla de direccionamiento muestra los detalles de la configuración:
 
-| <mark style="color:purple;">Dispositivo</mark> | <mark style="color:purple;">Interfaz de red</mark> | <mark style="color:purple;">Gateway</mark> | <mark style="color:purple;">Otros</mark> |
-| ---------------------------------------------- | -------------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
-| PC-LAN                                         | Fa0 – 192.168.1.11/24                              | 192.168.1.1/24                             | DNS apuntando al Server-LAN              |
-| Server-LAN                                     | Fa0 – 192.168.1.10/24                              | 192.168.1.1/24                             | DNS apuntando al Server-LAN              |
-| <p><br></p><p>Router</p>                       | Gi0/0 – 192.168.1.1/24                             |                                            | <p><br></p>                              |
-| Router                                         | Gi0/1 – 80.0.0.1/29                                | <p><br></p>                                |                                          |
-| PC-WAN                                         | Fa0 – 80.0.0.11/8                                  | 80.0.0.1/8                                 | DNS apuntando al Server-WAN              |
-| Server-WAN                                     | Fa0 – 80.0.0.10/8                                  | 80.0.0.1/8                                 | DNS apuntando al Server-WAN              |
+| Dispositivo              | Interfaz de red        | Gateway        | Otros                       |
+| ------------------------ | ---------------------- | -------------- | --------------------------- |
+| PC-LAN                   | Fa0 – 192.168.1.11/24  | 192.168.1.1/24 | DNS apuntando al Server-LAN |
+| Server-LAN               | Fa0 – 192.168.1.10/24  | 192.168.1.1/24 | DNS apuntando al Server-LAN |
+| <p><br></p><p>Router</p> | Gi0/0 – 192.168.1.1/24 |                | <p><br></p>                 |
+| Router                   | Gi0/1 – 80.0.0.1/29    | <p><br></p>    |                             |
+| PC-WAN                   | Fa0 – 80.0.0.11/8      | 80.0.0.1/8     | DNS apuntando al Server-WAN |
+| Server-WAN               | Fa0 – 80.0.0.10/8      | 80.0.0.1/8     | DNS apuntando al Server-WAN |
 
 \
-NAT estática
-------------
+<mark style="color:purple;">(1) NAT estática</mark>
+---------------------------------------------------
 
 La NAT estática es una asignación de uno a uno entre una dirección IP interna y una IP externa. Permite que los dispositivos externos hagan conexión a los internos mediante la IP pública asignada de forma estática.
 
@@ -110,7 +112,7 @@ Si queremos visualizar las traducciones realizadas usamos el comando siguiente y
 
 
 
-## NAT dinámico
+## <mark style="color:purple;">(2) NAT dinámico</mark>
 
 En este caso, varios dispositivos de la red privada LAN tienen acceso a la pública WAN utilizando para ello un conjunto compartido de direcciones IP públicas, pero sin utilizar la misma IP pública.
 
@@ -196,7 +198,7 @@ para comprobar las conexiones realizadas, como muestra el pantallazo siguiente:
 
 <figure><img src="../../.gitbook/assets/image (423).png" alt=""><figcaption><p>show ip nat translations</p></figcaption></figure>
 
-## PAT - dirección única
+## <mark style="color:purple;">(3) PAT - dirección única</mark>
 
 PAT se conoce también como _`NAT con sobrecarga`_ y permite que se puede utilizar una única dirección IPv4 pública para muchas direcciones IP (privadas), incluso miles de direcciones IPv4 privadas internas.
 
@@ -251,7 +253,7 @@ Haz pruebas de conectividad y comprueba las traducciones realizadas como se mues
 
 
 
-## PAT - Un rango de IP
+## <mark style="color:purple;">(4) PAT - Un rango de IP</mark>
 
 En este caso, se asigna más de una dirección IPv4 pública a la red interna. Algo que haría el ISP, por ejemplo.
 
@@ -360,5 +362,33 @@ Router(config)#ip nat inside source static tcp 192.168.1.10 80 80.0.0.5 80
 Router(config)#exit
 ```
 
+### Verificando la conectividad
+
+Podemos comprobar que el servidor interno con IP 192.168.1.10:80 se transforma en la IP pública IP 80.0.0.5:80.
+
+<figure><img src="../../.gitbook/assets/image (430).png" alt=""><figcaption></figcaption></figure>
+
+## <mark style="color:purple;">(6) Interfaz externa en lugar de la IP</mark>
+
+Esta sería una adaptación del **PAT – mapeo estático**. Prueba tú mismo a realizar la configuración donde se quiere utilizar la interfaz externa del router. El comando clave está en:
+
+```
+Router(config)#ip nat inside source static tcp 192.168.1.10 80 80.0.0.1 8080
+```
+
+Para ello, utiliza la configuración previa de PAT - mapeo estático y añade el comando anterior donde se le asigna la IP de la interfaz pública del router, o sea, la IP 80.0.0.1.
+
+<figure><img src="../../.gitbook/assets/image (431).png" alt="" width="563"><figcaption><p>Visualizando la web del servidor de la red interna desde el servidor externo</p></figcaption></figure>
+
+Hemos establecido que la IP pública del servidor interno de la LAN sea la IP pública de la interfaz de red. Igualmente lo podemos verificar en:
+
+<figure><img src="../../.gitbook/assets/image (432).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+\
+\
 
 
