@@ -44,7 +44,9 @@ de Alejandro Liébana
 de Gerard Soteras
 {% endembed %}
 
-
+{% embed url="https://blog.taller404.org" %}
+de Leo Duarte
+{% endembed %}
 
 <figure><img src=".gitbook/assets/punymo.webp" alt="" width="188"><figcaption><p><mark style="color:purple;">Compartir conocimiento, nos hace ricos</mark></p></figcaption></figure>
 
