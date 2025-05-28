@@ -1,8 +1,8 @@
 # Table of contents
 
-* [➡️ Punkymo](README.md)
+* [🦋 Punkymo](README.md)
 
-## 🕷️ Redes
+## 🦉 Redes
 
 * [Introducción Redes](redes/introduccion-redes/README.md)
   * [Organizaciones](redes/introduccion-redes/organizaciones.md)
@@ -156,7 +156,7 @@
     * [RDP](virtualizacion/contenedores/pi-hole/rdp/README.md)
       * [RDP - Docker](virtualizacion/contenedores/pi-hole/rdp/rdp-docker.md)
 
-## 🦉 Misceláneas
+## 🐞 Misceláneas
 
 * [Datos - codificación](miscelaneas/datos-codificacion.md)
 * [IPTables](miscelaneas/iptables.md)
