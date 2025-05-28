@@ -179,7 +179,7 @@ y nos percatamos que no ha sido posible la entrega del correo enviado. Es eviden
 
 Vamos a probar el envío del correo utilizando un cliente como Thunderbird, pero me preguntarás dónde. Lo correcto sería desde la VM que estés utilizando como cliente.
 
-La guía para instalar Thunderbird la puedes encontrar en este [enlace](broken-reference). Sin embargo, es muy sencillo desde el propio terminal:
+La instalación de Thunderbird les muy sencilla desde el propio terminal:
 
 ```
 sudo apt install thunderbird
