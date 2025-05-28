@@ -1,3 +1,7 @@
+---
+description: Compartir conocimiento, nos hace ricos
+---
+
 # 👀 Init
 
 Apuntes, ideas, consideraciones prácticas y temas de los que tengo que aprender muchísimo. De ninguna manera me he querido apropiar de los contenidos de otros, todo lo contrario.
@@ -35,6 +39,3 @@ de Leo Duarte
 {% embed url="https://github.com/gloxito/gloscan" %}
 de Adrià Trillo
 {% endembed %}
-
-<figure><img src=".gitbook/assets/punymo.webp" alt="" width="188"><figcaption><p><mark style="color:purple;">Compartir conocimiento, nos hace ricos</mark></p></figcaption></figure>
-
