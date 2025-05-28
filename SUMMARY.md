@@ -1,6 +1,6 @@
 # Table of contents
 
-* [🦋 Punkymo](README.md)
+* [🦋 Apuntes de Kirby](README.md)
 
 ## 🦉 Redes
 
