@@ -1,4 +1,4 @@
-# 🦋 Apuntes de Kirby
+# 👀 Init
 
 Apuntes, ideas, consideraciones prácticas y temas de los que tengo que aprender muchísimo. De ninguna manera me he querido apropiar de los contenidos de otros, todo lo contrario.
 

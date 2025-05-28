@@ -1,6 +1,6 @@
 # Table of contents
 
-* [🦋 Apuntes de Kirby](README.md)
+* [👀 Init](README.md)
 
 ## 🦉 Redes
 
