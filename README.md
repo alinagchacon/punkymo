@@ -48,5 +48,9 @@ de Gerard Soteras
 de Leo Duarte
 {% endembed %}
 
+{% embed url="https://github.com/gloxito/gloscan" %}
+de Adrià Trillo
+{% endembed %}
+
 <figure><img src=".gitbook/assets/punymo.webp" alt="" width="188"><figcaption><p><mark style="color:purple;">Compartir conocimiento, nos hace ricos</mark></p></figcaption></figure>
 
