@@ -1,6 +1,6 @@
 # Table of contents
 
-* [👀 Init](README.md)
+* [👀 whoami](README.md)
 
 ## 🦉 Redes
 
@@ -19,6 +19,7 @@
   * [IPv6](redes/direccionamiento-ip/ipv6.md)
   * [MAC](redes/direccionamiento-ip/mac.md)
   * [NAT](redes/direccionamiento-ip/nat.md)
+* [CML](redes/cml.md)
 * [CISCO](redes/cisco/README.md)
   * [¿Qué son las VLAN?](redes/cisco/que-son-las-vlan/README.md)
     * [Ejemplo 1 de VLAN](redes/cisco/que-son-las-vlan/ejemplo-1-de-vlan.md)

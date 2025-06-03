@@ -72,7 +72,7 @@ apt list --installed
 
 Una vez que tenemos Webmin instalado podemos acceder al servicio desde el navegador. Para ello ponemos la IP del contenedor: https://192.168.1.13:10000 como se muestra en la imagen a continuación.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Accediendo a Webmin desde el equipo anfitrión</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Accediendo a Webmin desde el equipo anfitrión</p></figcaption></figure>
 
 El usuario para acceder sería el mismo usuario del sistema que tengamos instalado. Como en este caso, no hemos creado ningunno, tendríamos qu conectarnos como root, algo que no es para nada seguro.  Por tanto, crea un usuario para acceder desde Webmin.
 
@@ -112,7 +112,7 @@ Al ejecutar el script de instalación con el indicador --help se puede obtener u
 
 Como se puede ver en la imagen siguiente, el script de instalación nos hace algunas preguntas.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Iniciando la instalación de Virtualmin</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Iniciando la instalación de Virtualmin</p></figcaption></figure>
 
 \
 La instalación puede tardar unos minutos. Durante el proceso podremos ver que, en mi caso, aparece Postfix pre-instalado, de la propia instalación de Webmin.
