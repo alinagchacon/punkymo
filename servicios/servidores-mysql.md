@@ -69,7 +69,7 @@ Ejecutando este  comando seremos guiados a través del proceso que brindará seg
 
        1. El nivel más alto de validación de la contraseña se consigue seleccionando la opción `2`, que se corresponde con una contraseña de al menos 8 caracteres: incluyendo una combinación de mayúsculas, minúsculas, números y caracteres especiales
 
-       <figure><img src="../.gitbook/assets/image (5) (1).png" alt="" width="563"><figcaption><p>Iniciando el proceso de configuración con seguridad</p></figcaption></figure>
+       <figure><img src="../.gitbook/assets/image (5) (1) (1).png" alt="" width="563"><figcaption><p>Iniciando el proceso de configuración con seguridad</p></figcaption></figure>
 
 El siguiente paso nos pide que seleccionemos el nivel de seguridad en la contraseña:
 
@@ -177,7 +177,7 @@ Y nos mostrará el siguiente pantallazo:
 
 Dado que estoy trabajando en el equipo Cliente que es un servidor Ubuntu 20.04 y teniendo el servicio SSH habilitado he utilizado el comando SCP para enviar el fichero desde mi equipo anfitrión. Por supuesto, he tenido que crear un reenvío de puertos porque tengo Proxmox en una VM conectada a la red: NAT.&#x20;
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>Reenví ode puerto en Proxmox</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption><p>Reenví ode puerto en Proxmox</p></figcaption></figure>
 
 Para enviar el archivo de la DB:
 
