@@ -92,7 +92,7 @@ En el caso de la VM cliente debemos conectarla a vmbr1, aunque bastaría con edi
 
 Pasemos a las máquinas. Realmente las dos VM: router y cliente han sido clonadas de una VM de Ubuntu que tengo como plantilla.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="401"><figcaption><p>Las dos VM Router y Cliente como clones "dependientes" de la plantilla "ubuse1"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="401"><figcaption><p>Las dos VM Router y Cliente como clones "dependientes" de la plantilla "ubuse1"</p></figcaption></figure>
 
 
 

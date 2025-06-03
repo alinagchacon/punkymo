@@ -41,7 +41,7 @@ Un detalle a tener en consideración en la configuración del LXC es que debo as
 
 Una vez que tengamos instalado el contenedor, algo que es sumamente rápido, lo podremos ver en el nodo "pve". De hechom en esta imagen se pueden ver  dos contenedores: en lila el 102 (plesk) y el 104 (ubuntu2204) en verde que es el que acabamos de instalar.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Despliegue de VM y contenedores LXC en Proxmox</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Despliegue de VM y contenedores LXC en Proxmox</p></figcaption></figure>
 
 Para ejecutar el contenedor puedes hacer click con el botón secundario del mouse y seleccionar `Start`.
 
