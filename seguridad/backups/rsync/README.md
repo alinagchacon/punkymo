@@ -263,3 +263,44 @@ Que nos mostrará la lista de tareas programadas del archivo `cron.`
 
 Prueba y verifica la copia!
 
+
+
+## Otro modo más sencillo
+
+Se trata de utilizar un par de claves público - privado de SSH para enlazar los dos equipos. Para ello generamos, si no lo tenemos ya, el par de claves:
+
+**Paso 1**:
+
+```
+ssh-keygen -t rsa
+```
+
+Nos solicitará:&#x20;
+
+* un nombre de archivo para almacenar la clave, clicamos `Enter` para que utilice la opción por defecto.
+* Una frase de seguridad y hacemos lo mismo, clicar `Enter` para obviarla.
+
+Dentro de .ssh se crearán los archivos id\_rsa y id\_rsa.pub.
+
+**Paso 2**:&#x20;
+
+Una vez tengamos esto tenemos que copiar la clave pública en el equipo remoto. Para ello usamos el comando:
+
+```
+ssh-copy-id user@IP_remota
+```
+
+Nos pedirá la contraseña del usuario remoto y listo.
+
+**Paso 3**:
+
+Es el momento de testear. Por tanto, si hacemos:
+
+```
+ssh user@IP_remota
+```
+
+No nos pedirá la contraseña y accederemos sin más al equipo remoto.
+
+&#x20;
+
