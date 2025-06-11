@@ -19,6 +19,7 @@
   * [IPv6](redes/direccionamiento-ip/ipv6.md)
   * [MAC](redes/direccionamiento-ip/mac.md)
   * [NAT](redes/direccionamiento-ip/nat.md)
+* [Routing & Switching](redes/routing-and-switching.md)
 * [CML](redes/cml/README.md)
   * [🚧 1er CML lab](redes/cml/1er-cml-lab.md)
 * [CISCO](redes/cisco/README.md)
