@@ -177,7 +177,7 @@ Y nos mostrará el siguiente pantallazo:
 
 Dado que estoy trabajando en el equipo Cliente que es un servidor Ubuntu 20.04 y teniendo el servicio SSH habilitado he utilizado el comando SCP para enviar el fichero desde mi equipo anfitrión. Por supuesto, he tenido que crear un reenvío de puertos porque tengo Proxmox en una VM conectada a la red: NAT.&#x20;
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption><p>Reenví ode puerto en Proxmox</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Reenví ode puerto en Proxmox</p></figcaption></figure>
 
 Para enviar el archivo de la DB:
 

@@ -1,4 +1,8 @@
-# Routing & Switching
+---
+description: Routing & Switching
+---
+
+# Enrutamiento estático
 
 El enrutamiento es fundamental en las redes, porque es el modo de enviar  la información a través de las redes, de una red origen a una red destino, por tanto, los routers son los dispositivos encargados de transferir los paquetes de una red a otra.
 
@@ -42,9 +46,19 @@ El enrutamiento estático y el dinámico no son mutuamente excluyentes, por lo q
 
 Existen diferentes tipos de rutas estáticas:&#x20;
 
-1. Estándar o predeterminada
-2. Estática resumida
-3. Estática flotante
+1. Estándar
+2. Predeterminada
+3. Resumida
+4. Flotante
+
+### Ruta estática estándar
+
+Las rutas estáticas son útiles para conectarse a una red remota específica. El router R3 se puede configurar con una ruta estática para alcanzar la red de rutas internas 192.168.10.0/24. En este caso no es necesario implementar un protocolo de enrutamiento dinámico con el router R4-iFP para llegar a 192.168.10.0/24. Basta configurar una ruta estática para alcanzar la red de rutas internas.
+
+\
+
+
+<figure><img src="../.gitbook/assets/image (2).png" alt="" width="154"><figcaption></figcaption></figure>
 
 ### Ruta estática predeterminada
 
@@ -59,6 +73,22 @@ Por tanto, se trata de una ruta estática con 0.0.0.0/0 como dirección IPv4 de 
 * Cuando un router conecta únicamente a otro router: router de rutas internas.
 
 ### Ruta estática resumida
+
+Permite reducir el número de entradas en la tabla de enrutamiento. Para resumir varias rutas estáticas en una única ruta se deben cumplir las siguientes condiciones:
+
+* Ser contiguas las redes de destino: se tienen que poder resumir en una única dirección de red.
+* Todas las rutas estáticas usan la misma interfaz de salida o dirección IP del siguiente salto.
+
+Si un router requiere cuatro rutas estáticas para alcanzar las redes:&#x20;
+
+* 172.20.0.0/16
+* 172.21.0.0/16
+* 172.22.0.0/16
+* 172.23.0.0/16
+
+Entonces podemos configurar una ruta estática resumida que proporcione conectividad a las mismas. Por ejemplo: 172.20.0.0/14.
+
+
 
 
 
@@ -81,4 +111,10 @@ Recordemos que de manera predeterminada, las rutas estáticas tienen una distanc
 
 La distancia administrativa de una ruta estática se puede aumentar para hacer que la ruta sea menos deseable que otra ruta estática o que una ruta descubierta vía protocolo de enrutamiento dinámico.&#x20;
 {% endhint %}
+
+En resumen:
+
+* Una ruta estática flotante nos sirve de respaldo de una ruta ya descubierta por un protocolo de enrutamiento dinámico o de una definida de manera estática. También estaría configurada con una distancia administrativa mayor que el protocolo de enrutamiento dinámico original.
+* La ruta estática predeterminada hace coincidir todos los paquetes y los envía a un gateway predeterminado específico. También suele utilizarse en routers perimetrales para conectarse a la red del proveedor de servicios o ISP.
+* Las rutas estándar son útiles para conectarse a una red de rutas internas.
 
