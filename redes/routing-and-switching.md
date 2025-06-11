@@ -40,7 +40,29 @@ Algunas de las desventajas serían:
 
 El enrutamiento estático y el dinámico no son mutuamente excluyentes, por lo que podemos ver una combinación de protocolos de enrutamiento dinámico y rutas estáticas en la mayoría de las redes.  No obstante tenemos que tener presente que el valor de la distancia administrativa (AD) es una medida de la preferencia de los orígenes de ruta. Esto es, una ruta con valor  administrativo bajo tendrá mayor preferencia  sobre otras rutas con valores altos. En el caso del enrutamiento estático, la AD es 1, por lo tanto, tendrá prioridad sobre todas las rutas aprendidas dinámicamente, que tendrán valores mayores.
 
-## Rutas estáticas flotantes
+Existen diferentes tipos de rutas estáticas:&#x20;
+
+1. Estándar o predeterminada
+2. Estática resumida
+3. Estática flotante
+
+### Ruta estática predeterminada
+
+Se trata de una ruta que coincide con todos los paquetes y es utilizada por el router cuando un paquete no coincide con ninguna otra ruta más específica en la tabla de enrutamiento. Este tipo de ruta puede  ser aprendida de manera **dinámica** o haber sido configurada de manera **estática**.&#x20;
+
+Por tanto, se trata de una ruta estática con 0.0.0.0/0 como dirección IPv4 de destino, en cuyo caso, se crea un gateway de último recurso.
+
+¿Cuándo utilizamos las rutas estáticas predeterminadas?
+
+* Cuando ninguna otra ruta de la tabla de routing coincide con la dirección IP destino del paquete. Esto es, si no existe ninguna coincidencia.&#x20;
+* Comúnmente utilizada cuando conectamos un router periférico a la red de un ISP.
+* Cuando un router conecta únicamente a otro router: router de rutas internas.
+
+### Ruta estática resumida
+
+
+
+### Ruta estática flotante
 
 Las rutas estáticas flotantes son aquellas rutas estáticas que tienen una distancia administrativa (AD) mayor que la de otra ruta estática o la de rutas dinámicas. Este tipo de rutas son útiles cuando se necesita proporcionar un respaldo a un enlace principal y se utiliza solo cuando dicha ruta principal no está disponible.
 
