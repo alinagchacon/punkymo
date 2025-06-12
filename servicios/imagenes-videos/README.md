@@ -82,7 +82,7 @@ El <mark style="color:purple;">códec</mark> y el <mark style="color:green;">con
 
 Por tanto, los <mark style="color:purple;">códecs</mark> se refieren a la forma en que se codifican el audio, el video u otros datos, mientras que los <mark style="color:green;">contenedores</mark> se refieren al archivo que contiene audio y video codificados.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tomado de: <a href="https://www.profesionalreview.com/2023/08/12/codec-multimedia/">https://www.profesionalreview.com/2023/08/12/codec-multimedia/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tomado de: <a href="https://www.profesionalreview.com/2023/08/12/codec-multimedia/">https://www.profesionalreview.com/2023/08/12/codec-multimedia/</a></p></figcaption></figure>
 
 ## Formatos de video
 
