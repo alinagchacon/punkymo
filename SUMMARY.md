@@ -22,6 +22,7 @@
 * [Enrutamiento estático](redes/enrutamiento-estatico.md)
 * [Enrutamiento dinámico](redes/enrutamiento-dinamico/README.md)
   * [RIP](redes/enrutamiento-dinamico/rip.md)
+  * [Tablas de enrutamiento](redes/enrutamiento-dinamico/tablas-de-enrutamiento.md)
 * [CML](redes/cml/README.md)
   * [🚧 1er CML lab](redes/cml/1er-cml-lab.md)
 * [CISCO](redes/cisco/README.md)

@@ -10,11 +10,11 @@ LLevan siendo, desde hace más de 25 años, la primera línea de defensa en tema
 
 Los firewall pueden ser de hardware, de software o ambos tipos.
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Firewall</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Firewall</p></figcaption></figure>
 
 ### Tipos de firewall
 
-Tomando nota de los que explica Cisco en su web ([https://www.cisco.com/c/es\_es/products/security/firewalls/what-is-a-firewall.html](https://www.cisco.com/c/es\_es/products/security/firewalls/what-is-a-firewall.html)) tenemos diferentes tipos de firewall entre los cuales podemos ver:
+Tomando nota de los que explica Cisco en su web ([https://www.cisco.com/c/es\_es/products/security/firewalls/what-is-a-firewall.html](https://www.cisco.com/c/es_es/products/security/firewalls/what-is-a-firewall.html)) tenemos diferentes tipos de firewall entre los cuales podemos ver:
 
 1. **Firewall proxy:** Funciona en fases iniciales y hace la función de gateway entre una red y otra para una aplicación determinada. Pueden aportar otras funciones como: contenido de caché y seguridad, ya que evitan conexiones directas desde fuera de la red.&#x20;
 2. **Stateful inspection firewall:** Se le considera un firewall **tradicional** y permite bloquear el tráfico según criterios basados en el estado, el puerto y el protocolo. Monitoriza toda la actividad desde la apertura de una conexión hasta que se cierra.
@@ -154,7 +154,7 @@ No todo son ventajas puesto que los firewalls también tienen algunas limitacion
 ### **Links**
 
 * [https://www.cloudflare.com/es-es/learning/security/what-is-a-firewall/](https://www.cloudflare.com/es-es/learning/security/what-is-a-firewall/)
-* [https://www.cisco.com/c/es\_es/products/security/firewalls/what-is-a-firewall.html](https://www.cisco.com/c/es\_es/products/security/firewalls/what-is-a-firewall.html)
+* [https://www.cisco.com/c/es\_es/products/security/firewalls/what-is-a-firewall.html](https://www.cisco.com/c/es_es/products/security/firewalls/what-is-a-firewall.html)
 * [https://www.checkpoint.com/es/cyber-hub/network-security/what-is-firewall/](https://www.checkpoint.com/es/cyber-hub/network-security/what-is-firewall/)
 * [https://www.incibe.es/empresas/blog/son-y-sirven-los-siem-ids-e-ips](https://www.incibe.es/empresas/blog/son-y-sirven-los-siem-ids-e-ips)
 * [https://www.ionos.es/digitalguide/servidores/seguridad/que-es-siem/](https://www.ionos.es/digitalguide/servidores/seguridad/que-es-siem/)&#x20;
