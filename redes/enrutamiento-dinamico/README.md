@@ -38,10 +38,22 @@ Pues su función principal es:
 
 **¿Cómo están compuestos los protocolos de enrutamiento dinámico?**
 
-* **Estructuras de datos**: generalmente, los protocolos de enrutamiento utilizan tablas o bases de datos para sus operaciones que se almacena en la RAM.
-* **Mensajes del protocolo de enrutamiento**: los protocolos de enrutamiento usan diferentes tipos de mensajes para descubrir los routers vecinos, intercambiar información de enrutamiento y realizar otras tareas de descubrimiento de redes.
-* **Algoritmo** o lista finita de pasos que se utilizan para llevar a cabo una tarea. Son usados por los protocolos de enrutamiento para facilitar información de enrutamiento y para determinar el mejor camino.
+* **Estructuras de datos**: utilizan por lo general, tablas o bases de datos para sus operaciones y se almacena en la RAM.
+* **Mensajes del protocolo de enrutamiento**: usan diferentes tipos de mensajes para descubrir los routers vecinos, intercambiar información de enrutamiento y realizar tareas de descubrimiento de redes.
+* **Algoritmo** o **lista finita** de pasos que se utilizan para llevar a cabo una tarea. Facilitan información de enrutamiento y determinan el mejor camino.
 
-Los protocolos de enrutamiento determinan la mejor ruta para alcanzar cada red y justo esa ruta es la que se ofrece a la tabla de enrutamiento. La ruta se instala en la tabla de enrutamiento en caso de que no exista otra ruta con una distancia administrativa menor.&#x20;
+Los protocolos de enrutamiento determinan la mejor ruta para alcanzar cada red y la que ofrecen a la tabla de enrutamiento. Dicha ruta se instala en la tabla de enrutamiento en caso de que no exista otra ruta con una distancia administrativa menor.&#x20;
 
-Una de las ventajas de los protocolos de enrutamiento dinámico es que los routers pueden intercambianrinformación de routing cuando se produce un cambio en la topología. Este intercambio permite a los routers obtener información sobre nuevas redes, así como encontrar otras rutas alternativas.
+Una de las ventajas de estos protocolos es que los routers pueden intercambiar información de enrutamiento cuando se produce un cambio en la topología de la red. Con este intercambio los routers obtienen información sobre nuevas redes y pueden encontrar otras rutas alternativas.
+
+En definitiva, los protocolos de enrutamiento dinámico son:
+
+* adecuados en todas aquellos topologías donde se requieren varios routers, sin importar el tamaño de la red.
+* capaces de adaptarse de modo automático a la topología de la red para volver a enrutar el tráfico.
+
+Sin embargo,
+
+* su implementación puede ser más compleja,
+* es menos segura,&#x20;
+* requiere configurar medidas de protección adicionales
+* requiere CPU, RAM y ancho de banda de enlace, adicionales.

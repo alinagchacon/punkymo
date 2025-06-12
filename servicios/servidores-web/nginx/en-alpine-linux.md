@@ -14,7 +14,7 @@ Se instala igualmente en: **/etc/nginx/** y los archivos de configuración a ten
 
 Muchos sitios hacen referencia a **/usr/share/nginx/** para alojar el sitio web pero podemos hacer uso del directorio habitual: **/var/www/**. &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>La web estática</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>La web estática</p></figcaption></figure>
 
 Más que configurar nginx para brindar páginas estáticas, lo suyo es brindar páginas dinámicas con PHP. Para ello necesitamos instalar tanto **php** como **php-fpm** que, usado conjuntamente con un servidor web como Apache o Nginx, se encarga de servir el contenido dinámico, mientras el servidor web (Apache o Nginx) se encarga de servir el contenido estático.
 

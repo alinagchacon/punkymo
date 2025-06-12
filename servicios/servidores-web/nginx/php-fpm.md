@@ -31,7 +31,7 @@ php -version
 
 Y nos mostrará algo como lo siguiente en caso de tenerlo en el sistema
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>php -version</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>php -version</p></figcaption></figure>
 
 Para comprobar si tenemos php-fpm debemos hacer:
 
