@@ -77,7 +77,7 @@ Como he mencionado anteriormente, es necesario disponer de una cuenta en Cisco d
 
 📝 Note:  Si quieres información oficial sobre cómo hacer la descarga puedes dirigirte a: [https://software.cisco.com](https://software.cisco.com). Si quieres información oficial sobre cómo realizar la instalación puedes clicar en: [https://developer.cisco.com/docs/modeling-labs/installing-cml-as-vm/](https://developer.cisco.com/docs/modeling-labs/installing-cml-as-vm/).
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>OVA y REFPLAT </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>OVA y REFPLAT </p></figcaption></figure>
 
 En resumen, para hacer una instalación limpia del CML necesitamos de:
 
@@ -92,7 +92,7 @@ En resumen, para hacer una instalación limpia del CML necesitamos de:
 * Debemos importar la OVA de la VM. Para ello podemos hacer click con el botón secundario encima del archivo y abrir con VMware Workstation para comenzar a importar.
 * Una vez hecho esto, debemos ver que nuestra VM tiene como características de HW: 8GB de RAM, 4 procesadores, un hdd scsi de 32GB y viene por defecto en adaptador puente.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="" width="343"><figcaption><p>Características de HW de la VM de CML</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" width="343"><figcaption><p>Características de HW de la VM de CML</p></figcaption></figure>
 
 Editaremos la VM de modo que cambiamos el adaptador de red a NAT y nos disponemos a instalar. -&#x20;
 
