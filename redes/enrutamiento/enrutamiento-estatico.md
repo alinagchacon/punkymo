@@ -20,7 +20,7 @@ Un router puede descubrir redes remotas de modo manual o dinámica:
 
 
 
-<figure><img src="../.gitbook/assets/image (433).png" alt="" width="563"><figcaption><p>Enrutamiento estático</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (433).png" alt="" width="563"><figcaption><p>Enrutamiento estático</p></figcaption></figure>
 
 Algunas ventajas del enrutamiento estático serían:
 
@@ -58,7 +58,7 @@ Las rutas estáticas son útiles para conectarse a una red remota específica. E
 \
 
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt="" width="154"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" width="154"><figcaption></figcaption></figure>
 
 ### Ruta estática predeterminada
 

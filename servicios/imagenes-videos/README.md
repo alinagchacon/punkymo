@@ -41,7 +41,7 @@ Este  tipo de archivos puede comprimir archivos en una proporción de 10:1 con u
 
 Dado que el ojo humano es más sensible a los detalles de brillo que al color, se permite reducir ciertos datos sin que la imagen pierda mucha calidad.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="563"><figcaption><p>Tomado de <a href="https://commons.wikimedia.org/wiki/File:JPEG_compression_Example.jpg">https://commons.wikimedia.org/wiki/File:JPEG_compression_Example.jpg</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Tomado de <a href="https://commons.wikimedia.org/wiki/File:JPEG_compression_Example.jpg">https://commons.wikimedia.org/wiki/File:JPEG_compression_Example.jpg</a></p></figcaption></figure>
 
 
 
@@ -82,7 +82,7 @@ El <mark style="color:purple;">códec</mark> y el <mark style="color:green;">con
 
 Por tanto, los <mark style="color:purple;">códecs</mark> se refieren a la forma en que se codifican el audio, el video u otros datos, mientras que los <mark style="color:green;">contenedores</mark> se refieren al archivo que contiene audio y video codificados.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tomado de: <a href="https://www.profesionalreview.com/2023/08/12/codec-multimedia/">https://www.profesionalreview.com/2023/08/12/codec-multimedia/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tomado de: <a href="https://www.profesionalreview.com/2023/08/12/codec-multimedia/">https://www.profesionalreview.com/2023/08/12/codec-multimedia/</a></p></figcaption></figure>
 
 ## Formatos de video
 
