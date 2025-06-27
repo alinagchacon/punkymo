@@ -35,7 +35,7 @@ more /etc/php/7.4/fpm/php.ini
 
 Deberíamos ver algo como:
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Módulo mysqli en php.ini</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Módulo mysqli en php.ini</p></figcaption></figure>
 
 Importante restablecer los servicios:
 
