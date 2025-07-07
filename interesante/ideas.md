@@ -10,12 +10,8 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
   [https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app](https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app)
 * Firebase - plataforma para el desarrollo de aplicaciones web y aplicaciones móviles\
   [https://firebase.google.com/?hl=es](https://firebase.google.com/?hl=es)
-* Ludus\
-  [https://ludus.cloud](https://ludus.cloud)
 * Nutanix\
   [https://www.nutanix.com/es](https://www.nutanix.com/es)
-* Eve-ng\
-  [https://www.eve-ng.net](https://www.eve-ng.net)
 * Nagios\
   [https://www.nagios.org](https://www.nagios.org)
 * Zabbix\
@@ -69,8 +65,8 @@ Otros
 * [https://www.nvidia.com/es-la/geforce/guides/broadcasting-guide/](https://www.nvidia.com/es-la/geforce/guides/broadcasting-guide/) \*\*\*
 * [https://www.vaultproject.io](https://www.vaultproject.io) (Manage secrets and protect sensitive data with Vault)
 * [https://joselito.mataroa.blog](https://joselito.mataroa.blog) (un blog curioso)
-
-
+* Cifrado \
+  [https://www.microsiervos.com/archivo/seguridad/algoritmo-cifrado-des.html](https://www.microsiervos.com/archivo/seguridad/algoritmo-cifrado-des.html)
 
 
 
@@ -90,7 +86,18 @@ CISCO
   * [https://www.certskills.com/category/hands-on/config-lab-2020/cml-free-lab/](https://www.certskills.com/category/hands-on/config-lab-2020/cml-free-lab/)
   * [https://github.com/CiscoDevNet/cml-community/tree/master/node-definitions/cisco](https://github.com/CiscoDevNet/cml-community/tree/master/node-definitions/cisco)&#x20;
 * Cursos
-  *   [https://u.cisco.com/](https://u.cisco.com/for-you)
+  * [https://u.cisco.com/](https://u.cisco.com/for-you)
+
+
+
+`REDES`
+
+* [https://www.youtube.com/watch?v=9-JY\_On0-vY](https://www.youtube.com/watch?v=9-JY_On0-vY)
+* [https://mininet.org](https://mininet.org)
+* [https://www.gns3.com](https://www.gns3.com)
+* [https://www.kathara.org](https://www.kathara.org)
+* [https://ludus.cloud](https://ludus.cloud)
+* [https://www.eve-ng.net](https://www.eve-ng.net)
 
 
 
