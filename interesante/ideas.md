@@ -90,7 +90,7 @@ CISCO
 
 
 
-`REDES`
+REDES
 
 * [https://www.youtube.com/watch?v=9-JY\_On0-vY](https://www.youtube.com/watch?v=9-JY_On0-vY)
 * [https://mininet.org](https://mininet.org)
