@@ -6,7 +6,7 @@
 
 ## Imágenes
 
-<img width="1049" height="945" alt="image" src="https://github.com/user-attachments/assets/fbb5fcff-b3e4-4079-a6d9-1b2a5af33c47" />
+<img width="600" height="945" alt="image" src="https://github.com/user-attachments/assets/fbb5fcff-b3e4-4079-a6d9-1b2a5af33c47" />
 
 
 ## Links
