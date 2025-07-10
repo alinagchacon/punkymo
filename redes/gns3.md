@@ -14,6 +14,10 @@ Tengamos en cuenta que la VM viene con dos adaptadores de red:
 - adaptador de red 1: Host-only
 - adaptador de red 2: NAT
 
+Una vez la VM está funcionando lo que vamos a ver es algo como la siguiente imagen:
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/26c9d2aa-8496-4612-9f45-d3157b8b2ef1" />
+
+
 ## Imágenes
 
 
