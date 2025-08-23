@@ -308,27 +308,24 @@ a.  2001:0DB8::ABCD::1234
 
 &#x20;
 
-| <pre><code>2001:0db8:85a3::1319:8a2e:0370:7344
-</code></pre> |                                |                                |                                |                                |                                |                                |                                |
-| ------------------------------------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ |
-| <pre><code>2001:
-</code></pre>                               | <pre><code>0db8:
-</code></pre> | <pre><code>85a3:
-</code></pre> | <pre><code>0000:
-</code></pre> | <pre><code>:1319
-</code></pre> | <pre><code>:8a2e
-</code></pre> | <pre><code>:0370
-</code></pre> | <pre><code>:7344
-</code></pre> |
-| <pre><code>2001:
-</code></pre>                               | <pre><code>0db8:
-</code></pre> | <pre><code>85a3:
-</code></pre> | <pre><code> 
-</code></pre>     | <pre><code>:1319
-</code></pre> | <pre><code>:8a2e
-</code></pre> | <pre><code>:0370
-</code></pre> | <pre><code>:7344
-</code></pre> |
+<table data-header-hidden><thead><tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><pre><code>2001:0db8:85a3::1319:8a2e:0370:7344
+</code></pre></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><pre><code>2001:
+</code></pre></td><td><pre><code>0db8:
+</code></pre></td><td><pre><code>85a3:
+</code></pre></td><td><pre><code>0000:
+</code></pre></td><td><pre><code>:1319
+</code></pre></td><td><pre><code>:8a2e
+</code></pre></td><td><pre><code>:0370
+</code></pre></td><td><pre><code>:7344
+</code></pre></td></tr><tr><td><pre><code>2001:
+</code></pre></td><td><pre><code>0db8:
+</code></pre></td><td><pre><code>85a3:
+</code></pre></td><td><pre><code> 
+</code></pre></td><td><pre><code>:1319
+</code></pre></td><td><pre><code>:8a2e
+</code></pre></td><td><pre><code>:0370
+</code></pre></td><td><pre><code>:7344
+</code></pre></td></tr></tbody></table>
 
 &#x20;
 
@@ -342,37 +339,33 @@ Siguiendo esta regla, podemos decir que si dos o más grupos “consecutivos” 
 
 &#x20;
 
-| <pre><code>2001: 
-</code></pre> | <pre><code>0DB8: 
-</code></pre> | <pre><code>0000: 
-</code></pre> | <pre><code>0000: 
-</code></pre> | <pre><code>0000: 
-</code></pre> | <pre><code>0000: 
-</code></pre> | <pre><code>1428: 
-</code></pre> | <pre><code>57ab
-</code></pre> |
-| ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- | ------------------------------- | ----------------------------- |
-| <pre><code>2001: 
-</code></pre> | <pre><code>0DB8: 
-</code></pre> | <pre><code>0: 
-</code></pre>    | <pre><code>0: 
-</code></pre>    | <pre><code>0: 
-</code></pre>    | <pre><code>0: 
-</code></pre>    | <pre><code>1428: 
-</code></pre> | <pre><code>57ab
-</code></pre> |
-| <pre><code>2001: 
-</code></pre> | <pre><code>0DB8: 
-</code></pre> | <pre><code>0:
-</code></pre>     | <pre><code> 
-</code></pre>      | <pre><code>: 
-</code></pre>     | <pre><code>0: 
-</code></pre>    | <pre><code>1428: 
-</code></pre> | <pre><code>57ab
-</code></pre> |
-| <p> </p><p>2001:</p>            | <p> </p><p>0DB8:</p>            | <p> </p><p>:</p>                |                                 |                                 | <p> </p><p>:</p>                | <pre><code>1428: 
-</code></pre> | <pre><code>57ab
-</code></pre> |
+<table data-header-hidden><thead><tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><pre><code>2001: 
+</code></pre></td><td><pre><code>0DB8: 
+</code></pre></td><td><pre><code>0000: 
+</code></pre></td><td><pre><code>0000: 
+</code></pre></td><td><pre><code>0000: 
+</code></pre></td><td><pre><code>0000: 
+</code></pre></td><td><pre><code>1428: 
+</code></pre></td><td><pre><code>57ab
+</code></pre></td></tr><tr><td><pre><code>2001: 
+</code></pre></td><td><pre><code>0DB8: 
+</code></pre></td><td><pre><code>0: 
+</code></pre></td><td><pre><code>0: 
+</code></pre></td><td><pre><code>0: 
+</code></pre></td><td><pre><code>0: 
+</code></pre></td><td><pre><code>1428: 
+</code></pre></td><td><pre><code>57ab
+</code></pre></td></tr><tr><td><pre><code>2001: 
+</code></pre></td><td><pre><code>0DB8: 
+</code></pre></td><td><pre><code>0:
+</code></pre></td><td><pre><code> 
+</code></pre></td><td><pre><code>: 
+</code></pre></td><td><pre><code>0: 
+</code></pre></td><td><pre><code>1428: 
+</code></pre></td><td><pre><code>57ab
+</code></pre></td></tr><tr><td><p> </p><p>2001:</p></td><td><p> </p><p>0DB8:</p></td><td><p> </p><p>:</p></td><td> </td><td> </td><td><p> </p><p>:</p></td><td><pre><code>1428: 
+</code></pre></td><td><pre><code>57ab
+</code></pre></td></tr></tbody></table>
 
 &#x20;
 
@@ -382,24 +375,20 @@ Siguiendo esta regla, podemos decir que si dos o más grupos “consecutivos” 
 
 IP no válida porque no podemos saber cuántos grupos nulos quedan en cada lado.
 
-| <pre><code>2001: 
-</code></pre> | <p> </p><p>0000:</p> | <p> </p><p>0000:</p>           | <p> </p><p>0000:</p>           | <pre><code>25de:
-</code></pre> | <p> </p><p>0000:</p>           | <p> </p><p>0000:</p> | <pre><code>Cade
-</code></pre> |
-| ------------------------------- | -------------------- | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ | -------------------- | ----------------------------- |
-| <pre><code>2001: 
-</code></pre> | <p> </p><p>0000:</p> | <p> </p><p>0000:</p>           | <p> </p><p>0000:</p>           | <p> </p><p>0000:</p>           | <pre><code>25de:
-</code></pre> | <p> </p><p>0000:</p> | <pre><code>Cade
-</code></pre> |
-| <pre><code>2001: 
-</code></pre> | <p> </p><p>0000:</p> | <p> </p><p>0000:</p>           | <pre><code>25de:
-</code></pre> | <p> </p><p>0000:</p>           | <p> </p><p>0000:</p>           | <p> </p><p>0000:</p> | <pre><code>Cade
-</code></pre> |
-| <pre><code>2001: 
-</code></pre> | <p> </p><p>0000:</p> | <pre><code>25de:
-</code></pre> | <pre><code>0000:
-</code></pre> | <p> </p><p>0000:</p>           | <p> </p><p>0000:</p>           | <p> </p><p>0000:</p> | <pre><code>Cade
-</code></pre> |
+<table data-header-hidden><thead><tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><pre><code>2001: 
+</code></pre></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><pre><code>25de:
+</code></pre></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><pre><code>Cade
+</code></pre></td></tr><tr><td><pre><code>2001: 
+</code></pre></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><pre><code>25de:
+</code></pre></td><td><p> </p><p>0000:</p></td><td><pre><code>Cade
+</code></pre></td></tr><tr><td><pre><code>2001: 
+</code></pre></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><pre><code>25de:
+</code></pre></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><pre><code>Cade
+</code></pre></td></tr><tr><td><pre><code>2001: 
+</code></pre></td><td><p> </p><p>0000:</p></td><td><pre><code>25de:
+</code></pre></td><td><pre><code>0000:
+</code></pre></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><p> </p><p>0000:</p></td><td><pre><code>Cade
+</code></pre></td></tr></tbody></table>
 
 &#x20;
 

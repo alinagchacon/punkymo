@@ -42,7 +42,7 @@ Podemos hacer uso de dos herramientas que nos brindan información que nos permi
 * En Descripción general, buscamos los servidores de nombres.&#x20;
 * Los reemplazamos con los servidores de nombres de Cloudflare.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Servidores DNS en Cloudflare</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Servidores DNS en Cloudflare</p></figcaption></figure>
 
 ## Actualizando en el  registrador de dominio
 
