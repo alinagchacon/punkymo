@@ -3,11 +3,17 @@ description: en Ubuntu
 hidden: true
 ---
 
-# Rya-Mininet
+# Rya-Mininet-SDN
 
-### Conceptos básicos
+### Redes definidas por software
 
-**SDN**:
+Las redes definidas por software - SDN son una arquitectura que centraliza la manipulación de todos los dispositivos de red en un único componente. Todos los dispositivos de red son operados a través de este componente SDN.&#x20;
+
+La gestión de la transmisión de paquetes la realiza la misma entidad central y los dispositivos de red se comportan como **dispositivos de reenvío**, que reciben y reenvían paquetes. En términos técnicos, las SDN diseccionan los planos de control de los dispositivos de red y los centralizan en un único componente, dejando únicamente los planos de datos responsables del reenvío de paquetes.
+
+#### Conceptos básicos
+
+Al separar la lógica de control de los dispositivos de red, SDN permite la programabilidad de la misma, su administración simplificada y autónoma. SDN:
 
 * Permite eliminar muchas de las limitaciones de las infraestructuras de red actuales.&#x20;
 * Separa el plano de datos del plano de control
@@ -15,8 +21,6 @@ hidden: true
 * Centraliza  la programación en el plano de control (Controlador SDN)
 * Simplifica la operación en el plano de datos (Dispositivos de red SDN)&#x20;
 * Permite que la infraestructura subyacente sea abstraída para que aplicaciones y servicios puedan tratar a la red como una entidad lógica o virtual.
-
-Al separar la lógica de control de los dispositivos de red, SDN permite la programabilidad de la misma, su administración simplificada y autónoma . Además brinda oportunidades para los operadores, la red y los proveedores de servicios.
 
 La Open Networking Foundation define una arquitectura de alto nivel para SDN con tres capas o planos principales, como se muestra en la figura.
 
@@ -33,11 +37,18 @@ La comunicación entre capas es posible gracias a la SouthBound y la NorthBound 
 * **Southbound API** - usada para la comunicación entre el controlador SDN y los elementos de red como: switches, routers, etc. Pueden ser de código abierto o propietarias: OpenFlow, NetConf1, Lisp2, OpFlex3, etc.
 * **Northbound API** - son Rest APIs utilizadas para la comunicación entre el controlador SDN y los servicios y aplicaciones que corren por encima de la red, en la capa de aplicación. Están integradas dentro del controlador SDN, un ejemplo es el controlador Ryu.
 
-### Instalación
+**OpenFlow**
 
-La instalación se va a hacer en una VM con Ubuntu Desktop 22.04.5 (jammy).&#x20;
+Es el protocolo principal de la arquitectura SDN. Los controladores utilizan el protocolo OpenFlow para comunicarse con los switches. No se trata de un protocolo específico de un proveedor, lo que implica que el controlador puede comunicarse con cualquier switch, independientemente del proveedor.
 
-<mark style="color:purple;">**Mininet**</mark>
+\
+**Switches SDN**
+
+Estos switches SDN son diferentes de los switches convencionales, por tanto se hace referencia a ellos como _<mark style="color:purple;">dispositivos de reenvío</mark>_, puesto que están conformados únicamente con planos de datos.&#x20;
+
+Los switches SDN pueden ser hardware o softwar, siendo **Open vSwitch (OVS)** es el switch virtual más popular utilizado en el paradigma SDN para conectar dispositivos finales.
+
+#### <mark style="color:purple;">**Mininet**</mark>
 
 Es un emulador de red que crea una red de hosts virtuales, switches, controladores y enlaces. Los hosts de Mininet ejecutan software de red Linux estándar, y sus conmutadores son compatibles con OpenFlow para un enrutamiento personalizado flexible y redes definidas por software.
 
@@ -57,6 +68,12 @@ Las redes Mininet ejecutan código real, incluyendo aplicaciones de red estánda
 
 Gracias a esto, el código que se desarrolla y prueba en Mininet, para un controlador OpenFlow, un conmutador modificado o un host, puede trasladarse a un sistema real con cambios mínimos para realizar pruebas reales, evaluar el rendimiento e implementarlo. Es importante destacar que esto significa que un diseño que funciona en Mininet generalmente puede trasladarse directamente a conmutadores de hardware para el reenvío de paquetes a velocidad de línea.
 
+#### <mark style="color:purple;">**Ryu**</mark>
+
+Ryu es un component-based SDN framework, o sea, es un entorno de trabajo que proporciona componentes software que se utilizan en SDN, entre ellos un controlador, con una API bien definida que facilita a los desarrolladores la creación de nuevas aplicaciones de administración y control de red.
+
+#### <mark style="color:purple;">Instalando Mininet</mark>
+
 ```
 sudo apt install mininet
 ```
@@ -67,9 +84,7 @@ Se puede comprobar la funcionalidad de Mininet haciendo lo siguiente:
 sudo mn --test pingall
 ```
 
-<mark style="color:purple;">**Ryu**</mark>
-
-Ryu es un component-based SDN framework, o sea, es un entorno de trabajo que proporciona componentes software que se utilizan en SDN, entre ellos un controlador, con una API bien definida que facilita a los desarrolladores la creación de nuevas aplicaciones de administración y control de red.
+#### <mark style="color:purple;">Instalando Ryu</mark>
 
 Actualizamos los paquetes del sistema:
 
@@ -104,7 +119,43 @@ pip install eventlet==0.30.2
 ryu-manager --help
 ```
 
+Para testear podemos hacer también:
 
+```
+sudo ryu-manager --version
+```
+
+#### Instalando OpenFlow, Wireshark
+
+Instalamos OpenFlow y testeamos:
+
+```
+sudo apt-get install openvswitch-switch
+ovs-vsctl --version
+```
+
+Instalamos Wireshark y testeamos:
+
+```
+sudo apt-get install wireshark
+wireshark --version
+```
+
+#### <mark style="color:purple;">Testeando</mark>
+
+En una terminal podemos ejecutar el comando siguiente que levanta el controlador SDN y carga la aplicación que se le pasa de python, esto es, implementa un switch usando OpenFlow 1.3:&#x20;
+
+```
+sudo ryu-manager ryu/ryu/app/simple_switch_13.py
+```
+
+En otra terminal podemos arrancar Mininet con un controlador externo como Ryu a través de OpenFlow. Por defecto se conectará al localhost y usa el puerto 6653 si no lo especificamos.
+
+```
+sudo mn --controller remote
+```
+
+<mark style="color:$danger;">AQUI</mark>
 
 <mark style="color:purple;">**iPerf**</mark>
 
@@ -120,7 +171,7 @@ de red y cumplir mejor los requisitos de la calidad de servicio (QoS) de la mism
 ### Links
 
 * [https://mininet.org/overview](https://mininet.org/overview)
-*
+* [h](https://smfarjad.github.io/A-Brief-Tutorial-on-SDN-using-Ryu-Controller)[ttps://smfarjad.github.io/A-Brief-Tutorial-on-SDN-using-Ryu-Controller](https://smfarjad.github.io/A-Brief-Tutorial-on-SDN-using-Ryu-Controller)
 
 
 
