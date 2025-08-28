@@ -1,9 +1,9 @@
 ---
-description: en Ubuntu
+description: en Ubuntu Desktop
 hidden: true
 ---
 
-# Rya-Mininet-SDN
+# SDN-Rya-Mininet
 
 ### Redes definidas por software
 
