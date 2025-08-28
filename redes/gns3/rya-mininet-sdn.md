@@ -60,7 +60,7 @@ Estos switches SDN son diferentes de los switches convencionales, por tanto se h
 
 Los switches SDN pueden ser hardware o softwar, siendo **Open vSwitch (OVS)** es el switch virtual más popular utilizado en el paradigma SDN para conectar dispositivos finales.
 
-#### <mark style="color:purple;">**Mininet**</mark>
+#### **Mininet**
 
 Es un emulador de red que crea una red de hosts virtuales, switches, controladores y enlaces. Los hosts de Mininet ejecutan software de red Linux estándar, y sus conmutadores son compatibles con OpenFlow para un enrutamiento personalizado flexible y redes definidas por software.
 
@@ -80,7 +80,7 @@ Las redes Mininet ejecutan código real, incluyendo aplicaciones de red estánda
 
 Gracias a esto, el código que se desarrolla y prueba en Mininet, para un controlador OpenFlow, un conmutador modificado o un host, puede trasladarse a un sistema real con cambios mínimos para realizar pruebas reales, evaluar el rendimiento e implementarlo. Es importante destacar que esto significa que un diseño que funciona en Mininet generalmente puede trasladarse directamente a conmutadores de hardware para el reenvío de paquetes a velocidad de línea.
 
-#### <mark style="color:purple;">**Ryu**</mark>
+#### **Ryu**
 
 Ryu es un component-based SDN framework, o sea, es un entorno de trabajo que proporciona componentes software que se utilizan en SDN, entre ellos un controlador, con una API bien definida que facilita a los desarrolladores la creación de nuevas aplicaciones de administración y control de red.
 
@@ -137,7 +137,7 @@ Para testear podemos hacer también:
 sudo ryu-manager --version
 ```
 
-#### Instalando OpenFlow, Wireshark
+#### <mark style="color:purple;">Instalando OpenFlow y Wireshark</mark>
 
 Instalamos OpenFlow y testeamos:
 
@@ -153,21 +153,46 @@ sudo apt-get install wireshark
 wireshark --version
 ```
 
-#### <mark style="color:purple;">Testeando</mark>
+#### <mark style="color:blue;">Testeando</mark>
 
-En una terminal podemos ejecutar el comando siguiente que levanta el controlador SDN y carga la aplicación que se le pasa de python, esto es, implementa un switch usando OpenFlow 1.3:&#x20;
+En el terminal abrimos  tres pestañas y ejecutamos los siguientes comandos en cada una de ellas:
+
+En el **terminal 1** vamos a crear una topología simple  en mininet. La red que se crea tendrá un  switch (s1) y tres hosts (h1, h2, h3) conectados a él.&#x20;
+
+```
+sudo mn --topo=single,3 --controller=remote,ip=127.0.0.1 --mac --switch=ovsk,protocols=OpenFlow13
+```
+
+Todavía en este punto, los hosts son inaccesibles. Para que los hosts se comuniquen entre sí, el controlador debe implementar ciertas reglas. Podemos probar la funcionalidad de esta topología usando el comando **pingall** en la misma terminal.&#x20;
+
+
+
+En el l t**erminal 2** vamos a ejecutar una aplicación simple de switch. El archivo del programa en python es simple\_switch\_13.py que se encuentra en el directorio **/ryu/ryu/app/simple\_switch\_13.py**. Este script establece reglas y políticas en el controlador **ryu.** Las mismas son necesarias para enrutar paquetes de forma similar a la de un switch L2 de red convencional.&#x20;
 
 ```
 sudo ryu-manager ryu/ryu/app/simple_switch_13.py
 ```
 
-En otra terminal podemos arrancar Mininet con un controlador externo como Ryu a través de OpenFlow. Por defecto se conectará al localhost y usa el puerto 6653 si no lo especificamos.
+Ahora podemos volver a probar la funcionalidad de esta topología usando el comando **pingall** en la  terminal 1 y veremos que los hosts pueden comunicarse entre sí esta vez.
+
+<figure><img src="../../.gitbook/assets/image (441).png" alt="" width="320"><figcaption></figcaption></figure>
+
+En una tercera terminal podemos ejecutar el comando siguiente:
 
 ```
-sudo mn --controller remote
+sudo ovs-vsctl show
+sudo ovs-ofctl -O OpenFlow13 dump-flows s1
 ```
 
-<mark style="color:$danger;">AQUI</mark>
+Este comando nos permite visualizar la configuración y la tabla de flujo de Open vSwitch. Estos comandos se utilizan para inspeccionar el comportamiento y las estadísticas de los switches SDN al recibir paquetes de los hosts.
+
+<figure><img src="../../.gitbook/assets/image (443).png" alt="" width="306"><figcaption></figcaption></figure>
+
+Se puede levantar Wireshark desde el inicio para hacer capturas de los paquetes.
+
+
+
+#### Otras herramientas
 
 <mark style="color:purple;">**iPerf**</mark>
 
@@ -186,6 +211,7 @@ de red y cumplir mejor los requisitos de la calidad de servicio (QoS) de la mism
 * [h](https://smfarjad.github.io/A-Brief-Tutorial-on-SDN-using-Ryu-Controller)[ttps://smfarjad.github.io/A-Brief-Tutorial-on-SDN-using-Ryu-Controller](https://smfarjad.github.io/A-Brief-Tutorial-on-SDN-using-Ryu-Controller)
 * [https://es.wikipedia.org/wiki/OpenFlow](https://es.wikipedia.org/wiki/OpenFlow)
 * [https://opennetworking.org](https://opennetworking.org)
+* [https://mininet.org/walkthrough](https://mininet.org/walkthrough)
 
 
 
