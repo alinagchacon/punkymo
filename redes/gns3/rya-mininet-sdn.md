@@ -37,9 +37,21 @@ La comunicación entre capas es posible gracias a la SouthBound y la NorthBound 
 * **Southbound API** - usada para la comunicación entre el controlador SDN y los elementos de red como: switches, routers, etc. Pueden ser de código abierto o propietarias: OpenFlow, NetConf1, Lisp2, OpFlex3, etc.
 * **Northbound API** - son Rest APIs utilizadas para la comunicación entre el controlador SDN y los servicios y aplicaciones que corren por encima de la red, en la capa de aplicación. Están integradas dentro del controlador SDN, un ejemplo es el controlador Ryu.
 
-**OpenFlow**
+#### **OpenFlow**
+
+OpenFlow es un protocolo de comunicación que se utiliza en el ámbito de las redes definidas por software - SDN.
 
 Es el protocolo principal de la arquitectura SDN. Los controladores utilizan el protocolo OpenFlow para comunicarse con los switches. No se trata de un protocolo específico de un proveedor, lo que implica que el controlador puede comunicarse con cualquier switch, independientemente del proveedor.
+
+Su función principal es permitir que un controlador SDN se comunique con los dispositivos de red (switches, routers, puntos de acceso, etc.) para indicarles cómo manejar el tráfico. De este modo, en lugar de que cada switch o router tome sus decisiones de forma independiente (como es el caso de las redes tradicionales), OpenFlow les permite recibir instrucciones directas de un controlador central.
+
+Un **switch OpenFlow:**&#x20;
+
+* Contiene una **tabla de flujo** - flow table.
+* Cada entrada de la tabla especifica:
+  * el tipo de tráfico que coincide, por ejemplo, paquetes con una determinada dirección IP o puerto.
+  * la acción a tomar, o sea: reenviar por un puerto, modificar cabeceras, descartar, etc.
+* El **controlador SDN** instala o actualiza esas reglas en los switches usando OpenFlow.
 
 \
 **Switches SDN**
@@ -172,6 +184,8 @@ de red y cumplir mejor los requisitos de la calidad de servicio (QoS) de la mism
 
 * [https://mininet.org/overview](https://mininet.org/overview)
 * [h](https://smfarjad.github.io/A-Brief-Tutorial-on-SDN-using-Ryu-Controller)[ttps://smfarjad.github.io/A-Brief-Tutorial-on-SDN-using-Ryu-Controller](https://smfarjad.github.io/A-Brief-Tutorial-on-SDN-using-Ryu-Controller)
+* [https://es.wikipedia.org/wiki/OpenFlow](https://es.wikipedia.org/wiki/OpenFlow)
+* [https://opennetworking.org](https://opennetworking.org)
 
 
 
