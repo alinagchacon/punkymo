@@ -94,7 +94,7 @@ Las tendencias de SDN para TE implican:
 
 * incorporación de técnicas y algoritmos más sofisticados como el aprendizaje automático, la inteligencia artificial y la optimización para mejorar la toma de decisiones y la ejecución del controlador SDN.&#x20;
 * integración de diversas tecnologías y recursos de red, como la computación en la nube, la computación perimetral, la computación en la niebla, la computación móvil, las redes inalámbricas, las redes ópticas y las redes cuánticas, puede ampliar el alcance de la red SDN y admitir una gama más amplia de aplicaciones y servicios.&#x20;
-* desarrollo de protocolos e interfaces estandarizados como OpenFlow, P4, BGP-LS, PCEP, NETCONF, YANG y API Restful puede permitir una mejor comunicación entre diferentes componentes y dispositivos SDN, así como una integración más fluida entre diferentes dominios de red y proveedores.
+* desarrollo de protocolos e interfaces estandarizados como [OpenFlow](https://www.f5.com/es_es/glossary/openflow)[https://www.f5.com/es\_es/glossary/openflow](https://www.f5.com/es_es/glossary/openflow), [P4](https://www.lenovo.com/co/es/glosario/p4/?orgRef=https%253A%252F%252Fwww.google.com%252F\&srsltid=AfmBOopL78XOfWCAdUx3XPJomHHa6uU_E71WK12Zenw9CW-hmpUuAGJZ), [BGP-LS](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_bgp/configuration/xe-16-6/irg-xe-16-6-book/bgp-ls.pdf), [NETCONF](https://trbl-services.eu/blog-yang-netconf-la-pareja-perfecta-la-gestion-dispositivos-red), [YANG](https://trbl-services.eu/blog-yang-netconf-la-pareja-perfecta-la-gestion-dispositivos-red) y [API Restful ](https://www.redhat.com/es/topics/api/what-is-a-rest-api)puede permitir una mejor comunicación entre diferentes componentes y dispositivos SDN, así como una integración más fluida entre diferentes dominios de red y proveedores.
 
 ### **OpenFlow**
 
@@ -328,6 +328,7 @@ Rx(s1 - eth1) ≈ Tx(s1 - eth2) + Tx(s1 - eth3) → 91777 ≈ 91804 + 67
 * [https://opennetworking.org](https://opennetworking.org)
 * [https://mininet.org/walkthrough](https://mininet.org/walkthrough)
 * [https://p4.org](https://p4.org)
+* [https://github.com/p4lang/tutorials/blob/master/P4\_tutorial.pdf](https://github.com/p4lang/tutorials/blob/master/P4_tutorial.pdf)
 * [https://iperf.fr/iperf-doc.php](https://iperf.fr/iperf-doc.php)
 * [https://blog.elhacker.net/2024/12/iperf-para-medir-la-velocidad-ancho-banda-red-internet-lan-wan.html](https://blog.elhacker.net/2024/12/iperf-para-medir-la-velocidad-ancho-banda-red-internet-lan-wan.html)
 
