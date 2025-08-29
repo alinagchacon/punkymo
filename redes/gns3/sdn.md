@@ -1,9 +1,9 @@
 ---
-description: en Ubuntu Desktop
+description: Rya, Mininet, OpenFlow en Ubuntu Desktop
 hidden: true
 ---
 
-# SDN-Rya-Mininet
+# SDN
 
 ### Redes definidas por software
 
