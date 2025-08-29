@@ -2,7 +2,7 @@
 
 Directorio de trabajo
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt="" width="342"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt="" width="342"><figcaption></figcaption></figure>
 
 default.conf
 
