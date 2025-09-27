@@ -75,11 +75,11 @@ Una práctica adecuada sería hacer una copia de seguridad de los archivos de co
 cp /etc/bind/named.conf.local /etc/bind/named.conf.local.BKP
 ```
 
-<figure><img src="../../.gitbook/assets/image (14) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ahora podemos crear el contenido de cada zona en el fichero de configuración: <mark style="color:blue;">named.conf.local</mark>. Esto es:
 
-<figure><img src="../../.gitbook/assets/image (199).png" alt=""><figcaption><p>/etc/bind/zones/named.conf.local</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (199).png" alt=""><figcaption><p>/etc/bind/zones/named.conf.local</p></figcaption></figure>
 
 Ahora comprobemos que la configuración es la correcta y no hayamos cometido errores en la sintaxis. Para ello, usamos el comando:&#x20;
 
@@ -99,21 +99,21 @@ Para la **zona directa** creamos el fichero:
 /etc/bind/zones/db.haven.local
 ```
 
-<figure><img src="../../.gitbook/assets/image (17) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Una vez creado dicho fichero ya podemos editarlo y hacer las modificaciones  necesarias para nuestra configuración, como el nombre del dominio.&#x20;
 
 También debemos cambiar la cláusula <mark style="color:blue;">Serial</mark> cada vez que editemos nuestros ficheros de zona, como una forma de llevar un control de versiones.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption><p>Archivo /etc/bind/db.haven.local </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (108).png" alt=""><figcaption><p>Archivo /etc/bind/db.haven.local </p></figcaption></figure>
 
-Para crear el fichero de <mark style="color:blue;">zona inversa</mark> podemos copiar el fichero db.127:
+a,Para crear el fichero de <mark style="color:blue;">zona inversa</mark> podemos copiar el fichero db.127:
 
-<figure><img src="../../.gitbook/assets/image (135).png" alt=""><figcaption><p>Fichero de zona inversa copiado de db.127.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (135).png" alt=""><figcaption><p>Fichero de zona inversa copiado de db.127.</p></figcaption></figure>
 
 Editamos el fichero de zona inversa y lo modificaremos, sin olvidarnos del Serial.
 
-<figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption><p>Fichero de zona inversa /etc/bind/db.6.168.192</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (98).png" alt=""><figcaption><p>Fichero de zona inversa /etc/bind/db.6.168.192</p></figcaption></figure>
 
 Al igual que antes, debemos comprobar que la configuración de los ficheros de zonas se ha realizado correctamente y que no hayamos cometido errores. Tener en cuenta que el directorio <mark style="color:blue;">`zones`</mark> que pudieras no haberlo utilizado. Utilizamos el mismo comando:
 
@@ -123,31 +123,31 @@ sudo named-checkzone 6.168.192.in-addr-arpa /etc/bind/zones/db.6.168.192
 
 seguido del nombre de la zona y del fichero en cuestión. Esto es:
 
-<figure><img src="../../.gitbook/assets/image (148).png" alt=""><figcaption><p>Comprobaciones</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (148).png" alt=""><figcaption><p>Comprobaciones</p></figcaption></figure>
 
 ```
 sudo named-checkzone haven.local /etc/bind/zones/db.haven.local
 ```
 
-<figure><img src="../../.gitbook/assets/image (157).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (157).png" alt=""><figcaption></figcaption></figure>
 
 Ahora nos tocaría editar el fichero <mark style="color:blue;">`/etc/bind/named.conf.options`</mark> donde podemos crear una <mark style="color:blue;">`lista de acceso`</mark> para restringir el acceso a quienes pueden realizar las consultas a nuestro servidor DNS. También indicaremos un par de <mark style="color:blue;">`servidores forwarders`</mark> donde pueda delegar nuestro servidor DNS local cuando no pueda resolver alguna consulta.
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Fichero /etc/bind/named.conf.options</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Fichero /etc/bind/named.conf.options</p></figcaption></figure>
 
 Ya casi finalizamos, pero antes de poner en marcha el servicio modifiquemos  el fichero <mark style="color:blue;">`/etc/default/named`</mark> donde especificaremos la opción<mark style="color:blue;">`-4`</mark> como argumento para el usuario **bind,** que  se crea automáticamente durante la instalación del servicio bind9.&#x20;
 
 La opción <mark style="color:blue;">`-4`</mark>  nos sirve para forzar el uso de IPv4 siempre y evitar  mensajes de error de red inalcanzable por direccionamiento IPv6.
 
-<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption><p>Fichero /etc/default/named</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (69).png" alt=""><figcaption><p>Fichero /etc/default/named</p></figcaption></figure>
 
 Listo, ya tenemos configurado el servidor DNS. Solo nos queda <mark style="color:blue;">`reiniciar el servicio bind9`</mark> y comprobar que esté corriendo correctamente.
 
-<figure><img src="../../.gitbook/assets/image (20) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si no las hecho antes, **edita la configuración de red** del servidor de Ubuntu  para indicar que él mismo es el servidor DNS que tendrá que consultar para la resolución de nombres. Y esto lo tenemos que hacer con **netplan**.
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt="" width="532"><figcaption><p>Configuración de la red con nNetplan</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13).png" alt="" width="532"><figcaption><p>Configuración de la red con nNetplan</p></figcaption></figure>
 
 Para que tome los cambios, hacemos:
 
@@ -158,7 +158,7 @@ sudo netplan try
 
 Ya podemos  realizar pruebas con **nslookup** para comprobar si el servidor DNS está resolviendo correctamente los nombres y las direcciones IP:
 
-<figure><img src="../../.gitbook/assets/image (188).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (188).png" alt=""><figcaption></figcaption></figure>
 
 Nos sigue respondiendo con una respuesta no autoritativa pese a que no debería ser así.&#x20;
 
@@ -166,7 +166,7 @@ Las aplicaciones hacen uso del resolver de systemd-resolved  escuchan en la inte
 
 &#x20;El archivo **/etc/resolv.conf** es un enlace simbólico a otro fichero de configuración. Por cada modo de implementación del systemd-resolved, existen **4 ficheros de configuración.**
 
-<figure><img src="../../.gitbook/assets/image (53) (1).png" alt=""><figcaption><p>En este caso /etc/resolv.conf ya apunta al fichero adecuado</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (53) (1).png" alt=""><figcaption><p>En este caso /etc/resolv.conf ya apunta al fichero adecuado</p></figcaption></figure>
 
 ¿Cómo podemos desactivar el systemd-resolved y que las aplicaciones consulten nuestro resolver directamente?&#x20;
 
@@ -194,11 +194,11 @@ para hacerlo apuntar al fichero adecuado. Comprueba haciendo:
 cat /etc/resolv.conf
 ```
 
-<figure><img src="../../.gitbook/assets/image (61) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (61) (1).png" alt=""><figcaption></figcaption></figure>
 
 Si vuelves a probar el nslookup veremos que funciona como se espera que haga:
 
-<figure><img src="../../.gitbook/assets/image (13) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Links
 

@@ -31,7 +31,7 @@ Al separar la lógica de control de los dispositivos de red, SDN permite la prog
 
 La Open Networking Foundation define una arquitectura de alto nivel para SDN con tres capas o planos principales, como se muestra en la figura.
 
-<figure><img src="../.gitbook/assets/image (9).png" alt="Arquitectura SDN" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt="Arquitectura SDN" width="563"><figcaption></figcaption></figure>
 
 Los dispositivos SDN:&#x20;
 
@@ -253,11 +253,11 @@ Para saber los puertos de conexión y por tanto conocer la ruta completa, es nec
 mininet>net ports
 ```
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Si levantamos Wireshark desde el inicio para hacer capturas de los paquetes podremos monitorizar el tráfico. Por ejemplo:&#x20;
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Extras
 
@@ -266,7 +266,7 @@ Si queremos acceder a las terminales de los hosts h1 y h2, por ejemplo, podemos 
 <pre><code><strong>mininet> xterm h1 h2  
 </strong></code></pre>
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el pantallazo anterior podemos ver que se ha hecho un **ip a** para comprobar las direcciones IP que tienen ambos hosts h1 y h2.
 
@@ -303,7 +303,7 @@ Entonces, teniendo estas dos terminales abiertas podemos configurar a h1 como se
 
 Como se muestra en el pantallazo siguiente, se han transferido 6.24 GB de tráfico TCP.
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Tráfico generado entre los hosts 1 y 2 con iperf3</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Tráfico generado entre los hosts 1 y 2 con iperf3</p></figcaption></figure>
 
 Ahora vamos a buscar información sobre los puertos de s1 utilizando el comando **dump-ports** de\
 **ovs-ofctl** en cuyo output figurará la cantidad de paquetes enviados y recibidos por todos los puertos, entre otros.
@@ -312,7 +312,7 @@ Ahora vamos a buscar información sobre los puertos de s1 utilizando el comando 
 sudo ovs - ofctl -O OpenFlow13 dump - ports s1
 ```
 
-<figure><img src="../.gitbook/assets/image (7).png" alt="" width="563"><figcaption><p>Información de los puertos del switch s1</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt="" width="563"><figcaption><p>Información de los puertos del switch s1</p></figcaption></figure>
 
 En la primera línea se indica que existen 4 puertos aunque muestran 3. También podemos ver que los paquetes entrantes (rx pkts) del puerto "s1 - eth1" se transmiten (tx pkts) por los puertos "s1 - eth2" y "s1 - eth2" de tal modo que los recibidos en el puerto "s1 - eth1" deben estar aproximadamente en el rango de la suma de los transmitidos por los otros puertos, como era de esperar:
 

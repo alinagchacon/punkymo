@@ -102,7 +102,7 @@ Nota: El hecho de configurar la version 1 habilita solo RIPv1. Si configuramos *
 
 Esto se debe a que el R1 ahora está a la escucha de actualizaciones RIPv2 únicamente. Todavía los routers R2 y R3 envían actualizaciones RIPv1, con lo cual, debemos configurar el comando de la versión2 en todos los routers. Podemos verificar que no haya ninguna ruta RIP en la tabla de enrutamiento.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Verificar que no haya rutas RIPv1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Verificar que no haya rutas RIPv1</p></figcaption></figure>
 
 La versión 2 de RIP  también resume de modo automático las redes en los límites de red principales. Podemos comprobarlo con el comando: **show ip protocols**. Sin embargo, podemos modificar el comportamiento predeterminado de RIPv2 utilizando el comando del modo de configuración del router:&#x20;
 
@@ -132,7 +132,7 @@ router rip
 passive-interface gi0/0
 ```
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Salida del comando do show protocols</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Salida del comando do show protocols</p></figcaption></figure>
 
 Este comando detiene las actualizaciones de routing a través de la interfaz especificada, pero, la red a la que pertenece la interfaz especificada aún se anuncia en las actualizaciones de routing enviadas a otras interfaces.
 
@@ -159,9 +159,9 @@ Y en caso de aquellas interfaces que no deben serlo, se pueden volver a habilita
 
 Veamos el siguiente caso. El router R3 es un router perimetral que está  conectado a un ISP. Para que R3 llegue a Internet, solo se requiere una ruta estática predeterminada desde la interfaz E0/2.
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 También pudiéramos configurar rutas estáticas predeterminadas en el R1 y en el R2, pero es más escalable crear la ruta estática en el router R3 y, después hacer que se propague al resto de los routers usando RIP. De este modo se le proporciona conexión a Internet al resto de redes del dominio de enrutamiento RIP. La ruta estática predeterminada se debe publicar a todos los routers que usan el protocolo de enrutamiento dinámico.
 
