@@ -134,6 +134,8 @@ nano /etc/sysctl.conf
 
 <figure><img src="../../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption><p>/etc/sysctl.conf</p></figcaption></figure>
 
+**Continuamos ....**
+
 La herramienta que nos hará el trabajo final será precisamente el `IPTABLES`. Para ello, tendremos que instalarla primero:
 
 ```
@@ -172,6 +174,78 @@ En sentido general, la regla de IPTABLEs se utiliza para configurar una regla de
 Podemos comprobar que efectivamente está habilitada la regla en la tabla NAT:
 
 <figure><img src="../../.gitbook/assets/image (380).png" alt="" width="522"><figcaption><p>Regla habilitada en iptables</p></figcaption></figure>
+
+### <mark style="color:purple;">Debian</mark>&#x20;
+
+En <mark style="color:purple;">Debian 13 Trixie tenemos las dos interfaces de red:</mark>
+
+* enp0s3 - LAN privada: 192.168.6.100/24
+* enp0s8 - WAN pública: con NAT 10.0.3.15
+
+
+
+No tenemos el archivo <mark style="color:purple;">/etc/sysctl.conf</mark> nos toca hacer lo siguiente:
+
+```
+sudo nano /etc/sysctl.d/99-forward.conf
+```
+
+En el archivo agregar la línea en cuestión:
+
+```
+net.ipv4.ip_forward=1
+```
+
+Para que los cambios se hagan persistentes debemos escribir:
+
+```
+sysctl -p 
+```
+
+pero  como no tenemos el archivo **/etc/sysctl.conf** entonces hacemos:
+
+```
+systemctl restart systemd-sysctl.service
+```
+
+Sin embargo si tecleamos el siguiente comando, nos debe mostrar el valor 0 o 1 para mostrar si tenemos activada o no el ip\_forward.
+
+```
+sysctl net.ipv4.ip_forward
+```
+
+#### Limpiar reglas previas
+
+```
+iptables -F iptables -t nat -F
+```
+
+#### Habilitar NAT en la interfaz de salida (WAN)
+
+```
+iptables -t nat -A POSTROUTING -o enp0s8 -j MASQUERADE
+```
+
+#### Permitir reenvío entre LAN → WAN
+
+```
+iptables -A FORWARD -i $LAN_IF -o enp0s8 -j ACCEPT iptables -A FORWARD -i enp0s8 -o enp0s3 -m state --state RELATED,ESTABLISHED -j ACCEPT
+```
+
+
+
+Si queremos hacer firme los cambios  hacemos:
+
+```
+sudo apt install iptables-persistent -y
+sudo netfilter-persistent save
+```
+
+
+
+
+
+
 
 ### Paso 6: Testeando la conexión
 
