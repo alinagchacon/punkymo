@@ -229,7 +229,7 @@ iptables -t nat -A POSTROUTING -o enp0s8 -j MASQUERADE
 #### Permitir reenvío entre LAN → WAN
 
 ```
-iptables -A FORWARD -i $LAN_IF -o enp0s8 -j ACCEPT iptables -A FORWARD -i enp0s8 -o enp0s3 -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i enp0s3 -o enp0s8 -j ACCEPT iptables -A FORWARD -i enp0s8 -o enp0s3 -m state --state RELATED,ESTABLISHED -j ACCEPT
 ```
 
 
