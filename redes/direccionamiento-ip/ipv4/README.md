@@ -90,7 +90,7 @@ De un modo más esquemático sería:
 Estas clases de redes también tienen sus excepciones como pueden ser:
 
 * <mark style="color:blue;">`0.X.X.X`</mark> no se utiliza. Es una IP que representa a toda la red.
-* <mark style="color:blue;">`127.X.X.X`</mark> es la llamada dirección de _<mark style="color:blue;">lookback</mark>_. Se trata de la IP de la interfaz de red del dispositivo.
+* <mark style="color:blue;">`127.X.X.X`</mark> es la llamada dirección de _<mark style="color:blue;">loopback</mark>_. Se trata de la IP de la interfaz de red del dispositivo.
 * <mark style="color:blue;">`169.254.X.X`</mark> denominada también APIPA es una dirección de enlace local que es auto asignada por la misma interfaz de red cuando tiene configurada una interfaz dinámica y no recibe ninguna IP de oferta por parte de un servidor de DHCP.
 * La red que comienza en decimal por <mark style="color:blue;">`255`</mark> se utiliza para identificar el segmento de broadcast de todas las redes.
 
