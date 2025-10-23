@@ -184,10 +184,7 @@ Tomemos la palabra `Bola`&#x20;
 
 <figure><img src="../.gitbook/assets/image (343).png" alt=""><figcaption></figcaption></figure>
 
-* Volvemos a la tabla ASCII - buscamos los binarios correspondientes y tomamos nota de su número decimal:&#x20;
-
-<figure><img src="../.gitbook/assets/image (344).png" alt=""><figcaption></figcaption></figure>
-
+* Buscamos los binarios correspondientes y tomamos nota de su número decimal:  `16 - 36 - 61 - 12 - 16 - 16`
 * Por último, buscamos la referencia decimal en la tabla Base64:
 
 <figure><img src="../.gitbook/assets/image (345).png" alt=""><figcaption></figcaption></figure>
