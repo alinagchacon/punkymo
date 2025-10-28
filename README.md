@@ -2,7 +2,7 @@
 description: Compartir conocimiento, nos hace ricos
 ---
 
-# 👀 Init
+# 👀 whoami
 
 Apuntes, ideas, consideraciones prácticas y temas de los que tengo que aprender muchísimo. De ninguna manera me he querido apropiar de los contenidos de otros, todo lo contrario.
 
@@ -26,6 +26,10 @@ de Alex Viladot
 
 {% embed url="https://malcrvz.gitbook.io/the-vx-files" %}
 de Alejandro Liébana
+{% endembed %}
+
+{% embed url="https://vickey-1.gitbook.io/vic/" %}
+La chica más chiquilla de Asix2
 {% endembed %}
 
 {% embed url="https://gsoteras.gitbook.io/gsoteras" %}
