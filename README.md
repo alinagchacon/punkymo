@@ -28,8 +28,8 @@ de Alex Viladot
 de Alejandro Liébana
 {% endembed %}
 
-{% embed url="https://vickey-1.gitbook.io/vic/" %}
-La chica más chiquilla de Asix2
+{% embed url="https://virkiki.gitbook.io/miwiki" %}
+de Victoria Conde, una chiquilla muy chiquilla que llegará lejos
 {% endembed %}
 
 {% embed url="https://gsoteras.gitbook.io/gsoteras" %}
