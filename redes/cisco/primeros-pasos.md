@@ -30,7 +30,7 @@ Este software:
 
 ### Conexión por consola
 
-Cuando nos llega un dispositivo de red nuevo como un Router lo ideal es conectarnos por consola con un cable de consola USB como el que se muestra a continuación.
+Cuando nos llega un dispositivo de red "nuevo" como puede ser un Router lo ideal es conectarnos por consola con un cable de consola USB como el que se muestra a continuación.
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt="" width="239"><figcaption></figcaption></figure>
 
@@ -50,9 +50,27 @@ Nos encontraremos con una pantalla como la siguiente donde tenemos que seleccion
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-Una vez conseguida la conexión con el dispositivo ya tendrá el acceso al terminal para configurarlo.
+Una vez conseguida la conexión con el dispositivo ya tendrá el acceso al terminal para configurarlo.  La siguiente imagen muestra un pantallazo del Router de la serie 2900 que son parte de la generación de routers de servicios integrados (ISR) de Cisco, que fueron diseñados para proporcionar conectividad de alto rendimiento y servicios integrados. La serie incluye modelos como el Cisco 2901, 2911, 2921 y 2951.
+
+
+
+
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
+
+
+La configuración del Router la almaceno en la flash  haciendo:&#x20;
+
+```
+copy running-config flash0:/router-config-backup 
+```
+
+Por tanto, para restablecer la configuración tenemos que volcar el archivo en el running-config:
+
+```
+copy flash0:/router-config-backup running-config
+```
 
 Me falta explicar algunos detalles interesantes para entender el por qué de todo esto. Pero te lo debo.
 
