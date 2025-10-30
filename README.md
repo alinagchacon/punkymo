@@ -20,6 +20,12 @@ de Xavier Adell
 
 {% embed url="https://tools.ntechadmin.com" %}
 
+{% embed url="https://gabimarti.medium.com/" %}
+Ex-docente. Consultor en Ciberseguridad.
+{% endembed %}
+
+
+
 {% embed url="https://apuntes-alex.gitbook.io/apuntes-smx-alex-viladot" %}
 de Alex Viladot
 {% endembed %}

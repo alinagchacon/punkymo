@@ -58,7 +58,7 @@ Las rutas estáticas son útiles para conectarse a una red remota específica. E
 \
 
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt="" width="154"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt="" width="154"><figcaption></figcaption></figure>
 
 ### Ruta estática predeterminada
 

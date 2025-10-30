@@ -10,7 +10,7 @@ Para el direccionamiento IPv6, los componentes de la tabla de enrutamiento son m
 
 IPv6 es un protocolo sin clase, con lo que todas las rutas rutas finales de nivel 1. No hay rutas principales de nivel 1 para rutas secundarias de nivel 2.
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1).png" alt="" width="563"><figcaption><p>Topología con IPv6. Tomado de <a href="https://redes.umh.es/cisco/CCNA/es/RSE/index.html#3.3.4.1">https://redes.umh.es/cisco/CCNA</a></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Topología con IPv6. Tomado de <a href="https://redes.umh.es/cisco/CCNA/es/RSE/index.html#3.3.4.1">https://redes.umh.es/cisco/CCNA</a></p></figcaption></figure>
 
 En el esquema de red de la imagen podemos ver que los tres routers: R1, R2 y R3 están configurados en malla, o sea, tienen caminos redundantes hacia el resto de redes. En los tres routers se ha configurado el protocolo EIGRP para IPv6.
 
@@ -28,19 +28,19 @@ En la tabla de routing que se muestra podemos ver la red conectada y las entrada
 * **Métrica**: el valor asignado para llegar a la red remota. Los valores más bajos indican las rutas preferidas.
 * **Interfaz de salida**: la interfaz de salida que se utiliza para reenviar paquetes a la red de destino.
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt="" width="563"><figcaption><p>Tomado de: <a href="https://redes.umh.es/cisco/CCNA/es/RSE/index.html#3.3.4.2">https://redes.umh.es/cisco/CCNA/es/RSE/index.html#3.3.4.2</a></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt="" width="563"><figcaption><p>Tomado de: <a href="https://redes.umh.es/cisco/CCNA/es/RSE/index.html#3.3.4.2">https://redes.umh.es/cisco/CCNA/es/RSE/index.html#3.3.4.2</a></p></figcaption></figure>
 
 ### Ejemplo 1
 
 A partir de la red especificada, identificar las partes de una entrada en la tabla de enrutamiento.
 
-<figure><img src="../../../.gitbook/assets/image (7) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Ejemplo 2
 
 A partir de la red especificada, identificar las partes de una entrada en la tabla de enrutamiento.
 
-<figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Ejemplo 3
 

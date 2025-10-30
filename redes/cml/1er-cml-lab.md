@@ -10,7 +10,7 @@ You can also use that same API directly and manage the complete lab lifecycle pr
 
 To perform the operations, the API uses the controller that is responsible for deploying virtual devices and providing all the information about the lab simulations. All the devices are deployed on available compute instances, using memory and CPU resources. The number of compute nodes depends on the type of the deployment. Cisco Modeling Labs can be deployed as a standalone solution where everything runs on the same server or virtual machine. It can also be deployed as a cluster, where multiple servers are bundled together, and the controller can use the resources on each of them.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt="" width="371"><figcaption><p>Tomado de https://u.cisco.com</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt="" width="371"><figcaption><p>Tomado de https://u.cisco.com</p></figcaption></figure>
 
 ### HTML5 User Interface
 

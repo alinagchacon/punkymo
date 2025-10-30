@@ -13,7 +13,7 @@
 
 Configuramos la IP estática en el archivo /etc/network/interfaces
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 
 
@@ -40,7 +40,7 @@ En primer logar tenemos que editar los siguientes archivos:
 
 Nos vamos al directorio /etc/bind/ y editamos el archivo: <mark style="color:purple;">named.conf.local</mark> con los archivos de zona directa e inversa. Si os fijáis ambos archivos están en un directorio que debemos crear: **zones**. No es obligatorio crearlo.
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt="" width="464"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt="" width="464"><figcaption></figcaption></figure>
 
 Con el comando siguiente podemos verificar la sintaxis de este archivo:
 
@@ -62,7 +62,7 @@ Para la **zona directa** creamos el fichero:
 
 El  siguiente pantallazo muestra la configuración.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Donde:
 
@@ -84,7 +84,7 @@ nano /etc/bind/zones/db.6.168.192
 
 Y la sintaxis de la configuración es similar al del archivo de zona directa. Esto es:
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Donde:
 
@@ -110,7 +110,7 @@ Este es un archivo importante, dado que sirve para definir **opciones globales**
 
 
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Donde:
 
