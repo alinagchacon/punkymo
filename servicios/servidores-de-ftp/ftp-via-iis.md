@@ -136,3 +136,10 @@ lls
 ```
 
 &#x20;
+
+### Algo extra ...
+
+1. ¿Qué hacen las opciones que añadimos al final del archivo sshd\_config? ¿por qué son importantes?
+2. ¿Qué significa exportar las X en el entorno de SSH?
+3. Prueba la conexión de SFTP y monitoriza el servicio con Wireshark. Haz lo mismo con FTP.
+
