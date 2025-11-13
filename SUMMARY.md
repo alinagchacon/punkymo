@@ -82,7 +82,7 @@
 * [Servidores de FTP](servicios/servidores-de-ftp/README.md)
   * [FileZilla](servicios/servidores-de-ftp/filezilla.md)
   * [VSFTPD](servicios/servidores-de-ftp/vsftpd.md)
-  * [FTP vía IIS](servicios/servidores-de-ftp/ftp-via-iis.md)
+  * [SFTP](servicios/servidores-de-ftp/ftp-via-iis.md)
 * [Servidores DNS](servicios/servidores-dns/README.md)
   * [DNS - Windows Server 2016](servicios/servidores-dns/dns-windows-server-2016.md)
   * [DNS - Ubuntu Server 22.04](servicios/servidores-dns/dns-ubuntu-server-22.04/README.md)
