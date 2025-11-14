@@ -73,7 +73,7 @@ Y al final del archivo, añadimos la siguiente configuración:
 
 ```
 Match Group sftp_users 
-ChrootDirectory /data/%u 
+ChrootDirectory /dataftp/%u 
 ForceCommand internal-sftp 
 AllowTcpForwarding no 
 X11Forwarding no
