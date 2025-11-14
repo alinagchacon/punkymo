@@ -40,6 +40,7 @@
   * [Acceso y password](redes/cisco/acceso-y-password.md)
   * [NAT / PAT](redes/cisco/nat-pat.md)
   * [🚧 OSPF](redes/cisco/ospf.md)
+  * [🏗️ MPLS](redes/cisco/mpls.md)
 * [SDN](redes/sdn.md)
 * [Firewalls](redes/firewalls/README.md)
   * [Tipos de firewalls](redes/firewalls/tipos-de-firewalls.md)
