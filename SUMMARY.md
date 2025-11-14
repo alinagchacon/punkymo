@@ -31,7 +31,7 @@
   * [Administración básica](redes/switches/administracion-basica.md)
 * [CML](redes/cml/README.md)
   * [🚧 1er CML lab](redes/cml/1er-cml-lab.md)
-* [GNS3](redes/gns3.md)
+* [🏗️ GNS3](redes/gns3.md)
 * [CISCO](redes/cisco/README.md)
   * [Primeros pasos](redes/cisco/primeros-pasos.md)
   * [¿Qué son las VLAN?](redes/cisco/que-son-las-vlan/README.md)
