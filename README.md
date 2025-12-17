@@ -49,3 +49,8 @@ de Leo Duarte
 {% embed url="https://github.com/gloxito/gloscan" %}
 de Adrià Trillo
 {% endembed %}
+
+{% embed url="https://githopes.gitbook.io/githopes/documentation/proxmox-guia-rapida-principiante/indice-proxmox-guia-1" %}
+de Senay Franco
+{% endembed %}
+
