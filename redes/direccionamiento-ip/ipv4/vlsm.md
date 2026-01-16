@@ -69,4 +69,4 @@ Por tanto:
 2. [https://ccnadesdecero.es/vlsm-mascaras-subred-longitud-variable/](https://ccnadesdecero.es/vlsm-mascaras-subred-longitud-variable/)
 
 \
-\
+<br>

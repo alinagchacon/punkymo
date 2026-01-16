@@ -389,6 +389,5 @@ Hemos establecido que la IP p√∫blica del servidor interno de la LAN sea la IP p√
 
 
 \
-\
-
+<br>
 

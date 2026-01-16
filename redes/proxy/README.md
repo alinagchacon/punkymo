@@ -52,10 +52,9 @@ Sin embargo, limitan la capacidad de una organización para satisfacer las neces
 \
 En una comunicación estándar de Internet, el PC A se comunicaría directamente con el servidor C. Sin embargo, cuando hay un proxy de reenvío, el cliente A envía las solicitudes al proxy B, y éste es quien reenviará la solicitud al servidor C.
 
-Lo mismo a la inversa, el servidor C enviará la respuesta al proxy B, que reenviará a su vez la respuesta al cliente A.\
+Lo mismo a la inversa, el servidor C enviará la respuesta al proxy B, que reenviará a su vez la respuesta al cliente A.<br>
 
-
-#### ¿Por qué se utilizaría un proxy de reenvío? 
+#### ¿Por qué se utilizaría un proxy de reenvío?<br>
 
 1. **Evitar restricciones de navegación estatales o institucionales.** Algunos gobiernos e instituciones utilizan los firewalls para dar a sus usuarios acceso a una versión limitada de Internet.\
    Un proxy de reenvío permite eludir estas restricciones, ya que permiten que el usuario se conecte al proxy en lugar de hacerlo directamente a los sitios que está visitando.
@@ -97,8 +96,7 @@ Lo habitual es que todas las solicitudes de D vayan directamente a F, y F enviar
    \
    En esta situación un proxy inverso puede brindar equilibrio de carga, distribuyendo el tráfico entrante de manera uniforme entre los diferentes servidores evitando la sobrecarga de uno solo.\
    \
-   En caso de que un servidor falle los otros servidores pueden intervenir para gestionar el tráfico.\
-
+   En caso de que un servidor falle los otros servidores pueden intervenir para gestionar el tráfico.<br>
 2. **Protección ante ataques.** Si tenemos un proxy inverso instalado, nuestro sitio web no necesitaría revelar nunca la dirección IP de su servidor. Por tanto, tener un proxy inverso dificulta los ataques de tipo DDoS.
 3. **Equilibrio de carga global (GSLB).**-Es una forma de equilibrio de carga, donde un mismo sitio web puede estar distribuido en varios servidores por todo el mundo y el proxy inverso enviará a los clientes a aquel servidor que esté geográficamente más cerca. De este modo, se reducen las distancias que deben recorrer las solicitudes y las respuestas, minimizando los tiempos de carga.
 4.  **Almacenamiento en caché.** Se trata del [almacenamiento en caché](https://www.cloudflare.com/learning/cdn/what-is-caching/) del contenido, dando lugar a mayor rapidez de gestión.\

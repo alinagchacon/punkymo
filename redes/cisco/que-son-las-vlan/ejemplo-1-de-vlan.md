@@ -12,8 +12,7 @@ La idea que vamos a desarrollar para comprender la configuración de una VLAN es
 2. Para poder visualizarlo de un modo más cómodo hemos utilizado colores, por lo que cada VLAN equivale a un color, esto es, un equipo.
 3. En la configuración se tienen dos switches, donde se establece el **enlace troncal**.
 4. Todas las configuraciones tanto del switch como del router las haremos desde el modo terminal: CLI
-5. La VLAN nativa será la 300 (blau), sin embargo, por seguridad no debería ser ni la 1 (que es la vlan por defecto) ni una vlan en uso como es en este caso. Lo haremos así para "simplificar".\
-
+5. La VLAN nativa será la 300 (blau), sin embargo, por seguridad no debería ser ni la 1 (que es la vlan por defecto) ni una vlan en uso como es en este caso. Lo haremos así para "simplificar".<br>
 
 <figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configurando VLANs</p></figcaption></figure>
 
@@ -24,8 +23,7 @@ Ubicar en el entorno de trabajo de Cisco
 1. 2 switches 2960
 2. 1 Router
 3. 4 PC
-4. 1 servidor\
-
+4. 1 servidor<br>
 
 **¿Qué vamos a hacer?**
 
@@ -56,8 +54,7 @@ Lo siguiente sería establecer la cantidad de puertos de acceso para cada VLAN e
 
 ### Paso 2 - Configurar los PC&#x20;
 
-Lo primero será configurar las IP de cada PC teniendo en cuenta la VLAN donde estarán.\
-
+Lo primero será configurar las IP de cada PC teniendo en cuenta la VLAN donde estarán.<br>
 
 <figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configurando los PC</p></figcaption></figure>
 

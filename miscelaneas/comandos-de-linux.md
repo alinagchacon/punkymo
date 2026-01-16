@@ -144,4 +144,4 @@ sudo systemctl status snapd.seeded.service
 * https://juncotic.com/grep-y-las-expresiones-regulares-basicas-y-extendidas/ &#x20;
 * https://javiermartinalonso.github.io/linux/2018/01/15/linux-grep-patrones-debug.html&#x20;
 
-## &#x20;
+## <br>

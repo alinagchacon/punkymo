@@ -79,8 +79,7 @@ Para comenzar a construir el circuito, desconecta la placa `ESP32-S3 WROOM` de l
 
 Vamos a construir nuestro circuito según se muestra en el diagrama. Solo después de construirlo es que podemos conectarlo al PC para verificar que es correcto.
 
-\
-
+<br>
 
 <figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Circuito</p></figcaption></figure>
 
@@ -96,8 +95,7 @@ Busquemos el código del Blink:
 Freenove_Ultimate_Starter_Kit_for_ESP32_S3\Sketches\Sketch_01.1_Blink
 ```
 
-Observa en el menú los items siguientes: Board, Port y Upload Speed\
-
+Observa en el menú los items siguientes: Board, Port y Upload Speed<br>
 
 <figure><img src="../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -112,4 +110,4 @@ En el siguiente enlace podrás ver el circuito en funcionamiento: [https://youtu
 3. [https://www.fantasystudios.es/arduino/pages/instalacion/instalacion\_2.html](https://www.fantasystudios.es/arduino/pages/instalacion/instalacion_2.html)
 
 \
-\
+<br>

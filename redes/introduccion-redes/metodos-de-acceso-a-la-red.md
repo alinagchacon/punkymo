@@ -1,4 +1,4 @@
-# Métodos de acceso  a la red
+# Métodos de acceso a la red
 
 Tanto en las redes LAN como WLAN (las inalámbricas) es necesario hacer un control del tráfico de los datos en la red. Ambos tipos de redes son ejemplos de lo que se denomina acceso múltiple.&#x20;
 
@@ -47,8 +47,7 @@ El distribuidor es un punto central conectado con todos los nodos de la red y no
 
 Esto implica que se habla de un anillo lógico sobre una **estructura física de estrella**, ya que la transmisión de datos se produce, a nivel abstracto, en forma de anillo. Si bien los datos siempre son llevados hasta la MAU, desde allí no se envían a ningún ordenador concreto, sino simplemente al siguiente en el orden fijado.
 
-Te recomiendo los siguientes enlaces:\
-
+Te recomiendo los siguientes enlaces:<br>
 
 1. [https://www.muyinteresante.es/tecnologia/articulo/como-funciona-una-red-token-ring-241573560345](https://www.muyinteresante.es/tecnologia/articulo/como-funciona-una-red-token-ring-241573560345)
 2. [https://www.ionos.es/digitalguide/servidores/know-how/token-ring/](https://www.ionos.es/digitalguide/servidores/know-how/token-ring/)

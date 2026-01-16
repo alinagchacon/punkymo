@@ -234,15 +234,13 @@ Crear la DB:
 mysql> create database users1;
 ```
 
-Copiar la DB users.sql en la DB creada users1:\
-
+Copiar la DB users.sql en la DB creada users1:<br>
 
 ```
 mysql -p -u root --password=1234 users1 < users.sql 
 ```
 
-&#x20; Algunos comandos básicos de MySQL:\
-
+&#x20; Algunos comandos básicos de MySQL:<br>
 
 ```
 use Database users;

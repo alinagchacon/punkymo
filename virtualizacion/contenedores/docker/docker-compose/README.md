@@ -42,8 +42,7 @@ Algunos comandos que nos pueden ser útiles a la hora de manipular los contenedo
 * <mark style="color:blue;">`docker-compose logs servicio_1`</mark><mark style="color:blue;">:</mark> Muestra los logs del servicio llamado servicio\_1 que estaba descrito en el docker-compose.yml.
 *   <mark style="color:blue;">`docker-compose exec servicio_1 /bin/bash`</mark><mark style="color:blue;">:</mark> Ejecuta una orden, en este caso /bin/bash en un contenedor llamado servicio\_1 que estaba descrito en el docker-compose.yml.
 
-    \
-
+    <br>
 
 ### Links
 

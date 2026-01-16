@@ -228,8 +228,7 @@ Cost = 100,000,000 bps / interface bandwidth in bps
 
 Debido a que el valor del costo OSPF debe ser un número entero, las interfaces FastEthernet, Gigabit Ethernet y 10 GigE comparten el mismo costo. Para corregir esta situación, puede:
 
-Ajuste el ancho de banda de referencia con el auto-cost reference-bandwidth comando en cada router OSPF.\
-
+Ajuste el ancho de banda de referencia con el auto-cost reference-bandwidth comando en cada router OSPF.<br>
 
 ### Ajuste el ancho de banda de referencia
 
@@ -260,8 +259,7 @@ R1# show ip route ospf | begin 10
 ```
 
 {% hint style="info" %}
-**Nota:** Aunque utilizar el **ip ospf cost** comando es el método recomendado para manipular los valores de costo OSPF, un administrador también podría hacerlo mediante el comando interface configuration **bandwidth** _kbps_ Sin embargo, eso solo funcionaría si todos los routers son routers Cisco.\
-
+**Nota:** Aunque utilizar el **ip ospf cost** comando es el método recomendado para manipular los valores de costo OSPF, un administrador también podría hacerlo mediante el comando interface configuration **bandwidth** _kbps_ Sin embargo, eso solo funcionaría si todos los routers son routers Cisco.<br>
 {% endhint %}
 
 

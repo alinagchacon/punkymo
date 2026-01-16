@@ -121,7 +121,7 @@ setup-alpine
 
 Dado que el sistema está en inglés, tengamos en cuenta la posición de los caracteres en el teclado. No obstante, lo primero que nos solicita es nuestro idioma y distribución. Escribimos <mark style="color:blue;">`es`</mark> las dos veces que nos lo pide.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
 
 Podemos dejar los valores por defecto:
 
@@ -212,7 +212,7 @@ Si quieres verificar el volume recién creado puedes escribir:
 
 Y verás algo como lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption><p>Inspeccionando un volumen de docker</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption><p>Inspeccionando un volumen de docker</p></figcaption></figure>
 
 Ahora, descargamos e instalamos el contenedor de Portainer Server:
 
@@ -232,7 +232,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /va
 
 Al ejecutar esta línea de comando nos dice que no puede encontrar la imagen de Portainer en el sistema, con lo cual la descarga la última imagen existente de portainer/portainer -ce.
 
-<figure><img src="../../.gitbook/assets/image (211).png" alt=""><figcaption><p>Instalando Portainer en Docker</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (211).png" alt=""><figcaption><p>Instalando Portainer en Docker</p></figcaption></figure>
 
 De forma predeterminada, Portainer genera y utiliza un certificado SSL auto-firmado para asegurar el puerto 9443. Alternativamente, puede proporcionar su propio certificado SSL durante la instalación o mediante la interfaz de usuario de Portainer, una vez que se completa la instalación.
 
@@ -242,7 +242,7 @@ El servidor de Portainer ha sido instalado. Puedes comprobar si el contenedor de
 docker ps
 ```
 
-<figure><img src="../../.gitbook/assets/image (218).png" alt=""><figcaption><p>Comprobando el servidor de Portainer</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (218).png" alt=""><figcaption><p>Comprobando el servidor de Portainer</p></figcaption></figure>
 
 Si necesitas reiniciar el servicio de Portainer haríamos:
 
@@ -252,16 +252,15 @@ docker restart portainer
 
 Nos vamos al navegador y escribimos la IP de la VM y el puerto de acceso:
 
-<mark style="color:blue;">`https://192.168.1.79:9443`</mark>\
+<mark style="color:blue;">`https://192.168.1.79:9443`</mark><br>
 
-
-<figure><img src="../../.gitbook/assets/image (200).png" alt=""><figcaption><p>Accediendo al servicio de Portainer en la VM de Alpine </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (200).png" alt=""><figcaption><p>Accediendo al servicio de Portainer en la VM de Alpine </p></figcaption></figure>
 
 Una vez dentro, ya podemos utilizar el Portainer.
 
 
 
-<figure><img src="../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p>Accediendo a Portainer, recién instalado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p>Accediendo a Portainer, recién instalado</p></figcaption></figure>
 
 ### Instalando Pi-hole
 
@@ -329,19 +328,19 @@ _**Portainer**_  es un conjunto de herramientas de administración de código ab
 
 Nos vamos a <mark style="color:blue;">`https://192.168.1.79:9443`</mark> y seleccionamos el modo de environment:
 
-<figure><img src="../../.gitbook/assets/image (203).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (203).png" alt=""><figcaption></figcaption></figure>
 
 E instalamos Docker Standalone
 
-<figure><img src="../../.gitbook/assets/image (214).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (214).png" alt=""><figcaption></figcaption></figure>
 
 Podemos visualizar nuestra  lista de contenedores creados. En este caso, pihole y portainer:
 
-<figure><img src="../../.gitbook/assets/image (220).png" alt=""><figcaption><p>Container</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (220).png" alt=""><figcaption><p>Container</p></figcaption></figure>
 
 Si clicas en uno de los contenedores se desplegarán mas opciones específicas:
 
-<figure><img src="../../.gitbook/assets/image (205).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (205).png" alt=""><figcaption></figcaption></figure>
 
 ### Algunos aspectos a considerar&#x20;
 

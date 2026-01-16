@@ -147,8 +147,7 @@ donde:
 
 * -b:v 2500k → Fija el bitrate de video en 2500 kbps (mejor calidad, pero más peso)
 * ​-b:a 192k → Fija el bitrate de audio en 192 kbps (buena calidad sin ocupar\
-  demasiado).\
-
+  demasiado).<br>
 
 Nota: Si el bitrate es muy bajo, el video se verá pixelado. Si es muy alto, ocupará demasiado espacio.
 
@@ -215,24 +214,19 @@ Nota: También podemos usar formatos como BMP, TIFF, etc.
 * RTMP
   * Adobe RTMP Specification: https://www.adobe.com/devnet/rtmp.html
   * Wowza RTMP vs HLS: https://www.wowza.com/blog/hls-vs-rtmp
-
-- HLS\
+* HLS\
   ○​ Apple HLS Docs: https://developer.apple.com/streaming/\
   ○​ Cloudflare HLS Guide: https://www.cloudflare.com/learning/video/what-is-http-live-streaming/3.​
-
 * RTSP\
   ○​ RTSP RFC: https://tools.ietf.org/html/rfc2326
-
-- &#x20;SRT\
+* &#x20;SRT\
   ○​ SRT Alliance: https://www.srtalliance.org/\
   FFmpeg
   * &#x20;FFmpeg Wiki: https://trac.ffmpeg.org/wiki
-
 * yt-dlp
   * &#x20;GitHub Repository: https://github.com/yt-dlp/yt-dlp
   * Installation Guide: https://github.com/yt-dlp/yt-dlp/wiki/Installation
-
-- Codecs Comparativos
+* Codecs Comparativos
   * &#x20;Xiph.org (VP9/Opus): https://xiph.org/
   * AOMedia (AV1): https://aomedia.org/
 
@@ -294,24 +288,18 @@ Además tenemos:
 
 * Grabar pantalla en Linux (X11)\
   ffmpeg -f x11grab -i :0.0 -f alsa -i default grabacion.mp4
-
-- Capturar webcam (v4l2)\
+* Capturar webcam (v4l2)\
   ffmpeg -f v4l2 -i /dev/video0 webcam.mp4
-
 * Convertir video a GIF\
   ffmpeg -i video.mp4 -vf "fps=10,scale=640:-1" animacion.gif
-
-- Aplicar filtros (ej: rotar, espejo, desenfoque)\
+* Aplicar filtros (ej: rotar, espejo, desenfoque)\
   ffmpeg -i video.mp4 -vf "hflip,vflip,boxblur=5" video\_editado.mp4
-
 * Añadir logo o imagen superpuesta\
   ffmpeg -i video.mp4 -i logo.png -filter\_complex "overlay=10:10"\
   video\_con\_logo.mp4
-
-- Streaming a RTMP (Twitch/YouTube)\
+* Streaming a RTMP (Twitch/YouTube)\
   ffmpeg -i entrada.mp4 -c:v libx264 -preset fast -f flv\
   rtmp://live.twitch.tv/app/STREAM\_KEY
-
 * Comando completo (recortar, escalar y comprimir)\
   ffmpeg -i entrada.mov -ss 00:01:30 -to 00:02:30 -vf "scale=1280:720" -c:v libx264\
   -crf 23 -c:a aac -b:a 128k salida.mp4
@@ -362,8 +350,7 @@ Ahora, vamos a descargar el vídeo en el formato que queramos. En nuestro caso, 
 <figure><img src="../../.gitbook/assets/image (404).png" alt=""><figcaption><p>Descargando el video</p></figcaption></figure>
 
 Para poder trabajar con el resto de los comandos, vamos a descargar el vídeo completo, tomaremos la opción 231.\
-Esta opción tiene una resolución de 640x480, que es bastante buena para ver detalles, y la tasa de bits es relativamente alta, lo que implica buena calidad. El tamaño es más grande, pero si la calidad es lo que más te importa, esta opción es la mejor.\
-
+Esta opción tiene una resolución de 640x480, que es bastante buena para ver detalles, y la tasa de bits es relativamente alta, lo que implica buena calidad. El tamaño es más grande, pero si la calidad es lo que más te importa, esta opción es la mejor.<br>
 
 <figure><img src="../../.gitbook/assets/image (405).png" alt=""><figcaption></figcaption></figure>
 
@@ -385,8 +372,7 @@ Para descargar los subtítulos, primero tenemos que mirar si estos están dispon
 
 <figure><img src="../../.gitbook/assets/image (408).png" alt=""><figcaption></figcaption></figure>
 
-Una vez sabemos todos los subtítulos que nos podemos descargar, descargamos el vídeo junto a los subtítulos:\
-
+Una vez sabemos todos los subtítulos que nos podemos descargar, descargamos el vídeo junto a los subtítulos:<br>
 
 <mark style="color:purple;">yt-dlp --write-sub --sub-lang es-EkcP5AbUQBc --convert-subs srt -f</mark>\ <mark style="color:purple;">bestvideo+bestaudio https://www.youtube.com/watch?v=\_KztNIg4cvE</mark>
 
@@ -413,8 +399,7 @@ Ahora, al reproducirlo tendremos que agregar los subtitulos descargados al víde
 Para añadir una marca de agua con ffmpeg, tenemos que seguir la siguiente sintaxis:
 
 \
-<mark style="color:purple;">ffmpeg -i video.mp4 -i marca\_de\_agua.png -filter\_complex "overlay=W-w-10:H-h-</mark>\ <mark style="color:purple;">10" -codec:a copy video\_con\_marca.mp4</mark>\
-
+<mark style="color:purple;">ffmpeg -i video.mp4 -i marca\_de\_agua.png -filter\_complex "overlay=W-w-10:H-h-</mark>\ <mark style="color:purple;">10" -codec:a copy video\_con\_marca.mp4</mark><br>
 
 Necesitamos una imagen en .png para poner de fondo y tendremos que indicarle la posición.\
 \
@@ -466,4 +451,4 @@ Un documento sobre el protocolo RTMP, Docker y OBS:
 
 
 
-\
+<br>

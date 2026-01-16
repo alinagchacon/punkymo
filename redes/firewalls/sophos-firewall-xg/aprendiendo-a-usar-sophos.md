@@ -34,8 +34,7 @@ En esta red encontraremos la configuración de la WAN, es decir la salida a inte
 
 En la _imagen_ podemos ver un esquema de como estará formada la simulación de la red con el Firewall, en este esquema no está aplicada ninguna regla o política.
 
-\
-
+<br>
 
 <figure><img src="../../../.gitbook/assets/image (365).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
 
@@ -114,8 +113,7 @@ Para crear una zona debemos acceder al apartado de las zonas y hacer clic en Añ
 Después de crear la zona debemos de asignarle a la interfaz de red de administración la nueva zona creada. Para ello nos dirigimos al apartado interfaces y accedemos a la interfaz de red que usaremos para la administración que es el Port A. Ahí debemos abrir el desplegable y seleccionar la nueva zona que hemos creado. En la _ilustración x_ podemos ver cómo debe quedar.
 
 \
-\
-
+<br>
 
 <figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de nueva Port A</p></figcaption></figure>
 
@@ -140,4 +138,4 @@ Para ello debemos acceder a la configuración de la zona a la que pertenecen, en
 ## Reglas y políticas <a href="#toc159426315" id="toc159426315"></a>
 
 <mark style="color:red;">Falta...</mark>\
-\
+<br>

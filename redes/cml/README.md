@@ -32,8 +32,7 @@ Por tanto, Cisco CML free emula dispositivos reales y utiliza imágenes virtuale
 
 ## Requerimientos, cuenta  y descarga
 
-La versión CML - free es completamente gratis y no necesita de licencia. Sin embargo, requiere una cuenta de Cisco.com completamente cumplimentada. \
-
+La versión CML - free es completamente gratis y no necesita de licencia. Sin embargo, requiere una cuenta de Cisco.com completamente cumplimentada. <br>
 
 ### Requisitos del sistema
 

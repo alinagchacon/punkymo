@@ -43,8 +43,7 @@ Lo primero que tenemos que hacer es instalar los paquetes correspondientes. Esto
 
 * Lightsquid
 * Squid
-* squidGuard\
-
+* squidGuard<br>
 
 Para hacerlo, nos dirigimos a `System - Package Manager` y seleccionamos los paquetes en cuestión para instalar. Una vez finalizada la instalación de los tres paquetes tendríamos algo como lo siguiente en el apartado de `Installed Packages`:
 

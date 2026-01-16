@@ -70,8 +70,7 @@ Podemos configurar las `Common ACL` y las `Groups ACL`. Veremos las `Target Rule
     * allow (permitida siempre y cuando no aparezca en otra categoría) &#x20;
     * deny (no permitida)
 
-    \
-
+    <br>
 
     <figure><img src="../../../.gitbook/assets/image (330).png" alt=""><figcaption><p>Common ACLs</p></figcaption></figure>
 
@@ -107,8 +106,7 @@ No es simple de configurar. Hay montones de detalles a considerar. Tampoco estoy
 
 <figure><img src="../../../.gitbook/assets/image (338).png" alt=""><figcaption><p>Mensaje de error</p></figcaption></figure>
 
-A partir de este punto sería interesante poder optimizar la configuración y testear el servicio, sobre todo el tema de las whitelist, blacklist, etc.\
-
+A partir de este punto sería interesante poder optimizar la configuración y testear el servicio, sobre todo el tema de las whitelist, blacklist, etc.<br>
 
 ## Links
 

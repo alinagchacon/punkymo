@@ -75,8 +75,7 @@ En la ventana de opciones que se nos muestra tenemos que definir:&#x20;
 
 <figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Rsync task en el Truenas 1 con IP 192.168.1.145</p></figcaption></figure>
 
-Podemos ejecutar la tarea rsync yendo a: Tareas > Tareas Rsync y haciendo clic en Ejecutar ahora.\
-
+Podemos ejecutar la tarea rsync yendo a: Tareas > Tareas Rsync y haciendo clic en Ejecutar ahora.<br>
 
 <figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Ejecutar la tarea de sincronización con Rsync</p></figcaption></figure>
 

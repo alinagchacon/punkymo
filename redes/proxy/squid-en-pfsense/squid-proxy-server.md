@@ -48,7 +48,7 @@ Esta es la siguiente sección en la configuración de la `Local cache`. En la mi
 
 **Hard Disk Cache System**. El tipo de sistema de cache.&#x20;
 
-_Nota: En caso de duda podemos clicar el botón_ ![](<../../../.gitbook/assets/image (318).png>) _y nos brinda más información. También nos redirige a un link del Squid:_ [_http://www.squid-cache.org/Doc/config/cache\_dir/_](http://www.squid-cache.org/Doc/config/cache\_dir/) _para mayor información._
+_Nota: En caso de duda podemos clicar el botón_ ![](<../../../.gitbook/assets/image (318).png>) _y nos brinda más información. También nos redirige a un link del Squid:_ [_http://www.squid-cache.org/Doc/config/cache\_dir/_](http://www.squid-cache.org/Doc/config/cache_dir/) _para mayor información._
 
 Las opciones son:
 
@@ -219,6 +219,5 @@ Algunas de estas opciones son:
     Tenemos otras opciones, donde pondremos lo que verán los usuarios en la ventana que se les mostraría, así como el número de procesos para autenticar, etc.
 5. Depende del escenario nuestro puede ser interesante la opción donde podemos elegir el tipo, cada cuanto y la dirección de los servidores para sincronizar.
 
-Continúa ....\
-
+Continúa ....<br>
 

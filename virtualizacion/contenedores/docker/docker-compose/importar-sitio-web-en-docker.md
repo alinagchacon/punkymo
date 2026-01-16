@@ -1,10 +1,10 @@
 # Importar sitio web en Docker
 
-Directorio de trabajo
+El directorio de trabajo será el siguiente:
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="342"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (444).png" alt="" width="272"><figcaption></figcaption></figure>
 
-default.conf
+El archivo de configuración de nginx: default.conf. Tened en cuenta la línea: fastcgi\_pass app\_php:9000;
 
 ```
 server {
@@ -21,7 +21,7 @@ server {
         try_files $uri =404;
 
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass phpfpm:9000;
+        fastcgi_pass app_php:9000;
         fastcgi_index index.php;
         include fastcgi_params;
 
@@ -37,76 +37,74 @@ server {
 
 ```
 
-docker-compose.yml
+El **dockerfile** que construye MySQL:&#x20;
 
 ```
- archivo docker-compose.yml
+FROM php:8.2-fpm
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+```
 
+Nuestro archivo de configuración: **docker-compose.yml**
+
+```
 services:
   # PHP service
-  phpfpm:
-    image: php:8-fpm-alpine
-    container_name: phpfpm
-    working_dir: /var/www/punky
+  app:
+    build: .
+    container_name: app_php
     ports:
       - "9000:9000"
     volumes:
-      - './web:/var/www/punky'
-      #- './phpfpm/php-fpm.d/www.conf:/usr/local/etc/php-fpm.d/www.conf'
-    restart: always
+      - ./web:/var/www/lr/
+      - ./log/php:/var/log/fpm-php.www.log
+    working_dir: /var/www/lr
     networks:
-      - netweb
-
-  # Nginx service
-  nginx:
-    image: nginx:alpine
-    container_name: nginx
-    ports:
-      - 8082:80
-    working_dir: /etc/nginx
-    volumes:
-      - './web:/var/www/punky'
-      - './nginx/default.conf:/etc/nginx/conf.d/default.conf'
-      - './nginx/:/var/log/nginx/'
-    restart: always
-    networks:
-    - netweb
-
+      - netapp
 
   # MySQL database service
-  db:
-    image: mysql
-    container_name: miDB
+  appdb:
+    image: mysql:8
+    container_name: appdb
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
-      - './mysql:/var/lib/mysql'
-      - './db:/db'
+      #- ./mysql/:/var/lib/mysql
+      - ./DB/:/DB/
     networks:
-      - netweb
+      - netapp
 
-  # PHPMYADMIN
+# PHPMYADMIN
   phpmyadmin:
     image: phpmyadmin
-    container_name: miphpmyadmin
+    container_name: appmyadmin
     environment:
       PMA_ARBITRARY: 1
     ports:
-      - 81:80
+      - 8080:80
     networks:
-      - netweb
-      
+      - netapp
+
+  # Nginx service
+  nginx:
+    image: nginx
+    container_name: appnginx
+    ports:
+      - 88:80
+    volumes:
+      - ./web:/var/www/lr/
+      - ./nginx:/etc/nginx/conf.d/
+      - ./log/nginx:/var/log/nginx/
+    networks:
+      - netapp
+
 networks:
-  netweb:
-     driver: bridge
+  netapp:
+    driver: bridge
 ```
 
-En conexión.php
-
 ```
-$servername="db";
 $username="root";
 $password="1234";
 $database="users"; 

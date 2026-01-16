@@ -4,8 +4,7 @@ description: Instalación de MySQL
 
 # Servidores MySQL
 
-MySQL es el sistema de gestión de bases de datos relacional de código abierto y el más extendido que se tiene actualmente. Fue inicialmente desarrollado por MySQL AB, más tarde adquirida por Sun MicroSystems y finalmente comprada por Oracle Corporation, que ya tenía un motor propio InnoDB para MySQL.\
-
+MySQL es el sistema de gestión de bases de datos relacional de código abierto y el más extendido que se tiene actualmente. Fue inicialmente desarrollado por MySQL AB, más tarde adquirida por Sun MicroSystems y finalmente comprada por Oracle Corporation, que ya tenía un motor propio InnoDB para MySQL.<br>
 
 Este sistema de gestión de bases de datos cuenta con una doble licencia:&#x20;
 

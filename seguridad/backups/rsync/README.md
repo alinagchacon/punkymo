@@ -122,8 +122,7 @@ Este mismo proceso se puede realizar con un `pendrive` o `hdd` externo que tenga
 
 Algo que perfectamente pudiéramos querer hacer es copiar a un pendrive. Como estoy haciendo las pruebas en un Ubuntu Server, al insertar mi pendrive en el USB no se "monta" automáticamente con lo cual tuve que hacerlo manual. Para ello hacemos lo siguiente:
 
-Crear un directorio dentro /media: Para ello usamos el comando:\
-
+Crear un directorio dentro /media: Para ello usamos el comando:<br>
 
 ```
 mkdir /media/usb

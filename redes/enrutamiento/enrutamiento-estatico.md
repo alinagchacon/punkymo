@@ -55,8 +55,7 @@ Existen diferentes tipos de rutas estáticas:&#x20;
 
 Las rutas estáticas son útiles para conectarse a una red remota específica. El router R3 se puede configurar con una ruta estática para alcanzar la red de rutas internas 192.168.10.0/24. En este caso no es necesario implementar un protocolo de enrutamiento dinámico con el router R4-iFP para llegar a 192.168.10.0/24. Basta configurar una ruta estática para alcanzar la red de rutas internas.
 
-\
-
+<br>
 
 <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt="" width="154"><figcaption></figcaption></figure>
 

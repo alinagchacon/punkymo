@@ -12,8 +12,7 @@ La codificación es el proceso que toma los datos a transmitir y los convierte e
 
 Por tanto, la decodificación permite invertir  el proceso de codificación facilitando la interpretación de  la información.&#x20;
 
-Algunos ejemplos de codificación de caracteres, bien conocidos son:  ASCII, Unicode, UTF-8, Base64.\
-
+Algunos ejemplos de codificación de caracteres, bien conocidos son:  ASCII, Unicode, UTF-8, Base64.<br>
 
 Algunos **tipos de codificación** son:
 
@@ -60,8 +59,7 @@ Entre los formatos que hacen este tipo de compresión encontramos:&#x20;
 
 **Con** **pérdida**:&#x20;
 
-* Codificación por transformación\
-
+* Codificación por transformación<br>
 
 **Sin pérdida**:
 
@@ -75,8 +73,7 @@ Entre los formatos que hacen este tipo de compresión encontramos:&#x20;
 
 Los formatos de codificación de vídeo son métodos para optimizar los archivos de vídeo digital para diferentes tipos de plataformas, programas y dispositivos. Cada formato de codificación de vídeo se compone de dos partes principales:\
 \- un códec\
-\- un contenedor\
-
+\- un contenedor<br>
 
 El <mark style="color:purple;">códec</mark> y el <mark style="color:green;">contenedor</mark> especifican la forma en que se almacena, transmite y visualiza la entrada de vídeo sin comprimir. En la transmisión, es importante que el formato de codificación sea compatible con el mayor número posible de dispositivos, para que el flujo esté disponible para todos los usuarios.
 
@@ -141,8 +138,7 @@ Un contenedor combina la transmisión de audio y vídeo en un único archivo de 
 
 * Audio codificado (códec de audio)
 * Vídeo codificado (códec de vídeo)
-* Metadatos\
-
+* Metadatos<br>
 
 Los <mark style="color:purple;">metadatos</mark> indican al reproductor de vídeo cómo coordinar los códecs de audio y vídeo, así como brindar subtítulos.  Algunos contenedores solo funcionan con un único tipo de códec y reproductor de vídeo, limitando las opciones de reproducción. Otros contenedores son compatibles con muchos tipos de códecs y reproductores de vídeo.
 

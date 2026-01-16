@@ -13,13 +13,11 @@ Utilizaremos la placa `ESP32-S3 WROOM` para controlar el parpadeo de un LED com�
 
 El ESP32-S3 WROOM necesita una corriente de 5v, aunque en este tutorial lo vamos a conectar directamente al PC vía el cable USB. Open Arduino IDE 2.0.0 y&#x20;
 
-Click Tools->Upload Mode y selecciona USB-OTG CDC(TinyUSB)\
-
+Click Tools->Upload Mode y selecciona USB-OTG CDC(TinyUSB)<br>
 
 <figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-El puerto del PC puede ser diferente para cada usuario, así que tendrás que ver cuál es en tu caso. \
-
+El puerto del PC puede ser diferente para cada usuario, así que tendrás que ver cuál es en tu caso. <br>
 
 <figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -41,8 +39,7 @@ sudo apt install python-is-python3
 
     _ModuleNotFoundError: No module named 'serial'_
 
-    \
-
+    <br>
 
     Para solucionarlo he instalado pyserial que nos permite establecer comunicación con el puerto serie.
 

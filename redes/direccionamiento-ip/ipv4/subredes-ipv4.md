@@ -63,8 +63,7 @@ Para crear subredes tenemos que tomar bits prestados de la porción que identifi
 Vamos a suponer que pedimos prestado un bit a la porción del host. Esto implica que con 1 bit = 2^1 = 2 subredes.
 
 Originalmente es una IP de clase C, pero al pedirle prestado 1 bit, en lugar de tener 2^8 = 255 tendremos 2^7 = 128\
-\
-
+<br>
 
 | <p>Subred 0</p><p></p>                          | <p>192.168.1.0 / 25</p><p>192.168.1.1 / 25</p><p>………………..</p><p>192.168.1.127 /25</p>                              | <p>255.255.255.128</p><p>(Adaptada)</p> |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------- |

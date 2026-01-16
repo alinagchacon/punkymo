@@ -59,8 +59,7 @@ Una vez hecho esto, vamos a instalar pi-hole:
 $ curl -sSL https://install.pi-hole.net | bash
 ```
 
-Con este comando se conectará a Internet y comenzará la descarga del paquete `pi-hole,` iniciando el asistente de instalación, que es muy simple la verdad. \
-
+Con este comando se conectará a Internet y comenzará la descarga del paquete `pi-hole,` iniciando el asistente de instalación, que es muy simple la verdad. <br>
 
 Lo primero que nos dice es que el servidor será configurado como un `bloqueador de anuncios`. Una vez seguimos adelante, nos advierte que el servidor tiene que tener IP estática con lo cual, estaríamos a tiempo de rectificar nuestra instalación si no lo hemos hecho antes.
 

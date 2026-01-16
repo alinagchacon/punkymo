@@ -253,6 +253,5 @@ Por supuesto que todavía esto no es suficiente para establecer comuniación ent
 
 
 
-<mark style="color:red;">**FALTA**</mark> \
-
+<mark style="color:red;">**FALTA**</mark> <br>
 

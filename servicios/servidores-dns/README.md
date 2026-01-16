@@ -80,8 +80,7 @@ Por tanto, el DNS funciona como una agenda telefónica que hace una corresponden
 
 Veamos la siguiente imagen tomada de [¿Qué es DNS? – Introducción a DNS - AWS (amazon.com)](https://aws.amazon.com/es/route53/what-is-dns/)
 
-El esquema nos permite ver cómo los servicios de DNS **recurrente** o **autoritativo** funcionan para dirigir al usuario al sitio web que desea visitar.\
-
+El esquema nos permite ver cómo los servicios de DNS **recurrente** o **autoritativo** funcionan para dirigir al usuario al sitio web que desea visitar.<br>
 
 <figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption><p>DNS - amazon.com</p></figcaption></figure>
 
