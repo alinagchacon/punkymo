@@ -23,13 +23,14 @@ Como vamos a crear los volúmenes de Docker para tener acceso directo a los cont
 
 &#x20;La actividad <mark style="color:blue;">`LoginRegister`</mark> tiene una estructura de archivos como se muestra en la imagen siguiente. Tener en cuenta que el directorio <mark style="color:blue;">`mysql`</mark> no es necesario.
 
-<figure><img src="../../../../.gitbook/assets/image (13) (3).png" alt=""><figcaption><p>Estructura de archivos .php de la aplicación web</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Captura desde 2026-01-16 10-08-25.png" alt="" width="272"><figcaption></figcaption></figure>
 
 ### Archivos de configuración
 
 Tenemos que preparar dos archivos de configuración:
 
 * default.conf
+* dockerfile
 * docker-compose.yml
 
 #### Default.conf
@@ -151,64 +152,73 @@ Tanto Windows, Linux como Mac utilizan ciertos valores para almacenar informaci�
 A continuación, un ejemplo del archivo <mark style="color:blue;">`docker-compose.yml`</mark> que he utilizado:
 
 ```
-# archivo docker-compose.yml
-
-version: "3.8"
 services:
-
   # PHP service
   app:
-    image: php:8-fpm
-    container_name: miAppPHP    
+    build: .
+    container_name: app_php
+    ports:
+      - "9000:9000"
     volumes:
-      - LoginRegister:/var/www/loginregister/
-      - LoginRegister/log/php.log:/var/log/fpm-php.www.log
+      - ./web:/var/www/lr/
+      - ./log/php:/var/log/fpm-php.www.log
+    working_dir: /var/www/lr
     networks:
-      - app-network
+      - netapp
+
   # MySQL database service
-  db:
-    image: mysql:8.0
-    container_name: miAppMySQL
+  appdb:
+    image: mysql:8
+    container_name: appdb
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
-      - LoginRegister/mysql/:/var/lib/mysql
-      - LoginRegister/DB/:/DB/
+      #- ./mysql/:/var/lib/mysql
+      - ./DB/:/DB/
     networks:
-      - app-network
+      - netapp
 
-  # PHPMYADMIN
+# PHPMYADMIN
   phpmyadmin:
     image: phpmyadmin
-    container_name: miAppPhpMyAdmin
-    working_dir: /
+    container_name: appmyadmin
     environment:
-      PMA_ARBITRARY: 1      
+      PMA_ARBITRARY: 1
     ports:
       - 8080:80
     networks:
-      - app-network
+      - netapp
 
   # Nginx service
   nginx:
     image: nginx
-    container_name: miAppNginx
+    container_name: appnginx
     ports:
       - 88:80
     volumes:
-      - LoginRegister:/var/www/loginregister/
-      - LoginRegister/nginx/conf.d:/etc/nginx/conf.d/
-      - LoginRegister/log/nginx:/var/log/nginx/
+      - ./web:/var/www/lr/
+      - ./nginx:/etc/nginx/conf.d/
+      - ./log/nginx:/var/log/nginx/
     networks:
-      - app-network
+      - netapp
 
 networks:
-  app-network:
+  netapp:
     driver: bridge
+```
+
+#### Dockerfile para la instalación de mysql
 
 ```
+FROM php:8.2-fpm
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+```
+
+
+
+
 
 Como podemos ver tenemos que utilizar la imagen de PHP, <mark style="color:blue;">`FPM - FastCGI Process Manager`</mark> que es una implementación alternativa al PHP FastCGI con algunas características adicionales (la mayoría) útiles para sitios web con mucho tráfico.
 
@@ -231,13 +241,13 @@ Acceder al mysql para crear y copiar la DB:
 Crear la DB:
 
 ```
-mysql> create database users1;
+mysql> create database users;
 ```
 
 Copiar la DB users.sql en la DB creada users1:<br>
 
 ```
-mysql -p -u root --password=1234 users1 < users.sql 
+mysql -p -u root --password=1234 users < users.sql 
 ```
 
 &#x20; Algunos comandos básicos de MySQL:<br>
