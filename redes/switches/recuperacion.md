@@ -8,7 +8,7 @@ description: Switches
 
 Es el propio sistema de arranque el que brinda acceso al switch en esta situación. El sistema de arranque tiene una línea de comandos que proporciona acceso a los archivos ubicados en la memoria flash. Para ello, hay que utilizar la consola. Veamos que deberíamos hacer:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="337"><figcaption><p>Conexión de un PC por el puerto de consola de un Switch</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt="" width="337"><figcaption><p>Conexión de un PC por el puerto de consola de un Switch</p></figcaption></figure>
 
 1. Con un cable de consola, conectamos un PC al puerto de consola del switch. Para ello debemos utilizar y configurar un software de emulación de terminal como pueden ser MobaXTerm, Tera Term o PuTTY para Windows.
 2. Desconecta y vuelve a conectar el cable de alimentación del switch, esperando unos 15 segundos y, manteniendo presionado el botón Mode mientras el LED del sistema parpadea con luz verde.

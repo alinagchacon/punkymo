@@ -51,7 +51,7 @@ Lo primero es tener bien claro qué es lo que queremos hacer:&#x20;
 
 La configuración inicial con la que estoy trabajando se muestra en el esquema siguiente.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Diagrama de la red</p></figcaption></figure>
 
 Recuerda que Proxmox es una VM en VirtualBox y las dos VM de Ubuntu se encuentran dentro de Proxmox. La tabla siguiente especifica las características iniciales de la infraestructura a montar:
 
@@ -92,7 +92,7 @@ En el caso de la VM cliente debemos conectarla a vmbr1, aunque bastaría con edi
 
 Pasemos a las máquinas. Realmente las dos VM: router y cliente han sido clonadas de una VM de Ubuntu que tengo como plantilla.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="401"><figcaption><p>Las dos VM Router y Cliente como clones "dependientes" de la plantilla "ubuse1"</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="401"><figcaption><p>Las dos VM Router y Cliente como clones "dependientes" de la plantilla "ubuse1"</p></figcaption></figure>
 
 
 
