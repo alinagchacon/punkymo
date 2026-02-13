@@ -103,4 +103,10 @@ sudo ufw allow 80
 
 
 
+### Links&#x20;
+
+* [https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+* [https://serverspace.io/es/support/help/basic-commands-ufw/](https://serverspace.io/es/support/help/basic-commands-ufw/)
+* [https://help.ubuntu.com/community/UFW#Advanced\_Example](https://help.ubuntu.com/community/UFW#Advanced_Example)&#x20;
+
 To be continued ....
