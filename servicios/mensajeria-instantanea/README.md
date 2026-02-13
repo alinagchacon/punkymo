@@ -1,4 +1,4 @@
-# 🚧 Mensajería instantánea
+# Mensajería instantánea
 
 A diferencia del correo electrónico, que es comunicación asíncrona, la mensajería instantánea requiere `presencia` e `inmediatez`.
 

@@ -93,7 +93,7 @@
   * [DHCP-Windows Server 2016](servicios/servidores-dhcp/dhcp-windows-server-2016.md)
   * [DHCP-Ubuntu Server 22.04](servicios/servidores-dhcp/dhcp-ubuntu-server-22.04.md)
 * [Servidores MySQL](servicios/servidores-mysql.md)
-* [🚧 Mensajería instantánea](servicios/mensajeria-instantanea/README.md)
+* [Mensajería instantánea](servicios/mensajeria-instantanea/README.md)
   * [Ejabberd](servicios/mensajeria-instantanea/ejabberd.md)
 * [🚧 Imágenes - Vídeos](servicios/imagenes-videos/README.md)
   * [FFMPEG + YT-DLP](servicios/imagenes-videos/ffmpeg-+-yt-dlp.md)
@@ -192,3 +192,4 @@
 
 * [Curioso](interesante/curioso.md)
 * [Ideas](interesante/ideas.md)
+* [CiberSeguridad](interesante/ciberseguridad.md)
