@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # CiberSeguridad
 
-[https://github.com/alinagchacon/CE/blob/main/ruta\_CE.html](https://github.com/alinagchacon/CE/blob/main/ruta_CE.html)
+[Máster de Ciberseguridad - IFP](https://alinagchacon.github.io/CE/)
