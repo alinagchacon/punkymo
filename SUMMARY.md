@@ -43,6 +43,7 @@
   * [🏗️ MPLS](redes/cisco/mpls.md)
 * [SDN](redes/sdn.md)
 * [Firewalls](redes/firewalls/README.md)
+  * [👷‍♀️ UFW](redes/firewalls/ufw.md)
   * [Tipos de firewalls](redes/firewalls/tipos-de-firewalls.md)
   * [ZPF](redes/firewalls/zpf.md)
     * [Funcionamiento](redes/firewalls/zpf-funcionamiento.md)
