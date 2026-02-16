@@ -20,7 +20,7 @@ php -i | grep "php.ini"
 
 Y se nos mostrará:
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo de php.ini </p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Archivo de php.ini </p></figcaption></figure>
 
 Una vez que tengamos localizado el archivo php.ini tenemos que buscar la línea “_extension=mysqli_” or “_extension=php\_mysqli_“ y borramos el ";" para descomentar la línea.
 
@@ -35,7 +35,7 @@ more /etc/php/7.4/fpm/php.ini
 
 Deberíamos ver algo como:
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Módulo mysqli en php.ini</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Módulo mysqli en php.ini</p></figcaption></figure>
 
 Importante restablecer los servicios:
 

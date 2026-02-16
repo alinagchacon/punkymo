@@ -43,8 +43,10 @@
   * [🏗️ MPLS](redes/cisco/mpls.md)
 * [SDN](redes/sdn.md)
 * [Firewalls](redes/firewalls/README.md)
-  * [👷‍♀️ UFW](redes/firewalls/ufw.md)
   * [Tipos de firewalls](redes/firewalls/tipos-de-firewalls.md)
+  * [IPTables](redes/firewalls/iptables/README.md)
+    * [Port Forward](redes/firewalls/iptables/port-forward.md)
+  * [UFW](redes/firewalls/ufw.md)
   * [ZPF](redes/firewalls/zpf.md)
     * [Funcionamiento](redes/firewalls/zpf-funcionamiento.md)
     * [Configurando un ZPF](redes/firewalls/configurando-un-zpf.md)
@@ -178,7 +180,6 @@
 ## 🐞 Misceláneas
 
 * [Datos - codificación](miscelaneas/datos-codificacion.md)
-* [IPTables](miscelaneas/iptables.md)
 * [Túnel con Cloudflare](miscelaneas/tunel-con-cloudflare.md)
 * [Servidor de video](miscelaneas/servidor-de-video.md)
 * [Comandos de Linux](miscelaneas/comandos-de-linux.md)

@@ -16,7 +16,7 @@ En primer lugar porque me lo recomendó hace un tiempo un ex-docente y consultor
 
 Mobaexterm es un conjunto de herramientas de administración de servidores que combina una interfaz gráfica de usuario (GUI) y un cliente de terminal en una sola aplicación, válido en sistemas operativos Windows y ofrece una amplia gama de funcionalidades que facilitan la gestión de servidores de forma remota.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Este software:
 

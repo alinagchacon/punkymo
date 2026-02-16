@@ -60,7 +60,7 @@ Una característica de jabber es que es seguro puesto que cualquier servidor de 
 
 En resumen, Jabber está basado en  el protocolo XMPP, que es un protocolo extensible, abierto y estándar basado en XML para el intercambio en tiempo real de mensajes y presencia entre dos puntos en Internet.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>Tomado de: <a href="https://www.jabberes.org/jabber/introduccion/">https://www.jabberes.org/jabber/introduccion/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption><p>Tomado de: <a href="https://www.jabberes.org/jabber/introduccion/">https://www.jabberes.org/jabber/introduccion/</a></p></figcaption></figure>
 
 En Jabber la dirección de cada usuario depende del servidor en el que tenga la cuenta. La sintaxis que sigue es:  <mark style="color:purple;">nombre\_de\_usuario@nombre\_de\_servidor.</mark> Esto es,
 

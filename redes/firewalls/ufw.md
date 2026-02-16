@@ -2,7 +2,7 @@
 description: Uncomplicated firewall de ubuntu
 ---
 
-# 👷‍♀️ UFW
+# UFW
 
 ### ¿Qué es UFW?
 

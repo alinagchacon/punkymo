@@ -101,13 +101,13 @@ Enumeramos todas las reglas:
 sudo iptables -L --line-numbers
 ```
 
-<figure><img src="../.gitbook/assets/image (393).png" alt=""><figcaption><p>enumerando las reglas de iptables</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (393).png" alt=""><figcaption><p>enumerando las reglas de iptables</p></figcaption></figure>
 
 ```
 sudo iptables -t nat -L --line-numbers
 ```
 
-<figure><img src="../.gitbook/assets/image (392).png" alt=""><figcaption><p>Enumerando las reglas de iptables</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (392).png" alt=""><figcaption><p>Enumerando las reglas de iptables</p></figcaption></figure>
 
 Buscamos la línea de la regla de iptables que necesitamos eliminar y ejecutamos el siguiente comando:
 
@@ -117,12 +117,12 @@ sudo iptables -D INPUT <Number>
 
 <mark style="color:red;">En el siguiente pdf te dejo una ayuda escrita por Leo, Bea y Monti.</mark>  <mark style="color:red;">Gracias chic@s!</mark>
 
-{% file src="../.gitbook/assets/REENVIOS DE PUERTOS_TAS_M.MOUTOUTO_L.DUARTE_BSUAREZ.pdf" %}
+{% file src="../../../.gitbook/assets/REENVIOS DE PUERTOS_TAS_M.MOUTOUTO_L.DUARTE_BSUAREZ.pdf" %}
 Una ayuda para todos de Leo, Bea y Monti
 {% endfile %}
 
 ## Links
 
-* [https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb\_article\_view\&sysparm\_article=KB0043439](https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb\_article\_view\&sysparm\_article=KB0043439)
+* [https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb\_article\_view\&sysparm\_article=KB0043439](https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb_article_view\&sysparm_article=KB0043439)
 *
 
