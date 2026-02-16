@@ -257,7 +257,7 @@ mininet>net ports
 
 Si levantamos Wireshark desde el inicio para hacer capturas de los paquetes podremos monitorizar el tráfico. Por ejemplo:&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Extras
 

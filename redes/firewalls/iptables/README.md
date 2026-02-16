@@ -4,29 +4,52 @@ Se trata de una herramienta de Linux que permite el filtrado de los paquetes de 
 
 Las **reglas** permiten aceptar, rechazar, o descartar (drop) paquetes basados en criterios como la dirección IP de origen o destino, el puerto, el protocolo, etc.
 
-Adicionalmente, iptables opera sobre diversas **tablas** diseñadas para diferentes propósitos:
+#### ¿Cómo funciona?
 
-* **filter**: tabla predeterminada utilizada para el filtrado de paquetes.
-* **nat**: se utiliza para la traducción de direcciones de red (Network Address Translation).
-* **mangle**: Permite modificar campos específicos en los encabezados de los paquetes.
-* **raw**: Utilizada para configurar excepciones de seguimiento de conexiones.
-* **security**: Utilizada para políticas de seguridad basadas en SELinux.
+IPTABLES trabaja con **tablas**, **cadenas** y **reglas**:
 
-Dentro de cada tabla, existen cadenas ya predefinidas que determinan en qué punto del procesamiento del paquete se aplican las reglas. Estas cadenas son: INPUT, OUTPUT, FORWARD, PREROUTING y POSTROUTING.&#x20;
+#### TABLAS
+
+| Tabla    | Función                                                                                                             |
+| -------- | ------------------------------------------------------------------------------------------------------------------- |
+| `filter` | Filtrado de tráfico (la tabla más común). Utilizada para el filtrado de paquetes                                    |
+| `nat`    | Traducción de direcciones (NAT). Se utiliza para la traducción de direcciones de red (Network Address Translation). |
+| `mangle` | Modificar paquetes. Permite modificar campos específicos en los encabezados de los paquetes.                        |
+| `raw`    | Tratamiento especial antes del tracking. Utilizada para configurar excepciones de seguimiento de conexiones.        |
+
+Dentro de cada tabla, existen <mark style="color:purple;">cadenas</mark> ya predefinidas que determinan en qué punto del procesamiento del paquete se aplican las reglas. Estas cadenas son:&#x20;
+
+INPUT, OUTPUT, FORWARD, PREROUTING y POSTROUTING
+
+#### CADENAS
+
+| Cadena        | Cuándo actúa                       |
+| ------------- | ---------------------------------- |
+| `INPUT`       | Paquetes que entran al sistema     |
+| `OUTPUT`      | Paquetes que salen del sistema     |
+| `FORWARD`     | Paquetes que atraviesan el sistema |
+| `PREROUTING`  | Antes de decidir el destino        |
+| `POSTROUTING` | Justo antes de salir               |
 
 Cada cadena contiene una lista de reglas que se procesan secuencialmente. Una regla especifica:&#x20;
 
 * los criterios de coincidencia para los paquetes:  dirección IP, puerto, protocolo y&#x20;
-* la acción a tomar: ACCEPT, DROP, REJECT, MASQUERADE, etc.
+* la acción a tomar: ACCEPT, DROP, REJECT, MASQUERADE, SNAT, DNAT.
+
+#### Esquema del flujo de los paquetes
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+
 
 Las acciones que se pueden aplicar a los paquetes son:
 
 * **ACCEPT**: Permite que el paquete continúe su ruta.
 * **DROP**: Descarta el paquete silenciosamente.
 * **REJECT**: Descarta el paquete y envía una respuesta de error al remitente.
-* **MASQUERADE**: Reemplaza la dirección IP de origen del paquete con la dirección IP de la interfaz de salida.
-* **SNAT**: Source NAT, modifica la dirección IP de origen del paquete.
-* **DNAT**: Destination NAT, modifica la dirección IP de destino del paquete.
+* <mark style="color:purple;">**MASQUERADE**</mark>: Reemplaza la dirección IP de origen del paquete con la dirección IP de la interfaz de salida.
+* <mark style="color:purple;">**SNAT**</mark>: Source NAT, modifica la dirección IP de origen del paquete.
+* <mark style="color:purple;">**DNAT**</mark>: Destination NAT, modifica la dirección IP de destino del paquete.
 * **LOG**: Registra los paquetes que coinciden con la regla.
 
 ### Algunas de las opciones de iptables habituales
@@ -49,8 +72,6 @@ Las acciones que se pueden aplicar a los paquetes son:
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 ```
 
-
-
 (2) Supongamos que queremos <mark style="color:purple;">**bloquear todo el tráfico HTTP saliente**</mark>:
 
 ```bash
@@ -63,15 +84,11 @@ Cuando en el sistema se recibe o se envía un paquete, se recorren todas las  re
 
 **Nota**: Las reglas definidas con iptables no son persistentes por defecto y se pierden después de un reinicio. Para hacerlas persistentes, es necesario guardar las reglas en un archivo de configuración y restaurarlas al inicio del sistema.
 
-
-
 (3) Supongamos que queremos <mark style="color:purple;">**autorizar el tráfico de localhost**</mark> de modo que todo lo que venga de su sistema  pase a través del firewall (iptables). O sea, configurar el firewall de modo que acepte el tráfico para la interfaz localhost (lo) (-i). Algo necesario si se quiere para que las aplicaciones puedan comunicarse con la interfaz localhost.
 
 ```
 sudo iptables -A INPUT -i lo -j ACCEPT
 ```
-
-
 
 (4) Para <mark style="color:purple;">**autorizar el tráfico web HTTP**</mark>, introduzca el siguiente comando:
 
@@ -79,15 +96,11 @@ sudo iptables -A INPUT -i lo -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 ```
 
-
-
 (5)  Para <mark style="color:purple;">**autorizar el tráfico de internet HTTPS**</mark>, introduzca el siguiente comando:
 
 ```bash
 sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 ```
-
-
 
 (6) Un método para eliminar el **número de línea de una regla**.
 
