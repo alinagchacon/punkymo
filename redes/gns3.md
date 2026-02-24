@@ -1,4 +1,4 @@
-# 🏗️ GNS3
+# GNS3
 
 ## Introducción
 

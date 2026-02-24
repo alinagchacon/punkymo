@@ -132,9 +132,10 @@ Ahora accedemos a Pidgin y añadimos uno de los usuarios que hemos creado en eja
 
 <figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Pidgin</p></figcaption></figure>
 
-<mark style="color:orange;">To be continued ...</mark>
+
 
 ## Links
 
 * [https://www.process-one.net/blog/ejabberd-xmpp-server-useful-configuration-steps/](https://www.process-one.net/blog/ejabberd-xmpp-server-useful-configuration-steps/)&#x20;
 * [https://homebrewserver.club/configuring-a-modern-xmpp-server-es.html](https://homebrewserver.club/configuring-a-modern-xmpp-server-es.html) (Prosody)
+* [https://docs.ejabberd.im/admin/configuration/](https://docs.ejabberd.im/admin/configuration/)&#x20;

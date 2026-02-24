@@ -31,7 +31,7 @@
   * [Administración básica](redes/switches/administracion-basica.md)
 * [CML](redes/cml/README.md)
   * [🚧 1er CML lab](redes/cml/1er-cml-lab.md)
-* [🏗️ GNS3](redes/gns3.md)
+* [GNS3](redes/gns3.md)
 * [CISCO](redes/cisco/README.md)
   * [Primeros pasos](redes/cisco/primeros-pasos.md)
   * [¿Qué son las VLAN?](redes/cisco/que-son-las-vlan/README.md)
@@ -63,7 +63,7 @@
     * [Squid Proxy Server](redes/proxy/squid-en-pfsense/squid-proxy-server.md)
     * [SquidGuard Proxy](redes/proxy/squid-en-pfsense/squidguard-proxy.md)
   * [Proxy reverse Nginx](redes/proxy/proxy-reverse-nginx.md)
-* [🚧 Suricata](redes/suricata.md)
+* [Suricata](redes/suricata.md)
 
 ## 🐝 Servicios
 
@@ -142,6 +142,8 @@
 * [SOPS/AGE](seguridad/sops-age.md)
 * [RAID](seguridad/raid/README.md)
   * [mdadm](seguridad/raid/mdadm.md)
+* [ARP Spoofing](seguridad/arp-spoofing/README.md)
+  * [SCADA](seguridad/arp-spoofing/scada.md)
 
 ## 🐳 Virtualización
 
@@ -193,5 +195,6 @@
 ## ⁉️ Interesante
 
 * [Curioso](interesante/curioso.md)
+* [Referencias](interesante/referencias.md)
 * [Ideas](interesante/ideas.md)
 * [CiberSeguridad](interesante/ciberseguridad.md)

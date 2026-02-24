@@ -2,7 +2,7 @@
 description: Under construction
 ---
 
-# 🚧 Suricata
+# Suricata
 
 
 
