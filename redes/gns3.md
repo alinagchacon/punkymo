@@ -2,7 +2,21 @@
 
 ## Introducción
 
-## Instalación
+¿Qué es GNS3?
+
+¿Para qué se utiliza en el ámbito de las redes y la ciberseguridad?
+
+¿Qué ventajas ofrece frente a otros simuladores o laboratorios físicos de redes?
+
+¿Cómo se integra con herramientas externas como VirtualBox, VMWare o Docker y qué beneficios aporta esta integración?
+
+### Instalación en Windows
+
+<mark style="color:purple;">Falta....</mark>
+
+
+
+### Instalación en Debian
 
 Actualizamos los repositorios e instalamos las actualizaciones disponibles del sistema.
 
@@ -122,7 +136,7 @@ sudo setcap cap_net_admin,cap_net_raw=ep /usr/local/bin/ubridge
 
 
 
-### En entorno virtual&#x20;
+En entorno virtual&#x20;
 
 En nuestro caso haremos la instalación de GNS3 como VM en VMWare Workstation. Para ello, nos descargamos la OVA correspondiente desde la página oficial:
 
@@ -141,10 +155,14 @@ Debemos tener en cuenta que la VM viene con dos adaptadores de red:
 
 Una vez la VM está funcionando lo que vamos a ver es algo como la siguiente imagen: ![image](https://github.com/user-attachments/assets/26c9d2aa-8496-4612-9f45-d3157b8b2ef1)
 
+## Testeando
+
+<figure><img src="../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
+
 ## Imágenes
 
-* Run appliances in a VM  <mark style="color:purple;">**\***</mark>
-*
+Falta ...
+
 *
 
 ## Links
