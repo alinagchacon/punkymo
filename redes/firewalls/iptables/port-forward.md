@@ -17,7 +17,7 @@ Vamos a trabajar sobre el siguiente escenario en virtualbox:
     * instalar apache o nginx para tener una página web de prueba
     * puedes instalar también ssh para comprobar otros servicios
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Podemos comprobar el funcionamiento de la página web utilizando el comando “curl”:
 
@@ -216,6 +216,6 @@ sudo netfilter-persistent save
 
 Ya lo tenemos todo listo. Solo nos falta testear. Para ello nos vamos al navegador del equipo anfitrión y tecleamos la IP pública de la VM router que, en mi caso, es: http:192.168.11.42:80
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Como se puede ver, desde la IP pública del router he podido acceder a la página web del servidor de la red interna.

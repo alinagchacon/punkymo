@@ -147,9 +147,7 @@ Una vez la VM está funcionando lo que vamos a ver es algo como la siguiente ima
 
 <figure><img src="../../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
 
-## Imágenes
 
-Falta ...
 
 ## Links
 

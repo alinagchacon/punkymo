@@ -38,7 +38,7 @@ Cada cadena contiene una lista de reglas que se procesan secuencialmente. Una re
 
 #### Esquema del flujo de los paquetes
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 
 

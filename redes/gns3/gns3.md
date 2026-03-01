@@ -126,6 +126,58 @@ Nos vamos a **GNS3 - Edit - Preferences - IOS** on UNIX preferences y copiamos l
 
 
 
+### Una topología sencilla
+
+La siguiente topología muestra un switch conectado a la red con dos PC.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>Una topología sencilla con acceso a Internet</p></figcaption></figure>
+
+Y la siguiente imagen nos muestra como estoy conectada desde mi terminal al PC2 para configurarlo.
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>Conexión desde  mi terminal al PC2 de GNS3</p></figcaption></figure>
+
+
+
+En **GNS3**, el dispositivo **NAT** tiene como función **dar acceso a Internet a los equipos del laboratorio** sin necesidad de configurar la red física del equipo anfitrión.
+
+Este **NAT de GNS3** actúa como un **router con traducción de direcciones (Network Address Translation)** entre la **red virtual** del proyecto y la **red real** del sistema anfitrión que en mi caso es un Debian. Por tanto,
+
+* Traduce las **IP privadas** de los dispositivos del laboratorio
+* Las convierte en la **IP real del host**
+* Permite que los nodos virtuales **salgan a Internet**
+* Impide, por defecto, accesos desde Internet hacia dentro del laboratorio
+
+
+
+El NAT de GNS3 se utiliza principalmente para:
+
+* Descargar paquetes y actualizaciones desde los nodos virtuales
+* Instalar software en máquinas Linux del laboratorio
+* Permitir pruebas de conectividad (ping, curl, apt, etc.)
+* Simular un **acceso a Internet básico** y seguro
+
+Es ideal para **prácticas educativas**, ya que no requiere configuraciones complejas ni cambios en la red real.
+
+### ¿Cómo funciona a nivel sencillo?
+
+```
+[PC Debian real]
+        |
+     (NAT GNS3)
+        |
+[Red virtual GNS3]
+        |
+[Router / PC / Firewall]
+```
+
+* Los dispositivos usan **IP privadas**
+* El NAT hace la traducción al salir
+* El tráfico vuelve correctamente al laboratorio
+
+{% hint style="info" %}
+Nota: Para escenarios más realistas se suele usar **Cloud**, **bridge** o **routers propios**.
+{% endhint %}
+
 ## Links
 
 * Instalación en Windows
