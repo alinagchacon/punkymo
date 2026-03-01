@@ -1,20 +1,8 @@
-# GNS3
+---
+description: instalación de GNS3
+---
 
-## Introducción
-
-¿Qué es GNS3?
-
-¿Para qué se utiliza en el ámbito de las redes y la ciberseguridad?
-
-¿Qué ventajas ofrece frente a otros simuladores o laboratorios físicos de redes?
-
-¿Cómo se integra con herramientas externas como VirtualBox, VMWare o Docker y qué beneficios aporta esta integración?
-
-### Instalación en Windows
-
-<mark style="color:purple;">Falta....</mark>
-
-
+# GNS3 en Debian
 
 ### Instalación en Debian
 
@@ -157,16 +145,17 @@ Una vez la VM está funcionando lo que vamos a ver es algo como la siguiente ima
 
 ## Testeando
 
-<figure><img src="../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
 
 ## Imágenes
 
 Falta ...
 
-*
-
 ## Links
 
+* Instalación en Windows
+  * [https://docs.gns3.com/docs/getting-started/installation/windows/](https://docs.gns3.com/docs/getting-started/installation/windows/)
+  * [https://ccnadesdecero.es/como-instalar-gns3-windows](https://ccnadesdecero.es/como-instalar-gns3-windows/)
 * Cisco - imágenes de dispositivos
   * [https://ccnadesdecero.es/descargar-cisco-ios-gns3/](https://ccnadesdecero.es/descargar-cisco-ios-gns3/)
   * [https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK\_81iEVuuFoGOGR](https://drive.google.com/drive/folders/102jxZ9ECpe6ZFtXYdK_81iEVuuFoGOGR)

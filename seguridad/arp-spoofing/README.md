@@ -7,7 +7,7 @@ icon: person-digging
 
 En esta práctica trabajaremos una serie de aspectos que nos permite dominar tanto la mecánica de explotación como la arquitectura de defensa necesaria en infraestructuras críticas.&#x20;
 
-Vamos a utilizar [GNS3](../../redes/gns3.md) para simular ataques de <mark style="color:purple;">ARP Spoofing</mark> y validaremos cómo una i<mark style="color:purple;">nspección dinámica de ARP</mark> (**DAI - Dynamic ARP Inspection**) puede mitigar esta amenaza en tiempo real.
+Vamos a utilizar [GNS3](../../redes/gns3/gns3.md) para simular ataques de <mark style="color:purple;">ARP Spoofing</mark> y validaremos cómo una i<mark style="color:purple;">nspección dinámica de ARP</mark> (**DAI - Dynamic ARP Inspection**) puede mitigar esta amenaza en tiempo real.
 
 Como profesor especialista en redes y ciberseguridad, procedo a explicarte la arquitectura y relevancia del sistema SCADA, basándome en el material técnico y académico que estamos utilizando.
 
