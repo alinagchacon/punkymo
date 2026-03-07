@@ -180,6 +180,7 @@
     * [Instalando Pi-hole en Debian](virtualizacion/contenedores/pi-hole/instalando-pi-hole-en-debian.md)
     * [RDP](virtualizacion/contenedores/pi-hole/rdp/README.md)
       * [RDP - Docker](virtualizacion/contenedores/pi-hole/rdp/rdp-docker.md)
+* [QEMU](virtualizacion/qemu.md)
 
 ## 🐞 Misceláneas
 
