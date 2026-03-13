@@ -257,7 +257,7 @@ mininet>net ports
 
 Si levantamos Wireshark desde el inicio para hacer capturas de los paquetes podremos monitorizar el tráfico. Por ejemplo:&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Extras
 
@@ -266,7 +266,7 @@ Si queremos acceder a las terminales de los hosts h1 y h2, por ejemplo, podemos 
 <pre><code><strong>mininet> xterm h1 h2  
 </strong></code></pre>
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 En el pantallazo anterior podemos ver que se ha hecho un **ip a** para comprobar las direcciones IP que tienen ambos hosts h1 y h2.
 

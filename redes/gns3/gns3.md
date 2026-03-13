@@ -94,6 +94,13 @@ Es cuestión de seguir las instrucciones y poco más. Nos debe aparecer así:
 
 <figure><img src="../../.gitbook/assets/image (454).png" alt="" width="377"><figcaption></figcaption></figure>
 
+
+
+Para el tema de la licencia ver:
+
+* [https://www.ipvanquish.com/download/CiscoIOUKeygen3f.py](https://www.ipvanquish.com/download/CiscoIOUKeygen3f.pyhttps://www.ipvanquish.com/download/)
+* [https://www.ipvanquish.com/download/](https://www.ipvanquish.com/download/CiscoIOUKeygen3f.pyhttps://www.ipvanquish.com/download/)
+
 ### Añadiendo un firewall de Cisco ASA
 
 Vamos a incorporar a nuestro GNS3 un firewall de Cisco ASA. Para ello nos volvemos al github: [https://github.com/hegdepavankumar/Cisco-Images-for-GNS3-and-EVE-NG?tab=readme-ov-file](https://github.com/hegdepavankumar/Cisco-Images-for-GNS3-and-EVE-NG?tab=readme-ov-file) y descargaremos el 3, o sea, **asav992-32-qcow2**.
@@ -130,11 +137,11 @@ Nos vamos a **GNS3 - Edit - Preferences - IOS** on UNIX preferences y copiamos l
 
 La siguiente topología muestra un switch conectado a la red con dos PC.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption><p>Una topología sencilla con acceso a Internet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption><p>Una topología sencilla con acceso a Internet</p></figcaption></figure>
 
 Y la siguiente imagen nos muestra como estoy conectada desde mi terminal al PC2 para configurarlo.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>Conexión desde  mi terminal al PC2 de GNS3</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption><p>Conexión desde  mi terminal al PC2 de GNS3</p></figcaption></figure>
 
 
 

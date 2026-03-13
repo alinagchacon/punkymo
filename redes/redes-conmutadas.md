@@ -19,7 +19,7 @@ Esta convergencia de los servicios en la red ha dado lugar a la evolución de la
 
 Con las crecientes demandas de las redes convergentes, la red se debe desarrollar con un enfoque arquitectónico que integre inteligencia, simplifique las operaciones y sea escalable para satisfacer demandas futuras. Uno de los más recientes desarrollos en el diseño de red es la llamada Cisco Borderless Networks o redes sin fronteras.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Tomado de <a href="https://redes.umh.es/cisco/CCNA/es/RSE/index.html#4.1.1.3">https://redes.umh.es/cisco/CCNA</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Tomado de <a href="https://redes.umh.es/cisco/CCNA/es/RSE/index.html#4.1.1.3">https://redes.umh.es/cisco/CCNA</a></p></figcaption></figure>
 
 Cisco Borderless Networks ofrece el tipo de estructura que permite unificar el acceso por cable y el acceso inalámbrico incluyendo seguridad, control del acceso y monitorización del rendimiento utilizando diferentes tipos de dispositivos. Se construye la red sin fronteras sobre una infraestructura jerárquica de hardware escalable y recuperable.
 
@@ -77,7 +77,7 @@ Se trata de la parte troncal de la red que conecta las diferentes capas y la que
 
 No siempre es necesario mantener capas principales y de distribución separadas, sobre todo en aquellos casos donde no existe red física o que haga falta escalar la red. Se puede implementar un diseño alternativo de dos niveles, conocido como `diseño de red de núcleo contraído`.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Tomado de: <a href="https://redes.umh.es/cisco/CCNA/es/RSE/index.html#4.1.1.5">https://redes.umh.es/cisco/CCNA/es/RSE/index.html#4.1.1.5</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Tomado de: <a href="https://redes.umh.es/cisco/CCNA/es/RSE/index.html#4.1.1.5">https://redes.umh.es/cisco/CCNA/es/RSE/index.html#4.1.1.5</a></p></figcaption></figure>
 
 
 

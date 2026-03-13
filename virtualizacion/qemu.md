@@ -1,3 +1,7 @@
+---
+description: KVM qemu
+---
+
 # QEMU
 
 ### Introducción <a href="#requisitos-previos" id="requisitos-previos"></a>
@@ -22,9 +26,29 @@ Ahora nos toca verificar si la CPU soporta la virtualización. Para ello, ejecut
 
 ```
 sudo egrep -c '(vmx|svm)' /proc/cpuinfo
+
 ```
 
 Si el resultado es 0, la CPU no soporta virtualización o al menos no está habilitada en la BIOS/UEFI. Si el resultado es 1 o más, quiere decir que la CPU soporta virtualización.
+
+También podemos utilizar el siguiente comando que sirve para buscar en la información de la CPU ,si existe soporte de virtualización por hardware, tanto **Intel** como **AMD**, y mostrarlo resaltado en color.
+
+<pre><code><strong>grep -E --color  'vmx|svm' /proc/cpuinfo
+</strong></code></pre>
+
+En mi caso resalta en rojo vmx con lo que **comprobamos que la CPU soporta virtualización por hardware (Intel VT-x)** y **cuántos núcleos la soportan**.
+
+```
+egrep -c vmx /proc/cpuinfo
+```
+
+\
+La información la busca en  <mark style="color:purple;">/proc/cpuinfo</mark> que es un fichero del sistema en Linux que contiene información detallada sobre la CPU, como es el modelo, cantidad de núcleos y las características del procesador.
+
+En mi caso aparece vmx  que es una flag del procesador que nos indica el soporte para **Intel VT-x**, la tecnología de virtualización de Intel. Esto es:
+
+* Virtualización **Intel - vmx**
+* Virtualización **AMD - svm**
 
 #### CPU Checker <a href="#paso-3-instalar-el-cpu-checker" id="paso-3-instalar-el-cpu-checker"></a>
 
@@ -73,6 +97,39 @@ sudo usermod -aG kvm kirby
 
 Para que los cambios surtan efecto, cerramos la sesión y volvemos  a iniciarla. Mejor si reiniciamos el sistema.
 
+Ahora ya tenemos instalado y configurado KVM Qemu y Virtmanager en Debian 12. Podemos comprobarlo haciendo:
+
+```
+sudo systemctl status libvirtd.service
+sudo systemctl enable libvirtd.service
+sudo systemctl start libvirtd.service
+```
+
+#### Algunos comandos útiles
+
+Con virsh listamos las redes que tenemos activas o no:
+
+```
+sudo virsh net-list --all
+```
+
+<figure><img src="../.gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure>
+
+En caso de que no tener redes activas la podemos activar con:
+
+```
+sudo virsh net-start default
+```
+
+Y para que se actualice automáticamente podemos usar:
+
+```
+sudo virsh net-autostart default
+```
+
+Otros comandos de red:
+
+<figure><img src="../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 
-<br>
+
