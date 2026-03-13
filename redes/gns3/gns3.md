@@ -187,6 +187,10 @@ Nota: Para escenarios más realistas se suele usar **Cloud**, **bridge** o **rou
 
 ## Links
 
+Un documento escrito por un alumno: Nicolás Zabala. Gracias!!!
+
+{% file src="../../.gitbook/assets/Deploy Network in GNS3-NicoZábala.pdf" %}
+
 * Instalación en Windows
   * [https://docs.gns3.com/docs/getting-started/installation/windows/](https://docs.gns3.com/docs/getting-started/installation/windows/)
   * [https://ccnadesdecero.es/como-instalar-gns3-windows](https://ccnadesdecero.es/como-instalar-gns3-windows/)
