@@ -296,44 +296,34 @@ Es un formato contenedor multimedia abierto y libre desarrollado por Google y or
 
 Es bien soportado en Chrome, Firefox y Edge. Safari añadió soporte parcial. Es el formato estándar para vídeo HTML5 en la web junto a MP4.
 
-### MKV (Matroska Multimedia Container)
+### MKV - Matroska Multimedia Container
 
-**Año y origen:** Proyecto iniciado en 2002 por Lasse Kärkkäinen y Steve Lhomme. El nombre "Matroska" viene de las muñecas rusas Matryoshka, en referencia a su capacidad de contener múltiples streams anidados. El desarrollo fue inicialmente liderado desde Rusia aunque el proyecto es internacional.
+El formato MKV, conocido como Matroska es un formato de video estándar abierto. Los distintos archivos multimedia tienen una codificación diferente, pero el MKV almacena varios archivos multimedia, ya que es un contenedor y es utilizado para la transmisión de video en línea y también para videos de alta definición.
 
-**Cómo funciona:** Diseñado desde cero con filosofía de extensibilidad y apertura total. Su especificación es pública y libre. Usa el formato de datos EBML (Extensible Binary Meta Language), que permite añadir nuevas funcionalidades sin romper la compatibilidad.
+* **Año y origen:** Fue un proyecto que comenzó en 2002 por Lasse Kärkkäinen y Steve Lhomme. El nombre "Matroska" viene de las muñecas rusas Matryoshka, en referencia a su capacidad de contener múltiples streams anidados. El desarrollo fue inicialmente liderado desde Rusia aunque el proyecto es internacional.
+* **Funcionamiento:** Fue diseñado desde cero con filosofía de extensibilidad y apertura total. Su especificación es pública y libre. Usa el formato de datos EBML - Extensible Binary Meta Language, que permite añadir nuevas funcionalidades sin romper la compatibilidad.
+* **Lo que puede contener:**
+  * Cualquier códec de vídeo: H.264, H.265, AV1, VP9, MPEG-2, VC-1...
+  * Cualquier códec de audio: AAC, AC-3, DTS, FLAC, TrueHD, PCM...
+  * Múltiples pistas de subtítulos: SRT, ASS/SSA, PGS (Blu-ray), VobSub...
+  * Capítulos y menús
+  * Adjuntos (portadas, fuentes tipográficas)
+  * Múltiples ángulos de cámara
+* **Archivos  grandes:** En realidad MKV no añade peso al archivo. El tamaño depende completamente del códec y bitrate del vídeo interior. Un MKV con H.265 CRF 23 será más pequeño que un MP4 con H.264 CRF 18.
+* **Limitación real:** No es el formato más compatible para distribución. Algunos Smart TVs, reproductores de Blu-ray, consolas antiguas y aplicaciones de streaming no lo soportan de forma nativa. Para uso doméstico con VLC, Kodi, Jellyfin o Plex es perfectamente válido.
+* **Uso real hoy:** El formato preferido de la escena de rips de Blu-ray y distribución de contenido de alta calidad, precisamente por su capacidad de incluir múltiples pistas de audio, subtítulos y capítulos en un solo archivo sin restricciones de códec.
 
-**Lo que puede contener:**
+### Comparación de los diferentes formatos
 
-* Cualquier códec de vídeo: H.264, H.265, AV1, VP9, MPEG-2, VC-1...
-* Cualquier códec de audio: AAC, AC-3, DTS, FLAC, TrueHD, PCM...
-* Múltiples pistas de subtítulos: SRT, ASS/SSA, PGS (Blu-ray), VobSub...
-* Capítulos y menús
-* Adjuntos (portadas, fuentes tipográficas)
-* Múltiples ángulos de cámara
-
-**Por qué los archivos son "grandes":** En realidad MKV no añade peso al archivo. El tamaño depende completamente del códec y bitrate del vídeo interior. Un MKV con H.265 CRF 23 será más pequeño que un MP4 con H.264 CRF 18.
-
-**Limitación real:** No es el formato más compatible para distribución. Algunos Smart TVs, reproductores de Blu-ray, consolas antiguas y aplicaciones de streaming no lo soportan de forma nativa. Para uso doméstico con VLC, Kodi, Jellyfin o Plex es perfectamente válido.
-
-**Uso real hoy:** El formato preferido de la escena de rips de Blu-ray y distribución de contenido de alta calidad, precisamente por su capacidad de incluir múltiples pistas de audio, subtítulos y capítulos en un solo archivo sin restricciones de códec.
-
-***
-
-**Resumen comparativo rápido:**
-
-| Formato | Año  | Estado            | Mejor uso                                 |
-| ------- | ---- | ----------------- | ----------------------------------------- |
-| MP4     | 2001 | Vigente, estándar | Distribución universal, web, móvil        |
-| MOV     | 1991 | Vigente           | Postproducción, ecosistema Apple          |
-| AVI     | 1992 | Legacy            | Solo compatibilidad con archivos antiguos |
-| FLV     | 2002 | Obsoleto          | Sin uso activo desde 2020                 |
-| WebM    | 2010 | Vigente           | Vídeo web HTML5, streaming open source    |
-| MKV     | 2002 | Vigente           | Almacenamiento local, home theater, rips  |
+<table><thead><tr><th width="121">Formato</th><th width="149.5">Año</th><th width="174">Estado</th><th>Mejor uso</th></tr></thead><tbody><tr><td>MP4</td><td>2001</td><td>Vigente, estándar</td><td>Distribución universal, web, móvil</td></tr><tr><td>MOV</td><td>1991</td><td>Vigente</td><td>Postproducción, ecosistema Apple</td></tr><tr><td>AVI</td><td>1992</td><td>Legacy</td><td>Solo compatibilidad con archivos antiguos</td></tr><tr><td>FLV</td><td>2002</td><td>Obsoleto</td><td>Sin uso activo desde 2020</td></tr><tr><td>WebM</td><td>2010</td><td>Vigente</td><td>Vídeo web HTML5, streaming open source</td></tr><tr><td>MKV</td><td>2002</td><td>Vigente</td><td>Almacenamiento local, home theater, rips</td></tr></tbody></table>
 
 #### Codificación de vídeo avanzada AVC / H264
 
-Se trata del estándar de compresión de vídeo que más se usa actualmente. El AVC/H.264 puede codificar vídeo de alta calidad con una velocidad de bits más baja que los estándares de compresión más antiguos. La "velocidad de bits" es el número de unidades de información que hay que procesar por cada segundo de vídeo. El Blu-ray y una gran variedad de servicios de transmisión, incluyendo la televisión a la carta y en directo, utilizan H.264.\
-A pesar de que en ocasiones su uso requiere el pago de derechos a las organizaciones que poseen las patentes del mismo, más del 90% del sector del vídeo utiliza H.264. Un estándar de compresión de video que puede ser utilizado en: MP4, AVI, MKV, MOV, FLV, TS.
+La Codificación de vídeo avanzada - AVC, conocida como H.264, es el estándar de compresión de vídeo que más se usa en la actualidad. Puede codificar vídeo de alta calidad con una velocidad de bits más baja que los estándares de compresión más antiguos, siendo **la  `velocidad de bits`  el número de unidades de información que hay que procesar por cada segundo de vídeo**.
+
+El Blu-ray y una gran variedad de servicios de transmisión, incluyendo la televisión a la carta y en directo, utilizan H.264. A pesar de que en ocasiones su uso requiere el pago de derechos a las organizaciones que poseen las patentes del mismo, más del 90% del sector del vídeo utiliza H.264.&#x20;
+
+Un estándar de compresión de video que puede ser utilizado en: MP4, AVI, MKV, MOV, FLV, TS.
 
 #### Protocolos de transmisión que utilizan H264
 
@@ -344,16 +334,13 @@ Casi todos los protocolos de transmisión en la actualidad son compatibles con H
 * Transmisión dinámica HTTP (HDS)
 * Transmisión adaptativa dinámica sobre HTTP (MPEG-DASH).
 
-Algunas aplicaciones de video son:
+### ¿Qué es H.265?
 
-* FFmpeg
-* Plex
-* Jellyfin
-* Kode
+La codificación de vídeo de alta eficiencia (HEVC) o H.265  es el estándar de compresión posterior a H.264.  Proporciona mejor calidad de imagen que H.264.&#x20;
 
-Nosotros veremos FFmpeg y YT-DLP.
+Muchos servidores de alojamiento de vídeo utilizan H.265 además de H.264. Sin embargo, como el antiguo H.264 se utiliza tanto y ya ofrece una buena calidad a velocidades de bits manejables, es probable que siga utilizándose durante algún tiempo.
 
-## Links
+### Links
 
 * [https://digitalcommunications.wp.st-andrews.ac.uk/2019/04/08/what-is-a-jpeg-file/](https://digitalcommunications.wp.st-andrews.ac.uk/2019/04/08/what-is-a-jpeg-file/)&#x20;
 * [https://grupo.us.es/gtocoma/pid/pid6/pid61.htm](https://grupo.us.es/gtocoma/pid/pid6/pid61.htm)
