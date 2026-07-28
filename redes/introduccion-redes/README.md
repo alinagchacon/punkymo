@@ -4,11 +4,11 @@ description: Internet
 
 # Introducción Redes
 
-La necesidad de interactuar ha sido fundamental para la existencia humana.   La comunicación es algo vital para los seres vivos.&#x20;
+La necesidad de interactuar ha sido fundamental para la existencia humana. La comunicación es algo vital para los seres vivos.
 
 En el mundo actual, estamos conectados como nunca antes lo había sido y todo gracias a las redes. Las noticias y los descubrimientos se conocen en todo el mundo en cuestión de segundos. Las personas pueden conectarse y jugar con amigos aunque estén del otro lado del mundo.
 
-Entre los avances más importantes en tecnologías, quizá la evolución de las redes sea de las más significativas en el mundo actual. Gracias a estos avances las distancias geográficas y las limitaciones físicas se han vuelto menos importantes y se han convertido en barreras  cada vez más fáciles de sortear.&#x20;
+Entre los avances más importantes en tecnologías, quizá la evolución de las redes sea de las más significativas en el mundo actual. Gracias a estos avances las distancias geográficas y las limitaciones físicas se han vuelto menos importantes y se han convertido en barreras cada vez más fáciles de sortear.
 
 Internet cambió la manera en la que se producen las interacciones sociales, las comerciales, políticas y personales. La inmediatez de las comunicaciones alienta la formación de comunidades mundiales, que permiten los intercambios sociales con independencia de la ubicación geográfica y de la zona horaria.
 
@@ -22,13 +22,13 @@ Redes por cables, redes inalámbricas, nubes.
 
 **¿Dónde está la nube?** Está claro que detrás de Internet, detrás de la nube hay una compleja infraestructura de equipos, dispositivos, aplicaciones, y un largo etcétera que controlan las diferentes partes del todo para brindar los servicios que utilizamos.
 
-En el contexto de la informática en general, cuando pensemos en una nube tenemos que pensar que es una red enorme de servidores remotos de todo el mundo conectados para funcionar como un único ecosistema. Estas infraestructuras almacenan y administran datos, ejecutan aplicaciones o entregan contenidos o servicios, como streaming de vídeos, correo web, software de ofimática o medios sociales.&#x20;
+En el contexto de la informática en general, cuando pensemos en una nube tenemos que pensar que es una red enorme de servidores remotos de todo el mundo conectados para funcionar como un único ecosistema. Estas infraestructuras almacenan y administran datos, ejecutan aplicaciones o entregan contenidos o servicios, como streaming de vídeos, correo web, software de ofimática o medios sociales.
 
-No accedemos a los archivos y datos desde un equipo personal o local, accedemos a los datos en línea desde cualquier dispositivo conectado a Internet, por tanto, la información está disponible dondequiera que vaya y siempre que la necesite. &#x20;
+No accedemos a los archivos y datos desde un equipo personal o local, accedemos a los datos en línea desde cualquier dispositivo conectado a Internet, por tanto, la información está disponible dondequiera que vaya y siempre que la necesite.
 
-¿Y cómo se comunican todas estas infraestructuras? ¿Cómo se establecen las comunicaciones entre todos los países del mundo? Pues a través del cableado submarino.  Se pudiera decir que Internet se mueve por el fondo del mar.
+¿Y cómo se comunican todas estas infraestructuras? ¿Cómo se establecen las comunicaciones entre todos los países del mundo? Pues a través del cableado submarino. Se pudiera decir que Internet se mueve por el fondo del mar.
 
-<table><thead><tr><th>En los años 70</th><th>En la actualidad</th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image (91).png" alt=""></td><td><img src="../../.gitbook/assets/image (30) (1) (1).png" alt=""></td><td></td></tr></tbody></table>
+<table><thead><tr><th>En los años 70</th><th>En la actualidad</th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image (671).png" alt=""></td><td><img src="../../.gitbook/assets/image (349).png" alt=""></td><td></td></tr></tbody></table>
 
 #### La columna vertebral de Internet
 
@@ -37,7 +37,7 @@ La "columna vertebral" de Internet está compuesta por muchas redes diferentes. 
 Los proveedores troncales proporcionan instalaciones de conexión en muchas ciudades para sus clientes, y se conectan con otros proveedores troncales en los llamados **IXP** (Internet Exchange Point) o punto neutro, como:
 
 * el CATNIX de Barcelona
-* el ESPANIX de Madrid&#x20;
+* el ESPANIX de Madrid
 * el GALNIX de Santiago de Compostela.
 
 El más grande de estos IXP en términos de tasa de transferencia y rutas accesibles es el **ChtIX** en Roubaix Valley, Francia.
@@ -67,7 +67,7 @@ Un <mark style="color:blue;">punto neutro</mark> es uno o varios switch o conmut
 
 La conmutación <mark style="color:blue;">ATM</mark> se llegó a utilizar muy brevemente en algunos puntos neutros al final de los 90 pero prevaleció Ethernet que representa el 95% de los conmutadores en Internet.
 
-Las velocidades de los puertos Ethernet se encuentran en los puntos neutros actuales, y van desde los  10 Mbit/s en países pequeños, hasta los puertos de 10 Gbit/s en centros como los de Seúl, Nueva York, Londres, Ámsterdam, Palo Alto. Hay puertos con 100 Gbps disponibles en AMS-IX en Ámsterdam y en DE-CIX de Frankfurt.
+Las velocidades de los puertos Ethernet se encuentran en los puntos neutros actuales, y van desde los 10 Mbit/s en países pequeños, hasta los puertos de 10 Gbit/s en centros como los de Seúl, Nueva York, Londres, Ámsterdam, Palo Alto. Hay puertos con 100 Gbps disponibles en AMS-IX en Ámsterdam y en DE-CIX de Frankfurt.
 
 La técnica y la logística de negocio implicados en el intercambio de tráfico entre los ISP se rige por los acuerdos de interconexión mutua (**peering**). Gracias a estos acuerdos, el tráfico se intercambia sin compensación mayoritariamente.
 
@@ -89,5 +89,5 @@ CATNIX y ESPANIX son puntos neutros en España.
 
 ### Links
 
-* [https://www.bgp4.as/internet-exchanges/submarine-cable/marea](https://www.bgp4.as/internet-exchanges/submarine-cable/marea)&#x20;
+* [https://www.bgp4.as/internet-exchanges/submarine-cable/marea](https://www.bgp4.as/internet-exchanges/submarine-cable/marea)
 * [https://www.stackscale.com/es/blog/puntos-neutros-internet/](https://www.stackscale.com/es/blog/puntos-neutros-internet/)

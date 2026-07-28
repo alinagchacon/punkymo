@@ -5,13 +5,13 @@ Se trata de un demonio o servicio que se instala en el equipo invitado. Por tant
 En Proxmox, el **qemu-guest-agent** se utiliza para tres cosas:
 
 * apagar correctamente el invitado (VM o contenedor) en en lugar de depender de comandos ACPI o políticas de Windows.
-* Para congelar el sistema de archivos invitado al realizar una copia de seguridad/instantánea.&#x20;
+* Para congelar el sistema de archivos invitado al realizar una copia de seguridad/instantánea.
 * Si el agente invitado está habilitado y en ejecución, llama a guest-fsfreeze-freeze y guest-fsfreeze-thaw para mejorar la "consistencia".
 * En la fase en la que el invitado (VM) se reanuda después de una pausa (por ejemplo, después de una instantánea), sincroniza inmediatamente su hora con el hipervisor usando qemu-guest-agent (como primer paso).
 
 Incluso, puede ser útil para algo más simple que todo esto: que muestre información en el dashboard, como la IP de la VM:
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Información de una VM en el dashboard de Proxmox</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (126).png" alt="" width="563"><figcaption><p>Información de una VM en el dashboard de Proxmox</p></figcaption></figure>
 
 ### Instalar qemu agent
 
@@ -27,4 +27,4 @@ También se debe habilitar el qemu agent en cada VM y en las opciones de la VM e
 
 ### Links
 
-* [https://pve.proxmox.com/wiki/Qemu-guest-agent](https://pve.proxmox.com/wiki/Qemu-guest-agent)&#x20;
+* [https://pve.proxmox.com/wiki/Qemu-guest-agent](https://pve.proxmox.com/wiki/Qemu-guest-agent)

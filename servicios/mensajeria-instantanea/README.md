@@ -2,13 +2,13 @@
 
 A diferencia del correo electrónico, que es comunicación asíncrona, la mensajería instantánea requiere `presencia` e `inmediatez`.
 
-La mensajería instantánea - M.I. es un servicio diseñado para facilitar conversaciones en línea en tiempo real entre dos o más personas.&#x20;
+La mensajería instantánea - M.I. es un servicio diseñado para facilitar conversaciones en línea en tiempo real entre dos o más personas.
 
-A diferencia de otras formas de comunicación digital, permite el intercambio inmediato de texto, archivos y datos.&#x20;
+A diferencia de otras formas de comunicación digital, permite el intercambio inmediato de texto, archivos y datos.
 
 Aunque sus orígenes se remontan a los sistemas de comunidades autónomas conocidos como los [BBS (Bulletin Board System)](https://www.neoteo.com/la-historia-de-los-bulletin-board-system-bbs), la mensajería instantánea moderna se popularizó tras el lanzamiento de software como [ICQ ](https://es.wikipedia.org/wiki/ICQ)en 1996.
 
-### Algunas características de la M.I.&#x20;
+### Algunas características de la M.I.
 
 Los sistemas de mensajería tienen unas funciones básicas comunes a todos:
 
@@ -28,8 +28,6 @@ Adicionalmente tenemos dos modelos:
 * **Propietario**: El servidor es como una **caja negra** controlada por una empresa como puede ser WhatsApp, Telegram, Slack, etc. Los cliente se conectan a su nube.
 * **Abierto**: Similar al correo electrónico. Yo puedo tener mi servidor en la empresa A y hablar con alguien de la empresa B. El protocolo rey aquí es <mark style="color:purple;">XMPP</mark>.
 
-
-
 ### Principales protocolos
 
 El funcionamiento de la M.I. depende de protocolos específicos de comunicación, donde los más destacados son:
@@ -48,7 +46,7 @@ Si hay un protocolo que debemos conocer en este entorno es el [XMPP (Extensible 
 
 #### ¿Qué es y cómo funciona?
 
-Jabber es un protocolo abierto basado en el estándar XML para el intercambio en tiempo real de mensajes entre dos usuarios en Internet.&#x20;
+Jabber es un protocolo abierto basado en el estándar XML para el intercambio en tiempo real de mensajes entre dos usuarios en Internet.
 
 La principal aplicación de Jabber es una plataforma de mensajería y una red de mensajería instantánea que ofrece una funcionalidad similar a la de otros sistemas del tipo: AIM, ICQ, MSN Messenger y Yahoo.
 
@@ -58,11 +56,11 @@ Por otra parte, Jabber permite enviar mensajes a usuarios que no están conectad
 
 Una característica de jabber es que es seguro puesto que cualquier servidor de Jabber puede ser aislado de la red pública. Ademá ,cualquier implementación del servidor usa SSL para las comunicaciones cliente-servidor y numerosos clientes soportan PGP-GPG para encriptar las comunicaciones de cliente a cliente.
 
-En resumen, Jabber está basado en  el protocolo XMPP, que es un protocolo extensible, abierto y estándar basado en XML para el intercambio en tiempo real de mensajes y presencia entre dos puntos en Internet.
+En resumen, Jabber está basado en el protocolo XMPP, que es un protocolo extensible, abierto y estándar basado en XML para el intercambio en tiempo real de mensajes y presencia entre dos puntos en Internet.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Tomado de: <a href="https://www.jabberes.org/jabber/introduccion/">https://www.jabberes.org/jabber/introduccion/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt="" width="563"><figcaption><p>Tomado de: <a href="https://www.jabberes.org/jabber/introduccion/">https://www.jabberes.org/jabber/introduccion/</a></p></figcaption></figure>
 
-En Jabber la dirección de cada usuario depende del servidor en el que tenga la cuenta. La sintaxis que sigue es:  <mark style="color:purple;">nombre\_de\_usuario@nombre\_de\_servidor.</mark> Esto es,
+En Jabber la dirección de cada usuario depende del servidor en el que tenga la cuenta. La sintaxis que sigue es: <mark style="color:purple;">nombre\_de\_usuario@nombre\_de\_servidor.</mark> Esto es,
 
 1. **Direccionamiento**: Usa el llamado JID (Jabber ID), que tiene el formato usuario@dominio/recurso Por ejemplo: <mark style="color:purple;">pepe@informatica.es/movil</mark>
 2. **Instancias**: Son los fragmentos de XML que se intercambian:
@@ -117,8 +115,6 @@ Por tanto, para que un servicio de mensajería funcione necesitamos:
 2. Un protocolo común (XMPP, Matrix).
 3. Un cliente (Pidgin, Gajim, Element).
 4. Un puerto abierto en el firewall (típicamente 5222 para clientes XMPP).
-
-
 
 ### Links
 

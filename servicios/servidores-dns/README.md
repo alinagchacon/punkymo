@@ -30,13 +30,13 @@ Este protocolo de red emplea la capa de transporte TCP, UDP y utiliza el puerto 
 
 Veamos algunos ejemplos de la presencia del DNS en nuestros dispositivos.
 
-**Ejemplo:** &#x20;
+**Ejemplo:**
 
 En window&#x73;**:**
 
 <mark style="color:blue;">`cmd > ipconfig /all`</mark>
 
-<figure><img src="../../.gitbook/assets/image (165).png" alt=""><figcaption><p>ipconfig /all</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (532).png" alt=""><figcaption><p>ipconfig /all</p></figcaption></figure>
 
 **Ejemplo:**
 
@@ -44,9 +44,7 @@ En Linux:
 
 <mark style="color:blue;">`cat /etc/resolv.conf`</mark>
 
-&#x20;
-
-<figure><img src="../../.gitbook/assets/image (25) (1) (1).png" alt=""><figcaption><p>resolv.conf</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (313).png" alt=""><figcaption><p>resolv.conf</p></figcaption></figure>
 
 **Ejemplo**:
 
@@ -54,11 +52,11 @@ El nombre de dominio [www.ifp.es](http://www.ifp.es) tiene como IP la 213.192.25
 
 Una forma de verlo sería desde el <mark style="color:blue;">`cmd > ping`</mark> [<mark style="color:blue;">`www.ifp.es`</mark>](http://www.ifp.es)
 
-<figure><img src="../../.gitbook/assets/image (70) (1).png" alt=""><figcaption><p>ping www.ifp.es</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (653).png" alt=""><figcaption><p>ping www.ifp.es</p></figcaption></figure>
 
 O bien utilizando el comando <mark style="color:blue;">`nslookup`</mark> que veremos más adelante:
 
-<figure><img src="../../.gitbook/assets/image (95).png" alt=""><figcaption><p>nslookup</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (336).png" alt=""><figcaption><p>nslookup</p></figcaption></figure>
 
 **Ejemplo:**
 
@@ -66,9 +64,9 @@ Se puede ver la caché con el comando
 
 <mark style="color:blue;">`cmd > ipconfig /displaydns`</mark>
 
-<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (447).png" alt=""><figcaption></figcaption></figure>
 
-Si observas en la imagen del nslookup verás que dice “Respuesta no autoritativa”.  El hecho es que existen dos tipos de servicios de DNS:
+Si observas en la imagen del nslookup verás que dice “Respuesta no autoritativa”. El hecho es que existen dos tipos de servicios de DNS:
 
 **DNS autoritativo**: este servicio proporciona un mecanismo de actualización para administrar los nombres de DNS públicos. Tiene la autoridad final sobre el dominio y es responsable de brindar respuestas a los servidores de DNS recurrente con la información de la dirección IP.
 
@@ -82,7 +80,7 @@ Veamos la siguiente imagen tomada de [¿Qué es DNS? – Introducción a DNS - A
 
 El esquema nos permite ver cómo los servicios de DNS **recurrente** o **autoritativo** funcionan para dirigir al usuario al sitio web que desea visitar.<br>
 
-<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption><p>DNS - amazon.com</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (462).png" alt=""><figcaption><p>DNS - amazon.com</p></figcaption></figure>
 
 Por lo que la arquitectura del DNS incluye los siguientes elementos:
 
@@ -96,7 +94,7 @@ Por lo que la arquitectura del DNS incluye los siguientes elementos:
 
 Se denomina **nombre absoluto** o **FQDN** (Fully-qualified domain name) que está asociado a un nodo a la concatenación de etiquetas desde el nodo hasta la raíz, separadas por puntos y siguiendo un orden inverso al del sistema de archivos de Linux.
 
-<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption><p>nombre absoluto o FQDN (Fully-qualified domain name). Imagen tomada de Introducció al sistema DNS Grau en Enginyeria Telemàtica Grau en Enginyeria de Sistemes de Telecomunicación” de Frederic Raspall</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (574).png" alt=""><figcaption><p>nombre absoluto o FQDN (Fully-qualified domain name). Imagen tomada de Introducció al sistema DNS Grau en Enginyeria Telemàtica Grau en Enginyeria de Sistemes de Telecomunicación” de Frederic Raspall</p></figcaption></figure>
 
 #### RR - **Resource Records**
 
@@ -106,7 +104,7 @@ Los nodos interiores pueden contener cualquier tipo de RR y los hay de varias cl
 
 Internet (IN), Chaosnet (CH) y Hesiod (HS), aunque la clase Internet es prácticamente la única que se utiliza.
 
-<figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption><p>Tomado de Introducció al sistema DNS Grau en Enginyeria Telemàtica Grau en Enginyeria de Sistemes de Telecomunicación” de Frederic Raspall</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (578).png" alt=""><figcaption><p>Tomado de Introducció al sistema DNS Grau en Enginyeria Telemàtica Grau en Enginyeria de Sistemes de Telecomunicación” de Frederic Raspall</p></figcaption></figure>
 
 #### Dominios y subdominios
 
@@ -118,23 +116,21 @@ Por ejemplo, el dominio .edu hace referencia a todo el árbol que “cuelga” d
 
 Pero el dominio .upc.edu es un sub-árbol bajo el dominio del nodo .edu.
 
-Bajo el dominio del nodo .edu tenemos también, por ejemplo, ub.edu, la uab.edu (en Alabama, Birmingham) y no la Autónoma de Barcelona que sería uab.cat porque no puede haber dos hijos con el mismo nombre. &#x20;
+Bajo el dominio del nodo .edu tenemos también, por ejemplo, ub.edu, la uab.edu (en Alabama, Birmingham) y no la Autónoma de Barcelona que sería uab.cat porque no puede haber dos hijos con el mismo nombre.
 
 El dominio.upc.edu., es el sub-árbol por debajo del nodo upc.edu y es un sub-dominio del dominio .edu. El dominio fib.upc.edu. engloba todos los nodos que se encuentran por debajo del nodo padre fib.epc.edu. (con lo cual, todos los nombres acaban en fib.upc.edu.).
 
 Este dominio es un sub-dominio de upc.edu. y de edu. Si tuviéramos un dominio gia.fib.upc.edu. sería un dominio que pertenecería a todos los dominios anteriores: gia.fib.upc.edu, .upc.edu. y .edu.
 
-<figure><img src="../../.gitbook/assets/image (189).png" alt=""><figcaption><p>Tomado de Introducció al sistema DNS Grau en Enginyeria Telemàtica Grau en Enginyeria de Sistemes de Telecomunicación” de Frederic Raspall</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (432).png" alt=""><figcaption><p>Tomado de Introducció al sistema DNS Grau en Enginyeria Telemàtica Grau en Enginyeria de Sistemes de Telecomunicación” de Frederic Raspall</p></figcaption></figure>
 
 #### Ventajas
 
 * Elimina los problemas del sistema basados en el fichero HOSTS.TXT
 * El hecho de que el espacio de nombres sea jerárquico permite "particionar" y gestionar los diferentes subdominios de modo independiente.
 * El espacio de nombres jerárquico también resuelve el problema de las colisiones o nombres duplicados porque garantiza que todos los nombres hermanos o hijos de un mismo nodo tengan etiquetas o nombres diferentes. Esto es, no puede haber dos nodos con el mismo FQDN, aunque pueden tener la misma etiqueta pero sin causar ambigüedades.
-*   Por ejemplo: [www.upc.edu](http://www.upc.edu)., [www.fib.upc,edu](http://www.fib.upc,edu)., [www.eetac.upc.edu](http://www.eetac.upc.edu)., etc.
+* Por ejemplo: [www.upc.edu](http://www.upc.edu)., [www.fib.upc,edu](http://www.fib.upc,edu)., [www.eetac.upc.edu](http://www.eetac.upc.edu)., etc.
 
-    &#x20;
-
-<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption><p>Tomado de Introducció al sistema DNS Grau en Enginyeria Telemàtica Grau en Enginyeria de Sistemes de Telecomunicación” de Frederic Raspall</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (311).png" alt=""><figcaption><p>Tomado de Introducció al sistema DNS Grau en Enginyeria Telemàtica Grau en Enginyeria de Sistemes de Telecomunicación” de Frederic Raspall</p></figcaption></figure>
 
 #### Delegación de dominios

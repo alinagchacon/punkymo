@@ -4,26 +4,26 @@ description: Apuntes de www.freenove.com
 
 # Arduino
 
-Estos apuntes están tomados de: [www.freenove.com](https://www.freenove.com), más específicamente del libro: `C_Tutorial.pdf`. También te recomiendo  tener en cuenta el material de Processing.pdf. Recuerda que no estoy plagiando nada, estoy aprendiendo y estos son mis notas de mi propio recorrido de aprendizaje. Mi intención es hacer un recorrido por Arduino utilizando la placa ESP32. \
-Siempre dejo enlaces a los sitios web que me son útiles.&#x20;
+Estos apuntes están tomados de: [www.freenove.com](https://www.freenove.com), más específicamente del libro: `C_Tutorial.pdf`. También te recomiendo tener en cuenta el material de Processing.pdf. Recuerda que no estoy plagiando nada, estoy aprendiendo y estos son mis notas de mi propio recorrido de aprendizaje. Mi intención es hacer un recorrido por Arduino utilizando la placa ESP32.\
+Siempre dejo enlaces a los sitios web que me son útiles.
 
 Veamos algunos aspectos previos.
 
-## Tinkercad <a href="#__refheading___toc418_2914418030" id="__refheading___toc418_2914418030"></a>
+## Tinkercad <a href="#refheading___toc418_2914418030" id="refheading___toc418_2914418030"></a>
 
-Es una colección online de herramientas de software de Autodesk que:&#x20;
+Es una colección online de herramientas de software de Autodesk que:
 
-* Permite crear modelos 3D.&#x20;
-* Se basa en una geometría sólida constructiva (CSG).&#x20;
-* Permite crear modelos complejos mediante la combinación de objetos más simples.&#x20;
-* Fácil de usar y gratis.&#x20;
+* Permite crear modelos 3D.
+* Se basa en una geometría sólida constructiva (CSG).
+* Permite crear modelos complejos mediante la combinación de objetos más simples.
+* Fácil de usar y gratis.
 * Se puede utilizar para impresión 3D.
 
 Lo puedes encontrar en su página oficial: [https://www.tinkercad.com](https://www.tinkercad.com) y más adelante haremos un buen uso de ella.
 
 ## Arduino IDE
 
-Se trata de una suite de programación creado por los responsables de Arduino, que permite introducir el software en las placas Arduino. No solo es un editor de código sino que tiene un depurador y un compilador que nos facilita la creación del programa final y nos permite enviarlo a la memoria de la placa Arduino. Como es de esperar, existen muchos IDE gratuitos en Ubuntu, pero ninguno de ellos ofrece conexión con los modelos oficiales de placas Arduino.&#x20;
+Se trata de una suite de programación creado por los responsables de Arduino, que permite introducir el software en las placas Arduino. No solo es un editor de código sino que tiene un depurador y un compilador que nos facilita la creación del programa final y nos permite enviarlo a la memoria de la placa Arduino. Como es de esperar, existen muchos IDE gratuitos en Ubuntu, pero ninguno de ellos ofrece conexión con los modelos oficiales de placas Arduino.
 
 Las últimas versiones de Arduino IDE han hecho que este programa sea más compatibilidad con los nuevos modelos de Arduino sino que también han mejorado sus funciones de IDE, dado que:
 
@@ -39,11 +39,11 @@ Arduino IDE no se encuentra en los repositorios oficiales de Ubuntu por lo que *
 
 Nos vamos a descargar la última versión de Arduino IDE porque de este modo podemos cambiar en cualquier momento de placa y la versión lo soportará.
 
-<figure><img src="../../.gitbook/assets/image (228).png" alt=""><figcaption><p>Sitio de descarga de Arduino IDE en <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (697).png" alt=""><figcaption><p>Sitio de descarga de Arduino IDE en <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p></figcaption></figure>
 
 ### Opción 1
 
-Vamos a Software > Download > Linux AppImage 64 bits (X86-64) y  descargamos nuestro fichero: arduino-ide\_nightly-20230908\_Linux\_64bit.AppImage.
+Vamos a Software > Download > Linux AppImage 64 bits (X86-64) y descargamos nuestro fichero: arduino-ide\_nightly-20230908\_Linux\_64bit.AppImage.
 
 Si te das cuenta está en formato AppImage y ¿qué es? Pues este formato tiene una gran **ventaja sobre los otros formatos de paquetes tradicionales, dado que es universal.** Es como si fuera una aplicación portable, donde el software se ejecuta con el archivo AppImage sin tener que hacer instalaciones, ni descomprimir archivos.
 
@@ -73,7 +73,7 @@ De inmediato nos preguntará si estamos de acuerdo con los términos y condicion
 
 ### Opción 2
 
-Vamos a descargar el ZIP: `Software > Download > Linux >` [`ZIP file 64 bits (X86-64)`](https://downloads.arduino.cc/arduino-ide/arduino-ide\_2.2.1\_Linux\_64bit.zip?\_gl=1\*1djazbm\*\_ga\*NjAxNjU2OTMyLjE2OTQwODM1OTI.\*\_ga\_NEXN8H46L5\*MTY5NDM1NDAxMS41LjEuMTY5NDM1NDAzNy4wLjAuMA..) y lo descomprimimos en una carpeta (le podemos poner el nombre Arduino) y ejecutamos el archivo <mark style="color:blue;">`arduino-ide.`</mark>
+Vamos a descargar el ZIP: `Software > Download > Linux >` [`ZIP file 64 bits (X86-64)`](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.2.1_Linux_64bit.zip?_gl=1*1djazbm*_ga*NjAxNjU2OTMyLjE2OTQwODM1OTI.*_ga_NEXN8H46L5*MTY5NDM1NDAxMS41LjEuMTY5NDM1NDAzNy4wLjAuMA..) y lo descomprimimos en una carpeta (le podemos poner el nombre Arduino) y ejecutamos el archivo <mark style="color:blue;">`arduino-ide.`</mark>
 
 ### Opción 3
 
@@ -90,35 +90,31 @@ sudo apt install arduino
 
 Y se nos instala la versión 1.8.19.
 
-<figure><img src="../../.gitbook/assets/image (230).png" alt=""><figcaption><p>Arduino 1.8.19 instalado en Ubuntu 22.04</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (698).png" alt=""><figcaption><p>Arduino 1.8.19 instalado en Ubuntu 22.04</p></figcaption></figure>
 
-
-
-## ESP32-S3 WROOM GPIO&#x20;
+## ESP32-S3 WROOM GPIO
 
 La extension board GPIO de la placa ESP32-S3 WROOM nos permite utilizar el ESP32-S3 de un modo más sencillo. Las interfaces de hardware de ESP32-S3 WROOM se distribuyen de la siguiente manera:
 
-<figure><img src="../../.gitbook/assets/image (231).png" alt=""><figcaption><p>ESP32</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (699).png" alt=""><figcaption><p>ESP32</p></figcaption></figure>
 
-Donde:&#x20;
+Donde:
 
-* Verde - power supplied by the extension board&#x20;
-* Rojo - GPIO pin&#x20;
-* Azul más oscuro - LED indicator&#x20;
-* Azul claro - GPIO interface of development board&#x20;
-* Fucsia - External power supply&#x20;
+* Verde - power supplied by the extension board
+* Rojo - GPIO pin
+* Azul más oscuro - LED indicator
+* Azul claro - GPIO interface of development board
+* Fucsia - External power supply
 
 En la ESP32-S3, GPIO se trata de una interfaz para controlar el circuito periférico. En los proyectos que vamos a realizar aquí, solo utilizamos un cable USB para alimentar ESP32-S3 WROOM de forma predeterminada.
 
 ## CH343
 
-En el manual de referencia  nos hablan del CH343 que es utilizado por el chip ESP32-S3 WROOM para descargar códigos. En dicho manual especifican qué hacer para asegurarnos que nos funciona todo bien en Windows y Mac pero no dice nada de Linux. De no hacerle caso a este, después te puedes encontrar con qué no podemos seleccionar el puerto de acceso al chip ESP32-S3. Al menos fue lo que me ocurrió.
+En el manual de referencia nos hablan del CH343 que es utilizado por el chip ESP32-S3 WROOM para descargar códigos. En dicho manual especifican qué hacer para asegurarnos que nos funciona todo bien en Windows y Mac pero no dice nada de Linux. De no hacerle caso a este, después te puedes encontrar con qué no podemos seleccionar el puerto de acceso al chip ESP32-S3. Al menos fue lo que me ocurrió.
 
 Buscando en Google me encontré con la siguiente página que me dió la solución:
 
 [https://fgcoca.github.io/Mis-notas-sobre-Linux-Ubuntu/ch340/](https://fgcoca.github.io/Mis-notas-sobre-Linux-Ubuntu/ch340/)
-
-
 
 En dicho sitio nos dicen que los dispositivos CH340 USB no funcionan en la versión Ubuntu 22.04. En la versión 22.04 el soporte para dispositivos CH340 USB a adaptador serie no genera un /dev/ttyUSB0, cuando partimos de instalación limpia. En versiones anteriores, como es el caso de la 20.04, el soporte era nativo.
 
@@ -126,9 +122,7 @@ En dicho sitio nos dicen que los dispositivos CH340 USB no funcionan en la versi
 
 `ls /dev` no nos lista una entrada ttyUSB0.
 
-<figure><img src="../../.gitbook/assets/image (232).png" alt=""><figcaption><p>Menú Tools de Arduino IDE</p></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (700).png" alt=""><figcaption><p>Menú Tools de Arduino IDE</p></figcaption></figure>
 
 Si hacemos `lsusb` nos devuelve algo como:
 
@@ -154,25 +148,23 @@ ENV{PRODUCT}=="1a86/7523/*", ENV{BRLTTY_BRAILLE_DRIVER}="bm", GOTO="brltty_usb_r
 
 `Ya solo nos queda reiniciar` el sistema y con esto ya tengo soporte para los dispositivos CH340.
 
-## Configuración del entorno&#x20;
+## Configuración del entorno
 
-Lo primero es configurar la placa ESP32-S3 para poder trabajar con ella. Lo más importante es agregar el siguiente enlace en el apartado `Additional boards manager URLs`:&#x20;
-
-
+Lo primero es configurar la placa ESP32-S3 para poder trabajar con ella. Lo más importante es agregar el siguiente enlace en el apartado `Additional boards manager URLs`:
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-<figure><img src="../../.gitbook/assets/image (233).png" alt=""><figcaption><p>Preferencias en el menú de Arduino IDE</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (701).png" alt=""><figcaption><p>Preferencias en el menú de Arduino IDE</p></figcaption></figure>
 
 Ahora clicamos `Boards Manager` y escribimos `esp32` y seleccionamos la versión `2.0.5`，y he instalamos.
 
-<figure><img src="../../.gitbook/assets/image (234).png" alt=""><figcaption><p>nstalando el software de la ESP32</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (702).png" alt=""><figcaption><p>nstalando el software de la ESP32</p></figcaption></figure>
 
 Una vez instalado el chip de la ESP32 hacemos click en “Tools” en el menú seleccionamos “Board: "Arduino Uno" y ya podremos ver la información de la ESP32.
 
-<figure><img src="../../.gitbook/assets/image (236).png" alt=""><figcaption><p>Ya tenemos instalado el software de la ESP32</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (703).png" alt=""><figcaption><p>Ya tenemos instalado el software de la ESP32</p></figcaption></figure>
 
 En el menú que se despliega selecciona `ESP32-S3 Dev Module` y ya se debe tener acceso a la información de la placa.
 

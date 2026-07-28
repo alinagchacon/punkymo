@@ -1,6 +1,6 @@
 # IPTables
 
-Se trata de una herramienta de Linux que permite el filtrado de los paquetes de red, determinando qué paquetes de datos permitimos que lleguen hasta el servidor y cuáles no. Es una herramienta  necesaria que facilita la administración de firewalls en sistemas Linux. Como otros firewall,  funciona a través de reglas.&#x20;
+Se trata de una herramienta de Linux que permite el filtrado de los paquetes de red, determinando qué paquetes de datos permitimos que lleguen hasta el servidor y cuáles no. Es una herramienta necesaria que facilita la administración de firewalls en sistemas Linux. Como otros firewall, funciona a través de reglas.
 
 Las **reglas** permiten aceptar, rechazar, o descartar (drop) paquetes basados en criterios como la dirección IP de origen o destino, el puerto, el protocolo, etc.
 
@@ -17,7 +17,7 @@ IPTABLES trabaja con **tablas**, **cadenas** y **reglas**:
 | `mangle` | Modificar paquetes. Permite modificar campos específicos en los encabezados de los paquetes.                        |
 | `raw`    | Tratamiento especial antes del tracking. Utilizada para configurar excepciones de seguimiento de conexiones.        |
 
-Dentro de cada tabla, existen <mark style="color:purple;">cadenas</mark> ya predefinidas que determinan en qué punto del procesamiento del paquete se aplican las reglas. Estas cadenas son:&#x20;
+Dentro de cada tabla, existen <mark style="color:purple;">cadenas</mark> ya predefinidas que determinan en qué punto del procesamiento del paquete se aplican las reglas. Estas cadenas son:
 
 INPUT, OUTPUT, FORWARD, PREROUTING y POSTROUTING
 
@@ -31,16 +31,14 @@ INPUT, OUTPUT, FORWARD, PREROUTING y POSTROUTING
 | `PREROUTING`  | Antes de decidir el destino        |
 | `POSTROUTING` | Justo antes de salir               |
 
-Cada cadena contiene una lista de reglas que se procesan secuencialmente. Una regla especifica:&#x20;
+Cada cadena contiene una lista de reglas que se procesan secuencialmente. Una regla especifica:
 
-* los criterios de coincidencia para los paquetes:  dirección IP, puerto, protocolo y&#x20;
+* los criterios de coincidencia para los paquetes: dirección IP, puerto, protocolo y
 * la acción a tomar: ACCEPT, DROP, REJECT, MASQUERADE, SNAT, DNAT.
 
 #### Esquema del flujo de los paquetes
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Las acciones que se pueden aplicar a los paquetes son:
 
@@ -78,13 +76,13 @@ iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 iptables -A OUTPUT -p tcp --dport 80 -j DROP
 ```
 
-Mediante  instrucciones se le indica al firewall el tipo de paquetes a los que se debe permitir entrar, así como los puertos por donde se pueden recibir dichos paquetes, el protocolo para el envío de datos y cualquier otra información relacionada con el intercambio de datos entre redes.&#x20;
+Mediante instrucciones se le indica al firewall el tipo de paquetes a los que se debe permitir entrar, así como los puertos por donde se pueden recibir dichos paquetes, el protocolo para el envío de datos y cualquier otra información relacionada con el intercambio de datos entre redes.
 
-Cuando en el sistema se recibe o se envía un paquete, se recorren todas las  reglas en orden hasta encontrar aquella regla que cumpla las condiciones. Una vez localizada la regla, ésta se activa y ejecuta la acción que tenga establecida sobre el paquete en cuestión.
+Cuando en el sistema se recibe o se envía un paquete, se recorren todas las reglas en orden hasta encontrar aquella regla que cumpla las condiciones. Una vez localizada la regla, ésta se activa y ejecuta la acción que tenga establecida sobre el paquete en cuestión.
 
 **Nota**: Las reglas definidas con iptables no son persistentes por defecto y se pierden después de un reinicio. Para hacerlas persistentes, es necesario guardar las reglas en un archivo de configuración y restaurarlas al inicio del sistema.
 
-(3) Supongamos que queremos <mark style="color:purple;">**autorizar el tráfico de localhost**</mark> de modo que todo lo que venga de su sistema  pase a través del firewall (iptables). O sea, configurar el firewall de modo que acepte el tráfico para la interfaz localhost (lo) (-i). Algo necesario si se quiere para que las aplicaciones puedan comunicarse con la interfaz localhost.
+(3) Supongamos que queremos <mark style="color:purple;">**autorizar el tráfico de localhost**</mark> de modo que todo lo que venga de su sistema pase a través del firewall (iptables). O sea, configurar el firewall de modo que acepte el tráfico para la interfaz localhost (lo) (-i). Algo necesario si se quiere para que las aplicaciones puedan comunicarse con la interfaz localhost.
 
 ```
 sudo iptables -A INPUT -i lo -j ACCEPT
@@ -96,7 +94,7 @@ sudo iptables -A INPUT -i lo -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 ```
 
-(5)  Para <mark style="color:purple;">**autorizar el tráfico de internet HTTPS**</mark>, introduzca el siguiente comando:
+(5) Para <mark style="color:purple;">**autorizar el tráfico de internet HTTPS**</mark>, introduzca el siguiente comando:
 
 ```bash
 sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
@@ -114,13 +112,13 @@ Enumeramos todas las reglas:
 sudo iptables -L --line-numbers
 ```
 
-<figure><img src="../../../.gitbook/assets/image (393).png" alt=""><figcaption><p>enumerando las reglas de iptables</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (856).png" alt=""><figcaption><p>enumerando las reglas de iptables</p></figcaption></figure>
 
 ```
 sudo iptables -t nat -L --line-numbers
 ```
 
-<figure><img src="../../../.gitbook/assets/image (392).png" alt=""><figcaption><p>Enumerando las reglas de iptables</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (855).png" alt=""><figcaption><p>Enumerando las reglas de iptables</p></figcaption></figure>
 
 Buscamos la línea de la regla de iptables que necesitamos eliminar y ejecutamos el siguiente comando:
 
@@ -128,7 +126,7 @@ Buscamos la línea de la regla de iptables que necesitamos eliminar y ejecutamos
 sudo iptables -D INPUT <Number>
 ```
 
-<mark style="color:red;">En el siguiente pdf te dejo una ayuda escrita por Leo, Bea y Monti.</mark>  <mark style="color:red;">Gracias chic@s!</mark>
+<mark style="color:red;">En el siguiente pdf te dejo una ayuda escrita por Leo, Bea y Monti.</mark> <mark style="color:red;">Gracias chic@s!</mark>
 
 {% file src="../../../.gitbook/assets/REENVIOS DE PUERTOS_TAS_M.MOUTOUTO_L.DUARTE_BSUAREZ.pdf" %}
 Una ayuda para todos de Leo, Bea y Monti
@@ -138,4 +136,3 @@ Una ayuda para todos de Leo, Bea y Monti
 
 * [https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb\_article\_view\&sysparm\_article=KB0043439](https://help.ovhcloud.com/csm/es-es-dedicated-servers-firewall-iptables?id=kb_article_view\&sysparm_article=KB0043439)
 *
-

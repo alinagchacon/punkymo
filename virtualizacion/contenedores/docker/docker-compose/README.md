@@ -4,19 +4,15 @@ Se trata de una utilidad de Docker que nos ayuda a la hora de crear múltiples c
 
 Esta definición y orquestación se lleva a cabo de forma local en el interior de los contenedore&#x73;**,** que se encuentran unidos a través de una [`red de Docker`](https://keepcoding.io/blog/que-son-las-redes-en-docker/).
 
-A diferencia de <mark style="color:blue;">`Docker Cli`</mark> éste no hay que crearlo directamente en la terminal, sino que se crea un archivo <mark style="color:blue;">`YAML`</mark> que es más fácil de ser modificado y configurado que en la propia terminal.&#x20;
+A diferencia de <mark style="color:blue;">`Docker Cli`</mark> éste no hay que crearlo directamente en la terminal, sino que se crea un archivo <mark style="color:blue;">`YAML`</mark> que es más fácil de ser modificado y configurado que en la propia terminal.
 
-Este tipo de ficheros <mark style="color:blue;">`.yml`</mark>  nos sirven para definir la configuración de la aplicación en cuestión. De esta manera podemos, con un solo comando, crear e iniciar los servicios configurados en estos archivos.
+Este tipo de ficheros <mark style="color:blue;">`.yml`</mark> nos sirven para definir la configuración de la aplicación en cuestión. De esta manera podemos, con un solo comando, crear e iniciar los servicios configurados en estos archivos.
 
 Uno de los aspectos a tener en cuenta es establecer los servicios que componen las aplicación en un fichero [<mark style="color:blue;">`docker`</mark>](https://colaboratorio.net/glosario/docker/)<mark style="color:blue;">`-compose.yml`</mark>, para que se pueda utilizar en un entorno aislado y así, una vez creado, solo se tiene que ejecutar un comando por terminal que comprobará el archivo e instalará y configurará lo que le hemos descrito en el mismo.
 
+![](<../../../../.gitbook/assets/image (638).png>)
 
-
-![](<../../../../.gitbook/assets/image (177).png>)
-
-
-
-Una característica del Docker Compose estriba en su capacidad para contener diversos entornos dentro de una misma máquina de _host_**,** así como su capacidad de mantener y preservar datos de volumen una vez se crean los diferentes contenedores.&#x20;
+Una característica del Docker Compose estriba en su capacidad para contener diversos entornos dentro de una misma máquina de _host_**,** así como su capacidad de mantener y preservar datos de volumen una vez se crean los diferentes contenedores.
 
 Veamos algunas de sus características:
 
@@ -28,14 +24,14 @@ _**Recrear contendores que hayan sido modificados.**_ Almacena en caché toda la
 
 ## Comandos básicos de docker-compose
 
-Algunos comandos que nos pueden ser útiles a la hora de manipular los contenedores descritosen un archivo de docker-compose.yml&#x20;
+Algunos comandos que nos pueden ser útiles a la hora de manipular los contenedores descritosen un archivo de docker-compose.yml
 
 * <mark style="color:blue;">`docker-compose up:`</mark> Crea los contenedores (servicios) que están descritos en el <mark style="color:blue;">`docker-compose.yml`</mark>.
-* <mark style="color:blue;">`docker-compose up -d`</mark>: Crea en modo detach los contenedores (servicios) que están descritos en el docker-compose.yml y no muestra mensajes de log en el terminal y se  vuelve a mostrar un prompt.
+* <mark style="color:blue;">`docker-compose up -d`</mark>: Crea en modo detach los contenedores (servicios) que están descritos en el docker-compose.yml y no muestra mensajes de log en el terminal y se vuelve a mostrar un prompt.
 * <mark style="color:blue;">`docker-compose stop`</mark><mark style="color:blue;">:</mark> Detiene los contenedores que previamente se han lanzado con docker-compose up.
 * <mark style="color:blue;">`docker-compose run`</mark>: Inicia los contenedores descritos en el docker-compose.yml que estén detenidos.
 * <mark style="color:blue;">`docker-compose rm`</mark><mark style="color:blue;">:</mark> Borra los contenedores detenidos. La opción -f elimina también los contenedores en ejecución.
-* <mark style="color:blue;">`docker-compose build:`</mark> buscará el archivo <mark style="color:blue;">`docker-compose.yml`</mark> en la carpeta actual, ejecuta el proceso de construcción de la imagen y desplegará los contenedores que estén indicados.&#x20;
+* <mark style="color:blue;">`docker-compose build:`</mark> buscará el archivo <mark style="color:blue;">`docker-compose.yml`</mark> en la carpeta actual, ejecuta el proceso de construcción de la imagen y desplegará los contenedores que estén indicados.
 * <mark style="color:blue;">`docker-compose down`</mark><mark style="color:blue;">:</mark> Detiene los contenedores, los borra y también elimina las redes que se han creado con docker-compose up (en caso de haberse creado).
 * <mark style="color:blue;">`docker-compose down -v`</mark>: Para los contenedores y borra contenedores, redes y volúmenes.
 * <mark style="color:blue;">`docker-compose logs`</mark><mark style="color:blue;">:</mark> Muestra los logs de todos los servicios del escenario. Si utilizamos el parámetro <mark style="color:blue;">`-f`</mark> podemos ver los logs en “vivo”.

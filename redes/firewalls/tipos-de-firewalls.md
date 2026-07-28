@@ -8,9 +8,9 @@ description: Apuntes
 
 Este tipo de firewall suele formar parte de un firewall de router, el cual autoriza o rechaza el tráfico a partir de información procedente de las capas 3 y 4 (modelo OSI). Son de los denominados firewalls <mark style="color:blue;">`sin estado`</mark> dado que utilizan una búsqueda simple en la tabla de políticas que filtra el tráfico teniendo en cuenta criterios específicos.
 
-#### Ejemplo&#x20;
+#### Ejemplo
 
-* Un servidor SMTP escucha el puerto 25 de manera predeterminada.&#x20;
+* Un servidor SMTP escucha el puerto 25 de manera predeterminada.
 * Un administrador puede configurar el firewall de filtrado de paquetes para bloquear el puerto 25 desde una estación de trabajo específica a fin de evitar que difunda un virus por correo electrónico.
 
 Utilizar un firewall de filtrado de paquetes puede traer algunas ventajas dado que los filtros de paquetes:
@@ -30,15 +30,13 @@ Hay que considerar que los filtros de paquetes no representan una solución de f
 
 Los filtros de paquetes no tienen estado. Examinan cada paquete individualmente y no en el contexto del estado de una conexión.
 
-<figure><img src="../../.gitbook/assets/image (4) (2) (3) (1).png" alt=""><figcaption><p>Filtrado de paquetes sin estado</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (650).png" alt=""><figcaption><p>Filtrado de paquetes sin estado</p></figcaption></figure>
 
-### &#x20;Firewall activo o stateful
+### Firewall activo o stateful
 
-Este tipo de firewall con estado son los más versátiles y más comúnmente usados. También conocidos como firewalls activos,  proporcionan un filtrado de paquetes utilizando la información de conexión que se mantiene en una tabla de estados. El filtrado con estado es una arquitectura de firewall que se clasifica en la capa de red. También analiza el tráfico en las capas 4 y 5 de OSI.
+Este tipo de firewall con estado son los más versátiles y más comúnmente usados. También conocidos como firewalls activos, proporcionan un filtrado de paquetes utilizando la información de conexión que se mantiene en una tabla de estados. El filtrado con estado es una arquitectura de firewall que se clasifica en la capa de red. También analiza el tráfico en las capas 4 y 5 de OSI.
 
-<figure><img src="../../.gitbook/assets/image (7) (5).png" alt=""><figcaption><p>Firewall activo o stateful</p></figcaption></figure>
-
-&#x20;
+<figure><img src="../../.gitbook/assets/image (376).png" alt=""><figcaption><p>Firewall activo o stateful</p></figcaption></figure>
 
 ### Ventajas y desventajas de este tipo de firewall
 
@@ -57,8 +55,6 @@ Los firewalls stateful también tienen algunas **desventajas**:
 * No es fácil realizar un seguimiento de las conexiones que utilizan la negociación dinámica de puertos. Algunas aplicaciones abren varias conexiones. Esto requiere un rango completamente nuevo de puertos que se deben abrir para permitir esta segunda conexión.
 * No admiten la autenticación de usuarios.
 
-
-
 | Ventajas                                                       | Desventajas                                                   |
 | -------------------------------------------------------------- | ------------------------------------------------------------- |
 | Medio de defensa principal                                     | No inspecciona la capa de aplicación                          |
@@ -69,11 +65,11 @@ Los firewalls stateful también tienen algunas **desventajas**:
 
 ### Firewall del gateway de aplicaciones
 
-Este tipo de firewall del gateway de aplicaciones o firewall proxy filtra la información en las capas 3, 4, 5 y 7 del modelo OSI.&#x20;
+Este tipo de firewall del gateway de aplicaciones o firewall proxy filtra la información en las capas 3, 4, 5 y 7 del modelo OSI.
 
 La mayor parte del control y filtrado del firewall se realiza en el software. Cuando un cliente necesita tener acceso a un servidor remoto, se conecta a un servidor proxy. El servidor proxy se conecta al servidor remoto en nombre del cliente. Por lo tanto, el servidor solamente ve una conexión desde el servidor proxy.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Firewall del Gateway de aplicaciones</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (689).png" alt=""><figcaption><p>Firewall del Gateway de aplicaciones</p></figcaption></figure>
 
 ### Firewall de próxima generación
 
@@ -84,7 +80,7 @@ Los firewalls de próxima generación o <mark style="color:blue;">`NGFW`</mark> 
 * Rutas de actualización para incluir futuros datos de información.
 * Técnicas para afrontar amenazas de seguridad en constante evolución.
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (4).png" alt=""><figcaption><p>Firewall de próxima generación</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (686).png" alt=""><figcaption><p>Firewall de próxima generación</p></figcaption></figure>
 
 Existen otros métodos de implementación de firewall que incluyen aspectos como:
 

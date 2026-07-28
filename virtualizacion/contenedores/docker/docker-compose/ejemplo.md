@@ -11,19 +11,19 @@ Utilizaremos a modo de ejemplo la creación de varios contenedores relacionados 
 * <mark style="color:blue;">`PHP`</mark> para el lenguaje de programación
 * <mark style="color:blue;">`Phpmyadmin`</mark>, si me quiero conectar a un gestor de DB.
 
-Veamos cómo levantar un <mark style="color:blue;">`docker-compose`</mark> creando un archivo de configuración <mark style="color:blue;">`docker-compose.yml`</mark>, dado que el <mark style="color:blue;">`docker-compose`</mark> busca, por defecto,  las instrucciones en el archivo <mark style="color:blue;">`docker-compose.yml`</mark>.
+Veamos cómo levantar un <mark style="color:blue;">`docker-compose`</mark> creando un archivo de configuración <mark style="color:blue;">`docker-compose.yml`</mark>, dado que el <mark style="color:blue;">`docker-compose`</mark> busca, por defecto, las instrucciones en el archivo <mark style="color:blue;">`docker-compose.yml`</mark>.
 
 Adicionalmente, tengamos en cuenta que docker lo tengo instalado en una VM con `Ubuntu Desktop 22.04 LTS` con `Portainer` y `Docker-compose`.
 
 ### Directorios - volúmenes
 
-Como vamos a crear los volúmenes de Docker para tener acceso directo a los contenidos en local, tenemos que crear los directorios y los contenidos necesarios.  Los archivos importantes a tener en cuenta serían los ficheros de configuración de nginx y los .php de la aplicación web. Para ello, he creado un directorio con los contenidos necesarios:
+Como vamos a crear los volúmenes de Docker para tener acceso directo a los contenidos en local, tenemos que crear los directorios y los contenidos necesarios. Los archivos importantes a tener en cuenta serían los ficheros de configuración de nginx y los .php de la aplicación web. Para ello, he creado un directorio con los contenidos necesarios:
 
 <table data-header-hidden><thead><tr><th width="208.5">Directorio</th><th>Contenido</th></tr></thead><tbody><tr><td>Directorio</td><td>Contenido</td></tr><tr><td>LoginRegister</td><td>La aplicación web con sus archivos .php, .css, etc.</td></tr><tr><td>DB</td><td>La DB <code>users1</code> que utiliza la aplicación web. Realmente no es necesario, lo hago por comodidad.</td></tr><tr><td>log</td><td>Para almacenar los log de nginx (error, access) y de php.</td></tr><tr><td>Nginx/conf.d</td><td>En este directorio guardamos el archivo de configuración: <code>default.conf</code></td></tr></tbody></table>
 
-&#x20;La actividad <mark style="color:blue;">`LoginRegister`</mark> tiene una estructura de archivos como se muestra en la imagen siguiente. Tener en cuenta que el directorio <mark style="color:blue;">`mysql`</mark> no es necesario.
+La actividad <mark style="color:blue;">`LoginRegister`</mark> tiene una estructura de archivos como se muestra en la imagen siguiente. Tener en cuenta que el directorio <mark style="color:blue;">`mysql`</mark> no es necesario.
 
-<figure><img src="../../../../.gitbook/assets/Captura desde 2026-01-16 10-08-25.png" alt="" width="272"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (907).png" alt="" width="272"><figcaption></figcaption></figure>
 
 ### Archivos de configuración
 
@@ -37,7 +37,7 @@ Tenemos que preparar dos archivos de configuración:
 
 En este archivo tenemos las siguientes directivas:
 
-**Listen** -  define qué dirección IP y qué puertos escucha el servicio. En este caso, Nginx escucha en el puerto 80 en todas las direcciones IPv4 e IPv6. Si establecemos el parámetro <mark style="color:blue;">`default_server`</mark> le indicamos a Nginx que utilice este bloque server por defecto para las peticiones que coincidan con las direcciones IP y los puertos.
+**Listen** - define qué dirección IP y qué puertos escucha el servicio. En este caso, Nginx escucha en el puerto 80 en todas las direcciones IPv4 e IPv6. Si establecemos el parámetro <mark style="color:blue;">`default_server`</mark> le indicamos a Nginx que utilice este bloque server por defecto para las peticiones que coincidan con las direcciones IP y los puertos.
 
 **server\_name** - define los nombres de host de los que es responsable este bloque server. Establecer <mark style="color:blue;">`server_name`</mark> a \_ permite configurar Nginx para aceptar cualquier nombre de host para este bloque server.
 
@@ -75,7 +75,7 @@ server {
 }
 ```
 
-#### **Docker-compose.yml**&#x20;
+#### **Docker-compose.yml**
 
 Del mismo modo que existen los <mark style="color:blue;">`Dockerfile`</mark>, donde se puede configurar el estado de un contenedor de manera declarativa, en docker-compose existe el equivalente: los archivos `.yml`.
 
@@ -83,9 +83,9 @@ Por tanto, un archivo de docker-compose es un archivo con extensión y formato y
 
 El archivo tiene una estructura bastante fácil de entender. Comienza por especificar la versión de docker compose que se utilizará:
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Estructura de un archivo docker-compose.yml</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (263).png" alt=""><figcaption><p>Estructura de un archivo docker-compose.yml</p></figcaption></figure>
 
-Después de la versión viene  la sección de servicios. Puede haber tantos servicios como queramos: servidor web, base de datos, documentación, etc. Cada servicio cuenta con sus propias variables de configuración y sus respectivos valores.
+Después de la versión viene la sección de servicios. Puede haber tantos servicios como queramos: servidor web, base de datos, documentación, etc. Cada servicio cuenta con sus propias variables de configuración y sus respectivos valores.
 
 **version 3.8**: Es muy importante indicar la versión de las instrucciones que vamos a utilizar. Docker evoluciona, pero siempre hay compatibilidad con las versiones anteriores.
 
@@ -97,7 +97,7 @@ Por ejemplo, si llamamos a un servicio como <mark style="color:blue;">`db`</mark
 
 **image:** establece la imagen a partir de la cual se generará el servicio, ideal cuando el servicio no necesita de una personalización muy complicada.
 
-**build:**  si necesitamos una imagen personalizada pudiera ser mejor usar un Dockerfile. La opción build nos permite indicar el directorio donde se encuentra. Indica dónde está el Dockerfile a utilizar para crear el contenedor. Si escribimos <mark style="color:blue;">`build .`</mark> se considera que el Dockerfile está en el directorio actual.&#x20;
+**build:** si necesitamos una imagen personalizada pudiera ser mejor usar un Dockerfile. La opción build nos permite indicar el directorio donde se encuentra. Indica dónde está el Dockerfile a utilizar para crear el contenedor. Si escribimos <mark style="color:blue;">`build .`</mark> se considera que el Dockerfile está en el directorio actual.
 
 **command:** sobre escribe el comando predeterminado del contenedor. Esta opción es ideal para ejecutar un comando cuando inicia un servicio, por ejemplo, un servidor web.
 
@@ -115,12 +115,12 @@ Por ejemplo, si llamamos a un servicio como <mark style="color:blue;">`db`</mark
 
 Tanto Windows, Linux como Mac utilizan ciertos valores para almacenar información que pueden variar de un equipo a otro o de un usuario a otro. Son valores que hacen referencia a archivos, directorios y funciones comunes del sistema cuya ruta concreta puede variar, pero que otros programas necesitan poder conocer.
 
-&#x20;Un ejemplo de este tipo de variable puede ser:
+Un ejemplo de este tipo de variable puede ser:
 
 * la ubicación de un archivo en el sistema,
 * una lista de objetos, número de versión
 
-&#x20;Algunas de las variables de entorno más comunes son:
+Algunas de las variables de entorno más comunes son:
 
 **PATH**: es la lista de directorios donde la Shell o intérprete busca los comandos.
 
@@ -216,13 +216,9 @@ FROM php:8.2-fpm
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 ```
 
-
-
-
-
 Como podemos ver tenemos que utilizar la imagen de PHP, <mark style="color:blue;">`FPM - FastCGI Process Manager`</mark> que es una implementación alternativa al PHP FastCGI con algunas características adicionales (la mayoría) útiles para sitios web con mucho tráfico.
 
-&#x20;Un par de características que posee:
+Un par de características que posee:
 
 * Manejo avanzado para detener/arrancar procesos de forma fácil.
 * Posibilidad de iniciar hilos de procesos con diferentes uid/gid/chroot/environment, escuchar en diferentes puertos y usar distintos php.ini (remplazando).
@@ -250,7 +246,7 @@ Copiar la DB users.sql en la DB creada users1:<br>
 mysql -p -u root --password=1234 users < users.sql 
 ```
 
-&#x20; Algunos comandos básicos de MySQL:<br>
+Algunos comandos básicos de MySQL:<br>
 
 ```
 use Database users;
@@ -265,40 +261,40 @@ select * from users1.users;
 
 Ahora es que estamos en condiciones de crear nuestro docker-compose. Para ello nos vamos a Portainer.
 
-<figure><img src="../../../../.gitbook/assets/image (25) (1).png" alt=""><figcaption><p>En Portainer</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (430).png" alt=""><figcaption><p>En Portainer</p></figcaption></figure>
 
-Nos vamos a la herramienta stacks de Portainer, donde podremos crear nuestra "composición" de servicios. Recordemos que un stack es una colección de servicios que están relacionados con una aplicación, como por ejemplo,  WordPress que incluye un contenedor de servidor web (como nginx o apache) y un contenedor de base de datos como MySQL.
+Nos vamos a la herramienta stacks de Portainer, donde podremos crear nuestra "composición" de servicios. Recordemos que un stack es una colección de servicios que están relacionados con una aplicación, como por ejemplo, WordPress que incluye un contenedor de servidor web (como nginx o apache) y un contenedor de base de datos como MySQL.
 
 Una vez en el apartado vamos a crear un nuevo stack:
 
-<figure><img src="../../../../.gitbook/assets/image (7) (6) (1).png" alt=""><figcaption><p>Creamos un nuevo stack</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (639).png" alt=""><figcaption><p>Creamos un nuevo stack</p></figcaption></figure>
 
 Se nos abrirá una nueva página donde podemos aplicar diferentes opciones para crear una colección entre las que tenemos subir nuestro docker-compose.yml, usar un repositorio de git. Aquí utilizaremos el editor web:
 
-<figure><img src="../../../../.gitbook/assets/image (1) (2) (2).png" alt=""><figcaption><p>Stack en Portainer</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (419).png" alt=""><figcaption><p>Stack en Portainer</p></figcaption></figure>
 
-En el editor web volcamos el contenido de nuestro archivo <mark style="color:blue;">`docker-compose.yml`</mark> previamente creado. En caso de tener algún aparecerá una notificación en rojo que nos impedirá continuar &#x20;
+En el editor web volcamos el contenido de nuestro archivo <mark style="color:blue;">`docker-compose.yml`</mark> previamente creado. En caso de tener algún aparecerá una notificación en rojo que nos impedirá continuar
 
-<figure><img src="../../../../.gitbook/assets/image (61).png" alt=""><figcaption><p>docker-compose.yml para crear el stack</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (675).png" alt=""><figcaption><p>docker-compose.yml para crear el stack</p></figcaption></figure>
 
 Una vez hecho esto, clicamos a <mark style="color:blue;">`deploy`</mark> para crear y desplegar todos los contenedores. Si todo está correcto, nos crea la colección y podremos acceder a la misma y veremos algo como lo siguiente:
 
-<figure><img src="../../../../.gitbook/assets/image (39) (2).png" alt=""><figcaption><p>Despliegue de contenedores</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (518).png" alt=""><figcaption><p>Despliegue de contenedores</p></figcaption></figure>
 
 Podemos observar los diferentes contenedores involucrados en desplegar la aplicación web:
 
 * miAppPHP - es el contenedor de php
 * miAppPhpMyAdmin - el contenedor para el gestor de bases de datos
-* miAppNginx - el servidor web&#x20;
+* miAppNginx - el servidor web
 * miAppMySQL - La base de datos
 
 #### Accediendo a PhpMyAdmin
 
-<figure><img src="../../../../.gitbook/assets/image (224).png" alt=""><figcaption><p>Accediendo a la base de datos en Phpmyadmin</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (533).png" alt=""><figcaption><p>Accediendo a la base de datos en Phpmyadmin</p></figcaption></figure>
 
 #### Accediendo a la web
 
-<figure><img src="../../../../.gitbook/assets/image (225).png" alt=""><figcaption><p>El sitio web de prueba</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (382).png" alt=""><figcaption><p>El sitio web de prueba</p></figcaption></figure>
 
 ## Links
 

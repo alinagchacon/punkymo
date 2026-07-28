@@ -10,9 +10,9 @@ Comencemos por aclarar que es la codificación.
 
 La codificación es el proceso que toma los datos a transmitir y los convierte en un formato aceptable para la transmisión. Codificar permite convertir los datos a un formato específico para su almacenamiento o transmisión. Este proceso es completamente reversible si conocemos el método utilizado para codificar, por tanto, no confundir con cifrar porque no se trata de un método de seguridad.
 
-Por tanto, la decodificación permite invertir  el proceso de codificación facilitando la interpretación de  la información.&#x20;
+Por tanto, la decodificación permite invertir el proceso de codificación facilitando la interpretación de la información.
 
-Algunos ejemplos de codificación de caracteres, bien conocidos son:  [ASCII, Unicode, UTF-8, Base64](../../miscelaneas/datos-codificacion.md).<br>
+Algunos ejemplos de codificación de caracteres, bien conocidos son: [ASCII, Unicode, UTF-8, Base64](../../miscelaneas/datos-codificacion.md).<br>
 
 Algunos **tipos de codificación** son:
 
@@ -36,17 +36,15 @@ Este tipo de compresión de imágenes conserva la información más significativ
 
 #### JPEG
 
-Este  tipo de archivos puede comprimir archivos en una proporción de 10:1 con una reducción mínima de la calidad de imagen, por tanto, minimiza la pérdida de calidad percibida,  aunque se pierde calidad en cada compresión. Se trata de un formato de imagen adecuado para fotografías y gráficos complejos y no es ideal para imágenes con texto o gráficos con bordes nítidos. Permite obtener una elevada compresión y mantener a su vez una buena calidad en la imagen.
+Este tipo de archivos puede comprimir archivos en una proporción de 10:1 con una reducción mínima de la calidad de imagen, por tanto, minimiza la pérdida de calidad percibida, aunque se pierde calidad en cada compresión. Se trata de un formato de imagen adecuado para fotografías y gráficos complejos y no es ideal para imágenes con texto o gráficos con bordes nítidos. Permite obtener una elevada compresión y mantener a su vez una buena calidad en la imagen.
 
 Dado que el ojo humano es más sensible a los detalles de brillo que al color, se permite reducir ciertos datos sin que la imagen pierda mucha calidad.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption><p>Tomado de <a href="https://commons.wikimedia.org/wiki/File:JPEG_compression_Example.jpg">https://commons.wikimedia.org/wiki/File:JPEG_compression_Example.jpg</a></p></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (66).png" alt="" width="563"><figcaption><p>Tomado de <a href="https://commons.wikimedia.org/wiki/File:JPEG_compression_Example.jpg">https://commons.wikimedia.org/wiki/File:JPEG_compression_Example.jpg</a></p></figcaption></figure>
 
 ### Compresión sin pérdida
 
-Entre los formatos que hacen este tipo de compresión encontramos:&#x20;
+Entre los formatos que hacen este tipo de compresión encontramos:
 
 * **PNG** - comprime la imagen pero la compresión es totalmente reversible al formato original.
 * **GIF** - formato de intercambio de gráficos, a menudo utilizado también en la web. Crea una tabla de 256 colores a partir de una tabla de 16 millones, de tal modo que si la imagen contiene menos de 256 colores, puede almacenar la imagen sin pérdida. Si por el contrario, la imagen contiene muchos colores, entonces el software que crea el gif pudiera utilizar un algoritmo que genere los colores más cercanos a los reales dentro de la paleta de 256. En función de la calidad del algoritmo encontrará o no el conjunto de colores óptimos dentro de los 256. También puede ajustar el llamado **error de difusión** que permite reajustar los colores de los píxeles vecinos corrigiendo el error en cada píxel.
@@ -55,7 +53,7 @@ Entre los formatos que hacen este tipo de compresión encontramos:&#x20;
 
 ### Tipos de algoritmos
 
-**Con** **pérdida**:&#x20;
+**Con** **pérdida**:
 
 * Codificación por transformación<br>
 
@@ -64,8 +62,6 @@ Entre los formatos que hacen este tipo de compresión encontramos:&#x20;
 * Run-length encoding (RLE)
 * Codificación aritmética
 * Codificación Huffman
-
-
 
 ## Algo sobre vídeos
 
@@ -95,11 +91,11 @@ Debemos tener claro que **bitrade** y los **FPS** no son lo mismo porque:
 * La resolución es el tamaño de la imagen. Por ejemplo: 1920x1080
 {% endhint %}
 
-### Ejemplo&#x20;
+### Ejemplo
 
 <table><thead><tr><th width="186.5">Resolución</th><th width="185.5">FPS</th><th>Resultado</th></tr></thead><tbody><tr><td>4K</td><td>24 FPS</td><td>se ve muy nítido pero menos fluido</td></tr><tr><td>1080p</td><td>60 FPS</td><td>tiene menos resolución pero es más fluido</td></tr></tbody></table>
 
-### En redes y streaming&#x20;
+### En redes y streaming
 
 En streaming: RTMP, HLS, cámaras IP:
 
@@ -108,11 +104,9 @@ En streaming: RTMP, HLS, cámaras IP:
 
 El uso típico en estos casos:
 
-* Con 15 FPS  se usa en videovigilancia
+* Con 15 FPS se usa en videovigilancia
 * Con 25 - 30 FPS es streaming normal
 * Con 60 FPS hablamos de gaming
-
-
 
 Cuando ejecutas la herramienta ffprobe:
 
@@ -142,7 +136,7 @@ El <mark style="color:purple;">códec</mark> y el <mark style="color:green;">con
 
 Por tanto, los <mark style="color:purple;">códecs</mark> se refieren a la forma en que se codifican el audio, el video u otros datos, mientras que los <mark style="color:green;">contenedores</mark> se refieren al archivo que contiene audio y video codificados.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tomado de: <a href="https://www.profesionalreview.com/2023/08/12/codec-multimedia/">https://www.profesionalreview.com/2023/08/12/codec-multimedia/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Tomado de: <a href="https://www.profesionalreview.com/2023/08/12/codec-multimedia/">https://www.profesionalreview.com/2023/08/12/codec-multimedia/</a></p></figcaption></figure>
 
 ## Formatos de video
 
@@ -156,7 +150,7 @@ Por ejemplo:
 
 En caso de necesitar subir un vídeo a un sitio web, debemos considerar las limitaciones de ancho de banda y la calidad del vídeo. En este caso, pudiéramos utilizar el formato WebM que es un formato de archivo libre y compatible con Android y con la mayoría de los navegadores web y sitios de transmisión de vídeo HTML5 como YouTube. Además de que permite comprimir archivos de vídeo sin perder apenas calidad de vídeo.
 
-En el caso de querer almacenar vídeos caseros  que no ocupen mucho espacio en disco podemos pensar en formato estilo MP4 porque conserva la calidad del vídeo tras la compresión y es compatible con la mayoría de programas y dispositivos.
+En el caso de querer almacenar vídeos caseros que no ocupen mucho espacio en disco podemos pensar en formato estilo MP4 porque conserva la calidad del vídeo tras la compresión y es compatible con la mayoría de programas y dispositivos.
 
 ### Codificación de vídeos
 
@@ -201,7 +195,7 @@ Un contenedor combina la transmisión de audio y vídeo en un único archivo de 
 * Vídeo codificado (códec de vídeo)
 * Metadatos<br>
 
-Los <mark style="color:purple;">metadatos</mark> indican al reproductor de vídeo cómo coordinar los códecs de audio y vídeo, así como brindar subtítulos.  Algunos contenedores solo funcionan con un único tipo de códec y reproductor de vídeo, limitando las opciones de reproducción. Otros contenedores son compatibles con muchos tipos de códecs y reproductores de vídeo.
+Los <mark style="color:purple;">metadatos</mark> indican al reproductor de vídeo cómo coordinar los códecs de audio y vídeo, así como brindar subtítulos. Algunos contenedores solo funcionan con un único tipo de códec y reproductor de vídeo, limitando las opciones de reproducción. Otros contenedores son compatibles con muchos tipos de códecs y reproductores de vídeo.
 
 Las extensiones de los archivos de vídeo reciben el nombre de los contenedores que utilizan, en lugar de los códecs de audio y vídeo que contienen. Ejemplo de ello: un archivo de vídeo MP4 es en realidad un contenedor MP4.
 
@@ -220,17 +214,17 @@ Veamos estos formatos de contenedores de video un poco más en detalle.
 
 MP4 es un formato de almacenamiento de archivos multimedia ampliamente utilizado para almacenar vídeo y para transmisiones.
 
-* **Año y origen:** Derivado del formato QuickTime de Apple, estandarizado por ISO/IEC en 2001 como parte del estándar MPEG-4.&#x20;
+* **Año y origen:** Derivado del formato QuickTime de Apple, estandarizado por ISO/IEC en 2001 como parte del estándar MPEG-4.
 * El nombre completo del estándar MP4 es MPEG-4 Parte 14, pero los términos "MP4" y "MPEG-4" no significan lo mismo. MP4 es el archivo de contenedor digital y MPEG-4 es el estándar para codificar el contenido de vídeo dentro de los archivos MP4. El contenido de vídeo dentro de un archivo MP4 se codifica utilizando el estándar MPEG-4.
 * **Funcionamiento:** Es un contenedor que puede alojar prácticamente cualquier combinación de códecs. Lo más habitual es vídeo H.264 o H.265 con audio AAC. El audio y el vídeo se comprimen de forma independiente, lo que permite optimizar cada stream por separado sin que uno afecte al otro.
 * **Códecs más comunes dentro:**
   * Vídeo: H.264, H.265/HEVC, AV1, MPEG-4 Visual
   * Audio: AAC, MP3, AC-3, Opus
-* **Puntos fuertes:** Compatibilidad universal, dado que es capaz de funcionar  en Android, iOS, Windows, macOS, Smart TVs, consolas, navegadores web, YouTube, Netflix y prácticamente cualquier plataforma. Es el <mark style="color:purple;">formato de entrega estándar de la industria</mark>.
+* **Puntos fuertes:** Compatibilidad universal, dado que es capaz de funcionar en Android, iOS, Windows, macOS, Smart TVs, consolas, navegadores web, YouTube, Netflix y prácticamente cualquier plataforma. Es el <mark style="color:purple;">formato de entrega estándar de la industria</mark>.
 * **Limitación real:** Al ser un contenedor muy abierto, dos archivos .mp4 pueden ser completamente incompatibles entre sí si usan códecs distintos. No es el formato ideal para edición profesional porque la mayoría de sus códecs son interframe (dependen de frames anteriores), lo que complica los cortes.
 
 {% hint style="info" %}
-La calidad  del video depende del códec y el bitrate, no del contenedor. MP4 con H.264 CRF 28 puede dar peor calidad que MKV con H.264 CRF 18.
+La calidad del video depende del códec y el bitrate, no del contenedor. MP4 con H.264 CRF 28 puede dar peor calidad que MKV con H.264 CRF 18.
 {% endhint %}
 
 ### MOV - QuickTime File Format
@@ -242,24 +236,24 @@ MOV es otro tipo de archivo contenedor para vídeos. Apple desarrolló MOV para 
 * **Códecs más comunes dentro:**
   * Vídeo: ProRes, H.264, H.265, MJPEG, DNxHD
   * Audio: AAC, PCM sin comprimir, AC-3
-* **Puntos fuertes:** Es el contenedor nativo del ecosistema Apple. [Final Cut Pro](https://www.apple.com/es/final-cut-pro/), [DaVinci Resolve](https://www.blackmagicdesign.com/es/products/davinciresolve) y [Adobe Premiere](https://www.adobe.com/es/products/premiere.html)  usan habitualmente MOV para proyectos de postproducción, especialmente con ProRes, que ofrece altísima calidad con edición fluida.
+* **Puntos fuertes:** Es el contenedor nativo del ecosistema Apple. [Final Cut Pro](https://www.apple.com/es/final-cut-pro/), [DaVinci Resolve](https://www.blackmagicdesign.com/es/products/davinciresolve) y [Adobe Premiere](https://www.adobe.com/es/products/premiere.html) usan habitualmente MOV para proyectos de postproducción, especialmente con ProRes, que ofrece altísima calidad con edición fluida.
 * **Limitación real:** Históricamente la compatibilidad fuera de macOS era limitada, pero hoy Windows 10+ lo reproduce de forma nativa y es ampliamente soportado.
 * **Uso real hoy:** Cámaras de cine digital (RED, ARRI, Sony Cinema) y drones profesionales graban en MOV con ProRes. Es el formato de trabajo en flujos de postproducción de alto nivel, no para distribución final.
 
 ### AVI - Audio Video Interleave
 
-Este tipo de formato permite almacenar un flujo de datos de video y varios flujos de audio de manera simultánea.&#x20;
+Este tipo de formato permite almacenar un flujo de datos de video y varios flujos de audio de manera simultánea.
 
 El formato concreto de estos flujos no es objeto del formato AVI y es interpretado por los llamados códec que no son más que programas externos. Es decir, el audio y el video contenidos en el AVI pueden estar en cualquier formato (AC3/DivX, o MP3/Xvid, entre otros). Por eso se le considera un formato contenedor.
 
 * **Año y origen:** Creado por Microsoft en 1992 como parte de Video for Windows. Fue el formato estándar en Windows durante los años 90 y principios de los 2000.
-* **Funcionamiento:** Su estructura "intercalada" o interleave alterna bloques de datos de audio y vídeo a lo largo del archivo, lo que facilita la reproducción lineal pero complica el seeking, búsqueda o salto (hace referencia a la capacidad de un reproductor multimedia para saltar rápidamente a un punto específico de tiempo (minuto/segundo) dentro del vídeo, en lugar de verlo secuencialmente desde el principio). \
+* **Funcionamiento:** Su estructura "intercalada" o interleave alterna bloques de datos de audio y vídeo a lo largo del archivo, lo que facilita la reproducción lineal pero complica el seeking, búsqueda o salto (hace referencia a la capacidad de un reproductor multimedia para saltar rápidamente a un punto específico de tiempo (minuto/segundo) dentro del vídeo, en lugar de verlo secuencialmente desde el principio).\
   Tiene limitaciones: no soporta subtítulos de forma nativa, no soporta capítulos, no maneja bien el VBR en audio, y tiene un límite teórico de 2 GB en su versión original que se puede superar con la extensión OpenDML.
 * **Códecs más comunes dentro:**
   * Vídeo: DivX, XviD, MJPEG, H.264 (poco común)
   * Audio: MP3, AC-3, PCM
 * Los códecs que se usaban habitualmente con AVI (DivX, XviD) son menos eficientes que los modernos H.264/H.265. Además, muchos AVI históricos usan audio PCM sin comprimir, que pesa mucho.
-* Es considerado un formato legacy y nadie debería crear AVI  hoy en día. Se sigue encontrando en colecciones antiguas de vídeo de los años 90-2000. La mayoría de reproductores modernos lo soportan por compatibilidad hacia atrás.<br>
+* Es considerado un formato legacy y nadie debería crear AVI hoy en día. Se sigue encontrando en colecciones antiguas de vídeo de los años 90-2000. La mayoría de reproductores modernos lo soportan por compatibilidad hacia atrás.<br>
 
 {% hint style="info" %}
 Las señales PCM-Modulación por Código de Pulsos, transmiten una secuencia de muestras de 16 o 24 bits, donde cada bit representa un nivel de amplitud en un punto específico de una muestra de audio. Al reproducir rápidamente estas muestras, la señal PCM crea la ilusión de un flujo de audio continuo y fluido. Ver [aquí](https://areahifi.com/blogs/blog-areahifi/pcm-o-bitstream-tomando-la-decision-correcta-para-tu-configuracion-de-audio?srsltid=AfmBOoqGJR3eRZmVabWcnDomLzQLgsu5-rfDMgQUrXaLhoo2x2u375Wi).
@@ -267,20 +261,18 @@ Las señales PCM-Modulación por Código de Pulsos, transmiten una secuencia de 
 
 ### FLV - Flash Video
 
-El formato Flash Video de Adobe Systems se utiliza para incluir vídeos en línea en sitios web como es el caso de YouTube, Vevo y otros.&#x20;
+El formato Flash Video de Adobe Systems se utiliza para incluir vídeos en línea en sitios web como es el caso de YouTube, Vevo y otros.
 
-Casi cualquier S.O salvo  iOS, puede leer y visualizar archivos FLV mediante el uso de Adobe Flash Player que viene en complementos para navegadores. Los Android y iPhone pueden reproducir archivos FLV mediante software de código abierto y navegadores específicos. La versión "Jelly Bean" de Android permite a los usuarios utilizar archivos FLV.&#x20;
+Casi cualquier S.O salvo iOS, puede leer y visualizar archivos FLV mediante el uso de Adobe Flash Player que viene en complementos para navegadores. Los Android y iPhone pueden reproducir archivos FLV mediante software de código abierto y navegadores específicos. La versión "Jelly Bean" de Android permite a los usuarios utilizar archivos FLV.
 
-El audio de los vídeos FLV suele codificarse en formato MP3, pero puede grabarse sobre el vídeo utilizando un micrófono con el códec [Nellymoser Asao](https://en.wikipedia.org/wiki/Asao_\(codec\)).&#x20;
-
-
+El audio de los vídeos FLV suele codificarse en formato MP3, pero puede grabarse sobre el vídeo utilizando un micrófono con el códec [Nellymoser Asao](https://en.wikipedia.org/wiki/Asao_\(codec\)).
 
 * **Año y origen:** Desarrollado por Macromedia (adquirida por Adobe en 2005). Fue el formato dominante en internet entre 2005 y 2015, cuando YouTube, Vimeo y la mayoría de plataformas de vídeo online lo usaban.
 * **Funcionamiento:** Contenedor diseñado específicamente para streaming web dentro del plugin Adobe Flash Player. Estructura relativamente simple, optimizada para transmisión progresiva. Más tarde Adobe introdujo F4V, una evolución basada en MP4 para soportar H.264.
 * **Códecs más comunes dentro:**
   * Vídeo: Sorenson Spark (H.263 modificado), On2 VP6, H.264 (en versiones posteriores)
   * Audio: MP3, AAC, ADPCM
-* Está obsoleto. Adobe retiró Flash Player en diciembre de 2020. Los navegadores lo bloquearon progresivamente desde 2017. YouTube abandonó FLV en 2015 a favor de HTML5 con MP4/WebM.&#x20;
+* Está obsoleto. Adobe retiró Flash Player en diciembre de 2020. Los navegadores lo bloquearon progresivamente desde 2017. YouTube abandonó FLV en 2015 a favor de HTML5 con MP4/WebM.
 
 ### WebM
 
@@ -309,7 +301,7 @@ El formato MKV, conocido como Matroska es un formato de video estándar abierto.
   * Capítulos y menús
   * Adjuntos (portadas, fuentes tipográficas)
   * Múltiples ángulos de cámara
-* **Archivos  grandes:** En realidad MKV no añade peso al archivo. El tamaño depende completamente del códec y bitrate del vídeo interior. Un MKV con H.265 CRF 23 será más pequeño que un MP4 con H.264 CRF 18.
+* **Archivos grandes:** En realidad MKV no añade peso al archivo. El tamaño depende completamente del códec y bitrate del vídeo interior. Un MKV con H.265 CRF 23 será más pequeño que un MP4 con H.264 CRF 18.
 * **Limitación real:** No es el formato más compatible para distribución. Algunos Smart TVs, reproductores de Blu-ray, consolas antiguas y aplicaciones de streaming no lo soportan de forma nativa. Para uso doméstico con VLC, Kodi, Jellyfin o Plex es perfectamente válido.
 * **Uso real hoy:** El formato preferido de la escena de rips de Blu-ray y distribución de contenido de alta calidad, precisamente por su capacidad de incluir múltiples pistas de audio, subtítulos y capítulos en un solo archivo sin restricciones de códec.
 
@@ -319,9 +311,9 @@ El formato MKV, conocido como Matroska es un formato de video estándar abierto.
 
 #### Codificación de vídeo avanzada AVC / H264
 
-La Codificación de vídeo avanzada - AVC, conocida como H.264, es el estándar de compresión de vídeo que más se usa en la actualidad. Puede codificar vídeo de alta calidad con una velocidad de bits más baja que los estándares de compresión más antiguos, siendo **la  `velocidad de bits`  el número de unidades de información que hay que procesar por cada segundo de vídeo**.
+La Codificación de vídeo avanzada - AVC, conocida como H.264, es el estándar de compresión de vídeo que más se usa en la actualidad. Puede codificar vídeo de alta calidad con una velocidad de bits más baja que los estándares de compresión más antiguos, siendo **la `velocidad de bits` el número de unidades de información que hay que procesar por cada segundo de vídeo**.
 
-El Blu-ray y una gran variedad de servicios de transmisión, incluyendo la televisión a la carta y en directo, utilizan H.264. A pesar de que en ocasiones su uso requiere el pago de derechos a las organizaciones que poseen las patentes del mismo, más del 90% del sector del vídeo utiliza H.264.&#x20;
+El Blu-ray y una gran variedad de servicios de transmisión, incluyendo la televisión a la carta y en directo, utilizan H.264. A pesar de que en ocasiones su uso requiere el pago de derechos a las organizaciones que poseen las patentes del mismo, más del 90% del sector del vídeo utiliza H.264.
 
 Un estándar de compresión de video que puede ser utilizado en: MP4, AVI, MKV, MOV, FLV, TS.
 
@@ -336,13 +328,13 @@ Casi todos los protocolos de transmisión en la actualidad son compatibles con H
 
 ### ¿Qué es H.265?
 
-La codificación de vídeo de alta eficiencia (HEVC) o H.265  es el estándar de compresión posterior a H.264.  Proporciona mejor calidad de imagen que H.264.&#x20;
+La codificación de vídeo de alta eficiencia (HEVC) o H.265 es el estándar de compresión posterior a H.264. Proporciona mejor calidad de imagen que H.264.
 
 Muchos servidores de alojamiento de vídeo utilizan H.265 además de H.264. Sin embargo, como el antiguo H.264 se utiliza tanto y ya ofrece una buena calidad a velocidades de bits manejables, es probable que siga utilizándose durante algún tiempo.
 
 ### Links
 
-* [https://digitalcommunications.wp.st-andrews.ac.uk/2019/04/08/what-is-a-jpeg-file/](https://digitalcommunications.wp.st-andrews.ac.uk/2019/04/08/what-is-a-jpeg-file/)&#x20;
+* [https://digitalcommunications.wp.st-andrews.ac.uk/2019/04/08/what-is-a-jpeg-file/](https://digitalcommunications.wp.st-andrews.ac.uk/2019/04/08/what-is-a-jpeg-file/)
 * [https://grupo.us.es/gtocoma/pid/pid6/pid61.htm](https://grupo.us.es/gtocoma/pid/pid6/pid61.htm)
 * [https://www.cloudflare.com/es-es/learning/video/what-is-mp4/](https://www.cloudflare.com/es-es/learning/video/what-is-mp4/)
 * [https://areahifi.com/blogs/blog-areahifi/pcm-o-bitstream-tomando-la-decision-correcta-para-tu-configuracion-de-audio?srsltid=AfmBOoqGJR3eRZmVabWcnDomLzQLgsu5-rfDMgQUrXaLhoo2x2u375Wi](https://areahifi.com/blogs/blog-areahifi/pcm-o-bitstream-tomando-la-decision-correcta-para-tu-configuracion-de-audio?srsltid=AfmBOoqGJR3eRZmVabWcnDomLzQLgsu5-rfDMgQUrXaLhoo2x2u375Wi)

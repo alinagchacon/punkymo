@@ -23,8 +23,6 @@ Algunas de las ventajas de configurar un servidor proxy en una empresa son:
 
 Todos los proxy proporcionan a los usuarios una dirección alternativa para navegar en Internet, sin embargo existen varios tipos diferentes, cada uno con sus propias funciones.
 
-
-
 ### Proxy de reenvío
 
 Se encuentra frente a los clientes y se utiliza para obtener datos para grupos de usuarios dentro de una red interna. Cuando se envía una solicitud, el servidor proxy la examina para decidir si debe continuar y realizar una conexión.
@@ -44,9 +42,7 @@ Sin embargo, limitan la capacidad de una organización para satisfacer las neces
 * B: sería un servidor proxy de reenvío
 * C: Un sitio web
 
-
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tomado de Cloudflare</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (181).png" alt=""><figcaption><p>Tomado de Cloudflare</p></figcaption></figure>
 
 \
 \
@@ -83,9 +79,7 @@ Veamos un ejemplo tomado de Cloudflare:
 * E: Un servidor de proxy inverso
 * F: Uno o más servidores web
 
-
-
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Tomado de cloudflare</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (180).png" alt=""><figcaption><p>Tomado de cloudflare</p></figcaption></figure>
 
 \
 Lo habitual es que todas las solicitudes de D vayan directamente a F, y F enviaría las respuestas directamente a D. Sin embargo, con un proxy inverso, todas las solicitudes de D irán directamente a E, y E las enviaría a F, por lo que también recibiría las respuestas de F. y se las pasaría a D.
@@ -114,15 +108,11 @@ Este tipo de proxy puede brindar a los usuarios una experiencia idéntica a la q
 
 Los proxies transparentes son adecuados para las empresas que desean utilizar un proxy sin que los empleados sepan que están usando uno. Tienen como ventaja la de proporcionar una experiencia de usuario perfecta. Sin embargo, este tipo de proxies son más susceptibles a ciertas amenazas de seguridad, como los ataques de denegación de servicio de SYN-flood.
 
-
-
 ### Proxy anónimo
 
 Trata de hacer que la actividad de Internet sea imposible de rastrear. Funciona accediendo a Internet en nombre del usuario mientras oculta su identidad y la información de su equipo. Este tipo de proxy resultaría adecuado para aquellos usuarios que desean tener anonimato completo mientras acceden a Internet.
 
 Existen otros tipos de proxy como es el caso de los proxies residenciales, de distorsión, de alto anonimato, de centro de datos, públicos, compartidos, rotativos, etc.
-
-
 
 ## LINKS
 

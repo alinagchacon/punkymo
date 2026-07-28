@@ -6,14 +6,14 @@ description: raid
 
 MDADM
 
-Se trata de una herramienta en Linux que se utiliza para gestionar y administrar arrays de discos en RAID (Redundant Array of Independent Disks). Con `mdadm`, podemos crear, ensamblar, monitorear, y administrar RAID por software.&#x20;
+Se trata de una herramienta en Linux que se utiliza para gestionar y administrar arrays de discos en RAID (Redundant Array of Independent Disks). Con `mdadm`, podemos crear, ensamblar, monitorear, y administrar RAID por software.
 
 RAID es una tecnología que permite combinar varios discos duros en una sola unidad lógica para mejorar el rendimiento, la redundancia o ambas.
 
 #### Funciones principales de `mdadm`:
 
 1. **Crear RAID**: Configura diferentes tipos de RAID como RAID 0, RAID 1, RAID 5, RAID 6 y RAID 10, dependiendo de las necesidades de rendimiento o redundancia.
-2. **Asamblear  RAID**: Si un RAID ya existe, `mdadm` puede utilizarse para ensamblar y montar dicho array.
+2. **Asamblear RAID**: Si un RAID ya existe, `mdadm` puede utilizarse para ensamblar y montar dicho array.
 3. **Monitoreo de RAID**: Puede monitorear el estado de un RAID y enviar alertas en caso de fallos en los discos o degradación de la matriz.
 4. **Administración de RAID**: Se pueden añadir o eliminar discos del RAID, reparar discos fallidos y reconstruir la matriz en caso de que un disco falle.
 
@@ -29,9 +29,7 @@ sudo lsblk
 
 Este comando muestra información de todos los dispositivos de bloques disponibles en el sistema, como discos duros, particiones y unidades de almacenamiento. Por tanto, nos debe mostrar algo como lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (387).png" alt="" width="322"><figcaption><p>Comprobando información de dispositivos</p></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (850).png" alt="" width="322"><figcaption><p>Comprobando información de dispositivos</p></figcaption></figure>
 
 ### Trabajando con mdadm
 
@@ -41,7 +39,7 @@ Debemos comprobar si existe la herramienta mdadm en el sistema y si no la tenemo
 sudo apt install mdadm
 ```
 
-Para crear un RAID1  podemos utilizar el siguiente comando:
+Para crear un RAID1 podemos utilizar el siguiente comando:
 
 ```
 sudo mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/sdc
@@ -60,7 +58,7 @@ sudo mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/
 
 Con este comando, el nuevo array se denomina `/dev/md0` y utiliza `/dev/sdb` y `/dev/sdc` para crear el RAID1. El dispositivo `/dev/sdd` se utiliza automáticamente como reserva para recuperarse del fallo de cualquier dispositivo activo.
 
-<figure><img src="../../.gitbook/assets/image (388).png" alt="" width="375"><figcaption><p>Creación del raid1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (851).png" alt="" width="375"><figcaption><p>Creación del raid1</p></figcaption></figure>
 
 #### Comprobando
 
@@ -72,13 +70,13 @@ mdadm --detail /dev/md0
 
 Y nos mostrará algo como lo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (389).png" alt="" width="375"><figcaption><p>Verificando el raid1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (852).png" alt="" width="375"><figcaption><p>Verificando el raid1</p></figcaption></figure>
 
 ### Creando un sistema de archivos
 
 Crearemos un sistema de archivos ext4 en el dispositivo RAID y lo vamos a montar. Para ello vamos a utilizar la herramienta mkfs.ext4
 
-Este comando `mkfs.ext4` de Linux se utiliza para formatear dispositivos de almacenamiento, como discos duros, particiones o unidades USB. En este caso concreto, con el sistema de archivos **ext4** que  es uno de los S.O más utilizados en Linux por su eficiencia, estabilidad y soporte para grandes volúmenes y archivos. Adicionalmente, ext4 ofrece mejoras en el manejo de grandes volúmenes de datos, mayor tolerancia a errores, así como mayor eficiencia en el uso del espacio.
+Este comando `mkfs.ext4` de Linux se utiliza para formatear dispositivos de almacenamiento, como discos duros, particiones o unidades USB. En este caso concreto, con el sistema de archivos **ext4** que es uno de los S.O más utilizados en Linux por su eficiencia, estabilidad y soporte para grandes volúmenes y archivos. Adicionalmente, ext4 ofrece mejoras en el manejo de grandes volúmenes de datos, mayor tolerancia a errores, así como mayor eficiencia en el uso del espacio.
 
 ```
 sudo mkfs.ext4 -F /dev/md0
@@ -93,7 +91,7 @@ Si queremos conocer el uso del disco del sistema de archivos podemos utilizar el
 
 y nos mostrará el espacio en disco que está ocupando nuestro raid1.
 
-<figure><img src="../../.gitbook/assets/image (390).png" alt="" width="375"><figcaption><p>df -h</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (853).png" alt="" width="375"><figcaption><p>df -h</p></figcaption></figure>
 
 Ahora agregamos una entrada a _/etc/fstab_ y hacemos que el punto de montaje sea persistente tras los reinicios.
 
@@ -117,7 +115,7 @@ El archivo de configuración identifica qué dispositivos son dispositivos RAID 
 sudo mdadm --examine --scan | sudo tee -a /etc/mdadm.conf
 ```
 
-Con el comando:&#x20;
+Con el comando:
 
 ```
 sudo mdadm --manage --help
@@ -129,11 +127,9 @@ podemos enumerar las opciones disponibles para gestionar un dispositivo RAID.
 * `--remove`: elimine los dispositivos no activos posteriores.
 * `--fail`: marca los dispositivos posteriores como defectuosos.
 
-
-
 ## <mark style="color:purple;">Trabajando con mdadm</mark>
 
-Con estos comandos podemos controlar  el estado de nuestro RAID.
+Con estos comandos podemos controlar el estado de nuestro RAID.
 
 **(1) Desmontar el sistema de archivos del RAID**
 
@@ -151,7 +147,7 @@ Nos aseguramos que el RAID no esté en uso. Para ello, desmontamos cualquier sis
 sudo mdadm --stop /dev/md0
 ```
 
-Nota: Recuerda que  `/dev/md0` es el dispositivo del RAID. Este comando detendrá el dispositivo RAID especificado. Hay que asegurarse de que no se esté utilizando. Para ello, nos podemos asegurar  de desmontar cualquier sistema de archivos montado en el RAID antes de detenerlo.
+Nota: Recuerda que `/dev/md0` es el dispositivo del RAID. Este comando detendrá el dispositivo RAID especificado. Hay que asegurarse de que no se esté utilizando. Para ello, nos podemos asegurar de desmontar cualquier sistema de archivos montado en el RAID antes de detenerlo.
 
 > **Nota**: No uses este comando si el RAID está en uso, ya que podría causar pérdida de datos o corrupción si hay procesos que dependan de él.
 
@@ -175,7 +171,7 @@ Para volver a activar o iniciar el RAID después de haberlo detenido, también p
 sudo mdadm --assemble --run /dev/md0
 ```
 
-Esto ensamblará y activará el RAID especificado.&#x20;
+Esto ensamblará y activará el RAID especificado.
 
 #### **Verificar el estado del RAID**
 
@@ -188,4 +184,3 @@ cat /proc/mdstat
 Esto mostrará el estado actual de todos los arrays RAID en el sistema, incluyendo si están activos, en proceso de reconstrucción, sincronización, etc.
 
 > Nota: Recuerda tener precaución al realizar estas operaciones, especialmente si el RAID contiene datos importantes.
-

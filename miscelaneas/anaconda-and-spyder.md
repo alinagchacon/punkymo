@@ -4,15 +4,15 @@ description: Python
 
 # Anaconda & Spyder
 
-Anaconda es una distribución de Python y R para cálculos científicos del tipo: ciencia de datos, aplicaciones de Machine Learning, procesamiento de datos a gran escala, análisis predictivo, etc. Entre sus ventajas podemos encontrar el hecho de simplificar la gestión e implementación de paquetes. Lo podemos instalar en Windows, Linux y macOS.&#x20;
+Anaconda es una distribución de Python y R para cálculos científicos del tipo: ciencia de datos, aplicaciones de Machine Learning, procesamiento de datos a gran escala, análisis predictivo, etc. Entre sus ventajas podemos encontrar el hecho de simplificar la gestión e implementación de paquetes. Lo podemos instalar en Windows, Linux y macOS.
 
-Las distribuciones **Anaconda Distribution y Anaconda Individual Edition** son gratuitos pero existen otros productos de la compañía como  **Anaconda Team Edition** y **Anaconda Enterprise Edition**, que son comerciales.
+Las distribuciones **Anaconda Distribution y Anaconda Individual Edition** son gratuitos pero existen otros productos de la compañía como **Anaconda Team Edition** y **Anaconda Enterprise Edition**, que son comerciales.
 
-Las diferentes versiones de paquetes de Anaconda se administran a través del sistema de gestión de paquetes **conda**.&#x20;
+Las diferentes versiones de paquetes de Anaconda se administran a través del sistema de gestión de paquetes **conda**.
 
 ### Anaconda Navigator <a href="#que-es-anaconda-navigator" id="que-es-anaconda-navigator"></a>
 
-Se trata de una GUI o interfaz gráfica de usuario que viene incluida en la distribución Anaconda. Dicha interfaz nos permite iniciar aplicaciones y administrar los paquetes y distintos entornos y canales conda sin usar comandos.&#x20;
+Se trata de una GUI o interfaz gráfica de usuario que viene incluida en la distribución Anaconda. Dicha interfaz nos permite iniciar aplicaciones y administrar los paquetes y distintos entornos y canales conda sin usar comandos.
 
 El Navigator puede buscar paquetes en **anaconda.org** o en un repositorio local de Anaconda.
 
@@ -64,7 +64,7 @@ Y de este modo podemos comprobar si todo ha ido correctamente:
 conda --version
 ```
 
-<figure><img src="../.gitbook/assets/image (383).png" alt="" width="563"><figcaption><p>iniciando Anaconda</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (842).png" alt="" width="563"><figcaption><p>iniciando Anaconda</p></figcaption></figure>
 
 #### Creando un nuevo entorno para Anaconda
 
@@ -76,7 +76,7 @@ conda create --name miconda python=3.11.2
 
 En mi caso he llamado _**miconda**_ al nuevo entorno de trabajo y le he añadido la versión de python. Una vez que termina el proceso de instalación del entorno y los paquetes correspondientes, nos aparece el siguiente mensaje:
 
-<figure><img src="../.gitbook/assets/image (384).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (843).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Es importante tenerlo en cuenta porque si deseamos desactivar el entorno de trabajo (no es obligado) lo podemos apagar haciendo:
 
@@ -91,12 +91,12 @@ conda install numpy
 ```
 
 {% hint style="info" %}
-NumPy es una biblioteca popular de Python, de código abierto, que se usa para realizar cálculos matemáticos y científicos, útiles para proyectos de Data Science.  Su nombre proviene de: numerical python.&#x20;
+NumPy es una biblioteca popular de Python, de código abierto, que se usa para realizar cálculos matemáticos y científicos, útiles para proyectos de Data Science. Su nombre proviene de: numerical python.
 {% endhint %}
 
 ### Instalar anaconda-navigator
 
-Anaconda Navigator es una interfaz gráfica de usuario GUI  sencilla y con gran potencial. Puede gestionar de manera avanzada paquetes.&#x20;
+Anaconda Navigator es una interfaz gráfica de usuario GUI sencilla y con gran potencial. Puede gestionar de manera avanzada paquetes.
 
 Basta hacer lo siguiente:
 
@@ -104,7 +104,7 @@ Basta hacer lo siguiente:
 conda install anaconda-navigator
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Anaconda Navigator</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (102).png" alt=""><figcaption><p>Anaconda Navigator</p></figcaption></figure>
 
 ### Spyder
 
@@ -118,7 +118,7 @@ apt install spyder
 
 Pero también desde el navigator podemos instalar los paquetes necesarios como Spyder.
 
-<figure><img src="../.gitbook/assets/image (385).png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (844).png" alt="" width="188"><figcaption></figcaption></figure>
 
 ### Error con anaconda-navigator
 
@@ -126,8 +126,8 @@ La instalación de la versión más actual de **Anaconda3-2024.06-1-Linux-x86\_6
 
 ### Links
 
-* [https://docs.anaconda.com/anaconda/install/linux/](https://docs.anaconda.com/anaconda/install/linux/)&#x20;
+* [https://docs.anaconda.com/anaconda/install/linux/](https://docs.anaconda.com/anaconda/install/linux/)
 * [https://es.hostzealot.com/blog/about-vps/configuracion-de-anaconda-en-ubuntu-o-debian-guia-completa](https://es.hostzealot.com/blog/about-vps/configuracion-de-anaconda-en-ubuntu-o-debian-guia-completa)
-* [https://datascientest.com/es/numpy-la-biblioteca-python](https://datascientest.com/es/numpy-la-biblioteca-python)&#x20;
+* [https://datascientest.com/es/numpy-la-biblioteca-python](https://datascientest.com/es/numpy-la-biblioteca-python)
 * [https://docs.spyder-ide.org/current/installation.html](https://docs.spyder-ide.org/current/installation.html)
 * [https://www.datahack.es/introduccion-a-anaconda-python-que-es/](https://www.datahack.es/introduccion-a-anaconda-python-que-es/)

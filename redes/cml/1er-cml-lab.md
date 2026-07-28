@@ -10,7 +10,7 @@ You can also use that same API directly and manage the complete lab lifecycle pr
 
 To perform the operations, the API uses the controller that is responsible for deploying virtual devices and providing all the information about the lab simulations. All the devices are deployed on available compute instances, using memory and CPU resources. The number of compute nodes depends on the type of the deployment. Cisco Modeling Labs can be deployed as a standalone solution where everything runs on the same server or virtual machine. It can also be deployed as a cluster, where multiple servers are bundled together, and the controller can use the resources on each of them.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt="" width="371"><figcaption><p>Tomado de https://u.cisco.com</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (58).png" alt="" width="371"><figcaption><p>Tomado de https://u.cisco.com</p></figcaption></figure>
 
 ### HTML5 User Interface
 
@@ -24,11 +24,11 @@ The API is documented with a Swagger user interface, running directly on the Cis
 
 ## Referencias útiles
 
-En [https://u.cisco.com/](https://u.cisco.com/for-you)  podemos encontrar un curso gratuito de **Introduction to Network Simulations with Cisco Modeling Labs** de 8 horas que nos guía en el uso de Cisco CML y desde el mismo curso en [https://ondemandelearning.cisco.com](https://ondemandelearning.cisco.com) se puede lanzar CML sin tenerlo en nuestro propio PC.
+En [https://u.cisco.com/](https://u.cisco.com/for-you) podemos encontrar un curso gratuito de **Introduction to Network Simulations with Cisco Modeling Labs** de 8 horas que nos guía en el uso de Cisco CML y desde el mismo curso en [https://ondemandelearning.cisco.com](https://ondemandelearning.cisco.com) se puede lanzar CML sin tenerlo en nuestro propio PC.
 
 ## Links
 
-* Cursos - [https://u.cisco.com/](https://u.cisco.com/for-you)&#x20;
+* Cursos - [https://u.cisco.com/](https://u.cisco.com/for-you)
 * Importar labs:
   * [https://github.com/CiscoDevNet/cml-community/tree/master/lab-topologies/ccna-prep](https://github.com/CiscoDevNet/cml-community/tree/master/lab-topologies/ccna-prep)
   * [https://github.com/CiscoDevNet/cml-community/tree/master/lab-topologies/cml-free/vlan-tasks](https://github.com/CiscoDevNet/cml-community/tree/master/lab-topologies/cml-free/vlan-tasks)

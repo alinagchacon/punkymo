@@ -4,7 +4,7 @@ description: de un modo simple
 
 # Ejemplo 1 de VLAN
 
-En esta sección configuraremos  4 VLAN. Dichas VLAN tienen comunicación entre sí. Al final, vamos a configurar un pool de DHCP para cada una de las VLAN en el Router.&#x20;
+En esta sección configuraremos 4 VLAN. Dichas VLAN tienen comunicación entre sí. Al final, vamos a configurar un pool de DHCP para cada una de las VLAN en el Router.
 
 La idea que vamos a desarrollar para comprender la configuración de una VLAN es la siguiente:
 
@@ -14,7 +14,7 @@ La idea que vamos a desarrollar para comprender la configuración de una VLAN es
 4. Todas las configuraciones tanto del switch como del router las haremos desde el modo terminal: CLI
 5. La VLAN nativa será la 300 (blau), sin embargo, por seguridad no debería ser ni la 1 (que es la vlan por defecto) ni una vlan en uso como es en este caso. Lo haremos así para "simplificar".<br>
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configurando VLANs</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (142).png" alt=""><figcaption><p>Configurando VLANs</p></figcaption></figure>
 
 ### Configuración de la topología
 
@@ -36,14 +36,14 @@ Ubicar en el entorno de trabajo de Cisco
 
 Lo primero que debemos hacer es establecer las VLAN, esto es: para las redes verde y amarillo vamos a utilizar una IP de clase C. Para la red rosa, una clase A y para la red azul una clase B.
 
-| VLAN                                                | Características                                                                               |
-| --------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| <mark style="color:green;">VLAN 100 (verde)</mark>  | <p>Red – 192.168.56.0 /24<br>IP - 192.168.56.2<br>Gateway – 192.168.56.1<br>DNS - 8.8.8.8</p> |
-| <mark style="color:orange;">VLAN 200 (rosa)</mark>  | <p>Red – 10.10.0.0 /8<br>IP – 10.10.0.2<br>Gateway – 10.10.0.1<br>DNS - 8.8.8.8</p>           |
-| <mark style="color:blue;">VLAN 300 (blau)</mark>    | <p>Red – 172.10.10.0 /16<br>IP - 172.10.10.2<br>Gateway – 172.10.10.1<br>DNS - 8.8.8.8</p>    |
-| <mark style="color:yellow;">VLAN 400 (groc)</mark>  | <p>Red – 192.168.88.0 /24<br>IP - 192.168.88.2<br>Gateway – 192.168.88.1<br>DNS - 8.8.8.8</p> |
+| VLAN                                               | Características                                                                               |
+| -------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| <mark style="color:green;">VLAN 100 (verde)</mark> | <p>Red – 192.168.56.0 /24<br>IP - 192.168.56.2<br>Gateway – 192.168.56.1<br>DNS - 8.8.8.8</p> |
+| <mark style="color:orange;">VLAN 200 (rosa)</mark> | <p>Red – 10.10.0.0 /8<br>IP – 10.10.0.2<br>Gateway – 10.10.0.1<br>DNS - 8.8.8.8</p>           |
+| <mark style="color:blue;">VLAN 300 (blau)</mark>   | <p>Red – 172.10.10.0 /16<br>IP - 172.10.10.2<br>Gateway – 172.10.10.1<br>DNS - 8.8.8.8</p>    |
+| <mark style="color:yellow;">VLAN 400 (groc)</mark> | <p>Red – 192.168.88.0 /24<br>IP - 192.168.88.2<br>Gateway – 192.168.88.1<br>DNS - 8.8.8.8</p> |
 
-Aunque vamos a configurar el servicio de DHCP y DNS en el router yo siempre os propongo que configuremos los parámetros de red de manera manual, o sea, que las IP de cada PC sean estáticas.&#x20;
+Aunque vamos a configurar el servicio de DHCP y DNS en el router yo siempre os propongo que configuremos los parámetros de red de manera manual, o sea, que las IP de cada PC sean estáticas.
 
 Una vez que todo esté configurado correctamente, que tengamos conectividad, haremos la configuración del servicio de DHCP y DNS para cada VLAN. Por tanto, nos disponemos a configurar cada dispositivo.
 
@@ -52,15 +52,15 @@ Lo siguiente sería establecer la cantidad de puertos de acceso para cada VLAN e
 * Los puertos que van del FastEthernet 0/1 al 0/11 corresponden a una vlan
 * Los puertos que van del FastEthernet 0/12 al 0/24 se corresponden a otra vlan
 
-### Paso 2 - Configurar los PC&#x20;
+### Paso 2 - Configurar los PC
 
 Lo primero será configurar las IP de cada PC teniendo en cuenta la VLAN donde estarán.<br>
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configurando los PC</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (141).png" alt=""><figcaption><p>Configurando los PC</p></figcaption></figure>
 
 Este proceso hay que repetirlo en los PC por VLAN.
 
-### &#x20;Paso 2 - Crear las VLAN en cada switch
+### Paso 2 - Crear las VLAN en cada switch
 
 Vamos a crear las vlan en cada switch. Podemos crear sólo aquellas que se conectarán a cada uno, pero igual configuraremos las 4 vlan en cada switch.
 
@@ -101,11 +101,11 @@ Switch#hostname SW-2
 .........................
 ```
 
-### Paso 3 - Declarando el rango de cada VLAN en  los switches
+### Paso 3 - Declarando el rango de cada VLAN en los switches
 
 Establecemos los rangos de puertos que pertenecen a cada switch como dijimos anteriormente. Definimos que:
 
-* del 1 al 11 es la VLAN 300&#x20;
+* del 1 al 11 es la VLAN 300
 * del 12 al 24 la VLAN 400
 
 Declaramos el rango de las interfaces que corresponderá con cada VLAN.
@@ -176,8 +176,6 @@ SW-2(config)#exit
 
 ```
 
-
-
 ### Paso 5- Configurar el router
 
 El router viene apagado por defecto así que nos disponemos a encenderlo. Para ello escribimos en la línea de comandos:
@@ -230,19 +228,19 @@ SW-2#show running-config
 
 Por ejemplo, si vamos al router y hacemos `show running-config` veremos:
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>COnfiguración en el router</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (143).png" alt=""><figcaption><p>COnfiguración en el router</p></figcaption></figure>
 
 Si ponemos el comando `show vlan brief` en el swich SW-1 veremos algo como lo siguiente:
 
-<figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración de VLAN en un switch</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (144).png" alt=""><figcaption><p>Configuración de VLAN en un switch</p></figcaption></figure>
 
 Si escribimos `show interfaces trunk` en el mismo switch, veremos:
 
-<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Configuración del enlace troncal en un switch</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (145).png" alt=""><figcaption><p>Configuración del enlace troncal en un switch</p></figcaption></figure>
 
 Para acabar de comprobar la conexión entre las 4 vlans podemos hacer ping de una a otra. Por ejemplo, la imagen siguiente muestra un ping que se ha hecho desde el PC de la VLAN 300 (blau) al servidor externo que tiene la IP 8.8.8.8.
 
-<figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Haciendo ping al servidor externo a la red que tiene IP 8.8.8.8</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (146).png" alt=""><figcaption><p>Haciendo ping al servidor externo a la red que tiene IP 8.8.8.8</p></figcaption></figure>
 
 El servidor se configura de manera simple:
 
@@ -288,14 +286,12 @@ Router(config)#end
 
 ```
 
-
-
 Si hacemos `show running-config` vemos algo como lo siguiente. Solo tenemos que tener en cuenta que el pantallazo a continuación lo hice con otro ejemplo y por eso el servidor DNS es el 11.11.11.11 y no el 8.8.8.8.
 
-<figure><img src="../../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Pool de DHCP en el Router</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (147).png" alt=""><figcaption><p>Pool de DHCP en el Router</p></figcaption></figure>
 
 Para ir poco a poco con la configuración, lo ideal es ir creando cada pool en el Router y probando que el PC de cada VLAN toma los parámetros de red otorgados por el Router hasta tenerlo todo completado.
 
 ### Conclusiones
 
-Las VLAN  son una tecnología esencial en la administración de las redes empresariales. Recuerda que las mismas permiten segmentar una red física en diferentes redes lógicas, ofreciendo facilidades en la gestión, la seguridad y la eficiencia de la red.
+Las VLAN son una tecnología esencial en la administración de las redes empresariales. Recuerda que las mismas permiten segmentar una red física en diferentes redes lógicas, ofreciendo facilidades en la gestión, la seguridad y la eficiencia de la red.

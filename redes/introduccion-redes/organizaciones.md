@@ -14,8 +14,6 @@ Actualmente es un departamento operado por la ICANN.
 
 {% embed url="https://www.iana.org" %}
 
-
-
 ### ¿Qué es la ICANN?
 
 Una organización que opera a nivel internacional y es la responsable de asignar las direcciones IP, de los identificadores de protocolo, de las funciones de gestión del sistema de dominio y de la administración del sistema de servidores raíz.
@@ -40,9 +38,7 @@ A nivel mundial encontramos 5 Registros Regionales de Internet separados por con
 * **Latin American and Caribbean Internet Address Registry** (LACNIC), para América Latina y el Caribe.
 * **African Network Information Centre** (AfriNIC), para África.
 
-<figure><img src="../../.gitbook/assets/image (358).png" alt=""><figcaption><p>Tomado de la Wikipedia</p></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (819).png" alt=""><figcaption><p>Tomado de la Wikipedia</p></figcaption></figure>
 
 ### ¿Qué es un sistema autónomo?
 
@@ -50,7 +46,7 @@ Se define como “un grupo de redes de direcciones IP que poseen una política d
 
 Los AS:
 
-* se comunican vía routers e intercambian información para tener actualizadas sus tablas de rutas de Internet mediante el protocolo BGP&#x20;
+* se comunican vía routers e intercambian información para tener actualizadas sus tablas de rutas de Internet mediante el protocolo BGP
 * Encaminan el tráfico de una red a la otra.
 * Un AS es como un Internet en pequeño, puesto que su rol es llevado a cabo por una sola entidad, por ejemplo: un ISP o una gran organización con conexiones independientes a múltiples redes, con una y clara política de rutas.
 
@@ -65,13 +61,11 @@ Estos son algunos ejemplos de números AS:
 
 Los números de Sistemas Autónomos son asignados en bloques por la IANA y RIR.
 
-
-
 ### ¿Qué relación existen entre RIR e ICANN?
 
 La ICANN delega los recursos de Internet a los RIR. A su vez los RIR siguen sus políticas regionales para una posterior subdelegación de recursos a sus clientes, que incluyen proveedores de servicios de Internet (ISP) y organizaciones para uso propio.
 
-### &#x20;¿Qué es el RFC?
+### ¿Qué es el RFC?
 
 Los Requests for Comments (RFC):
 
@@ -83,4 +77,3 @@ Los Requests for Comments (RFC):
 * La mayoría de RFC no logra alcanzar el estatus de estándar, aunque se utilizan como tal en todo el mundo.
 * Son ficheros de texto con un nombre y numeración de código específicos que no se repiten, aunque queden obsoletos, porque se van incrementando.
 * Cualquier persona puede escribir una RFC y enviarla al coordinador del IETF.
-

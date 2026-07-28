@@ -4,21 +4,21 @@ description: Los servicios de AD DS, DNS y DHCP
 
 # DNS - Windows Server 2016
 
-A la hora de instalar el servicio de DNS en un Windows 2016 en una MV lo primero que hago es  configurar dos adaptadores. Con uno nos conectaremos a Internet, el otro lo configuraremos con una IP estática, dado que  lo más recomendable en un servidor, independientemente de los roles que instalemos, es que éste cuente con una dirección IP fija. Por tanto,
+A la hora de instalar el servicio de DNS en un Windows 2016 en una MV lo primero que hago es configurar dos adaptadores. Con uno nos conectaremos a Internet, el otro lo configuraremos con una IP estática, dado que lo más recomendable en un servidor, independientemente de los roles que instalemos, es que éste cuente con una dirección IP fija. Por tanto,
 
 1. **Adaptador NAT**: para tener conexión a Internet. La IP que le otorga el DHCP a la MV será la 10.0.2.15 (si seleccionamos el primer adaptador). Por comodidad la llamaré WAN.
 2. **Red interna**: para configurar una IP estática en el servidor. Seleccionamos un IP de red como por ejemplo: 192.168.55.5. Por comodidad la llamaré LAN.
 
-<figure><img src="../../.gitbook/assets/image (144).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (490).png" alt=""><figcaption></figcaption></figure>
 
 Dos cuestiones adicionales:
 
-* Antes de instalar el DNS he instalado el Active Directory (AD DS)&#x20;
-* Llamaré haven.local mi dominio de pruebas para este servidor.&#x20;
+* Antes de instalar el DNS he instalado el Active Directory (AD DS)
+* Llamaré haven.local mi dominio de pruebas para este servidor.
 
-<figure><img src="../../.gitbook/assets/image (109).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (618).png" alt=""><figcaption></figcaption></figure>
 
-Un detalle a tener en consideración es que nombré la VM como haven y el dominio también es haven.local, esto implica que el FQDN del Windows Server sería: haven.haven.local.&#x20;
+Un detalle a tener en consideración es que nombré la VM como haven y el dominio también es haven.local, esto implica que el FQDN del Windows Server sería: haven.haven.local.
 
 Lo correcto hubiera sido nombrarlo como NS o NS1, de nameserver o DNS principal del dominio y entonces el FQDN sería: ns1.haven.local.
 
@@ -40,14 +40,14 @@ Para instalar nos dirigimos a:
 
 ### Configurando el servicio de DNS
 
-Tenemos que instalar la zona directa e inversa del DNS. Para ello, vamos a Herramientas - DNS&#x20;
+Tenemos que instalar la zona directa e inversa del DNS. Para ello, vamos a Herramientas - DNS
 
-Cuando promovemos nuestro servidor a controlador de dominio se crean las respectivas zonas directas. Pero podemos crear una nueva zona para extender las gestiones de nuestro servidor. Para ello, hacemos clic derecho sobre el nombre de la zona y seleccionar la opción Zona nueva o puedes ir al menú  Acción - Zona nueva.
+Cuando promovemos nuestro servidor a controlador de dominio se crean las respectivas zonas directas. Pero podemos crear una nueva zona para extender las gestiones de nuestro servidor. Para ello, hacemos clic derecho sobre el nombre de la zona y seleccionar la opción Zona nueva o puedes ir al menú Acción - Zona nueva.
 
 Recuerda que:
 
 * La zona directa resuelve los nombres de dominio a direcciones IP.
-* La zona inversa  a partir de las  direcciones IP encuentra los nombres de dominio.&#x20;
+* La zona inversa a partir de las direcciones IP encuentra los nombres de dominio.
 
 En definitiva, para crear nuestro archivo de zona directa, vamos a seguir las pautas del asistente, para lo cual nos pedirá definir:
 
@@ -57,27 +57,22 @@ En definitiva, para crear nuestro archivo de zona directa, vamos a seguir las pa
 * Tipo de actualizaciones: seleccionamos la opción de "permitir solo actualizaciones dinámicas seguras (recomendado para Active Directory). Opción solo disponible para zonas integradas en el Active Directory.
 * Finalmente veremos un resumen de la zona creada.
 
-Hemos creado la nueva zona del servidor DNS y podemos agregar hosts, registros, alias, MX, etc.&#x20;
+Hemos creado la nueva zona del servidor DNS y podemos agregar hosts, registros, alias, MX, etc.
 
 De la misma forma que hemos creado el archivo de zona directa podemos establecer una nueva zona inversa para aumentar la capacidad de nuestro DNS en Windows Server 2016.
 
 Deberíamos obtener algo así:
 
-<figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (678).png" alt=""><figcaption></figcaption></figure>
 
-Ahora es momento de crear  un reenviador condicional para que tenga la propiedad de realizar consultas a otros servidores DNS fuera del dominio. Para ello vamos a clicar en <mark style="color:blue;">`Reenviadores condicionales`</mark> y seleccionar la opción `Nuevo reenviador condicional.` Seguimos las pautas del asistente y podemos usar el DNS público de Google,  8.8.8.8.&#x20;
+Ahora es momento de crear un reenviador condicional para que tenga la propiedad de realizar consultas a otros servidores DNS fuera del dominio. Para ello vamos a clicar en <mark style="color:blue;">`Reenviadores condicionales`</mark> y seleccionar la opción `Nuevo reenviador condicional.` Seguimos las pautas del asistente y podemos usar el DNS público de Google, 8.8.8.8.
 
 En la imagen a continuación, se muestra además del servidor de Google, la IP 192.168.1.1 correspondiente al LivexPlus, o sea, el router que hace de servidor de DHCP y DNS.
 
-<figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (656).png" alt=""><figcaption></figcaption></figure>
 
 Una manera de asegurarnos del buen funcionamiento del servicio DNS es utilizar el comando NSLOOKUP y debería mostrarse como sigue:
 
-<figure><img src="../../.gitbook/assets/image (183).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (540).png" alt=""><figcaption></figcaption></figure>
 
 Para los dispositivos del dominio la respuesta que brinda el servidor DNS es autoritativa y para las consultas externas es no autoritativo.
-
-
-

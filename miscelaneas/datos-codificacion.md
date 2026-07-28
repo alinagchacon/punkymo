@@ -30,7 +30,7 @@ Se han diseñado distintos tipos de secuencias de patrones para poder representa
 
 ## ASCII
 
-Es el estándar para la representación de caracteres en cualquier dispositivo electrónico. Código de caracteres basado en el alfabeto latino. Creado en 1963 por ANSI como una evolución de los códigos utilizados en telegrafía. En 1967 se publicó En 1986 tuvo la última actualización Utiliza 7 bits para representar los caracteres. Casi todos los sistemas informáticos actuales usan el ASCII o una extensión compatible.&#x20;
+Es el estándar para la representación de caracteres en cualquier dispositivo electrónico. Código de caracteres basado en el alfabeto latino. Creado en 1963 por ANSI como una evolución de los códigos utilizados en telegrafía. En 1967 se publicó En 1986 tuvo la última actualización Utiliza 7 bits para representar los caracteres. Casi todos los sistemas informáticos actuales usan el ASCII o una extensión compatible.
 
 {% embed url="https://ascii.cl/es/" %}
 
@@ -38,24 +38,24 @@ Es el estándar para la representación de caracteres en cualquier dispositivo e
 
 Para hacer que el tamaño de cada patrón sea de 1 byte (8 bits), a los patrones de bits ASCII se les aumenta un cero más a la izquierda. Cada patrón cabe fácilmente en un byte de memoria.
 
-Los caracteres ASCII van:&#x20;
+Los caracteres ASCII van:
 
-* De 0 a 127 en decimal De la “A – Z” (del 65 al 90)&#x20;
+* De 0 a 127 en decimal De la “A – Z” (del 65 al 90)
 * De la “a – z” (del 97 al 122)
 
-Algunas representaciones de caracteres:&#x20;
+Algunas representaciones de caracteres:
 
-* Alt + 32 - espacio&#x20;
-* Alt + 64 - arroba desde el teclado alfanumérico&#x20;
-* Alt + 10 – cambio de línea&#x20;
+* Alt + 32 - espacio
+* Alt + 64 - arroba desde el teclado alfanumérico
+* Alt + 10 – cambio de línea
 * Alt + 27 - escape
 
-Muchos de los caracteres de control se usaban para controlar protocolos de transmisión de datos, como ocurre en comunicación:&#x20;
+Muchos de los caracteres de control se usaban para controlar protocolos de transmisión de datos, como ocurre en comunicación:
 
-* <mark style="color:red;">**ACK**</mark>**nowledge**: acuse de recibo -  mensaje que el destino envía al origen para confirmar la recepción de un mensaje.&#x20;
-* Se definen también diferentes ACK con información más compleja como peticiones de reenvío de determinadas tramas o información sobre incidencias entre otros.&#x20;
+* <mark style="color:red;">**ACK**</mark>**nowledge**: acuse de recibo - mensaje que el destino envía al origen para confirmar la recepción de un mensaje.
+* Se definen también diferentes ACK con información más compleja como peticiones de reenvío de determinadas tramas o información sobre incidencias entre otros.
 * Los mensajes ACK se utilizan en la mayoría de las capas del OSI pero son esenciales en la capa 2 y 3.
-* <mark style="color:red;">**NACK**</mark> (negative acknowledgement o acuse de recibo negativo – se envía para informar que en la recepción de una trama de datos ha habido un error.  Es el contrario de  ACK.&#x20;
+* <mark style="color:red;">**NACK**</mark> (negative acknowledgement o acuse de recibo negativo – se envía para informar que en la recepción de una trama de datos ha habido un error. Es el contrario de ACK.
 * <mark style="color:red;">**SYN**</mark> – sincronía en espera dado que no hay bits de start, stop o paridad presentes en los sistemas de comunicación en serie síncronos, hubo que establecer una serie de caracteres para el reconocimiento de los caracteres a sincronizar en el envío de información.
 
 ## Unicode
@@ -70,39 +70,37 @@ Por la necesidad de disponer de un código con mayores capacidades. Se creó una
 
 La ISO diseñó un código que utiliza patrones de 32 bits.
 
-**ISO 8859-1.** Es una norma de la ISO que define la codificación del alfabeto latino. Incluye letras acentuadas, ñ, ç) y especiales como ß, Ø) que son necesarios para la escritura de idiomas europeos como: alemán, español, catalán, euskera, francés,  inglés, islandés, italiano,  neerlandés, noruego, portugués, etc.
-
-
+**ISO 8859-1.** Es una norma de la ISO que define la codificación del alfabeto latino. Incluye letras acentuadas, ñ, ç) y especiales como ß, Ø) que son necesarios para la escritura de idiomas europeos como: alemán, español, catalán, euskera, francés, inglés, islandés, italiano, neerlandés, noruego, portugués, etc.
 
 ## UTF8
 
-* Diseñado en 1992&#x20;
-* Formato de codificación de caracteres Unicode e ISO 10646 de longitud variable.&#x20;
-* Es una de las 3 posibilidades de codificación reconocidas por Unicode y Web.&#x20;
-* Es capaz de representar todos los caracteres Unicode.&#x20;
-* Representa cualquier mensaje ASCII sin cambios: compatible con versiones anteriores del ASCII.&#x20;
+* Diseñado en 1992
+* Formato de codificación de caracteres Unicode e ISO 10646 de longitud variable.
+* Es una de las 3 posibilidades de codificación reconocidas por Unicode y Web.
+* Es capaz de representar todos los caracteres Unicode.
+* Representa cualquier mensaje ASCII sin cambios: compatible con versiones anteriores del ASCII.
 * Ahorra espacio de almacenamiento para textos en caracteres latinos.
 
 ## Representación de imágenes
 
-Se representan de dos maneras:&#x20;
+Se representan de dos maneras:
 
 * Gráfico de mapas de bits
 * Gráfico de vectores
 
 ### Mapa de bits
 
-Una imagen se divide en una matriz de pixeles.&#x20;
+Una imagen se divide en una matriz de pixeles.
 
 A cada pixel se le asigna un patrón de bits. El tamaño y el valor del patrón depende de la imagen, para una imagen formada solo por puntos blancos y negros, un patrón de un bit es suficiente para representar un pixel.
 
-<figure><img src="../.gitbook/assets/image (339).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (800).png" alt="" width="375"><figcaption></figcaption></figure>
 
-Para representar imágenes a color, cada pixel de color se descompone en tres colores primarios: <mark style="color:red;">rojo</mark>, <mark style="color:green;">verde</mark>, <mark style="color:blue;">azul</mark> (RGB).&#x20;
+Para representar imágenes a color, cada pixel de color se descompone en tres colores primarios: <mark style="color:red;">rojo</mark>, <mark style="color:green;">verde</mark>, <mark style="color:blue;">azul</mark> (RGB).
 
-Cada pixel tiene tres patrones de bits:&#x20;
+Cada pixel tiene tres patrones de bits:
 
-* uno para representar la intensidad del color rojo,&#x20;
+* uno para representar la intensidad del color rojo,
 * otro para la intensidad del color verde
 * el tercero para la intensidad del color azul
 
@@ -112,13 +110,13 @@ No guarda los patrones de bits. La imagen se descompone en una combinación de c
 
 ## BASE 64
 
-Es un sistema de numeración posicional de base 64. Es la mayor potencia que podemos representar usando solo los caracteres ASCII. Se usa en codificaciones de E-mail y PGP entre otras aplicaciones.  Por tanto, es un método de codificación que convierte datos binarios en una representación de texto ASCII utilizando un conjunto de 64 caracteres.
+Es un sistema de numeración posicional de base 64. Es la mayor potencia que podemos representar usando solo los caracteres ASCII. Se usa en codificaciones de E-mail y PGP entre otras aplicaciones. Por tanto, es un método de codificación que convierte datos binarios en una representación de texto ASCII utilizando un conjunto de 64 caracteres.
 
 El alfabeto consta de 64 caracteres \[A-Z]\[a-z]\[0-9] y los símbolos / y +
 
 Esto es: <mark style="color:red;">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</mark>
 
-&#x20;Su funcionamiento es como sigue:
+Su funcionamiento es como sigue:
 
 1. Los datos binarios se dividen en bloques de 3 bytes, o sea 24 bits. Si al final quedan menos de 3 bytes para codificar, se agregan bytes nulos para formar un bloque completo.
 2. Cada bloque de 3 bytes se convierte en un número entero de 24 bits, que es equivalente a 3 bytes en binario.
@@ -139,8 +137,8 @@ Vamos a ver como se transforma la palabra `Hi!` codificada en Base64:
    * i -> 01101001
    * ! -> 00100001
 3. Combinar estos bits en un solo bloque de 24 bits:\
-   &#x20;`01001000 01101001 00100001`
-4. Dividir este bloque en 4 bloques de 6 bits: \
+   `01001000 01101001 00100001`
+4. Dividir este bloque en 4 bloques de 6 bits:\
    `010010` `000110` `100100` `100001`
 5. Convertir cada bloque de 6 bits a sus valores decimales:
    * `010010` -> 18
@@ -155,39 +153,39 @@ Vamos a ver como se transforma la palabra `Hi!` codificada en Base64:
 
 Por lo tanto, la palabra `Hi!` en Base64 representa como `SGk=`.
 
-Para realizar la decodificación de Base64 simplemente realizamos el proceso inverso:&#x20;
+Para realizar la decodificación de Base64 simplemente realizamos el proceso inverso:
 
-* tomamos la cadena en Base64,&#x20;
-* convertimos  cada carácter a su valor numérico de 6 bits,&#x20;
-* combinamos estos valores para formar bloques de 24 bits, y&#x20;
+* tomamos la cadena en Base64,
+* convertimos cada carácter a su valor numérico de 6 bits,
+* combinamos estos valores para formar bloques de 24 bits, y
 * convertimos estos bloques de bits de vuelta a los datos binarios originales.
 
 ### **Ejemplo (2)**
 
 Pensemos en este otro ejemplo. La palabra `Man`.
 
-<figure><img src="../.gitbook/assets/image (340).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (801).png" alt=""><figcaption></figcaption></figure>
 
-### **Ejemplo (3)**&#x20;
+### **Ejemplo (3)**
 
-Tomemos la palabra `Bola`&#x20;
+Tomemos la palabra `Bola`
 
-* Buscamos el binario de cada letra en ASCII&#x20;
+* Buscamos el binario de cada letra en ASCII
 
-<figure><img src="../.gitbook/assets/image (341).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (802).png" alt=""><figcaption></figcaption></figure>
 
-* Dividimos en grupos de 6 y rellenamos con ceros a la derecha (4 en este caso)&#x20;
+* Dividimos en grupos de 6 y rellenamos con ceros a la derecha (4 en este caso)
 
-<figure><img src="../.gitbook/assets/image (342).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (803).png" alt=""><figcaption></figcaption></figure>
 
-* Ahora tenemos que convertir de 6 bits a 8 bits, para lo cual agregamos 2 ceros (00) a la izquierda:&#x20;
+* Ahora tenemos que convertir de 6 bits a 8 bits, para lo cual agregamos 2 ceros (00) a la izquierda:
 
-<figure><img src="../.gitbook/assets/image (343).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (804).png" alt=""><figcaption></figcaption></figure>
 
-* Buscamos los binarios correspondientes y tomamos nota de su número decimal:  `16 - 36 - 61 - 12 - 16 - 16`
+* Buscamos los binarios correspondientes y tomamos nota de su número decimal: `16 - 36 - 61 - 12 - 16 - 16`
 * Por último, buscamos la referencia decimal en la tabla Base64:
 
-<figure><img src="../.gitbook/assets/image (345).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (806).png" alt=""><figcaption></figcaption></figure>
 
 A continuación te dejo algunos casos comunes en los que utilizar Base64:
 
@@ -201,21 +199,20 @@ Base64 convierte datos binarios en un formato de texto legible y seguro, pero co
 
 ## HEX
 
-Es un sistema de numeración posicional basado en 16 dígitos del 0 al 9 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) las letras de la A a la F (A, B, C, D, E, F).&#x20;
+Es un sistema de numeración posicional basado en 16 dígitos del 0 al 9 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) las letras de la A a la F (A, B, C, D, E, F).
 
-* Se utiliza para registrar valores numéricos en los registros de memoria.&#x20;
-* Ocupa menor cantidad de dígitos a la hora de almacenar datos y valores numéricos muy grandes.&#x20;
-* Cada dígito hexadecimal se representa con 4 dígitos binarios.&#x20;
+* Se utiliza para registrar valores numéricos en los registros de memoria.
+* Ocupa menor cantidad de dígitos a la hora de almacenar datos y valores numéricos muy grandes.
+* Cada dígito hexadecimal se representa con 4 dígitos binarios.
 * Facilita la conversión y almacenamiento de números en los dispositivos electrónicos, memorias y equipos.
 * Es una notación más compacta y utiliza menos dígitos que el sistema binario.
 
-<figure><img src="../.gitbook/assets/image (346).png" alt=""><figcaption><p>Representación en HEX</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (807).png" alt=""><figcaption><p>Representación en HEX</p></figcaption></figure>
 
 ##
 
 ## Links
 
-* https://programmerclick.com/article/9056135008/ &#x20;
-* https://marquesfernandes.com/es/tecnologia-es/que-y-base64-para-que-serve-y-como-funciona/ https://gchq.github.io/CyberChef/#recipe=To\_Base64('A-Za-z0-9%2B/%3D')\&input=Qm9sYQ  &#x20;
-* https://gchq.github.io/CyberChef/#recipe=To\_Base64('A-Za-z0-9%2B/%3D')\&input=TWFu&#x20;
-
+* https://programmerclick.com/article/9056135008/
+* https://marquesfernandes.com/es/tecnologia-es/que-y-base64-para-que-serve-y-como-funciona/ https://gchq.github.io/CyberChef/#recipe=To\_Base64('A-Za-z0-9%2B/%3D')\&input=Qm9sYQ
+* https://gchq.github.io/CyberChef/#recipe=To\_Base64('A-Za-z0-9%2B/%3D')\&input=TWFu

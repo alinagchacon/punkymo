@@ -35,7 +35,7 @@ Si un router tiene las siguientes entradas en su tabla:
 
 \- 18.0.0.0/8,
 
-\- 18.64.0.0/16 y&#x20;
+\- 18.64.0.0/16 y
 
 \- 18.64.159.0/24
 
@@ -53,7 +53,7 @@ Los enlaces WAN solo necesitan dos direcciones.
 
 Por tanto, la máscara de subred de longitud variable (VLSM) o subdivisión de subredes, permite un uso más eficiente de las direcciones.
 
-<figure><img src="../../../.gitbook/assets/image (364).png" alt=""><figcaption><p>Tomado de ...</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (825).png" alt=""><figcaption><p>Tomado de ...</p></figcaption></figure>
 
 Por tanto:
 

@@ -12,24 +12,24 @@ Para la instalación, lo más recomendable es instalarla de forma física ya sea
 
 Para ello no sirve cualquier sistema de virtualización ya que debe aceptar la virtualización anidada. En VirtualBox también podemos instalar Proxmox pero se hace necesario corregir ciertos fallos para poder ejecutar las máquinas virtuales y es por eso que la mejor opción para la instalación es VMWare. Esta aplicación es muy parecida a VirtualBox pero al ser de pago tiene mejores herramientas y se configura mejor.
 
-En el momento que escribí estos apuntes  VMWare era de pago pero con la opción gratuita para uso no comercial que es la que usaremos. Esto es, <mark style="color:blue;">`VMWare Player`</mark>. Actualmente, VMWare se ha liberado con lo cual es una buena oportunidad para conocer y testear este hipervisor.&#x20;
+En el momento que escribí estos apuntes VMWare era de pago pero con la opción gratuita para uso no comercial que es la que usaremos. Esto es, <mark style="color:blue;">`VMWare Player`</mark>. Actualmente, VMWare se ha liberado con lo cual es una buena oportunidad para conocer y testear este hipervisor.
 
-#### VMWare&#x20;
+#### VMWare
 
 Para hacer la prueba, utilizaremos los tres archivos a continuación:
 
 <figure><img src="https://lh3.googleusercontent.com/FVoF2jjLQsn395c7DkjQ6WXw6t_8om5xNAOifJMUVkCRU8ty9E3YOy2giIhNWoTQx7fHMb-K-KqcCxxU6rrDpEDSTY_cA8xUm5Lha0OWkUrhdsGXBaIGZsbc_lOv1ioGNGjU6h6lnjFIBeSWWsc1hCI3UKFDLzV8XPt-BKVhZStPj-wTd5mYkQ8A" alt=""><figcaption></figcaption></figure>
 
-Esto es:&#x20;
+Esto es:
 
-* El programa [VMware Player](https://www.vmware.com/es/products/workstation-player.html) para crear la máquina virtual,&#x20;
-* La iso de P[roxmox ](https://www.proxmox.com/en/downloads/category/iso-images-pve)
-* La iso de cualquier sistema operativo que queramos.&#x20;
+* El programa [VMware Player](https://www.vmware.com/es/products/workstation-player.html) para crear la máquina virtual,
+* La iso de P[roxmox](https://www.proxmox.com/en/downloads/category/iso-images-pve)
+* La iso de cualquier sistema operativo que queramos.
 * Plantilla Contenedor (LXC) Ubuntu 20.04
 
-En nuestro caso usaremos [Debian ](https://www.debian.org/distrib/index.es.html)porque es un sistema que pesa muy poco y es muy fácil de instalar. Antes de instalar VMWare hay que tener en cuenta que si tenemos Hyper V o Subsistema de Windows está habilitado VMWare no podrá iniciar ya que no es compatible con el tipo de virtualización que usa tanto Hyper V como el subsistema de Windows. (El subsistema de Windows se usa para instalar el kernel de Linux junto a windows para poder tener la típica aplicación de terminal de ubuntu o otro sistema Linux.)&#x20;
+En nuestro caso usaremos [Debian ](https://www.debian.org/distrib/index.es.html)porque es un sistema que pesa muy poco y es muy fácil de instalar. Antes de instalar VMWare hay que tener en cuenta que si tenemos Hyper V o Subsistema de Windows está habilitado VMWare no podrá iniciar ya que no es compatible con el tipo de virtualización que usa tanto Hyper V como el subsistema de Windows. (El subsistema de Windows se usa para instalar el kernel de Linux junto a windows para poder tener la típica aplicación de terminal de ubuntu o otro sistema Linux.)
 
-#### Paso 1:&#x20;
+#### Paso 1:
 
 Instalamos VMware Player y una vez hecho nos saldrá una ventana como la que se muestra a continuación:
 
@@ -55,11 +55,11 @@ Ahora se nos muestra el resto de configuraciones que ha creado por defecto VMwar
 
 <figure><img src="https://lh3.googleusercontent.com/oWGRaF_wR8_9pKTe1Ir0Ls5P0SH7wYPfQT6ZTExWIKSYLWGi9QxcvXe2se2Rj3UHEP1yiwsgpUn1i9kbTj04HPak4xO81a3SQsGvyuSsC6D0wMmKwzubKQKi0QIMZB7H45KH74gQOrAH_6fWIPKUunL1LWxoOn6aBZy24r2roWI1RXB0_X47QlPv" alt=""><figcaption></figcaption></figure>
 
-<mark style="color:red;">Al crear la VM me dió error y tuve que desmarcar la opción de</mark> <mark style="color:red;"></mark><mark style="color:red;">**Virtualize CPU performance counters**</mark>.
+<mark style="color:red;">Al crear la VM me dió error y tuve que desmarcar la opción de</mark> <mark style="color:red;">**Virtualize CPU performance counters**</mark>.
 
-<figure><img src="../../.gitbook/assets/image (12) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (407).png" alt=""><figcaption></figcaption></figure>
 
-Aquí tendremos que cambiar la cantidad de RAM que se le proporcionará a la máquina: lo recomendable como mínimo es entre 4 y 6 GB. Una vez ya seleccionada la RAM vamos al apartado más importante: al del procesador como se muestra en la imagen anterior. Hay que tener en cuenta que el procesador del que disponemos para dar más o menos “cores” si tenemos un procesador con 4 núcleos y 8 hilos le podemos dar entre 3 y 4 cores. Pero si tenemos un procesador mejor con 8 núcleos y 16 hilos le podemos dar 8 cores.&#x20;
+Aquí tendremos que cambiar la cantidad de RAM que se le proporcionará a la máquina: lo recomendable como mínimo es entre 4 y 6 GB. Una vez ya seleccionada la RAM vamos al apartado más importante: al del procesador como se muestra en la imagen anterior. Hay que tener en cuenta que el procesador del que disponemos para dar más o menos “cores” si tenemos un procesador con 4 núcleos y 8 hilos le podemos dar entre 3 y 4 cores. Pero si tenemos un procesador mejor con 8 núcleos y 16 hilos le podemos dar 8 cores.
 
 Cuando ya tenemos seleccionado la cantidad de cores hay que activar las tres opciones que se muestran en pantalla para activar la virtualización porque de lo contrario no podremos instalar el sistema operativo.
 
@@ -67,9 +67,9 @@ Cuando ya tenemos seleccionado la cantidad de cores hay que activar las tres opc
 
 Con esto ya tendríamos toda la máquina configurada y ahora nos tocará iniciarla e instalar el sistema operativo. Para hacer la prueba el adaptador de red lo mejor es ponerlo en red interna.
 
-Iniciamos la máquina dando al botón que se muestra en la pantalla.&#x20;
+Iniciamos la máquina dando al botón que se muestra en la pantalla.
 
-#### Instalación&#x20;
+#### Instalación
 
 Lo primero que aparece al iniciar la máquina es la pantalla donde podemos escoger si instalar PROXMOX y hacemos un test memory.
 
@@ -89,7 +89,7 @@ Una vez hecho nos pedirá la contraseña que queremos poner para el sistema oper
 
 <figure><img src="https://lh4.googleusercontent.com/KKgtAg8IwYaynWlkcTqOEsyvyPwDHR16_6qDXog3KWmZUF6Ncc5VxlZD7nkikRZIgQ_qgLkXHqglNFZ3bkSNDUJy_Ageyp6_v1OOdl3IqWyxkO0_rEkqQfcpg9GTH-RjgSExBhqPsAx2zDc2CfhPVG1UMr-u0Y71DevDF_o0qgj9gb9WloV77NEr" alt=""><figcaption></figcaption></figure>
 
-### Configuración de red&#x20;
+### Configuración de red
 
 Ahora entramos en la configuración de red que es el apartado más importante de la instalación. En este caso, si ponemos mal el rango de red o la puerta de enlace la interfaz web no funcionará o el sistema no tendrá acceso a internet. También hay que tener en cuenta que si hay más de un adaptador de red hay que escoger el que tenga acceso a internet porque sino no funcionará. Si estamos instalando en nuestra red basta con usar un rango que, con el DHCP, será suficiente. Pero como en nuestro caso la prueba la estamos realizando en el centro hemos tenido que hacer un escaneo de la red para poder ver qué rangos no estaban en uso y configurar la puerta de enlace en el rango de DHCP para poder tener internet.
 
@@ -113,7 +113,7 @@ El usuario administrador por defecto es “root” y la contraseña es la que he
 
 <figure><img src="https://lh5.googleusercontent.com/mK55yTpA9fPMThWpkjhdXtAmvgznkRlIUxrN5YgXgOqSi0wXmVgvIMVCUbXp59ZZn94PChBOxywChQKbrdEcBP0zY8Mxxe5k-vXv_6JHEwV8SB_AOwwwwizy9YAJHD5_1O-uoXzfz5VNf6bfKYKzXEfNCr4Uip-1EhV_wsxwaDAL1ZEqu5wILYlD" alt=""><figcaption></figcaption></figure>
 
-### Interfaz web&#x20;
+### Interfaz web
 
 Cuando ya hemos iniciado sesión nos mostrará la pantalla principal de la interfaz donde se pueden configurar los aspectos generales del sistema y poder ver el estado del hardware y su uso, configurar permisos de usuarios y grupos, configurar las copias de seguridad o incluso añadir nuestro sistema a un cluster. Como se muestra en la pantalla lo primero que se ve es el nodo (nuestro servidor) que se llama “pve” y que tiene dos particiones llamadas local (pve) y local-lvm (pve).
 
@@ -145,9 +145,9 @@ Cuando entramos en “Plantillas” nos sale la lista de plantillas que están e
 
 <figure><img src="https://lh6.googleusercontent.com/TTvz9ZDl7W3lqeLtmBtrPpVxnziMkDDFxD4DH0Ye2yUwm3VEEt_oHVdyeewz7pxLltP913ySc4EiTVLZr9jJTHMnIyHU_mzvnhCLnwGjViZn-djcgNMjHlkfEHoDGd--5Y_Rn0rHWpwfvTMjnzfrckDeirWZc3l0aBou-tclMZG-q9nb2xAn7Dbm" alt=""><figcaption></figcaption></figure>
 
-Si al descargar cualquier plantilla nos diera error podemos descargar la plantilla manualmente en la página [http://download.proxmox.com/images/system/](http://download.proxmox.com/images/system/)&#x20;
+Si al descargar cualquier plantilla nos diera error podemos descargar la plantilla manualmente en la página [http://download.proxmox.com/images/system/](http://download.proxmox.com/images/system/)
 
-<figure><img src="https://lh3.googleusercontent.com/h6gaZ5VypTE4L2h1FxdUiJJ8WVAYhactCn7g2udnipLn46xClX-I8qnu0piexCv68dKqUwf3BR1DP6IWqNK5sua3Zn-jTXIoY9mz5pov7Mqj7JdsEs5cgtQkhLgGJa43GnElBYOvj7OR6_WNgsunFBgFO-oo-xsuAugfNGdv2yWrcJAjQPsymfEM" alt=""><figcaption><p>Plantillas </p></figcaption></figure>
+<figure><img src="https://lh3.googleusercontent.com/h6gaZ5VypTE4L2h1FxdUiJJ8WVAYhactCn7g2udnipLn46xClX-I8qnu0piexCv68dKqUwf3BR1DP6IWqNK5sua3Zn-jTXIoY9mz5pov7Mqj7JdsEs5cgtQkhLgGJa43GnElBYOvj7OR6_WNgsunFBgFO-oo-xsuAugfNGdv2yWrcJAjQPsymfEM" alt=""><figcaption><p>Plantillas</p></figcaption></figure>
 
 \
 Cuando la descargamos o si quisiéramos subir una plantilla que tengamos, la podemos subir de la misma forma que hemos subido la iso en el apartado “CT Templates” y poner “Cargar”, nos saldrá una ventana muy parecida a la de subir la iso pero para poder subir la plantilla de contenedor como se muestra en la imagen siguiente.
@@ -172,23 +172,23 @@ Ahora en el apartado “SO” tenemos que especificar de qué forma en la que qu
 
 Una vez seleccionado la iso vamos al apartado “Sistema” donde nos preguntara qué tarjeta gráfica usaremos y el controlador SCSI. En esta parte lo mejor es dejarlo por defecto.
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (642).png" alt=""><figcaption></figcaption></figure>
 
 Ahora configurar el tamaño de disco, donde se almacenará la máquina y el bus del dispositivo. Para el tamaño del disco con 8 GB para debian es más que suficiente. Si fuera un sistema windows por lo menos sería necesario 32Gb de almacenamiento. En cuanto al bus del dispositivo y la caché se recomienda dejarlo como esta.
 
 <figure><img src="https://lh5.googleusercontent.com/fgEzFv1o94_q_nz3gXzSsdUoB4-LZJW4fGrlVU6RBud1ZNv29JCwzEHwlPKRM9VmGzzvrU2zzJYk4jxJfgLjUaf7zzKkZLL5d76yN0RVS7NLUHSujdBnJzrcmsLETLIvljNDJ7ICF9bGTeHzhdL7O5UiDyoYjsOQu0UXWm1dN0N0fdlHJeBLnv6q" alt=""><figcaption></figcaption></figure>
 
-Nos dirigimos al apartado de la CPU donde tendremos que especificar la cantidad de núcleos. Para una VM con dos núcleos es suficiente aunque si disponemos de un procesador con muchos núcleos es recomendable tener 4 núcleos como mínimo para sistemas Windows.&#x20;
+Nos dirigimos al apartado de la CPU donde tendremos que especificar la cantidad de núcleos. Para una VM con dos núcleos es suficiente aunque si disponemos de un procesador con muchos núcleos es recomendable tener 4 núcleos como mínimo para sistemas Windows.
 
-<figure><img src="../../.gitbook/assets/image (40) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (469).png" alt=""><figcaption></figcaption></figure>
 
 Una vez definido la cantidad de núcleos que tendrá la VM, hay que poner la cantidad de RAM (En el caso de un Linux en este caso Debian) 2GB de RAMes suficiente aunque se puede poner más. Es recomendable que en sistemas Windows el mínimo sea 4GB
 
-<figure><img src="../../.gitbook/assets/image (43) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (528).png" alt=""><figcaption></figcaption></figure>
 
 En el apartado de red hay que configurar qué adaptador usará la máquina (red NAT, adaptador puente o red interna).
 
-<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (504).png" alt=""><figcaption></figcaption></figure>
 
 Una vez con esto llegaremos al último apartado de la configuración de la MV en la cual sale un resumen de todos los ajustes anteriores para comprobar si son correctos antes de crear la máquina.
 
@@ -196,7 +196,7 @@ Una vez con esto llegaremos al último apartado de la configuración de la MV en
 
 Cuando ya está creada, como podemos ver en la imagen siguiente, la máquina aparecerá en la lista de dispositivos en nuestro servidor (pve) donde aparecerán todas las máquinas y contenedores que se han creado en el servidor. Para iniciar la máquina nos dirigimos a dicha MV/LXC y como se muestra en pantalla le damos al botón de iniciar.
 
-![](https://lh6.googleusercontent.com/BaEHBWVGxsY8yQzoPdX-vHHBzR0m59pdT3ugJAnK18VPQisXsL34sSf4jCilqHzj-KXbLFrSRtZs5MX6DyxP\_DNsQakhqZpzptpoqU18FRrz6m6N8bMfX9eFdLbeZRpCHuYxB58UVo4Frz8ni-MYfy9V39Fu6YLEQ77mHDKkdkzDg3CNENnH0ryg)
+![](https://lh6.googleusercontent.com/BaEHBWVGxsY8yQzoPdX-vHHBzR0m59pdT3ugJAnK18VPQisXsL34sSf4jCilqHzj-KXbLFrSRtZs5MX6DyxP_DNsQakhqZpzptpoqU18FRrz6m6N8bMfX9eFdLbeZRpCHuYxB58UVo4Frz8ni-MYfy9V39Fu6YLEQ77mHDKkdkzDg3CNENnH0ryg)
 
 Cuando tenemos iniciada la máquina virtual, tendremos que acceder a ella, hay muchas formas de acceder a la máquina virtual ahora haremos de la forma más sencilla (por VNC) que simplemente hay que ir como se muestra en la siguiente imagen a consola.
 
@@ -206,9 +206,9 @@ Ahora solo habría que instalar el sistema operativo de la máquina virtual y ya
 
 <figure><img src="https://lh3.googleusercontent.com/tTG_p9GI81xT8ID_PF22xEyC7LW5aF1wm8euLbSgpSSJhvaQxz6B23vfBIIZxQTfJnkqDDg8qTaMdKPRGHMH2sLqJk71F5fIBU1A8IfH5Lm0D2JMLHSd_GAQvIO0BpH4m6Awiu7AK-DKqXmRcbKcTq5KglvzKMh5_xiXBW13E0oJsHyQlY1unaCb" alt=""><figcaption></figcaption></figure>
 
-De la misma forma que hemos creado esta VM con Debian, se puede crear con cualquier sistema operativo. También hay que tener en cuenta que si disponemos de un servidor con dos gráficas y queremos que un VM disponga de la totalidad de la gráfica ya sea porque queremos tener una máquina virtual para jugar o tener un servidor de streaming, siempre se puede configurar en el apartado de “Sistema”.&#x20;
+De la misma forma que hemos creado esta VM con Debian, se puede crear con cualquier sistema operativo. También hay que tener en cuenta que si disponemos de un servidor con dos gráficas y queremos que un VM disponga de la totalidad de la gráfica ya sea porque queremos tener una máquina virtual para jugar o tener un servidor de streaming, siempre se puede configurar en el apartado de “Sistema”.
 
-Igualmente, si queremos utilizar el protocolo `SPICE` (Protocolo SImple para Entornos de Computación Independientes) como mostraremos más adelante habría que cambiar la gráfica por defecto y poner una compatible con `SPICE`. Por último hay que tener en cuenta que el formato en el que se crea el disco virtual por defecto es `RAW` que no es el formato al que estamos acostumbrados cuando hablamos de VM (VHD), pero siempre se puede transformar en `VDI`  que es el formato de VirtualBox, `VMDK` que es el formato de VMWare entre otros.
+Igualmente, si queremos utilizar el protocolo `SPICE` (Protocolo SImple para Entornos de Computación Independientes) como mostraremos más adelante habría que cambiar la gráfica por defecto y poner una compatible con `SPICE`. Por último hay que tener en cuenta que el formato en el que se crea el disco virtual por defecto es `RAW` que no es el formato al que estamos acostumbrados cuando hablamos de VM (VHD), pero siempre se puede transformar en `VDI` que es el formato de VirtualBox, `VMDK` que es el formato de VMWare entre otros.
 
 **¿Qué es SPICE?** Es un protocolo de comunicación para entornos virtuales que nos permite ver la consola de las VM desde cualquier dispositivo de la red a través del cliente Spice.
 
@@ -274,7 +274,7 @@ Nos saldrá una ventana emergente como cuando lo hacemos con la VM, y ya la pode
 
 <figure><img src="https://lh5.googleusercontent.com/n56pf-EKXvJDSCRN7UHUJMvvROE9KZlORFCFTScezv7HKH_PYdsy6_yCT7IkFPLY5WkXI7_5xKOqdhkgRivToZjZN36W8lPq7GkBZY-Mf2-_ktu5su2_jd8sdSpbgMWnewNzM1Ub6JDfDjKVz1EVwneo0G6QKV_KHUC_50FpZs6GvsOJnelamO_A" alt=""><figcaption></figcaption></figure>
 
-## Usuarios y Grupos&#x20;
+## Usuarios y Grupos
 
 Como en Windows server se pueden configurar usuarios y grupos, los cuales según tengan aplicados los roles tendrán acceso a algunas de las opciones de forma parcial o completa. La lista de los roles de proxmox:
 
@@ -285,48 +285,46 @@ Hay que ser consciente que aparte de los usuarios y grupos hay que crear <mark s
 ## Links
 
 * Migrar máquinas virtuales de un sistema VirtualBox o VMWare a Proxmox
-  * [https://www.calidade.systems/en/2019/08/04/moving-a-virtual-machine-from-virtualbox-to-proxmox/](https://www.calidade.systems/en/2019/08/04/moving-a-virtual-machine-from-virtualbox-to-proxmox/) &#x20;
-  * [https://forum.proxmox.com/threads/importing-virtualbox-vm-to-proxmox-ve-6-x.75610/ ](https://forum.proxmox.com/threads/importing-virtualbox-vm-to-proxmox-ve-6-x.75610/)
-  * [https://pve.proxmox.com/wiki/Migration\_of\_servers\_to\_Proxmox\_VE#Importing](https://pve.proxmox.com/wiki/Migration\_of\_servers\_to\_Proxmox\_VE#Importing)&#x20;
-  * [https://www.youtube.com/watch?v=ATd2fzgLN5g](https://www.youtube.com/watch?v=ATd2fzgLN5g)\
-    &#x20;
-* **Ceph** \
+  * [https://www.calidade.systems/en/2019/08/04/moving-a-virtual-machine-from-virtualbox-to-proxmox/](https://www.calidade.systems/en/2019/08/04/moving-a-virtual-machine-from-virtualbox-to-proxmox/)
+  * [https://forum.proxmox.com/threads/importing-virtualbox-vm-to-proxmox-ve-6-x.75610/](https://forum.proxmox.com/threads/importing-virtualbox-vm-to-proxmox-ve-6-x.75610/)
+  * [https://pve.proxmox.com/wiki/Migration\_of\_servers\_to\_Proxmox\_VE#Importing](https://pve.proxmox.com/wiki/Migration_of_servers_to_Proxmox_VE#Importing)
+  * [https://www.youtube.com/watch?v=ATd2fzgLN5g](https://www.youtube.com/watch?v=ATd2fzgLN5g)<br>
+* **Ceph**\
   Ceph File System es un sistema de archivos distribuido libre, está diseñado para el uso con gran cantidad de datos, está muy enfocado para el uso con Big Data.\
-  Ceph tiene como objetivo ser POSIX-compatible y completamente distribuido sin ningún punto de fallo.&#x20;
-  * [https://docs.ceph.com/en/latest/](https://docs.ceph.com/en/latest/)&#x20;
-  * [https://documentation.suse.com/es-es/ses/5.5/html/ses-all/ceph-operating-services.html](https://documentation.suse.com/es-es/ses/5.5/html/ses-all/ceph-operating-services.html)&#x20;
-  * [https://es.wikipedia.org/wiki/Ceph\_File\_System](https://es.wikipedia.org/wiki/Ceph\_File\_System)&#x20;
-  * [https://www.ionos.es/digitalguide/servidores/know-how/que-es-ceph/](https://www.ionos.es/digitalguide/servidores/know-how/que-es-ceph/) VM para instalar en Proxmox para un buen uso:&#x20;
-* **TrueNAS**:&#x20;
+  Ceph tiene como objetivo ser POSIX-compatible y completamente distribuido sin ningún punto de fallo.
+  * [https://docs.ceph.com/en/latest/](https://docs.ceph.com/en/latest/)
+  * [https://documentation.suse.com/es-es/ses/5.5/html/ses-all/ceph-operating-services.html](https://documentation.suse.com/es-es/ses/5.5/html/ses-all/ceph-operating-services.html)
+  * [https://es.wikipedia.org/wiki/Ceph\_File\_System](https://es.wikipedia.org/wiki/Ceph_File_System)
+  * [https://www.ionos.es/digitalguide/servidores/know-how/que-es-ceph/](https://www.ionos.es/digitalguide/servidores/know-how/que-es-ceph/) VM para instalar en Proxmox para un buen uso:
+* **TrueNAS**:
   * https://www.youtube.com/watch?v=iva4DmOmSTc\&t=184s https://www.youtube.com/watch?v=JzX6c58ydY4
-* Instalar Windows 10 con drivers compatibles con Proxmox:&#x20;
+* Instalar Windows 10 con drivers compatibles con Proxmox:
   * https://www.youtube.com/watch?v=6c-6xBkD2J4
-* Instalar Ubuntu server para uso con docker:&#x20;
+* Instalar Ubuntu server para uso con docker:
   * https://www.youtube.com/watch?v=YR9SNDD8WB4
-* Remote gaming:&#x20;
+* Remote gaming:
   * https://www.youtube.com/watch?v=fgx3NMk6F54\&t=192s
-* Update Proxmox sin suscripción:&#x20;
+* Update Proxmox sin suscripción:
   * https://www.youtube.com/watch?v=rfK8fc-ccoQ
-* Proxmox Backup Server:&#x20;
+* Proxmox Backup Server:
   * https://www.youtube.com/watch?v=jLBNm0fNIog
 
 ### Otros links para ampliar información
 
-* **Spice**:&#x20;
-  * http://somebooks.es/spice-protocolo-escritorio-remoto-maquinas-virtuales-proxmox-ve-parte-1/&#x20;
-  * http://somebooks.es/spice-protocolo-escritorio-remoto-maquinas-virtuales-proxmox-ve-parte-2/&#x20;
-  * http://somebooks.es/spice-acceder-al-escritorio-una-maquina-virtual-proxmox-sin-la-interfaz-grafica/&#x20;
-* **Tickets**:&#x20;
-  * http://somebooks.es/conectar-al-escritorio-una-maquina-virtual-proxmox-ve-sin-la-interfaz-grafica-usando-tickets/&#x20;
-* scripts tickets:&#x20;
+* **Spice**:
+  * http://somebooks.es/spice-protocolo-escritorio-remoto-maquinas-virtuales-proxmox-ve-parte-1/
+  * http://somebooks.es/spice-protocolo-escritorio-remoto-maquinas-virtuales-proxmox-ve-parte-2/
+  * http://somebooks.es/spice-acceder-al-escritorio-una-maquina-virtual-proxmox-sin-la-interfaz-grafica/
+* **Tickets**:
+  * http://somebooks.es/conectar-al-escritorio-una-maquina-virtual-proxmox-ve-sin-la-interfaz-grafica-usando-tickets/
+* scripts tickets:
   * https://git.proxmox.com/?p=pve-manager.git;a=blob\_plain;f=spice-example-sh;hb=HEAD
-* **Usuarios y grupos**:&#x20;
-  * https://pve.proxmox.com/wiki/User\_Management&#x20;
-  * https://www.youtube.com/watch?v=XlLAbm94\_c8&#x20;
-  * http://somebooks.es/crear-nuevas-cuentas-usuario-proxmox-ve/&#x20;
-  * http://somebooks.es/crear-conjuntos-proxmox-ve/ http://somebooks.es/asegurar-la-cuenta-root-en-proxmox-ve/&#x20;
-* **Otros**:&#x20;
-  * http://somebooks.es/usar-ubuntu-para-intercambiar-archivos-con-un-servidor-proxmox-ve-mediante-ssh/  (**rsync ssh**)&#x20;
-* http://somebooks.es/eliminar-el-mensaje-no-valid-subscription-al-iniciar-sesion-en-proxmox-ve/ http://somebooks.es/introduccion-la-virtualizacion/&#x20;
+* **Usuarios y grupos**:
+  * https://pve.proxmox.com/wiki/User\_Management
+  * https://www.youtube.com/watch?v=XlLAbm94\_c8
+  * http://somebooks.es/crear-nuevas-cuentas-usuario-proxmox-ve/
+  * http://somebooks.es/crear-conjuntos-proxmox-ve/ http://somebooks.es/asegurar-la-cuenta-root-en-proxmox-ve/
+* **Otros**:
+  * http://somebooks.es/usar-ubuntu-para-intercambiar-archivos-con-un-servidor-proxmox-ve-mediante-ssh/ (**rsync ssh**)
+* http://somebooks.es/eliminar-el-mensaje-no-valid-subscription-al-iniciar-sesion-en-proxmox-ve/ http://somebooks.es/introduccion-la-virtualizacion/
 * https://www.youtube.com/watch?v=G4SMMhxyNo8 (verificación en dos pasos)
-

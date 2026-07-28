@@ -5,7 +5,7 @@
 Es una herramienta por línea de comandos que permite convertir audio o video de un formato a otro.\
 Es capaz de capturar y codificar en tiempo real desde DirectShow, una tarjeta de televisión u otro dispositivo compatible.
 
-Se trata de una colección de software libre que puede grabar, convertir o transcodificar y hacer streaming de audio y vídeo. Puede codificar, decodificar, transcodificar, multiplexar, demultiplexar, transmitir, filtrar y reproducir casi cualquier cosa en términos de audio y video. Es compatible con formatos antiguos  y modernos.
+Se trata de una colección de software libre que puede grabar, convertir o transcodificar y hacer streaming de audio y vídeo. Puede codificar, decodificar, transcodificar, multiplexar, demultiplexar, transmitir, filtrar y reproducir casi cualquier cosa en términos de audio y video. Es compatible con formatos antiguos y modernos.
 
 Está desarrollado en GNU/Linux, pero puede ser compilado en la mayoría de los sistemas operativos, incluyendo Windows. La mayoría de los desarrolladores de FFmpeg lo son también del proyecto MPlayer y está hospedado en el servidor del proyecto MPlayer. Incluye la biblioteca de códecs libavcodec.
 
@@ -88,7 +88,7 @@ yt-dlp -f bv*+ba https://www.youtube.com/watch?v=bH3NFlkui4Y
 * <mark style="color:purple;">yt-dlp -F ‘BV\*\[height=1080]+BA’ URL</mark> # Para descargar archivo con una calidad específica.
 
 \
-Se queremos convertir  un video .mp4 en .mkv pero con las opciones siguentes:
+Se queremos convertir un video .mp4 en .mkv pero con las opciones siguentes:
 
 ```
 ffmpeg -i video_original.mp4 -vcodec libx264 video_264.mkv
@@ -99,16 +99,12 @@ donde:\
 h264 - codec de video que usa la librería libx264\
 h265 - codec de video que usa la librería libx265
 
-
-
 Para recortar un fragmento de tiempo de un video más largo. Digamos, obtener el fragmento de video desde los 35seg hasta los 65seg (30seg de duración). Existe un parámetro con el que podemos realizar estas operaciones:
 
 ```
 $ ffmpeg -i coldplay.mp4 -ss 35 -t 30 coldplay_frag.mp4
 $ ffmpeg -i coldplay.mp4 -ss 00:35 -to 01:05 coldplay_frag.mp4
 ```
-
-
 
 ## Aportaciones de estudiantes
 
@@ -160,13 +156,13 @@ ffmpeg -i video.mp4 -vf "fps=1" fotograma_%04d.png
 Opciones clave:
 
 Para extraer **una imagen por segundo** utilizamos:\
-&#x20;<mark style="color:purple;">fps=1</mark>&#x20;
+<mark style="color:purple;">fps=1</mark>
 
 Si queremos **2 imágenes por segundo**, usamos\
 <mark style="color:purple;">fps=2</mark>
 
 Para **numerar** las imágenes en formato 0001, 0002, etc.\
-&#x20;<mark style="color:purple;">%04d</mark>&#x20;
+<mark style="color:purple;">%04d</mark>
 
 Si necesitamos **un fotograma en un tiempo específico**, lo hacemos así:
 
@@ -186,8 +182,6 @@ ffmpeg -i video.mp4 -vf "fps=1/60" fotograma_%04d.png
 
 Nota: Esto es útil para obtener capturas periódicas sin saturar de imágenes.
 
-
-
 Para **extraer imágenes entre el minuto 2 y el 5, sacando 1 imagen por segundo**, hacemos:
 
 ```
@@ -197,8 +191,6 @@ ffmpeg -i video.mp4 -ss 00:02:00 -to 00:05:00 -vf "fps=1" fotograma_%04d.png
 \
 Nota: Útil si solo nos interesa una parte del video.
 
-
-
 Si en **lugar de PNG queremos JPG**, solo cambiamos la extensión:
 
 ```
@@ -206,8 +198,6 @@ ffmpeg -i video.mp4 -vf "fps=1" fotograma_%04d.jpg
 ```
 
 Nota: También podemos usar formatos como BMP, TIFF, etc.
-
-
 
 ## Links
 
@@ -219,15 +209,15 @@ Nota: También podemos usar formatos como BMP, TIFF, etc.
   ○​ Cloudflare HLS Guide: https://www.cloudflare.com/learning/video/what-is-http-live-streaming/3.​
 * RTSP\
   ○​ RTSP RFC: https://tools.ietf.org/html/rfc2326
-* &#x20;SRT\
+* SRT\
   ○​ SRT Alliance: https://www.srtalliance.org/\
   FFmpeg
-  * &#x20;FFmpeg Wiki: https://trac.ffmpeg.org/wiki
+  * FFmpeg Wiki: https://trac.ffmpeg.org/wiki
 * yt-dlp
-  * &#x20;GitHub Repository: https://github.com/yt-dlp/yt-dlp
+  * GitHub Repository: https://github.com/yt-dlp/yt-dlp
   * Installation Guide: https://github.com/yt-dlp/yt-dlp/wiki/Installation
 * Codecs Comparativos
-  * &#x20;Xiph.org (VP9/Opus): https://xiph.org/
+  * Xiph.org (VP9/Opus): https://xiph.org/
   * AOMedia (AV1): https://aomedia.org/
 
 </details>
@@ -308,7 +298,7 @@ Además tenemos:
 
 <details>
 
-<summary>Seguridad y metadatos - Gerard Soteras, Xavier Conde, Timofey Kalugin </summary>
+<summary>Seguridad y metadatos - Gerard Soteras, Xavier Conde, Timofey Kalugin</summary>
 
 Sentencia enfocada a la ciberseguridad, con el atributo `–xff` podemos\
 hacer creer que estamos descargando el video desde otro país.
@@ -341,28 +331,28 @@ Vamos a descargar un vídeo sobre el que vamos a trabajar toda la primera parte.
 
 Ahora, vamos a descargar el vídeo en el formato que queramos. En nuestro caso, como es una canción, voy a descargar sólo el audio en webm. ya que es una opción con 155k bitrate, opus codec, que, entre todas las opciones disponibles parece ser la mejor opción en términos de calidad de audio, ya que tiene el bitrate más alto y un codec eficiente como opus, que es conocido por su buena calidad a tasas de bits moderadas.
 
-<figure><img src="../../../.gitbook/assets/image (403).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (866).png" alt=""><figcaption></figcaption></figure>
 
 Ahora, vamos a descargar el vídeo en el formato que queramos. En nuestro caso, como es una canción, voy a descargar sólo el audio en webm. ya que es una opción con 155k bitrate, opus codec, que, entre todas las opciones disponibles parece ser la mejor opción en términos de calidad de audio, ya que tiene el bitrate más alto y un codec eficiente como opus, que es conocido por su buena calidad a tasas de bits moderadas.
 
 <mark style="color:purple;">yt-dlp -f 251</mark>\ <mark style="color:purple;">https://www.youtube.com/watch?v=7maJOI3QMu0\&pp=ygURcml2ZXIgZmxvdyB</mark>\ <mark style="color:purple;">pbiB5b3U%3D</mark>
 
-<figure><img src="../../../.gitbook/assets/image (404).png" alt=""><figcaption><p>Descargando el video</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (867).png" alt=""><figcaption><p>Descargando el video</p></figcaption></figure>
 
 Para poder trabajar con el resto de los comandos, vamos a descargar el vídeo completo, tomaremos la opción 231.\
 Esta opción tiene una resolución de 640x480, que es bastante buena para ver detalles, y la tasa de bits es relativamente alta, lo que implica buena calidad. El tamaño es más grande, pero si la calidad es lo que más te importa, esta opción es la mejor.<br>
 
-<figure><img src="../../../.gitbook/assets/image (405).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (868).png" alt=""><figcaption></figcaption></figure>
 
 Por otra parte, yt-dlp nos ofrece la opción de descargarnos el mismo vídeo, pero con una mejor resolución, esto se puede hacer mediante el comando:
 
 <mark style="color:purple;">yt-dlp -f bv\*+ba</mark>\ <mark style="color:purple;">https://www.youtube.com/watch?v=7maJOI3QMu0\&pp=ygURcml2ZXIgZmxvdyB</mark>\ <mark style="color:purple;">pbiB5b3U%3D</mark>
 
-<figure><img src="../../../.gitbook/assets/image (406).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (869).png" alt=""><figcaption></figcaption></figure>
 
 También, tenemos la opción de convertir formatos de vídeo en otro que queramos. Como ejemplo. convertiremos el vídeo que nos hemos descargado antes que está en el formato .mp4 al .mkv .
 
-<figure><img src="../../../.gitbook/assets/image (407).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (870).png" alt=""><figcaption></figcaption></figure>
 
 ### Descargar subtítulos
 
@@ -370,13 +360,13 @@ Para descargar los subtítulos, primero tenemos que mirar si estos están dispon
 
 <mark style="color:purple;">yt-dlp --list-subs https://www.youtube.com/watch?v=\_KztNIg4cvE</mark>
 
-<figure><img src="../../../.gitbook/assets/image (408).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (871).png" alt=""><figcaption></figcaption></figure>
 
 Una vez sabemos todos los subtítulos que nos podemos descargar, descargamos el vídeo junto a los subtítulos:<br>
 
 <mark style="color:purple;">yt-dlp --write-sub --sub-lang es-EkcP5AbUQBc --convert-subs srt -f</mark>\ <mark style="color:purple;">bestvideo+bestaudio https://www.youtube.com/watch?v=\_KztNIg4cvE</mark>
 
-<figure><img src="../../../.gitbook/assets/image (409).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (872).png" alt=""><figcaption></figcaption></figure>
 
 donde:
 
@@ -386,13 +376,11 @@ donde:
 •-f bestvideo+bestaudio: Descarga la mejor calidad de video y audio.\
 Si listamos los archivos, veremos que tenemos el vídeo en -webm y otro archivo con la extensión .srt . En este archivo se guardan los subtítulos.
 
-<figure><img src="../../../.gitbook/assets/image (410).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (873).png" alt=""><figcaption></figcaption></figure>
 
 Ahora, al reproducirlo tendremos que agregar los subtitulos descargados al vídeo y ya lo tendremos.
 
-<figure><img src="../../../.gitbook/assets/image (411).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/image (874).png" alt=""><figcaption></figcaption></figure>
 
 ### Añadir marca de agua con FFMPEG
 
@@ -429,13 +417,11 @@ Y si queremos redimensionar marca de agua:
 \
 <mark style="color:purple;">ffmpeg -i video.mp4 -i marca\_de\_agua.png -filter\_complex "\[1]\[0]scale=iw\*0.1:-</mark>\ <mark style="color:purple;">1\[wm];\[0]\[wm]overlay=W-w-10:H-h-10" -codec:a copy</mark>\ <mark style="color:purple;">video\_con\_marca\_redimensionada.mp4</mark>
 
-<figure><img src="../../../.gitbook/assets/image (412).png" alt=""><figcaption><p>La marca de agua de Amapola</p></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/image (875).png" alt=""><figcaption><p>La marca de agua de Amapola</p></figcaption></figure>
 
 </details>
 
-## Otras aportaciones&#x20;
+## Otras aportaciones
 
 Un documento sobre el protocolo RTMP, Docker y OBS:
 
@@ -448,7 +434,5 @@ Un documento sobre el protocolo RTMP, Docker y OBS:
 * [https://multimedia.easeus.com/es/video-download/como-utilizar-yt-dlp.html](https://multimedia.easeus.com/es/video-download/como-utilizar-yt-dlp.html)
 * https://github.com/yt-dlp/yt-dlp-wiki/blob/master/Installation.md
 * [https://terminaldelinux.com/terminal/multimedia/ffmpeg/](https://terminaldelinux.com/terminal/multimedia/ffmpeg/) \*\*\*
-
-
 
 <br>

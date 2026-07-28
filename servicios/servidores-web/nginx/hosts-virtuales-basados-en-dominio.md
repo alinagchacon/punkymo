@@ -109,9 +109,9 @@ Para confirmar si el bloque del servidor está funcionando como se esperaba y es
 
 Debe obtener el contenido incluido en el archivo HTML en su bloque de servidor como se muestra.
 
-<figure><img src="../../../.gitbook/assets/image (23) (2).png" alt=""><figcaption><p>www.kirby.com </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (631).png" alt=""><figcaption><p>www.kirby.com</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (22) (1).png" alt=""><figcaption><p>www.punky.com </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (646).png" alt=""><figcaption><p>www.punky.com</p></figcaption></figure>
 
 ## SSL en Nginx - OPENSSL
 
@@ -133,7 +133,7 @@ Posteriormente, generamos el certificado autofirmado y la clave usando la herram
 $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl-certs/kirby.com.key -out /etc/nginx/ssl-certs/kirby.com.crt
 ```
 
-&#x20;Donde:
+Donde:
 
 * **req -X509**: muestra que estamos creando un certificado x509.
 * **nodes** (NO DES): significa "no cifrar la clave".
@@ -144,7 +144,7 @@ $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ss
 
 ### Directivas en el archivo de configuración de kirby.com
 
-Dentro del archivo de configuración:  <mark style="color:blue;">`/etc/nginx/sites-available/kirby.com.conf`</mark> agregaremos las siguientes directivas:
+Dentro del archivo de configuración: <mark style="color:blue;">`/etc/nginx/sites-available/kirby.com.conf`</mark> agregaremos las siguientes directivas:
 
 ```
 listen 443 ssl;
@@ -157,21 +157,19 @@ Las directivas <mark style="color:blue;">`ssl_protocols`</mark> y <mark style="c
 
 De forma predeterminada, Nginx usa <mark style="color:blue;">`ssl_protocols`</mark> TLSv1 TLSv1.1 TLSv1.2 y <mark style="color:blue;">`ssl_ciphers`</mark> HIGH:!aNULL:!MD5, por lo que generalmente no es necesario configurarlos explícitamente.
 
-&#x20;
+<figure><img src="../../../.gitbook/assets/image (632).png" alt=""><figcaption><p>COnfiguración del archivo de configuración de kirby.com</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption><p>COnfiguración del archivo de configuración de kirby.com </p></figcaption></figure>
+Para probar que funciona correctamente el certificado creado con openssl, basta ir al navegador y llamar a nuestros sitios web: <mark style="color:blue;">`https://www.kirby.com`</mark> y <mark style="color:blue;">`https://www.punky.com.`</mark> Como se muestra en las imágenes a continuación.
 
-Para probar que funciona correctamente el certificado creado con openssl, basta ir al navegador y llamar a nuestros sitios web: <mark style="color:blue;">`https://www.kirby.com`</mark> y <mark style="color:blue;">`https://www.punky.com.`</mark>  Como se muestra en las imágenes a continuación.
+<figure><img src="../../../.gitbook/assets/image (380).png" alt=""><figcaption><p>https://www.kirby.com</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (3) (3).png" alt=""><figcaption><p>https://www.kirby.com</p></figcaption></figure>
-
-<figure><img src="../../../.gitbook/assets/image (6) (4).png" alt=""><figcaption><p>https://www.punky.com</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (629).png" alt=""><figcaption><p>https://www.punky.com</p></figcaption></figure>
 
 <mark style="color:red;">To be continued ...</mark>
 
 ## LINKS
 
 * [https://techexpert.tips/es/nginx-es/nginx-virtualhost-varios-sitios-web-en-el-mismo-servidor/](https://techexpert.tips/es/nginx-es/nginx-virtualhost-varios-sitios-web-en-el-mismo-servidor/)
-* [Beginner’s Guide (nginx.org)](https://nginx.org/en/docs/beginners\_guide.html)
-* [https://nginx.org/en/docs/http/configuring\_https\_servers.html](https://nginx.org/en/docs/http/configuring\_https\_servers.html)
-* [https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm](https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm)&#x20;
+* [Beginner’s Guide (nginx.org)](https://nginx.org/en/docs/beginners_guide.html)
+* [https://nginx.org/en/docs/http/configuring\_https\_servers.html](https://nginx.org/en/docs/http/configuring_https_servers.html)
+* [https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm](https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm)

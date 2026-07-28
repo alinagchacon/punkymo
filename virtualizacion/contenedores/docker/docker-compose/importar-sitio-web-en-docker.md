@@ -2,7 +2,7 @@
 
 El directorio de trabajo será el siguiente:
 
-<figure><img src="../../../../.gitbook/assets/image (444).png" alt="" width="272"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (907).png" alt="" width="272"><figcaption></figcaption></figure>
 
 El archivo de configuración de nginx: default.conf. Tened en cuenta la línea: fastcgi\_pass app\_php:9000;
 
@@ -37,7 +37,7 @@ server {
 
 ```
 
-El **dockerfile** que construye MySQL:&#x20;
+El **dockerfile** que construye MySQL:
 
 ```
 FROM php:8.2-fpm
@@ -109,6 +109,3 @@ $username="root";
 $password="1234";
 $database="users"; 
 ```
-
-
-

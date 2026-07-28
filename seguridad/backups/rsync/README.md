@@ -27,7 +27,7 @@ donde:
 * `servidor` es la dirección del servidor remoto.
 * `/ruta/remota` es la ubicación en el servidor remoto donde deseas copiar los archivos.
 
-## Pruebas&#x20;
+## Pruebas
 
 En distribuciones como Ubuntu viene instalado por defecto pero en todo caso puedes comprobarlo:
 
@@ -43,7 +43,7 @@ sudo apt install rsync
 
 ### Crear directorios de prueba: origen y destino
 
-Vamos a realizar algunas pruebas de uso y para ello, lo primero que vamos a hacer será crear un directorio con ficheros de contenido que nos sirvan para testear en local.&#x20;
+Vamos a realizar algunas pruebas de uso y para ello, lo primero que vamos a hacer será crear un directorio con ficheros de contenido que nos sirvan para testear en local.
 
 En caso de no disponer de archivos que podamos utilizar para nuestras pruebas podemos crearlos con el comando `touch`.
 
@@ -58,9 +58,9 @@ Creamos otra carpeta de destino a donde irían los archivos copiados:
 mkdir carpeta_destino
 ```
 
-Por ejemplo, en la imagen siguiente tengo el contenido de la carpeta de origen donde ya tenía un archivo file1.txt:&#x20;
+Por ejemplo, en la imagen siguiente tengo el contenido de la carpeta de origen donde ya tenía un archivo file1.txt:
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Carpeta de origen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (239).png" alt=""><figcaption><p>Carpeta de origen</p></figcaption></figure>
 
 ### Opciones de rsync
 
@@ -71,11 +71,11 @@ rsync --help
 ```
 
 * \--verbose, -v - muestra todo el proceso
-* \--archive, -a  - archive mode is -rlptgoD (no -A,-X,-U,-N,-H)
+* \--archive, -a - archive mode is -rlptgoD (no -A,-X,-U,-N,-H)
 * \--recursive, -r recurse into directories
 * \--update, -u skip files that are newer on the receiver
 * \--links, -l copy symlinks as symlinks
-* \--acls, -A preserve ACLs (implies --perms)&#x20;
+* \--acls, -A preserve ACLs (implies --perms)
 * \--xattrs, -X preserve extended attributes
 
 No son los únicos pero los más utilizados si. Veamos ejemplos de uso y verifica las diferencias entre las diferentes opciones.
@@ -98,7 +98,7 @@ _Nota: cuidado con poner o no "/" al final del nombre de las carpetas_.
 
 El tipo de copia que se ha realizado es una copia completa. No fuera demasiado eficiente si siempre fuera así. Por suerte, rsync hace copias incrementales. Para comprobarlo, modifiquemos un archivo de la carpeta de origen. Yo modifiqué el archivo `file1` y volví a ejecutar `rsync. C`omo se muestra en la imagen el único archivo que se ha copiado ha sido precisamente el que hemos modificado: `file1`.
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>copia incremental con rsync</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (240).png" alt=""><figcaption><p>copia incremental con rsync</p></figcaption></figure>
 
 ### Recuperando el contenido
 
@@ -116,8 +116,6 @@ rsync -rav destino/ origen/
 
 Este mismo proceso se puede realizar con un `pendrive` o `hdd` externo que tengamos conectado a nuestro equipo. Solo tienes que tener claro el path hasta el directorio de interés.
 
-
-
 ### Copiando de un directorio a un pendrive
 
 Algo que perfectamente pudiéramos querer hacer es copiar a un pendrive. Como estoy haciendo las pruebas en un Ubuntu Server, al insertar mi pendrive en el USB no se "monta" automáticamente con lo cual tuve que hacerlo manual. Para ello hacemos lo siguiente:
@@ -134,7 +132,7 @@ Ahora identificamos el nombre de la unidad que queremos montar. Para ello usamos
 ls -l /dev/sd*
 ```
 
-Nos debe mostrar el listado de /dev/sda, /dev/sda1,  /dev/sda2 que tengamos. En mi caso, solo tengo un disco duro, sin particionar, por tanto,  /dev/sda1.
+Nos debe mostrar el listado de /dev/sda, /dev/sda1, /dev/sda2 que tengamos. En mi caso, solo tengo un disco duro, sin particionar, por tanto, /dev/sda1.
 
 Una vez que tengamos conectados el USB y volvemos a hacer ls -l:
 
@@ -173,7 +171,7 @@ Yo dispongo de un equipo que tiene Ubuntu instalado y una VM con Ubuntu en modo 
 | 192.168.1.78       | 192.168.1.15          |
 | carpeta "backups"  | carpeta "origen"      |
 
-Vamos a tomar el mismo contenido que tenemos creado en la carpeta origen y lo vamos a pasar al servidor  utilizando rsync.
+Vamos a tomar el mismo contenido que tenemos creado en la carpeta origen y lo vamos a pasar al servidor utilizando rsync.
 
 ```
 rsync -rav origen/ punky@192.168.1.78:backups/
@@ -190,19 +188,19 @@ Un detalle adicional es que necesitamos tener instalado el servicio SSH en el se
 
 ### Automatizando el proceso de copia
 
-Lo visto anteriormente sigue sin ser lo suficientemente eficiente como para poder utilizar rsync para crear copias de seguridad automáticamente. Para ello, vamos a instalar una herramienta que no me acaba de gustar del todo por la falta de seguridad que implica. Se trata de `sshpass`.  Para instalarlo, basta con hacer:
+Lo visto anteriormente sigue sin ser lo suficientemente eficiente como para poder utilizar rsync para crear copias de seguridad automáticamente. Para ello, vamos a instalar una herramienta que no me acaba de gustar del todo por la falta de seguridad que implica. Se trata de `sshpass`. Para instalarlo, basta con hacer:
 
 ```
 sudo apt install sshpass
 ```
 
-**SSHPASS** - Es una utilidad de línea de comandos nos permite proporcionar una contraseña a un programa SSH en lugar de ingresarla manualmente cuando se establece la conexión SSH, que es justo lo que nos ha sucedido.&#x20;
+**SSHPASS** - Es una utilidad de línea de comandos nos permite proporcionar una contraseña a un programa SSH en lugar de ingresarla manualmente cuando se establece la conexión SSH, que es justo lo que nos ha sucedido.
 
 Esto puede ser útil en situaciones en las que necesitas automatizar tareas que implican conexiones SSH y no puedes utilizar métodos de autenticación más seguros, como el uso de claves SSH o certificados.
 
 El uso de `sshpass` puede ser conveniente, pero plantea problemas de seguridad, puesto que implica almacenar contraseñas en texto plano en scripts o archivos de configuración. Esto hace que sea menos seguro que el uso de claves SSH o certificados, que son métodos de autenticación más seguros.
 
-Para usar `sshpass`, debes proporcionar la contraseña como argumento o a través de un archivo de texto, y éste se encargará de entregarla al comando SSH que deseamos ejecutar.&#x20;
+Para usar `sshpass`, debes proporcionar la contraseña como argumento o a través de un archivo de texto, y éste se encargará de entregarla al comando SSH que deseamos ejecutar.
 
 ### Crear un script
 
@@ -222,11 +220,11 @@ bash rsync.sh
 
 Y como podrás observar, realizará la copia de seguridad sin tener que teclear la contraseña porque ya la tiene en el script.
 
-Por último, vamos a programar una tarea que ejecute el script cada cierto tiempo. Para ello,  vamos a ver el `crontab`.
+Por último, vamos a programar una tarea que ejecute el script cada cierto tiempo. Para ello, vamos a ver el `crontab`.
 
 ### Cron
 
-Para crear una tarea programada en `cron`, debemos utilizar el comando `crontab` que nos permite editar o crear un archivo `cron` con las instrucciones de la tarea que deseamos automatizar.  Para editar el archivo `cron`, ejecutamos el  comando:
+Para crear una tarea programada en `cron`, debemos utilizar el comando `crontab` que nos permite editar o crear un archivo `cron` con las instrucciones de la tarea que deseamos automatizar. Para editar el archivo `cron`, ejecutamos el comando:
 
 ```bash
 crontab -e
@@ -244,9 +242,9 @@ Donde los cinco asteriscos representan la programación de tiempo. Cada asterisc
 
 La siguiente imagen nos lo muestra mejor:
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>crontab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (241).png" alt=""><figcaption><p>crontab</p></figcaption></figure>
 
-Si queremos  ejecutar nuestro script llamado `rsync.sh` todos los días a las 22:00h, la línea en el archivo `cron` sería:
+Si queremos ejecutar nuestro script llamado `rsync.sh` todos los días a las 22:00h, la línea en el archivo `cron` sería:
 
 ```plaintext
 00 22 * * * ~/scripts/rsync.sh
@@ -262,8 +260,6 @@ Que nos mostrará la lista de tareas programadas del archivo `cron.`
 
 Prueba y verifica la copia!
 
-
-
 ## Otro modo más sencillo
 
 Se trata de utilizar un par de claves público - privado de SSH para enlazar los dos equipos. Para ello generamos, si no lo tenemos ya, el par de claves:
@@ -274,14 +270,14 @@ Se trata de utilizar un par de claves público - privado de SSH para enlazar los
 ssh-keygen -t rsa
 ```
 
-Nos solicitará:&#x20;
+Nos solicitará:
 
 * un nombre de archivo para almacenar la clave, clicamos `Enter` para que utilice la opción por defecto.
 * Una frase de seguridad y hacemos lo mismo, clicar `Enter` para obviarla.
 
 Dentro de .ssh se crearán los archivos id\_rsa y id\_rsa.pub.
 
-**Paso 2**:&#x20;
+**Paso 2**:
 
 Una vez tengamos esto tenemos que copiar la clave pública en el equipo remoto. Para ello usamos el comando:
 
@@ -300,6 +296,3 @@ ssh user@IP_remota
 ```
 
 No nos pedirá la contraseña y accederemos sin más al equipo remoto.
-
-&#x20;
-

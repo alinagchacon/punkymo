@@ -6,19 +6,19 @@ description: Algunas consideraciones
 
 Se trata de otro dispositivo más de seguridad dentro de una red que permite monitorizar el tráfico entrante y saliente así como decidir si debe permitir o bloquear determinado tráfico en función de las restricciones de seguridad predefinidas.
 
-LLevan siendo, desde hace más de 25 años, la primera línea de defensa en temas de seguridad de la red. Permiten establecer una barrera entre las redes internas seguras, controladas y fiables y las redes externas poco fiables como Internet.&#x20;
+LLevan siendo, desde hace más de 25 años, la primera línea de defensa en temas de seguridad de la red. Permiten establecer una barrera entre las redes internas seguras, controladas y fiables y las redes externas poco fiables como Internet.
 
 Los firewall pueden ser de hardware, de software o ambos tipos.
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Firewall</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (209).png" alt=""><figcaption><p>Firewall</p></figcaption></figure>
 
 ### Tipos de firewall
 
 Tomando nota de los que explica Cisco en su web ([https://www.cisco.com/c/es\_es/products/security/firewalls/what-is-a-firewall.html](https://www.cisco.com/c/es_es/products/security/firewalls/what-is-a-firewall.html)) tenemos diferentes tipos de firewall entre los cuales podemos ver:
 
-1. **Firewall proxy:** Funciona en fases iniciales y hace la función de gateway entre una red y otra para una aplicación determinada. Pueden aportar otras funciones como: contenido de caché y seguridad, ya que evitan conexiones directas desde fuera de la red.&#x20;
+1. **Firewall proxy:** Funciona en fases iniciales y hace la función de gateway entre una red y otra para una aplicación determinada. Pueden aportar otras funciones como: contenido de caché y seguridad, ya que evitan conexiones directas desde fuera de la red.
 2. **Stateful inspection firewall:** Se le considera un firewall **tradicional** y permite bloquear el tráfico según criterios basados en el estado, el puerto y el protocolo. Monitoriza toda la actividad desde la apertura de una conexión hasta que se cierra.
-3. **Firewall para gestión unificada de amenazas (UTM):** Combina de manera independiente funciones de un stateful inspection firewall, con prevención de intrusiones y antivirus. También puede incluir otros servicios como la gestión en la nube.&#x20;
+3. **Firewall para gestión unificada de amenazas (UTM):** Combina de manera independiente funciones de un stateful inspection firewall, con prevención de intrusiones y antivirus. También puede incluir otros servicios como la gestión en la nube.
 4. **Firewall de última generación (NGFW):** En la evolución de los firewalls han dejado de ser un simple paquete de filtrado y una inspección de estados. Muchas compañías están implementando firewalls de última generación para detener amenazas modernas como malware avanzado y ataques en la capa de aplicación. Algunas de las ventajas que debe incluir un firewall de última generación son:
    1. Funciones estándar de firewall como es la inspección de estados
    2. Prevención de intrusiones
@@ -31,9 +31,7 @@ El diseño de un firewall tiene como objetivo el poder permitir o denegar el tr�
 
 #### Privado y público
 
-<figure><img src="../../.gitbook/assets/image (6) (5).png" alt=""><figcaption><p>Pública / Privada</p></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (627).png" alt=""><figcaption><p>Pública / Privada</p></figcaption></figure>
 
 Normalmente, un firewall con dos interfaces se configura del siguiente modo:
 
@@ -42,27 +40,27 @@ Normalmente, un firewall con dos interfaces se configura del siguiente modo:
 
 #### Zona perimetral
 
-Se denomina así:  zona perimetral (DMZ, Demilitarized Zone) al diseño de firewall donde, por norma general, hay una interfaz interna conectada a la red privada, una interfaz externa conectada a la red pública y una interfaz de DMZ .
+Se denomina así: zona perimetral (DMZ, Demilitarized Zone) al diseño de firewall donde, por norma general, hay una interfaz interna conectada a la red privada, una interfaz externa conectada a la red pública y una interfaz de DMZ .
 
-<figure><img src="../../.gitbook/assets/image (31) (2).png" alt=""><figcaption><p>Red Interna + DMZ + Internet</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (606).png" alt=""><figcaption><p>Red Interna + DMZ + Internet</p></figcaption></figure>
 
 * El tráfico procedente de la red privada se inspecciona mientras viaja hacia la red pública o la DMZ. Este tráfico se permite casi sin restricciones. También se permite el tráfico inspeccionado que regresa a la red privada desde la DMZ o la red pública.
 * El tráfico procedente de la DMZ y que viaja hacia la red privada, se bloquea con frecuencia.
-* Siempre y cuando cumpla con los requisitos de servicio,  se permite el tráfico procedente de la DMZ y que viaja hacia la red pública.
+* Siempre y cuando cumpla con los requisitos de servicio, se permite el tráfico procedente de la DMZ y que viaja hacia la red pública.
 
 #### Firewall de políticas basados en zonas - ZPF
 
-En los <mark style="color:blue;">`Zone-based policy firewalls ZPF`</mark> o firewalls de políticas basadas en zonas  se utiliza el concepto de <mark style="color:blue;">`zonas`</mark> que ofrecen mayor flexibilidad. Se dice que es una zona a un grupo que contiene al menos una interfaz y que tiene funciones o características similares. Las zonas ayudan a especificar dónde se debe implementar una regla o política de firewall.&#x20;
+En los <mark style="color:blue;">`Zone-based policy firewalls ZPF`</mark> o firewalls de políticas basadas en zonas se utiliza el concepto de <mark style="color:blue;">`zonas`</mark> que ofrecen mayor flexibilidad. Se dice que es una zona a un grupo que contiene al menos una interfaz y que tiene funciones o características similares. Las zonas ayudan a especificar dónde se debe implementar una regla o política de firewall.
 
 #### Ejemplo
 
-Las políticas de seguridad para las redes LAN1 y LAN2 son similares y pueden agruparse en una zona para las configuraciones de firewall. De modo predeterminado, se tiene que en la misma zona, el tráfico entre interfaces no está sujeto a ninguna política y puede pasar libremente.&#x20;
+Las políticas de seguridad para las redes LAN1 y LAN2 son similares y pueden agruparse en una zona para las configuraciones de firewall. De modo predeterminado, se tiene que en la misma zona, el tráfico entre interfaces no está sujeto a ninguna política y puede pasar libremente.
 
-<figure><img src="../../.gitbook/assets/image (1) (4) (2).png" alt=""><figcaption><p>Dos redes LAN internas pertenecientes a la misma zona</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (596).png" alt=""><figcaption><p>Dos redes LAN internas pertenecientes a la misma zona</p></figcaption></figure>
 
 Por el contrario, se bloquea todo el tráfico de zona a zona y con el fin de permitir el tráfico entre zonas, se debe configurar una política que permita o inspeccione dicho tráfico.
 
-La única excepción a esta política predeterminada de denegar todo (deny any) es la auto-zona del router. Esta zona autónoma del router es el propio router y además incluye todas las direcciones IP de las interfaces del mismo.&#x20;
+La única excepción a esta política predeterminada de denegar todo (deny any) es la auto-zona del router. Esta zona autónoma del router es el propio router y además incluye todas las direcciones IP de las interfaces del mismo.
 
 Las configuraciones de políticas que incluyen la zona autónoma se aplican al tráfico hacia el router y desde de él. No hay ninguna política para este tipo de tráfico de manera predeterminada. El tráfico que debe tenerse en cuenta al diseñar una política para la zona autónoma incluye el tráfico del <mark style="color:blue;">`plano de control`</mark> y del <mark style="color:blue;">`plano de administración`</mark> como SSH, SNMP y otros protocolos de enrutamiento.
 
@@ -75,15 +73,15 @@ Ya hemos visto lo que sería la defensa en capas de una red, donde la seguridad:
 * **de las comunicaciones** - es proporcionar seguridad de la información
 * **de terminales** - es proporcionar identidad y cumplimiento de políticas de seguridad de dispositivos.
 
-La defensa en capas utiliza diferentes tipos de firewalls que se pueden combinar (en capas) para agregar mayor seguridad (o seguridad en profundidad) a una organización.&#x20;
+La defensa en capas utiliza diferentes tipos de firewalls que se pueden combinar (en capas) para agregar mayor seguridad (o seguridad en profundidad) a una organización.
 
-Las políticas pueden aplicarse entre las capas y dentro de ellas. Siendo estos puntos de aplicación de las políticas las que determinan si el tráfico se reenvía o se descarta.&#x20;
+Las políticas pueden aplicarse entre las capas y dentro de ellas. Siendo estos puntos de aplicación de las políticas las que determinan si el tráfico se reenvía o se descarta.
 
-#### Ejemplo:&#x20;
+#### Ejemplo:
 
-El tráfico que proviene de la red no confiable primero encuentra un filtro de paquetes en el router de borde.&#x20;
+El tráfico que proviene de la red no confiable primero encuentra un filtro de paquetes en el router de borde.
 
-Si la política lo permite, el tráfico pasa al firewall de detección o al sistema de host de bastión que aplica más reglas al tráfico y descarta los paquetes sospechosos. Un host de bastión es un PC reforzado que se encuentra en la DMZ generalmente.&#x20;
+Si la política lo permite, el tráfico pasa al firewall de detección o al sistema de host de bastión que aplica más reglas al tráfico y descarta los paquetes sospechosos. Un host de bastión es un PC reforzado que se encuentra en la DMZ generalmente.
 
 Más adelante, el tráfico va a un router de detección interior. El tráfico pasa al host de destino interno solo después de pasar correctamente por todos los puntos de aplicación de políticas entre el router externo y la red interna. Este tipo de configuración de DMZ es lo que se denomina configuración de <mark style="color:blue;">`subred filtrada`</mark>.
 
@@ -117,9 +115,9 @@ Hay varios tipos de firewalls:
 
 ### En resumen
 
-* Una arquitectura de seguridad común define los límites del tráfico que entra y sale de la red. Si miramos una topología con acceso a redes externas o públicas, debemos ser capaces de determinar la arquitectura de seguridad.&#x20;
-* Algunos diseños son muy simples y diseñan una red externa y una interna determinadas por dos interfaces en un firewall. Sin embargo, las redes que requieren un acceso público a servicios a menudo tienen una DMZ a la que puede acceder el público, bloqueando el acceso a la red interna.&#x20;
-* Los ZPF emplean el concepto de las zonas para brindar más flexibilidad. Una zona es un grupo de una o más interfaces que tienen funciones similares, características y requerimientos de seguridad.&#x20;
+* Una arquitectura de seguridad común define los límites del tráfico que entra y sale de la red. Si miramos una topología con acceso a redes externas o públicas, debemos ser capaces de determinar la arquitectura de seguridad.
+* Algunos diseños son muy simples y diseñan una red externa y una interna determinadas por dos interfaces en un firewall. Sin embargo, las redes que requieren un acceso público a servicios a menudo tienen una DMZ a la que puede acceder el público, bloqueando el acceso a la red interna.
+* Los ZPF emplean el concepto de las zonas para brindar más flexibilidad. Una zona es un grupo de una o más interfaces que tienen funciones similares, características y requerimientos de seguridad.
 * Un enfoque de seguridad por capas utiliza firewalls y otras medidas de seguridad para proporcionar seguridad en diferentes capas funcionales de la red.
 
 ### Algunas consideraciones a tener en cuenta
@@ -157,5 +155,4 @@ No todo son ventajas puesto que los firewalls también tienen algunas limitacion
 * [https://www.cisco.com/c/es\_es/products/security/firewalls/what-is-a-firewall.html](https://www.cisco.com/c/es_es/products/security/firewalls/what-is-a-firewall.html)
 * [https://www.checkpoint.com/es/cyber-hub/network-security/what-is-firewall/](https://www.checkpoint.com/es/cyber-hub/network-security/what-is-firewall/)
 * [https://www.incibe.es/empresas/blog/son-y-sirven-los-siem-ids-e-ips](https://www.incibe.es/empresas/blog/son-y-sirven-los-siem-ids-e-ips)
-* [https://www.ionos.es/digitalguide/servidores/seguridad/que-es-siem/](https://www.ionos.es/digitalguide/servidores/seguridad/que-es-siem/)&#x20;
-
+* [https://www.ionos.es/digitalguide/servidores/seguridad/que-es-siem/](https://www.ionos.es/digitalguide/servidores/seguridad/que-es-siem/)

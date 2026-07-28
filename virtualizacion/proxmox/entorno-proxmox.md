@@ -26,7 +26,7 @@ Algunos datos:
 * **DNS**: el servidor de dns que asume por defecto. En mi caso, la IP del router 192.168.1.1
 * **Hosts**: muestra el mismo archivo de dns /etc/hosts
 * **LVM** (Administrador de volúmenes lógicos): Es una capa de software ligera sobre discos duros y particiones. Se puede utilizar para dividir el espacio disponible en disco en volúmenes lógicos más pequeños. LVM se usa ampliamente en Linux y facilita la administración de discos duros. LVM normalmente asigna bloques cuando creas un volumen.
-* **LVM-Thin**: Asignan bloques cuando se escriben. Este comportamiento se denomina aprovisionamiento ligero porque los volúmenes pueden ser mucho mayores que el espacio físicamente disponible. \
+* **LVM-Thin**: Asignan bloques cuando se escriben. Este comportamiento se denomina aprovisionamiento ligero porque los volúmenes pueden ser mucho mayores que el espacio físicamente disponible.\
   \
   Se trata de almacenamiento con aprovisionamiento ligero, lo que significa que puede asignar una determinada cantidad a un disco de VM (por ejemplo, 100 G), pero solo utilizará la cantidad real que utiliza la VM y crece con la cantidad de almacenamiento que esté utilizando hasta el límite asignado.
 * **ZFS** (Zettabyte File System): es un sistema de archivos y administración de almacenamiento de código abierto. Es un gestor de volúmenes lógicos diseñado por Sun Microsystems.
@@ -38,7 +38,7 @@ Algunos datos:
 Para crear una VM nos ubicamos sobre el nodo “pve”:
 
 * Cada VM se crea con un número asociado, comenzando por el 100. El nombre lo ponemos nosotros.
-* A continuación, seleccionamos el sistema operativo que vamos a instalar. &#x20;
+* A continuación, seleccionamos el sistema operativo que vamos a instalar.
 * Indicamos dónde se encuentra la ISO del sistema a instalar.
 * Elegir el storage donde se encuentra la imagen.
 * Seleccionamos el tipo de disco que vamos a utilizar para crear la VM. El disco puede ser IDE, SATA o VIRTIO. Los discos VIRTIO son mucho más rápidos que los IDE o los SATA.
@@ -49,7 +49,7 @@ En el tema de drivers: realteck, E1000 y VIRTIO. A tener en cuenta que los Windo
 
 Proxmox crea una interface vmbr0 para asociarla a la VM, luego crea un bridge con el dispositivo físico del servidor Proxmox. Las configuraciones de los distintos bridges e interfaces de Proxmox se configurarn desde el archivo: `/etc/network/interfaces`donde vemos que el bridge vmbr0 está asociado con el bridge\_ports enp0s3 que es la interface que configuramos durante la instalación.
 
-### &#x20;Arrancar la VM
+### Arrancar la VM
 
 Una vez creada la VM vamos a arrancarla. Esto lo podemos hacer seleccionando la máquina virtual, luego con el click derecho seleccionaremos la opción Start. Las opciones que aparecen en el cuadro son las siguientes
 
@@ -69,7 +69,7 @@ Para hacerlo nos ubicamos sobre la máquina virtual y hacemos click en Backup No
 
 Proxmox nos propone un cuadro de diálogo para saber en qué storage tiene que hacer el backup y también nos pregunta si queremos comprimir o no el backup.
 
-### &#x20;Snapshots
+### Snapshots
 
 Podemos crear instantáneas de la VM estando en ejecución. Sobre todo, si estamos en un punto crítico de configuración de un servicio.
 
@@ -77,7 +77,7 @@ Podemos crear instantáneas de la VM estando en ejecución. Sobre todo, si estam
 
 Nos permite acceder a la VM sin necesidad de salir del servidor.
 
-### &#x20;Internet
+### Internet
 
 Cada VM puede tener varias interfaces de red, de cuatro tipos diferentes:
 
@@ -93,23 +93,21 @@ La NIC agregada a la máquina virtual puede seguir uno de dos modelos diferentes
 * en el modo puente predeterminado, cada NIC virtual está respaldado en el host por un _dispositivo tap_ (un dispositivo de bucle invertido de software que simula una NIC Ethernet). Este dispositivo tap se agrega a un puente, por defecto vmbr0 en Proxmox VE. En este modo, las máquinas virtuales tienen acceso directo a la LAN Ethernet en la que se encuentra el host.
 * en el modo NAT alternativo, cada NIC virtual solo se comunicará con la pila de red del usuario de Qemu, donde un enrutador integrado y un servidor DHCP pueden proporcionar acceso a la red. Este DHCP incorporado servirá direcciones en el rango privado 10.0.2.0/24. El modo NAT es mucho más lento que el modo puenteado y solo debe usarse para realizar pruebas. Este modo solo está disponible a través de CLI o API, pero no a través de WebUI.
 
-
-
 ### Default Configuration using a Bridge
 
-Los bridges son switches de red físicos implementados en software. Todos los guest virtuales pueden compartir un solo bridge, o puede crear varios para separar los dominios de la red. Cada host puede tener hasta 4094 puentes.&#x20;
+Los bridges son switches de red físicos implementados en software. Todos los guest virtuales pueden compartir un solo bridge, o puede crear varios para separar los dominios de la red. Cada host puede tener hasta 4094 puentes.
 
-<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (398).png" alt=""><figcaption></figcaption></figure>
 
 El programa de instalación crea un único puente denominado vmbr0, que se conecta a la primera tarjeta Ethernet. La configuración correspondiente en `/etc/network/interfaces` podría verse así:
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>configuración de red</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (379).png" alt=""><figcaption><p>configuración de red</p></figcaption></figure>
 
 ### Routed Configuration
 
-Se puede enrutar todo el tráfico a través de una sola interfaz, lo que asegura que todos los paquetes de red usen la misma dirección MAC.&#x20;
+Se puede enrutar todo el tráfico a través de una sola interfaz, lo que asegura que todos los paquetes de red usen la misma dirección MAC.
 
-Un escenario común es que tiene una IP pública, supongamos que la 198.51.100.5  y un bloque de IP adicional para las VM 203.0.113.16/28. Entonces Se recomienda la siguiente configuración:
+Un escenario común es que tiene una IP pública, supongamos que la 198.51.100.5 y un bloque de IP adicional para las VM 203.0.113.16/28. Entonces Se recomienda la siguiente configuración:
 
 ```
 auto lo
@@ -136,13 +134,13 @@ iface vmbr0 inet static
 \
 Implica la división del tráfico de red entre las diferentes interfaces de red físicas. Lo que hace es simular un dispositivo de red con gran ancho de banda uniendo varias tarjetas de red independientes, de manera que las aplicaciones sólo verán un interfaz de red.
 
-**Linux VLAN** - &#x20;
+**Linux VLAN** -
 
 **Linux Bridge** – es un dispositivo que une dos o más segmentos de red de forma transparente, por lo que un bridge es independiente de cualquier protocolo de red o transporte porque actúa a nivel de capa 2 de OSI.
 
 **Open vSwitch (OVS)** – es un software de código abierto, diseñado para ser utilizado como un switch virtual en entornos de servidores virtualizados. Es el encargado de reenviar el tráfico entre diferentes VM en el mismo host físico y de reenviar el tráfico entre las VM y la red física.
 
-Se instala:&#x20;
+Se instala:
 
 ```
 apt-get install openvswitch-switch
@@ -154,13 +152,8 @@ apt-get install openvswitch-switch
 
 **OVS InPort** – para que el host (el propio proxmox) utilice una vlan dentro del puente, debe crear este tipo de interfaces. Estos dividen una interfaz virtual en la vlan especificado a la que puede asignar una dirección IP o usar DHCP. Tienen que aparecer en la definición de puente real en ovs\_ports. De no ser así, no se muestran a pesar de haber especificado un ovs\_bridge.
 
+<figure><img src="../../.gitbook/assets/image (544).png" alt=""><figcaption></figcaption></figure>
 
-
-<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
-
-### Links&#x20;
+### Links
 
 * [https://coda.io/@julia-asensio-pedrero/proxmox/introduccion-a-las-redes-en-proxmox-22](https://coda.io/@julia-asensio-pedrero/proxmox/introduccion-a-las-redes-en-proxmox-22)
-
-
-

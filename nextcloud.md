@@ -10,7 +10,7 @@ description: Instalación
 * ¿Qué diferencias hay entre Nextcloud All-in-One y Nextcloud VM?
 * Comparativa de los modos de instalación posibles
 
-### &#x20;Instalar versión AIO
+### Instalar versión AIO
 
 Se necesita una VM de Ubuntu Server. Puedes no tener instalado ni Apache ni Nginx, pero necesitas tener instalado Docker.
 
@@ -32,19 +32,17 @@ nextcloud/all-in-one:latest
 
 El proceso de instalación sería algo así como:
 
-<figure><img src="../.gitbook/assets/image (9) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (343).png" alt=""><figcaption></figcaption></figure>
 
-Para abrir la interfaz escribe [https://localhost:8080](https://localhost:8080)  o [https://the.servers.ip.address:8080](https://the.servers.ip.address:8080) en el navegador.&#x20;
+Para abrir la interfaz escribe [https://localhost:8080](https://localhost:8080) o [https://the.servers.ip.address:8080](https://the.servers.ip.address:8080) en el navegador.
 
-<figure><img src="../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>Nextcloud</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (414).png" alt=""><figcaption><p>Nextcloud</p></figcaption></figure>
 
-&#x20;Tienes que utilizar la contraseña que te proporciona, algo así como:
+Tienes que utilizar la contraseña que te proporciona, algo así como:
 
 apache bonfire chitchat linked pessimist saloon settling gumdrop
 
-<figure><img src="../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src=".gitbook/assets/image (387).png" alt=""><figcaption></figcaption></figure>
 
 ### Instalando a partir de una OVA descargada
 
@@ -57,24 +55,22 @@ Desde [https://nextcloud.com/es/install/](https://nextcloud.com/es/install/) me 
 3. Log in using 'ncadmin' as username and 'nextcloud' as password.
 4. Further info will be shown to you then.
 
-Una vez dentro de la VM me pide la contraseña y upgradear el master&#x20;
+Una vez dentro de la VM me pide la contraseña y upgradear el master
 
-## &#x20;Links
+## Links
 
-1\.      [https://nextcloud.com/es/install/](https://nextcloud.com/es/install/) \*
+1\. [https://nextcloud.com/es/install/](https://nextcloud.com/es/install/) \*
 
-2\.      [https://nextcloud.com/es/install/#instructions-server](https://nextcloud.com/es/install/#instructions-server) \*\*
+2\. [https://nextcloud.com/es/install/#instructions-server](https://nextcloud.com/es/install/#instructions-server) \*\*
 
-2.1.    Docker   - [https://github.com/nextcloud/all-in-one#how-to-use-this](https://github.com/nextcloud/all-in-one#how-to-use-this)
+2.1. Docker - [https://github.com/nextcloud/all-in-one#how-to-use-this](https://github.com/nextcloud/all-in-one#how-to-use-this)
 
-2.2.    Docker   - [https://nextcloud.com/es/blog/como-instalar-nextcloud-all-in-one-en-linux/](https://nextcloud.com/es/blog/como-instalar-nextcloud-all-in-one-en-linux/)
+2.2. Docker - [https://nextcloud.com/es/blog/como-instalar-nextcloud-all-in-one-en-linux/](https://nextcloud.com/es/blog/como-instalar-nextcloud-all-in-one-en-linux/)
 
-2.3.    VM OVA - [https://download.nextcloud.com/aio-vm/](https://download.nextcloud.com/aio-vm/)
+2.3. VM OVA - [https://download.nextcloud.com/aio-vm/](https://download.nextcloud.com/aio-vm/)
 
-2.4.    Datadir - [https://github.com/nextcloud/all-in-one#how-to-change-the-default-location-of-nextclouds-datadir](https://github.com/nextcloud/all-in-one#how-to-change-the-default-location-of-nextclouds-datadir)
+2.4. Datadir - [https://github.com/nextcloud/all-in-one#how-to-change-the-default-location-of-nextclouds-datadir](https://github.com/nextcloud/all-in-one#how-to-change-the-default-location-of-nextclouds-datadir)
 
-2.5.    Turnkey - [https://www.turnkeylinux.org/nextcloud](https://www.turnkeylinux.org/nextcloud)
-
-&#x20;
+2.5. Turnkey - [https://www.turnkeylinux.org/nextcloud](https://www.turnkeylinux.org/nextcloud)
 
 ##

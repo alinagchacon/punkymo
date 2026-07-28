@@ -24,12 +24,12 @@ Habilitamos y arrancamos el servicio de virtualización libvirtd y nos añadimos
 sudo systemctl enable --now libvirtd && sudo usermod -aG libvirt $(whoami)
 ```
 
-Instalamos las aplicaciones principales de GNS3, esto es:&#x20;
+Instalamos las aplicaciones principales de GNS3, esto es:
 
-* el servidor - gns3-server&#x20;
-* la interfaz gráfica - gns3-gui&#x20;
+* el servidor - gns3-server
+* la interfaz gráfica - gns3-gui
 
-Utilizamos `pipx`  (herramienta de Python) para instalar y ejecutar aplicaciones de Python empaquetadas como scripts ejecutables (CLI):&#x20;
+Utilizamos `pipx` (herramienta de Python) para instalar y ejecutar aplicaciones de Python empaquetadas como scripts ejecutables (CLI):
 
 ```
 pipx install gns3-server && pipx install gns3-gui
@@ -60,7 +60,7 @@ Reiniciamos el sistema para aplicar los cambios, como la configuración de grupo
 sudo reboot 
 ```
 
-Ahora si estamos en condiciones de  iniciar gns3:
+Ahora si estamos en condiciones de iniciar gns3:
 
 ```
 gns3 &
@@ -68,20 +68,17 @@ gns3 &
 
 ## Ubridge
 
-Se trata de un componente esencial de GNS3 que se ejecuta como `root` para permitir la inyección de paquetes en la interfaz de red. Cuando se ejecuta como root, representa  un riesgo de escalada de privilegios. En Linux y Windows, el acceso a la red es limitado, pero en OS X, ubridge tiene acceso total.&#x20;
+Se trata de un componente esencial de GNS3 que se ejecuta como `root` para permitir la inyección de paquetes en la interfaz de red. Cuando se ejecuta como root, representa un riesgo de escalada de privilegios. En Linux y Windows, el acceso a la red es limitado, pero en OS X, ubridge tiene acceso total.
 
 Este componente permite interconectar redes del entorno virtual de GNS3 con redes externas o con otros tipos de nodos dentro del mismo proyecto, especialmente cuando estamos usando contenedores, máquinas virtuales o dispositivos que no están en la misma red interna. `ubridge` permite:
 
 * Conectar interfaces del host con GNS3.
-*   Enlazar redes entre diferentes tipos de nodos, como:
-
-    * dispositivos emulados por QEMU/KVM
-    * contenedores Docker
-    * máquinas virtuales
-    * switches genéricos
-    * y conexiones a la red física.
-
-
+* Enlazar redes entre diferentes tipos de nodos, como:
+  * dispositivos emulados por QEMU/KVM
+  * contenedores Docker
+  * máquinas virtuales
+  * switches genéricos
+  * y conexiones a la red física.
 
 ### Instalación
 
@@ -110,7 +107,7 @@ Ahora asignamos permisos de ejecución al archivo binario de ubridge
 chmod +x ubridge
 ```
 
-Copiamos el archivo binario a “/usr/local/bin”,  para que esté disponible de modo global en el sistema
+Copiamos el archivo binario a “/usr/local/bin”, para que esté disponible de modo global en el sistema
 
 ```
 cp -p ubridge /usr/local/bin
@@ -122,17 +119,13 @@ Configuramos permisos especiales para ubridge, permitiéndole acceso a operacion
 sudo setcap cap_net_admin,cap_net_raw=ep /usr/local/bin/ubridge
 ```
 
-
-
-En entorno virtual&#x20;
+En entorno virtual
 
 En nuestro caso haremos la instalación de GNS3 como VM en VMWare Workstation. Para ello, nos descargamos la OVA correspondiente desde la página oficial:
 
 <figure><img src="https://github.com/user-attachments/assets/fbb5fcff-b3e4-4079-a6d9-1b2a5af33c47" alt="" width="375"><figcaption></figcaption></figure>
 
 Y una vez tengamos la OVA, la importamos como una VM:
-
-&#x20;
 
 <figure><img src="https://github.com/user-attachments/assets/a3501b30-47c9-4429-9191-75fab70daebd" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -145,9 +138,7 @@ Una vez la VM está funcionando lo que vamos a ver es algo como la siguiente ima
 
 ## Testeando
 
-<figure><img src="../../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (909).png" alt=""><figcaption></figcaption></figure>
 
 ## Links
 

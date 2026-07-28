@@ -4,11 +4,11 @@ description: Switches
 
 # Arranque
 
-Los switches se utilizan  para conectar dispositivos en una misma red y son responsables de controlar el flujo de datos en la capa de acceso y de dirigir  el tráfico a los recursos conectados en red.
+Los switches se utilizan para conectar dispositivos en una misma red y son responsables de controlar el flujo de datos en la capa de acceso y de dirigir el tráfico a los recursos conectados en red.
 
-En el caso  de Cisco, los switches son de configuración automática y no necesitan de configuración adicional para funcionar, pero si se pueden configurar de modo manual. Algunas de las configuraciones que podemos realizar en los switches incluye: el ajuste de la velocidad, el ancho de banda y la seguridad de los puertos.
+En el caso de Cisco, los switches son de configuración automática y no necesitan de configuración adicional para funcionar, pero si se pueden configurar de modo manual. Algunas de las configuraciones que podemos realizar en los switches incluye: el ajuste de la velocidad, el ancho de banda y la seguridad de los puertos.
 
-<figure><img src="../../.gitbook/assets/image (440).png" alt="" width="563"><figcaption><p>Tomado de <a href="https://redes.umh.es/cisco/CCNA/es/RSE/index.html#5.1.1.1">https://redes.umh.es/cisco/CCNA/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (903).png" alt="" width="563"><figcaption><p>Tomado de <a href="https://redes.umh.es/cisco/CCNA/es/RSE/index.html#5.1.1.1">https://redes.umh.es/cisco/CCNA/</a></p></figcaption></figure>
 
 Cuando se enciende un switch de Cisco, se lleva a cabo la siguiente secuencia de arranque:
 
@@ -19,4 +19,3 @@ Cuando se enciende un switch de Cisco, se lleva a cabo la siguiente secuencia de
 5. Finalmente, el arranque localiza y carga la imagen del sistema operativo en la memoria y delega el control del switch al sistema.
 
 Es el sistema operativo quien inicia las interfaces utilizando los comandos del sistema que se encuentran en el archivo de configuración del arranque, que se almacena en la NVRAM.
-
