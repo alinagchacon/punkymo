@@ -4,12 +4,17 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
 
 # Ideas
 
-* Motor de chat: Add Chat Engine to your Application: [https://chatengine.io/docs/react/v1/getting\_started](https://chatengine.io/docs/react/v1/getting_started)
-* Vercel - Plataforma en la nube, Plataforma como servicio (PaaS)\
-  [https://vercel.com/](https://vercel.com/)\
-  [https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app](https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app)
-* Firebase - plataforma para el desarrollo de aplicaciones web y aplicaciones móviles\
-  [https://firebase.google.com/?hl=es](https://firebase.google.com/?hl=es)
+Motor de chat: Add Chat Engine to your Application:
+* [https://chatengine.io/docs/react/v1/getting\_started](https://chatengine.io/docs/react/v1/getting_started)
+
+Vercel - Plataforma en la nube, Plataforma como servicio (PaaS)\
+* [https://vercel.com/](https://vercel.com/)\
+* [https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app](https://vercel.com/new/kirbys-projects-12912937/templates/next.js/realtime-chat-app)
+
+Firebase - plataforma para el desarrollo de aplicaciones web y aplicaciones móviles\
+* [https://firebase.google.com/?hl=es](https://firebase.google.com/?hl=es)
+
+Otros
 * Nutanix\
   [https://www.nutanix.com/es](https://www.nutanix.com/es)
 * Nagios\
@@ -20,8 +25,6 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
   [https://grafana.com](https://grafana.com)
 * Apache Guacamale\
   [https://guacamole.apache.org/](https://guacamole.apache.org/)
-* Un buen sitio para aprender:\
-  [https://www.linuxserver.io](https://www.linuxserver.io)
 * Cloudflare
   * [https://www.cloudflare.com](https://www.cloudflare.com)
 * Kasm
@@ -41,6 +44,7 @@ description: 'Recordad: aprendo de vosotros - Gracias!'
   [https://www.ansible.com](https://www.ansible.com)\
   [https://semui.co](https://semui.co)\
   [https://vcloud-lab.com/entries/devops/getting-started-ansible-awx-tower-for-it-automation-run-first-playbook#google\_vignette](https://vcloud-lab.com/entries/devops/getting-started-ansible-awx-tower-for-it-automation-run-first-playbook#google_vignette)
+
 * Tailscale\
   [https://tailscale.com/blog/how-tailscale-works](https://tailscale.com/blog/how-tailscale-works)
 * Jupyter\
@@ -68,6 +72,8 @@ Otros
 * Cifrado \
   [https://www.microsiervos.com/archivo/seguridad/algoritmo-cifrado-des.html](https://www.microsiervos.com/archivo/seguridad/algoritmo-cifrado-des.html)
 
+Un buen sitio para aprender:\
+  [https://www.linuxserver.io](https://www.linuxserver.io)
 
 
 HERRAMIENTAS&#x20;
