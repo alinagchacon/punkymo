@@ -18,7 +18,7 @@ Sin embargo, a diferencia de las VPN tradicionales como OpenVPN o IPSec, Tailsca
 
 Una topología en estrella sería la forma más sencilla de configurar WireGuard: cada nodo de la red necesita conocer la clave pública, la dirección IP pública y el número de puerto de los demás nodos a los que desea conectarse directamente. En este tipo de topología, solo existe un nodo central (_hub_) y los nodos periféricos son conectados mediante «radios» o _spokes_, lo que lo hace mucho más simple.
 
-![image.png](attachment:a6d91d8f-af9b-4fb5-b200-4e62e20fe02a:image.png)
+<figure><img src="../../.gitbook/assets/image (921).png" alt="" width="563"><figcaption><p>Tomado de ....</p></figcaption></figure>
 
 El nodo central tiene una dirección IP estática y una regla de apertura en su firewall para que sea fácil localizarlo. Así, puede aceptar conexiones entrantes de nodos con otras direcciones IP —incluso si estos se encuentran tras un firewall—, siguiendo el funcionamiento habitual de los protocolos de Internet cliente-servidor.
 
@@ -38,7 +38,7 @@ Aun así, hay un punto incómodo en este modelo y es que no permite que los nodo
 
 Cuando se conectan directamente todos los nodos entre sí, se le llama red de malla (_mesh network_):
 
-![image.png](attachment:cdd77131-b934-4667-be5d-bfcc87696928:image.png)
+<figure><img src="../../.gitbook/assets/image (922).png" alt="" width="563"><figcaption><p>Tomado de ...</p></figcaption></figure>
 
 Esto facilitaría el diseño de aplicaciones _peer-to-peer_ pero resultaría complicado, puesto que, una red de 10 nodos necesitaría de 10 × 9 = 90 configuraciones de puntos finales de túnel WireGuard. Por otra parte, cada nodo necesita conocer su propia clave y otras 9 más, y habría que actualizar cada nodo siempre que se rotara una clave o se añadiera o eliminara un usuario.
 
@@ -73,7 +73,7 @@ También se puede configurar el equipo con un certificado, o sea, una clave vinc
 
 Tailscale opera un servidor de coordinación basado en estos conceptos aunque delega la gestión de los usuarios a un proveedor de servicios como: OAuth2, OIDC (OpenID Connect) o SAML. Entre los proveedores más utilizados se encuentran Gmail, GSuite y Office365.
 
-![image.png](attachment:d72df816-086e-43ec-8690-493975987435:image.png)
+<figure><img src="../../.gitbook/assets/image (923).png" alt="" width="563"><figcaption><p>Tomado de ....</p></figcaption></figure>
 
 El proveedor de identidad gestiona la lista de usuarios del dominio, las contraseñas, la configuración de autenticación de dos factores (2FA), etc. Todo esto elimina la necesidad de mantener un conjunto independiente de cuentas de usuario o certificados para la VPN, ya que se puede utilizar el sistema de autenticación que esté configurado para Google Docs, Office 365 u otras aplicaciones web. Como la información privada de las cuentas de usuario y los datos de inicio de sesión se alojan en otro servicio, Tailscale puede ofrecer un servicio de coordinación central fiable y almacenar la mínima información de identificación personal (PII) de los usuarios.
 
@@ -81,7 +81,7 @@ El proveedor de identidad gestiona la lista de usuarios del dominio, las contras
 
 Es poco probable que los nodos tengan una dirección IP estática y un puerto en el firewall abierto para el tráfico entrante de WireGuard. En la vida real, nos podemos encontrar que los nodos están en cafeterías, aviones o a redes LTE.
 
-![image.png](attachment:6ebb40c5-1608-4383-979e-581924048624:image.png)
+<figure><img src="../../.gitbook/assets/image (924).png" alt="" width="563"><figcaption><p>Tomado de ...</p></figcaption></figure>
 
 Eso implica dos capas de NAT y ningún puerto abierto. Tradicionalmente, se solía pedir que se habilitara UPnP (Universal Plug and Play) en el firewall, pero este protocolo de red permite a los dispositivos domésticos como consolas, ordenadores, etc. descubrirse y conectarse entre sí de modo automático, abriendo puertos en el router sin intervención manual.
 

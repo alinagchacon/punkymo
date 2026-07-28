@@ -68,6 +68,7 @@
 * [Suricata](redes/suricata.md)
 * [Tailscale](redes/tailscale/README.md)
   * [Headscale](redes/tailscale/headscale.md)
+  * [Headscale propio + Proxy Inverso](redes/tailscale/headscale-propio-+-proxy-inverso.md)
 
 ## Group 1
 

@@ -72,7 +72,7 @@ En la arquitectura de esta tecnología, el VPS actúa únicamente como el **serv
 * **Camino 2: Administrar Headscale en remoto desde tu máquina de trabajo**\
   Consiste en utilizar el ejecutable `headscale` en tu ordenador local para gestionar el servidor (crear usuarios, autorizar máquinas, ver el estado de la red) mediante llamadas de API seguras, evitando tener que hacer SSH al VPS cada vez que quieras hacer una gestión.
 
-![image.png](attachment:29ef5667-e948-4faa-b54e-baff765c3219:image.png)
+<figure><img src="../../.gitbook/assets/image (925).png" alt="" width="563"><figcaption></figcaption></figure>
 
 Lo lógico es el camino 1 pero se me ha complicado todo, así que continúo con el camino 2.
 
@@ -83,13 +83,14 @@ export HEADSCALE\_CLI\_API\_KEY="TU\_API\_KEY\_AQUÍ"
 
 ### A tener en cuenta
 
-*   gRPC
+<details>
 
-    ### **gRPC**[**¶**](https://headscale.net/stable/ref/api/#grpc)
+<summary>gRPC</summary>
 
-    The gRPC interface can be used to control a Headscale instance from a remote machine with the `headscale` binary.
+*   The gRPC interface can be used to control a Headscale instance from a remote machine with the `headscale` binary.
 
-    #### **Prerequisite**[**¶**](https://headscale.net/stable/ref/api/#prerequisite)
+
+*   **Prerequisite**
 
     * A workstation to run `headscale` (any supported platform, e.g. Linux).
     * A Headscale server with gRPC enabled.
@@ -97,32 +98,41 @@ export HEADSCALE\_CLI\_API\_KEY="TU\_API\_KEY\_AQUÍ"
     * Remote access requires an encrypted connection via TLS.
     * An [API key](https://headscale.net/stable/ref/api/#api) to authenticate with the Headscale server.
 
-    #### **Setup remote control**[**¶**](https://headscale.net/stable/ref/api/#setup-remote-control)
 
-    1. Download the [`headscale` binary from GitHub's release page](https://github.com/juanfont/headscale/releases). Make sure to use the same version as on the server.
-    2. Put the binary somewhere in your `PATH`, e.g. `/usr/local/bin/headscale`
-    3. Make `headscale` executable: `chmod +x /usr/local/bin/headscale`
-    4. [Create an API key](https://headscale.net/stable/ref/api/#api) on the Headscale server.
-    5. Provide the connection parameters for the remote Headscale server either via a minimal YAML configuration file or via environment variables:
-*   [DERP (Designated Encrypted Relay for Packets)](https://tailscale.com/docs/reference/derp-servers) server
+* **Setup remote control**
+  1. Download the [`headscale` binary from GitHub's release page](https://github.com/juanfont/headscale/releases). Make sure to use the same version as on the server.
+  2. Put the binary somewhere in your `PATH`, e.g. `/usr/local/bin/headscale`
+  3. Make `headscale` executable: `chmod +x /usr/local/bin/headscale`
+  4. [Create an API key](https://headscale.net/stable/ref/api/#api) on the Headscale server.
+  5. Provide the connection parameters for the remote Headscale server either via a minimal YAML configuration file or via environment variables:
 
-    A [DERP (Designated Encrypted Relay for Packets) server](https://tailscale.com/docs/reference/derp-servers) is mainly used to relay traffic between two nodes in case a direct connection can't be established. Headscale provides an embedded DERP server to ensure seamless connectivity between nodes.
+</details>
 
-    ### **Configuration**[**¶**](https://headscale.net/stable/ref/derp/#configuration)
+<details>
 
-    DERP related settings are configured within the `derp` section of the [configuration file](https://headscale.net/stable/ref/configuration/). The following sections only use a few of the available settings, check the [example configuration](https://headscale.net/stable/ref/configuration/) for all available configuration options.
+<summary><strong>DERP - Designated Encrypted Relay for Packets server</strong></summary>
 
-    #### **Enable embedded DERP**[**¶**](https://headscale.net/stable/ref/derp/#enable-embedded-derp)
+A [DERP (Designated Encrypted Relay for Packets) server](https://tailscale.com/docs/reference/derp-servers) is mainly used to relay traffic between two nodes in case a direct connection can't be established. Headscale provides an embedded DERP server to ensure seamless connectivity between nodes.
 
-    Headscale ships with an embedded DERP server which allows to run your own self-hosted DERP server easily. The embedded DERP server is disabled by default and needs to be enabled. In addition, you should configure the public IPv4 and public IPv6 address of your Headscale server for improved connection stability:
+### **Configuration**[**¶**](https://headscale.net/stable/ref/derp/#configuration)
 
-    **config.yaml**
+DERP related settings are configured within the `derp` section of the [configuration file](https://headscale.net/stable/ref/configuration/). The following sections only use a few of the available settings, check the [example configuration](https://headscale.net/stable/ref/configuration/) for all available configuration options.
 
-    ```
-    derp:server:enabled:trueipv4:198.51.100.1ipv6:2001:db8::1
-    ```
+#### **Enable embedded DERP**[**¶**](https://headscale.net/stable/ref/derp/#enable-embedded-derp)
 
-    Keep in mind that [additional ports are needed to run a DERP server](https://headscale.net/stable/setup/requirements/#ports-in-use). Besides relaying traffic, it also uses STUN (udp/3478) to help clients discover their public IP addresses and perform NAT traversal. [Check DERP server connectivity](https://headscale.net/stable/ref/derp/#check-derp-server-connectivity) to see if everything works.
+Headscale ships with an embedded DERP server which allows to run your own self-hosted DERP server easily. The embedded DERP server is disabled by default and needs to be enabled. In addition, you should configure the public IPv4 and public IPv6 address of your Headscale server for improved connection stability:
+
+**config.yaml**
+
+```
+derp:server:enabled:trueipv4:198.51.100.1ipv6:2001:db8::1
+```
+
+Keep in mind that [additional ports are needed to run a DERP server](https://headscale.net/stable/setup/requirements/#ports-in-use). Besides relaying traffic, it also uses STUN (udp/3478) to help clients discover their public IP addresses and perform NAT traversal. [Check DERP server connectivity](https://headscale.net/stable/ref/derp/#check-derp-server-connectivity) to see if everything works.
+
+
+
+</details>
 
 ### Link
 
@@ -132,5 +142,3 @@ export HEADSCALE\_CLI\_API\_KEY="TU\_API\_KEY\_AQUÍ"
   * [https://headscale.net/stable/usage/getting-started/#\_\_tabbed\_1\_2](https://headscale.net/stable/usage/getting-started/#__tabbed_1_2)
 * [https://blog.taller404.org/posts/arcane/](https://blog.taller404.org/posts/arcane/) - blog de Leo
 * [https://getarcane.app/docs](https://getarcane.app/docs)
-
-NO LO PUDE SOLUCIONAR
