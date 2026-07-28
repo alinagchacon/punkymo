@@ -66,6 +66,10 @@
     * [SquidGuard Proxy](redes/proxy/squid-en-pfsense/squidguard-proxy.md)
   * [Proxy reverse Nginx](redes/proxy/proxy-reverse-nginx.md)
 * [Suricata](redes/suricata.md)
+* [Tailscale](redes/tailscale/README.md)
+  * [Headscale](redes/tailscale/headscale.md)
+
+## Group 1
 
 ## 🐝 Servicios
 
