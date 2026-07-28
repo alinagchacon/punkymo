@@ -1,3 +1,7 @@
+---
+description: Más que una VPN
+---
+
 # Tailscale
 
 ## Introducción
