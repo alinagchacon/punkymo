@@ -1,3 +1,7 @@
+---
+description: Apuntes de CCNA
+---
+
 # Switching
 
 Hablar de switching y reenvío de tramas es  obligatorio en tecnología de redes y telecomunicaciones.&#x20;
@@ -77,7 +81,7 @@ El switching de corte puede reenviar tramas con errores. Si hay un índice de er
 
 Ejemplos:
 
-<figure><img src="../../.gitbook/assets/image (933).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (933).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (934).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (934).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
 

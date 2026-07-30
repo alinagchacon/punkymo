@@ -32,6 +32,7 @@
   * [Switches - puertos](redes/switches/switches-puertos.md)
   * [SSH en Switches](redes/switches/ssh-en-switches.md)
   * [Switching](redes/switches/switching.md)
+  * [Dominios de colisión](redes/switches/dominios-de-colision.md)
 * [Routers](redes/routers.md)
 * [CML](redes/cml/README.md)
   * [🚧 1er CML lab](redes/cml/1er-cml-lab.md)
