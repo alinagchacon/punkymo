@@ -49,7 +49,7 @@
   * [NAT / PAT](redes/cisco/nat-pat.md)
   * [🚧 OSPF](redes/cisco/ospf.md)
   * [🏗️ MPLS](redes/cisco/mpls.md)
-  * [STP](redes/cisco/stp.md)
+  * [🚧 STP](redes/cisco/stp.md)
 * [SDN](redes/sdn.md)
 * [Firewalls](redes/firewalls/README.md)
   * [Tipos de firewalls](redes/firewalls/tipos-de-firewalls.md)
