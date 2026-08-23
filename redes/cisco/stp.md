@@ -33,13 +33,39 @@ Las tormentas se deben a hardware como puede ser una NIC defectuosa o a bucles d
 * Diferencia IPv4 vs IPv6: En IPv6 no existe el tráfico de _broadcast_ tradicional. En su lugar, funciones como la resolución de direcciones (_ICMPv6 Neighbor Discovery_) emplean multidifusión de capa 2 (_multicast_).
 * Efecto en el switch: Si un switch de capa 2 no conoce la tabla de grupos _multicast_ o no tiene STP habilitado, trata ese tráfico inundándolo por todos los puertos del dominio, generando la misma saturación que un _broadcast_.
 
-### El algoritmo de árbol de expansión
+### Algoritmo de árbol de expansión
 
-STP se basa en un algoritmo inventado por Radia Perlman mientras trabajaba para Digital Equipment Corporation, y publicado en el artículo de 1985 "Un algoritmo para la computación distribuida de un árbol de expansión en una LAN extendida". Su algoritmo de árbol de expansión (STA) crea una topología sin bucles al seleccionar un único puente raíz donde todos los demás conmutadores determinan una única ruta de menor costo.
+STP se basa en un algoritmo creado por [Radia Perlman](https://es.wikipedia.org/wiki/Radia_Perlman) mientras trabajaba para [Digital Equipment Corporation](https://es.wikipedia.org/wiki/Digital_Equipment_Corporation), y que fue publicado en el artículo de 1985 "**Un algoritmo para la computación distribuida de un árbol de expansión en una LAN extendida**". Su algoritmo de árbol de expansión - STP -  crea una topología sin bucles al seleccionar un único puente raíz donde todos los demás conmutadores determinan una única ruta de menor costo.
 
-Sin el protocolo de prevención de bucles, se producirían bucles que harían inoperable una red de conmutadores redundantes.
+Sin el protocolo de prevención de bucles, se producirían bucles que harían inoperable una red de switches redundantes.
 
-Como pilar de este algoritmo 🌳, el primer paso crítico que ejecutan los switches al iniciar STP es la elección del Puente Raíz (_Root Bridge_) 👑.
+Como pilar de este algoritmo, el primer paso crítico que ejecutan los switches al iniciar STP es la elección del puente raíz  o _Root Bridge_.
 
-Para elegir al _Root Bridge_, todos los conmutadores intercambian tramas especiales llamadas BPDU (_Bridge Protocol Data Unit_) para comparar su ID de Puente (_Bridge ID_ o BID) ⚙️
+Para elegir al _Root Bridge_, todos los switches intercambian tramas especiales llamadas BPDU (_Bridge Protocol Data Unit_) para comparar su ID de puente, _Bridge ID_ o BID.
+
+### ¿Cómo se crea un árbol de expansión?
+
+Veamos este escenario donde se utilizan enlaces redundantes.&#x20;
+
+<figure><img src="../../.gitbook/assets/imagen (3).png" alt=""><figcaption></figcaption></figure>
+
+**(1) Seleccionar el puente (switch) o Root Bridge**
+
+En la topología todos los enlaces tienen el mismo costo o ancho de banda. El STP busca el puente raíz único y todos los switches determinarán una única ruta de menor costo desde el propio switch hasta el puente (switch) raíz.
+
+<figure><img src="../../.gitbook/assets/imagen (4).png" alt=""><figcaption></figcaption></figure>
+
+**(2) Bloquear rutas redundantes**
+
+El protocolo STP asegura que haya una sola ruta lógica entre todos los destinos en la red al bloquear intencionalmente las rutas redundantes que podrían causar un bucle. Al bloquear un puerto, se impide que los datos del usuario entren o salgan de ese puerto.
+
+<figure><img src="../../.gitbook/assets/imagen (6).png" alt=""><figcaption></figcaption></figure>
+
+**(3) Topología sin bucle**
+
+Cuando bloqueamos un puerto el efecto que se consigue es el de convertir ese enlace en un vínculo "inutilizable" entre dos switches.
+
+**(4) Errores que provocan nuevos cálculos**
+
+Las rutas físicas siguen existiendo para proporcionar la redundancia, pero se deshabilitan para evitar que se generen bucles. En caso de haber una falla en un cable de red o en un switch, entonces se vuelven a recalcular las rutas y se desbloquean los puertos necesarios. Esto también puede ocurrir cuando se añade un nuevo switch a la topología.
 
