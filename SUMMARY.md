@@ -124,6 +124,7 @@
 
 * [Bastionado de redes](bastionado/bastionado-de-redes.md)
 * [Análisis de riesgos. Planes](bastionado/analisis-de-riesgos.-planes.md)
+* [PILAR / MicroPILAR](bastionado/pilar-micropilar.md)
 
 ***
 
