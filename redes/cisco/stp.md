@@ -69,3 +69,6 @@ Cuando bloqueamos un puerto el efecto que se consigue es el de convertir ese enl
 
 Las rutas físicas siguen existiendo para proporcionar la redundancia, pero se deshabilitan para evitar que se generen bucles. En caso de haber una falla en un cable de red o en un switch, entonces se vuelven a recalcular las rutas y se desbloquean los puertos necesarios. Esto también puede ocurrir cuando se añade un nuevo switch a la topología.
 
+
+
+Preguntas&#x20;

@@ -77,8 +77,6 @@
   * [Headscale](redes/tailscale/headscale.md)
   * [Headscale propio + Proxy Inverso](redes/tailscale/headscale-propio-+-proxy-inverso.md)
 
-## Group 1
-
 ## 🐝 Servicios
 
 * [Servidores Web](servicios/servidores-web/README.md)
@@ -121,6 +119,11 @@
   * [RTMP](servicios/imagenes-videos/rtmp.md)
   * [SRT](servicios/imagenes-videos/srt.md)
 * [Webmin + Virtualmin](servicios/webmin-+-virtualmin.md)
+
+## Bastionado
+
+* [Bastionado de redes](bastionado/bastionado-de-redes.md)
+* [Análisis de riesgos. Planes](bastionado/analisis-de-riesgos.-planes.md)
 
 ***
 
@@ -214,3 +217,4 @@
 * [Referencias](interesante/referencias.md)
 * [Ideas](interesante/ideas.md)
 * [CiberSeguridad](interesante/ciberseguridad.md)
+* [Page 1](interesante/page-1.md)
