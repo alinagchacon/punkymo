@@ -126,6 +126,12 @@
 * [Análisis de riesgos. Planes](bastionado/analisis-de-riesgos.-planes.md)
 * [PILAR / MicroPILAR](bastionado/pilar-micropilar.md)
 
+## TEST
+
+* [Mi página 1](test/mi-pagina-1/README.md)
+  * [Subpágina de 1](test/mi-pagina-1/subpagina-de-1.md)
+  * [Subpagina 2](test/mi-pagina-1/subpagina-2.md)
+
 ***
 
 * [NextCloud](nextcloud.md)
