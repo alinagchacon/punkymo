@@ -1,4 +1,4 @@
-# Diseño de redes
+# Diseño jerárquico
 
 En entornos pequeños, como es el caso de las llamadas redes SOHO (Small Office, Home Office) el diseño de la red no tiene demasiada importancia: hay pocos dispositivos y es poca la inversión económica a realizar. Todo lo contrario, ocurre en entornos mediano y grande, donde es importante un diseñar correctamente la red para facilitar el acceso a todos los usuarios de una manera efectiva, ofreciendo mecanismos de tolerancia a fallos y de seguridad, y permitiendo el crecimiento en el futuro para escalar la infraestructura de red de la empresa según sus necesidades. Todo esto, además, debe hacerse intentando minimizar los recursos necesarios para el diseño.
 
@@ -16,7 +16,7 @@ Este tipo de diseño consta de tres capas:
 
 
 
-<figure><img src="../.gitbook/assets/imagen.png" alt="" width="447"><figcaption><p>Tomado de CCNA</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/imagen.png" alt="" width="447"><figcaption><p>Tomado de CCNA</p></figcaption></figure>
 
 #### Capa de acceso
 
@@ -57,8 +57,6 @@ En los entornos de campus, esta capa abarca una gran diversidad de funciones, al
 * Segmentar la red en varios dominios de difusión/multidifusión.
 * Traducir los diálogos entre los diferente tipos de medios, como Token Ring y Ethernet
 * Proporcionar servicios de seguridad y filtrado
-
-
 
 Algunos equipos que podemos conectar a la capa de distribución son los switches de acceso y de núcleo y los servidores de infraestructura a los que deben acceder todos los equipos de la red, como servidores de DNS, servidores de DHCP, de directorio activo, etc.
 
@@ -103,5 +101,16 @@ Por tanto, las funciones de la capa de distribución y la capa de core están ap
 * Definir las políticas de acceso y enrutamiento
 * Proveer calidad de servicios (QoS), virtualización de la red, etc.
 
-<figure><img src="../.gitbook/assets/imagen (1).png" alt="" width="416"><figcaption><p>Tomado de CCNA</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/imagen (1).png" alt="" width="416"><figcaption><p>Tomado de CCNA</p></figcaption></figure>
 
+
+
+Si bien el modelo tradicional de tres niveles (o el modelo colapsado) sigue siendo un enfoque básico en entornos empresariales, muchas infraestructuras modernas, especialmente en centros de datos, están adoptando **un modelo de dos niveles más optimizado basado en la arquitectura Clos (hoja-espina)**.&#x20;
+
+Ambos modelos se basan en una filosofía de diseño modular que permite un crecimiento progresivo y una mayor eficiencia operativa.
+
+
+
+Links
+
+* [https://www.supermicro.com/es-es/glossary/network-design](https://www.supermicro.com/es-es/glossary/network-design)
