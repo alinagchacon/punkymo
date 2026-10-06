@@ -12,7 +12,9 @@ Por tanto, aquí veremos cómo configurar un servidor DNS primario con zonas dir
 
 Para ello utilizaremos el software de servidor de nombres <mark style="color:blue;">`BIND`</mark> (BIND9) en una máquina virtual (MV) <mark style="color:blue;">`Ubuntu 22.04`</mark>.
 
+{% hint style="info" %}
 Sería recomendable tener un segundo servidor Ubuntu 22.04 que sirva como servidor DNS secundario <mark style="color:blue;">NS2</mark>.
+{% endhint %}
 
 ### Requisitos previos
 
@@ -22,17 +24,15 @@ Sería recomendable tener un segundo servidor Ubuntu 22.04 que sirva como servid
 
 ### Observaciones
 
-Debes tener en cuenta que en esta guía el nombre del servidor de DNS principal que vamos a configurar debería ser <mark style="color:blue;">`ns1`</mark>, pero utilicé una instalación de Ubuntu Server a la que había llamado <mark style="color:red;">`haven`</mark> y no lo modifiqué.
+En esta guía el nombre del servidor de DNS principal que vamos a configurar la he llamado <mark style="color:red;">`haven`</mark>  al igual que el dominio que es <mark style="color:blue;">`haven.local`</mark> con lo cual quedaría: <mark style="color:red;">`haven`</mark>.<mark style="color:blue;">`haven.local.`</mark>
 
-El dominio para el DNS es <mark style="color:blue;">`haven.local`</mark> con lo cual quedaría: <mark style="color:red;">`haven`</mark>.<mark style="color:blue;">`haven.local.`</mark>
-
-Puedesutilizar una <mark style="color:blue;">`redNAT`</mark> en lugar de dos adaptadores (puente o NAT) y la red Interna.
+Vamos a utilizar dos adaptadores (puente o NAT) y la red Interna.
 
 Aunque no lo menciono al inicio, algo que debes tener en cuenta es:
 
-* la dirección IP de la red interna o la redNAT que vayas a considerar que, en mi caso es la 192.168.6.100/24 para el servidor.
-* revisar que adaptador(es) de red(es) tienes configurado en tu VM.
-* debes tener conexión a Internet desde la VM.
+* La dirección IP del servidor en la red interna: 192.168.6.100/24.
+* Revisar los adaptador(es) de red(es) tienes configurado en tu VM.
+* Debes tener conexión a Internet desde la VM.
 * Configurar una dirección IP estática que si bien no es obligatorio, es recomendable. Lo necesitaremos realmente cuando vayamos a configurar el servicio de DHCP en el mismo servidor.
 
 Algunas razones para configurar una IP estática en un servidor DNS:
@@ -47,6 +47,8 @@ Pudieras utlizar una dirección IP dinámica o DHCP para un servidor DNS pero en
 
 ### Actualizar e instalar paquetes
 
+Para configurar un servidor de DNS utilizremos el BIND9: es un software de servidor DNS que es el más utilizado. Fue desarrollado por el Internet Systems Consortium (ISC) y fue escrito para corregir las vulnerabilidades de seguridad de las versiones anteriores  BIND4 y BIND8 y para incorporar DNSSEC, permitiendo la autenticación y seguridad de los datos de resolución de nombres.
+
 Actualizamos los repositorios de nuestro sistema:
 
 ```
@@ -59,9 +61,28 @@ Una vez hecho esto, procedemos a instalar el paquete Bind9:
 sudo apt install bind9
 ```
 
-#### Configurar
+#### Configurar los adaptadores de red
 
-El primer fichero a editar sería
+E**dita la configuración de red** del servidor para indicar que él mismo es el servidor DNS que tendrá que consultar para la resolución de nombres. En Ubuntu esto lo tenemos que hacer con N**etplan**.
+
+<figure><img src="../../../.gitbook/assets/image (951).png" alt="" width="355"><figcaption></figcaption></figure>
+
+Para que tome los cambios, hacemos:
+
+```
+sudo netplan apply
+sudo netplan try
+```
+
+#### Configurando BIND9
+
+La configuración de BIND se encuentra en _**named.conf**_,  y la misma se distribuye con la instrucción _**include**_, entre los ficheros: _**named.conf.options**_, _**named.conf.local**_ y _**named.conf.default-zones**_:
+
+* _**named.conf.options**_: Este fichero contiene la instrucción _**options**_ que es donde se incluyen todos los parámetros a nivel global de BIND.
+* _**named.conf.local**_: Aquí es donde crearemos nuestras zonas con la instrucción _**zone**_.
+* _**named.conf.default-zones**_: Este fichero contiene las instrucciones zone de algunas zonas que incluye BIND por defecto.
+
+El primer fichero a editar sería:
 
 <mark style="color:blue;">`/etc/bind/named.conf.local`</mark>
 
@@ -92,6 +113,8 @@ Si tras lanzar el comando no nos devuelve nada, significa que no se han encontra
 #### **Ficheros de zona**
 
 Ahora vamos a crear los ficheros de zona que hemos indicado en la configuración. Para ello tomemos como plantillas los ficheros de zonas que se crean al instalar el paquete <mark style="color:blue;">bind9</mark> y los editaremos.
+
+Los ficheros db.\* son ficcp heros de zona que el BIND carga por defecto. Los mismos  se han creado en named.conf.default-zones.
 
 Para la **zona directa** creamos el fichero:
 
@@ -144,17 +167,6 @@ La opción <mark style="color:blue;">`-4`</mark> nos sirve para forzar el uso de
 Listo, ya tenemos configurado el servidor DNS. Solo nos queda <mark style="color:blue;">`reiniciar el servicio bind9`</mark> y comprobar que esté corriendo correctamente.
 
 <figure><img src="../../../.gitbook/assets/image (318).png" alt=""><figcaption></figcaption></figure>
-
-Si no las hecho antes, **edita la configuración de red** del servidor de Ubuntu para indicar que él mismo es el servidor DNS que tendrá que consultar para la resolución de nombres. Y esto lo tenemos que hacer con **netplan**.
-
-<figure><img src="../../../.gitbook/assets/image (99).png" alt="" width="532"><figcaption><p>Configuración de la red con nNetplan</p></figcaption></figure>
-
-Para que tome los cambios, hacemos:
-
-```
-sudo netplan apply
-sudo netplan try
-```
 
 Ya podemos realizar pruebas con **nslookup** para comprobar si el servidor DNS está resolviendo correctamente los nombres y las direcciones IP:
 

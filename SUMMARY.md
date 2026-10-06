@@ -106,6 +106,7 @@
   * [DNS - Windows Server 2016](servicios/servidores-dns/dns-windows-server-2016.md)
   * [DNS - Ubuntu Server 22.04](servicios/servidores-dns/dns-ubuntu-server-22.04/README.md)
     * [DNS - Debian 13 Trixie](servicios/servidores-dns/dns-ubuntu-server-22.04/dns-debian-13-trixie.md)
+  * [Servidor esclavo](servicios/servidores-dns/servidor-esclavo.md)
   * [Systemd](servicios/servidores-dns/systemd.md)
 * [Servidores DHCP](servicios/servidores-dhcp/README.md)
   * [DHCP-Windows Server 2016](servicios/servidores-dhcp/dhcp-windows-server-2016.md)

@@ -15,7 +15,7 @@ Configuramos la IP estática en el archivo /etc/network/interfaces
 
 **Instalación del Bind9**
 
-Instalamos el DNS con Bind9, que es el programa de software de servidor de nombres de dominio (DNS) más utilizado en Internet, específicamente en Unix y Linux.
+Instalamos el DNS con Bind9, que es el programa de software de servidor de nombres de dominio di(DNS) más utilizado en Internet, específicamente en Unix y Linux.
 
 Según palabras de [sysadminok](https://www.sysadminok.es/blog/hosting/servidor-dns-con-bind9-configuracion-y-seguridad/), BIND - Berkeley Internet Name Domain - **es el software de servidor DNS más utilizado en la historia de Internet.** Su origen está en los años 80, en la Universidad de California, Berkeley. Lleva más de 40 años siendo el caballo de batalla que ha mantenido gran parte de la resolución de nombres en la red.
 
