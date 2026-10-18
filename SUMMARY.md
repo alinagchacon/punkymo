@@ -125,6 +125,10 @@
   * [SRT](servicios/imagenes-videos/srt.md)
 * [Webmin + Virtualmin](servicios/webmin-+-virtualmin.md)
 
+## Diseño de Redes
+
+* [Recursos, arquitecturas, herramientas](diseno-de-redes/recursos-arquitecturas-herramientas.md)
+
 ## Bastionado
 
 * [Bastionado de redes](bastionado/bastionado-de-redes.md)
