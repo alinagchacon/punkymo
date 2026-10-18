@@ -1,5 +1,6 @@
 ---
 description: Prevención de bucles
+hidden: true
 ---
 
 # 🚧 STP
@@ -47,19 +48,19 @@ Para elegir al _Root Bridge_, todos los switches intercambian tramas especiales 
 
 Veamos este escenario donde se utilizan enlaces redundantes.&#x20;
 
-<figure><img src="../../.gitbook/assets/imagen (3).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/imagen (3).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
 
 **(1) Seleccionar el puente (switch) o Root Bridge**
 
 En la topología todos los enlaces tienen el mismo costo o ancho de banda. El STP busca el puente raíz único y todos los switches determinarán una única ruta de menor costo desde el propio switch hasta el puente (switch) raíz.
 
-<figure><img src="../../.gitbook/assets/imagen (4).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/imagen (4).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
 
 **(2) Bloquear rutas redundantes**
 
 El protocolo STP asegura que haya una sola ruta lógica entre todos los destinos en la red al bloquear intencionalmente las rutas redundantes que podrían causar un bucle. Al bloquear un puerto, se impide que los datos del usuario entren o salgan de ese puerto.
 
-<figure><img src="../../.gitbook/assets/imagen (6).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/imagen (6).png" alt=""><figcaption><p>Tomado de CCNA</p></figcaption></figure>
 
 **(3) Topología sin bucle**
 

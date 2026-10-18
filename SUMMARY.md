@@ -45,14 +45,7 @@
   * [GNS3 en Debian](redes/gns3/gns3-en-debian.md)
 * [CISCO](redes/cisco/README.md)
   * [Primeros pasos](redes/cisco/primeros-pasos.md)
-  * [¿Qué son las VLAN?](redes/cisco/que-son-las-vlan/README.md)
-    * [Ejemplo 1 de VLAN](redes/cisco/que-son-las-vlan/ejemplo-1-de-vlan.md)
-    * [Ejemplo 2 de VLAN](redes/cisco/que-son-las-vlan/ejemplo-2-de-vlan.md)
   * [Acceso y password](redes/cisco/acceso-y-password.md)
-  * [NAT / PAT](redes/cisco/nat-pat.md)
-  * [🚧 OSPF](redes/cisco/ospf.md)
-  * [🏗️ MPLS](redes/cisco/mpls.md)
-  * [🚧 STP](redes/cisco/stp.md)
 * [SDN](redes/sdn.md)
 * [Firewalls](redes/firewalls/README.md)
   * [Tipos de firewalls](redes/firewalls/tipos-de-firewalls.md)
@@ -79,6 +72,14 @@
 * [Tailscale](redes/tailscale/README.md)
   * [Headscale](redes/tailscale/headscale.md)
   * [Headscale propio + Proxy Inverso](redes/tailscale/headscale-propio-+-proxy-inverso.md)
+* [🚧 OSPF](redes/ospf/README.md)
+  * [Métrica de costos](redes/ospf/metrica-de-costos.md)
+* [VLAN](redes/que-son-las-vlan/README.md)
+  * [Ejemplo 1 de VLAN](redes/que-son-las-vlan/ejemplo-1-de-vlan.md)
+  * [Ejemplo 2 de VLAN](redes/que-son-las-vlan/ejemplo-2-de-vlan.md)
+* [🏗️ MPLS](redes/mpls.md)
+* [🚧 STP](redes/stp.md)
+* [NAT / PAT](redes/nat-pat.md)
 
 ## 🐝 Servicios
 
@@ -130,16 +131,6 @@
 * [Análisis de riesgos. Planes](bastionado/analisis-de-riesgos.-planes.md)
 * [PILAR / MicroPILAR](bastionado/pilar-micropilar.md)
 
-## TEST
-
-* [Mi página 1](test/mi-pagina-1/README.md)
-  * [Subpágina de 1](test/mi-pagina-1/subpagina-de-1.md)
-  * [Subpagina 2](test/mi-pagina-1/subpagina-2.md)
-
-***
-
-* [NextCloud](nextcloud.md)
-
 ## 🔑 Seguridad
 
 * [NAS](seguridad/readme-1/README.md)
@@ -177,9 +168,9 @@
 ## 🐳 Virtualización
 
 * [Proxmox](virtualizacion/proxmox/README.md)
+  * [Entorno Proxmox](virtualizacion/proxmox/entorno-proxmox.md)
   * [Instalar en VMWare](virtualizacion/proxmox/instalar-en-vmware.md)
   * [Instalar en VirtualBox](virtualizacion/proxmox/instalar-en-virtualbox.md)
-  * [Entorno Proxmox](virtualizacion/proxmox/entorno-proxmox.md)
   * [Almacenamiento local](virtualizacion/proxmox/almacenamiento-local.md)
   * [Añadir discos](virtualizacion/proxmox/anadir-discos.md)
   * [Clonar](virtualizacion/proxmox/clonar.md)
@@ -212,6 +203,7 @@
 ## 🐞 Misceláneas
 
 * [Datos - codificación](miscelaneas/datos-codificacion.md)
+* [NextCloud](miscelaneas/nextcloud.md)
 * [Túnel con Cloudflare](miscelaneas/tunel-con-cloudflare.md)
 * [Servidor de video](miscelaneas/servidor-de-video.md)
 * [Comandos de Linux](miscelaneas/comandos-de-linux.md)

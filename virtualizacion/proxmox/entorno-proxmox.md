@@ -29,7 +29,9 @@ Algunos datos:
 * **LVM-Thin**: Asignan bloques cuando se escriben. Este comportamiento se denomina aprovisionamiento ligero porque los volúmenes pueden ser mucho mayores que el espacio físicamente disponible.\
   \
   Se trata de almacenamiento con aprovisionamiento ligero, lo que significa que puede asignar una determinada cantidad a un disco de VM (por ejemplo, 100 G), pero solo utilizará la cantidad real que utiliza la VM y crece con la cantidad de almacenamiento que esté utilizando hasta el límite asignado.
-* **ZFS** (Zettabyte File System): es un sistema de archivos y administración de almacenamiento de código abierto. Es un gestor de volúmenes lógicos diseñado por Sun Microsystems.
+* **ZFS** (Zettabyte File System): es un sistema de archivos y gestor de volúmenes que combina almacenamiento, integridad de datos con checksums, snapshot y RAID integrado y administración de almacenamiento de código abierto. Es un gestor de volúmenes lógicos diseñado por Sun Microsystems.\
+  \
+  Proxmox ofrece integración nativa con `ZFS`, Esto permite un almacenamiento local avanzado y con `Ceph` para almacenamiento distribuido. Lo que permite construir infraestructuras altamente disponibles y escalables sin depender de soluciones adicionales.
 
 ## Las máquinas virtuales
 

@@ -10,7 +10,7 @@ Otros aspectos que justifican el uso de NAT/PAT son:
 
 * Permite que **múltiples dispositivos dentro de una red privada compartan una única dirección IP** pública.
 * Funciona como una **barrera entre las redes internas y las externas** (Internet), brindando seguridad.
-* Los **dispositivos internos no son accesibles desde Internet**, a menos que se configure explícitamente (por ejemplo, con port forwarding - ver [pfSense Port Forward](../firewalls/pfsense/dmz.md)) lo que reduce considerablemente la exposición a ataques provenientes de redes externas.
+* Los **dispositivos internos no son accesibles desde Internet**, a menos que se configure explícitamente (por ejemplo, con port forwarding - ver [pfSense Port Forward](firewalls/pfsense/dmz.md)) lo que reduce considerablemente la exposición a ataques provenientes de redes externas.
 * Permite usar **rangos de IP privadas** definidos por [RFC 1918](https://www.rfc-es.org/rfc/rfc1918-es.txt) (192.168.X.Y, 10.X.Y.Z, 172.16–31.X.Y), que no necesitan **coordinación global**.
 * Resulta **más fácil configurar, ampliar, modificar redes internas** sin tener que depender del proveedor de servicios de Internet (ISP).
 
@@ -38,7 +38,7 @@ Veamos el modo de configurar cada uno de los tipos NAT/PAT que hay.
 
 Para poder comprender y sobre todo testear las configuraciones posibles de NAT / PAT, lo primero que vamos a hacer es crear una topología básica como la que se muestra en la imagen. Una vez que lo tengamos bien configurado y testeado, lo copiamos y pegamos 4 veces en el mismo pkt. Al menos a mi me resulta más cómodo tener todos en un mismo espacio de trabajo.
 
-<figure><img src="../../.gitbook/assets/image (888).png" alt="" width="563"><figcaption><p>Estructura base para configurar NAT / PAT.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (888).png" alt="" width="563"><figcaption><p>Estructura base para configurar NAT / PAT.</p></figcaption></figure>
 
 En cada servidor hemos configurado una web:
 
@@ -101,7 +101,7 @@ Si queremos visualizar las traducciones realizadas usamos el comando siguiente y
 #show ip nat translations
 ```
 
-<figure><img src="../../.gitbook/assets/image (883).png" alt=""><figcaption><p>show ip nat translations</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (883).png" alt=""><figcaption><p>show ip nat translations</p></figcaption></figure>
 
 ### **Notas**
 
@@ -178,11 +178,11 @@ show running-config
 
 _Veremos algo como:_
 
-<figure><img src="../../.gitbook/assets/image (884).png" alt="" width="333"><figcaption><p>Configuración de las interfaces de red en el router</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (884).png" alt="" width="333"><figcaption><p>Configuración de las interfaces de red en el router</p></figcaption></figure>
 
 Así como el pool que hemos establecido:
 
-<figure><img src="../../.gitbook/assets/image (885).png" alt="" width="563"><figcaption><p>La regla ACL establecida y el pool creado</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (885).png" alt="" width="563"><figcaption><p>La regla ACL establecida y el pool creado</p></figcaption></figure>
 
 Solo nos queda comprobar el funcionamiento:
 
@@ -192,7 +192,7 @@ show ip nat translations
 
 para comprobar las conexiones realizadas, como muestra el pantallazo siguiente:
 
-<figure><img src="../../.gitbook/assets/image (886).png" alt=""><figcaption><p>show ip nat translations</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (886).png" alt=""><figcaption><p>show ip nat translations</p></figcaption></figure>
 
 ## <mark style="color:purple;">(3) PAT - dirección única</mark>
 
@@ -204,7 +204,7 @@ Cuando se asignan varias direcciones locales internas a una dirección global in
 
 Partiendo de la misma configuración básica:
 
-<figure><img src="../../.gitbook/assets/image (887).png" alt=""><figcaption><p>PAT - una única IP global</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (887).png" alt=""><figcaption><p>PAT - una única IP global</p></figcaption></figure>
 
 ### _**Pasos a seguir**_
 
@@ -243,7 +243,7 @@ Router(config)#exit
 
 Haz pruebas de conectividad y comprueba las traducciones realizadas como se muestra en el pantallazo a continuación.
 
-<figure><img src="../../.gitbook/assets/image (889).png" alt=""><figcaption><p>Prueba de las traducciones de NAT</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (889).png" alt=""><figcaption><p>Prueba de las traducciones de NAT</p></figcaption></figure>
 
 ¿Qué se muestra cuando haces un ping del server externo IP=80.0.0.10 al server interno IP=192.168.1.10?
 
@@ -314,11 +314,11 @@ Router(config)#ip nat inside source list 1 pool MyPool overload
 
 Volvemos a usar el mismo comando que nos permite visualizar las traducciones de las IP interna a pública:
 
-<figure><img src="../../.gitbook/assets/image (892).png" alt=""><figcaption><p>show ip nat translation</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (892).png" alt=""><figcaption><p>show ip nat translation</p></figcaption></figure>
 
 Incluso, si hacemos un ping desde el dispositivo 80.0.0.11 de la red pública, hacia el servidor de la red interna vemos el reply viene de la IP pública correspondiente.
 
-<figure><img src="../../.gitbook/assets/image (891).png" alt=""><figcaption><p>El reply del ping proviene de la IP pública asignada</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (891).png" alt=""><figcaption><p>El reply del ping proviene de la IP pública asignada</p></figcaption></figure>
 
 ## <mark style="color:purple;">(5) PAT - Mapeo estático</mark>
 
@@ -358,7 +358,7 @@ Router(config)#exit
 
 Podemos comprobar que el servidor interno con IP 192.168.1.10:80 se transforma en la IP pública IP 80.0.0.5:80.
 
-<figure><img src="../../.gitbook/assets/image (893).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (893).png" alt=""><figcaption></figcaption></figure>
 
 ## <mark style="color:purple;">(6) Interfaz externa en lugar de la IP</mark>
 
@@ -370,11 +370,11 @@ Router(config)#ip nat inside source static tcp 192.168.1.10 80 80.0.0.1 8080
 
 Para ello, utiliza la configuración previa de PAT - mapeo estático y añade el comando anterior donde se le asigna la IP de la interfaz pública del router, o sea, la IP 80.0.0.1.
 
-<figure><img src="../../.gitbook/assets/image (894).png" alt="" width="563"><figcaption><p>Visualizando la web del servidor de la red interna desde el servidor externo</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (894).png" alt="" width="563"><figcaption><p>Visualizando la web del servidor de la red interna desde el servidor externo</p></figcaption></figure>
 
 Hemos establecido que la IP pública del servidor interno de la LAN sea la IP pública de la interfaz de red. Igualmente lo podemos verificar en:
 
-<figure><img src="../../.gitbook/assets/image (895).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (895).png" alt=""><figcaption></figcaption></figure>
 
 \
 <br>

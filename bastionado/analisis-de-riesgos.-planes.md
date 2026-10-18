@@ -8,12 +8,12 @@ cLinks - Recursos didácticos y fuentes oficiales
 
 ### Análisis de riesgos y planes de securización
 
-En este primer bloque del módulo debemos sentar las bases estratégicas, metodológicas y organizativas antes de la ejecución técnica del bastionado (_hardening_).&#x20;
+En este primer bloque del módulo debemos sentar las bases estratégicas, organizativas antes de la ejecución técnica del bastionado (_hardening_).&#x20;
 
 Los recursos seleccionados cubren:&#x20;
 
-* las metodologías de análisis de riesgos formales (MAGERIT, ISO 27005) -
-* los marcos operativos de bastionado (CCN-STIC, CIS Controls) y
+* las metodologías de análisis de riesgos formales (MAGERIT, ISO 27005)&#x20;
+* los marcos operativos de bastionado (CCN-STIC, CIS Controls)
 * los estándares modernos de reutilización segura de hardware en el ámbito de la Economía Circular (IEEE 2883-2022).
 
 ### Recursos de INCIBE&#x20;
