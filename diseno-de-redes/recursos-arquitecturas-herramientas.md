@@ -1,3 +1,7 @@
+---
+description: Recopilación con IA
+---
+
 # Recursos, arquitecturas, herramientas
 
 ## Diseño de redes modernas
