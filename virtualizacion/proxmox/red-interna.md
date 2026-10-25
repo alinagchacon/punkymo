@@ -4,9 +4,9 @@ description: Proxmox
 
 # Red Interna
 
-He estado testeando Proxmox en diferentes condiciones pero siempre con las mínimas y me refiero a:
+He estado testeando Proxmox en diferentes condiciones pero siempre bajo las mínimas condiciones y me refiero a:
 
-* espacio en disco no más de 100GB.
+* espacio en disco de 40GB.
 * una única interfaz de red.
 * en VM con VirtualBox como hipervisor.
 
@@ -26,7 +26,7 @@ Según la wiki de Proxmox el diagrama de red a simular es el siguiente:
 
 Antes de continuar hagamos una breve parada. En lo poco que he dicho anteriormente ya salieron dos términos que pudieran llamar la atención y le dan título a esta sección: NAT e IPTABLES.
 
-En Cisco packet tracer vimos como implementar NAT en un router para que un equipo que está en una red interna tenga salida a Internet haciendo una "traducción" de la IP interna a la IP externa o pública.
+En Cisco Packet Tracer vimos como implementar NAT en un router para que un equipo que está en una red interna tenga salida a Internet haciendo una "traducción" de la IP interna a la IP externa o pública.
 
 <figure><img src="../../.gitbook/assets/image (840).png" alt=""><figcaption></figcaption></figure>
 
@@ -118,7 +118,35 @@ Todavía con esto no podemos hacer que el cliente tenga conexión a Internet.
 
 ### Paso 5: IPTables :smile:
 
-Lo primero será habilitar el IP forwarding y para ello nos vamos a editar el archivo `/etc/sysctl.conf` y quitar el # en la línea: **`net.ipv4.ip_forward=1`**
+Vamos a utilizar una herramienta de administración de reglas de filtrado de paquetes y traducción de direcciones de red (NAT) para sistemas operativos basados en **Linux**.  Dicha herramienta funciona como un firewall integrado en el núcleo del sistema, y permite controlar el tráfico de red entrante, saliente y en tránsito mediante un conjunto de reglas definidas.&#x20;
+
+En esta sección vamos a realizar una configuración con IPTABLES para que podamos ver nuestro\
+servidor web hospedado en la VM dentro de la red interna (10.10.10.0/24).&#x20;
+
+En caso de haber estado haciendo pruebas fallidas  o no, podemos borrarlas de iptables. Para ello ejecutamos los siguientes comandos:
+
+<mark style="color:violet;">Paso 5.1 - Eliminamos cualquier regla que pudieramos tener</mark>
+
+No es necesario por supuesto, pero en caso positivo:
+
+```
+iptables -F
+iptables -t nat -F
+iptables -t mangle -F
+
+# Establecer las políticas por defecto para aceptar el tráfico.
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+```
+
+<mark style="color:violet;">Paso 5.2 - IP Forward</mark>
+
+Lo primero será habilitar el IP forward que es un mecanismo del sistema operativo que permite a un dispositivo retransmitir paquetes de datos entre distintas interfaces de red, actuando como un **router**. &#x20;
+
+Cuando un paquete llega a una interfaz y su dirección IP de destino no corresponde con la del propio dispositivo, el módulo IP verifica si el reenvío está activado; si lo está, el paquete se procesa y se envía hacia la interfaz de salida adecuada según la tabla de enrutamiento, en lugar de ser descartado. &#x20;
+
+Un modo "clásico" sería crear y editar el archivo `/etc/sysctl.conf` y quitar el # en la línea: **`net.ipv4.ip_forward=1`**
 
 ```
 nano /etc/sysctl.conf 
@@ -126,25 +154,68 @@ nano /etc/sysctl.conf
 
 <figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption><p>/etc/sysctl.conf</p></figcaption></figure>
 
-**Continuamos ....**
-
-La herramienta que nos hará el trabajo final será precisamente el `IPTABLES`. Para ello, tendremos que instalarla primero:
+El otro modo, moderno, recomendado  y obligado si estás trabajando en Debian 13 sería crear  un archivo de configuración personalizado dentro del directorio `/etc/sysctl.d/ y` añadir la regla:
 
 ```
-sudo apt install iptables
+echo "net.ipv4.ip_forward=1" | sudo tee /etc/sysctl.d/99-ipforward.conf
 ```
 
-Cuando termine podemos comprobar que no tenemos ninguna regla habilitada, por supuesto:
+Después cargamos la configuración:
+
+```
+sudo sysctl --system
+```
+
+Para confirmar que el reenvío de paquetes está activo en el kernel, ejecutamos:
+
+```
+sysctl net.ipv4.ip_forward
+```
+
+_y el resultado esperado es:_
+
+&#x20;`net.ipv4.ip_forward = 1`
+
+
+
+**Continuamos con IPTABLES**
+
+Podemos comprobar que no tenemos ninguna regla habilitada, por supuesto:
 
 ```
 iptables -L
 iptables -t nat -L
 ```
 
-Ahora configuramos una regla de iptables como se muestra a continuación.
+**Configurando la Redirección de Puertos**\
+Para redirigir el tráfico de la IP pública (la que tengamos en el aula) en los puertos 80 y 443 hacia el\
+servidor Nginx en la IP interna (192.168.6.100 en mi caso), usaremos las siguientes reglas de iptables:
+
+Redirige el tráfico entrante en el puerto 80 (HTTP) al servidor Nginx en la IP interna
 
 ```
-iptables -t nat -A POSTROUTING -o ens18 -j MASQUERADE
+iptables -t nat -A PREROUTING -p tcp -d 100.77.20.21 --dport 80 -j DNAT --to-destination 192.168.6.100:80
+```
+
+Del mismo modo redirigimos el tráfico entrante en el puerto 443 (HTTPS) al servidor Nginx en la IP interna:
+
+```
+iptables -t nat -A PREROUTING -p tcp -d 100.77.20.21 --dport 443 -j DNAT --to-destination 192.168.6.100:443
+```
+
+**Configurar el Enmascaramiento o Masquerading para la salida a Internet**&#x20;
+
+Para que las máquinas en la red interna (192.168.6.0/24) puedan acceder a Internet usando la IP pública del router (100.77.20.21), debemos agregar la siguiente regla en la cadena POSTROUTING:&#x20;
+
+```
+iptables -t nat -A POSTROUTING -s 192.168.1.0/24 -o ens33 -j MASQUERADE 
+```
+
+**Guardar las Reglas de iptables**\
+Una vez que hayamos configurado las reglas, guardamos la configuración para que persista y se mantenga después de reiniciar.&#x20;
+
+```
+iptables-save > /etc/iptables/rules.v4
 ```
 
 Esta regla nos quiere decir que:
@@ -155,7 +226,7 @@ Esta regla nos quiere decir que:
 
 * `POSTROUTING` es la cadena dentro de la tabla `nat` que procesa los paquetes justo antes de que salgan de una interfaz de red. Las reglas en esta cadena se utilizan para modificar los paquetes después de que hayan sido enrutados.
 
-**-o ens18**: Especifica la interfaz de salida.
+**-o ens33:** Especifica la interfaz de salida.
 
 **-j MASQUERADE**: Significa "saltar" (jump). Lo que hace es especificar el objetivo que debe ser alcanzado si el paquete coincide con la regla.
 
