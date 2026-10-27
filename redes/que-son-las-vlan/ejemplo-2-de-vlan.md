@@ -1,6 +1,5 @@
 ---
 description: VLAN con Switch de capa 3
-hidden: true
 ---
 
 # Ejemplo 2 de VLAN
