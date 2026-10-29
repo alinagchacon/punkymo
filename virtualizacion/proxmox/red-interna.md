@@ -123,11 +123,7 @@ Vamos a utilizar una herramienta de administración de reglas de filtrado de paq
 En esta sección vamos a realizar una configuración con IPTABLES para que podamos ver nuestro\
 servidor web hospedado en la VM dentro de la red interna (10.10.10.0/24).&#x20;
 
-En caso de haber estado haciendo pruebas fallidas  o no, podemos borrarlas de iptables. Para ello ejecutamos los siguientes comandos:
-
-<mark style="color:violet;">Paso 5.1 - Eliminamos cualquier regla que pudieramos tener</mark>
-
-No es necesario por supuesto, pero en caso positivo:
+En caso de haber estado haciendo pruebas fallidas  o no, podemos borrarlas de iptables. Para ello ejecutamos los siguientes comandos podemos <mark style="color:violet;">eliminar cualquier regla que pudieramos tener:</mark>
 
 ```
 iptables -F
@@ -140,7 +136,7 @@ iptables -P FORWARD ACCEPT
 iptables -P OUTPUT ACCEPT
 ```
 
-<mark style="color:violet;">Paso 5.2 - IP Forward</mark>
+<mark style="color:violet;">Paso 5.1 - IPv4 Forward</mark>
 
 Lo primero será habilitar el IP forward que es un mecanismo del sistema operativo que permite a un dispositivo retransmitir paquetes de datos entre distintas interfaces de red, actuando como un **router**. &#x20;
 
@@ -154,7 +150,7 @@ nano /etc/sysctl.conf
 
 <figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption><p>/etc/sysctl.conf</p></figcaption></figure>
 
-El otro modo, moderno, recomendado  y obligado si estás trabajando en Debian 13 sería crear  un archivo de configuración personalizado dentro del directorio `/etc/sysctl.d/ y` añadir la regla:
+El modo moderno, recomendado  y obligado si estás trabajando en Debian 13 sería crear  un archivo de configuración personalizado dentro del directorio `/etc/sysctl.d/ y` añadir la regla:
 
 ```
 echo "net.ipv4.ip_forward=1" | sudo tee /etc/sysctl.d/99-ipforward.conf
@@ -172,50 +168,130 @@ Para confirmar que el reenvío de paquetes está activo en el kernel, ejecutamos
 sysctl net.ipv4.ip_forward
 ```
 
-_y el resultado esperado es:_
+_y el resultado esperado tiene que ser el siguiente:_
 
 &#x20;`net.ipv4.ip_forward = 1`
 
+Solo nos queda hacer los cambios  permanentes y para ello:
+
+```
+sysctl -p /etc/sysctl.d/99-ipforward.conf
+```
+
+O podemos también hacer:
+
+```
+systemctl restart systemd-sysctl.service
+```
 
 
-**Continuamos con IPTABLES**
 
-Podemos comprobar que no tenemos ninguna regla habilitada, por supuesto:
+<mark style="color:violet;">**Continuamos con IPTABLES**</mark>
+
+Esta sección de Iptables la hacemos bajo las siguientes características:&#x20;
+
+Estoy utilizando un Debian 13  donde tengo las siguientes interfaces de red, en la VM que hace de firewall:
+
+* enp0s3 - LAN privada: 192.168.6.0/24
+* enp0s8 - WAN pública: con NAT 192.168.111.42
+
+Podemos comprobar que no tenemos ninguna regla habilitada aún:
 
 ```
 iptables -L
 iptables -t nat -L
 ```
 
-**Configurando la Redirección de Puertos**\
-Para redirigir el tráfico de la IP pública (la que tengamos en el aula) en los puertos 80 y 443 hacia el\
-servidor Nginx en la IP interna (192.168.6.100 en mi caso), usaremos las siguientes reglas de iptables:
-
-Redirige el tráfico entrante en el puerto 80 (HTTP) al servidor Nginx en la IP interna
+En caso de que tuviéramos alguna regla creada podemos eliminar solo esa regla o eliminar todas las que existan haciendo:
 
 ```
-iptables -t nat -A PREROUTING -p tcp -d 100.77.20.21 --dport 80 -j DNAT --to-destination 192.168.6.100:80
+iptables -F 
+iptables -t nat -F
 ```
 
-Del mismo modo redirigimos el tráfico entrante en el puerto 443 (HTTPS) al servidor Nginx en la IP interna:
+<mark style="color:violet;">5.2 Habilitar NAT en la interfaz de salida WAN</mark>
 
 ```
-iptables -t nat -A PREROUTING -p tcp -d 100.77.20.21 --dport 443 -j DNAT --to-destination 192.168.6.100:443
+iptables -t nat -A POSTROUTING -o enp0s8 -j MASQUERADE
 ```
 
-**Configurar el Enmascaramiento o Masquerading para la salida a Internet**&#x20;
+Con este comando podemos ocultar la red privada detrás de la interfaz de salida `enp0s8`, reescribiendo de forma dinámica las cabeceras de los paquetes salientes con la dirección IP que tenga asignada `enp0s8`, en mi caso con la _192.168.111.42_.&#x20;
 
-Para que las máquinas en la red interna (192.168.6.0/24) puedan acceder a Internet usando la IP pública del router (100.77.20.21), debemos agregar la siguiente regla en la cadena POSTROUTING:&#x20;
+Este es el estándar de facto para proporcionar conectividad a Internet a subredes privadas cuando el enlace WAN utiliza direcciones IP asignadas dinámicamente.
+
+<mark style="color:violet;">5.3 Permitir reenvío entre LAN → WAN</mark>
+
+La combinación de los dos siguientes comandos de `iptables` permiten configurar las reglas básicas de un cortafuegos con inspección de estado a nivel de capa de red (Capa 3) y transporte (Capa 4) del modelo OSI.
+
+Los requisitos a considerar son:
+
+* Los clientes de la red interna (`enp0s3`) deben poder iniciar tráfico hacia cualquier servicio disponible en la red externa (`enp0s8`).
+* Ningún host externo ubicado en `enp0s8` debe poder iniciar nuevas conexiones hacia la red interna `enp0s3`. Sin embargo, el tráfico de respuesta generado por los servidores externos debe ser permitido hacia el cliente interno que solicitó la comunicación.
+
+Por tanto, configuramos las siguientes reglas:
 
 ```
-iptables -t nat -A POSTROUTING -s 192.168.1.0/24 -o ens33 -j MASQUERADE 
+iptables -A FORWARD -i enp0s3 -o enp0s8 -j ACCEPT 
+iptables -A FORWARD -i enp0s8 -o enp0s3 -m state --state RELATED,ESTABLISHED -j ACCEPT
 ```
 
-**Guardar las Reglas de iptables**\
-Una vez que hayamos configurado las reglas, guardamos la configuración para que persista y se mantenga después de reiniciar.&#x20;
+Este último comando especifica los estados válidos para que aplique la regla: únicamente respuestas a tráfico existente (ESTABLISHED) o conexiones auxiliares asociadas (RELATED).
+
+Para establecer los cambios:
 
 ```
-iptables-save > /etc/iptables/rules.v4
+sudo apt install iptables-persistent -y
+sudo netfilter-persistent save
+```
+
+<mark style="color:violet;">Comprueba!!</mark>
+
+
+
+<mark style="color:violet;">5.3 Configurando la redirección de puertos</mark>
+
+¿Y si instalamos Nginx en el equipo cliente, cómo podemos acceder a la web desde afuera?
+
+nstalamos Nginx en el equipo cliente, y comprobar que está el servicio activo, esto es:
+
+**En el cliente**:
+
+```
+sudo apt install nginx
+sudo systemctl status nginx.service
+```
+
+Ahora vamos a configurar una regla para redirigir el tráfico de la IP "pública" (la que tengamos en el aula) en los puertos 80 y 443 hacia el servidor Nginx en la IP interna (192.168.6.101 en mi caso), usaremos las siguientes reglas de iptables:
+
+Redirige el tráfico entrante en el puerto 80 (HTTP) al servidor Nginx en la IP interna:
+
+```
+iptables -t nat -A PREROUTING -p tcp -d 192.168.111.42 --dport 80 -j DNAT --to-destination 192.168.6.101:80
+```
+
+Del mismo modo redirigimos el tráfico entrante en el puerto 443 (HTTPS) al servidor Nginx en la IP interna, en caso de ser necesario:
+
+```
+iptables -t nat -A PREROUTING -p tcp -d 192.168.111.42 --dport 443 -j DNAT --to-destination 192.168.6.101:443
+```
+
+donde:
+
+* `-t nat`: Indica que estamos modificando la tabla NAT.
+* `-A PREROUTING`: Añade una regla en la cadena `PREROUTING`, que se encarga de redirigir el tráfico entrante antes de que llegue a cualquier proceso local.
+* `-p tcp`: Especifica que la regla aplica solo a paquetes TCP.
+* `--dport 80`: Indica que la regla se aplica al tráfico entrante en el puerto 80.
+* `-j DNAT`: Usamos la acción `DNAT` (Destination Network Address Translation) para redirigir el tráfico a otra IP.
+* `--to-destination 192.168.6.101:80`: Redirige el tráfico al servidor interno `192.168.6.101`en el puerto 80.
+
+
+
+<mark style="color:violet;">5.4 Configurar el Enmascaramiento o Masquerading para la salida a Internet</mark>&#x20;
+
+Para que las máquinas en la red interna (192.168.6.0/24) puedan acceder a Internet usando la IP pública del router (192.168.111.42), debemos agregar la siguiente regla en la cadena POSTROUTING:&#x20;
+
+```
+iptables -t nat -A POSTROUTING -s 192.168.6.0/24 -o ens33 -j MASQUERADE 
 ```
 
 Esta regla nos quiere decir que:
@@ -238,70 +314,7 @@ Podemos comprobar que efectivamente está habilitada la regla en la tabla NAT:
 
 <figure><img src="../../.gitbook/assets/image (839).png" alt="" width="522"><figcaption><p>Regla habilitada en iptables</p></figcaption></figure>
 
-### <mark style="color:purple;">Debian</mark>
-
-En <mark style="color:purple;">Debian 13 Trixie tenemos las dos interfaces de red:</mark>
-
-* enp0s3 - LAN privada: 192.168.6.100/24
-* enp0s8 - WAN pública: con NAT 10.0.3.15
-
-No tenemos el archivo <mark style="color:purple;">/etc/sysctl.conf</mark> nos toca hacer lo siguiente:
-
-```
-sudo nano /etc/sysctl.d/99-forward.conf
-```
-
-En el archivo agregar la línea en cuestión:
-
-```
-net.ipv4.ip_forward=1
-```
-
-Para que los cambios se hagan persistentes debemos escribir:
-
-```
-sysctl -p 
-```
-
-pero como no tenemos el archivo **/etc/sysctl.conf** entonces hacemos:
-
-```
-systemctl restart systemd-sysctl.service
-```
-
-Sin embargo si tecleamos el siguiente comando, nos debe mostrar el valor 0 o 1 para mostrar si tenemos activada o no el ip\_forward.
-
-```
-sysctl net.ipv4.ip_forward
-```
-
-#### Limpiar reglas previas
-
-```
-iptables -F iptables -t nat -F
-```
-
-#### Habilitar NAT en la interfaz de salida (WAN)
-
-```
-iptables -t nat -A POSTROUTING -o enp0s8 -j MASQUERADE
-```
-
-#### Permitir reenvío entre LAN → WAN
-
-```
-iptables -A FORWARD -i enp0s3 -o enp0s8 -j ACCEPT 
-iptables -A FORWARD -i enp0s8 -o enp0s3 -m state --state RELATED,ESTABLISHED -j ACCEPT
-```
-
-Si queremos hacer firme los cambios hacemos:
-
-```
-sudo apt install iptables-persistent -y
-sudo netfilter-persistent save
-```
-
-### Paso 6: Testeando la conexión
+<mark style="color:violet;">Paso 6: Testeando la conexión</mark>
 
 Este es el momento en que debemos testear la conexión de la VM cliente a Internet a través de la VM router. Si hacemos un ping a google:
 
@@ -314,11 +327,11 @@ ping amazon.es
 
 Como se puede ver ya tenemos salida desde el equipo cliente hacia Internet a través de la VM router.
 
-¿Hemos acabado? Pues no.
 
-### Paso 7
 
-Las reglas de iptables que vayamos creando se almacenan en memoria, y cada vez que reiniciemos el servidor, se perderían y tendríamos que volver a crearlas. Para evitar que esto ocurra, tenemos dos opciones:
+<mark style="color:violet;">Paso 7 Guardando la configuración de IPTables</mark>
+
+Las reglas de iptables que vayamos creando se almacenan en memoria, y cada vez que reiniciemos el servidor, se perderían y tendríamos que volver a crearlas. Para evitar que esto ocurra, tenemos dos opciones:<br>
 
 1. Hacemos una copia manual de las reglas establecidas con el comando:
 
@@ -346,81 +359,19 @@ Con esta opción le estamos indicando al sistema que almacene las reglas en el a
 
 Y con esto si tenemos almacenadas las reglas de iptables en la MV que hace de router y a partir de aquí ya podemos crear nuestra propia infraestructura.
 
-### <mark style="color:red;">¿Y si instalamos Nginx en el equipo cliente, cómo podemos acceder desde afuera?</mark>
+<mark style="color:violet;">Comprobar!!</mark>
 
-Para probar lo primero que he hecho ha sido instalar Nginx en el equipo cliente, y comprobar que está el servicio activo, esto es:
 
-**En el cliente**:
+
+<mark style="color:violet;">Resumen de las reglas</mark>
 
 ```
-sudo apt install nginx
-sudo systemctl status nginx.service
+iptables -A FORWARD -i enp0s3 -o enp0s8 -j ACCEPT
+iptables -A FORWARD -i enp0s8 -o enp0s3 -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -t nat -A PREROUTING -p tcp -d 192.168.111.42 --dport 80 -j DNAT --to-destination 192.168.6.101:80
 ```
 
-**En el router**:
 
-Vamos a activar una regla NAT en IPTABLES que permita el acceso por el puerto 80. Recordemos que en mi caso tengo lo siguiente:
-
-* La IP pública del gateway es `10.0.2.2`.
-* El Proxmox tiene la IP `10.0.2.15`.
-* Tenemos como servidor web el cliente, en la red interna con la IP `10.10.10.16`.
-* Queremos redirigir el tráfico que llega al puerto 80 - HTTP de la IP pública a la IP interna del servidor web en el mismo puerto 80.
-
-Como ya creamos una regla NAT para permitir la salida a Internet del tráfico del equipo cliente, tenemos habilitado el reenvío de paquetes IP.
-
-Recordemos que se trata de editar el archivo `/etc/sysctl.conf` y descomentar la línea:
-
-```bash
-net.ipv4.ip_forward = 1
-```
-
-Y luego aplicar los cambios:
-
-```bash
-sudo sysctl -p
-```
-
-#### Creando la regla NAT de entrada (DNAT)
-
-El siguiente comando de `iptables` permite redirigir el tráfico que llega al puerto 80 en la IP pública hacia el servidor en la red interna:
-
-```bash
-sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j DNAT --to-destination 10.10.10.16:80
-```
-
-#### donde:
-
-* `-t nat`: Indica que estamos modificando la tabla NAT.
-* `-A PREROUTING`: Añade una regla en la cadena `PREROUTING`, que se encarga de redirigir el tráfico entrante antes de que llegue a cualquier proceso local.
-* `-i ens18`: Indica que esta regla se aplica a la interfaz de red externa.
-* `-p tcp`: Especifica que la regla aplica solo a paquetes TCP.
-* `--dport 80`: Indica que la regla se aplica al tráfico entrante en el puerto 80.
-* `-j DNAT`: Usamos la acción `DNAT` (Destination Network Address Translation) para redirigir el tráfico a otra IP.
-* `--to-destination 10.10.10.16:80`: Redirige el tráfico al servidor interno `10.10.10.16`en el puerto 80.
-
-#### 3. Configurarando la regla de reenvío (FORWARD)
-
-Debes permitir el reenvío de paquetes desde la red externa a la interna. Añade la siguiente regla a la cadena `FORWARD`:
-
-```bash
-sudo iptables -A FORWARD -p tcp -d 10.10.10.16 --dport 80 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
-```
-
-<figure><img src="../../.gitbook/assets/image (854).png" alt=""><figcaption><p>Tengo reglas repetidas, no debería ser así</p></figcaption></figure>
-
-#### Guardamos las reglas
-
-Para asegurarte de que las reglas de `iptables` persisten tras un reinicio, debes guardarlas. Dependiendo de la distribución de Linux, puedes usar:
-
-```bash
-sudo netfilter-persistent save
-```
-
-<mark style="color:red;">Probemos!!</mark>
-
-Funciona, sin embargo he tenido que activar el reenvío de puertos en el adaptador NAT que conecta al Proxmox:
-
-<figure><img src="../../.gitbook/assets/image (849).png" alt=""><figcaption><p>Reenvío de puertos en el adaptador "NAT"</p></figcaption></figure>
 
 ### Links
 
